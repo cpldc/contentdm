@@ -1,77 +1,157 @@
-sidebar
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Digital Collections | Chicago Public Library</title>
+	<style type="text/css">
+		.body-expanded, .body-collapsed, body {
+			background-color: #e5e5e5;
+			font-size: 1.00rem;
+			line-height: 18px;
+			color: #3f4344;
+			font-family: Arial,Helvetica,sans-serif;
+			margin: 0;
+		}
+		.bumper {
+			position: relative;
+			display: block;
+			width: 100%;
+			padding-top: 30px;
+		}
+		.navmenu, .navbutton {
+			background-color: #000;
+			color: #fff;
+		}
+		.navmenu {
+			width: 230px;
+		}
+		.navbutton {
+			width: 49px;
+			height: 53px;
+		}
+		.navmenu-header {
+			display: table;
+			width: 100%;
+			height: 53px;
+			vertical-align: middle;
+			border-bottom: 1px solid #eee;
+		}
+		.navmenu-header-title {
+			display: table-cell;
+			font-weight: normal;
+			vertical-align: middle;
+			padding-left: 40px;
+			padding-right: 10px;
+			width: 131px;
+			line-height: 16px;
+			font-size: 1.00rem;
+		}
+		.navmenu-toggle-button, .navbutton-toggle-button {
+			display: block;
+			width: 49px;
+			height: 53px;
+			background: #000;
+			color: #fff;
+			border: 1px solid transparent;
+			margin-left: 0px;
+		}
+		.navmenu-toggle-right-image, #left-sidebar-button {
+			display: none;
+		}
+		.navmenu-list {
+			list-style: none;
+			padding: 0;
+			margin: 0 15px 20px 40px;
+			vertical-align: middle;
+		}
+		.navmenu-list li {
+			margin: 12px 0 12px 0;
+		}
+		.navmenu-list a {
+			text-decoration: none;
+			color: #fff;
+		}
+		.navmenu-list a:hover {
+			text-decoration: underline;
+		}
+		.navmenu-otherlinks, .navmenu-corelinks {
+			/*padding: 5px 0 0 29px;*/
+		}
+		.navmenu-otherlinks {
+			border-top: 1px dashed #fff;
+			padding-bottom: 20px; 
+		}
+		.navmenu-otherlinks-header {
+			padding: 15px 0 10px 40px;
+			margin-bottom: 5px;
+		}
+		.navmenu-otherlinks-header span {
+			text-transform: uppercase;
+			font-size: 0.88rem;
+			line-height: 1.25;
+		}
+	</style>
+	<script type="text/javascript">
+		function navmenuHide() {
+		    var x = document.getElementById('left-sidebar-button');
+		    var y = document.getElementById('navmenu-toggle-left-image');
+		    var z = document.getElementById('left-sidebar-menu');
+		    if (x.style.display === 'none') {
+		        x.style.display = 'block';
+		    } else {
+		        x.style.display = 'none';
+		    }
+			if (y.style.display === 'none') {
+		        y.style.display = 'block';
+		    } else {
+		        y.style.display = 'none';
+		    }
+			if (z.style.display === 'none') {
+		        z.style.display = 'block';
+		    } else {
+		        z.style.display = 'none';
+		    }
+		}
+	</script>
+</head>
+<body>
+<div class="body-expanded">
+	<div class="bumper"></div>
+	<div class="navmenu" id="left-sidebar-menu">
+		<div class="navmenu-header">
+			<h3 class="navmenu-header-title">Digital Collections</h3>
+			<button class="navmenu-toggle-button" onclick="navmenuHide()">
+				<img id="navmenu-toggle-left-image" src="browse-toggle-left.png" alt="Collapse Sidebar">
 
-
-<div>
-	<div class="sidebar-row">
-		<h3 class="sidebar-header">Digital Collections</h3>
-		<!-- <div> -->
-			<button class="sidebar-toggle">
-				<img class="sidebar-toggle-left-img" src="browse-toggle-left.png" alt="Collapse Sidebar">
-				<img class="sidebar-toggle-right-img" src="browse-toggle-right.png" alt="Expand Sidebar">
 			</button>
-		<!-- </div> -->
+		</div>
+		<div class="navmenu-corelinks">
+			<ul class="navmenu-list">
+				<li><a href="Neighborhoods.html">Neighborhoods</a></li>
+				<li><a href="Newspapers.html">Newspapers</a></li>
+				<li><a href="Parks.html">Parks</a></li>
+				<li><a href="LibEd.html">Libraries &amp; Education (new category)</a></li>
+				<li><a href="HaroldWashington.html">Harold Washington</a></li>
+				<li><a href="Theater.html">Theater</a></li>
+			</ul>
+		</div>
+		<div class="navmenu-otherlinks">
+			<div class="navmenu-otherlinks-header"><span>Related Links</span></div>
+			<ul class="navmenu-list">
+				<li><a href="">Archival Collections</a></li>
+				<li><a href="">Online Resources</a></li>
+				<li><a href="">Special Collections at HWLC</a></li>
+				<li><a href="">Vivian G. Harsh Collection</a></li>
+				<li><a href="">Something Else</a></li>
+			</ul>
+		</div>
 	</div>
-	<div class="sidebar-row">
-		<ul  class="sidebar-list">
-			<li>
-				<a href="Neighborhoods.html">
-					Neighborhoods
-				</a>
-			</li>
-			<li>
-				<a href="Newspapers.html">
-					Newspapers
-				</a>
-			</li>
-			<li>
-				<a href="Parks.html">
-					Parks
-				</a>
-			</li>
-			<li>
-				<a href="LibEd.html">
-					Libraries &amp; Education (new category)
-				</a>
-			</li>
-			<li>
-				<a href="HaroldWashington.html">
-					Harold Washington
-				</a>
-			</li>
-			<li>
-				<a href="Theater.html">
-					Theater
-				</a>
-			</li>
-		</ul>
-	</div>
-	<div class="sidebar-row">
-		<ul class="sidebar-list">
-			<li>
-				<a href="">
-					Archival Collections
-				</a>
-			</li>
-			<li>
-				<a href="">
-					Online Resources
-				</a>
-			</li>
-			<li>
-				<a href="">
-					Special Collections at HWLC
-				</a>
-			</li>
-			<li>
-				<a href="">
-					Vivian G. Harsh Collection
-				</a>
-			</li>
-			<li>
-				<a href="">
-					Something Else
-				</a>
-			</li>
-		</ul>
+	<div class="navbutton" style="display: none;" id="left-sidebar-button">
+			<button class="navbutton-toggle-button" onclick="navmenuHide()">
+				<img id="navbutton-toggle-right-image" src="browse-toggle-right.png" alt="Expand Sidebar">
+			</button>
+		</div>
 	</div>
 </div>
+</body>
+</html>
