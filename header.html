@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body {
+			background-color: #e5e5e5;
+			font-family: Arial,Helvetica,sans-serif;
+    		font-size: 1.00rem;
+		}
+		.header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: #fff;
+			border-bottom: 5px;
+			border-color: #000;
+		}
+		.header, .header-top, .header-bottom {
+			width: 100%;
+		}
+		.header-top, .search {
+			display: table;
+		}
+		.header-logo, .header-search, .header-search-left, .header-search-right, .header-search-adv {
+			display: table-cell;
+			vertical-align: top;
+		}
+		.header-search, .header-search-adv {
+			float: right;
+		}
+		.header-logo-image {
+			max-height: 65px;
+		}
+		.header-search 
+		.header-search-input
+		.header-search-adv
+		.header-search-button
+		.header-header-bottom, .header-events-button, .header-events-button a {
+			background-color: #000;
+			color: #fff;
+		}
+		.header-bottom ul {
+			list-style-type: none;
+		}
+		.header-browse
+		.header-browse-button, .header-browse-button {
+			background-color: #fff;
+			color: #000;
+			border: 0;
+		}
+		.header-events
+		.header-events-button:hover, .header-events-button:hover {
+			background-color: #fff;
+			color: #000;
+		}
+		.header-browse-button, .header-events-button {
+			padding: 1rem;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+<div class="header">
+	<div class="header-top">
+		<div class="header-logo"><img src="logo.png" alt="" class="header-logo-image"></div>
+		<div class="header-search">
+			<div class="header-search-left">
+				<input type="text" class="header-search-input">
+				<br>
+				<a href="">
+					<h4 class="header-search-adv">Advanced Search</h4>
+				</a>
+			</div>
+			<div class="header-search-right">
+				<button class="header-search-button">Search</button>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom">
+		<ul>
+			<li class="header-browse"><button class="header-browse-button">Browse</button></li>
+			<li class="header-events"><a href="" class="header-events-button">Events</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
