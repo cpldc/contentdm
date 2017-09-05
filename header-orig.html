@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body {
+			font-family: "Open Sans", Arial, sans-serif;
+			background-color: #e5e5e5;
+    		font-size: 1.00rem;
+		}
+		.header-bottom li, .header-browse-dropdown li{
+			font-family: "Open Sans", Arial, sans-serif;
+			color: #262626;
+
+		}
+		.header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: #fff;
+			border-bottom: 5px;
+			border-color: #000;
+			box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+		}
+		.header, .header-top, .header-bottom, .header-browse-dropdown {
+			width: 100%;
+		}
+		.header-top, .header-bottom, .header-browse-dropdown {
+			max-width: 1150px;
+			margin: auto;
+		}
+		.header-top, .search {
+			display: table;
+			padding-top: 15px;
+		}
+		.header-logo, .header-home-links, .header-search, .header-search-left, .header-search-right, .header-search-adv {
+			display: table-cell;
+			vertical-align: top;
+		}
+		.header-search, .header-search-adv {
+			float: right;
+		}
+		.header-logo-image {
+			max-height: 65px;
+		}
+		.header-search 
+		.header-search-input
+		.header-search-adv
+		.header-search-button
+		.header-bottom {
+			background-color: #000;
+			max-height: 50px;
+		}
+		.header-bottom, .header-events-button, .header-events-button a {
+			max-height: 50px;
+			background-color: #000;
+			color: #fff;
+		}
+		.header-bottom ul, .header-browse-dropdown ul {
+			list-style-type: none;
+			margin: 0;
+		}
+		.header-browse-dropdown ul {
+			padding: 0 15px 0 0;
+			/*padding-right: 15px;*/
+			margin-right: 15px;
+		}
+		.header-browse
+		.header-browse-button, .header-browse-button {
+			background-color: #fff;
+			color: #000;
+			border: 0;
+		}
+		.header-events
+		.header-events-button:hover, .header-events-button:hover {
+			background-color: #fff;
+			color: #000;
+		}
+		.header-browse-button, .header-events-button {
+			padding: 1rem;
+			float: left;
+			display: table-cell;
+		}
+		a, .header-browse-button {
+			text-decoration: none;
+			font-size: 1rem;
+			color: #262626;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		.header-browse-button {
+			cursor: pointer;
+		}
+		.fontello-carot {
+			padding-left: 3px;
+		}
+		.header-browse-dropdown {
+			background-color: #f8f8f8;
+			padding: 30px 10px 30px 10px;
+		}
+		.header-top, .header-bottom, .header-browse-dropdown {
+			display: table;
+		}
+		.browse-list-format, .browse-list-audience, .browse-list-more {
+			display: table-cell;
+		}
+		.browse-text {
+			width: 30px;
+			margin-right: 50px;
+		}
+
+		.browse-text h2, .browse-list-format h4, .browse-list-audience h4, .browse-list-more h4 {
+			font-family: inherit;
+			font-weight: bold;
+			margin: 0;
+			padding: 0 15px 8px 15px;
+		}
+		.browse-list-format h4, .browse-list-audience h4, .browse-list-more h4 {
+			text-transform: uppercase;
+			font-size: 16px;
+		}
+		.browse-list-format li, .browse-list-audience li, .browse-list-more li {
+			padding: 8 15px;
+			display: block;
+			font-size: 14px;
+			margin: 0;
+		}
+		.browse-text h2, .browse-list-format h4, .browse-list-audience h4, .browse-list-more h4, .browse-list-format a, .browse-list-audience a, .browse-list-more a {
+			display: block;
+						/*padding: 8px 15px;*/
+		}
+		.browse-list-format a, .browse-list-audience a, .browse-list-more a {
+			padding: 8px 15px;
+		}
+		.browse-list-format, .browse-list-audience {
+			width: 200px;
+			border-right:  1px solid #cccac8;
+		}
+	</style>
+</head>
+<body>
+<div class="header">
+	<div class="header-top">
+		<div class="header-logo">
+			<div class="header-home-links">
+				<a href="http://www.chipublib.org">
+					<img src="logo.png" alt="" class="header-logo-image" />
+				</a>
+				<!-- <a class="header-home-links-digi" href="http://digital.chipublib.org/">
+					<h1>Digital Collections</h1>
+				</a> -->
+			</div>
+		</div>
+		<div class="header-search">
+			<div class="header-search-left">
+				<input type="text" class="header-search-input">
+				<br>
+				<a href="">
+					<h4 class="header-search-adv">Advanced Search</h4>
+				</a>
+			</div>
+			<div class="header-search-right">
+				<button class="header-search-button">Search</button>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom">
+		<ul>
+			<li class="header-browse">
+				<button class="header-browse-button" onclick="headerBrowseButton()">
+					Browse
+					<img src="fontello-carot.png" class="fontello-carot" />
+				</button>
+			</li>
+			<li class="header-events"><a href="" class="header-events-button">Events</a></li>
+		</ul>
+	</div>
+	<div class="header-browse-dropdown">
+		<div class="browse-text">
+			<h2>Browse</h2>
+		</div>
+			<ul class="browse-list-format">
+				<li><h4>By Format</h4></li>
+				<li><a href="">Books</a></li>
+				<li><a href="">eBooks</a></li>
+				<li><a href="">Audiobooks</a></li>
+				<li><a href="">Movies &amp; TV</a></li>
+				<li><a href="">Music</a></li>
+			</ul>
+			<ul class="browse-list-audience">
+				<li><h4>By Audience</h4></li>
+				<li><a href="">Kids</a></li>
+				<li><a href="">Teens</a></li>
+			</ul>
+			<ul class="browse-list-more">
+				<li><h4>More</h4></li>
+				<li><a href="">Online Resources</a></li>
+				<li><a href="">Jobs &amp; Small Business</a></li>
+				<li><a href="">Chicago History</a></li>
+				<li><a href="">Archival Collections</a></li>
+				<li><a href="">Summer Learning Challenge</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

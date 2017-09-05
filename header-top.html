@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body {
+			font-family: "Open Sans", Arial, sans-serif;
+			background-color: #e5e5e5;
+    		font-size: 1.00rem;
+		}
+		a {
+			text-decoration: none;
+			font-size: 1rem;
+			color: #262626;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		.header {
+			width: 100%;
+			position: fixed;
+			top: 0;
+			right: 0;
+		}
+		.header-top {
+			width: 100%;
+			background-color: #fff;
+			height: 90px;
+		}
+		.header-top-content {
+			width: 70%;
+			max-width: 1150px;
+			padding: 15px;
+			margin: auto;
+		}
+		.header-logo, .header-search-left {
+			float: left;
+		}
+		.header-logo img {
+			max-height: 65px;
+		}
+		.header-search, .header-search-right, .header-search-adv {
+			float: right;
+		}
+		.header-search-left h4 {
+			border: 0;
+			padding: 0;
+			margin: 3px 7px 0 0;
+		}
+		.header-search-left a {
+			color: #2d63af;
+		}
+		.header-search-input {
+			background-color: #fff;
+			padding: 5px 0 0 0;
+			margin:  5px 0 0 0;
+		}
+		.header-search-button {
+			background-color: #fff;
+			cursor: pointer;
+			border: 0;
+			padding: 5px 0 0 0;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+<div class="header">
+	<div class="header-top">
+		<div class="header-top-content">
+			<div class="header-logo">
+				<a href="http://www.chipublib.org">
+					<img src="logo.png" alt="" class="header-logo-image"/>
+				</a>
+			</div>
+			<div class="header-search">
+				<div class="header-search-left">
+					<input type="text" class="header-search-input">
+					<br>
+					<h4 class="header-search-adv">
+						<a href="http://digital.chipublib.org/digital/">
+							Advanced Search
+						</a>
+					</h4>
+				</div>
+				<div class="header-search-right">
+					<button class="header-search-button">
+						<img src="mag.png">
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
