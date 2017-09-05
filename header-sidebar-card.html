@@ -100,10 +100,11 @@
 	/*header dropdown begin*/
 		.dummy-dropdown {
 			display: none;
-			z-index: 1;
+			z-index: 2;
 		}
 		.header-dropdown {
 			width: 100%;
+			position: absolute;
 			background-color: #f8f8f8;
 			height: 250px;
 			box-shadow:  0 6px 12px rgba(0,0,0,0.175);
@@ -228,6 +229,7 @@
 	/*content card begin*/
 		.content-card {
 			background-color: #fff;
+			width: 290px;
 			min-height: 400px;
 			max-width: 290px;
 			border-radius: 4px;
@@ -235,7 +237,8 @@
 			/*float: left;*/
 			position: relative;
 			vertical-align: top;
-			width: 290px;
+			overflow: hidden;
+			z-index: -1;
 		}
 		.content-card-header {
 			text-transform: uppercase;
@@ -261,6 +264,7 @@
 		}
 		.content-card-text {
 			padding: 10px 10px 5px 10px;
+			font-size: 14px;
     		position: relative;
 		}
 		.content-card-text h3 {
@@ -280,28 +284,63 @@
 		}
 	/*content card end*/
 	/*masonry begin*/
+		@media only screen and (min-width: 600px) {
+			.masonry { 
+				column-count: 1; 
+        		width: 95%;
+			}
+		}
+		@media only screen and (min-width: 950px) {
+			.masonry { 
+        		width: 90%;
+				column-count: 2; 
+			}
+		}
+		@media only screen and (min-width: 1175px) {
+			.masonry { 
+        		width: 80%;
+				column-count: 2; 
+			}
+		}
+		@media only screen and (min-width: 1275px) {
+			.masonry {
+        		width: 90%;
+				column-count: 3; 
+			}
+		}
+		@media only screen and (min-width: 1600px) {
+			.masonry {
+        		width: 95%;
+				column-count: 4; 
+			}
+		}
+		@media only screen and (min-width: 1700px) {
+			.masonry {
+        		width: 85%;
+				column-count: 4; 
+			}
+		}
+		@media only screen and (min-width: 1900px) {
+			.masonry {
+        		width: 75%;
+				column-count: 4; 
+			}
+		}
         .masonry { /* Masonry container */
-        	width: 70%;
-			max-width: 1150;
+        	/*width: 75%;*/
         	/*float: right;*/
-            column-count: 4;
-            column-gap: 1em;
+            /*column-count: 4;*/
+			max-width: 1150;
+            column-gap: 1.5rem;
 			margin: auto;
         }
-
         .item { /* Masonry bricks or child elements */
-            background-color: #eee;
+            /*background-color: #eee;*/
             display: inline-block;
             margin: 0 0 1em;
-            width: 100%;
+            width: 290px;
         }
 	/*masonry end*/
-	/*	.body-full {
-			width: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}*/
 		.main-content {
 			display: table-cell;
 			padding: 20px;
