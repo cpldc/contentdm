@@ -152,10 +152,11 @@
 			padding-top: 150px;
 		}
 		.navmenu, .navbutton {
+			z-index: -1;
 			position: relative;
 			background-color: #000;
 			color: #fff;
-			display: inline-block;
+			display: table-cell;
 		}
 		.navmenu {
 			width: 230px;
@@ -294,7 +295,7 @@
             border-bottom: 20 solid transparent;
 			margin: auto;
 			overflow: hidden;
-			display: inline-block;
+			display: table-cell;
 		}
 		.carousel-content-card {
 			background-color: #fff;
@@ -306,7 +307,7 @@
 			box-shadow: 4px 3px 5px -4.5px #3f4344;
 			position: relative;
 			z-index: -1;
-			display: inline-block;
+			display: table-cell;
 		}
 	/*carousel end*/
 	/*masonry begin*/
@@ -383,7 +384,7 @@
 		.main-content {
 			/*float: left;*/
 			position: relative;
-			display: inline-block;
+			display: table-cell;
 			padding: 20px;
 		}
 	</style>
@@ -470,11 +471,6 @@
 </div>
 <div class="body-full">
 	<div class="bumper"></div>
-	<div class="navbutton" style="display: none;" id="left-sidebar-button">
-		<button class="navbutton-toggle-button" onclick="navmenuHide()">
-			<img id="navbutton-toggle-right-image" src="browse-toggle-right.png" alt="Expand Sidebar">
-		</button>
-	</div>
 	<div class="navmenu" id="left-sidebar-menu">
 		<div class="navmenu-header">
 			<h3 class="navmenu-header-title">Digital Collections</h3>
@@ -504,9 +500,13 @@
 			</ul>
 		</div>
 	</div>
-
+	<div class="navbutton" style="display: none;" id="left-sidebar-button">
+		<button class="navbutton-toggle-button" onclick="navmenuHide()">
+			<img id="navbutton-toggle-right-image" src="browse-toggle-right.png" alt="Expand Sidebar">
+		</button>
+	</div>
 	<div class="main-content">
-		<section class="carousel">
+<!-- 		<section class="carousel">
 			<div class="carousel-content-card">
 				<div class="content-card-image">
 					<img src="https://d34rompce3lx70.cloudfront.net/wp-content/uploads/sites/3/2017/05/Gwendolyn-Brooks-1-230x185.jpg?v=1500413684" />
@@ -587,7 +587,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<section class="masonry">
 			<div class="content-card item">
 				<div class="content-card-image">
