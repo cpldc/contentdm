@@ -90,13 +90,31 @@
 				padding: 1rem;
 				cursor: pointer;
 			}
-			.header-browse-button {
+			/*.header-browse-button {
+				background-color: #fff;
+				color: #000;
+			}*/
+			.arrow {
+				border: solid #fff;
+				border-width: 0 1px 1px 0;
+				display: inline-block;
+				padding: 2px;
+				position: relative;
+				top: -4px;
+			}
+			.arrow:hover {
+				border-color: #000 !important;
+			}
+			.arrow-down {
+				transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+			}
+			.header-events:hover, .header-browse-button:hover {
 				background-color: #fff;
 				color: #000;
 			}
-			.header-events:hover {
-				background-color: #fff;
-				color: #000;
+			.header-browse-button:hover > .arrow {
+				border-color: #000;
 			}
 		/*header bottom end*/
 		/*header dropdown begin*/
@@ -149,7 +167,7 @@
 		/*header dropdown end		*/
 		/*sidebar begin*/
 			.body-full {
-				width: 70%;
+				width: 80%;
 				margin: auto;
 			}
 			.bumper {
@@ -227,24 +245,153 @@
 			}
 		/*sidebar end*/
 		/*main content begin*/
-			.main-content {
-				background-color: #fff;
+			.main-content, .right-sidebar {
 				display: inline-block;
 				vertical-align: top;
-				margin: auto;
-				padding: 20px;
+			} 
+			.main-content, .blog, .events {
+				background-color: #fff;
+				padding: 25px;
+				box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+			} 
+			.main-content, .main-content-title {
+				margin: 0 10px 0 20px;
+			}
+			.main-content-title:hover {
+				color: #2d63af;
+			}
+			.main-content-title {
+				padding-bottom: 20px;
+				cursor: pointer;
+			}
+			.main-content {
+				max-width: 725px;
 			}
 			.location-card {
 				width: 400px;
-				border: 1px solid #e5e5e5;
-				padding: 5px;
-				margin: 10px;
+				/*border: 1px solid #e5e5e5;*/
+				padding: 20px;
+				margin: auto;
 				display: table-cell;
 			}
 			.location-card img {
 				width: 400px;
 			}
+			.location-card figcaption {
+				color: #666;
+				font-size: 0.75rem;
+			}
+			.contact-list dt, .contact-list dd, .blog-list dt, .blog-list dd {
+				margin: 0;
+				padding: 0 0 3px 0;
+				line-height: 19px;
+			}
+			.contact-list dt, .blog-list dt {
+				font-weight: bold;
+			}
+			.contact-list dd, .blog-list dd {
+				color: #3f4344;
+				font-size: 0.88rem;
+			}
+			input {
+				display: none;
+				visibility: hidden;
+			}
+			#expand-nnhc, #expand-mrc {
+				height: 0px;
+				overflow: hidden;
+				transition: height 0.5s;
+			}
+			#toggle-nnhc:checked ~ #expand-nnhc, #toggle-mrc:checked ~ #expand-mrc {
+				height: auto;
+				padding: 20px 15px 30px 15px;
+				margin: 10px; 
+				border-top: 1px solid #ccc;
+			}
+			.raquo-blue {
+				color: #2d63af;
+				font-size: 1.25rem;
+			}
+			.raquo-blue:hover {
+				text-decoration: none;
+			}
+			.main-content-title::before {
+				content: "►";
+			}
 		/*main content end*/
+		/*right sidebar begin*/
+			.right-sidebar {
+				margin: 0 10px;
+				width: 300px;
+			}
+			.right-sidebar h3 {
+				top: 0;
+				width: 250px;
+				border-bottom: 1px solid #ccc;
+				padding-bottom: 20px;
+				margin-bottom: 20px;
+			}
+			.right-sidebar h3 {
+				text-transform: uppercase; 
+				font-size: 16px;
+			}
+			.blog, .events {
+				background-color: #fff;
+				display: block;
+				margin-bottom: 30px;
+			}
+			.blog-list dl {
+				margin: 0 0 15px 0;
+			}
+			.blog-list dt, .blog-list dd {
+				margin: 0;
+				padding: 0 0 3px 0;
+				line-height: 19px;
+			}
+			.blog-list dt {
+				font-weight: bold;
+			}
+			.blog-list dd {
+				color: #3f4344;
+				font-size: 0.88rem;
+			}
+			.events h4 {
+				font-weight: bold;
+				font-size: 18px;
+				margin: auto 0 5px 0;	
+			}
+			.event-location a, .event-date, .event-time {
+				color: #666;
+				font-size: 12px;
+			}
+			.event-location {
+				border-bottom: 1px solid #CCCCCC;
+				padding-bottom: 5px;
+			}
+			.event-date {
+				border-right: 1px solid #CCCCCC;
+				padding-right: 10px;
+			}
+			.event-time {
+				 padding-left: 10px; 
+			}
+			.event-datetime {
+				display: table;
+				margin-bottom: 20px;
+			}
+			.event-date, .event-time {
+				display: table-cell;
+				padding-top: 5px;
+			}
+			.events span a {
+				color: #428bca;
+				margin: 20px 0;
+			}
+			.events span a:hover  {
+				color: #2a6496;
+				text-decoration: none;
+			}
+		/*right sidebar end*/
 	</style>
 </head>
 <body>
@@ -279,7 +426,7 @@
 			<ul class="header-bottom-list">
 				<li class="header-browse-button" onclick="showDropdown()">
 					Browse
-					<img src="fontello-carot.png" />
+					<i class="arrow arrow-down"></i>
 				</li>
 				<li class="header-events" onclick="javascript:location.href='https://chipublib.bibliocommons.com/events/search/index'">
 					Events
@@ -365,55 +512,116 @@
 		</div>
 	</div>
 	<div class="main-content">
-		<h2 class="main-content-title">Northside Neighborhoods History Collection</h2>
-		<article class="nnhc-copy">
+		<input type="checkbox" id="toggle-nnhc" checked class="asdfasdf">
+			<label for="toggle-nnhc">
+				<h2 class="main-content-title">
+					Northside Neighborhoods History Collection
+				</h2>
+			</label>
+		</input>
+		<article id="expand-nnhc" class="nnhc-copy">
 			<span> The collection highlights historical and contemporary materials about Northside neighborhoods. </span>
 			<div class="location-card">
 				<img src="http://digital.chipublib.org/digital/api/singleitem/image/cfc/103/default.jpg">
-				<br />
-				<dl>
-					<dt>N. Paulina Avenue, 4100 block</dt>
-					<dd>Paulina Avenue between Belle Plaine and Berteau. Street view shows unpaved road, wooden sidewalks, fences, and houses.</dd>
-				</dl>
+				<figcaption>
+					Paulina Avenue between Belle Plaine and Berteau. Street view shows unpaved road, wooden sidewalks, fences, and houses.
+				</figcaption>
 			</div>
-			<div class="location-card">
+			<!-- <div class="location-card">
 				<img src="http://digital.chipublib.org/digital/api/singleitem/image/cfc/168/default.jpg">
-				<br>
-				<dl>
-					<dt>Annual Brotherhood Interfaith Awards Luncheon attendees</dt>
-					<dd>Overhead photograph of attendees of the annual Brotherhood Interfaith Awards Luncheon.  They are seated at very long banquet tables and are all turned in their chairs in the same direction.</dd>
-				</dl>
-			</div>
-Visit us on the 3rd floor of Sulzer Regional Library, 4455 N. Lincoln Avenue, Chicago IL 60625
-<br />
+				<figcaption>
+					Overhead photograph of attendees of the annual Brotherhood Interfaith Awards Luncheon.  They are seated at very long banquet tables and are all turned in their chairs in the same direction.
+				</figcaption>
+			</div> -->
+			Visit us on the 3rd floor of Sulzer Regional Library, 4455 N. Lincoln Avenue, Chicago IL 60625
 			<div class="location-card">
 				<img src="http://digital.chipublib.org/digital/api/singleitem/image/cfc/79/default.jpg">
-				<br>
-				<dl>
-					<dt>Board of Directors of the Ravenswood Manor Improvement Association rehearsing for the Winter Social</dt>
-					<dt>Group photo of the Board of Directors of RMIA chorus</dt>
-				</dl>
+				<figcaption>
+					Board of Directors of the Ravenswood Manor Improvement Association rehearsing for the Winter Social
+				</figcaption>
 			</div>
-			<div class="location-card">
+			<!-- <div class="location-card">
 				<img src="http://digital.chipublib.org/digital/api/singleitem/image/cfc/80/default.jpg">
-				<br>
-				<dl>
-					<dt>Reverse Side</dt>
-				</dl>
-			</div>
-<dl>
-<dt>Contact this collection: 
-<ul class="contact-list">
-	<li class="contact-list-item">Call: (312) 742-4455</li>
-	<li class="contact-list-item">Email: northsidehistory@chipublib.org</li>
-	<li class="contact-list-item">Hours: Tuesday, 2 to 5 p.m. Additional hours by appointment</li>
-</ul>
-
-
-Call: (312) 742-4455
-
-
+				<figcaption>
+					Reverse Side
+				</figcaption>
+			</div> -->
+			<dl class="contact-list">
+				<dt class="contact-list-item">Contact this collection: </dt>
+					<dd class="contact-list-item">Hours: Tuesday, 2 to 5 p.m. Additional hours by appointment</dd>
+					<dd class="contact-list-item">Email: northsidehistory@chipublib.org</dd>
+					<dd class="contact-list-item">Call: (312) 742-4455</dd>
+			</dl>
 		</article>
+		<input type="checkbox" id="toggle-mrc" checked>
+			<label for="toggle-mrc">
+				<h2 class="main-content-title">
+					HWLC Municipal Reference Collection
+				</h2>
+			</label>
+		</input>
+		<article id="expand-mrc" class="mrc-copy">
+			Serves as the first point of contact for information on Chicago ordinances, statistics, government, budgets and community areas. 
+			Call: (312) 747-4526
+			Visit us on the 5th floor of Harold Washington Library Center, 400 S. State Street, Chicago, IL 60605
+			Hours: Monday to Thursday, 9 a.m. to 9 p.m., Friday and Saturday, 9 a.m. to 5 p.m., Sunday, 1 to 5 p.m.
+		</article>
+	</div>
+	<div class="right-sidebar">
+		<div class="blog">
+			<h3>
+				Special Collections Blog
+			</h3>
+			<dl class="blog-list">
+				<dt>Labor of Love: Revs. Addie and Claude Wyatt Photog&hellip; &raquo;</dt>
+				<dd>By: Cynthia August 31, 2017</dd>
+				<dd>Chicagoan Addie Wyatt was a minister, labor activist and&hellip;</dd>
+			</dl>
+			<dl class="blog-list">
+				<dt>Happy 50th to the Chicago Picasso!</dt>
+				<dd>By: Johanna August 4, 2017</dd>
+				<dd>In the early 1960s, the architectural firm Skidmore, Owings &amp; &hellip;</dd>
+			</dl>
+			<dl class="blog-list">
+				<dt>Quiz: How Well Do You Know the Chicago Cubs?</dt>
+				<dd>By: Ellen July 17, 2017</dd>
+				<dd>Can you smell the peanuts and Cracker Jack? It's baseball&hellip;</dd>
+			</dl>
+		</div>
+		<div class="events">
+			<h3>Events</h3>
+			<h4><a href="">Meet the Author: A.C. Barnes <span class="raquo-blue">&raquo;</span></a></h4>
+			<div class="event-location"><a href="">Avalon</a></div>
+			<div class="event-datetime">
+				<div class="event-date">Sep 9</div>
+				<div class="event-time">3:00PM</div>
+			</div>
+			<h4><a href="">Courthouse Discoveries <span class="raquo-blue">&raquo;</span></a></h4>
+			<div class="event-location"><a href="">Sulzer Regional</a></div>
+			<div class="event-datetime">
+				<div class="event-date">Sep 16</div>
+				<div class="event-time">10:00AM</div>
+			</div>
+			<h4><a href="">Latino Punk, History &amp; Music <span class="raquo-blue">&raquo;</span></a></h4>
+			<div class="event-location"><a href="">Lozano</a></div>
+			<div class="event-datetime">
+				<div class="event-date">Sep 16</div>
+				<div class="event-time">1:00PM</div>
+			</div>
+			<h4><a href="">Chicago Transformed: World War I and the Windy City <span class="raquo-blue">&raquo;</span></a></h4>
+			<div class="event-location"><a href="">Clearing</a></div>
+			<div class="event-datetime">
+				<div class="event-date">Sep 18</div>
+				<div class="event-time">6:00PM</div>
+			</div>
+			<h4><a href="">Finding Your Family Tree <span class="raquo-blue">&raquo;</span></a></h4>
+			<div class="event-location"><a href="">Near North</a></div>
+			<div class="event-datetime">
+				<div class="event-date">Sep 18</div>
+				<div class="event-time">6:30PM</div>
+			</div>
+			<span><a href="">View More &raquo;</a></span>
+		</div>
 	</div>
 </div>
 	<script>
