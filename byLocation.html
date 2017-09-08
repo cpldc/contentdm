@@ -69,6 +69,31 @@
 				margin: 0;
 			}
 		/*header top end*/
+		/*search icon begin*/
+			.search {
+				position: relative;
+				width: 22px;
+				margin: 0 auto;
+				padding: 2px 0;
+				text-align: center;
+			}
+			.search_circle {
+				width: 12px;
+				height: 12px;
+				border: 3px solid #000;
+				border-radius: 100px;
+			}
+			.search_rectangle {
+				position: absolute;
+				left: 13px;
+				top: 18px;
+				width: 5px;
+				transform: rotate(45deg);
+				border: 2px solid #000;
+				border-top-right-radius: 12px;
+				border-bottom-right-radius: 12px;
+			}
+		/*search icon end*/
 		/*header bottom begin*/
 			.header-bottom {
 				background-color: #000;
@@ -392,37 +417,6 @@
 				text-decoration: none;
 			}
 		/*right sidebar end*/
-		/*search icon begin*/
-
-
-
-
-.search {
-	position: relative;
-	width: 22px;
-	margin: 0 auto;
-	padding: 2px 0;
-	text-align: center;
-}
-.search__circle {
-		width: 12px;
-		height: 12px;
-		border: 3px solid #000;
-		border-radius: 100px;
-	}
-
-.search__rectangle {
-		position: absolute;
-		left: 13px;
-		top: 18px;
-		width: 5px;
-		transform: rotate(45deg);
-		border: 2px solid #000;
-		border-top-right-radius: 12px;
-		border-bottom-right-radius: 12px;
-	}
-
-		/*search icon end*/
 	</style>
 </head>
 <body>
@@ -448,8 +442,8 @@
 					<button class="header-search-button">
 						<!-- <img src="mag.png"> -->
 						<div class="search">
-							<div class="search__circle"></div>
-							<div class="search__rectangle"></div>
+							<div class="search_circle"></div>
+							<div class="search_rectangle"></div>
 						</div>
 					</button>
 				</div>
@@ -547,7 +541,7 @@
 		</div>
 	</div>
 	<div class="main-content">
-		<input type="checkbox" id="toggle-nnhc" checked class="asdfasdf">
+		<input type="checkbox" id="toggle-nnhc" checked>
 			<label for="toggle-nnhc">
 				<h2 class="main-content-title">
 					Northside Neighborhoods History Collection
