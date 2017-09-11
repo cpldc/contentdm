@@ -55,8 +55,21 @@
 				border-color: #333;
 				color: #333;
 			}
+			.header-search-button-text, .header-search-icon_1 {
+				display: inline-block;
+			}
+			.header-search-button-text {
+				font-size: 17.5px;
+				font-weight: bold;
+				margin: 5px;
+			}
 			.header-search-expanded {
 				display: table;
+				position: relative;
+				top: -12px;
+			}
+			.header-search-expanded-text {
+				margin: 0 5px 0 0;
 			}
 			.header-search-input, .header-search-expanded-text, .header-search-icon_2 {
 				display: inline-block;
@@ -105,7 +118,7 @@
 				cursor: pointer;
 				border: 0;
 				padding: 5px 0 0 0;
-				margin: 0;
+				margin: 12px 0 0 0;
 			}
 			#search-expanded {
 				display: none;
@@ -142,30 +155,12 @@
 			}
 			.header-search-icon_2 {
 				position: relative;
-				/*width: 22px;*/
 				margin: auto;
 				text-align: center;
 				background-color: #000;
 				color: #fff;
 				font-size: 20px;
-				/*font-weight: bold;*/
 			}
-			/*.header-search_circle_2 {
-				width: 7px;
-				height: 7px;
-				border: 2px solid #fff;
-				border-radius: 100px;
-			}
-			.header-search_rectangle_2 {
-				position: absolute;
-				left: 8px;
-				top: 13px;
-				width: 4px;
-				transform: rotate(45deg);
-				border: 1px solid #fff;
-				border-top-right-radius: 12px;
-				border-bottom-right-radius: 12px;
-			}*/
 		/*search icon end*/
 		/*header bottom begin*/
 			.header-bottom {
@@ -302,14 +297,6 @@
 						</a>
 					</span>
 				</div>
-				<!-- <div class="header-search-right">
-					<button class="header-search-button">
-						<div class="search">
-							<div class="search_circle"></div>
-							<div class="search_rectangle"></div>
-						</div>
-					</button>
-				</div> -->
 			</div>
 		</div>
 	</div>
