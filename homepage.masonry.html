@@ -297,7 +297,7 @@
 				font-size: 1.00rem;
 			}
 			.navmenu-toggle-button, .navbutton-toggle-button {
-				display: block;
+				display: table;
 				width: 49px;
 				height: 53px;
 				background: #000;
@@ -339,6 +339,33 @@
 				text-transform: uppercase;
 				font-size: 0.88rem;
 				line-height: 1.25;
+			}
+			.hamburger {
+				width: 20px;
+				height: 3px;
+				background-color: #FFF;
+				margin: 4px 0;
+				border-radius: 25px;
+			}
+			.triangle-left, .triangle-right {
+				display: inline-block;
+				width: 0;
+				height: 0;
+				margin: 8px 0;
+				/*border-color: #fff;*/
+			}
+			.triangle-left {
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+				border-right: 5px solid #fff;
+			}
+			.triangle-right {
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+				border-left: 5px solid #fff;
+			}
+			.hamburger-x3 {
+				display: inline-block;
 			}
 		/*sidebar end*/
 		/*content card begin*/
@@ -556,8 +583,13 @@
 		<div class="navmenu-header">
 			<h3 class="navmenu-header-title">Digital Collections</h3>
 			<button class="navmenu-toggle-button" onclick="navmenuHide()">
-				<img id="navmenu-toggle-left-image" src="browse-toggle-left.png" alt="Collapse Sidebar">
-
+				<!-- <img id="navmenu-toggle-left-image" src="browse-toggle-left.png" alt="Collapse Sidebar"> -->
+				<div id="navbutton-toggle-right-image" class="triangle-left"></div>
+				<div class="hamburger-x3">
+					<div id="navmenu-toggle-left-image" class="hamburger"></div>
+					<div id="navmenu-toggle-left-image" class="hamburger"></div>
+					<div id="navmenu-toggle-left-image" class="hamburger"></div>
+				</div>
 			</button>
 		</div>
 		<div class="navmenu-corelinks">
@@ -593,7 +625,13 @@
 	</div>
 	<div class="navbutton" style="display: none;" id="left-sidebar-button">
 		<button class="navbutton-toggle-button" onclick="navmenuHide()">
-			<img id="navbutton-toggle-right-image" src="browse-toggle-right.png" alt="Expand Sidebar">
+			<!-- <img id="navbutton-toggle-right-image" src="browse-toggle-right.png" alt="Expand Sidebar"> -->
+			<div class="hamburger-x3">
+				<div id="navmenu-toggle-left-image" class="hamburger"></div>
+				<div id="navmenu-toggle-left-image" class="hamburger"></div>
+				<div id="navmenu-toggle-left-image" class="hamburger"></div>
+			</div>
+			<div id="navbutton-toggle-right-image" class="triangle-right"></div>
 		</button>
 	</div>
 	<div class="main-content">
