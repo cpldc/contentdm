@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Millennium Park | Digital Collections | Chicago Public Library</title>
+	    <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
+		<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
+	<style type="text/css">
+			body {
+				font-family: "Open Sans", Arial, sans-serif;
+				background-color: #e5e5e5;
+				line-height: 18px;
+				margin: 0;
+	    		font-size: 1.00rem;
+			}
+			a {
+				text-decoration: none;
+				font-size: 1rem;
+				color: #262626;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+			.header {
+				width: 100%;
+				position: fixed;
+				top: 0;
+				right: 0;
+			}
+		/*header top begin*/
+			.header-top {
+				width: 100%;
+				background-color: #fff;
+				height: 90px;
+			}
+			.header-top-content {
+				width: 70%;
+				max-width: 1150px;
+				padding: 15px;
+				margin: auto;
+			}
+			.header-logo {
+				float: left;
+			}
+			.header-logo img {
+				max-height: 65px;
+			}
+			.header-search {
+				float: right;
+			}
+			.header-search-button, .header-search-icon {
+				display: inline-block;
+			}
+			.header-search-button:hover .header-search_circle, .header-search-button:hover .header-search_rectangle, .header-search-button:hover .header-search-button-text {
+				border-color: #333;
+				color: #333;
+			}
+			.header-search-button-text, .header-search-icon_1 {
+				display: inline-block;
+			}
+			.header-search-button-text {
+				font-size: 17.5px;
+				font-weight: bold;
+				margin: 5px;
+			}
+			.header-search-expanded {
+				display: table;
+				position: relative;
+				top: -12px;
+			}
+			.header-search-expanded-text {
+				margin: 0 5px 0 0;
+			}
+			.header-search-input, .header-search-expanded-text, .header-search-icon_2 {
+				display: inline-block;
+			}
+			.header-search-adv {
+				display: block;
+				position: relative;
+				left: -4px;
+			}
+			.header-search-adv a {
+				color: #333;
+				font-size: 12px;
+				float: right;
+			}
+			.header-search-icon_2 {
+				height: 19px;
+				width: 30px;
+				border: 7px solid #000;
+				position: relative;
+				top: 2px;
+				left: -5px;
+				cursor: pointer;
+			}
+			.header-search-icon_2:hover {
+				border-color: #333;
+				background-color: #333;
+			}
+			.header-search-input {
+				height: 25px;
+				font-size: 16px;
+				color: #565656;
+				background-color: #fff;
+				padding: 3px 0px 3px 3px;
+				margin: 5px 1px 3px 0px;
+				border: 1px solid #ccc;
+				z-index: 2;
+			}
+			.header-search-input:focus, .header-search-input:hover {
+				box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+				padding: 3px 0px 3px 3px;
+				margin: 5px 1px 3px 0px;
+				border: 1px solid rgba(102,175,233,0.6);
+			}
+			.header-search-button {
+				background-color: #fff;
+				cursor: pointer;
+				border: 0;
+				padding: 5px 0 0 0;
+				margin: 12px 0 0 0;
+			}
+			#search-expanded {
+				display: none;
+			}
+			.header-search-expanded-text {
+				font-size: 16.8px;
+				font-weight: 600;
+				color: #333;
+			}
+		/*header top end*/
+		/*search icon begin*/
+			.header-search-icon_1 {
+				position: relative;
+				width: 22px;
+				margin: 0 auto;
+				padding: 2px 0;
+				text-align: center;
+			}
+			.header-search_circle_1 {
+				width: 12px;
+				height: 12px;
+				border: 3px solid #000;
+				border-radius: 100px;
+			}
+			.header-search_rectangle_1 {
+				position: absolute;
+				left: 13px;
+				top: 18px;
+				width: 5px;
+				transform: rotate(45deg);
+				border: 2px solid #000;
+				border-top-right-radius: 12px;
+				border-bottom-right-radius: 12px;
+			}
+			.header-search-icon_2 {
+				position: relative;
+				margin: auto;
+				text-align: center;
+				background-color: #000;
+				color: #fff;
+				font-size: 20px;
+			}
+		/*search icon end*/
+		/*header bottom begin*/
+			.header-bottom {
+				background-color: #000;
+				color: #fff;
+			}
+			.header-bottom-content {
+				width: 70%;
+				max-width: 1150px;
+				margin: auto;
+			}
+			.header-bottom-list {
+				list-style-type: none;
+				margin: 0;
+				padding: 0 0 0 15px;
+				overflow: hidden;
+			}
+			.header-bottom-list li {
+				float: left;
+				padding: 1rem;
+				cursor: pointer;
+			}
+			/*.header-browse-button {
+				background-color: #fff;
+				color: #000;
+			}*/
+			.arrow {
+				border: solid #fff;
+				border-width: 0 1px 1px 0;
+				display: inline-block;
+				padding: 2px;
+				position: relative;
+				top: -4px;
+			}
+			.arrow:hover {
+				border-color: #000 !important;
+			}
+			.arrow-down {
+				transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+			}
+			.header-events:hover, .header-browse-button:hover {
+				background-color: #fff;
+				color: #000;
+			}
+			.header-browse-button:hover > .arrow {
+				border-color: #000;
+			}
+		/*header bottom end*/
+		/*header dropdown begin*/
+			.dummy-dropdown {
+				display: none;
+				z-index: 2;
+			}
+			.header-dropdown {
+				width: 100%;
+				position: absolute;
+				background-color: #f8f8f8;
+				height: 250px;
+				box-shadow:  0 6px 12px rgba(0,0,0,0.175);
+			}
+
+			.header-dropdown-content {
+				margin: auto;
+				width: 70%;
+				max-width: 1150px;
+				padding: 30px 15px 30px 15px;
+			}
+			.header-dropdown-content ul {
+				list-style-type: none;
+				border-right: 1px solid #cccac8;
+				float: left;
+				box-sizing: border-box;
+				padding: 0 20px 0 0;
+				margin: 0 20px 0 0;
+				display: block;
+				height: 200px;
+			}
+			.header-dropdown-listheader {
+				text-transform: uppercase;
+				margin: 0 0 10px 0;
+			}
+			.header-dropdown-listitem {
+				padding: 8px 15px;
+				margin-left: -15px;
+			}
+
+			.header-dropdown-listitem a {
+				font-size: 14px;
+			}
+			.header-dropdown-browsetext {
+				margin: 0 30px 0 0;
+			}
+			.show {
+				display: inline;
+				visibility: visible;
+			}
+		/*header dropdown end*/
+		/*sidebar begin*/
+			.body-full {
+				width: 80%;
+				margin: auto;
+			}
+			.bumper {
+				/*position: relative;*/
+				display: block;
+				width: 100%;
+				padding-top: 185px;
+			}
+			.navmenu {
+				background-color: #000;
+				color: #fff;
+				width: 300px;
+				display: inline-block;
+			}
+			.navmenu-header {
+				display: table;
+				width: 100%;
+				height: 53px;
+				vertical-align: middle;
+				border-bottom: 1px solid #eee;
+			}
+			.navmenu-header-title {
+				display: table-cell;
+				font-weight: normal;
+				vertical-align: middle;
+				padding-left: 40px;
+				padding-right: 10px;
+				width: 131px;
+				line-height: 16px;
+				font-size: 1.00rem;
+			}
+			.navmenu-toggle-button, .navbutton-toggle-button {
+				display: block;
+				width: 49px;
+				height: 53px;
+				background: #000;
+				color: #fff;
+				border: 1px solid transparent;
+				margin-left: 0px;
+			}
+			.navmenu-toggle-right-image, #left-sidebar-button {
+				display: none;
+			}
+			.navmenu-list {
+				list-style: none;
+				padding: 0;
+				margin: 0 15px 20px 40px;
+				vertical-align: middle;
+			}
+			.navmenu-list li {
+				margin: 12px 0 12px 0;
+			}
+			.navmenu-list a {
+				text-decoration: none;
+				color: #fff;
+			}
+			.navmenu-list a:hover {
+				text-decoration: underline;
+			}
+			.navmenu-otherlinks, .navmenu-corelinks {
+				/*padding: 5px 0 0 29px;*/
+			}
+			.navmenu-otherlinks {
+				border-top: 1px dashed #fff;
+				padding-bottom: 20px; 
+			}
+			.navmenu-otherlinks-header {
+				padding: 15px 0 10px 40px;
+				margin-bottom: 5px;
+			}
+			.navmenu-otherlinks-header span {
+				text-transform: uppercase;
+				font-size: 0.88rem;
+				line-height: 1.25;
+			}
+		/*sidebar end*/
+		/*main content begin*/
+			.main-content, .right-sidebar {
+				display: inline-block;
+				vertical-align: top;
+			} 
+			.main-content, .blog, .events {
+				background-color: #fff;
+				padding: 25px;
+				box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+			} 
+			.main-content, .main-content-title {
+				margin: 0 10px 0 20px;
+			}
+			.main-content-title:hover {
+				color: #2d63af;
+			}
+			.main-content-title {
+				padding-bottom: 20px;
+				cursor: pointer;
+			}
+			.main-content {
+				max-width: 725px;
+			}
+			.location-card {
+				/*width: 400px;*/
+				/*border: 1px solid #e5e5e5;*/
+				padding: 20px;
+				margin: auto;
+				display: table-cell;
+			}
+			.location-card img {
+				width: 100%;
+				margin: auto;
+			}
+			.location-card figcaption, .rights {
+				color: #666;
+				font-size: 0.75rem;
+			}
+			.contact-list dt, .contact-list dd, .blog-list dt, .blog-list dd {
+				margin: 0;
+				padding: 0 0 3px 0;
+				line-height: 19px;
+			}
+			.contact-list dt, .blog-list dt {
+				font-weight: bold;
+			}
+			.contact-list dd, .blog-list dd {
+				color: #3f4344;
+				font-size: 0.88rem;
+			}
+			.main-content input {
+				display: none;
+				visibility: hidden;
+			}
+			#expand-nnhc, #expand-mrc {
+				height: 0px;
+				overflow: hidden;
+				transition: height 0.5s;
+			}
+			#toggle-nnhc:checked ~ #expand-nnhc, #toggle-mrc:checked ~ #expand-mrc {
+				height: auto;
+				padding: 20px 15px 30px 15px;
+				margin: 10px; 
+				border-top: 1px solid #ccc;
+			}
+			.raquo-blue {
+				color: #2d63af;
+				font-size: 1.25rem;
+			}
+			.raquo-blue:hover {
+				text-decoration: none;
+			}
+			/*main-content-title::before {
+				content: "►";
+			}*/
+			.browse-section {
+				margin: auto;
+			}
+			.browse-collection-button, .browse-filteredlinks {
+				display: inline-block;
+			}
+			.browse-filteredlinks {
+				width: 50%;
+				padding: 20px;
+				margin: 10px;
+				color: #333;
+			}
+			.browse-filteredlinks a {
+				font-weight: bold;
+			}
+			.browse-collection-button {
+				width: 30%;
+				position: relative;
+				top: -75px;
+				/*margin: auto;*/
+				/*vertical-align: middle;*/
+				padding: 15px;
+				border: 0;
+				background-color: #2a6496;
+				border-radius: 5px;
+				color: #fff;
+				font-size: 16px;
+				cursor: pointer;
+			}
+			.browse-collection-button:hover {
+				background-color: #428bca;
+			}
+		/*main content end*/
+		/*right sidebar begin*/
+			.right-sidebar {
+				margin: 0 10px;
+				width: 300px;
+			}
+			.right-sidebar h3 {
+				top: 0;
+				width: 250px;
+				border-bottom: 1px solid #ccc;
+				padding-bottom: 20px;
+				margin-bottom: 20px;
+			}
+			.right-sidebar h3 {
+				text-transform: uppercase; 
+				font-size: 16px;
+			}
+			.blog, .events {
+				background-color: #fff;
+				display: block;
+				margin-bottom: 30px;
+			}
+			.blog-list dl {
+				margin: 0 0 15px 0;
+			}
+			.blog-list dt, .blog-list dd {
+				margin: 0;
+				padding: 0 0 3px 0;
+				line-height: 19px;
+			}
+			.blog-list dt {
+				font-weight: bold;
+			}
+			.blog-list dd {
+				color: #3f4344;
+				font-size: 0.88rem;
+			}
+			.events h4 {
+				font-weight: bold;
+				font-size: 18px;
+				margin: auto 0 5px 0;	
+			}
+			.event-location a, .event-date, .event-time {
+				color: #666;
+				font-size: 12px;
+			}
+			.event-location {
+				border-bottom: 1px solid #CCCCCC;
+				padding-bottom: 5px;
+			}
+			.event-date {
+				border-right: 1px solid #CCCCCC;
+				padding-right: 10px;
+			}
+			.event-time {
+				 padding-left: 10px; 
+			}
+			.event-datetime {
+				display: table;
+				margin-bottom: 20px;
+			}
+			.event-date, .event-time {
+				display: table-cell;
+				padding-top: 5px;
+			}
+			.events span a {
+				color: #428bca;
+				margin: 20px 0;
+			}
+			.events span a:hover  {
+				color: #2a6496;
+				text-decoration: none;
+			}
+		/*right sidebar end*/
+	</style>
+</head>
+<body>
+<div class="header">
+	<div class="header-top">
+		<div class="header-top-content">
+			<div class="header-logo">
+				<a href="http://www.chipublib.org">
+					<img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png" alt="" class="header-logo-image"/>
+				</a>
+			</div>
+			<div class="header-search">
+				<button class="header-search-button" onclick="searchExpander();">
+					<div id="search-collapsed">
+						<span id="search-button" class="header-search-button-text">Search</span>
+						<div class="header-search-icon_1">
+							<div class="header-search_circle_1"></div>
+							<div class="header-search_rectangle_1"></div>
+						</div>
+					</div>
+				</button>
+				<div id="search-expanded" class="header-search-expanded">
+					<span class="header-search-expanded-text">Search the Digital Collections </span>
+					<input type="text" class="header-search-input" />
+					<div class="header-search-icon_2">
+						<div style="-webkit-transform: rotate(-45deg); 
+						               -moz-transform: rotate(-45deg); 
+						                 -o-transform: rotate(-45deg);
+						                    transform: rotate(-45deg);">
+						    &#9906;
+						</div>
+					</div>
+					<span class="header-search-adv">
+						<a href="http://digital.chipublib.org/digital/">
+							Advanced Search
+						</a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom">
+		<div class="header-bottom-content">
+			<ul class="header-bottom-list">
+				<li class="header-browse-button" onclick="showDropdown()">
+					Browse
+					<i class="arrow arrow-down"></i>
+				</li>
+				<li class="header-events" onclick="javascript:location.href='https://chipublib.bibliocommons.com/events/search/index'">
+					Events
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="show-dropdown" class="dummy-dropdown">
+		<div class="header-dropdown">
+			<div class="header-dropdown-content">
+				<div>
+					<ul>
+						<li>
+							<h2 class="header-dropdown-browsetext">Browse</h2>
+						</li>
+					</ul>
+				</div>
+				<ul>
+					<li>
+						<h4 class="header-dropdown-listheader">By Format</h4>
+					</li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/books/">Books</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/ebooks/">eBooks</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/audiobooks/">Audiobooks</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/movies/">Movies &amp; TV</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/music/">Music</a></li>
+				</ul>
+				<ul>
+					<li>
+						<h4 class="header-dropdown-listheader">By Audience</h4>
+					</li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/kids/">Kids</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/teens/">Teens</a></li>
+				</ul>
+				<ul class="header-dropdown-morelist">
+					<li>
+						<h4 class="header-dropdown-listheader">More</h4>
+					</li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/online-resources/">Online Resources</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/jobs-small-business/">Jobs &amp; Small Business</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/chicago-history/">Chicago History</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/archives-collections/">Archival Collections</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="body-full">
+	<div class="bumper"></div>
+	<div class="navmenu" id="left-sidebar-menu">
+		<div class="navmenu-header">
+			<h3 class="navmenu-header-title">Digital Collections</h3>
+		</div>
+		<div class="navmenu-corelinks">
+			<div class="navmenu-otherlinks-header"><span>Browse by Subject</span></div>
+			<ul class="navmenu-list">
+				<li><a href="Neighborhoods.html" class="active">Neighborhoods</a></li>
+				<li><a href="Newspapers.html">Newspapers</a></li>
+				<li><a href="Parks.html">Parks</a></li>
+				<li><a href="LibEd.html">Libraries &amp; Education (new category)</a></li>
+				<li><a href="HaroldWashington.html">Harold Washington</a></li>
+				<li><a href="Theater.html">Theater</a></li>
+				<li><a href="AfricanAmericans.html">African Americans</a></li>
+				<li><a href="Theater.html">More...</a></li>
+			</ul>
+		</div>
+		<div class="navmenu-otherlinks">
+			<div class="navmenu-otherlinks-header"><span>Browse by Location</span></div>
+			<ul class="navmenu-list">
+				<li><a href="HWLC.html">HWLC Special Collections</a></li>
+				<li><a href="MRC.html">HWLC Municipal Records Collection</a></li>
+				<li><a href="Harsh.html">Vivian G Harsh Collection</a></li>
+				<li><a href="NNHC.html">Northside Neighborhoods History Collection</a></li>
+			</ul>
+		</div>
+		<div class="navmenu-otherlinks">
+			<div class="navmenu-otherlinks-header"><span>Related Links</span></div>
+			<ul class="navmenu-list">
+				<li><a href="">Online Resources</a></li>
+				<li><a href="">Chicago History</a></li>
+				<li><a href="">Archival Collections</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="main-content">
+		<input type="checkbox" id="toggle-mrc" checked>
+			<label for="toggle-mrc">
+				<h2 class="main-content-title">
+					Millennium Park Construction Collection
+				</h2>
+			</label>
+		</input>
+		<article id="expand-mrc" class="mrc-copy">
+			<span>Watch the site transform from an industrial wasteland to a new urban park of world renown.</span>
+			<div class="location-card">
+				<img src="http://digital.chipublib.org/digital/api/singleitem/image/mpu/6324/default.jpg" />
+				<figcaption>
+					Full Park, construction, April 20, 2004
+				</figcaption>
+			</div>
+			<span>More Millennium Park copy.</span>
+			<div class="location-card">
+				<img src="http://digital.chipublib.org/digital/api/singleitem/image/mpu/1510/default.jpg" />
+				<figcaption>
+					Cloud Gate, assembly in Chicago, structural steel, ca. March 3, 2004
+				</figcaption>
+			</div>
+			<div class="browse-section">
+				<button class="browse-collection-button" onclick="javascript:location.href='https://chipublib.bibliocommons.com/events/search/index'">
+					Browse the complete collection
+				</button>
+				<div class="browse-filteredlinks">
+					<p>
+						<a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/highlight/field/highli/mode/all/conn/and/order/origin">
+							Collection highlights
+						</a>
+						<br />
+						<span class="browse-link-caption">
+							Get a taste of how this transformation took place in a selected group of images.
+						</span>
+					</p>
+					<p>
+						<a href="http://chicago.bibliocms.com/fa-millennium-park-u-s-equities-realty-collection/">
+							Millennium Park / U.S. Equities Realty Collection finding aid
+						</a>
+						<br />
+						<span class="browse-link-caption">
+							Learn about the construction of the park and the Chicago-based company that made it possible.
+						</span>
+					</p>
+				</div>
+			</div>
+					<p>
+						<span class="rights">
+							The Millennium Park Digital Collection was made possible by generous gifts from U.S. Equities Realty and the Gaylord and Dorothy Donnelley Foundation through the Chicago Public Library Foundation.
+						</span>
+					</p>
+		</article>
+	</div>
+	<div class="right-sidebar">
+		<div class="blog">
+			<h3>
+				Special Collections Blog
+			</h3>
+			<dl class="blog-list">
+				<dt>Labor of Love: Revs. Addie and Claude Wyatt Photog&hellip; &raquo;</dt>
+				<dd>By: Cynthia August 31, 2017</dd>
+				<dd>Chicagoan Addie Wyatt was a minister, labor activist and&hellip;</dd>
+			</dl>
+			<dl class="blog-list">
+				<dt>Happy 50th to the Chicago Picasso!</dt>
+				<dd>By: Johanna August 4, 2017</dd>
+				<dd>In the early 1960s, the architectural firm Skidmore, Owings &amp; &hellip;</dd>
+			</dl>
+			<dl class="blog-list">
+				<dt>Quiz: How Well Do You Know the Chicago Cubs?</dt>
+				<dd>By: Ellen July 17, 2017</dd>
+				<dd>Can you smell the peanuts and Cracker Jack? It's baseball&hellip;</dd>
+			</dl>
+		</div>
+		<div class="events">
+			<h3>Events</h3>
+			<h4><a href="">Meet the Author: A.C. Barnes <span class="raquo-blue">&raquo;</span></a></h4>
+			<div class="event-location"><a href="">Avalon</a></div>
+			<div class="event-datetime">
+				<div class="event-date">Sep 9</div>
+				<div class="event-time">3:00PM</div>
+			</div>
+			<h4><a href="">Courthouse Discoveries <span class="raquo-blue">&raquo;</span></a></h4>
+			<div class="event-location"><a href="">Sulzer Regional</a></div>
+			<div class="event-datetime">
+				<div class="event-date">Sep 16</div>
+				<div class="event-time">10:00AM</div>
+			</div>
+			<h4><a href="">Latino Punk, History &amp; Music <span class="raquo-blue">&raquo;</span></a></h4>
+			<div class="event-location"><a href="">Lozano</a></div>
+			<div class="event-datetime">
+				<div class="event-date">Sep 16</div>
+				<div class="event-time">1:00PM</div>
+			</div>
+			<h4><a href="">Chicago Transformed: World War I and the Windy City <span class="raquo-blue">&raquo;</span></a></h4>
+			<div class="event-location"><a href="">Clearing</a></div>
+			<div class="event-datetime">
+				<div class="event-date">Sep 18</div>
+				<div class="event-time">6:00PM</div>
+			</div>
+			<h4><a href="">Finding Your Family Tree <span class="raquo-blue">&raquo;</span></a></h4>
+			<div class="event-location"><a href="">Near North</a></div>
+			<div class="event-datetime">
+				<div class="event-date">Sep 18</div>
+				<div class="event-time">6:30PM</div>
+			</div>
+			<span><a href="">View More &raquo;</a></span>
+		</div>
+	</div>
+</div>
+	<script>
+		function showDropdown() {
+			document.getElementById("show-dropdown").classList.toggle("show");
+		}
+		window.onclick = function(e) {
+			if (!e.target.matches('.header-browse-button')) {
+				var myDropdown = document.getElementById("show-dropdown");
+				if (myDropdown.classList.contains('show')) {
+						myDropdown.classList.remove('show');
+				}
+			}
+		}
+		function searchExpander() {
+            if (document.getElementById('search-collapsed')) {
+
+                if (document.getElementById('search-collapsed').style.display == 'none') {
+	                    document.getElementById('search-collapsed').style.display = 'block';
+	                    document.getElementById('search-expanded').style.display = 'none';
+                }
+                else {
+                    document.getElementById('search-collapsed').style.display = 'none';
+                    document.getElementById('search-expanded').style.display = 'block';
+                }
+            }
+		}
+	</script>
+</body>
+</html>
