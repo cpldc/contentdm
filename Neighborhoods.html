@@ -23,7 +23,7 @@
 			}
 			.header {
 				width: 100%;
-				position: fixed;
+				/*position: fixed;*/
 				top: 0;
 				right: 0;
 			}
@@ -268,7 +268,7 @@
 				/*position: relative;*/
 				display: block;
 				width: 100%;
-				padding-top: 185px;
+				padding-top: 10px;
 			}
 			.navmenu {
 				background-color: #000;
@@ -348,32 +348,35 @@
 				padding: 25px;
 				box-shadow: 0 3px 6px rgba(0,0,0,0.16);
 			} 
-			.main-content, .main-content-title {
-				margin: 0 10px 0 20px;
+			.main-content, .main-content-title, .main-content-header h1 {
+				margin: 0 10px 10px 20px;
+				padding: 5px 0 10px 0;
 			}
-			.main-content-title:hover {
-				color: #2d63af;
-			}
-			.main-content-title {
-				padding-bottom: 20px;
-				cursor: pointer;
+			.main-content, .main-content-title, .main-content-header h1 {
+				border-bottom: 1px solid #ccc;
 			}
 			.main-content {
 				max-width: 725px;
 			}
-			.location-card {
-				width: 100%;
-				/*border: 1px solid #e5e5e5;*/
-				padding: 20px;
+			.main-content article {
+				width: 90%%;
 				margin: auto;
-				display: table-cell;
+				/*padding-top: 20px;*/
 			}
-			.location-card img {
+			.article-img {
+				width: 100%;
+				box-sizing: border-box;
+				padding: 15px;
+			}
+			.article-img img {
 				width: 100%;
 			}
-			.location-card figcaption, .rights {
+			.article-img figcaption, .rights {
 				color: #666;
 				font-size: 0.75rem;
+			}
+			.article-copy p {
+				margin: 10px;
 			}
 			.contact-list dt, .contact-list dd, .blog-list dt, .blog-list dd {
 				margin: 0;
@@ -387,44 +390,13 @@
 				color: #3f4344;
 				font-size: 0.88rem;
 			}
-			.main-content input {
-				display: none;
-				visibility: hidden;
-			}
-			#expand-nnhc, 
-			#expand-mrc, 
-			#expand-1, 
-			#expand-2, 
-			#expand-3, 
-			#expand-4 {
-				height: 0px;
-				overflow: hidden;
-				transition: height 0.5s;
-			}
-			#toggle-nnhc:checked ~ #expand-nnhc, 
-			#toggle-mrc:checked ~ #expand-mrc, 
-			#toggle-1:checked ~ #expand-1, 
-			#toggle-2:checked ~ #expand-2, 
-			#toggle-3:checked ~ #expand-3, 
-			#toggle-4:checked ~ #expand-4 {
-				height: auto;
-				padding: 20px 15px 30px 15px;
-				margin: 10px; 
-				border-top: 1px solid #ccc;
-			}
 			.raquo-blue {
 				color: #2d63af;
 				font-size: 1.25rem;
 			}
-			.raquo-blue:hover {
+			.raquo-blue:hover, .raquo-blue a:hover {
 				text-decoration: none;
-			}
-			.main-content-title::before {
-				content: "►";
-			}
-			.browse-section {
-				/*display: table;*/
-			}
+			} /*????*/
 			.browse-collection-button, .browse-filteredlinks {
 				display: inline-block;
 			}
@@ -444,8 +416,6 @@
 				width: 30%;
 				position: relative;
 				top: -75px;
-				/*margin: auto;*/
-				/*vertical-align: middle;*/
 				padding: 15px;
 				border: 0;
 				background-color: #2a6496;
@@ -670,70 +640,66 @@
 		</div>
 	</div>
 	<div class="main-content">
-		<input type="checkbox" id="toggle-1" checked>
-			<label for="toggle-1">
-				<h2 class="main-content-title">
-					Ravenswood-Lake View Community Collection
-				</h2>
-			</label>
-		</input>
-		<article id="expand-1" class="1-copy">
-			<span>Scenes from daily life in Lake View Township, 1860s-1889, capture the period before Chicago annexed the independent municipality.</span>
-			<div class="location-card">
-				<img src="http://digital.chipublib.org/digital/api/singleitem/image/rvw/4599/default.jpg" />
-				<figcaption>
-					3430 North Lincoln Avenue
-				</figcaption>
-			</div>
-			<span>Photographs from 1889 through the 1990s reflect the evolution of the former township into the Northside communities of Lake View, North Center, Lincoln Square (Ravenswood), Uptown and Edgewater.</span>
-			<div class="location-card">
-			<img src='http://digital.chipublib.org/digital/api/singleitem/image/rvw/4706/default.jpg' onmouseover="this.src='http://digital.chipublib.org/digital/api/singleitem/image/rvw/4707/default.jpg';" onmouseout="this.src='http://digital.chipublib.org/digital/api/singleitem/image/rvw/4706/default.jpg';" />
+		<div class="main-content-header">
+			<h1>Neighborhoods Collection</h1>
+			<span>Chicago is a city with lots of rich copy for their Neighborhoods Collection.  This paragraph is an excellent example of neighborhoods collection rich copy.  It really grabs the reader and makes them want to read all the rich copy.</span>
+		</div>
+		<article class="article-copy">
+		<h2 class="main-content-title">
+			Ravenswood-Lake View Community Collection
+		</h2>
+		<p>Scenes from daily life in Lake View Township, 1860s-1889, capture the period before Chicago annexed the independent municipality.</p>
+		<div class="article-img">
+			<img src="http://digital.chipublib.org/digital/api/singleitem/image/rvw/4599/default.jpg" />
+			<figcaption>
+				3430 North Lincoln Avenue
+			</figcaption>
+		</div>
+		<span>Photographs from 1889 through the 1990s reflect the evolution of the former township into the Northside communities of Lake View, North Center, Lincoln Square (Ravenswood), Uptown and Edgewater.</span>
+		<div class="article-img">
+			<img src='http://digital.chipublib.org/digital/api/singleitem/image/rvw/4706/default.jpg'  />
 				<!-- <img src="http://digital.chipublib.org/digital/api/singleitem/image/rvw/4706/default.jpg" /> -->
 				<figcaption>
-					Photo of empty lot with a sign stating "Three Links Lodge I.O.O.F. will erect on this 100 foot site stores, offices, lodge halls. For more information, Cochran &amp; McCluer Co. 4622 N Western Ave., 40 N Dearborn St."  Hover to see reverse side of original image.
+					Photo of empty lot with a sign stating "Three Links Lodge I.O.O.F. will erect on this 100 foot site stores, offices, lodge halls. For more information, Cochran &amp; McCluer Co. 4622 N Western Ave., 40 N Dearborn St." 
 				</figcaption>
+		</div>
+		<div class="browse-section">
+			<button class="browse-collection-button" onclick="javascript:location.href='http://digital.chipublib.org/digital/collection/rvw/search'">
+				Browse the complete collection
+			</button>
+			<div class="browse-filteredlinks">
+				<p>
+					<h3>Collection highlights</h3>
+					<ul class="highlights">
+						<li class="highlights-li"><a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rvw/searchterm/Clubs+%26+organizations/field/genre/mode/all/conn/and/order/nosort">Clubs &amp; Organizations</a></li>
+						<li class="highlights-li"><a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rvw/searchterm/Libraries/field/genre/mode/all/conn/and/order/nosort">Libraries</a></li>
+						<li class="highlights-li"><a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rvw/searchterm/Parks/field/genre/mode/all/conn/and/order/nosort">Parks</a></li>
+						<li class="highlights-li"><a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rvw/searchterm/Religious+institutions/field/genre/mode/all/conn/and/order/nosort">Religious Institutions</a></li>
+						<li class="highlights-li"><a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rvw/searchterm/Transportation/field/genre/mode/all/conn/and/order/nosort">Transportation</a></li>
+					</ul>
+					<br />
+				</p>
 			</div>
-			<div class="browse-section">
-				<button class="browse-collection-button" onclick="javascript:location.href='http://digital.chipublib.org/digital/collection/rvw/search'">
-					Browse the complete collection
-				</button>
-				<div class="browse-filteredlinks">
-					<p>
-						<h3>Collection highlights</h3>
-						<ul class="highlights">
-							<li class="highlights-li"><a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rvw/searchterm/Clubs+%26+organizations/field/genre/mode/all/conn/and/order/nosort">Clubs &amp; Organizations</a></li>
-							<li class="highlights-li"><a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rvw/searchterm/Libraries/field/genre/mode/all/conn/and/order/nosort">Libraries</a></li>
-							<li class="highlights-li"><a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rvw/searchterm/Parks/field/genre/mode/all/conn/and/order/nosort">Parks</a></li>
-							<li class="highlights-li"><a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rvw/searchterm/Religious+institutions/field/genre/mode/all/conn/and/order/nosort">Religious Institutions</a></li>
-							<li class="highlights-li"><a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rvw/searchterm/Transportation/field/genre/mode/all/conn/and/order/nosort">Transportation</a></li>
-						</ul>
-						<br />
-					</p>
-				</div>
-					<p>
-						<span class="rights">
-							Should we have a rights statement at the end of each one?
-						</span>
-					</p>
-			</div>
-		</article>
-		<input type="checkbox" id="toggle-2" checked>
-			<label for="toggle-2">
+				<p>
+					<span class="rights">
+						Should we have a rights statement at the end of each one?
+					</span>
+				</p>
+		</div>
+	</article>
 				<h2 class="main-content-title">
 					Northside Parks Collection
 				</h2>
-			</label>
-		</input>
-		<article id="expand-2" class="2-copy">
+		<article class="article-copy">
 			<span>Parks and parks and parks.</span>
-			<div class="location-card">
+			<div class="article-img">
 				<img src="" />
 				<figcaption>
 					image caption
 				</figcaption>
 			</div>
 			<span>More parks copy.</span>
-			<div class="location-card">
+			<div class="article-img">
 				<img src="" />
 				<figcaption>
 					Image caption
@@ -755,11 +721,11 @@
 						<br />
 					</p>
 				</div>
-					<p>
-						<span class="rights">
-							Should we have a rights statement at the end of each one?
-						</span>
-					</p>
+				<p>
+					<span class="rights">
+						Should we have a rights statement at the end of each one?
+					</span>
+				</p>
 			</div>
 		</article>
 		<input type="checkbox" id="toggle-3" checked>
