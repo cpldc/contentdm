@@ -23,7 +23,7 @@
 			}
 			.header {
 				width: 100%;
-				position: fixed;
+				/*position: fixed;*/
 				top: 0;
 				right: 0;
 			}
@@ -31,7 +31,7 @@
 			.header-top {
 				width: 100%;
 				background-color: #fff;
-				height: 90px;
+				height: 112px;
 			}
 			.header-top-content {
 				width: 70%;
@@ -44,6 +44,9 @@
 			}
 			.header-logo img {
 				max-height: 65px;
+			}
+			.header-logo span a {
+				font-weight: bold;
 			}
 			.header-search {
 				float: right;
@@ -66,7 +69,7 @@
 			.header-search-expanded {
 				display: table;
 				position: relative;
-				top: -12px;
+				top: -10px;
 			}
 			.header-search-expanded-text {
 				margin: 0 5px 0 0;
@@ -118,7 +121,7 @@
 				cursor: pointer;
 				border: 0;
 				padding: 5px 0 0 0;
-				margin: 12px 0 0 0;
+				margin: 20px 0 0 0;
 			}
 			#search-expanded {
 				display: none;
@@ -245,7 +248,7 @@
 			}
 			.header-dropdown-listitem {
 				padding: 8px 15px;
-				margin-left: -15px;
+				margin-left: 15px;
 			}
 
 			.header-dropdown-listitem a {
@@ -268,7 +271,7 @@
 				/*position: relative;*/
 				display: block;
 				width: 100%;
-				padding-top: 185px;
+				padding-top: 20px;
 			}
 			.navmenu {
 				background-color: #000;
@@ -493,6 +496,10 @@
 				<a href="http://www.chipublib.org">
 					<img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png" alt="" class="header-logo-image"/>
 				</a>
+					<br />
+					<span>
+						<a href="http://digital.chipublib.org/">Digital Collections</a>
+					</span>
 			</div>
 			<div class="header-search">
 				<button class="header-search-button" onclick="searchExpander();">
