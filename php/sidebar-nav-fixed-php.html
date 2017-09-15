@@ -32,20 +32,20 @@
 				width: 100%;
 				padding-top: 20px;
 			}
-			.navmenu-f {
+			.navmenu {
 				background-color: #000;
 				color: #fff;
 				width: 300px;
 				display: inline-block;
 			}
-			.navmenu-f-header {
+			.navmenu-header {
 				display: table;
 				width: 100%;
 				height: 53px;
 				vertical-align: middle;
 				border-bottom: 1px solid #eee;
 			}
-			.navmenu-f-header-title {
+			.navmenu-header-title {
 				display: table-cell;
 				font-weight: normal;
 				vertical-align: middle;
@@ -55,7 +55,7 @@
 				line-height: 16px;
 				font-size: 1.00rem;
 			}
-			.navmenu-f-toggle-button, .navbutton-toggle-button {
+			.navmenu-toggle-button, .navbutton-toggle-button {
 				display: block;
 				width: 49px;
 				height: 53px;
@@ -64,37 +64,37 @@
 				border: 1px solid transparent;
 				margin-left: 0px;
 			}
-			.navmenu-f-toggle-right-image, #left-sidebar-button {
+			.navmenu-toggle-right-image, #left-sidebar-button {
 				display: none;
 			}
-			.navmenu-f-list {
+			.navmenu-list {
 				list-style: none;
 				padding: 0;
 				margin: 0 15px 20px 40px;
 				vertical-align: middle;
 			}
-			.navmenu-f-list li {
+			.navmenu-list li {
 				margin: 12px 0 12px 0;
 			}
-			.navmenu-f-list a {
+			.navmenu-list a {
 				text-decoration: none;
 				color: #fff;
 			}
-			.navmenu-f-list a:hover {
+			.navmenu-list a:hover {
 				text-decoration: underline;
 			}
-			.navmenu-f-otherlinks, .navmenu-f-corelinks {
+			.navmenu-otherlinks, .navmenu-corelinks {
 				/*padding: 5px 0 0 29px;*/
 			}
-			.navmenu-f-otherlinks {
+			.navmenu-otherlinks {
 				border-top: 1px dashed #fff;
 				padding-bottom: 20px; 
 			}
-			.navmenu-f-otherlinks-header {
+			.navmenu-otherlinks-header {
 				padding: 15px 0 10px 40px;
 				margin-bottom: 5px;
 			}
-			.navmenu-f-otherlinks-header span {
+			.navmenu-otherlinks-header span {
 				text-transform: uppercase;
 				font-size: 0.88rem;
 				line-height: 1.25;
@@ -105,13 +105,13 @@
 <body>
 <div class="body-full">
 	<div class="bumper"></div>
-	<div class="navmenu-f" id="left-sidebar-menu">
-		<div class="navmenu-f-header">
-			<h3 class="navmenu-f-header-title">Digital Collections</h3>
+	<div class="navmenu" id="left-sidebar-menu">
+		<div class="navmenu-header">
+			<h3 class="navmenu-header-title">Digital Collections</h3>
 		</div>
-		<div class="navmenu-f-corelinks">
-			<div class="navmenu-f-otherlinks-header"><span>Browse by Subject</span></div>
-			<ul class="navmenu-f-list">
+		<div class="navmenu-corelinks">
+			<div class="navmenu-otherlinks-header"><span>Browse by Subject</span></div>
+			<ul class="navmenu-list">
 				<li><a href="AfricanAmericans.html">African Americans</a></li>
 				<li><a href="HaroldWashington.html">Harold Washington</a></li>
 				<li><a href="LibEd.html">Libraries &amp; Education (new category)</a></li>
@@ -122,18 +122,18 @@
 				<li><a href="Theater.html">More...</a></li>
 			</ul>
 		</div>
-		<div class="navmenu-f-otherlinks">
-			<div class="navmenu-f-otherlinks-header"><span>Browse by Location</span></div>
-			<ul class="navmenu-f-list">
+		<div class="navmenu-otherlinks">
+			<div class="navmenu-otherlinks-header"><span>Browse by Location</span></div>
+			<ul class="navmenu-list">
 				<li><a href="HWLC.html">HWLC Special Collections</a></li>
 				<li><a href="MRC.html">Municipal Records Collection</a></li>
 				<li><a href="NNHC.html">Northside Neighborhoods History Collection</a></li>
 				<li><a href="Harsh.html">Vivian G Harsh Collection</a></li>
 			</ul>
 		</div>
-		<div class="navmenu-f-otherlinks">
-			<div class="navmenu-f-otherlinks-header"><span>Related Links</span></div>
-			<ul class="navmenu-f-list">
+		<div class="navmenu-otherlinks">
+			<div class="navmenu-otherlinks-header"><span>Related Links</span></div>
+			<ul class="navmenu-list">
 				<li><a href="">Archival Collections</a></li>
 				<li><a href="">Chicago History</a></li>
 				<li><a href="">Online Resources</a></li>
@@ -141,5 +141,18 @@
 		</div>
 	</div>
 </div>
+	<script>
+		function showDropdown() {
+			document.getElementById("show-dropdown").classList.toggle("show");
+		}
+		window.onclick = function(e) {
+			if (!e.target.matches('.header-browse-button')) {
+				var myDropdown = document.getElementById("show-dropdown");
+				if (myDropdown.classList.contains('show')) {
+					myDropdown.classList.remove('show');
+				}
+			}
+		}
+	</script>
 </body>
 </html>
