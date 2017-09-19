@@ -1,0 +1,97 @@
+<div class="header">
+	<div class="header-top">
+		<div class="header-top-content">
+			<div class="header-logo">
+				<a href="http://www.chipublib.org">
+					<img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png" alt="" class="header-logo-image"/>
+				</a>
+					<br />
+					<span>
+						<a href="http://digital.chipublib.org/">Digital Collections</a>
+					</span>
+			</div>
+			<div class="header-search">
+				<button class="header-search-button" onclick="searchExpander();">
+					<div id="search-collapsed">
+						<span id="search-button" class="header-search-button-text">Search</span>
+						<div class="header-search-icon_1">
+							<div class="header-search_circle_1"></div>
+							<div class="header-search_rectangle_1"></div>
+						</div>
+					</div>
+				</button>
+				<div id="search-expanded" class="header-search-expanded">
+					<span class="header-search-expanded-text">Search the Digital Collections </span>
+					<input type="text" class="header-search-input" />
+					<div class="header-search-icon_2">
+						<div style="-webkit-transform: rotate(-45deg); 
+						               -moz-transform: rotate(-45deg); 
+						                 -o-transform: rotate(-45deg);
+						                    transform: rotate(-45deg);">
+						    &#9906;
+						</div>
+					</div>
+					<span class="header-search-adv">
+						<a href="http://digital.chipublib.org/digital/">
+							Advanced Search
+						</a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom">
+		<div class="header-bottom-content">
+			<ul class="header-bottom-list">
+				<li class="header-browse-button" onclick="showDropdown()">
+					Browse
+					<i class="arrow arrow-down"></i>
+				</li>
+				<li class="header-events" onclick="javascript:location.href='https://chipublib.bibliocommons.com/events/search/index'">
+					Events
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="show-dropdown" class="dummy-dropdown">
+		<div class="header-dropdown">
+			<div class="header-dropdown-content">
+				<div>
+					<ul>
+						<li>
+							<h2 class="header-dropdown-browsetext">Browse</h2>
+						</li>
+					</ul>
+				</div>
+				<ul>
+					<li>
+						<h4 class="header-dropdown-listheader">By Format</h4>
+					</li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/books/">Books</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/ebooks/">eBooks</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/audiobooks/">Audiobooks</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/movies/">Movies &amp; TV</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/music/">Music</a></li>
+				</ul>
+				<ul>
+					<li>
+						<h4 class="header-dropdown-listheader">By Audience</h4>
+					</li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/kids/">Kids</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/teens/">Teens</a></li>
+				</ul>
+				<ul class="header-dropdown-morelist">
+					<li>
+						<h4 class="header-dropdown-listheader">More</h4>
+					</li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/online-resources/">Online Resources</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/jobs-small-business/">Jobs &amp; Small Business</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/browse/chicago-history/">Chicago History</a></li>
+					<li class="header-dropdown-listitem"><a href="http://www.chipublib.org/archives-collections/">Archival Collections</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
