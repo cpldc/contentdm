@@ -31,15 +31,15 @@
 		<article id="expand-mrc" class="mrc-copy">
 			<span>Summary of Category, one to two lines.</span>
 			<div class="location-card">
-				<img src="http://digital.chipublib.org/digital/api/singleitem/image/mpu/6324/default.jpg" />
+				<!-- <img src="http://digital.chipublib.org/digital/api/singleitem/image/mpu/6324/default.jpg" /> -->
 				<figcaption>
 					Image Caption
 				</figcaption>
 			</div>
+			<!-- <div class="image-gallery-thumbs"><img src="http://digital.chipublib.org/digital/api/singleitem/image/cfc/79/default.jpg" alt="Board of Directors of the Ravenswood Manor Improvement Association rehearsing for the Winter Social"></div>
 			<div class="image-gallery-thumbs"><img src="http://digital.chipublib.org/digital/api/singleitem/image/cfc/79/default.jpg" alt="Board of Directors of the Ravenswood Manor Improvement Association rehearsing for the Winter Social"></div>
 			<div class="image-gallery-thumbs"><img src="http://digital.chipublib.org/digital/api/singleitem/image/cfc/79/default.jpg" alt="Board of Directors of the Ravenswood Manor Improvement Association rehearsing for the Winter Social"></div>
-			<div class="image-gallery-thumbs"><img src="http://digital.chipublib.org/digital/api/singleitem/image/cfc/79/default.jpg" alt="Board of Directors of the Ravenswood Manor Improvement Association rehearsing for the Winter Social"></div>
-			<div class="image-gallery-thumbs"><img src="http://digital.chipublib.org/digital/api/singleitem/image/cfc/79/default.jpg" alt="Board of Directors of the Ravenswood Manor Improvement Association rehearsing for the Winter Social"></div>
+			<div class="image-gallery-thumbs"><img src="http://digital.chipublib.org/digital/api/singleitem/image/cfc/79/default.jpg" alt="Board of Directors of the Ravenswood Manor Improvement Association rehearsing for the Winter Social"></div> -->
 <div class="main-richcopy">
 	<div><b>Rich Copy, links and descriptions - length?</b>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed esse ratione ut quo doloribus perferendis veritatis facere similique cupiditate voluptatem repudiandae consequuntur, sit quidem officiis sunt nobis magnam nesciunt numquam. Quia enim repudiandae labore sequi id. Hic alias explicabo quia nulla <b>itaque maxime dolorem aspernatur</b> fugit odio harum facilis veniam exercitationem veritatis libero voluptates rem minima laborum delectus, perferendis enim. Corporis modi culpa asperiores consectetur, dolorem sint, commodi maxime, qui fugiat sapiente rem? Molestias iure consequatur nostrum ab magni maiores suscipit, repudiandae earum voluptates. Voluptates asperiores delectus quidem, neque voluptatem.</div>
 	<div>Assumenda maiores dolores sequi vitae, repudiandae fugit asperiores excepturi corrupti placeat nostrum. Facere at possimus alias laboriosam explicabo minus <b>nisi</b> impedit <b>assumenda</b>. Nisi unde, illo animi odio voluptatum perspiciatis nulla. Quasi minus, neque nihil vitae repellendus <b>accusantium est perferendis assumenda, eveniet</b> totam voluptatibus provident maxime corporis consequatur doloremque cumque sit pariatur suscipit dignissimos sapiente libero harum optio iure? Tempora, velit! <ul><li><b>Consequatur corporis dolorem soluta</b></li> <li><b>enim facere odit mollitia</b></li> <li><b>temporibus recusandae sapiente</b></li><li><b>Officiis aut ab non</b></li> <li><b>minima aperiam nam delectus</b></li></ul>Natus rem blanditiis incidunt nesciunt asperiores laboriosam, similique nobis sed animi.</div>

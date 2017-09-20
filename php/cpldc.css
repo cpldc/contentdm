@@ -265,9 +265,48 @@
 				width: 100%; /* Full width */
 				height: 100%; /* Full height */
 				overflow: auto; /* Enable scroll if needed */
-				background-color: #000; /* Fallback color */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 			}
-			.modal-content
+			.modal-content {
+				margin: auto;
+				background-color: #f8f8f8;
+				width: 50%;
+				padding: 1rem;
+				position: relative;
+				top: 100px;
+			}
+			.modal-title {
+				background-color: #fff;
+			}
+			.modal-close {
+				background-color: #fff;
+				position: fixed;
+				top: 0;
+				right: 20px;
+				padding: 5px 10px;
+				cursor: pointer;
+				border-radius: 0 0 5px 5px;
+			}
+			.modal-close:hover {
+				background-color: #000;
+				color: #fff;
+			}
+			.modal-content h4 {
+				font-size: 16px;
+				text-transform: uppercase;
+				margin: 0;
+			}
+			.modal-content h4, .modal-content a {
+				color: #3f4344;
+			}
+			.modal-content ul {
+				list-style-type: none;
+			}
+			.modal-content li {
+				font-size: 18px;
+				line-height: 45px;
+			}
 		/*header modal end*/
 	/*header end*/
 	/*collapsible sidebar begin*/
@@ -577,7 +616,7 @@
 				display: table-cell;
 				padding: 20px;
 			}
-	/*content end*/
+		/*content end*/
 		/*main content begin*/
 			.main-content-f {
 				display: inline-block;
@@ -950,29 +989,53 @@
 					display: inline-block;
 					width: 20%;
 				}
+				.big {
+					display: block;
+					visibility: visible;
+				}
+				.big-inline {
+					/*display: inline-block;*/
+					visibility: visible;
+				}
+				.small {
+					display: none;
+					visibility: hidden;
+				}
 				.header-bottom {
 					display: block;
 				}
 				.header-dropdown-content {
 					width: 70%;
 				}
-				.header-modal {
-					display: none;
+				.header-modal-buttons {
+					visibility: hidden;
 				}
 			}
 			@media all and (min-width: 960px) and (max-width: 1199px) {
 				.body-full-f {
-					width: 95%;
+					width: 99%;
 				}
 				.navmenu-f {
 					width: 20%;
 				}
  				.main-content-f {
-					width: 45%;
+					width: 48%;
 				}
 				.right-sidebar {
 					display: inline-block;
 					width: 20%;
+				}
+				.big {
+					display: block;
+					visibility: visible;
+				}
+				.big-inline {
+					/*display: inline-block;*/
+					visibility: visible;
+				}
+				.small {
+					display: none;
+					visibility: hidden;
 				}
 				.header-bottom {
 					display: block;
@@ -980,8 +1043,8 @@
 				.header-dropdown-content {
 					width: 90%;
 				}
-				.header-modal {
-					display: none;
+				.header-modal-buttons {
+					visibility: hidden;
 				}
 			}
 			@media all and (min-width: 768px) and (max-width: 959px) { 
@@ -998,11 +1061,19 @@
 				.right-sidebar {
 					display: none;
 				}
+				.big, .big-inline {
+					display: none;
+					visibility: hidden;
+				}
+				.small {
+					display: block;
+					visibility: visible;
+				}
 				.header-bottom {
 					display: none;
 				}
-				.header-modal {
-					display: none;
+				.header-modal-buttons {
+					visibility: visible;
 				}
 			}
 			@media all and (min-width: 480px) and (max-width: 767px){ 
@@ -1019,11 +1090,19 @@
 				.right-sidebar {
 					display: none;
 				}
+				.big, .big-inline {
+					display: none;
+					visibility: hidden;
+				}
+				.small {
+					display: block;
+					visibility: visible;
+				}
 				.header-bottom {
 					display: none;
 				}
-				.header-modal {
-					display: none;
+				.header-modal-buttons {
+					visibility: visible;
 				}
 			}
 			@media all and (max-width: 599px) {
@@ -1039,11 +1118,19 @@
 				.right-sidebar {
 					display: none;
 				}
+				.big, .big-inline {
+					display: none;
+					visibility: hidden;
+				}
+				.small {
+					display: block;
+					visibility: visible;
+				}
 				.header-bottom {
 					display: none;
 				}
-				.header-modal {
-					display: none;
+				.header-modal-buttons {
+					visibility: visible;
 				}
 			}
 			@media all and (max-width: 479px) { 
@@ -1059,11 +1146,19 @@
 				.right-sidebar {
 					display: none;
 				}
+				.big, .big-inline {
+					display: none;
+					visibility: hidden;
+				}
+				.small {
+					display: block;
+					visibility: visible;
+				}
 				.header-bottom {
 					display: none;
 				}
-				.header-modal {
-					display: none;
+				.header-modal-buttons {
+					visibility: visible;
 				}
 			}
 	/*breakpoints end*/
