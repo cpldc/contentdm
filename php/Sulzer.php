@@ -49,13 +49,13 @@
 	<div class="right-sidebar">
 		<div class="blogs">
 <?php
-	// include 'blogs.php';
+	include 'blogs.php';
 ?>
 
 		</div>
 		<div class="events">
 <?php 
-	// include 'events.php';
+	include 'events.php';
 ?>
 		</div>
 	</div>
@@ -63,31 +63,6 @@
 <?php 
 	include 'footer.html';
 ?>
-	<script>
-		function showDropdown() {
-			document.getElementById("show-dropdown").classList.toggle("show");
-		}
-		window.onclick = function(e) {
-			if (!e.target.matches('.header-browse-button')) {
-				var myDropdown = document.getElementById("show-dropdown");
-				if (myDropdown.classList.contains('show')) {
-						myDropdown.classList.remove('show');
-				}
-			}
-		}
-		function searchExpander() {
-            if (document.getElementById('search-collapsed')) {
 
-                if (document.getElementById('search-collapsed').style.display == 'none') {
-	                    document.getElementById('search-collapsed').style.display = 'block';
-	                    document.getElementById('search-expanded').style.display = 'none';
-                }
-                else {
-                    document.getElementById('search-collapsed').style.display = 'none';
-                    document.getElementById('search-expanded').style.display = 'block';
-                }
-            }
-		}
-	</script>
 </body>
 </html>
