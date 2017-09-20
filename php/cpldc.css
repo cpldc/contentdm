@@ -17,13 +17,13 @@
 		/*header top begin*/
 			.header {
 				width: 100%;
-				/*position: fixed;*/
 				top: 0;
 				right: 0;
 			}
 			.header-top {
 				width: 100%;
 				background-color: #fff;
+				box-shadow: 0px 3px 4px 1px rgba(50,50,50,0.5);
 				height: 112px;
 			}
 			.header-top-content {
@@ -162,6 +162,7 @@
 			.header-bottom {
 				background-color: #000;
 				color: #fff;
+				box-shadow: 0px 3px 4px 1px rgba(50,50,50,0.5);
 			}
 			.header-bottom-content {
 				width: 70%;
@@ -218,10 +219,9 @@
 				height: 250px;
 				box-shadow:  0 6px 12px rgba(0,0,0,0.175);
 			}
-
 			.header-dropdown-content {
 				margin: auto;
-				width: 70%;
+				/*width: 70%;*/
 				max-width: 1150px;
 				padding: 30px 15px 30px 15px;
 			}
@@ -255,6 +255,20 @@
 				visibility: visible;
 			}
 		/*header dropdown end*/
+		/*header modal begin*/
+			.modal {
+				display: none; /* Hidden by default */
+				position: fixed; /* Stay in place */
+				z-index: 1; /* Sit on top */
+				left: 0;
+				top: 0;
+				width: 100%; /* Full width */
+				height: 100%; /* Full height */
+				overflow: auto; /* Enable scroll if needed */
+				background-color: #000; /* Fallback color */
+			}
+			.modal-content
+		/*header modal end*/
 	/*header end*/
 	/*collapsible sidebar begin*/
 			.bumper {
@@ -383,7 +397,6 @@
 			.navmenu-f {
 				background-color: #000;
 				color: #fff;
-				width: 300px;
 				display: inline-block;
 			}
 			.navmenu-f-header {
@@ -566,9 +579,11 @@
 			}
 	/*content end*/
 		/*main content begin*/
-			.main-content-f, .right-sidebar {
+			.main-content-f {
 				display: inline-block;
 				vertical-align: top;
+				max-width: 725px;
+				margin: 0;
 			} 
 			.main-content-f, .blogs, .events {
 				background-color: #fff;
@@ -584,9 +599,6 @@
 			.main-content-f-title {
 				padding-bottom: 20px;
 				cursor: pointer;
-			}
-			.main-content-f {
-				max-width: 725px;
 			}
 			.location-card {
 				/*width: 400px;*/
@@ -701,8 +713,9 @@
 	/*content end*/
 	/*right sidebar begin*/
 			.right-sidebar {
+				vertical-align: top;
 				margin: 0 10px;
-				width: 300px;
+				/*width: 300px;*/
 			}
 			.right-sidebar h3 {
 				top: 0;
@@ -902,9 +915,6 @@
 			font-size: 0.94rem;
 			color: #3f4344;
 		}
-		.footer-bottom {
-			/*width: 60%;*/
-		}
 		.footer-bottom-left {
 			padding: 15px;
 		}
@@ -924,3 +934,136 @@
 			font-size: 0.94rem;
 		}
 	/*footer end*/
+	/*breakpoints start*/
+			/*23%, 68%, 30%*/
+			@media all and (min-width:1200px){ 
+				.body-full-f {
+					width: 80%;
+				}
+				.navmenu-f {
+					width: 20%;
+				}
+				.main-content-f {
+					width: 45%;
+				}
+				.right-sidebar {
+					display: inline-block;
+					width: 20%;
+				}
+				.header-bottom {
+					display: block;
+				}
+				.header-dropdown-content {
+					width: 70%;
+				}
+				.header-modal {
+					display: none;
+				}
+			}
+			@media all and (min-width: 960px) and (max-width: 1199px) {
+				.body-full-f {
+					width: 95%;
+				}
+				.navmenu-f {
+					width: 20%;
+				}
+ 				.main-content-f {
+					width: 45%;
+				}
+				.right-sidebar {
+					display: inline-block;
+					width: 20%;
+				}
+				.header-bottom {
+					display: block;
+				}
+				.header-dropdown-content {
+					width: 90%;
+				}
+				.header-modal {
+					display: none;
+				}
+			}
+			@media all and (min-width: 768px) and (max-width: 959px) { 
+				/*hide right sidebar and change header menu*/
+				.body-full-f {
+					width: 95%;
+				}
+				.navmenu-f {
+					width: 20%;
+				}
+ 				.main-content-f {
+					width: 65%;
+				}
+				.right-sidebar {
+					display: none;
+				}
+				.header-bottom {
+					display: none;
+				}
+				.header-modal {
+					display: none;
+				}
+			}
+			@media all and (min-width: 480px) and (max-width: 767px){ 
+				/*hide left nav, replace with collapsible*/
+				.body-full-f {
+					width: 100%;
+				}
+				.navmenu-f {
+					width: 20%;
+				}
+ 				.main-content-f {
+					width: 65%;
+				}
+				.right-sidebar {
+					display: none;
+				}
+				.header-bottom {
+					display: none;
+				}
+				.header-modal {
+					display: none;
+				}
+			}
+			@media all and (max-width: 599px) {
+				.body-full-f {
+					width: 95%;
+				}
+				.navmenu-f {
+					width: 23%;
+				}
+ 				.main-content-f {
+					width: 60%;
+				}
+				.right-sidebar {
+					display: none;
+				}
+				.header-bottom {
+					display: none;
+				}
+				.header-modal {
+					display: none;
+				}
+			}
+			@media all and (max-width: 479px) { 
+				.body-full-f {
+					width: 95%;
+				}
+				.navmenu-f {
+					width: 23%;
+				}
+ 				.main-content-f {
+					width: 60%;
+				}
+				.right-sidebar {
+					display: none;
+				}
+				.header-bottom {
+					display: none;
+				}
+				.header-modal {
+					display: none;
+				}
+			}
+	/*breakpoints end*/
