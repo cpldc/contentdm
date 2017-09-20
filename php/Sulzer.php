@@ -6,6 +6,7 @@
 	    <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
 		<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
 		<link rel="stylesheet" href="cpldc.css">
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 		<script type="text/javascript" src="cpldc.js" ></script>
 </head>
 <body>
@@ -42,24 +43,26 @@
 					<dd class="contact-list-item">Hours: Tuesday, 2 to 5 p.m. Additional hours by appointment</dd>
 					<dd class="contact-list-item">Email: northsidehistory@chipublib.org</dd>
 					<dd class="contact-list-item">Call: (312) 742-4455</dd>
-
 			</dl>
 		</article>
 	</div>
 	<div class="right-sidebar">
 		<div class="blogs">
 <?php
-	include 'blogs.php';
+	// include 'blogs.php';
 ?>
 
 		</div>
 		<div class="events">
 <?php 
-	include 'events.php';
+	// include 'events.php';
 ?>
 		</div>
 	</div>
 </div>
+<?php 
+	include 'footer.html';
+?>
 	<script>
 		function showDropdown() {
 			document.getElementById("show-dropdown").classList.toggle("show");

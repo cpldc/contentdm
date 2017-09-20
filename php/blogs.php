@@ -3,7 +3,7 @@
     </div>
 <?php
     $rss = new DOMDocument();
-    $rss->load('https://www.chipublib.org/feed/');
+    $rss->load('https://www.chipublib.org/blogs/category/chicago-history/feed/');
     $feed = array();
     foreach ($rss->getElementsByTagName('item') as $node) {
         $item = array ( 
@@ -14,7 +14,8 @@
             'desc' => $node->getElementsByTagName('description')->item(0)->nodeValue,
             'cat' => $node->getElementsByTagName('category')->item(0)->nodeValue,
             );
-        if ($node->getElementsByTagName('category')->item(0)->nodeValue == 'History and Genealogy') array_push($feed, $item);
+        // if ($node->getElementsByTagName('category')->item(0)->nodeValue == 'History and Genealogy') 
+        	array_push($feed, $item);
     }
     $limit = 3;
     for($x=0;$x<$limit;$x++) {
