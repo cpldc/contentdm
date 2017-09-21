@@ -22,26 +22,34 @@
                 }
             }
 		}
-		function navmenuHide() {
-		    var x = document.getElementById('left-sidebar-button');
-		    var y = document.getElementById('navmenu-c-toggle-left-image');
-		    var z = document.getElementById('left-sidebar-menu');
-		    if (x.style.display === 'none') {
-		        x.style.display = 'table-cell';
-		    } else {
-		        x.style.display = 'none';
-		    }
-			if (y.style.display === 'none') {
-		        y.style.display = 'table-cell';
-		    } else {
-		        y.style.display = 'none';
-		    }
-			if (z.style.display === 'none') {
-		        z.style.display = 'table-cell';
-		    } else {
-		        z.style.display = 'none';
-		    }
+		function openNav() {
+			document.getElementById("left-sidebar-menu").style.width = "230px";
+			document.getElementById("main-content-f").style.marginLeft = "230px";
 		}
+		function closeNav() {
+		    document.getElementById("left-sidebar-menu").style.width = "0";
+		    document.getElementById("main-content-f").style.marginLeft= "0";
+		}
+		// function navmenuHide() {
+		//     var x = document.getElementById('left-sidebar-button');
+		//     var y = document.getElementById('navmenu-c-toggle-left-image');
+		//     var z = document.getElementById('left-sidebar-menu');
+		//     if (x.style.display === 'none') {
+		//         x.style.display = 'table-cell';
+		//     } else {
+		//         x.style.display = 'none';
+		//     }
+		// 	if (y.style.display === 'none') {
+		//         y.style.display = 'table-cell';
+		//     } else {
+		//         y.style.display = 'none';
+		//     }
+		// 	if (z.style.display === 'none') {
+		//         z.style.display = 'table-cell';
+		//     } else {
+		//         z.style.display = 'none';
+		//     }
+		// }
 		// // Get the modal
 		// var modal = document.getElementById('myModal');
 		// console.log(modal);

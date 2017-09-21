@@ -330,197 +330,7 @@
 			}
 		/*header modal end*/
 	/*header end*/
-	/*collapsible sidebar begin*/
-			.bumper {
-				/*position: relative;*/
-				display: block;
-				width: 100%;
-				padding-top: 20px;
-			}
-			.navmenu-c, .navbutton {
-				background-color: #000;
-				color: #fff;
-			}
-			.navmenu-c {
-				width: 230px;
-				display: table-cell;
-			}
-			.navbutton {
-				width: 49px;
-				height: 53px;
-				background-color: #e5e5e5;
-			}
-			.navmenu-c-header {
-				display: table;
-				width: 100%;
-				height: 53px;
-				vertical-align: middle;
-				border-bottom: 1px solid #eee;
-			}
-			.navmenu-c-header-title {
-				display: table-cell;
-				font-weight: normal;
-				vertical-align: middle;
-				padding-left: 40px;
-				padding-right: 10px;
-				width: 131px;
-				line-height: 16px;
-				font-size: 1.00rem;
-			}
-			.navmenu-c-toggle-button, .navbutton-toggle-button {
-				display: table;
-				width: 49px;
-				height: 53px;
-				background: #000;
-				color: #fff;
-				border: 1px solid transparent;
-				margin-left: 0px;
-			}
-			.navmenu-c-toggle-right-image, #left-sidebar-button {
-				display: none;
-			}
-			.navmenu-c-list {
-				list-style: none;
-				padding: 0;
-				margin: 0 15px 20px 40px;
-				vertical-align: middle;
-			}
-			.navmenu-c-list li {
-				margin: 12px 0 12px 0;
-			}
-			.navmenu-c-list a {
-				text-decoration: none;
-				color: #fff;
-			}
-			.navmenu-c-list a:hover {
-				text-decoration: underline;
-			}
-			.navmenu-c-otherlinks, .navmenu-c-corelinks {
-				/*padding: 5px 0 0 29px;*/
-			}
-			.navmenu-c-otherlinks {
-				border-top: 1px dashed #fff;
-				padding-bottom: 20px; 
-			}
-			.navmenu-c-otherlinks-header {
-				padding: 15px 0 10px 40px;
-				margin-bottom: 5px;
-			}
-			.navmenu-c-otherlinks-header span {
-				text-transform: uppercase;
-				font-size: 0.88rem;
-				line-height: 1.25;
-			}
-			.hamburger {
-				width: 20px;
-				height: 3px;
-				background-color: #FFF;
-				margin: 4px 0;
-				border-radius: 25px;
-			}
-			.triangle-left, .triangle-right {
-				display: inline-block;
-				width: 0;
-				height: 0;
-				margin: 8px 0;
-				/*border-color: #fff;*/
-			}
-			.triangle-left {
-				border-top: 5px solid transparent;
-				border-bottom: 5px solid transparent;
-				border-right: 5px solid #fff;
-			}
-			.triangle-right {
-				border-top: 5px solid transparent;
-				border-bottom: 5px solid transparent;
-				border-left: 5px solid #fff;
-			}
-			.hamburger-x3 {
-				display: inline-block;
-			}
-	/*collapsible sidebar end*/
-	/*fixed sidebar begin*/
-			.body-full-f {
-				width: 80%;
-				margin: auto;
-			}
-			.body-full-c {
-				width: 100%;
-				margin: auto;
-			}
-			.bumper {
-				/*position: relative;*/
-				display: block;
-				width: 100%;
-				padding-top: 20px;
-			}
-			.navmenu-f {
-				background-color: #000;
-				color: #fff;
-				display: inline-block;
-			}
-			.navmenu-f-header {
-				display: table;
-				width: 100%;
-				height: 53px;
-				vertical-align: middle;
-				border-bottom: 1px solid #eee;
-			}
-			.navmenu-f-header-title {
-				display: table-cell;
-				font-weight: normal;
-				vertical-align: middle;
-				padding-left: 40px;
-				padding-right: 10px;
-				width: 131px;
-				line-height: 16px;
-				font-size: 1.00rem;
-			}
-			.navmenu-f-toggle-button, .navbutton-toggle-button {
-				display: block;
-				width: 49px;
-				height: 53px;
-				background: #000;
-				color: #fff;
-				border: 1px solid transparent;
-				margin-left: 0px;
-			}
-			.navmenu-f-toggle-right-image, #left-sidebar-button {
-				display: none;
-			}
-			.navmenu-f-list {
-				list-style: none;
-				padding: 0;
-				margin: 0 15px 20px 40px;
-				vertical-align: middle;
-			}
-			.navmenu-f-list li {
-				margin: 12px 0 12px 0;
-			}
-			.navmenu-f-list a {
-				text-decoration: none;
-				color: #fff;
-			}
-			.navmenu-f-list a:hover {
-				text-decoration: underline;
-			}
-			.navmenu-f-otherlinks, .navmenu-f-corelinks {
-				/*padding: 5px 0 0 29px;*/
-			}
-			.navmenu-f-otherlinks {
-				border-top: 1px dashed #fff;
-				padding-bottom: 20px; 
-			}
-			.navmenu-f-otherlinks-header {
-				padding: 15px 0 10px 40px;
-				margin-bottom: 5px;
-			}
-			.navmenu-f-otherlinks-header span {
-				text-transform: uppercase;
-				font-size: 0.88rem;
-				line-height: 1.25;
-			}
-	/*fixed sidebar end*/
+/*see sidebar.css*/
 	/*content begin	*/
 		/*content card begin*/
 			.content-card {
@@ -893,7 +703,7 @@
 			line-height: 1.5rem;
 			margin: 0;
 		}
-		.footer-internal-links, .footer-external-links, .footer-contact, .footer-bottom-left, .footer-bottom-right {
+		.footer-internal-links, .footer-bottom-left, .footer-bottom-right {
 			display: table-cell;
 		}
 		.footer-social {
@@ -957,6 +767,7 @@
 			padding: 1px 0.75rem;
 			margin: 0 5px 0 0 !important;
 			width: 50%;
+			min-width: 165px;
 		}
 		.footer-contact-box dd {
 			margin: 0;
@@ -981,7 +792,7 @@
 		.footer-bottom-right {
 			color: #3f4344;
 			position: relative;
-			right: -23%;
+			left: 10%;
 			bottom: 20px;
 			line-height: 24px;
 			font-size: 0.75rem;
@@ -995,13 +806,9 @@
 		}
 	/*footer end*/
 	/*breakpoints start*/
-			/*23%, 68%, 30%*/
 			@media all and (min-width:1200px){ 
 				.body-full-f {
 					width: 80%;
-				}
-				.navmenu-f {
-					width: 20%;
 				}
 				.main-content-f {
 					width: 45%;
@@ -1046,13 +853,16 @@
 				.header-modal-buttons {
 					visibility: hidden;
 				}
+				.footer-external-links, .footer-contact {
+					display: table-cell;
+				}
+				.footer-top, .footer-bottom {
+					width: 60%;
+				}
 			}
 			@media all and (min-width: 960px) and (max-width: 1199px) {
 				.body-full-f {
 					width: 99%;
-				}
-				.navmenu-f {
-					width: 20%;
 				}
  				.main-content-f {
 					width: 48%;
@@ -1097,15 +907,18 @@
 				.header-modal-buttons {
 					visibility: hidden;
 				}
+				.footer-external-links, .footer-contact {
+					display: table-cell;
+				}
+				.footer-top, .footer-bottom {
+					width: 80%;
+				}
 			}
 			@media all and (min-width: 768px) and (max-width: 959px) { 
 				/*hide right sidebar and change header menu*/
 				.body-full-f {
 					width: 95%;
 				}
-				.navmenu-f {
-					width: 20%;
-				}
  				.main-content-f {
 					width: 65%;
 				}
@@ -1144,66 +957,21 @@
 				}
 				.header-modal-buttons {
 					visibility: visible;
+				}
+				.footer-external-links, .footer-contact {
+					display: table-cell;
+				}
+				.footer-top, .footer-bottom {
+					width: 80%;
 				}
 			}
 			@media all and (min-width: 480px) and (max-width: 767px){ 
-				/*hide left nav, replace with collapsible*/
 				.body-full-f {
 					width: 100%;
 				}
-				.navmenu-f {
-					width: 20%;
-				}
  				.main-content-f {
-					width: 65%;
-				}
-				.right-sidebar {
-					display: none;
-				}
-				.big, .big-inline {
-					display: none;
-					visibility: hidden;
-				}
-				.small {
-					display: block;
-					visibility: visible;
-				}
-				.small-inline {
-					display: inline-block;
-					visibility: visible;
-				}
-				.header-logo {
-					position: relative;
-					top: -5px;
-				} 
-				.header-search {
-					position: relative;
-					top: 10px;
-				}
-				.header-modal-button-menu, .header-modal-button-events {
-					position: relative;
-					top: -25px;
-				} 
-				.header-top {
-					height: 80px;
-				}
-				.header-bottom {
-					display: none;
-				}
-				.header-modal-buttons {
-					visibility: visible;
-				}
-			}
-			@media all and (max-width: 599px) {
-				.body-full-f {
 					width: 95%;
 				}
-				.navmenu-f {
-					width: 23%;
-				}
- 				.main-content-f {
-					width: 60%;
-				}
 				.right-sidebar {
 					display: none;
 				}
@@ -1239,17 +1007,21 @@
 				}
 				.header-modal-buttons {
 					visibility: visible;
+				}
+				.footer-external-links, .footer-contact {
+					display: table-cell;
+				}
+				.footer-top, .footer-bottom {
+					width: 90%;
 				}
 			}
 			@media all and (max-width: 479px) { 
 				.body-full-f {
 					width: 95%;
 				}
-				.navmenu-f {
-					width: 23%;
-				}
  				.main-content-f {
 					width: 60%;
+					display: table-cell;
 				}
 				.right-sidebar {
 					display: none;
@@ -1286,6 +1058,12 @@
 				}
 				.header-modal-buttons {
 					visibility: visible;
+				}
+				.footer-external-links, .footer-contact {
+					display: block;
+				}
+				.footer-top, .footer-bottom {
+					width: 90%;
 				}
 			}
 	/*breakpoints end*/
