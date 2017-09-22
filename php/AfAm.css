@@ -1,0 +1,150 @@
+/* core */
+    body {
+        font-family: "Open Sans", Arial, sans-serif;
+        background-color: #e5e5e5;
+        line-height: 18px;
+        margin: 0;
+        font-size: 1.00rem;
+    }
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: #262626;
+    }
+    a:hover {
+        color: #262626;
+        text-decoration: underline;
+    }
+    .hide {
+        display: none;
+        visibility: hidden;
+    }
+
+    .header-search-collapsed div, .header-search-expanded div, .header-lg-button, .header-sm-button, .header-sm-img, .footer-list, .left-sidebar-header div {
+        display: inline-block;
+    }
+/* header */
+    header {
+        background-color: #fff;
+        /* background: repeating-linear-gradient(
+            #fff,
+            #fff 115px,
+            #000 115px,
+            #000 168px
+          ); */
+        box-shadow: 0px 3px 4px 1px rgba(50,50,50,0.5);
+    }
+    .header-logo-img {
+        padding: 15px 0 8px 0;
+    }
+    .header-logo-text {
+        font-weight: bold;
+        padding: 0 0 8px 0;
+    }
+    .header-logo-img img, .header-sm-img img {
+        max-height: 65px;
+    }
+    .header-search-collapsed, .header-search-expanded {
+        cursor: pointer;
+        float: right;
+        padding: 12px;
+    }
+    .header-search-collapsed:active {
+        box-shadow: inset 2px 4px 1px rgba(0,0,0,.05);
+    }
+    .header-search-collapsed:hover .header-search-collapsed-text, .header-search-collapsed:hover .header-search-collapsed-icon {
+        color: #333;
+    }
+    .header-search-collapsed-text {
+        font-size: 1.08rem;
+        padding-right: 5px;
+    }
+    .header-search-collapsed-icon {
+        font-size: 1.5rem;
+    }
+    .header-search-expanded-icon {
+        padding: 8px 15px;
+        color: #fff;
+        background-color: #000;
+    }
+    .header-search-expanded-text {
+        padding: 0 5px 0 0;
+        font-weight: bold;
+    }
+    .header-search-expanded-input input {
+        border: 1px solid #ccc;
+        height: 34px;
+        position: relative;
+        left: 5px;
+    }
+    .header-search-expanded-input input {
+        border: 1px solid #66afe9;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+    }
+    .footer-list ul {
+        list-style-type: none;
+    }
+    .header-logo-text a {
+        color: 
+    }
+    .header-bottom {
+        background-color: #000;
+        height: 53px;
+        width: 100%;
+    }
+/* main */
+    main {
+        margin-top: 20px;
+    }
+/* left sidebar */
+    .left-sidebar {
+        background-color: #000;
+        color: #fff;
+    }
+    .left-sidebar a {
+        color: #fff;
+    }
+    .left-sidebar-header {
+        height: 53px;
+    }
+    .left-sidebar-title {
+        padding: 17px 0 0 40px;
+    }
+    .left-sidebear-subtitle {
+        padding: 15px 0 10px 40px;
+    }
+    .left-sidebar-subj {
+        border-top: 1px solid #fff;
+    }
+    .left-sidebar-location, .left-sidebar-related {
+        border-top: 1px dashed #fff;
+    }
+    .left-sidebar-togglebutton {
+        height: 53px;
+        width: 49px;
+        float: right;
+    }
+    .left-sidebar-togglebutton button {
+        background-color: #000;
+        border: none;
+        color: #fff;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        /* padding: 14px 0 0 5px; */
+    }
+    .left-sidebar-togglebutton .fa-bars {
+        font-size: 1.5rem;
+    }
+    .left-sidebar-togglebutton .fa-caret-left {
+        position: relative;
+        bottom: 3px;
+    }
+    .left-sidebear-subtitle {
+        text-transform: uppercase;
+        font-size: 0.88rem;
+    }
+    .left-sidebar-list {
+        list-style-type: none;
+        margin: 12px 0;
+    }

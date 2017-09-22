@@ -8,55 +8,53 @@
 	<title> <?php echo $PAGE_TITLE ?> Digital Collections | Chicago Public Library</title>
 	    <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
 		<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
-
 		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="AfAm.css" >
+	
 <style>
 	div {
-		background-color: rgba(0,0,0,0.1);
-		border: 1px solid #fff;
-	}
-	.header-logo-img img, .header-sm-img img {
-		max-height: 65px;
-	}
-	.header-search-collapsed {
-	}
-	.header-search-collapsed div, .header-lg-button, .header-sm-button, .header-sm-img, .footer-list {
-		display: inline-block;
-	}
-	.footer-list ul {
-		list-style-type: none;
+		/* background-color: rgba(0,0,0,0.1); */
+		/* border: 1px solid #fff; */
 	}
 </style>
 </head>
+
 <body>
 <header>
 	<div class="container">
 		<div class="row justify-content-between align-items-center">
-		<div class="hidden-sm-down col-md-3">
-			<div class="header-logo-img"><img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="" /></div>
-			<div class="header-logo-text"><span>Digital Collections</span></div>
-		</div>
-		<div class="hidden-md-up col-4">
-			<div class="header-sm-img">
-				<img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/mobile_logo.png?1505979997263" alt="" />
+			<div class="hidden-sm-down col-md-3">
+				<div class="header-logo-img"><img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="" /></div>
+				<div class="header-logo-text"><a href="">Digital Collections</a></div>
 			</div>
-			<div class="header-sm-button"><i class="fa fa-bars"></i></div>
-			<div class="header-sm-button"><i class="fa fa-calendar"></i></div>
-		</div>
-		<div class="col-3 col-md-2">
-			<div class="header-search-collapsed">
-				<div class="header-search-collapsed-text">Search</div>
-				<div class="header-search-collapsed-icon"><i class="fa fa-search"></i></div>
+			<div class="hidden-md-up col-4">
+				<div class="header-sm-img">
+					<img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/mobile_logo.png?1505979997263" alt="" />
+				</div>
+				<div class="header-sm-button"><i class="fa fa-bars"></i></div>
+				<div class="header-sm-button"><i class="fa fa-calendar"></i></div>
+			</div>
+			<div class="col-6  clearfix">
+				<div class="header-search-collapsed" onclick="expandSearch()">
+					<div class="header-search-collapsed-text">Search</div>
+					<div class="header-search-collapsed-icon"><i class="fa fa-search"></i></div>
+				</div>
+				<div class="header-search-expanded hide">
+					<div class="header-search-expanded-text" onclick="SEARCHS!!!">Search the Digital Collections</div>
+					<div class="header-search-expanded-input"><input type="text"></div>
+					<div class="header-search-expanded-icon"><i class="fa fa-search"></i></div>
+				</div>
 			</div>
 		</div>
-		</div>
-		<div class="row">
+		<div class="row" style="background-color: #000;">
 			<div class="hidden-sm-down col-md-4 offset-md-1">
-				<div class="header-lg-button">Browse<i class="fa fa-angle-down"></i></div>
-				<div class="header-lg-button"><i class="fa fa-calendar"></i>Events</div>
+				<div class="header-bottom">
+					<div class="header-lg-button">Browse<i class="fa fa-angle-down"></i></div>
+					<div class="header-lg-button"><i class="fa fa-calendar"></i>Events</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -64,15 +62,73 @@
 <main>
 	<div class="container">
 		<div class="row">
+		<!-- left sidebar -->
 			<div class="col-4 col-lg-3">
-				left sidebar
+				<div class="left-sidebar">
+					<div class="left-sidebar-header clearfix">
+						<div class="left-sidebar-title">Digital Collections</div>
+						<div class="left-sidebar-togglebutton">
+							<button class="">
+								<i class="fa fa-caret-left"></i>
+								<i class="fa fa-bars"></i>
+							</button>
+						</div>
+					</div>
+					<div class="left-sidebar-main">
+						<div class="left-sidebar-subj">
+							<h4 class="left-sidebear-subtitle">Browse by Subject</h4>
+							<ul>
+								<li class="left-sidebar-list"><a href="AfricanAmericans.php" class="sidebar-links">African Americans</a></li>
+								<li class="left-sidebar-list"><a href="HaroldWashington.php" class="sidebar-links">Harold Washington</a></li>
+								<li class="left-sidebar-list"><a href="LibEd.php" class="sidebar-links">Libraries &amp; Education (new category)</a></li>
+								<li class="left-sidebar-list"><a href="Neighborhoods.php" class="sidebar-links">Neighborhoods</a></li>
+								<li class="left-sidebar-list"><a href="Newspapers.php" class="sidebar-links">Newspapers</a></li>
+								<li class="left-sidebar-list"><a href="Parks.php" class="sidebar-links">Parks</a></li>
+								<li class="left-sidebar-list"><a href="Theater.php" class="sidebar-links">Theater</a></li>
+								<li class="left-sidebar-list"><a href="http://digital.chipublib.org/digital/search" class="sidebar-links">More &hellip;</a></li>
+							</ul>
+						</div>
+						<div class="left-sidebar-location">
+							<h4 class="left-sidebear-subtitle">Browse by Location</h4>
+							<ul>
+								<li class="left-sidebar-list"><a href="HWLC.php" class="sidebar-links">HWLC Special Collections</a></li>
+								<li class="left-sidebar-list"><a href="MRC.php" class="sidebar-links">Municipal Records Collection</a></li>
+								<li class="left-sidebar-list"><a href="Sulzer.php" class="sidebar-links">Northside Neighborhoods History Collection</a></li>
+								<li class="left-sidebar-list"><a href="Harsh.php" class="sidebar-links">Vivian G Harsh Collection</a></li>
+							</ul>
+						</div>
+						<div class="left-sidebar-related">
+							<h4 class="left-sidebear-subtitle">Related Links</h4>
+							<ul>
+								<li class="left-sidebar-list"><a href="" class="sidebar-links">Archival Collections</a></li>
+								<li class="left-sidebar-list"><a href="" class="sidebar-links">Chicago History</a></li>
+								<li class="left-sidebar-list"><a href="" class="sidebar-links">Online Resources</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
+		<!-- center content -->
 			<div class="col-8 col-lg-6">
-				<h1><?php echo $PAGE_TITLE; ?></h1>
-				main content
+				<div class="center-content">
+					<h1><?php echo $PAGE_TITLE; ?></h1>
+					main content
+				</div>
 			</div>
-			<div class="hidden-md-down col-lg-3">
-				right sidebar
+		<!-- right sidebar -->
+			<div class="hidden-md-down col-lg-3 right-sidebar">
+				<div class="right-sidebar">
+					<div class="blogs">
+						<?php
+							// include 'blogs.php';
+						?>
+					</div>
+					<div class="events">
+						<?php 
+							// include 'events.php';
+						?>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -110,13 +166,13 @@
 			</div>
 			<div class="col-4">
 				<div class="footer-contactinfo">
-					<dl>
-						<dt>Contact Us</dt>
-						<dd>Chicago Public Library</dd>
-						<dd>400 S. State Street</dd>
-						<dd>Chicago, IL 60605</dd>
-						<dd>(312) 747-4300</dd>
-					</dl>
+					<address>
+						<strong>Contact Us</strong><br>
+						Chicago Public Library<br>
+						400 S. State Street<br>
+						Chicago, IL 60605<br>
+						<abbr title="Phone">P:</abbr> (312) 747-4300
+					</address>
 				</div>
 			</div>
 		</div>
@@ -132,5 +188,11 @@
 		</div>
 	</div>
 </footer>
+<script>
+	function expandSearch() {
+		$(".header-search-collapsed").addClass("hide");
+		$(".header-search-expanded").removeClass("hide");
+	}
+</script>
 </body>
 </html>
