@@ -27,35 +27,49 @@
 	<div class="container">
 		<div class="row justify-content-between align-items-center">
 			<div class="hidden-sm-down col-md-3">
-				<div class="header-logo-img"><img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="" /></div>
+				<div class="header-logo-img"><a href="https://www.chipublib.org/"><img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="" /></a></div>
 				<div class="header-logo-text"><a href="">Digital Collections</a></div>
 			</div>
 			<div class="hidden-md-up col-4">
 				<div class="header-sm-img">
-					<img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/mobile_logo.png?1505979997263" alt="" />
+					<a href="https://www.chipublib.org/">
+						<img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/mobile_logo.png?1505979997263" alt="" />
+					</a>
 				</div>
 				<div class="header-sm-button"><i class="fa fa-bars"></i></div>
 				<div class="header-sm-button"><i class="fa fa-calendar"></i></div>
 			</div>
-			<div class="col-6  clearfix">
+			<div class="col-8 clearfix">
 				<div class="header-search-collapsed" onclick="expandSearch()">
-					<div class="header-search-collapsed-text">Search</div>
+					<div class="header-search-collapsed-text hidden-sm-down">Search</div>
 					<div class="header-search-collapsed-icon"><i class="fa fa-search"></i></div>
 				</div>
 				<div class="header-search-expanded hide">
-					<div class="header-search-expanded-text" onclick="SEARCHS!!!">Search the Digital Collections</div>
+					<div class="header-search-expanded-text hidden-md-down" onclick="SEARCHS!!!">Search the Digital Collections</div>
+					<div class="header-search-expanded-text hidden-lg-up" onclick="SEARCHS!!!">Search</div>
 					<div class="header-search-expanded-input"><input type="text"></div>
 					<div class="header-search-expanded-icon"><i class="fa fa-search"></i></div>
 				</div>
 			</div>
 		</div>
-		<div class="row" style="background-color: #000;">
+		<div class="row">
 			<div class="hidden-sm-down col-md-4 offset-md-1">
 				<div class="header-bottom">
 					<div class="header-lg-button">Browse<i class="fa fa-angle-down"></i></div>
 					<div class="header-lg-button"><i class="fa fa-calendar"></i>Events</div>
 				</div>
 			</div>
+		</div>
+
+	</div>
+	<div class="header-search-dropped clearfix">
+		<div class="row">
+			<div class="header-search-dropped-text clearfix">Search</div>
+			<div class="header-search-dropped-search clearfix">
+				<div class="header-search-dropped-input"><input type="text"></div>
+				<div class="header-search-dropped-icon"><i class="fa fa-search"></i></div>
+			</div>
+			<div class="header-search-dropped-adv"><a href="">Advanced Search</a></div>
 		</div>
 	</div>
 </header>
@@ -67,7 +81,7 @@
 				<div class="left-sidebar">
 					<div class="left-sidebar-header clearfix">
 						<div class="left-sidebar-title">Digital Collections</div>
-						<div class="left-sidebar-togglebutton">
+						<div class="left-sidebar-togglebutton hide">
 							<button class="">
 								<i class="fa fa-caret-left"></i>
 								<i class="fa fa-bars"></i>
@@ -188,11 +202,22 @@
 		</div>
 	</div>
 </footer>
+
+
 <script>
 	function expandSearch() {
 		$(".header-search-collapsed").addClass("hide");
 		$(".header-search-expanded").removeClass("hide");
 	}
+	$(window).resize(function () {
+		var viewportWidth = $(window).width();
+		if (viewportWidth < 768) {
+			// $(".sidebar-hide-button").removeClass("hide").addClass("show");
+		}
+		if (viewportWidth > 768) {
+			// $(".sidebar-hide-button").removeClass("show").addClass("hide");
+		}
+	});
 </script>
 </body>
 </html>
