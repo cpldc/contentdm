@@ -98,7 +98,7 @@
                         Digital Collections
                     </h1>
                         <div class="card-columns">
-                            <?php include 'content-card2.php'; ?>
+                            <?php include 'content-card.php'; ?>
                         </div>
                 </div>  
             </div>
