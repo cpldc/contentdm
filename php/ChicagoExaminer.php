@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'African Americans';
+	$PAGE_TITLE = 'Chicago Examiner';
 ?>
 	<meta charset="UTF-8">
 	<title> <?php echo $PAGE_TITLE ?> Digital Collections | Chicago Public Library</title>
@@ -180,8 +180,27 @@
 								<li class="left-sidebar-list"><a href="Newspapers.php" class="sidebar-links">Newspapers</a></li>
 								<li class="left-sidebar-list"><a href="Parks.php" class="sidebar-links">Parks</a></li>
 								<li class="left-sidebar-list"><a href="Theater.php" class="sidebar-links">Theater</a></li>
-								<li class="left-sidebar-list"><a href="http://digital.chipublib.org/digital/search" class="sidebar-links">More &hellip;</a></li>
-							</ul>
+								<li class="left-sidebar-list"><button class="sidebar-links sidebar-links-ViewAll" data-toggle="collapse" data-target="#demo"> + View All Collections&hellip;</a></li>
+                            </ul>
+                                <ul id="demo" class="collapse left-sidebar-collectionmenu">
+                                    <li class="mpu"><a href="">Millennium Park</a></li>
+                                    <li class="cr"><a href="">Chicago Renaissance</a></li>
+                                    <li class="dtd"><a href="">Chicago's Sewers</a></li>
+                                    <li class="rvw"><a href="">Ravenswood-Lake View Community Collection</a></li>
+                                    <li class="rhwc"><a href="">Remembering Harold Washington</a></li>
+                                    <li class="wha"><a href="">Civil War</a></li>
+                                    <li class="woop"><a href="">Chicago Public Library</a></li>
+                                    <li class="rwk"><a href="">Robert W. Krueger</a></li>
+                                    <li class="bar"><a href="">Esther A. Barlow</a></li>
+                                    <li class="hdg"><a href="">Henry D. Green</a></li>
+                                    <li class="ahs"><a href="">Northside High Schools</a></li>
+                                    <li class="cfc"><a href="">Northside Clubs and Organizations</a></li>
+                                    <li class="cfd"><a href="">Chicago's Lakefront</a></li>
+                                    <li class="TDC"><a href="">Civil War</a></li>
+                                    <li class="CNP1908"><a href="">Chicago Examiner</a></li>
+                                    <li class="ChicagoParks"><a href="">Chicago Parks</a></li>
+                                    <li class="p16818coll6"><a href="">Philip Sang Collection</a></li> 
+                                </ul>
 						</div>
 						<div class="left-sidebar-location">
 							<h4 class="left-sidebear-subtitle">Browse by Location</h4>
@@ -207,17 +226,19 @@
 			<div class="col-8 col-lg-6">
 				<div class="center-content">
 					<h1><?php echo $PAGE_TITLE; ?></h1>
-					<span>short category/subject/location summary</span>
+					<span>The Chicago Examiner began in 1902 as a morning edition to complement the evening edition paper, the Chicago American.</span>
 					<div class="center-lightbox">
 						<?php include 'lightbox.html'; ?>
 					</div>
 					<div class="center-button browseall">
 						<button class="btn btn-primary">Browse All&hellip;</button>
 					</div>
-					<div class="center-copy-paragraph"><p>The Chicago Examiner, a William Randolph Hearst publication, began in 1902 as a morning edition to complement the evening edition paper, the Chicago American. The Chicago Public Library’s 10-year run of the Examiner, while incomplete, extends from 1908 to 1918 and represents the longest run of the paper still available. It is a quintessential example of yellow journalism.
-					</p><p>
-					Follow the tragedy of the <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Eastland!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">shipwreck of the Eastland,</a> a Great Lakes passenger steamer, in which 844 passengers and crew perished while the ship was tied to a dock in the Chicago River; the <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Union!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">infamous 1910 Union Stock Yards fire,</a> the deadliest U.S. building collapse in terms of firefighter deaths until September 11, 2001; <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Dunne!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">the mystery of the Dunne Water Crib fire, </a>told through first-person accounts, reportage, photos, and illustrations; big early 19th century <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Cubs%20Sox!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">wins for the Cubs and the White Sox.</a>
-						</p>
+					<div class="center-copy-paragraph">
+                        <p>The Chicago Public Library’s 10-year run of the Examiner, while incomplete, extends from 1908 to 1918 and represents the longest run of the paper still available. It is a quintessential example of yellow journalism.
+					    </p><p>
+					    Follow the tragedy of the <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Eastland!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">shipwreck of the Eastland,</a> a Great Lakes passenger steamer, in which 844 passengers and crew perished while the ship was tied to a dock in the Chicago River; the <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Union!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">infamous 1910 Union Stock Yards fire,</a> the deadliest U.S. building collapse in terms of firefighter deaths until September 11, 2001; <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Dunne!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">the mystery of the Dunne Water Crib fire, </a>told through first-person accounts, reportage, photos, and illustrations; big early 19th century <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Cubs%20Sox!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">wins for the Cubs and the White Sox.</a>
+                        </p>
+                    </div>
 					<div class="center-copy-list">
 						<h4>Collection Highlights</h4>
 						<dl>
@@ -229,10 +250,12 @@
 					</div>
 					<div class="center-copy-list-ext">
 						<h4>External Resources</h4>
-						<ul>
-							<li><a href="http://chroniclingamerica.loc.gov/">Library of Congress Chronicling America: Historic American Newspapers</a></li>
-							<li><a href="http://idnc.library.illinois.edu/">Illinois Digital Newspaper Collections</a></li>
-						</ul>
+						<dl>
+                            <dt><a href="http://chroniclingamerica.loc.gov/">Library of Congress Chronicling America: Historic American Newspapers</a></dt>
+                            <dd>For more historic newspapers.
+                            <dt><a href="http://idnc.library.illinois.edu/">Illinois Digital Newspaper Collections</a></dt>
+                            <dd>For more Illinois newspapers.
+						</dl>
 					</div>
 				</div>
 			</div>
@@ -241,12 +264,12 @@
 				<div class="right-sidebar">
 					<div class="blogs">
 						<?php
-							// include 'blogs.php';
+							include 'blogs.php';
 						?>
 					</div>
 					<div class="events">
 						<?php 
-							// include 'events.php';
+							include 'events.php';
 						?>
 					</div>
 				</div>
