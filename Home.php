@@ -93,7 +93,7 @@
         <div class="container-fluid">
             <div class="row">
                 <?php include 'sidebar.html';?>
-                <div class="col">
+                <div class=" col-7 col-md-8 col-xl-9">
                     <h1 class="center-title">
                         Digital Collections
                     </h1>
