@@ -247,16 +247,6 @@
     main {
         margin-top: 20px;
     }
-    /* center container with CSS */
-    .grid {
-        margin: 0 auto;
-    }
-    .main-container {
-        margin: auto;
-        /* border: 1px solid black; */
-        padding-left: 230px;
-        transition: all 0.1s;
-    }
     .center-content {
         background-color: #fff;
         padding: 35px;
@@ -308,13 +298,6 @@
         background-color: #000;
         color: #fff;
     }
-    .left-sidebar-collapsible {
-        max-width: 230px;
-        float: left;
-    }
-    .left-sidebar-togglebutton-show {
-        float: left !important;
-    }
     .left-sidebar a {
         color: #fff;
     }
@@ -350,7 +333,7 @@
     .left-sidebar-togglebutton .fa-bars {
         font-size: 1.5rem;
     }
-    .left-sidebar-togglebutton .fa-caret-left, .left-sidebar-togglebutton .fa-caret-right {
+    .left-sidebar-togglebutton .fa-caret-left {
         position: relative;
         bottom: 3px;
     }
@@ -572,48 +555,59 @@
         margin: auto;
     }
 /* content card */
-    .grid-item {
-        margin-bottom: 20px;
-        box-shadow: 4px 3px 5px -4.5px #3f4344;
+    .card {
+        width: 18em !important;
     }
+    .content-card {
+        max-width: 300px;
+        min-width: 200px;
+    }  
     .content-card-img {
         width: 100%;
     }
-    .card-block {
-        padding: 7px 10px 15px 10px;;
-    }
     .content-card-title a {
+        line-height: 21px;
         font-weight: bold;
         font-size: 1.21rem;
         color: #3f4344;
     }
-    .content-card-copy {
-        margin-bottom: 10px;
-    }
     .content-card-category {
+        position: relative;
+        top: -7px;
         font-size: 0.75rem;
         line-height: 12px;
         color: #2d63af;
         text-transform: uppercase;
+        /* margin-bottom: 5px; */
     }
-    .bibbutton {
-        padding: 10px 20px;
-        text-align: center;
-        font-size: 0.88rem;
-        line-height: 18px;
-        font-weight: bold;
-        color: #fff;
-        background: #909696;
-        border-top: 1px solid transparent;
-        border-left: 1px solid transparent;
-        border-right: 1px solid transparent;
-        border-bottom: 4px solid #767d7d;
-        text-decoration: none;
-        text-shadow: 1px 1px 4px rgba(0,0,0,0.35);
-        display: inline-block;
+    @media (min-width: 34em) {
+        .card-columns {
+            -webkit-column-count: 1;
+            -moz-column-count: 1;
+            column-count: 1;
+        }
     }
-    .bibbutton:hover {
-        background: #767d7d;
-        color: #fff !important;
-        text-decoration: none;
+    
+    @media (min-width: 900px) {
+        .card-columns {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+        }
+    }
+    
+    @media (min-width: 1225px) {
+        .card-columns {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+        }
+    }
+    
+    @media (min-width: 1500px) {
+        .card-columns {
+            -webkit-column-count: 4;
+            -moz-column-count: 4;
+            column-count: 4;
+        }
     }

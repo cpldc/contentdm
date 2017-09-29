@@ -13,20 +13,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/a768f4e0c8.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
-    <script src="imagesloaded.pkgd.min.js"></script>
     <script src="cpldc.js"></script>
     <link rel="stylesheet" href="AfAm.css" >
-<style>
-    div {
-        /* border: 1px solid black !important; */
-    }
-</style>
+
 </head>
 <body>
-    <?php 
-    include 'header.html';
-    $PAGE_TYPE = 'home';
+    <?php include 'header.html';
+
     $cards = array ();
 
     $cards[ChicagoExaminer][title] =     'Chicago Examiner';
@@ -95,32 +88,22 @@
     $cards[CPL][copy] =      'On January 1, 1873 the Chicago Public Library opened its doors in a water tank that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to the development of neighborhood libraries across the city.';
     $cards[CPL][link] =      'CPL.php';
 
-    $cards[RK][title] =     'Robert W. Krueger';
-    $cards[RK][pic] =       'http://digital.chipublib.org/digital/image/rwk/thumbnail';
-    $cards[RK][category] =  'Neighborhoods';
-    $cards[RK][copy] =      'In 1984, Chicago Public Library began working with local photographer Robert Krueger to document the North Side. He photographed hundreds of street scenes, parks, businesses, houses, schools, cemeteries, religious institutions, community events and people of the area.';
-    $cards[RK][link] =      'Krueger.php';
-
     ?>
     <main>
-        <?php include 'sidebar.php';?>
-        <div class="main-container">
-            <div class="grid">
-                <?php include 'content-card.php'; ?>
+        <div class="container-fluid">
+            <div class="row">
+                <?php include 'sidebar.html';?>
+                <div class=" col-7 col-md-8 col-xl-9">
+                    <h1 class="center-title">
+                        Digital Collections
+                    </h1>
+                        <div class="card-columns">
+                            <?php include 'content-card.php'; ?>
+                        </div>
+                </div>  
             </div>
-        </div>  
+        </div>
     </main>
     <?php include 'footer.html'; ?>
-    <script>
-    	// Masonry jQuery
-	var $grid = $('.grid').masonry({
-		gutter: 15,
-        itemSelector: '.card',
-        fitWidth: true
-	});
-	$grid.imagesLoaded().progress( function() {
-		$grid.masonry('layout');
-	});
-	</script>
 </body>
 </html>
