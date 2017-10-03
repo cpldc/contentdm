@@ -27,33 +27,35 @@
 					<li class="left-sidebar-list"><a href="Newspapers.php" class="sidebar-links">Newspapers</a></li>
 					<li class="left-sidebar-list"><a href="Parks.php" class="sidebar-links">Parks</a></li>
 					<li class="left-sidebar-list"><a href="Theater.php" class="sidebar-links">Theater</a></li>
-					<li class="left-sidebar-list"><button class="sidebar-links sidebar-links-ViewAll" data-toggle="collapse" data-target="#demo"> + View All Collections&hellip;</a></li>
+					<li class="left-sidebar-list">
+						<!-- <button class="sidebar-links sidebar-links-ViewAll" data-toggle="collapse" data-target="#demo"> +  -->
+					<a href="AllCollections.php" class="sidebar-links">View All Collections&hellip;</a></li>
 				</ul>
-					<ul id="demo" class="collapse left-sidebar-collectionmenu">
-						<li class="mpu"><a href="">Millennium Park</a></li>
-						<li class="cr"><a href="">Chicago Renaissance</a></li>
-						<li class="dtd"><a href="">Chicago's Sewers</a></li>
-						<li class="rvw"><a href="">Ravenswood-Lake View Community Collection</a></li>
-						<li class="rhwc"><a href="">Remembering Harold Washington</a></li>
-						<li class="wha"><a href="">Civil War</a></li>
-						<li class="woop"><a href="">Chicago Public Library</a></li>
-						<li class="rwk"><a href="">Robert W. Krueger</a></li>
-						<li class="bar"><a href="">Esther A. Barlow</a></li>
-						<li class="hdg"><a href="">Henry D. Green</a></li>
-						<li class="ahs"><a href="">Northside High Schools</a></li>
-						<li class="cfc"><a href="">Northside Clubs and Organizations</a></li>
-						<li class="cfd"><a href="">Chicago's Lakefront</a></li>
-						<li class="TDC"><a href="">Civil War</a></li>
-						<li class="CNP1908"><a href="">Chicago Examiner</a></li>
-						<li class="ChicagoParks"><a href="">Chicago Parks</a></li>
-						<li class="p16818coll6"><a href="">Philip Sang Collection</a></li> 
-					</ul>
+					<!-- <ul id="demo" class="collapse left-sidebar-collectionmenu">
+						<li class="mpu" ><a href="MillenniumPark.php">Millennium Park</a></li>
+						<li class="cr"  ><a href="ChiRen.php">Chicago Renaissance</a></li>
+						<li class="dtd" ><a href="Sewers.php">Chicago's Sewers</a></li>
+						<li class="rvw" ><a href="RWLV.php">Ravenswood-Lake View Community Collection</a></li>
+						<li class="rhwc"><a href="HaroldWashington.php">Remembering Harold Washington</a></li>
+						<li class="wha" ><a href="CivilWar.php">Civil War</a></li>
+						<li class="woop"><a href="CPL.php">Chicago Public Library</a></li>
+						<li class="rwk" ><a href="Krueger.php">Robert W. Krueger</a></li>
+						<li class="bar" ><a href="Barlow.php">Esther A. Barlow</a></li>
+						<li class="hdg" ><a href="Green.php">Henry D. Green</a></li>
+						<li class="ahs" ><a href="NSHS.php">Northside High Schools</a></li>
+						<li class="cfc" ><a href="NSCO.php">Northside Clubs and Organizations</a></li>
+						<li class="cfd" ><a href="Lakefront.php">Chicago's Lakefront</a></li>
+						<li class="TDC" ><a href="CivilWar.php">Civil War also?</a></li>
+						<li class="CNP1908"><a href=".php">Chicago Examiner</a></li>
+						<li class="ChicagoParks"><a href="Parks.php">Chicago Parks</a></li>
+						<li class="p16818coll6"><a href="Sang.php">Philip Sang Collection</a></li> 
+					</ul> -->
 			</div>
 			<div class="left-sidebar-location">
 				<h4 class="left-sidebear-subtitle">Browse by Location</h4>
 				<ul>
 					<li class="left-sidebar-list"><a href="HWLC.php" class="sidebar-links">HWLC Special Collections</a></li>
-					<li class="left-sidebar-list"><a href="MRC.php" class="sidebar-links">Municipal Records Collection</a></li>
+					<li class="left-sidebar-list"><a href="MRC.php" class="sidebar-links">Municipal Reference Collection</a></li>
 					<li class="left-sidebar-list"><a href="Sulzer.php" class="sidebar-links">Northside Neighborhoods History Collection</a></li>
 					<li class="left-sidebar-list"><a href="Harsh.php" class="sidebar-links">Vivian G Harsh Collection</a></li>
 				</ul>

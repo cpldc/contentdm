@@ -262,6 +262,9 @@
         padding: 35px;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16);
     }
+    .main-container > h1 {
+        font-weight: bold;
+    }
     .center-content h1 {
         font-size: 28px;
         margin-bottom: 15px;
