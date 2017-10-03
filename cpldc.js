@@ -54,3 +54,9 @@
 			showLeftSidebar();
 		}
 	});
+	function searchQuery() {
+		var query = document.getElementsByName("search-query")[0].value;
+		if ( query != "") {
+			window.location.href = 'http://digital.chipublib.org/digital/search/searchterm/' + query;
+		}
+	}
