@@ -19,14 +19,26 @@
 		$(".header-browse-dropdown-wrapper").addClass("hide");
 	}
 	function hideLeftSidebar() {
-		$(".left-sidebar-toplevel").addClass("hide");
-		$(".left-sidebar-togglebutton-show").removeClass("hide");
-		$(".main-container").css("padding-left","0");
+		// if ($(".left-sidebar-toplevel").hasClass("left-sidebar-collapsible")) {
+			$(".left-sidebar-toplevel").addClass("hide");
+			$(".left-sidebar-togglebutton-show").removeClass("hide");
+			$(".main-container").css("padding-left","0");
+		// }
+		// if ($(".left-sidebar-toplevel").hasClass("left-sidebar-fixed")){
+			$(".center-content").removeClass("col-8 col-lg-6");
+			$(".center-content").addClass("col-12");
+		// }
 	}
 	function showLeftSidebar() {
-		$(".left-sidebar-toplevel").removeClass("hide");
-		$(".left-sidebar-togglebutton-show").addClass("hide");
-		$(".main-container").css("padding-left","230px");
+		// if ($(".left-sidebar-toplevel").hasClass("left-sidebar-collapsible")) {
+			$(".left-sidebar-toplevel").removeClass("hide");
+			$(".left-sidebar-togglebutton-show").addClass("hide");
+			$(".main-container").css("padding-left","230px");
+		// }
+		// if ($(".left-sidebar-toplevel").hasClass("left-sidebar-fixed")){
+			$(".center-content").addClass("col-8 col-lg-6");
+			$(".center-content").removeClass("col-12");
+		// }
 	}
 	$(window).resize(function () {
 		var viewportWidth = $(window).width();

@@ -290,8 +290,6 @@
     .center-copy-list {
         border-top: 1px solid #ccc;
         border-bottom: 1px solid #ccc;
-        /* padding-top: 15px; */
-        /* margin-top: 15px; */
         padding-bottom: 15px;
         margin-bottom: 15px;
     }
@@ -305,6 +303,27 @@
         font-weight: bold;
         line-height: 1;
         margin-bottom: 20px;
+    }
+    .all-collections dt a {
+        font-size: 18px;
+    }
+    .all-collections dt {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .all-collections dt:after {
+        content: " »";
+        font-size: 24px;
+        color: #2d63af;
+    }
+    .all-collections-category {
+        font-size: 13px;
+        color: #3f4344;
+    }
+    .all-collections-category a {
+        font-size: 14px;
+        color: #2d63af;
+        text-decoration: underline;
     }
 /* left sidebar */
     .left-sidebar {

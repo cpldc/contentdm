@@ -1,15 +1,16 @@
 
 <?php 
-	if ($PAGE_TYPE = 'home') {
-		echo '<div class="left-sidebar-toplevel left-sidebar-collapsible"><div class="left-sidebar">';
+	if ($PAGE_TYPE == 'home') {
+		echo '<div class="left-sidebar-toplevel left-sidebar-collapsible">';
 	} 
-	else {
-		echo '<div class="left-sidebar-toplevel left-sidebar-fixed col-4 col-lg-4 col-xl-3"><div class="left-sidebar">';
+	elseif ($PAGE_TYPE == 'content') {
+		echo '<div class="left-sidebar-toplevel left-sidebar-fixed col-4 col-lg-4 col-xl-3">';
 		} 
 ?>
+	<div class="left-sidebar">
 		<div class="left-sidebar-header clearfix">
 			<div class="left-sidebar-title">Digital Collections</div>
-			<div class="left-sidebar-togglebutton <?php if ($PAGE_TYPE != 'home') echo 'hide';?>" onclick="hideLeftSidebar()">
+			<div class="left-sidebar-togglebutton <?php if ($PAGE_TYPE == 'content') echo 'hide';?>" onclick="hideLeftSidebar()">
 				<button class="">
 					<i class="fa fa-caret-left"></i>
 					<i class="fa fa-bars"></i>
@@ -70,10 +71,10 @@
 			</div>
 		</div>
 	</div>
-</div>
-<div class="left-sidebar-togglebutton left-sidebar-togglebutton-show hide" onclick="showLeftSidebar()">
-	<button class="">
-		<i class="fa fa-bars"></i>
-		<i class="fa fa-caret-right"></i>
-	</button>
+	<div class="left-sidebar-togglebutton left-sidebar-togglebutton-show hide" onclick="showLeftSidebar()">
+		<button class="">
+			<i class="fa fa-bars"></i>
+			<i class="fa fa-caret-right"></i>
+		</button>
+	</div>
 </div>
