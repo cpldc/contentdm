@@ -1,5 +1,6 @@
+	var viewportWidth = $(window).width();
 	function expandSearch() {
-		var viewportWidth = $(window).width();
+		// var viewportWidth = $(window).width();
 		$(".header-search-collapsed").addClass("hide");
 		if (viewportWidth > 976) {
 			$(".header-search-expanded").removeClass("hide");
@@ -19,29 +20,20 @@
 		$(".header-browse-dropdown-wrapper").addClass("hide");
 	}
 	function hideLeftSidebar() {
-		// if ($(".left-sidebar-toplevel").hasClass("left-sidebar-collapsible")) {
 			$(".left-sidebar-toplevel").addClass("hide");
 			$(".left-sidebar-togglebutton-show").removeClass("hide");
 			$(".main-container").css("padding-left","0");
-		// }
-		// if ($(".left-sidebar-toplevel").hasClass("left-sidebar-fixed")){
 			$(".center-content").removeClass("col-8 col-lg-6");
 			$(".center-content").addClass("col-12");
-		// }
 	}
 	function showLeftSidebar() {
-		// if ($(".left-sidebar-toplevel").hasClass("left-sidebar-collapsible")) {
 			$(".left-sidebar-toplevel").removeClass("hide");
 			$(".left-sidebar-togglebutton-show").addClass("hide");
 			$(".main-container").css("padding-left","230px");
-		// }
-		// if ($(".left-sidebar-toplevel").hasClass("left-sidebar-fixed")){
 			$(".center-content").addClass("col-8 col-lg-6");
 			$(".center-content").removeClass("col-12");
-		// }
 	}
 	$(window).resize(function () {
-		var viewportWidth = $(window).width();
 		if (viewportWidth < 976) {
 			if (!($(".header-search-expanded").hasClass("hide"))) {
 				$(".header-search-expanded").addClass("hide");
@@ -58,7 +50,7 @@
 		}
 	});
 	$( document ).ready(function() {
-		var viewportWidth = $(window).width();
+		// var viewportWidth = $(window).width();
 		if (viewportWidth < 976) {
 			hideLeftSidebar();
 		}

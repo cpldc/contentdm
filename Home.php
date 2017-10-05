@@ -102,7 +102,7 @@
     $cards[RK][link] =      'Krueger.php';
 
     ?>
-    <main>
+    <main class="PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
         <?php include 'sidebar.php';?>
         <div class="main-container">
             <div class="grid">

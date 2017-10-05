@@ -29,7 +29,7 @@
 <?php 
 	include 'header.html';
 ?>
-<main>
+<main class="PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
 	<div class="container">
 		<div class="row">
 		<?php 
