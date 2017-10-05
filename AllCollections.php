@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 		<script src="https://use.fontawesome.com/a768f4e0c8.js"></script>
-		<script src="cpldc.js"></script>
+		<script src="cpldc-withdetach.js"></script>
 		<link rel="stylesheet" href="AfAm.css" >
 	
 <style>
@@ -29,15 +29,16 @@
 <?php 
 	include 'header.html';
 ?>
-<main class="PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
+<main class="sidebar-target-collapsible PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
 	<div class="container">
-		<div class="row">
-		<?php 
-			include 'sidebar.php';
-		?>
+		<div class="row sidebar-target-fixed">
+			<?php 
+				include 'sidebar.php';
+			?>
 		<!-- center content -->
 			<div class="col-8 col-lg-6 center-content">
 					<h1><?php echo $PAGE_TITLE; ?></h1>
+					<button class="btn" onclick="switchLayout()">asdf</button>
 					<dl class="all-collections">
 						<dt class="bar"><a href="Barlow.php">Barlow, Esther A. Collection</a></dt>
 						<dd>Esther Barlow worked in neighborhood branches of the Chicago Public Library from 1927 until 1976. Included in this collection are family photographs and images of Ms. Barlow at work at the Hild Regional Library and Lake View Branch Library.</dd>
