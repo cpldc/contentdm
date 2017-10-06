@@ -5,25 +5,28 @@
 	} else if ($(".PAGE_TYPE").hasClass('home') || ($(".PAGE_TYPE").hasClass('content') && viewportWidth < 976)) {
 		sidebarType = "collapsible";
 	} 
-	if (sidebarType === "collapsible") {
+	if (sidebarType == "collapsible") {
 		document.write('<div class="left-sidebar-toplevel left-sidebar-collapsible">');
-	} else if (sidebarType === "fixed") {
+	} else if (sidebarType == "fixed") {
 		document.write('<div class="left-sidebar-toplevel left-sidebar-fixed col-4 col-lg-4 col-xl-3">');
 	}
+	var togglebuttonLeft = '<i class="fa fa-caret-left"></i> <i class="fa fa-bars"></i>';
+	var togglebuttonRight = '<i class="fa fa-bars"></i> <i class="fa fa-caret-right"></i>';
 </script>
 	<div class="left-sidebar">
 		<div class="left-sidebar-header clearfix">
 			<div class="left-sidebar-title">Digital Collections</div>
 			<script>
-				if (sidebarType === "collapsible") {
-					document.write('<div class="left-sidebar-togglebutton left-sidebar-togglebutton-hide " onclick="hideLeftSidebar()">');
-				} else if  (sidebarType === "fixed") {
-					document.write('<div class="left-sidebar-togglebutton left-sidebar-togglebutton-hide hide" onclick="hideLeftSidebar()">');
+				if (sidebarType == "collapsible") {
+					document.write('<div class="left-sidebar-togglebutton left-sidebar-togglebutton-hide " onclick="toggleLeftSidebar()">');
+				} else if (sidebarType == "fixed") {
+					document.write('<div class="left-sidebar-togglebutton left-sidebar-togglebutton-hide hide" onclick="toggleLeftSidebar()">');
 				}
 			</script>
-				<button class="">
-					<i class="fa fa-caret-left"></i>
-					<i class="fa fa-bars"></i>
+				<button class="left-sidebar-togglebutton-target">
+					<script>
+						document.write(togglebuttonLeft);
+					</script>
 				</button>
 			</div>
 		</div>
@@ -61,10 +64,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="left-sidebar-togglebutton left-sidebar-togglebutton-show hide" onclick="showLeftSidebar()">
+	<!-- <div class="left-sidebar-togglebutton left-sidebar-togglebutton-show hide" onclick="showLeftSidebar()">
 		<button class="">
 			<i class="fa fa-bars"></i>
 			<i class="fa fa-caret-right"></i>
 		</button>
-	</div>
+	</div> -->
 </div>

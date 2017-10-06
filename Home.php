@@ -15,7 +15,7 @@
     <script src="https://use.fontawesome.com/a768f4e0c8.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
     <script src="imagesloaded.pkgd.min.js"></script>
-    <script src="cpldc.js"></script>
+    <script src="cpldc-withdetach.js"></script>
     <link rel="stylesheet" href="AfAm.css" >
 <style>
     div {
