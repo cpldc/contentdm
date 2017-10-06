@@ -15,8 +15,8 @@
     <script src="https://use.fontawesome.com/a768f4e0c8.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
     <script src="imagesloaded.pkgd.min.js"></script>
-    <script src="cpldc-withdetach.js"></script>
-    <link rel="stylesheet" href="AfAm.css" >
+    <script src="cpldc.js"></script>
+    <link rel="stylesheet" href="cpldc.css" >
 <style>
     div {
         /* border: 1px solid black !important; */
@@ -32,7 +32,7 @@
     $cards[ChicagoExaminer][title] =     'Chicago Examiner';
     $cards[ChicagoExaminer][pic] =       'default.jpg';
     $cards[ChicagoExaminer][category] =  'Chicago History | Newspapers';
-    $cards[ChicagoExaminer][copy] =      'The Chicago Examiner began in 1902 as a morning edition to complement the evening edition paper, the Chicago American.';
+    $cards[ChicagoExaminer][copy] =      'Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
     $cards[ChicagoExaminer][link] =      'ChicagoExaminer.php';
 
     $cards[HW][title] =                 'Remembering Harold Washington';
@@ -86,7 +86,7 @@
     $cards[CivilWar][title] =     'Civil War';
     $cards[CivilWar][pic] =       'http://digital.chipublib.org/digital/image/wha/thumbnail';
     $cards[CivilWar][category] =  'Military';
-    $cards[CivilWar][copy] =      'Artifacts from the homefront and the battlefield, with a focus on the Illinois experience. Highlights include camp equipment, weaponry and uniforms.';
+    $cards[CivilWar][copy] =      'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.';
     $cards[CivilWar][link] =      'CivilWar.php';
 
     $cards[CPL][title] =     'Chicago Public Library';
@@ -104,7 +104,7 @@
     ?>
     <main class="PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
         <?php include 'sidebar.php';?>
-        <div class="main-container">
+        <div class="main-container-collapsible">
             <div class="grid">
                 <?php include 'content-card.php'; ?>
             </div>
