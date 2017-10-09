@@ -228,8 +228,8 @@
         color: #000;
     }
     .header-browse-dropdown-wrapper {
-        position: fixed;
-        top: 164;
+        position: absolute;
+        /* top: 164px; */
         width: 100%;
         background-color: #f8f8f8;
         z-index: 2;
@@ -350,6 +350,14 @@
         font-size: 14px;
         color: #2d63af;
         text-decoration: underline;
+    }
+    .browseall .btn-primary {
+        background-color: #2d63af !important;
+        border-color: #2d63af !important;
+    }
+    .browseall .btn-primary:hover {
+        background-color: #428bca !important;
+        border-color: #428bca !important;
     }
 /* left sidebar */
     .left-sidebar {
@@ -608,18 +616,24 @@
     .lightbox-main-img-div {
         margin: auto;
         padding: 15px;
+        width: 100%;
+        overflow: hidden;
     }
     .lightbox-main-img {
+        height: 350px;
         width: 100%;
         margin: auto;
     }
     .lightbox-thumb {
-        max-height: 20vh;
-        width: 100%;
+        width: 100px;
+        height: 100px;
     }
     .lightbox-thumbs {
         padding: 5px 0;
-        margin: auto;
+    }
+    .lightbox-thumb-wrapper {
+        height: 100px;
+        overflow: hidden;
     }
 /* content card */
     .grid-item {

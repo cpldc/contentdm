@@ -3,8 +3,26 @@
         <h2>History &amp; Genealogy Events</h2>
     </div>
 <?php
+    $cache_time = 3600 * 24;
+    $cache_file = $_SERVER['DOCUMENT_ROOT'].'/~cpl/test.rss';
+    $timedif = @(time() - filemtime($cache_file));
+
+    if (file_exists($cache_file) && $timedif < $cache_time) {
+        $string = file_get_contents($cache_file);
+        echo 'using cached version';
+    } else {
+        $string = file_get_contents('https://chipublib.bibliocommons.com/events/events/rss/all?nocache=');
+        echo 'gonna get a new one';
+        if ($f = @fopen($cache_file, 'w')) {
+            echo 'getting a new one';
+            fwrite ($f, $string, strlen($string));
+            fclose($f);
+        }
+    }
     $rss = new DOMDocument();
-    $rss->load('https://chipublib.bibliocommons.com/events/events/rss/all?nocache=');
+    $rss->load($string);
+    echo $string;
+    // $rss->load('https://chipublib.bibliocommons.com/events/events/rss/all?nocache=');
     $feed = array();
     foreach ($rss->getElementsByTagName('item') as $node) {
         $item = array ( 

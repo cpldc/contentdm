@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'Civil War Wayne Whalen Digital Archive';
+	$PAGE_TITLE = 'Civil War';
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
@@ -38,25 +38,42 @@
 			?>
 		<!-- center content -->
 			<div class="col-8 col-lg-6 center-content">
-                <h1><?php echo $PAGE_TITLE; ?></h1>
+                <h1>Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections</h1>
                 <span>Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.</span>
                 <div class="center-lightbox">
                     <?php 
-                        $PIC1 =  'http://digital.chipublib.org/digital/api/singleitem/image/wha/634/default.jpg';
-                        $TEXT1 = 'Photographic Views of Sherman&rsquo;s Campaign by George N. Barnard';
-                        $PIC2 =  'http://digital.chipublib.org/digital/api/singleitem/image/wha/116/default.jpg';
-                        $TEXT2 = 'Sword, Model 1850 Staff and Field Officer';
-                        $PIC3 =  'http://digital.chipublib.org/digital/api/singleitem/image/wha/721/default.jpg';
-                        $TEXT3 = 'Uniform, artillery jacket';
-                        $PIC4 =  'http://digital.chipublib.org/digital/api/singleitem/image/wha/35/default.jpg';
-                        $TEXT4 = 'Grant, Ulysses S.';
-                        $PIC5 =  'http://digital.chipublib.org/digital/api/singleitem/image/wha/38/default.jpg';
-                        $TEXT5 = 'Union Ticket';
+                        $IMAGES = array ();
+
+                        $IMAGES[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/634/default.jpg';
+                        $IMAGES[Main][Text] = 'Photographic Views of Sherman&rsquo;s Campaign by George N. Barnard';
+                        $IMAGES[Main][Size] = 'auto 575px';
+                        $IMAGES[Main][Align] = 'center';
+
+                        $IMAGES[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/116/default.jpg';
+                        $IMAGES[Thumb1][Text] = 'Sword, Model 1850 Staff and Field Officer';
+                        $IMAGES[Thumb1][Size] = 'auto 120px';
+                        $IMAGES[Thumb1][Align] = 'center';
+                        
+                        $IMAGES[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/721/default.jpg';
+                        $IMAGES[Thumb2][Text] = 'Uniform, artillery jacket';
+                        $IMAGES[Thumb2][Size] = 'auto 120px';
+                        $IMAGES[Thumb2][Align] = '50% 15%';
+
+                        $IMAGES[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/35/default.jpg';
+                        $IMAGES[Thumb3][Text] = 'Grant, Ulysses S.';
+                        $IMAGES[Thumb3][Size] = '120px auto';
+                        $IMAGES[Thumb3][Align] = '50% 20%';
+                        
+                        $IMAGES[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/38/default.jpg';
+                        $IMAGES[Thumb4][Text] = 'Union Ticket';
+                        $IMAGES[Thumb4][Size] = '110px auto';
+                        $IMAGES[Thumb4][Align] = '55% 15%';
+
                         include 'lightbox.php'; 
                     ?>
                 </div>
                 <div class="center-button browseall">
-                    <button class="btn btn-primary">Browse All&hellip;</button>
+                    <a href="http://digital.chipublib.org/digital/collection/wha/search" class="btn btn-primary">Browse All</a>
                 </div>
                 <div class="center-copy-paragraph">
                     <p>

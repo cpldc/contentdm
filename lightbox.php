@@ -1,12 +1,12 @@
 <div class="container lightbox imageGallery1">
     <div class="row">
-        <div class="col-12 lightbox-main-img-div"><a href="<?php echo $PIC1; ?>" title="<?php echo $TEXT1; ?>"><img src="<?php echo $PIC1; ?>" alt="<?php echo $TEXT1; ?>" class="lightbox-main-img"></a></div>
+        <div class="col-12 lightbox-main-img-div"><a href="<?php echo $IMAGES[Main][Url]; ?>" title="<?php echo $IMAGES[Main][Text]; ?>"><img style="background: url(<?php echo $IMAGES[Main][Url]; ?>); background-size: <?php echo $IMAGES[Main][Size]; ?>; background-position: <?php echo $IMAGES[Main][Align]; ?> !important;"  class="lightbox-main-img"></a></div>
         </div>
     <div class="row lightbox-thumbs">
-        <div class="col-3"><a href="<?php echo $PIC2; ?>" title="<?php echo $TEXT2; ?>"><img src="<?php echo $PIC2; ?>" alt="<?php echo $TEXT2; ?>" class="lightbox-thumb" /></a></div>
-        <div class="col-3"><a href="<?php echo $PIC3; ?>" title="<?php echo $TEXT3; ?>"><img src="<?php echo $PIC3; ?>" alt="<?php echo $TEXT3; ?>" class="lightbox-thumb" /></a></div>
-        <div class="col-3"><a href="<?php echo $PIC4; ?>" title="<?php echo $TEXT4; ?>"><img src="<?php echo $PIC4; ?>" alt="<?php echo $TEXT4; ?>" class="lightbox-thumb" /></a></div>
-        <div class="col-3"><a href="<?php echo $PIC5; ?>" title="<?php echo $TEXT5; ?>"><img src="<?php echo $PIC5; ?>" alt="<?php echo $TEXT5; ?>" class="lightbox-thumb" /></a></div>
+        <div class="col-3 lightbox-thumb-wrapper"><a href="<?php echo $IMAGES[Thumb1][Url]; ?>" title="<?php echo $IMAGES[Thumb1][Text]; ?>"><img  style="background: url(<?php echo $IMAGES[Thumb1][Url]; ?>); background-size: <?php echo $IMAGES[Thumb1][Size]; ?>; background-position: <?php echo $IMAGES[Thumb1][Align]; ?> !important;" class="lightbox-thumb" /></a></div>
+        <div class="col-3 lightbox-thumb-wrapper"><a href="<?php echo $IMAGES[Thumb2][Url]; ?>" title="<?php echo $IMAGES[Thumb2][Text]; ?>"><img  style="background: url(<?php echo $IMAGES[Thumb2][Url]; ?>); background-size: <?php echo $IMAGES[Thumb2][Size]; ?>; background-position: <?php echo $IMAGES[Thumb2][Align]; ?> !important;" class="lightbox-thumb" /></a></div>
+        <div class="col-3 lightbox-thumb-wrapper"><a href="<?php echo $IMAGES[Thumb3][Url]; ?>" title="<?php echo $IMAGES[Thumb3][Text]; ?>"><img  style="background: url(<?php echo $IMAGES[Thumb3][Url]; ?>); background-size: <?php echo $IMAGES[Thumb3][Size]; ?>; background-position: <?php echo $IMAGES[Thumb3][Align]; ?> !important;" class="lightbox-thumb" /></a></div>
+        <div class="col-3 lightbox-thumb-wrapper"><a href="<?php echo $IMAGES[Thumb4][Url]; ?>" title="<?php echo $IMAGES[Thumb4][Text]; ?>"><img  style="background: url(<?php echo $IMAGES[Thumb4][Url]; ?>); background-size: <?php echo $IMAGES[Thumb4][Size]; ?>; background-position: <?php echo $IMAGES[Thumb4][Align]; ?> !important;" class="lightbox-thumb" /></a></div>
     </div>
 </div>
 <script>

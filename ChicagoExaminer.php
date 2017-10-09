@@ -42,21 +42,38 @@
                 <span>Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.</span>
                 <div class="center-lightbox">
                     <?php 
-                        $PIC1 = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/476/default.jpg';
-                        $TEXT1 = 'Chicago Examiner Vol. 7 no. 27';
-                        $PIC2 = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/51184/default.jpg';
-                        $TEXT2 = 'Chicago Examiner Vol. 13 no. 187';
-                        $PIC3 = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/12357/default.jpg';
-                        $TEXT3 = 'Chicago Examiner Vol. 6 no. 253';
-                        $PIC4 = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/51163/default.jpg';
-                        $TEXT4 = 'Chicago Examiner Vol. 13 no. 186';
-                        $PIC5 = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/477/default.jpg';
-                        $TEXT5 = 'Chicago Examiner Vol. 7 no. 27';
+                        $IMAGES = array ();
+
+                        $IMAGES[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/476/default.jpg';
+                        $IMAGES[Main][Text] = 'Chicago Examiner Vol. 7 no. 27';
+                        $IMAGES[Main][Size] = '109%';
+                        $IMAGES[Main][Align] = '50% -17px';
+
+                        $IMAGES[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/51184/default.jpg';
+                        $IMAGES[Thumb1][Text] = 'Chicago Examiner Vol. 13 no. 187';
+                        $IMAGES[Thumb1][Size] = '110px auto';
+                        $IMAGES[Thumb1][Align] = 'center';
+                        
+                        $IMAGES[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/12357/default.jpg';
+                        $IMAGES[Thumb2][Text] = 'Chicago Examiner Vol. 6 no. 253';
+                        $IMAGES[Thumb2][Size] = '500px auto';
+                        $IMAGES[Thumb2][Align] = '10% 10%';
+
+                        $IMAGES[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/51163/default.jpg';
+                        $IMAGES[Thumb3][Text] = 'Chicago Examiner Vol. 13 no. 186';
+                        $IMAGES[Thumb3][Size] = '350px auto';
+                        $IMAGES[Thumb3][Align] = '90% 60%';
+                        
+                        $IMAGES[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/93129/default.jpg';
+                        $IMAGES[Thumb4][Text] = 'Chicago Examiner Vol. 12 no. 63';
+                        $IMAGES[Thumb4][Size] = '875px auto';
+                        $IMAGES[Thumb4][Align] = '16% 27%';
+
                         include 'lightbox.php'; 
                     ?>
                 </div>
                 <div class="center-button browseall">
-                    <button class="btn btn-primary">Browse All&hellip;</button>
+                    <a href="http://digital.chipublib.org/digital/collection/examiner/search" class="btn btn-primary">Browse All</a>
                 </div>
                 <div class="center-copy-paragraph">
                     <p>The Chicago Public Library’s 10-year run of the Examiner, while incomplete, extends from 1908 to 1918 and represents the longest run of the paper still available. It is a quintessential example of yellow journalism.
@@ -88,12 +105,12 @@
 				<div class="right-sidebar">
 					<div class="blogs">
 						<?php
-							include 'blogs.php';
+							// include 'blogs.php';
 						?>
 					</div>
 					<div class="events">
 						<?php 
-							include 'events.php';
+							// include 'events.php';
 						?>
 					</div>
 				</div>
