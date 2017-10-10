@@ -42,32 +42,33 @@
                 <span>Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.</span>
                 <div class="center-lightbox">
                     <?php 
-                        $IMAGES = array ();
+                        $IMAGE = array ();
+                        $THUMBS = array ();
 
-                        $IMAGES[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/476/default.jpg';
-                        $IMAGES[Main][Text] = 'Chicago Examiner Vol. 7 no. 27';
-                        $IMAGES[Main][Size] = '109%';
-                        $IMAGES[Main][Align] = '50% -17px';
+                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/476/default.jpg';
+                        $IMAGE[Main][Text] = 'Chicago Examiner Vol. 7 no. 27';
+                        $IMAGE[Main][Size] = '109%';
+                        $IMAGE[Main][Align] = '50% -17px';
 
-                        $IMAGES[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/51184/default.jpg';
-                        $IMAGES[Thumb1][Text] = 'Chicago Examiner Vol. 13 no. 187';
-                        $IMAGES[Thumb1][Size] = '110px auto';
-                        $IMAGES[Thumb1][Align] = 'center';
+                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/51184/default.jpg';
+                        $THUMBS[Thumb1][Text] = 'Chicago Examiner Vol. 13 no. 187';
+                        $THUMBS[Thumb1][Size] = '110px auto';
+                        $THUMBS[Thumb1][Align] = 'center';
                         
-                        $IMAGES[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/12357/default.jpg';
-                        $IMAGES[Thumb2][Text] = 'Chicago Examiner Vol. 6 no. 253';
-                        $IMAGES[Thumb2][Size] = '500px auto';
-                        $IMAGES[Thumb2][Align] = '10% 10%';
+                        $THUMBS[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/12357/default.jpg';
+                        $THUMBS[Thumb2][Text] = 'Chicago Examiner Vol. 6 no. 253';
+                        $THUMBS[Thumb2][Size] = '500px auto';
+                        $THUMBS[Thumb2][Align] = '10% 10%';
 
-                        $IMAGES[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/51163/default.jpg';
-                        $IMAGES[Thumb3][Text] = 'Chicago Examiner Vol. 13 no. 186';
-                        $IMAGES[Thumb3][Size] = '350px auto';
-                        $IMAGES[Thumb3][Align] = '90% 60%';
+                        $THUMBS[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/51163/default.jpg';
+                        $THUMBS[Thumb3][Text] = 'Chicago Examiner Vol. 13 no. 186';
+                        $THUMBS[Thumb3][Size] = '350px auto';
+                        $THUMBS[Thumb3][Align] = '90% 60%';
                         
-                        $IMAGES[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/93129/default.jpg';
-                        $IMAGES[Thumb4][Text] = 'Chicago Examiner Vol. 12 no. 63';
-                        $IMAGES[Thumb4][Size] = '875px auto';
-                        $IMAGES[Thumb4][Align] = '16% 27%';
+                        $THUMBS[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/477/default.jpg';
+                        $THUMBS[Thumb4][Text] = 'Chicago Examiner Vol. 12 no. 63';
+                        $THUMBS[Thumb4][Size] = '200px';
+                        $THUMBS[Thumb4][Align] = '25% 10%';
 
                         include 'lightbox.php'; 
                     ?>

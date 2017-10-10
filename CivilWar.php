@@ -42,32 +42,33 @@
                 <span>Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.</span>
                 <div class="center-lightbox">
                     <?php 
-                        $IMAGES = array ();
+                        $IMAGE = array ();
+                        $THUMBS = array ();
 
-                        $IMAGES[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/634/default.jpg';
-                        $IMAGES[Main][Text] = 'Photographic Views of Sherman&rsquo;s Campaign by George N. Barnard';
-                        $IMAGES[Main][Size] = 'auto 575px';
-                        $IMAGES[Main][Align] = 'center';
+                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/634/default.jpg';
+                        $IMAGE[Main][Text] = 'Photographic Views of Sherman&rsquo;s Campaign by George N. Barnard';
+                        $IMAGE[Main][Size] = 'auto 575px';
+                        $IMAGE[Main][Align] = 'center';
 
-                        $IMAGES[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/116/default.jpg';
-                        $IMAGES[Thumb1][Text] = 'Sword, Model 1850 Staff and Field Officer';
-                        $IMAGES[Thumb1][Size] = 'auto 120px';
-                        $IMAGES[Thumb1][Align] = 'center';
+                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/116/default.jpg';
+                        $THUMBS[Thumb1][Text] = 'Sword, Model 1850 Staff and Field Officer';
+                        $THUMBS[Thumb1][Size] = 'auto 120px';
+                        $THUMBS[Thumb1][Align] = 'center';
                         
-                        $IMAGES[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/721/default.jpg';
-                        $IMAGES[Thumb2][Text] = 'Uniform, artillery jacket';
-                        $IMAGES[Thumb2][Size] = 'auto 120px';
-                        $IMAGES[Thumb2][Align] = '50% 15%';
+                        $THUMBS[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/721/default.jpg';
+                        $THUMBS[Thumb2][Text] = 'Uniform, artillery jacket';
+                        $THUMBS[Thumb2][Size] = 'auto 120px';
+                        $THUMBS[Thumb2][Align] = '50% 15%';
 
-                        $IMAGES[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/35/default.jpg';
-                        $IMAGES[Thumb3][Text] = 'Grant, Ulysses S.';
-                        $IMAGES[Thumb3][Size] = '120px auto';
-                        $IMAGES[Thumb3][Align] = '50% 20%';
+                        $THUMBS[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/35/default.jpg';
+                        $THUMBS[Thumb3][Text] = 'Grant, Ulysses S.';
+                        $THUMBS[Thumb3][Size] = '120px auto';
+                        $THUMBS[Thumb3][Align] = '50% 20%';
                         
-                        $IMAGES[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/38/default.jpg';
-                        $IMAGES[Thumb4][Text] = 'Union Ticket';
-                        $IMAGES[Thumb4][Size] = '110px auto';
-                        $IMAGES[Thumb4][Align] = '55% 15%';
+                        $THUMBS[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/38/default.jpg';
+                        $THUMBS[Thumb4][Text] = 'Union Ticket';
+                        $THUMBS[Thumb4][Size] = '110px auto';
+                        $THUMBS[Thumb4][Align] = '55% 15%';
 
                         include 'lightbox.php'; 
                     ?>

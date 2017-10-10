@@ -101,6 +101,12 @@
     $cards[RK][copy] =      'In 1984, Chicago Public Library began working with local photographer Robert Krueger to document the North Side. He photographed hundreds of street scenes, parks, businesses, houses, schools, cemeteries, religious institutions, community events and people of the area.';
     $cards[RK][link] =      'Krueger.php';
 
+    $cards[EB][title] =     'Esther Barlow';
+    $cards[EB][pic] =       'http://digital.chipublib.org/cdm/compoundobject/collection/bar/id/45/rec/14';
+    $cards[EB][category] =  'Education';
+    $cards[EB][copy] =      'Family photographs of Esther Barlow and images of her work at Hild Regional Library and Lake View Branch Library from 1927-1976.';
+    $cards[EB][link] =      'Barlow.php';
+
     ?>
     <main class="PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
         <?php include 'sidebar.php';?>
