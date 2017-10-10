@@ -83,12 +83,12 @@
 				<div class="right-sidebar">
 					<div class="blogs">
 						<?php
-							// include 'blogs.php';
+							include 'blogs.php';
 						?>
 					</div>
 					<div class="events">
 						<?php 
-							// include 'events.php';
+							include 'events.php';
 						?>
 					</div>
 				</div>

@@ -359,6 +359,9 @@
         background-color: #428bca !important;
         border-color: #428bca !important;
     }
+    .fa-angle-double-right {
+        padding-left: 5px;
+    }
 /* left sidebar */
     .left-sidebar {
         background-color: #000;
@@ -445,12 +448,19 @@
     .blogs {
         margin-bottom: 30px;
     }
-    .blogs-title, .events-title {
+    .blogs-title {
         padding: 15px 15px 10px 15px;
         line-height: 16px;
         border-bottom: 1px solid #ccc;
     }
-    .blogpost, .event, .blogs-viewmore, .events-viewmore {
+    .events-title {
+        padding: 35px 15px 10px 30px;
+        line-height: 16px;
+    }
+    .blogpost, .blogs-viewmore {
+        padding: 10px 25px;
+    }
+    .event, .events-viewmore {
         padding: 10px 30px;
     }
     .blogs-title h2, .events-title h2 {

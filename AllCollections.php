@@ -39,7 +39,7 @@
 			<div class="col-8 col-lg-6 center-content">
 					<h1><?php echo $PAGE_TITLE; ?></h1>
 					<dl class="all-collections">
-						<dt class="bar"><a href="Barlow.php">Barlow, Esther A. Collection <i class='raquo fa fa-angle-double-right'></i></a></dt>
+						<dt class="bar"><a href="Barlow.php">Barlow, Esther A. Collection<i class='raquo fa fa-angle-double-right'></i></a></dt>
 						<dd>Esther Barlow worked in neighborhood branches of the Chicago Public Library from 1927 until 1976. Included in this collection are family photographs and images of Ms. Barlow at work at the Hild Regional Library and Lake View Branch Library.</dd>
 						<dd>Dates: 1928-1983. Size: 1.5 linear feet; 105 photographs. Chicago Public Library, Sulzer Regional Library, Northside Neighborhood History Collection. Esther Barlow worked in neighborhood branches of the Chicago Public Library from 1927 until 1976. Files in the collection are from Barlow&rsquo;s years at the Library.</dd>
 						<dd class="all-collections-category">Archival Collection subjects: 
