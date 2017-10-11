@@ -320,6 +320,10 @@
     .center-copy-list {
         border-top: 1px solid #ccc;
     }
+    .center-copy-list li a {
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
     .center-copy-paragraph a {
         font-weight: bold;
     }
@@ -361,6 +365,10 @@
     }
     .fa-angle-double-right {
         padding-left: 5px;
+    }
+    .rights {
+        color: #666;
+        font-size: 0.75rem;
     }
 /* left sidebar */
     .left-sidebar {
@@ -448,20 +456,13 @@
     .blogs {
         margin-bottom: 30px;
     }
-    .blogs-title {
+    .blogs-title, .events-title {
         padding: 15px 15px 10px 15px;
         line-height: 16px;
         border-bottom: 1px solid #ccc;
     }
-    .events-title {
-        padding: 35px 15px 10px 30px;
-        line-height: 16px;
-    }
-    .blogpost, .blogs-viewmore {
+    .blogpost, .blogs-viewmore, .event, .events-viewmore {
         padding: 10px 25px;
-    }
-    .event, .events-viewmore {
-        padding: 10px 30px;
     }
     .blogs-title h2, .events-title h2 {
         text-transform: uppercase;

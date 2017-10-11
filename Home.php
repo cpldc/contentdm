@@ -29,6 +29,12 @@
     $PAGE_TYPE = 'home';
     $cards = array ();
 
+    $cards[AfAm][title] =     'African American';
+    $cards[AfAm][pic] =       'http://digital.chipublib.org/digital/api/singleitem/image/cr/10/default.jpg';
+    $cards[AfAm][category] =  'Chicago History | Culture';
+    $cards[AfAm][copy] =      'Chicago Public Library collections that document African American history in Chicago and throughout the United States.';
+    $cards[AfAm][link] =      'AfAm.php';
+
     $cards[ChicagoExaminer][title] =     'Chicago Examiner';
     $cards[ChicagoExaminer][pic] =       'default.jpg';
     $cards[ChicagoExaminer][category] =  'Chicago History | Newspapers';
@@ -96,16 +102,22 @@
     $cards[CPL][link] =      'CPL.php';
 
     $cards[RK][title] =     'Robert W. Krueger';
-    $cards[RK][pic] =       'http://digital.chipublib.org/digital/image/rwk/thumbnail';
+    $cards[RK][pic] =       'http://digital.chipublib.org/digital/api/singleitem/image/rwk/1365/default.jpg';
     $cards[RK][category] =  'Neighborhoods';
-    $cards[RK][copy] =      'In 1984, Chicago Public Library began working with local photographer Robert Krueger to document the North Side. He photographed hundreds of street scenes, parks, businesses, houses, schools, cemeteries, religious institutions, community events and people of the area.';
+    $cards[RK][copy] =      'Local photographer Robert Krueger documented Chicago’s North Side with photographs of community events, buildings, and people.';
     $cards[RK][link] =      'Krueger.php';
 
     $cards[EB][title] =     'Esther Barlow';
-    $cards[EB][pic] =       'http://digital.chipublib.org/cdm/compoundobject/collection/bar/id/45/rec/14';
+    $cards[EB][pic] =       'http://digital.chipublib.org/digital/api/singleitem/image/bar/43/default.jpg';
     $cards[EB][category] =  'Education';
     $cards[EB][copy] =      'Family photographs of Esther Barlow and images of her work at Hild Regional Library and Lake View Branch Library from 1927-1976.';
     $cards[EB][link] =      'Barlow.php';
+
+    $cards[EB][title] =     'Henry D. Green';
+    $cards[EB][pic] =       'http://digital.chipublib.org/digital/api/singleitem/image/hdg/123/default.jpg';
+    $cards[EB][category] =  'Neighborhoods';
+    $cards[EB][copy] =      'Photographs by Henry Green of businesses, community groups, neighborhood celebrations, and school events on Chicago’s North Side, 1943-1951.';
+    $cards[EB][link] =      'Green.php';
 
     ?>
     <main class="PAGE_TYPE <?php echo $PAGE_TYPE; ?>">

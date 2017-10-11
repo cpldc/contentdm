@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'Esther A. Barlow';
+	$PAGE_TITLE = 'African American';
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
@@ -39,44 +39,54 @@
 		<!-- center content -->
 			<div class="col-8 col-lg-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
-                <span>Esther Barlow was a children’s librarian in neighborhood branches of the Chicago Public Library from 1927 until 1976.</span>
+                <!-- <span></span> -->
                 <div class="center-lightbox">
                     <?php 
-
                         $IMAGE = array ();
                         $THUMBS = array ();
 
-                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/bar/52/default.jpg';
-                        $IMAGE[Main][Text] = 'Lake View Branch, Group picture, staff on front steps';
+                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/14/default.jpg';
+                        $IMAGE[Main][Text] = 'Women&amp;s Army Corps (WAC) Band, 1944';
                         $IMAGE[Main][Size] = '';
-                        $IMAGE[Main][Align] = '55% 50%';
-
-                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/bar/199/default.jpg';
-                        $THUMBS[Thumb1][Text] = 'Hild Regional Library, Children&rsquo;s Department, Story Hour in Welles Park';
-                        $THUMBS[Thumb1][Size] = '400px';
-                        $THUMBS[Thumb1][Align] = '15% 20%';
+                        $IMAGE[Main][Align] = '50% 40%';
                         
-                        $THUMBS[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/bar/70/default.jpg';
-                        $THUMBS[Thumb2][Text] = 'Lake View Branch, Esther Barlow at circulation desk';
-                        $THUMBS[Thumb2][Size] = '500px';
-                        $THUMBS[Thumb2][Align] = '53% 49%';
+                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/4/default.jpg';
+                        $THUMBS[Thumb1][Text] = 'Women&rsquo;s reading group at Hall Branch, 1940';
+                        $THUMBS[Thumb1][Size] = '150%';
+                        $THUMBS[Thumb1][Align] = 'center';
 
-                        $THUMBS[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/bar/16/default.jpg';
-                        $THUMBS[Thumb3][Text] = 'Portrait of Esther Barlow and Buddy Flaskerud sitting in a wagon.';
-                        $THUMBS[Thumb3][Size] = '400px';
-                        $THUMBS[Thumb3][Align] = '33% 22%';
+                        $THUMBS[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/8/default.jpg';
+                        $THUMBS[Thumb2][Text] = 'Marian Campfield at the Chicago Defender, 1948';
+                        $THUMBS[Thumb2][Size] = '140%';
+                        $THUMBS[Thumb2][Align] = 'center';
+
+                        $THUMBS[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/10/default.jpg';
+                        $THUMBS[Thumb3][Text] = 'Richard Durham, 1948';
+                        $THUMBS[Thumb3][Size] = '150%';
+                        $THUMBS[Thumb3][Align] = 'center';
                         
+                        $THUMBS[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rhwc/30/default.jpg';
+                        $THUMBS[Thumb4][Text] = 'Mayor Washington at the Bud Billiken Parade';
+                        $THUMBS[Thumb4][Size] = '400%';
+                        $THUMBS[Thumb4][Align] = '71% 30%';
+
                         include 'lightbox.php'; 
                     ?>
                 </div>
                 <div class="center-button browseall">
-                    <a href="http://digital.chipublib.org/digital/collection/bar/search" class="btn btn-primary">Browse All</a>
-                </div>
-                <div class="center-copy-paragraph">
-                    <p>
-                    Included in this collection are photographs of the <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/bar/searchterm/Barlow%20family/field/subjed/mode/all/conn/and/order/nosort">Barlow family</a> and images of Esther Barlow at work at the Hild Regional Library and Lake View Branch Library. Photographs showcase Barlow with her colleagues and her <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/bar/searchterm/Working%20with%20children/field/subjed/mode/all/conn/and/order/nosort">work with children. </a> 
-                    </p>
-                </div>
+                <a href="http://digital.chipublib.org/digital/search/collection/cr!rhwc!p16818coll6/order/title/ad/asc" class="btn btn-primary">Browse All</a>
+            </div>
+            <div class="center-copy-paragraph">
+                <p>Digital collections that include materials documenting Black history in the United States include:<p>
+                <dl>
+                    <dt><a href="ChiRen.php">Chicago Renaissance</a></dt>
+                    <dd>Manuscripts and photographs documenting the creative movement that blossomed out of the Chicago Black Belt on the city's South Side from the 1930s until the 1950s.</dd>
+                    <dt><a href="HaroldWashington.php">Remembering Harold Washington</a></dt>
+                    <dd>A collection of photographs showcasing the work of Chicago’s first African American mayor.</dd>
+                    <dt><a href="Sang.php">Phillip Sang</a></dt>
+                    <dd>Materials on slavery and abolitionism; including original documents from slave owners, slave traders and insurance companies.</dd>
+                </dl>
+            </div>
 			</div>
 		<!-- right sidebar -->
 			<div class="hidden-md-down col-lg-3 right-sidebar">

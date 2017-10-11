@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'Esther A. Barlow';
+	$PAGE_TITLE = 'Henry D. Green ';
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
@@ -39,42 +39,46 @@
 		<!-- center content -->
 			<div class="col-8 col-lg-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
-                <span>Esther Barlow was a children’s librarian in neighborhood branches of the Chicago Public Library from 1927 until 1976.</span>
+                <span>Chicago Public Library’s Northside Neighborhood History Collection houses the photographs of Henry Green, a commercial photographer on Chicago’s North Side.</span>
                 <div class="center-lightbox">
                     <?php 
-
                         $IMAGE = array ();
                         $THUMBS = array ();
 
-                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/bar/52/default.jpg';
-                        $IMAGE[Main][Text] = 'Lake View Branch, Group picture, staff on front steps';
-                        $IMAGE[Main][Size] = '';
-                        $IMAGE[Main][Align] = '55% 50%';
+                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/hdg/531/default.jpg';
+                        $IMAGE[Main][Text] = 'Senn High School';
+                        $IMAGE[Main][Size] = '110%';
+                        $IMAGE[Main][Align] = 'center';
 
-                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/bar/199/default.jpg';
-                        $THUMBS[Thumb1][Text] = 'Hild Regional Library, Children&rsquo;s Department, Story Hour in Welles Park';
-                        $THUMBS[Thumb1][Size] = '400px';
-                        $THUMBS[Thumb1][Align] = '15% 20%';
+                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/hdg/174/default.jpg';
+                        $THUMBS[Thumb1][Text] = 'Girl Scouts Troup 119 Tin Can Salvage';
+                        $THUMBS[Thumb1][Size] = '130%';
+                        $THUMBS[Thumb1][Align] = '40% 25%';
                         
-                        $THUMBS[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/bar/70/default.jpg';
-                        $THUMBS[Thumb2][Text] = 'Lake View Branch, Esther Barlow at circulation desk';
-                        $THUMBS[Thumb2][Size] = '500px';
-                        $THUMBS[Thumb2][Align] = '53% 49%';
+                        $THUMBS[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/hdg/669/default.jpg';
+                        $THUMBS[Thumb2][Text] = 'Monadnock Coffee Shop';
+                        $THUMBS[Thumb2][Size] = '';
+                        $THUMBS[Thumb2][Align] = '47% 57%';
 
-                        $THUMBS[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/bar/16/default.jpg';
-                        $THUMBS[Thumb3][Text] = 'Portrait of Esther Barlow and Buddy Flaskerud sitting in a wagon.';
-                        $THUMBS[Thumb3][Size] = '400px';
-                        $THUMBS[Thumb3][Align] = '33% 22%';
+                        $THUMBS[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/hdg/345/default.jpg';
+                        $THUMBS[Thumb3][Text] = 'Portrait of Henry Delorval Green';
+                        $THUMBS[Thumb3][Size] = '120%';
+                        $THUMBS[Thumb3][Align] = '45% 27%';
                         
+                        $THUMBS[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/hdg/123/default.jpg';
+                        $THUMBS[Thumb4][Text] = 'Chicago Fire Department';
+                        $THUMBS[Thumb4][Size] = '130%';
+                        $THUMBS[Thumb4][Align] = 'center';
+
                         include 'lightbox.php'; 
                     ?>
                 </div>
                 <div class="center-button browseall">
-                    <a href="http://digital.chipublib.org/digital/collection/bar/search" class="btn btn-primary">Browse All</a>
+                    <a href="http://digital.chipublib.org/digital/collection/hdg/search" class="btn btn-primary">Browse All</a>
                 </div>
                 <div class="center-copy-paragraph">
                     <p>
-                    Included in this collection are photographs of the <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/bar/searchterm/Barlow%20family/field/subjed/mode/all/conn/and/order/nosort">Barlow family</a> and images of Esther Barlow at work at the Hild Regional Library and Lake View Branch Library. Photographs showcase Barlow with her colleagues and her <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/bar/searchterm/Working%20with%20children/field/subjed/mode/all/conn/and/order/nosort">work with children. </a> 
+                    Subjects in the collection include local <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/hdg/searchterm/Business%20establishments/field/subjed/mode/all/conn/and/order/nosort">business establishments</a>, community groups, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/hdg/searchterm/Religious%20institutions/field/subjed/mode/all/conn/and/order/nosort">religious institutions</a>, celebrations in neighborhood parks and events at local schools. Many photographs reflect life on the North Side during World War II, including images of <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/hdg/searchterm/Military%20personnel/field/subjed/mode/all/conn/and/order/nosort">military personnel</a>. 
                     </p>
                 </div>
 			</div>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'Esther A. Barlow';
+	$PAGE_TITLE = 'Robert W. Krueger ';
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
@@ -39,42 +39,46 @@
 		<!-- center content -->
 			<div class="col-8 col-lg-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
-                <span>Esther Barlow was a children’s librarian in neighborhood branches of the Chicago Public Library from 1927 until 1976.</span>
+                <span>In 1984, Chicago Public Library began working with local photographer Robert Krueger to document the North Side.</span>
                 <div class="center-lightbox">
                     <?php 
-
                         $IMAGE = array ();
                         $THUMBS = array ();
 
-                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/bar/52/default.jpg';
-                        $IMAGE[Main][Text] = 'Lake View Branch, Group picture, staff on front steps';
-                        $IMAGE[Main][Size] = '';
-                        $IMAGE[Main][Align] = '55% 50%';
+                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/412/default.jpg';
+                        $IMAGE[Main][Text] = 'German-American Festival';
+                        $IMAGE[Main][Size] = '150%';
+                        $IMAGE[Main][Align] = '50% 35%';
 
-                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/bar/199/default.jpg';
-                        $THUMBS[Thumb1][Text] = 'Hild Regional Library, Children&rsquo;s Department, Story Hour in Welles Park';
-                        $THUMBS[Thumb1][Size] = '400px';
-                        $THUMBS[Thumb1][Align] = '15% 20%';
+                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/414/default.jpg';
+                        $THUMBS[Thumb1][Text] = '47th and 48th Ward clean-up on Clark Street';
+                        $THUMBS[Thumb1][Size] = '150%';
+                        $THUMBS[Thumb1][Align] = '50% 30%';
                         
-                        $THUMBS[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/bar/70/default.jpg';
-                        $THUMBS[Thumb2][Text] = 'Lake View Branch, Esther Barlow at circulation desk';
-                        $THUMBS[Thumb2][Size] = '500px';
-                        $THUMBS[Thumb2][Align] = '53% 49%';
+                        $THUMBS[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/349/default.jpg';
+                        $THUMBS[Thumb2][Text] = 'Picasso statue unveiled at the Civic Center Plaza';
+                        $THUMBS[Thumb2][Size] = '120%';
+                        $THUMBS[Thumb2][Align] = 'center';
 
-                        $THUMBS[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/bar/16/default.jpg';
-                        $THUMBS[Thumb3][Text] = 'Portrait of Esther Barlow and Buddy Flaskerud sitting in a wagon.';
-                        $THUMBS[Thumb3][Size] = '400px';
-                        $THUMBS[Thumb3][Align] = '33% 22%';
+                        $THUMBS[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/828/default.jpg';
+                        $THUMBS[Thumb3][Text] = 'Henry C. Krueger with future wife Marie Wahl, her sister Lydia Wahl, and a friend';
+                        $THUMBS[Thumb3][Size] = '200%';
+                        $THUMBS[Thumb3][Align] = '50% 25%';
                         
+                        $THUMBS[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/1365/default.jpg';
+                        $THUMBS[Thumb4][Text] = '1720-22 West Leland Avenue';
+                        $THUMBS[Thumb4][Size] = '125%';
+                        $THUMBS[Thumb4][Align] = 'center';
+
                         include 'lightbox.php'; 
                     ?>
                 </div>
                 <div class="center-button browseall">
-                    <a href="http://digital.chipublib.org/digital/collection/bar/search" class="btn btn-primary">Browse All</a>
+                    <a href="http://digital.chipublib.org/digital/collection/rwk/search" class="btn btn-primary">Browse All</a>
                 </div>
                 <div class="center-copy-paragraph">
                     <p>
-                    Included in this collection are photographs of the <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/bar/searchterm/Barlow%20family/field/subjed/mode/all/conn/and/order/nosort">Barlow family</a> and images of Esther Barlow at work at the Hild Regional Library and Lake View Branch Library. Photographs showcase Barlow with her colleagues and her <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/bar/searchterm/Working%20with%20children/field/subjed/mode/all/conn/and/order/nosort">work with children. </a> 
+                    Krueger photographed hundreds of <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rwk/searchterm/Restaurants/field/subjed/mode/all/conn/and/order/nosort">restaurants</a>, street scenes, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rwk/searchterm/Parks/field/genre/mode/all/conn/and/order/nosort">parks</a>, businesses, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rwk/searchterm/Schools/field/genre/mode/all/conn/and/order/nosort">schools</a>, houses,  <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rwk/searchterm/Cemeteries/field/genre/mode/all/conn/and/order/nosort">cemeteries</a>, religious institutions, community events and residents of North Side neighborhoods. These photographs are a sample of his work.  
                     </p>
                 </div>
 			</div>

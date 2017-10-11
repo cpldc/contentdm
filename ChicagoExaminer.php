@@ -95,9 +95,9 @@
                     <h4>External Resources</h4>
                     <dl>
                         <dt><a href="http://chroniclingamerica.loc.gov/">Library of Congress Chronicling America: Historic American Newspapers</a></dt>
-                        <dd>For more historic newspapers.
+                        <dd>For more historic newspapers.</dd>
                         <dt><a href="http://idnc.library.illinois.edu/">Illinois Digital Newspaper Collections</a></dt>
-                        <dd>For more Illinois newspapers.
+                        <dd>For more Illinois newspapers.</dd>
                     </dl>
                 </div>
 			</div>

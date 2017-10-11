@@ -34,7 +34,7 @@
 			<div class="left-sidebar-subj">
 				<h4 class="left-sidebear-subtitle">Browse by Subject</h4>
 				<ul>
-					<li class="left-sidebar-list"><a href="AfricanAmericans.php" class="sidebar-links">African Americans</a></li>
+					<li class="left-sidebar-list"><a href="AfAm.php" class="sidebar-links">African Americans</a></li>
 					<li class="left-sidebar-list"><a href="HaroldWashington.php" class="sidebar-links">Harold Washington</a></li>
 					<li class="left-sidebar-list"><a href="LibEd.php" class="sidebar-links">Libraries &amp; Education</a></li>
 					<li class="left-sidebar-list"><a href="Neighborhoods.php" class="sidebar-links">Neighborhoods</a></li>
