@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'Henry D. Green';
+	$PAGE_TITLE = 'Neighborhoods';
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
@@ -39,37 +39,32 @@
 		<!-- center content -->
 			<div class="col-8 col-lg-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
-                <span>Chicago Public Library’s Northside Neighborhood History Collection houses the photographs of Henry Green, a commercial photographer on Chicago’s North Side.</span>
+                <!-- <span>Chicago Public Library’s Northside Neighborhood History Collection houses the photographs of Henry Green, a commercial photographer on Chicago’s North Side.</span> -->
                 <div class="center-lightbox">
                     <?php 
                         $IMAGE = array ();
                         $THUMBS = array ();
 
-                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/hdg/531/default.jpg';
-                        $IMAGE[Main][Text] = 'Senn High School';
-                        $IMAGE[Main][Size] = '110%';
+                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/cfc/107/default.jpg';
+                        $IMAGE[Main][Text] = 'Ravenswood Manor Improvement Association&rsquo;s Cleanup Campaign';
+                        $IMAGE[Main][Size] = '';
                         $IMAGE[Main][Align] = 'center';
 
-                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/hdg/174/default.jpg';
-                        $THUMBS[Thumb1][Text] = 'Girl Scouts Troup 119 Tin Can Salvage';
-                        $THUMBS[Thumb1][Size] = '130%';
-                        $THUMBS[Thumb1][Align] = '40% 25%';
+                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/1239/default.jpg';
+                        $THUMBS[Thumb1][Text] = 'Picasso statue unveiled at the Civic Center Plaza';
+                        $THUMBS[Thumb1][Size] = '';
+                        $THUMBS[Thumb1][Align] = 'center';
                         
-                        $THUMBS[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/hdg/669/default.jpg';
-                        $THUMBS[Thumb2][Text] = 'Monadnock Coffee Shop';
+                        $THUMBS[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/782/default.jpg';
+                        $THUMBS[Thumb2][Text] = 'Oz Park';
                         $THUMBS[Thumb2][Size] = '';
-                        $THUMBS[Thumb2][Align] = '47% 57%';
+                        $THUMBS[Thumb2][Align] = 'center';
 
-                        $THUMBS[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/hdg/345/default.jpg';
-                        $THUMBS[Thumb3][Text] = 'Portrait of Henry Delorval Green';
-                        $THUMBS[Thumb3][Size] = '120%';
-                        $THUMBS[Thumb3][Align] = '45% 27%';
+                        $THUMBS[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/dtd/157/default.jpg?highlightTerms=';
+                        $THUMBS[Thumb3][Text] = '31st Street and Albany Avenue, repairing old brick outfall, July 20, 1936';
+                        $THUMBS[Thumb3][Size] = '';
+                        $THUMBS[Thumb3][Align] = 'center';
                         
-                        $THUMBS[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/hdg/123/default.jpg';
-                        $THUMBS[Thumb4][Text] = 'Chicago Fire Department';
-                        $THUMBS[Thumb4][Size] = '130%';
-                        $THUMBS[Thumb4][Align] = 'center';
-
                         include 'lightbox.php'; 
                     ?>
                 </div>
@@ -78,7 +73,7 @@
                 </div>
                 <div class="center-copy-paragraph">
                     <p>
-                    Subjects in the collection include local <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/hdg/searchterm/Business%20establishments/field/subjed/mode/all/conn/and/order/nosort">business establishments</a>, community groups, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/hdg/searchterm/Religious%20institutions/field/subjed/mode/all/conn/and/order/nosort">religious institutions</a>, celebrations in neighborhood parks and events at local schools. Many photographs reflect life on the North Side during World War II, including images of <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/hdg/searchterm/Military%20personnel/field/subjed/mode/all/conn/and/order/nosort">military personnel</a>. 
+                    Connect with the residents of Chicago and their stories through these fascinating photographs dating from the 1860s through the 1990s.  This collection documents how Chicagoans lived their daily lives and how their neighborhoods changed and evolved over time.  Go back to <a href="http://digital.chipublib.org/cdm/search/searchterm/schools/field/subjec/mode/all/conn/and/order/nosort">school</a>, revisit favorite <a href="http://digital.chipublib.org/cdm/search/searchterm/restaurants%20--%20illinois%20--%20chicago/field/subjec/mode/all/conn/and/order/title/ad/asc">restaurants</a>, salute <a href="http://digital.chipublib.org/cdm/search/searchterm/military/field/subjec/mode/all/conn/and/order/nosort">members of the military</a>, or just <a href="http://digital.chipublib.org/cdm/search/searchterm/transportation/field/subjec/mode/all/conn/and/order/nosort">ride around the city</a>.  Every neighborhood tells a story!
                     </p>
                 </div>
 			</div>

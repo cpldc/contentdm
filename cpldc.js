@@ -53,7 +53,7 @@
 		$(".left-sidebar-header").append(leftSidebarButton);
 		$(".left-sidebar-togglebutton").css("float","right");
 		if ($(".PAGE_TYPE").hasClass("content")) {
-			$(".main-container-fixed").css("margin-left","230px");
+			$(".main-container-fixed").css("margin-left","auto");
 		}
 		if ($(".PAGE_TYPE").hasClass("home")) {
 			$(".main-container-collapsible").css("padding-left","230px");

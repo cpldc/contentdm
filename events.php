@@ -39,5 +39,5 @@
         include $cache_file;
     }
 ?>
-<div class="events-viewmore"><a href="https://chipublib.bibliocommons.com/events/search/index">View More&hellip;</a></div>
+<div class="events-viewmore"><a href="https://chipublib.bibliocommons.com/events/search/index">View More <span class="rsaquo">&rsaquo;</span></a></div>
 

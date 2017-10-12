@@ -119,6 +119,13 @@
     $cards[EB][copy] =      'Photographs by Henry Green of businesses, community groups, neighborhood celebrations, and school events on Chicago’s North Side, 1943-1951.';
     $cards[EB][link] =      'Green.php';
 
+    $cards[EB][title] =     'Neighborhoods';
+    $cards[EB][pic] =       'http://digital.chipublib.org/digital/api/singleitem/image/cfc/138/default.jpg';
+    //$cards[EB][pic] =       'http://digital.chipublib.org/digital/api/singleitem/image/cfc/104/default.jpg'; //alternate
+    $cards[EB][category] =  'Neighborhoods';
+    $cards[EB][copy] =      'Experience daily life in Chicago neighborhoods through photographs of street scenes, businesses, residences and portraits, 1860s to present';
+    $cards[EB][link] =      'Neighborhoods.php';
+
     ?>
     <main class="PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
         <?php include 'sidebar.php';?>

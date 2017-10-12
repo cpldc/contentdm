@@ -516,18 +516,22 @@
     }
     .raquo {
         color: #2d63af;
-        font-size: 18px;
+        font-size: 14px;
+    }
+    .rsaquo {
+        /* color: #2d63af; */
+        font-size: 20px;
     }
     .events-viewmore, .blogs-viewmore {
         padding-bottom: 20px;
     }
     .events-viewmore a, .blogs-viewmore a {
+        font-size: 14px;
         color: #428bca;
     }
     .events-viewmore a:hover, .blogs-viewmore a:hover {
         color: #2d63af;
     }
-
 /* footer */
     footer {
         background-color: #fff;
