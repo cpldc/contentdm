@@ -8,7 +8,7 @@
     $timedif = (time() - filemtime($cache_file));
     $limit = 5;
     $htmlStr = '';
-    require 'locations.php';
+    require 'variables.php';
 
     if ($cache_file && $timedif < $cache_time) {
         include $cache_file;
