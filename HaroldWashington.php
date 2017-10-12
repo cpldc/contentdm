@@ -107,7 +107,7 @@
 								</li>
 							</ul>
 						</dd>
-                        <dt><a href="https://www.chipublib.org/blogs/post/welcome-to-the-municipal-reference-collection/">Municipal Records Collections</a></dt>
+                        <dt><a href="https://www.chipublib.org/blogs/post/welcome-to-the-municipal-reference-collection/">Municipal Reference Collections</a></dt>
                         <dd>Collections include local government publications, city election results, maps, municipal ordinances, and more.</dd>
                     </dl>
                 </div>

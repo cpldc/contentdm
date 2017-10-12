@@ -31,8 +31,11 @@
 			</div>
 		</div>
 		<div class="left-sidebar-main">
-			<div class="left-sidebar-subj">
-				<h4 class="left-sidebear-subtitle">Browse by Subject</h4>
+			<div class="left-sidebar-viewall">
+					 <h4 class="left-sidebar-subtitle"><a href="AllCollections.php">View All Collections<!-- <span class="rsaquo">&rsaquo;</span> --></a></h4>
+			</div>
+			<div class="left-sidebar-location">
+				<h4 class="left-sidebar-subtitle">Browse by Subject</h4>
 				<ul>
 					<li class="left-sidebar-list"><a href="AfAm.php" class="sidebar-links">African Americans</a></li>
 					<li class="left-sidebar-list"><a href="HaroldWashington.php" class="sidebar-links">Harold Washington</a></li>
@@ -42,11 +45,10 @@
 					<li class="left-sidebar-list"><a href="Parks.php" class="sidebar-links">Parks</a></li>
 					<li class="left-sidebar-list"><a href="Theater.php" class="sidebar-links">Theater</a></li>
 					<li class="left-sidebar-list">
-					<a href="AllCollections.php" class="sidebar-links">View All Collections&hellip;</a></li>
 				</ul>
 			</div>
 			<div class="left-sidebar-location">
-				<h4 class="left-sidebear-subtitle">Browse by Location</h4>
+				<h4 class="left-sidebar-subtitle">Browse by Location</h4>
 				<ul>
 					<li class="left-sidebar-list"><a href="HWLC.php" class="sidebar-links">HWLC Special Collections</a></li>
 					<li class="left-sidebar-list"><a href="MRC.php" class="sidebar-links">Municipal Reference Collection</a></li>
@@ -55,7 +57,7 @@
 				</ul>
 			</div>
 			<div class="left-sidebar-related">
-				<h4 class="left-sidebear-subtitle">Related Links</h4>
+				<h4 class="left-sidebar-subtitle">Related Links</h4>
 				<ul>
 					<li class="left-sidebar-list"><a href="" class="sidebar-links">Archival Collections</a></li>
 					<li class="left-sidebar-list"><a href="" class="sidebar-links">Chicago History</a></li>

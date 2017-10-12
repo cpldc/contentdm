@@ -391,7 +391,7 @@
     .left-sidebar-title {
         padding: 17px 0 0 40px;
     }
-    .left-sidebear-subtitle {
+    .left-sidebar-subtitle {
         padding: 15px 0 10px 40px;
     }
     .left-sidebar-subj {
@@ -423,7 +423,7 @@
         position: relative;
         bottom: 3px;
     }
-    .left-sidebear-subtitle {
+    .left-sidebar-subtitle, .left-sidebar-viewall a {
         text-transform: uppercase;
         font-size: 0.88rem;
     }
@@ -434,19 +434,15 @@
     .left-sidebar-related {
         padding-bottom: 20px;
     }
-    .sidebar-links-ViewAll {
-        background-color: #000;
-        color: #fff;
-        border: 0;
-        position: relative;
-        left: -20px;
-    }
     .left-sidebar-collectionmenu {
         color: #fff;
     }
     .left-sidebar-collectionmenu li {
         padding-top: 5px;
         margin-left: 20px;
+    }
+    .left-sidebar-viewall {
+        border-top: 1px solid #fff;
     }
 /* right sidebar */
     .events, .blogs {

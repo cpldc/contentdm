@@ -1,4 +1,5 @@
 <?php
+    require 'collections-categories-locations.php';
     foreach ($cards as $key => $val){
         echo '<div class="grid-item card" style="width: 20rem; margin-bottom: 10px;">';
         echo '<a href="'. $val[link] . '" alt ><img class="card-img-top img-fluid content-card-img" src="' . $val[pic] . '" alt="' . $val[title] . '"></a>';

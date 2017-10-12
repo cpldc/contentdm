@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'African American';
+	$PAGE_TITLE = 'African Americans';
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
