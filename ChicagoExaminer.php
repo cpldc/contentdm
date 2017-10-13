@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <?php 
-    include 'collections-categories-locations.php';
+    include 'variables.php';
 	$PAGE_TITLE = $cards[ChicagoExaminer][title];
 	$PAGE_TYPE = 'content';
 ?>
@@ -40,16 +40,16 @@
 		<!-- center content -->
 			<div class="col-8 col-lg-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
-                <span>Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.</span>
+                <span>Chicago Public Library’s 10-year run of the <i>Chicago Examiner</i> extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.</span>
                 <div class="center-lightbox">
                     <?php 
                         $IMAGE = array ();
                         $THUMBS = array ();
 
-                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/476/default.jpg';
+                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/6812/default.jpg';
                         $IMAGE[Main][Text] = 'Chicago Examiner Vol. 7 no. 27';
-                        $IMAGE[Main][Size] = '109%';
-                        $IMAGE[Main][Align] = '50% -17px';
+                        $IMAGE[Main][Size] = '150%';
+                        $IMAGE[Main][Align] = '78% 5%';
 
                         $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/51184/default.jpg';
                         $THUMBS[Thumb1][Text] = 'Chicago Examiner Vol. 13 no. 187';
@@ -78,7 +78,7 @@
                     <a href="http://digital.chipublib.org/digital/collection/examiner/search" class="btn btn-primary">Browse All</a>
                 </div>
                 <div class="center-copy-paragraph">
-                    <p>The Chicago Public Library’s 10-year run of the Examiner, while incomplete, extends from 1908 to 1918 and represents the longest run of the paper still available. It is a quintessential example of yellow journalism.
+                    <p>The Chicago Public Library’s 10-year run of the <i>Examiner</i>, while incomplete, extends from 1908 to 1918 and represents the longest run of the paper still available. It is a quintessential example of yellow journalism.
                     </p><p>
                     Follow the tragedy of the <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Eastland!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">shipwreck of the Eastland,</a> a Great Lakes passenger steamer, in which 844 passengers and crew perished while the ship was tied to a dock in the Chicago River; the <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Union!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">infamous 1910 Union Stock Yards fire,</a> the deadliest U.S. building collapse in terms of firefighter deaths until September 11, 2001; <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Dunne!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">the mystery of the Dunne Water Crib fire, </a>told through first-person accounts, reportage, photos, and illustrations; big early 19th century <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Cubs%20Sox!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">wins for the Cubs and the White Sox.</a>
                     </p>

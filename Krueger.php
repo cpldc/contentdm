@@ -45,16 +45,16 @@
                         $IMAGE = array ();
                         $THUMBS = array ();
 
-                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/412/default.jpg';
-                        $IMAGE[Main][Text] = 'German-American Festival';
+                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/414/default.jpg';
+                        $IMAGE[Main][Text] = '47th and 48th Ward clean-up on Clark Street';
                         $IMAGE[Main][Size] = '150%';
-                        $IMAGE[Main][Align] = '50% 35%';
-
-                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/414/default.jpg';
-                        $THUMBS[Thumb1][Text] = '47th and 48th Ward clean-up on Clark Street';
-                        $THUMBS[Thumb1][Size] = '150%';
-                        $THUMBS[Thumb1][Align] = '50% 30%';
+                        $IMAGE[Main][Align] = '50% 30%';
                         
+                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/412/default.jpg';
+                        $THUMBS[Thumb1][Text] = 'German-American Festival';
+                        $THUMBS[Thumb1][Size] = '300%';
+                        $THUMBS[Thumb1][Align] = '50% 35%';
+
                         $THUMBS[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/349/default.jpg';
                         $THUMBS[Thumb2][Text] = 'Picasso statue unveiled at the Civic Center Plaza';
                         $THUMBS[Thumb2][Size] = '120%';
@@ -67,7 +67,7 @@
                         
                         $THUMBS[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/1365/default.jpg';
                         $THUMBS[Thumb4][Text] = '1720-22 West Leland Avenue';
-                        $THUMBS[Thumb4][Size] = '125%';
+                        $THUMBS[Thumb4][Size] = '140%';
                         $THUMBS[Thumb4][Align] = 'center';
 
                         include 'lightbox.php'; 

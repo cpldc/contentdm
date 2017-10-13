@@ -44,7 +44,6 @@
 					<li class="left-sidebar-list"><a href="Newspapers.php" class="sidebar-links">Newspapers</a></li>
 					<li class="left-sidebar-list"><a href="Parks.php" class="sidebar-links">Parks</a></li>
 					<li class="left-sidebar-list"><a href="Theater.php" class="sidebar-links">Theater</a></li>
-					<li class="left-sidebar-list">
 				</ul>
 			</div>
 			<div class="left-sidebar-location">
@@ -59,9 +58,16 @@
 			<div class="left-sidebar-related">
 				<h4 class="left-sidebar-subtitle">Related Links</h4>
 				<ul>
-					<li class="left-sidebar-list"><a href="" class="sidebar-links">Archival Collections</a></li>
-					<li class="left-sidebar-list"><a href="" class="sidebar-links">Chicago History</a></li>
-					<li class="left-sidebar-list"><a href="" class="sidebar-links">Online Resources</a></li>
+					<li class="left-sidebar-list"><a href="http://www.chipublib.org/archives-collections/" class="sidebar-links">Archival Collections</a></li>
+					<li class="left-sidebar-list"><a href="http://www.chipublib.org/browse/chicago-history/" class="sidebar-links">Chicago History</a></li>
+					<li class="left-sidebar-list"><a href="https://www.chipublib.org/resources/history/" class="sidebar-links">Online Resources: History</a></li>
+				</ul>
+			</div>
+			<div class="left-sidebar-related">
+				<h4 class="left-sidebar-subtitle">External Resouces</h4>
+				<ul>
+					<li class="left-sidebar-list"><a href="https://dp.la/" class="sidebar-links">Digital Public Library of America (DPLA)</a></li>
+					<li class="left-sidebar-list"><a href="http://explore.chicagocollections.org/" class="sidebar-links">Explore Chicago Collections</a></li>
 				</ul>
 			</div>
 		</div>

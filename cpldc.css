@@ -645,6 +645,7 @@
     .lightbox-thumb-wrapper {
         height: 100px;
         overflow: hidden;
+        text-align: center;
     }
 /* content card */
     .grid-item {
@@ -653,6 +654,7 @@
     }
     .content-card-img {
         width: 100%;
+        position: absolute;
     }
     .card-block {
         padding: 7px 10px 15px 10px;;
