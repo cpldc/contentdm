@@ -309,7 +309,7 @@
     .center-copy-paragraph {
         padding: 15px;
     }
-    .center-copy-list {
+    .center-copy-list, .center-copy-paragraph dl {
         padding: 15px 15px 15px 40px;
     }
     .center-copy-list h4 {
@@ -370,6 +370,17 @@
         color: #666;
         font-size: 0.75rem;
     }
+    main hr {
+        height: 0;
+        border-top: 1px solid #ccc;
+    }
+    .about-contact a {
+        color: #2d63af;
+    }
+    .about-contact a:hover {
+        color: #428bca;
+    }
+
 /* left sidebar */
     .left-sidebar {
         background-color: #000;
@@ -635,6 +646,11 @@
         width: 100%;
         margin: auto;
     }
+    .content-main-img {
+        height: 250px;
+        width: 100%;
+        margin: auto;
+    }
     .lightbox-thumb {
         width: 100px;
         height: 100px;
@@ -667,7 +683,7 @@
     .content-card-copy {
         margin-bottom: 10px;
     }
-    .content-card-category {
+    .content-card-category a {
         font-size: 0.75rem;
         line-height: 12px;
         color: #2d63af;

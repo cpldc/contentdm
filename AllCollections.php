@@ -3,7 +3,7 @@
 <head>
 <?php 
     include 'variables.php';
-	$PAGE_TITLE = 'All Digital Collections';
+	$PAGE_TITLE = 'Digital Collections A-Z';
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
@@ -49,7 +49,8 @@
                                 if (!$val[category] == ''){
                                     $catlink = array_search($val[category], $categories);
                                     echo '<dd class="all-collections-category"> Found in <a href="' . $catlink . '">' . $val[category] . '</a></dd>';
-                                }
+								}
+								echo '<hr>';
                             }
                         }
                         ?>

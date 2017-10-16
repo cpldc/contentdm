@@ -49,10 +49,10 @@
 			<div class="left-sidebar-location">
 				<h4 class="left-sidebar-subtitle">Browse by Location</h4>
 				<ul>
-					<li class="left-sidebar-list"><a href="HWLC.php" class="sidebar-links">HWLC Special Collections</a></li>
 					<li class="left-sidebar-list"><a href="MRC.php" class="sidebar-links">Municipal Reference Collection</a></li>
-					<li class="left-sidebar-list"><a href="Sulzer.php" class="sidebar-links">Northside Neighborhoods History Collection</a></li>
-					<li class="left-sidebar-list"><a href="Harsh.php" class="sidebar-links">Vivian G Harsh Collection</a></li>
+					<li class="left-sidebar-list"><a href="Sulzer.php" class="sidebar-links">Northside Neighborhood History Collection</a></li>
+					<li class="left-sidebar-list"><a href="HWLC.php" class="sidebar-links">Special Collections at HWLC</a></li>
+					<li class="left-sidebar-list"><a href="Harsh.php" class="sidebar-links">Vivian G. Harsh Collection</a></li>
 				</ul>
 			</div>
 			<div class="left-sidebar-related">
@@ -66,6 +66,7 @@
 			<div class="left-sidebar-related">
 				<h4 class="left-sidebar-subtitle">External Resouces</h4>
 				<ul>
+					<li class="left-sidebar-list"><a href="http://bmrc.lib.uchicago.edu/" class="sidebar-links">Black Metropolis Research Consortium</a></li>
 					<li class="left-sidebar-list"><a href="https://dp.la/" class="sidebar-links">Digital Public Library of America (DPLA)</a></li>
 					<li class="left-sidebar-list"><a href="http://explore.chicagocollections.org/" class="sidebar-links">Explore Chicago Collections</a></li>
 				</ul>
