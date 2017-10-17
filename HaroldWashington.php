@@ -37,7 +37,7 @@
 				include 'sidebar.php';
 			?>
 		<!-- center content -->
-			<div class="col-8 col-lg-6 center-content">
+			<div class="col-8 col-lg-5 col-xl-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
                 <span>Harold Washington was the first African American mayor of Chicago, serving from 1983 to 1987. This collection captures Mayor Washington at community, political, and charity events and demonstrates his importance in the history of Chicago.</span>
                 <div class="center-lightbox">

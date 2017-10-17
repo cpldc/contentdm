@@ -38,6 +38,7 @@
 				<h4 class="left-sidebar-subtitle">Browse by Subject</h4>
 				<ul>
 					<li class="left-sidebar-list"><a href="AfAm.php" class="sidebar-links">African Americans</a></li>
+					<li class="left-sidebar-list"><a href="CivilWar.php" class="sidebar-links">Civil War</a></li>
 					<li class="left-sidebar-list"><a href="HaroldWashington.php" class="sidebar-links">Harold Washington</a></li>
 					<li class="left-sidebar-list"><a href="LibEd.php" class="sidebar-links">Libraries &amp; Education</a></li>
 					<li class="left-sidebar-list"><a href="Neighborhoods.php" class="sidebar-links">Neighborhoods</a></li>

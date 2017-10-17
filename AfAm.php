@@ -37,7 +37,7 @@
 				include 'sidebar.php';
 			?>
 		<!-- center content -->
-			<div class="col-8 col-lg-6 center-content">
+			<div class="col-8 col-lg-5 col-xl-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
                 <!-- <span></span> -->
                 <div class="center-lightbox">
@@ -47,7 +47,7 @@
 
                         $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/14/default.jpg';
                         $IMAGE[Main][Text] = 'Women&amp;s Army Corps (WAC) Band, 1944';
-                        $IMAGE[Main][Size] = '';
+                        $IMAGE[Main][Size] = 'cover';
                         $IMAGE[Main][Align] = '50% 40%';
                         
                         $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/4/default.jpg';

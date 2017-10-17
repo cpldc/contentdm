@@ -37,7 +37,7 @@
 				include 'sidebar.php';
 			?>
 		<!-- center content -->
-			<div class="col-8 col-lg-6 center-content">
+			<div class="col-8 col-lg-5 col-xl-6 center-content">
 					<h1><?php echo $PAGE_TITLE; ?></h1>
 					<dl class="all-collections">
                     <?php 
@@ -47,8 +47,15 @@
                                 echo '<dt class="' . $val[coll] . '"><a href="' . $val[link] . '" name="' . $val[coll] . '">' . $val[sortname] . '</a><span class="rsaquo"> &rsaquo;</span></dt>';
                                 echo '<dd>' . $val[textlong] . '</dd>';
                                 if (!$val[category] == ''){
-                                    $catlink = array_search($val[category], $categories);
-                                    echo '<dd class="all-collections-category"> Found in <a href="' . $catlink . '">' . $val[category] . '</a></dd>';
+									if (is_array($val[category])) {
+										$catlink0 = array_search($val[category][0], $categories);
+										$catlink1 = array_search($val[category][1], $categories);
+										echo '<dd class="all-collections-category"> Found in <a href="' . $catlink0 . '">' . $val[category][0] . '</a>';
+										echo ' <a href="' . $catlink1 . '">' . $val[category][1] . '</a></dd>';
+									} else {
+										$catlink = array_search($val[category], $categories);
+										echo '<dd class="all-collections-category"> Found in <a href="' . $catlink . '">' . $val[category] . '</a></dd>';
+									}
 								}
 								echo '<hr>';
                             }

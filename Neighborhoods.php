@@ -37,7 +37,7 @@
 				include 'sidebar.php';
 			?>
 		<!-- center content -->
-			<div class="col-8 col-lg-6 center-content">
+			<div class="col-8 col-lg-5 col-xl-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
                 <!-- <span>Chicago Public Library’s Northside Neighborhood History Collection houses the photographs of Henry Green, a commercial photographer on Chicago’s North Side.</span> -->
                 <div class="center-lightbox">

@@ -37,7 +37,7 @@
 				include 'sidebar.php';
 			?>
 		<!-- center content -->
-			<div class="col-8 col-lg-6 center-content">
+			<div class="col-8 col-lg-5 col-xl-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
                 <span>In 1984, Chicago Public Library began working with local photographer Robert Krueger to document the North Side.</span>
                 <div class="center-lightbox">

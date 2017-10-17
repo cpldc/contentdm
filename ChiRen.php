@@ -38,7 +38,7 @@
 				include 'sidebar.php';
 			?>
 		<!-- center content -->
-			<div class="col-8 col-lg-6 center-content">
+			<div class="col-8 col-lg-5 col-xl-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
                 <span>The Black Chicago Renaissance was a creative movement when activism and scholarship flourished with the prodigious work of African American community leaders, performers, artists, writers and activists.</span>
                 <div class="center-lightbox">

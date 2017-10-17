@@ -37,7 +37,7 @@
 				include 'sidebar.php';
 			?>
 		<!-- center content -->
-			<div class="col-8 col-lg-6 center-content">
+			<div class="col-8 col-lg-5 col-xl-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
                 <span>Esther Barlow was a children’s librarian in neighborhood branches of the Chicago Public Library from 1927 until 1976.</span>
                 <div class="center-lightbox">

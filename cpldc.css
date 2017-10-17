@@ -5,6 +5,7 @@
         line-height: 18px;
         margin: 0;
         font-size: 1.00rem;
+        height: 100%;
     }
     a {
         text-decoration: none;
@@ -276,6 +277,8 @@
 /* main */
     main {
         margin-top: 20px;
+        height: 100%;
+        position: relative;
     }
     /* center container with CSS */
     .grid {
@@ -359,7 +362,8 @@
         background-color: #2d63af !important;
         border-color: #2d63af !important;
     }
-    .browseall .btn-primary:hover {
+    .browseall .btn-primary:hover, .browseall a:focus {
+        color: #fff !important;
         background-color: #428bca !important;
         border-color: #428bca !important;
     }
@@ -385,8 +389,11 @@
     .left-sidebar {
         background-color: #000;
         color: #fff;
+        height: 100%;
     }
     .left-sidebar-collapsible {
+        position: absolute;
+        height: 100%;
         max-width: 230px;
         float: left;
     }
@@ -683,7 +690,7 @@
     .content-card-copy {
         margin-bottom: 10px;
     }
-    .content-card-category a {
+    .content-card-category a, .content-card-category {
         font-size: 0.75rem;
         line-height: 12px;
         color: #2d63af;

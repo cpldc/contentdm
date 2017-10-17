@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'Millennium Park Collection';
+	$PAGE_TITLE = 'Chicago Parks';
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
@@ -39,7 +39,8 @@
 		<!-- center content -->
 			<div class="col-8 col-lg-5 col-xl-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
-                <span>Watch the Millennium Park site transform from an industrial wasteland to a new urban park of world renown from 1999-2005, under the project management of U.S. Equities Realty and acclaimed architects and artists.</span>
+                <span>Chicago Public Library is currently finalizing the Chicago Park District Records, which will be available in 2018.</span>
+                <h1 style="padding-top: 20px;">Millennium Park</h1>
                 <div class="center-lightbox">
                     <?php 
 

@@ -16,7 +16,7 @@
         $cards[ChicagoExaminer][pich] =  '19rem';
         $cards[ChicagoExaminer][size] =  '110% auto';
         $cards[ChicagoExaminer][pos] =  '50% -15px';
-        $cards[ChicagoExaminer][category]    =    '';
+        $cards[ChicagoExaminer][category]    =    array('');
         $cards[ChicagoExaminer][textshort] =      'Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
         $cards[ChicagoExaminer][textlong] =      'Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
         $cards[ChicagoExaminer][link] =      'ChicagoExaminer.php';
@@ -30,7 +30,7 @@
         $cards[EB][pich] =       '20rem';
         $cards[EB][size] =       '110%';
         $cards[EB][pos] =       'auto';
-        $cards[EB][category]    =    'Libraries &amp; Education';
+        $cards[EB][category]    =    array('Libraries &amp; Education');
         $cards[EB][textshort] =      'Family photographs of Esther Barlow and images of her work at Hild Regional Library and Lake View Branch Library from 1927-1976.';
         $cards[EB][textlong] =      'Esther Barlow was a children’s librarian in neighborhood branches of the Chicago Public Library from 1927 until 1976.';
         $cards[EB][link] =      'Barlow.php';
@@ -44,7 +44,7 @@
         $cards[CPL][pich] =       '200px;';
         $cards[CPL][size] =       '100%';
         $cards[CPL][pos] =       '50% -20px';
-        $cards[CPL][category]    =    'Libraries &amp; Education';
+        $cards[CPL][category]    =    array('Libraries &amp; Education');
         $cards[CPL][textshort] =      'On January 1, 1873 the Chicago Public Library opened its doors in a water tank that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to the development of neighborhood libraries across the city.';
         $cards[CPL][textlong] =      'On January 1, 1873 the Chicago Public Library opened its doors in a water tank that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to the development of neighborhood libraries across the city.';
         $cards[CPL][link] =      'CPL.php';
@@ -58,7 +58,7 @@
         $cards[ChiRen][pich] =                '20rem';
         $cards[ChiRen][size] =                'auto';
         $cards[ChiRen][pos] =                'auto';
-        $cards[ChiRen][category]    =    'African Americans';
+        $cards[ChiRen][category]    =    array('African Americans');
         $cards[ChiRen][textshort] =                    'African American community leaders, performers, artists, writers and activists on Chicago&rsquo;s South Side, 1930-1950.';
         $cards[ChiRen][textlong] =                    'The Black Chicago Renaissance was a creative movement when activism and scholarship flourished with the prodigious work of African American community leaders, performers, artists, writers and activists.';
         $cards[ChiRen][link] =                    'ChiRen.php';
@@ -72,7 +72,7 @@
         $cards[Sewers][pich] =                     '200px';
         $cards[Sewers][size] =                     '120%';
         $cards[Sewers][pos] =                     '50% -20px';
-        $cards[Sewers][category]    =    'Neighborhoods';
+        $cards[Sewers][category]    =    array('Neighborhoods');
         $cards[Sewers][textshort] =                    'Photographs of sewer systems and passageways from 1925-1949 offer a rare look at the underbelly of Chicago.';
         $cards[Sewers][textlong] =                    'The sewer systems and passageways that lie beneath our feet are critical to the health and well being of the city. Offering a rare look at the “underbelly” of Chicago, this collection of historic images features construction photographs of sewers and tunnels.';
         $cards[Sewers][link] =                    'Sewers.php';
@@ -86,7 +86,7 @@
         $cards[Theater][pich] =              '250px';
         $cards[Theater][size] =              '110%';
         $cards[Theater][pos] =              'auto';
-        $cards[Theater][category]    =    '';
+        $cards[Theater][category]    =    array('');
         $cards[Theater][textshort] =             'Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.';
         $cards[Theater][textlong] =             'Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
         $cards[Theater][link] =             'Theater.php';
@@ -94,19 +94,19 @@
         $cards[Theater][type] =             'collection';
         $cards[Theater][flag] =             '4';
 
-        $cards[Whalen][title] =     'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
-        $cards[Whalen][sortname] =     'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
-        $cards[Whalen][pic] =       'http://digital.chipublib.org/digital/api/singleitem/image/wha/341/default.jpg';
-        $cards[Whalen][pich] =       '280px';
-        $cards[Whalen][size] =       '110%';
-        $cards[Whalen][pos] =       '50% 40%';
-        $cards[Whalen][category]    =    'Civil War';
-        $cards[Whalen][textshort] =      'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.';
-        $cards[Whalen][textlong] =      'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.';
-        $cards[Whalen][link] =      'Whalen.php';
-        $cards[Whalen][coll] =      'wha';
-        $cards[Whalen][type] =      'collection';
-        $cards[Whalen][flag] =      '2';
+        $cards[CivilWar][title] =     'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
+        $cards[CivilWar][sortname] =     'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
+        $cards[CivilWar][pic] =       'http://digital.chipublib.org/digital/api/singleitem/image/wha/341/default.jpg';
+        $cards[CivilWar][pich] =       '280px';
+        $cards[CivilWar][size] =       '110%';
+        $cards[CivilWar][pos] =       '50% 40%';
+        $cards[CivilWar][category]    =    array('Civil War');
+        $cards[CivilWar][textshort] =      'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.';
+        $cards[CivilWar][textlong] =      'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.';
+        $cards[CivilWar][link] =      'CivilWar.php';
+        $cards[CivilWar][coll] =      'wha';
+        $cards[CivilWar][type] =      'collection';
+        $cards[CivilWar][flag] =      '2';
 
         $cards[HDG][title] =     'Henry D. Green Photograph Collection';
         $cards[HDG][sortname] =     'Green, Henry D. Photograph Collection';
@@ -114,7 +114,7 @@
         $cards[HDG][pich] =       '250px';
         $cards[HDG][size] =       '110%';
         $cards[HDG][pos] =       '50% 50%';
-        $cards[HDG][category]    =    'Neighborhoods';
+        $cards[HDG][category]    =    array('Neighborhoods');
         $cards[HDG][textshort] =      'Photographs by Henry Green of businesses, community groups, neighborhood celebrations, and school events on Chicago’s North Side, 1943-1951.';
         $cards[HDG][textlong] =      'Chicago Public Library’s Northside Neighborhood History Collection houses the photographs of Henry Green, a commercial photographer on Chicago’s North Side.';
         $cards[HDG][link] =      'Green.php';
@@ -128,7 +128,7 @@
         $cards[RK][pich] =       '210px';
         $cards[RK][size] =       '100%';
         $cards[RK][pos] =       '50% 50%';
-        $cards[RK][category]    =    'Neighborhoods';
+        $cards[RK][category]    =    array('Neighborhoods');
         $cards[RK][textshort] =      'Local photographer Robert Krueger documented Chicago’s North Side with photographs of community events, buildings, and people.';
         $cards[RK][textlong] =      'In 1984, Chicago Public Library began working with local photographer Robert Krueger to document the North Side.';
         $cards[RK][link] =      'Krueger.php';
@@ -141,8 +141,8 @@
         $cards[MP][pic] =                     'http://digital.chipublib.org/digital/api/singleitem/image/mpu/2239/default.jpg';
         $cards[MP][pich] =       '240px';
         $cards[MP][size] =       '130%';
-        $cards[MP][pos] =       '35% 50%';
-        $cards[MP][category]    =    'Parks';
+        $cards[MP][pos] =       '50% 50%';
+        $cards[MP][category]    =    array('Parks');
         $cards[MP][textshort] =                    'Transformation from rail yard to dynamic urban park.';
         $cards[MP][textlong] =                    'Watch the Millennium Park site transform from an industrial wasteland to a new urban park of world renown from 1999-2005, under the project management of U.S. Equities Realty and acclaimed architects and artists.';
         $cards[MP][link] =                    'MillenniumPark.php';
@@ -156,7 +156,7 @@
         $cards[NCO][pich] =       '250px';
         $cards[NCO][size] =       '110%';
         $cards[NCO][pos] =       '50% 50%';
-        $cards[NCO][category]    =    'Neighborhoods';
+        $cards[NCO][category]    =    array('Neighborhoods');
         $cards[NCO][textshort] =      '';
         $cards[NCO][textlong] =      '';
         $cards[NCO][link] =      'NCO.php';
@@ -170,7 +170,7 @@
         $cards[NHS][pich] =       '250px';
         $cards[NHS][size] =       '110%';
         $cards[NHS][pos] =       '50% 50%';
-        $cards[NHS][category]    =    'Neighborhoods';
+        $cards[NHS][category]    =    array('Neighborhoods');
         $cards[NHS][textshort] =      '';
         $cards[NHS][textlong] =      '';
         $cards[NHS][link] =      'NHS.php';
@@ -184,7 +184,7 @@
         $cards[Parks][pich] =       '250px';
         $cards[Parks][size] =       '110%';
         $cards[Parks][pos] =       '10% 5%';
-        $cards[Parks][category]    =    'Parks';
+        $cards[Parks][category]    =    array('Parks');
         $cards[Parks][textshort] =      '';
         $cards[Parks][textlong] =      '';
         $cards[Parks][link] =      'Parks.php';
@@ -198,7 +198,7 @@
         $cards[HW][pich] =       '250px';
         $cards[HW][size] =       '200%';
         $cards[HW][pos] =       '75% 40%';
-        $cards[HW][category]    =    'African Americans';
+        $cards[HW][category]    =    array('African Americans');
         $cards[HW][textshort] =                  'The first African American mayor of Chicago, serving from 1983 to 1987, and his importance in the city’s history.';
         $cards[HW][textlong] =                  'Harold Washington was the first African American mayor of Chicago, serving from 1983 to 1987. This collection captures Mayor Washington at community, political, and charity events and demonstrates his importance in the history of Chicago.';
         $cards[HW][link] =                  'HaroldWashington.php';
@@ -212,7 +212,7 @@
         $cards[RWLV][pich] =       '250px';
         $cards[RWLV][size] =       '300%';
         $cards[RWLV][pos] =       '92% 50%';
-        $cards[RWLV][category]    =    'Neighborhoods';
+        $cards[RWLV][category]    =    array('Neighborhoods');
         $cards[RWLV][textshort] =                    'Lake View Township and its evolution from an independent municipality into current Northside communities, 1860s-1990s';
         $cards[RWLV][textlong] =                    'Lake View Township and its evolution from an independent municipality into current Northside communities, 1860s-1990s';
         $cards[RWLV][link] =                    'RWLV.php';
@@ -365,7 +365,7 @@
         // $cards[][title] =     '';
         // $cards[][sortname] =     '';
         // $cards[][pic] =       '';
-        // $cards[][category]    =    '';
+        // $cards[][category]    =    array('';
         // $cards[][textshort] =      '';
         // $cards[][textlong] =      '';
         // $cards[][link] =      '';
@@ -373,7 +373,7 @@
         // $cards[][type] =      '';
         // $cards[][flag] =      '';
         
-    $categories = array('AfAm.php'=>'African Americans','CivilWar.php'=>'Civil War',
+    $categories = array('AfAm.php'=>'African Americans',
         'LibEd.php'=>'Libraries &amp; Education',
         'Neighborhoods.php'=>'Neighborhoods', 'Parks.php'=>'Parks');
         

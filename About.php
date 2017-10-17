@@ -37,7 +37,7 @@
 				include 'sidebar.php';
 			?>
 		<!-- center content -->
-			<div class="col-8 col-lg-6 center-content">
+			<div class="col-8 col-lg-5 col-xl-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
                 <!-- <span></span> -->
                 <div class="center-lightbox">
@@ -91,7 +91,7 @@
                     <dl>
                         <dd class="about-contact">Usage, transmission, downloading or reproduction of protected items beyond that allowed by Fair Use Copyright Law requires the written permission of the copyright owners. Copyright or other information about restrictions may be difficult or even impossible to determine. When possible, CPL provides information about copyright owners and restrictions concerning its collections.</dd>
                         <dd class="about-contact">Determining the existence of copyright or any other legal restrictions, as well as obtaining permission from the copyright holder, is solely the responsibility of the user/patron</dd>
-                        <dd class="about-contact"><a href="http://rightsstatements.org/page/1.0/?language=en">RightsStatements.org website</a>/dd>
+                        <dd class="about-contact"><a href="http://rightsstatements.org/page/1.0/?language=en">RightsStatements.org website</a></dd>
                     </dl>
                 </div>
 			</div>
