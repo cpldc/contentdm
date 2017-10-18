@@ -67,7 +67,7 @@
                     <p></p>
                     <p></p>
                 </div>
-                <div class="center-copy-list">
+                <!-- <div class="center-copy-list">
                     <h4>Related Resources</h4>
                     <dl>
                         <dt><a href="http://www.chipublib.org/chicago-history/">Chicago History</a></dt>
@@ -75,7 +75,7 @@
                         <dt><a href="https://www.chipublib.org/archives-collections/">Archival Collections</a></dt>
                         <dd>A list of CPL collections and finding aids</dd>
                     </dl>
-                </div>
+                </div> -->
                 <div class="center-copy-list">
                     <h4>Contact Us</h4>
                     <dl>

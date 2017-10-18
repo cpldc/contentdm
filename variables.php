@@ -208,17 +208,17 @@
         
         $cards[RWLV][title] =                   'Ravenswood-Lake View Community Collection';
         $cards[RWLV][sortname] =                   'Ravenswood-Lake View Community Collection';
-        $cards[RWLV][pic] =                     'http://digital.chipublib.org/digital/api/singleitem/image/rvw/849/default.jpg';
+        $cards[RWLV][pic] =                     'http://digital.chipublib.org/digital/api/singleitem/image/rvw/1086/default.jpg';
         $cards[RWLV][pich] =       '250px';
-        $cards[RWLV][size] =       '300%';
-        $cards[RWLV][pos] =       '92% 50%';
-        $cards[RWLV][category]    =    'Neighborhoods';
-        $cards[RWLV][textshort] =                    'Lake View Township and its evolution from an independent municipality into current Northside communities, 1860s-1990s';
+        $cards[RWLV][size] =       '250%';
+        $cards[RWLV][pos] =       '24% 45%';
+        $cards[RWLV][category]    =    array('Neighborhoods','Libraries &amp; Education');
+        $cards[RWLV][textshort] =                    'Street scenes and community life on the North Side, 1860s-1990s';
         $cards[RWLV][textlong] =                    'Lake View Township and its evolution from an independent municipality into current Northside communities, 1860s-1990s';
         $cards[RWLV][link] =                    'RWLV.php';
         $cards[RWLV][coll] =                    'rvw';
         $cards[RWLV][type] =                    'collection';
-        $cards[RWLV][flag] =                    '';
+        $cards[RWLV][flag] =                    '1';
         
         $cards[Sang][title] =     'Philip David Sang Collection';
         $cards[Sang][sortname] =     'Sang, Philip David Collection';
@@ -311,10 +311,10 @@
 
         $cards[Neigh][title] =     'Neighborhoods';
         $cards[Neigh][pic] =       'http://digital.chipublib.org/digital/api/singleitem/image/cfc/138/default.jpg';
+        //$cards[Neigh][pic] =       'http://digital.chipublib.org/digital/api/singleitem/image/cfc/104/default.jpg'; //alternate
         $cards[Neigh][pich] =       '230px';
         $cards[Neigh][size] =       '110%';
         $cards[Neigh][pos] =       '50% 50%';
-        //$cards[Neigh][pic] =       'http://digital.chipublib.org/digital/api/singleitem/image/cfc/104/default.jpg'; //alternate
         $cards[Neigh][textshort] =      'Experience daily life in Chicago neighborhoods through photographs of street scenes, businesses, residences and portraits, 1860s to present';
         $cards[Neigh][textlong] =      'Experience daily life in Chicago neighborhoods through photographs of street scenes, businesses, residences and portraits, 1860s to present';
         $cards[Neigh][link] =      'Neighborhoods.php';

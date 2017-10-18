@@ -81,6 +81,13 @@
                     Subjects in the collection include local <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/hdg/searchterm/Business%20establishments/field/subjed/mode/all/conn/and/order/nosort">business establishments</a>, community groups, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/hdg/searchterm/Religious%20institutions/field/subjed/mode/all/conn/and/order/nosort">religious institutions</a>, celebrations in neighborhood parks and events at local schools. Many photographs reflect life on the North Side during World War II, including images of <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/hdg/searchterm/Military%20personnel/field/subjed/mode/all/conn/and/order/nosort">military personnel</a>. 
                     </p>
                 </div>
+				<div class="center-copy-list">
+					<h4>Finding Aid</h4>
+					<dl>
+						<dt><a href="http://chsmedia.org/media/fa/fa/1981/65.htm">Henry Delorval Green Photograph Collection, 1942-1953</a></dt>
+						<dd>Descriptive inventory for the complete physical collection at the Chicago History Museum Research Center.</dd>
+					</dl>
+				</div>
 			</div>
 		<!-- right sidebar -->
 			<div class="hidden-md-down col-lg-3 right-sidebar">

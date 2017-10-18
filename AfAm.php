@@ -74,19 +74,28 @@
                     ?>
                 </div>
                 <div class="center-button browseall">
-                <a href="http://digital.chipublib.org/digital/search/collection/cr!rhwc!p16818coll6/order/title/ad/asc" class="btn btn-primary">Browse All</a>
-            </div>
-            <div class="center-copy-paragraph">
-                <p>Digital collections that include materials documenting Black history in the United States include:<p>
-                <dl>
-                    <dt><a href="ChiRen.php">Chicago Renaissance</a></dt>
-                    <dd>Manuscripts and photographs documenting the creative movement that blossomed out of the Chicago Black Belt on the city's South Side from the 1930s until the 1950s.</dd>
-                    <dt><a href="HaroldWashington.php">Remembering Harold Washington</a></dt>
-                    <dd>A collection of photographs showcasing the work of Chicago’s first African American mayor.</dd>
-                    <dt><a href="Sang.php">Phillip Sang</a></dt>
-                    <dd>Materials on slavery and abolitionism; including original documents from slave owners, slave traders and insurance companies.</dd>
-                </dl>
-            </div>
+                    <a href="http://digital.chipublib.org/digital/search/collection/cr!rhwc!p16818coll6/order/title/ad/asc" class="btn btn-primary">Browse All</a>
+                </div>
+                <div class="center-copy-paragraph">
+                    <p>Digital collections that include materials documenting Black history in the United States include:<p>
+                    <dl>
+                        <dt><a href="ChiRen.php">Chicago Renaissance</a></dt>
+                        <dd>Manuscripts and photographs documenting the creative movement that blossomed out of the Chicago Black Belt on the city's South Side from the 1930s until the 1950s.</dd>
+                        <dt><a href="HaroldWashington.php">Remembering Harold Washington</a></dt>
+                        <dd>A collection of photographs showcasing the work of Chicago’s first African American mayor.</dd>
+                        <dt><a href="Sang.php">Phillip Sang</a></dt>
+                        <dd>Materials on slavery and abolitionism; including original documents from slave owners, slave traders and insurance companies.</dd>
+                    </dl>
+                </div>
+                <div class="center-copy-list">
+                    <h4>More CPL Resources</h4>
+                    <dl>
+                        <dt><a href="http://gatekeeper.chipublib.org/login?url=http://search.proquest.com/hnpchicagodefender/ip?accountid=303">Chicago Defender Historical Archive</a></dt>
+                        <dd></dd>
+                        <dt><a href="https://cpl.thehistorymakers.org/home">HistoryMakers</a></dt>
+                        <dd></dd>
+                    </dl>
+                </div>
 			</div>
 		<!-- right sidebar -->
 			<div class="hidden-md-down col-lg-3 right-sidebar">
