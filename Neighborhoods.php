@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'Neighborhoods';
+	include 'variables.php';
+	$PAGE_TITLE = $cards[Neigh][title];
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">

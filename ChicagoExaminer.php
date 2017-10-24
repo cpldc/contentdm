@@ -89,7 +89,7 @@
                         <dt><a href="https://www.chipublib.org/chicago-newspapers-on-microfilm/">Chicago Newspapers</a></dt>
                         <dd>Online and microfilm</dd>
                         <dt><a href="https://www.chipublib.org/?post_type=post&s=newspapers">Newspaper blog posts</a></dt>
-                        <dd>by CPL librarians</dd>
+                        <dd>Written by CPL librarians and staff</dd>
                     </dl>
                 </div>
                 <div class="center-copy-list">

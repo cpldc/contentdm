@@ -47,7 +47,7 @@
                         $THUMBS = array ();
 
                         $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rvw/421/default.jpg';
-                        $IMAGE[Main][Text] = 'Lincoln &amp; Montrose Avenues';
+                        $IMAGE[Main][Text] = 'Lincoln &amp&; Montrose Avenues';
                         $IMAGE[Main][Size] = '110%';
                         $IMAGE[Main][Align] = '50% 50%';
 
@@ -97,9 +97,9 @@
                     <h4>External Resources</h4>
                     <dl>
                         <dt><a href="http://www.ravenswoodhistorical.com/">Ravenswood-Lake View Historical Association</a></dt>
-                        <dd>Programs, publications &amp; tours focusing on Chicago north side neighborhood history.</dd>
+                        <dd>Programs, publications and tours focusing on Chicago northside neighborhood history.</dd>
                         <dt><a href="http://www.edgewaterhistory.org/ehs/">Edgewater Historical Society</a></dt>
-                        <dd>Exhibits, events &amp; tours of the Edgewater neighborhood.</dd>
+                        <dd>Exhibits, events and tours of the Edgewater neighborhood.</dd>
                     </dl>
                 </div>
 			</div>

@@ -1,3 +1,4 @@
+
 <script>
 	var sidebarType;
 	if ($(".PAGE_TYPE").hasClass('content') && viewportWidth > 976) {
@@ -37,23 +38,26 @@
 			<div class="left-sidebar-location">
 				<h4 class="left-sidebar-subtitle">Browse by Subject</h4>
 				<ul>
-					<li class="left-sidebar-list"><a href="AfAm.php" class="sidebar-links">African Americans</a></li>
-					<li class="left-sidebar-list"><a href="CivilWar.php" class="sidebar-links">Civil War</a></li>
-					<li class="left-sidebar-list"><a href="HaroldWashington.php" class="sidebar-links">Harold Washington</a></li>
-					<li class="left-sidebar-list"><a href="LibEd.php" class="sidebar-links">Libraries &amp; Education</a></li>
-					<li class="left-sidebar-list"><a href="Neighborhoods.php" class="sidebar-links">Neighborhoods</a></li>
-					<li class="left-sidebar-list"><a href="Newspapers.php" class="sidebar-links">Newspapers</a></li>
-					<li class="left-sidebar-list"><a href="Parks.php" class="sidebar-links">Parks</a></li>
-					<li class="left-sidebar-list"><a href="Theater.php" class="sidebar-links">Theater</a></li>
+				<?php     
+					usort($cards, build_sorter('sidebartitle'));
+    				foreach ($cards as $key => $val){
+        				if ($val[sidebarflag] == 'x'){
+							echo '<li class="left-sidebar-list"><a href="' . $val[link] . '" class="sidebar-links">' . $val[sidebartitle] . '</a></li>';
+						}
+					}
+				?>
 				</ul>
 			</div>
 			<div class="left-sidebar-location">
 				<h4 class="left-sidebar-subtitle">Browse by Location</h4>
 				<ul>
-					<li class="left-sidebar-list"><a href="MRC.php" class="sidebar-links">Municipal Reference Collection</a></li>
-					<li class="left-sidebar-list"><a href="Sulzer.php" class="sidebar-links">Northside Neighborhood History Collection</a></li>
-					<li class="left-sidebar-list"><a href="HWLC.php" class="sidebar-links">Special Collections at HWLC</a></li>
-					<li class="left-sidebar-list"><a href="Harsh.php" class="sidebar-links">Vivian G. Harsh Collection</a></li>
+				<?php     
+    				foreach ($cards as $key => $val){
+        				if ($val[type] == 'location'){
+							echo '<li class="left-sidebar-list"><a href="' . $val[link] . '" class="sidebar-links">' . $val[sidebartitle] . '</a></li>';
+						}
+					}
+				?>
 				</ul>
 			</div>
 			<div class="left-sidebar-related">
@@ -68,7 +72,7 @@
 				<h4 class="left-sidebar-subtitle">External Resouces</h4>
 				<ul>
 					<li class="left-sidebar-list"><a href="http://bmrc.lib.uchicago.edu/" class="sidebar-links">Black Metropolis Research Consortium</a></li>
-					<li class="left-sidebar-list"><a href="https://dp.la/" class="sidebar-links">Digital Public Library of America (DPLA)</a></li>
+					<li class="left-sidebar-list"><a href="https://dp.la/" class="sidebar-links">Digital Public Library of America</a></li>
 					<li class="left-sidebar-list"><a href="http://explore.chicagocollections.org/" class="sidebar-links">Explore Chicago Collections</a></li>
 				</ul>
 			</div>

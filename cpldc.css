@@ -46,10 +46,10 @@
     header {
         position: relative;
         /* background-color: #fff; */
-        background: -webkit-repeating-linear-gradient( #fff,#fff 115px,#000 115px,#000 168px);
-        background: -o-repeating-linear-gradient( #fff,#fff 115px,#000 115px,#000 168px);
-        background: -moz-repeating-linear-gradient( #fff,#fff 115px,#000 115px,#000 168px);
-        background: repeating-linear-gradient( #fff,#fff 115px,#000 115px,#000 168px);
+        background: -webkit-repeating-linear-gradient( #fff,#fff 114px,#000 114px,#000 168px);
+        background: -o-repeating-linear-gradient( #fff,#fff 114px,#000 114px,#000 168px);
+        background: -moz-repeating-linear-gradient( #fff,#fff 114px,#000 114px,#000 168px);
+        background: repeating-linear-gradient( #fff,#fff 114px,#000 114px,#000 168px);
         box-shadow: 0px 3px 4px 1px rgba(50,50,50,0.5);
     }
     .header-logo-img {
@@ -134,6 +134,9 @@
         padding: 8px 15px;
         color: #fff;
         background-color: #000;
+    }
+    .header-search-expanded-icon i {
+        padding-left: 5px;
     }
     .header-search-expanded-text {
         padding: 0 5px 0 0;

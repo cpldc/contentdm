@@ -3,7 +3,8 @@
 <head>
 <?php 
     include 'variables.php';
-	$PAGE_TITLE = 'Newspapers';
+	$PAGE_TITLE = $cards[News][title];
+	$PAGE_TITLE2 = $cards[ChicagoExaminer][title];
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
@@ -41,7 +42,7 @@
 			<div class="col-8 col-lg-5 col-xl-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
                 <span>Chicago Public Library is currently finalizing several newspaper collections, which will be available in 2018. </span>
-                <h1 style="padding-top: 20px;"><?php echo $cards[ChicagoExaminer][title]; ?></h1>
+                <h1 style="padding-top: 20px;"><?php echo $PAGE_TITLE2 ?></h1>
                 <span>Chicago Public Library’s 10-year run of the <i>Chicago Examiner</i> extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.</span>
                 <div class="center-lightbox">
                     <?php 

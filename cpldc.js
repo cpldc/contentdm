@@ -54,11 +54,9 @@
 		$(".left-sidebar-header").append(leftSidebarButton);
 		$(".left-sidebar-togglebutton").css("float","right");
 		if ($(".PAGE_TYPE").hasClass("content") && $(".container").hasClass("main-container-fixed")) {
-			console.log("asdf");
 			$(".main-container-fixed").css("margin-left","235px");
 		}
 		if ($(".PAGE_TYPE").hasClass("home") || $(".container").hasClass("main-container-collapsible")) {
-			console.log("asdf2");
 			$(".main-container-collapsible").css("padding-left","235px");
 		}
 
@@ -130,3 +128,9 @@
 			window.location.href = 'http://digital.chipublib.org/digital/search/searchterm/' + query;
 		}
 	}
+	$(document).ready(function(){
+		$('#search-input').keypress(function(e){
+		  if(e.keyCode==13)
+		  	searchQuery();
+		});
+	});

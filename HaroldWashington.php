@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'Remembering Harold Washington';
+	include 'variables.php';
+	$PAGE_TITLE = $cards[HW][title];
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
@@ -39,7 +40,7 @@
 		<!-- center content -->
 			<div class="col-8 col-lg-5 col-xl-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
-                <span>Harold Washington was the first African American mayor of Chicago, serving from 1983 to 1987. This collection captures Mayor Washington at community, political, and charity events and demonstrates his importance in the history of Chicago.</span>
+                <span>Mayor Harold Washington was elected 51st mayor of Chicago April 12, 1983; this collection documents his time in office and his work with diverse communities and individuals.</span>
                 <div class="center-lightbox">
                     <?php 
                         $IMAGE = array ();
@@ -78,7 +79,7 @@
                 </div>
                 <div class="center-copy-paragraph">
                     <p>
-						Harold Washington was the first African American mayor of Chicago, serving from 1983 to 1987. This collection captures Mayor Washington at community, political, and charity events and demonstrates his importance in <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rhwc/searchterm/Politics/field/subjed/mode/all/conn/and/order/nosort">politics</a> and the history of Chicago.
+						This collection captures Mayor Washington at community, political, and charity events and demonstrates his importance in <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rhwc/searchterm/Politics/field/subjed/mode/all/conn/and/order/nosort">politics</a> and the history of Chicago.
 					</p>
 					<p>
 						Photographs in this collection capture Harold Washington’s work with <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rhwc/searchterm/Constituency%20groups/field/subjed/mode/all/conn/and/order/nosort">ethnic and constituency groups</a>, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rhwc/searchterm/Famous%20persons/field/subjed/mode/all/conn/and/order/nosort">famous people</a>, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rhwc/searchterm/Groundbreaking/field/subjed/mode/all/conn/and/order/nosort">groundbreaking and development projects</a>, and more.
@@ -89,7 +90,7 @@
                     <dl>
 						<dt><a href="https://www.chipublib.org/fa-brenetta-howell-barrett-papers/">Brenetta Howell Barrett Papers finding aid</a></dt>
 						<dd>Barrett served in the mayoral administrations of Harold Washington and Eugene Sawyer. She was a political activist for housing, environmental and civil liberties issues.</dd>
-						<dt><a href="https://www.chipublib.org/archival_subject/harold-washington/">Harold Washington Archives &amp; Collections</a></dt>
+						<dt><a href="https://www.chipublib.org/archival_subject/harold-washington/">Harold Washington Research Collections</a></dt>
 						<dd>A list of collections at Chicago Public Library with archival materials regarding Mayor Harold Washington</dd>
 						<dd>
 							<ul>
@@ -108,7 +109,11 @@
 							</ul>
 						</dd>
                         <dt><a href="https://www.chipublib.org/blogs/post/welcome-to-the-municipal-reference-collection/">Municipal Reference Collection</a></dt>
-                        <dd>Collections include local government publications, city election results, maps, municipal ordinances, and more.</dd>
+						<dd>Collections include local government publications, city election results, maps, municipal ordinances, and more.</dd>
+						<dt><a href="https://www.chipublib.org/tag/harold-washington/">Harold Washington blog posts</a></dt>
+						<dd>Written by CPL librarians and staff</dd>
+						<dt><a href="https://www.chipublib.org/mayor-harold-washington-biography/">Mayor Harold Washington Biography</a></dt>
+						<dd>A list of Mayor Harold Washington’s education, military service, career, and selected accomplishments.</dd>
                     </dl>
                 </div>
 			</div>

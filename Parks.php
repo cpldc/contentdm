@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'Chicago Parks';
+	include 'variables.php';
+	$PAGE_TITLE = $cards[Parks][title];
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
@@ -39,38 +40,39 @@
 		<!-- center content -->
 			<div class="col-8 col-lg-5 col-xl-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
-                <span>Chicago Public Library is currently finalizing the Chicago Park District Records, which will be available in 2018.</span>
-                <h1 style="padding-top: 20px;">Millennium Park</h1>
+                <span><p>Visit Chicago’s vast collection of parks that emerged from a single, hard-fought-for narrow strip of land along the lakefront in 1836 to 
+				over 500 parks today.  </p>
+                <p>Chicago Public Library is currently finalizing the Chicago Park District Records, which will be available in 2018.</p></span>
                 <div class="center-lightbox">
                     <?php 
 
                         $IMAGE = array ();
                         $THUMBS = array ();
 
-                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/mpu/1297/default.jpg';
-                        $IMAGE[Main][Text] = 'Millennium Monument at Wrigley Square, peristyle in winter, ca. 2003';
-                        $IMAGE[Main][Size] = '110%';
-                        $IMAGE[Main][Align] = 'center';
+                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/mpu/4258/default.jpg';
+                        $IMAGE[Main][Text] = 'Crown Fountain, children play in the gargoyle spray of the north tower, opening day, July 16, 2004';
+                        $IMAGE[Main][Size] = '500px';
+                        $IMAGE[Main][Align] = '50% 87%';
 
-                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/mpu/1543/default.jpg';
-                        $THUMBS[Thumb1][Text] = 'Cloud Gate, attaching steel plates, omphalos, March 22, 2004';
+                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/66/default.jpg';
+                        $THUMBS[Thumb1][Text] = 'Altgeld Park (0206) Features - Playgrounds and swimming pools, 1968-07';
                         $THUMBS[Thumb1][Size] = '140%';
-                        $THUMBS[Thumb1][Align] = '40% 50%';
+                        $THUMBS[Thumb1][Align] = '50% 50%';
                         
-                        $THUMBS[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/mpu/4390/default.jpg';
-                        $THUMBS[Thumb2][Text] = 'Crown Fountain, gargoyle spray, July 22, 2004';
-                        $THUMBS[Thumb2][Size] = '140%';
-                        $THUMBS[Thumb2][Align] = '40% 60%';
+                        $THUMBS[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/290/default.jpg';
+                        $THUMBS[Thumb2][Text] = 'American Indian Center';
+                        $THUMBS[Thumb2][Size] = '110%';
+                        $THUMBS[Thumb2][Align] = '50% 30%';
 
-                        $THUMBS[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/mpu/4781/default.jpg';
-                        $THUMBS[Thumb3][Text] = 'Jay Pritzker Pavilion, headdress, March 4, 2004';
-                        $THUMBS[Thumb3][Size] = '160%';
-                        $THUMBS[Thumb3][Align] = '70% 0';
+                        $THUMBS[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/4752/default.jpg';
+                        $THUMBS[Thumb3][Text] = 'Lake Meadow Park (0263) Events - Performances - Community concerts by Red Saunders, 1970-07-05';
+                        $THUMBS[Thumb3][Size] = '500px';
+                        $THUMBS[Thumb3][Align] = '55% 25%';
                         
-                        $THUMBS[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/mpu/4662/default.jpg';
-                        $THUMBS[Thumb4][Text] = 'Jay Pritzker Pavilion, structural steel for the headdress, May 29, 2003';
-                        $THUMBS[Thumb4][Size] = '';
-                        $THUMBS[Thumb4][Align] = 'center';
+                        $THUMBS[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/6209/default.jpg';
+                        $THUMBS[Thumb4][Text] = 'Palmer Park (0013) Activities - Athletics, 1965';
+                        $THUMBS[Thumb4][Size] = '140%';
+                        $THUMBS[Thumb4][Align] = '50% 50%';
                         
                         include 'lightbox.php'; 
                     ?>
@@ -80,34 +82,44 @@
 				</div>
 				<div class="center-copy-paragraph">
 					<p>
-					Follow the construction of <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/BP+Bridge/field/book/mode/exact/conn/and/order/origin">BP Pedestrian Bridge</a>, the first bridge designed by Frank Gehry; Anish Kapoor’s monumental public sculpture, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/Cloud+Gate/field/book/mode/exact/conn/and/order/origin">Cloud Gate</a>, aka The Bean; the Gehry-designed <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/Jay%20Pritzker%20Pavilion/field/book/mode/exact/conn/and/order/origin">Jay Pritzker Pavillion</a>, a soaring bandshell that hosts the U.S.’s last free outdoor classical music series; Jaume Plensa’s <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/Crown%20Fountain/field/book/mode/exact/conn/and/order/origin">Crown Fountain</a>, a cascading interactive video sculpture. Take in sweeping views with <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/Full%20Park/field/book/mode/all/conn/and/order/origin/page/1">full park images</a>.
+					While Chicago’s <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/Grant%20Park!Lincoln%20Park!zoo%20hamlin!Millennium%20Park/field/descri!descri!all!all/mode/exact!exact!none!all/conn/or!or!or!and/order/nosort/ad/asc">lakefront parks</a> are popular with residents and tourists alike, public green space abounds in many parts of the city. Take in <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/lagoons/field/all/mode/all/conn/and/order/nosort/ad/asc/page/10">lagoons</a>, <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/prairie/field/all/mode/all/conn/and/order/nosort/ad/asc/page/6">prairies</a>, wetlands and woodlands across the urban landscape. Peek into <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/fieldhouses%20!field%20houses/field/all!all/mode/all!all/conn/or!and/order/nosort/ad/asc">field houses</a> and <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/refectories%20refectory/field/all/mode/any/conn/and/order/nosort/ad/asc">refectories</a>. Gaze at <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/bridges!park/field/all!all/mode/all!all/conn/and!and/order/nosort/ad/asc">bridges</a>, <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/pergolas%20pergola/field/all/mode/any/conn/and/order/nosort/ad/asc/page/3">pergolas</a>, and <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/fountains/field/all/mode/any/conn/and/order/nosort/ad/asc">fountains</a>, from the utilitarian to the ornate. Observe how Chicagoans and visitors engage with the parks in all seasons by <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/bicycle*%20park/field/all/mode/all/conn/and/order/nosort/ad/asc/page/6">biking</a>, <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/ice%20skating/field/all/mode/all/conn/and/order/nosort/ad/asc">ice skating</a>, <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/sledding!sleds/field/all!all/mode/all!all/conn/or!and/order/nosort/ad/asc">sledding</a>, <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/archery/field/all/mode/all/conn/and/order/nosort/ad/asc/page/2">competing in archery</a>, <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/frankel%20plates/field/all/mode/all/conn/and/order/nosort/ad/asc">taking selfies</a>, <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/celebrations%20park/field/all/mode/all/conn/or/order/nosort/ad/asc">celebrating events</a>, and more.
 					</p>
-					<dl>
+					<!-- <dl>
 						<dt><a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/highlight/field/highli/mode/all/conn/and/order/origin">Collection Highlights</a></dt>
 						<dd>Get a taste of how this transformation took place in a selected group of images.</dd>
+					</dl> -->
+				</div>
+				<div class="center-copy-list">
+					<h4>Digital Collections</h4>
+					<dl>
+						
+					<?php 
+						usort($cards, build_sorter('sortname'));
+						foreach ($cards as $key => $val){
+							if ((is_array($val[category]) && in_array('Parks', $val[category])) || $val[category] == 'Parks'){
+								echo '<dt><a href="' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
+							}
+						}
+					?>
 					</dl>
 				</div>
 				<div class="center-copy-list">
 					<h4>More CPL Resources</h4>
 					<dl>
 						<dt>Finding Aids:</dt>
-						<dd>Learn about the construction of the park and the Chicago-based company that made it possible.</dd>
+						<dd>Descriptive inventory for the complete physical collections.</dd>
 						<dd>
 							<ul>
-								<li>
-									<a href="https://www.chipublib.org/fa-millennium-park-inc/">Millennium Park, Inc. Archives finding aid</a>
-								</li>
-								<li>
-									<a href="https://www.chipublib.org/fa-millennium-park-u-s-equities-realty-collection/">Millennium Park / U.S. Equities Realty Collection finding aid</a>
-								</li>
+								<li><a href="https://www.chipublib.org/fa-chicago-park-district-records/">Chicago Park District Records: Drawings</a></li>
+								<li><a href="https://www.chipublib.org/fa-clarence-hatzfeld-papers/">Clarence Hatzfeld Papers</a></li>
+								<li><a href="https://www.chipublib.org/fa-millennium-park-inc/">Millennium Park, Inc. Archives finding aid</a></li>
+								<li><a href="https://www.chipublib.org/fa-millennium-park-u-s-equities-realty-collection/">Millennium Park / U.S. Equities Realty Collection finding aid</a></li>
+								<li><a href="https://www.chipublib.org/fa-open-space-section-records/">Open Space Section Records</a></li>
 							</ul>
 						</dd>
-						<dt><a href="https://www.chipublib.org/?post_type=post&s=Millennium+Park">Millennium Park blog posts </dt>
+						<dt><a href="https://www.chipublib.org/?post_type=post&s=parks">Park blog posts </dt>
 						<dd>by CPL librarians</dd>
 					</dl>
-				</div>
-				<div class="content-card-paragraph">
-					<span class="rights">The Millennium Park Digital Collection was made possible by generous gifts from U.S. Equities Realty and the Gaylord and Dorothy Donnelley Foundation through the Chicago Public Library Foundation.</span>
 				</div>
 			</div>
 			<!-- right sidebar -->

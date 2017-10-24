@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'African Americans';
+    include 'variables.php';
+	$PAGE_TITLE = $cards[AfAm][title];
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
@@ -39,22 +40,22 @@
 		<!-- center content -->
 			<div class="col-8 col-lg-5 col-xl-6 center-content">
                 <h1><?php echo $PAGE_TITLE; ?></h1>
-                <!-- <span></span> -->
+                <span>Explore Chicago Public Library’s digital collections of African American history. Collections include documents spanning almost 200 years; from the 1790s to 1980s.</span>
                 <div class="center-lightbox">
                     <?php 
                         $IMAGE = array ();
                         $THUMBS = array ();
 
-                        $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/14/default.jpg';
-                        $IMAGE[Main][Text] = 'Women&amp;s Army Corps (WAC) Band, 1944';
-                        $IMAGE[Main][Size] = 'cover';
-                        $IMAGE[Main][Align] = '50% 40%';
-                        
-                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/4/default.jpg';
-                        $THUMBS[Thumb1][Text] = 'Women&rsquo;s reading group at Hall Branch, 1940';
-                        $THUMBS[Thumb1][Size] = '150%';
-                        $THUMBS[Thumb1][Align] = 'center';
+                        $IMAGE[Main][Url] = 'hall033.jpg';
+                        $IMAGE[Main][Text] = 'Women&rsquo;s reading group at Hall Branch, 1940';
+                        $IMAGE[Main][Size] = '100%';
+                        $IMAGE[Main][Align] = '50% 0%';
 
+                        $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/14/default.jpg';
+                        $THUMBS[Thumb1][Text] = 'Women&rsquo;s Army Corps (WAC) Band, 1944';
+                        $THUMBS[Thumb1][Size] = '431px';
+                        $THUMBS[Thumb1][Align] = '0% 20%';
+                        
                         $THUMBS[Thumb2][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/8/default.jpg';
                         $THUMBS[Thumb2][Text] = 'Marian Campfield at the Chicago Defender, 1948';
                         $THUMBS[Thumb2][Size] = '140%';
@@ -79,21 +80,25 @@
                 <div class="center-copy-paragraph">
                     <p>Digital collections that include materials documenting Black history in the United States include:<p>
                     <dl>
-                        <dt><a href="ChiRen.php">Chicago Renaissance</a></dt>
-                        <dd>Manuscripts and photographs documenting the creative movement that blossomed out of the Chicago Black Belt on the city's South Side from the 1930s until the 1950s.</dd>
-                        <dt><a href="HaroldWashington.php">Remembering Harold Washington</a></dt>
-                        <dd>A collection of photographs showcasing the work of Chicago’s first African American mayor.</dd>
-                        <dt><a href="Sang.php">Phillip Sang</a></dt>
-                        <dd>Materials on slavery and abolitionism; including original documents from slave owners, slave traders and insurance companies.</dd>
+					<?php 
+						usort($cards, build_sorter('sortname'));
+						foreach ($cards as $key => $val){
+							if ((is_array($val[category]) && in_array('African Americans', $val[category])) || $val[category] == 'African Americans'){
+								echo '<dt><a href="' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
+							}
+						}
+					?>
                     </dl>
                 </div>
                 <div class="center-copy-list">
                     <h4>More CPL Resources</h4>
                     <dl>
                         <dt><a href="http://gatekeeper.chipublib.org/login?url=http://search.proquest.com/hnpchicagodefender/ip?accountid=303">Chicago Defender Historical Archive</a></dt>
-                        <dd></dd>
+                        <dd>Offers full text, including display and classified advertisements, of this nationally significant African American newspaper from 1910 to 1975.</dd>
                         <dt><a href="https://cpl.thehistorymakers.org/home">HistoryMakers</a></dt>
-                        <dd></dd>
+                        <dd>The largest African American video oral history archive in the world features interviews with African Americans who have made significant contributions in American life or culture.</dd>
+                        <dt><a href="https://www.chipublib.org/tag/african-american-history/">African American history blog posts</a></dt>
+                        <dd>Written by CPL librarians and staff.</dd>
                     </dl>
                 </div>
 			</div>

@@ -25,6 +25,7 @@
 </head>
 <body>
     <?php 
+    include 'variables.php';
     include 'header.html';
     $PAGE_TYPE = 'home';
 

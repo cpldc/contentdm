@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'Henry D. Green';
+	include 'variables.php';
+	$PAGE_TITLE = $cards[HDG][title];
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">

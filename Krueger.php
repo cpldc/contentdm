@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'Robert W. Krueger ';
+    include 'variables.php';
+	$PAGE_TITLE = $cards[RK][title];
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
@@ -80,6 +81,24 @@
                     <p>
                     Krueger photographed hundreds of <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rwk/searchterm/Restaurants/field/subjed/mode/all/conn/and/order/nosort">restaurants</a>, street scenes, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rwk/searchterm/Parks/field/genre/mode/all/conn/and/order/nosort">parks</a>, businesses, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rwk/searchterm/Schools/field/genre/mode/all/conn/and/order/nosort">schools</a>, houses,  <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rwk/searchterm/Cemeteries/field/genre/mode/all/conn/and/order/nosort">cemeteries</a>, religious institutions, community events and residents of North Side neighborhoods. These photographs are a sample of his work.  
                     </p>
+                </div>
+                <div class="center-copy-list">
+                    <h4>More CPL Resources</h4>
+                    <dl>
+                        <dt><a href="https://www.chipublib.org/archival_post/robert-w-krueger-photograph-collection/">Robert W. Krueger Photograph Collection finding aid</a></dt>
+                        <dd>Descriptive inventory for the complete physical collection</dd>
+                        <dt><a href="https://www.chipublib.org/chicago-newspapers-on-microfilm/">Chicago Newspapers</a></dt>
+                        <dd>Online and microfilm</dd>
+                    </dl>
+                </div>
+                <div class="center-copy-list">
+                    <h4>External Resources</h4>
+                    <dl>
+                        <dt><a href="http://www.ravenswoodhistorical.com/">Ravenswood-Lake View Historical Association</a></dt>
+                        <dd>Programs, publications and tours focusing on Chicago northside neighborhood history.</dd>
+                        <dt><a href="http://www.edgewaterhistory.org/ehs/">Edgewater Historical Society</a></dt>
+                        <dd>Exhibits, events and tours of the Edgewater neighborhood.</dd>
+                    </dl>
                 </div>
 			</div>
 		<!-- right sidebar -->

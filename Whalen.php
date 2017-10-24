@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'Wayne Whalen Digital Archive';
+    include 'variables.php';
+	$PAGE_TITLE = $cards[Whalen][title];
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
