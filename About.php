@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <?php 
+    include 'variables.php';
 	$PAGE_TITLE = 'About CPL Digital Collections';
 	$PAGE_TYPE = 'content';
 ?>
@@ -55,14 +56,14 @@
                         Our digital collections come from CPL’s special collections:
                     </p>
                     <dl>
-                        <dt><a href="https://www.chipublib.org/blogs/post/welcome-to-the-municipal-reference-collection/">Municipal Reference Collection</a></dt>
-                        <dd>at Harold Washington Library Center</dd>
-                        <dt><a href="https://www.chipublib.org/northside-neighborhood-history-collection/">Northside Neighborhood History Collection</a></dt>
-                        <dd>at Sulzer Regional Library</dd>
-                        <dt><a href="https://www.chipublib.org/special-collections/">Special Collections</a></dt>
-                        <dd>at Harold Washington Library Center</dd>
-                        <dt><a href="https://www.chipublib.org/vivian-g-harsh-research-collection/">Vivian G. Harsh Research Collection of Afro-American History and Literature</a></dt>
-                        <dd>at Woodson Regional Library</dd>
+					<?php 
+						usort($cards, build_sorter('sortname'));
+						foreach ($cards as $key => $val){
+							if ($val[type] == 'location'){
+								echo '<dt><a href="' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
+							}
+						}
+					?>
                     </dl>
                     <p></p>
                     <p></p>

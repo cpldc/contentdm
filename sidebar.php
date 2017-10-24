@@ -52,6 +52,7 @@
 				<h4 class="left-sidebar-subtitle">Browse by Location</h4>
 				<ul>
 				<?php     
+					usort($cards, build_sorter('sortname'));
     				foreach ($cards as $key => $val){
         				if ($val[type] == 'location'){
 							echo '<li class="left-sidebar-list"><a href="' . $val[link] . '" class="sidebar-links">' . $val[sidebartitle] . '</a></li>';

@@ -400,36 +400,40 @@
     //locations
         
         $cards[HWLCSC][title] = 'Special Collections at HWLC';
+        $cards[HWLCSC][sortname] = 'Special Collections at HWLC';
         $cards[HWLCSC][sidebartitle] = 'Special Collections at HWLC';
         $cards[HWLCSC][pic] = '';
-        $cards[HWLCSC][textshort] = '';
+        $cards[HWLCSC][textshort] = 'at Harold Washington Library Center';
         $cards[HWLCSC][textlong] = '';
         $cards[HWLCSC][link] = 'HWLCSC.php';
         $cards[HWLCSC][coll] = '';
         $cards[HWLCSC][type] = 'location';
 
         $cards[MRC][title] = 'Municipal Reference Collection';
+        $cards[MRC][sortname] = 'Municipal Reference Collection';
         $cards[MRC][sidebartitle] = 'Municipal Reference Collection';
         $cards[MRC][pic] = '';
-        $cards[MRC][textshort] = '';
+        $cards[MRC][textshort] = 'at Harold Washington Library Center';
         $cards[MRC][textlong] = '';
         $cards[MRC][link] = 'MRC.php';
         $cards[MRC][coll] = '';
         $cards[MRC][type] = 'location';
 
         $cards[NNHC][title] = 'Northside Neighborhood History Collection';
+        $cards[NNHC][sortname] = 'Northside Neighborhood History Collection';
         $cards[NNHC][sidebartitle] = 'Northside Neighborhood History Collection';
         $cards[NNHC][pic] = '';
-        $cards[NNHC][textshort] = '';
+        $cards[NNHC][textshort] = 'at Sulzer Regional Library';
         $cards[NNHC][textlong] = '';
         $cards[NNHC][link] = 'Sulzer.php';
         $cards[NNHC][coll] = '';
         $cards[NNHC][type] = 'location';
 
         $cards[Harsh][title] = 'Vivian G. Harsh Collection';
+        $cards[Harsh][sortname] = 'Harsh Collection';
         $cards[Harsh][sidebartitle] = 'Vivian G. Harsh Collection';
         $cards[Harsh][pic] = '';
-        $cards[Harsh][textshort] = '';
+        $cards[Harsh][textshort] = 'at Woodson Regional Library';
         $cards[Harsh][textlong] = '';
         $cards[Harsh][link] = 'Harsh.php';
         $cards[Harsh][coll] = '';
