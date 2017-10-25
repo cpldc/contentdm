@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <?php 
-	$PAGE_TITLE = 'Esther A. Barlow';
+	include 'variables.php';
+	$PAGE_TITLE = $cards[EB][title];
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">

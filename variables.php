@@ -68,6 +68,7 @@
         $cards[ChiRen][textlong] = 'The Black Chicago Renaissance was a creative movement when activism and scholarship flourished with the prodigious work of African American community leaders, performers, artists, writers and activists.';
         $cards[ChiRen][link] = 'ChiRen.php';
         $cards[ChiRen][coll] = 'cr';
+        $cards[ChiRen][location] = 'Harsh';
         $cards[ChiRen][type] = 'collection';
         $cards[ChiRen][flag] = '10';
         
@@ -434,9 +435,9 @@
         $cards[Harsh][sidebartitle] = 'Vivian G. Harsh Collection';
         $cards[Harsh][pic] = '';
         $cards[Harsh][textshort] = 'at Woodson Regional Library';
-        $cards[Harsh][textlong] = '';
+        $cards[Harsh][textlong] = 'The largest African American history and literature collection in the Midwest, the Vivian G. Harsh Research Collection of Afro-American History and Literature documents the black experience with a strong focus on Chicago.';
         $cards[Harsh][link] = 'Harsh.php';
-        $cards[Harsh][coll] = '';
+        $cards[Harsh][coll] = 'cr!p16818coll6';
         $cards[Harsh][type] = 'location';
     
         // $cards[][title] = '';

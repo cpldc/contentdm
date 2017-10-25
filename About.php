@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta charset="UTF-8">
 <?php 
     include 'variables.php';
 	$PAGE_TITLE = 'About CPL Digital Collections';
@@ -19,14 +20,7 @@
         <link rel="stylesheet" href="cpldc.css" >
         <script src="simpleLightbox.min.js"></script>
         <link rel="stylesheet" href="simpleLightbox.min.css">
-<style>
-	div {
-		/* background-color: rgba(0,0,0,0.1); */
-		/* border: 1px solid #fff; */
-	}
-</style>
 </head>
-
 <body>
 <?php 
 	include 'header.html';

@@ -17,13 +17,6 @@
 		<script src="https://use.fontawesome.com/a768f4e0c8.js"></script>
 		<script src="cpldc.js"></script>
 		<link rel="stylesheet" href="cpldc.css" >
-	
-<style>
-	div {
-		/* background-color: rgba(0,0,0,0.1); */
-		/* border: 1px solid #fff; */
-	}
-</style>
 </head>
 
 <body>

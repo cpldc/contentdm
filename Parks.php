@@ -51,7 +51,7 @@
 
                         $IMAGE[Main][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/mpu/4258/default.jpg';
                         $IMAGE[Main][Text] = 'Crown Fountain, children play in the gargoyle spray of the north tower, opening day, July 16, 2004';
-                        $IMAGE[Main][Size] = '500px';
+                        $IMAGE[Main][Size] = '730px';
                         $IMAGE[Main][Align] = '50% 87%';
 
                         $THUMBS[Thumb1][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/66/default.jpg';
