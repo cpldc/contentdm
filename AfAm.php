@@ -3,11 +3,11 @@
 <head>
 <?php 
     include 'variables.php';
-	$PAGE_TITLE = $cards[AfAm][title];
+    $PAGE = $cards[AfAm];
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
-	<title> <?php echo $PAGE_TITLE ?> | Digital Collections | Chicago Public Library</title>
+	<title> <?php echo $PAGE[title] ?> | Digital Collections | Chicago Public Library</title>
 	    <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
 		<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -39,7 +39,7 @@
 			?>
 		<!-- center content -->
 			<div class="col-8 col-lg-5 col-xl-6 center-content">
-                <h1><?php echo $PAGE_TITLE; ?></h1>
+                <h1><?php echo $PAGE[title]; ?></h1>
                 <span>Explore Chicago Public Library’s digital collections of African American history. Collections include documents spanning almost 200 years; from the 1790s to 1980s.</span>
                 <div class="center-lightbox">
                     <?php 
@@ -61,15 +61,15 @@
                         $THUMBS[Thumb2][Size] = '140%';
                         $THUMBS[Thumb2][Align] = 'center';
 
-                        $THUMBS[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/10/default.jpg';
+                        $THUMBS[Thumb3][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/0/default.jpg';
                         $THUMBS[Thumb3][Text] = 'Richard Durham, 1948';
-                        $THUMBS[Thumb3][Size] = '150%';
-                        $THUMBS[Thumb3][Align] = 'center';
+                        $THUMBS[Thumb3][Size] = '112%';
+                        $THUMBS[Thumb3][Align] = '75% 45%';
                         
-                        $THUMBS[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rhwc/30/default.jpg';
-                        $THUMBS[Thumb4][Text] = 'Mayor Washington at the Bud Billiken Parade';
-                        $THUMBS[Thumb4][Size] = '400%';
-                        $THUMBS[Thumb4][Align] = '71% 30%';
+                        $THUMBS[Thumb4][Url] = 'http://digital.chipublib.org/digital/api/singleitem/image/rhwc/6/default.jpg';
+                        $THUMBS[Thumb4][Text] = 'Mayor Washington at the 27th Annual International Folk Fair';
+                        $THUMBS[Thumb4][Size] = '200%';
+                        $THUMBS[Thumb4][Align] = '40% 60%';
 
                         include 'lightbox.php'; 
                     ?>

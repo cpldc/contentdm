@@ -70,7 +70,7 @@
 				</ul>
 			</div>
 			<div class="left-sidebar-related">
-				<h4 class="left-sidebar-subtitle">External Resouces</h4>
+				<h4 class="left-sidebar-subtitle">External Resources</h4>
 				<ul>
 					<li class="left-sidebar-list"><a href="http://bmrc.lib.uchicago.edu/" class="sidebar-links">Black Metropolis Research Consortium</a></li>
 					<li class="left-sidebar-list"><a href="https://dp.la/" class="sidebar-links">Digital Public Library of America</a></li>

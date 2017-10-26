@@ -409,6 +409,9 @@
     .left-sidebar-header {
         height: 53px;
     }
+    .left-sidebar-collapsible ul li a {
+        padding-right: 5px;
+    }
     .left-sidebar-title {
         padding: 17px 0 0 40px;
     }

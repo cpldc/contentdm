@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 <?php 
-	include 'variables.php';
-	$PAGE = $cards[HDG];
-	$PAGE_TITLE = $cards[HDG][title];
+    include 'variables.php';
+    $ID = $_GET['id'];
+	$PAGE = ${$ID};
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
-	<title> <?php echo $PAGE_TITLE ?> | Digital Collections | Chicago Public Library</title>
+	<title> <?php echo $PAGE[title] ?> | Digital Collections | Chicago Public Library</title>
 	    <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
 		<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -34,6 +34,9 @@
 		<!-- center content -->
 			<div class="col-8 col-lg-5 col-xl-6 center-content">
                 <h1><?php echo $PAGE[title]; ?></h1>
+                <p><?php echo $PAGE; ?>test</p>
+                <p><a href="content.php?id=HDG">CLICK HERE!!!!</a><p>
+                <p><a href="content.php?id=EB">CLICK HERE!!!!!</a><p>
                 <span><?php echo $PAGE[textlong]; ?></span>
                 <div class="center-lightbox">
                     <?php 

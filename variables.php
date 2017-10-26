@@ -8,452 +8,554 @@
             };
         }
 
-        $cards = array ();
 
-    //collections
+//collections
 
-        $cards[ChicagoExaminer][title] = 'Chicago Examiner';
-        $cards[ChicagoExaminer][sortname] = 'Chicago Examiner';
-        $cards[ChicagoExaminer][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/5449/default.jpg';
-        $cards[ChicagoExaminer][pich] = '19rem';
-        $cards[ChicagoExaminer][size] = '110% auto';
-        $cards[ChicagoExaminer][pos] = '50% -15px';
-        $cards[ChicagoExaminer][category] = 'Newspapers';
-        $cards[ChicagoExaminer][textshort] = 'Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
-        $cards[ChicagoExaminer][textlong] = 'Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
-        $cards[ChicagoExaminer][link] = 'ChicagoExaminer.php';
-        $cards[ChicagoExaminer][coll] = 'examiner';
-        $cards[ChicagoExaminer][location] = 'HWLC';
-        $cards[ChicagoExaminer][type] = 'collection';
-        $cards[ChicagoExaminer][flag] = '1';
+    $Examiner[title] = 'Chicago Examiner';
+        $Examiner[sortname] = 'Chicago Examiner';
+        $Examiner[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/examiner/5449/default.jpg';
+        $Examiner[pich] = '19rem';
+        $Examiner[size] = '110% auto';
+        $Examiner[pos] = '50% -15px';
+        $Examiner[category] = 'Newspapers';
+        $Examiner[textshort] = 'Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
+        $Examiner[textlong] = 'Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
+        $Examiner[textrich] = '<p>The Chicago Public Library’s 10-year run of the <i>Examiner</i>, while incomplete, extends from 1908 to 1918 and represents the longest run of the paper still available. It is a quintessential example of yellow journalism.</p><p>Follow the tragedy of the <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Eastland!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">shipwreck of the Eastland,</a> a Great Lakes passenger steamer, in which 844 passengers and crew perished while the ship was tied to a dock in the Chicago River; the <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Union!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">infamous 1910 Union Stock Yards fire,</a> the deadliest U.S. building collapse in terms of firefighter deaths until September 11, 2001; <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Dunne!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">the mystery of the Dunne Water Crib fire, </a>told through first-person accounts, reportage, photos, and illustrations; big early 19th century <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/examiner/searchterm/Cubs%20Sox!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">wins for the Cubs and the White Sox.</a></p>';
+        $Examiner[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/examiner/6812/default.jpg',
+            'text'=>'Chicago Examiner Vol. 7 no. 27',
+            'size'=>'150%',
+            'align'=>'78% 5%');
+        $Examiner[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/examiner/51184/default.jpg',
+                'text'=>'Chicago Examiner Vol. 13 no. 187',
+                'size'=>'110px auto',
+                'align'=>'center'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/examiner/12357/default.jpg',
+                'text'=>'Chicago Examiner Vol. 6 no. 253',
+                'size'=>'500px auto',
+                'align'=>'10% 10%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/examiner/51163/default.jpg',
+                'text'=>'Chicago Examiner Vol. 13 no. 186',
+                'size'=>'350px auto',
+                'align'=>'90% 60%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/examiner/477/default.jpg',
+                'text'=>'Chicago Examiner Vol. 12 no. 63',
+                'size'=>'200px',
+                'align'=>'25% 10%'));
+        $Examiner[highlights] = array(array('a'=>'http://chroniclingamerica.loc.gov/',
+                                            'dt'=>'Library of Congress Chronicling America: Historic American Newspapers',
+                                            'dd'=>'For more historic newspapers.'),
+                                      array('a'=>'http://idnc.library.illinois.edu/',
+                                            'dt'=>'Illinois Digital Newspaper Collections',
+                                            'dd'=>'For more Illinois newspapers.'));
+        $Examiner[link] = 'ChicagoExaminer.php';
+        $Examiner[coll] = 'examiner';
+        $Examiner[location] = 'HWLC';
+        $Examiner[type] = 'collection';
+        $Examiner[flag] = '1';
 
-        $cards[EB][title] = 'Esther A. Barlow Collection';
-        $cards[EB][sortname] = 'Barlow, Esther A. Collection';
-        $cards[EB][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/bar/43/default.jpg';
-        $cards[EB][pich] = '20rem';
-        $cards[EB][size] = '110%';
-        $cards[EB][pos] = 'auto';
-        $cards[EB][category] = 'Libraries &amp; Education';
-        $cards[EB][textshort] = 'Family photographs of Esther Barlow and images of her work at Hild Regional Library and Lake View Branch Library from 1927-1976.';
-        $cards[EB][textlong] = 'Esther Barlow was a children’s librarian in neighborhood branches of the Chicago Public Library from 1927 until 1976.';
-        $cards[EB][link] = 'Barlow.php';
-        $cards[EB][coll] = 'bar';
-        $cards[EB][location] = 'NNHC';
-        $cards[EB][type] = 'collection';
-        $cards[EB][flag] = '8';
+    $EB[title] = 'Esther A. Barlow Collection';
+        $EB[sortname] = 'Barlow, Esther A. Collection';
+        $EB[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/bar/43/default.jpg';
+        $EB[pich] = '20rem';
+        $EB[size] = '110%';
+        $EB[pos] = 'auto';
+        $EB[category] = 'Libraries &amp; Education';
+        $EB[textshort] = 'Family photographs of Esther Barlow and images of her work at Hild Regional Library and Lake View Branch Library from 1927-1976.';
+        $EB[textlong] = 'Esther Barlow was a children’s librarian in neighborhood branches of the Chicago Public Library from 1927 until 1976.';
+        $EB[textrich] = 'Included in this collection are photographs of the <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/bar/searchterm/Barlow%20family/field/subjed/mode/all/conn/and/order/nosort">Barlow family</a> and images of Esther Barlow at work at the Hild Regional Library and Lake View Branch Library. Photographs showcase Barlow with her colleagues and her <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/bar/searchterm/Working%20with%20children/field/subjed/mode/all/conn/and/order/nosort">work with children. </a>';
+        $EB[mainimage] = array(
+            'url'=>'http://digital.chipublib.org/digital/api/singleitem/image/bar/52/default.jpg',
+            'text'=>'Lake View Branch, Group picture, staff on front steps',
+            'size'=>'',
+            'align'=>'55% 50%');
+        $EB[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/bar/199/default.jpg',
+                    'text'=>'Hild Regional Library, Children&rsquo;s Department, Story Hour in Welles Park',
+                    'size'=>'400px',
+                    'align'=>'15% 20%'),
+                array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/bar/70/default.jpg',
+                    'text'=>'Lake View Branch, Esther Barlow at circulation desk',
+                    'size'=>'500px',
+                    'align'=>'53% 49%'),
+                array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/bar/16/default.jpg',
+                    'text'=>'Portrait of Esther Barlow and Buddy Flaskerud sitting in a wagon.',
+                    'size'=>'400px',
+                    'align'=>'33% 22%'));
+        $EB[link] = 'Barlow.php';
+        $EB[coll] = 'bar';
+        $EB[location] = 'NNHC';
+        $EB[type] = 'collection';
+        $EB[flag] = '8';
 
-        $cards[CPL][title] = 'Chicago Public Library Archives';
-        $cards[CPL][sortname] = 'Chicago Public Library Archives';
-        $cards[CPL][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/woop/45/default.jpg';
-        $cards[CPL][pich] = '200px;';
-        $cards[CPL][size] = '100%';
-        $cards[CPL][pos] = '50% -20px';
-        $cards[CPL][category] = 'Libraries &amp; Education';
-        $cards[CPL][textshort] = 'On January 1, 1873 the Chicago Public Library opened its doors in a water tank that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to the development of neighborhood libraries across the city.';
-        $cards[CPL][textlong] = 'On January 1, 1873 the Chicago Public Library opened its doors in a water tank that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to the development of neighborhood libraries across the city.';
-        $cards[CPL][link] = 'CPL.php';
-        $cards[CPL][coll] = 'woop';
-        $cards[CPL][location] = 'HWLC';
-        $cards[CPL][type] = 'collection';
-        $cards[CPL][flag] = '9';
+    $CPL[title] = 'Chicago Public Library Archives';
+        $CPL[sortname] = 'Chicago Public Library Archives';
+        $CPL[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/woop/45/default.jpg';
+        $CPL[pich] = '200px;';
+        $CPL[size] = '100%';
+        $CPL[pos] = '50% -20px';
+        $CPL[category] = 'Libraries &amp; Education';
+        $CPL[textshort] = 'On January 1, 1873 the Chicago Public Library opened its doors in a water tank that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to the development of neighborhood libraries across the city.';
+        $CPL[textlong] = 'On January 1, 1873 the Chicago Public Library opened its doors in a water tank that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to the development of neighborhood libraries across the city.';
+        $CPL[link] = 'CPL.php';
+        $CPL[coll] = 'woop';
+        $CPL[location] = 'HWLC';
+        $CPL[type] = 'collection';
+        $CPL[flag] = '9';
 
-        $cards[ChiRen][title] = 'Chicago Renaissance';
-        $cards[ChiRen][sortname] = 'Chicago Renaissance';
-        $cards[ChiRen][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/12/default.jpg';
-        $cards[ChiRen][pich] = '20rem';
-        $cards[ChiRen][size] = 'auto';
-        $cards[ChiRen][pos] = 'auto';
-        $cards[ChiRen][category] = 'African Americans';
-        $cards[ChiRen][textshort] = 'African American community leaders, performers, artists, writers and activists on Chicago&rsquo;s South Side, 1930-1950.';
-        $cards[ChiRen][textlong] = 'The Black Chicago Renaissance was a creative movement when activism and scholarship flourished with the prodigious work of African American community leaders, performers, artists, writers and activists.';
-        $cards[ChiRen][link] = 'ChiRen.php';
-        $cards[ChiRen][coll] = 'cr';
-        $cards[ChiRen][location] = 'Harsh';
-        $cards[ChiRen][type] = 'collection';
-        $cards[ChiRen][flag] = '10';
+    $ChiRen[title] = 'Chicago Renaissance';
+        $ChiRen[sortname] = 'Chicago Renaissance';
+        $ChiRen[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/12/default.jpg';
+        $ChiRen[pich] = '20rem';
+        $ChiRen[size] = 'auto';
+        $ChiRen[pos] = 'auto';
+        $ChiRen[category] = 'African Americans';
+        $ChiRen[textshort] = 'African American community leaders, performers, artists, writers and activists on Chicago&rsquo;s South Side, 1930-1950.';
+        $ChiRen[textlong] = 'The Black Chicago Renaissance was a creative movement when activism and scholarship flourished with the prodigious work of African American community leaders, performers, artists, writers and activists.';
+        $ChiRen[link] = 'ChiRen.php';
+        $ChiRen[coll] = 'cr';
+        $ChiRen[location] = 'Harsh';
+        $ChiRen[type] = 'collection';
+        $ChiRen[flag] = '10';
         
-        $cards[Sewers][title] = 'Chicago Sewers Collection';
-        $cards[Sewers][sortname] = 'Chicago Sewers Collection';
-        $cards[Sewers][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/dtd/157/default.jpg';
-        $cards[Sewers][pich] = '200px';
-        $cards[Sewers][size] = '120%';
-        $cards[Sewers][pos] = '50% -20px';
-        $cards[Sewers][category] = 'Neighborhoods';
-        $cards[Sewers][textshort] = 'Photographs of sewer systems and passageways from 1925-1949 offer a rare look at the underbelly of Chicago.';
-        $cards[Sewers][textlong] = 'The sewer systems and passageways that lie beneath our feet are critical to the health and well being of the city. Offering a rare look at the “underbelly” of Chicago, this collection of historic images features construction photographs of sewers and tunnels.';
-        $cards[Sewers][link] = 'Sewers.php';
-        $cards[Sewers][coll] = 'dtd';
-        $cards[Sewers][type] = 'collection';
-        $cards[Sewers][flag] = 'x';
+    $Sewers[title] = 'Chicago Sewers Collection';
+        $Sewers[sortname] = 'Chicago Sewers Collection';
+        $Sewers[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/dtd/157/default.jpg';
+        $Sewers[pich] = '200px';
+        $Sewers[size] = '120%';
+        $Sewers[pos] = '50% -20px';
+        $Sewers[category] = 'Neighborhoods';
+        $Sewers[textshort] = 'Photographs of sewer systems and passageways from 1925-1949 offer a rare look at the underbelly of Chicago.';
+        $Sewers[textlong] = 'The sewer systems and passageways that lie beneath our feet are critical to the health and well being of the city. Offering a rare look at the “underbelly” of Chicago, this collection of historic images features construction photographs of sewers and tunnels.';
+        $Sewers[link] = 'Sewers.php';
+        $Sewers[coll] = 'dtd';
+        $Sewers[type] = 'collection';
+        $Sewers[flag] = 'x';
         
-        $cards[Theater][title] = 'Chicago Theater Collection';
-        $cards[Theater][sidebartitle] = 'Theater';
-        $cards[Theater][sortname] = 'Chicago Theater Collection';
-        $cards[Theater][pic] = 'http://digital.chipublib.org/digital/image/CPB01/thumbnail';
-        $cards[Theater][pich] = '250px';
-        $cards[Theater][size] = '110%';
-        $cards[Theater][pos] = 'auto';
-        $cards[Theater][category] = '';
-        $cards[Theater][textshort] = 'Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.';
-        $cards[Theater][textlong] = 'Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
-        $cards[Theater][link] = 'Theater.php';
-        $cards[Theater][coll] = 'CPB01';
-        $cards[Theater][location] = 'HWLC';
-        $cards[Theater][type] = 'collection';
-        $cards[Theater][flag] = '4';
-        $cards[Theater][sidebarflag] = 'x';
+    $Theater[title] = 'Chicago Theater Collection';
+        $Theater[sidebartitle] = 'Theater';
+        $Theater[sortname] = 'Chicago Theater Collection';
+        $Theater[pic] = 'http://digital.chipublib.org/digital/image/CPB01/thumbnail';
+        $Theater[pich] = '250px';
+        $Theater[size] = '110%';
+        $Theater[pos] = 'auto';
+        $Theater[category] = '';
+        $Theater[textshort] = 'Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.';
+        $Theater[textlong] = 'Chicago Public Library’s 10-year run of the Chicago Examiner extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
+        $Theater[link] = 'Theater.php';
+        $Theater[coll] = 'CPB01';
+        $Theater[location] = 'HWLC';
+        $Theater[type] = 'collection';
+        $Theater[flag] = '4';
+        $Theater[sidebarflag] = 'x';
 
-        $cards[Whalen][title] = 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
-        $cards[Whalen][sortname] = 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
-        $cards[Whalen][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/341/default.jpg';
-        $cards[Whalen][pich] = '280px';
-        $cards[Whalen][size] = '110%';
-        $cards[Whalen][pos] = '50% 40%';
-        $cards[Whalen][category] = 'Civil War';
-        $cards[Whalen][textshort] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.';
-        $cards[Whalen][textlong] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.';
-        $cards[Whalen][link] = 'Whalen.php';
-        $cards[Whalen][coll] = 'wha';
-        $cards[Whalen][location] = 'HWLC';
-        $cards[Whalen][type] = 'collection';
-        $cards[Whalen][flag] = '2';
+    $Whalen[title] = 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
+        $Whalen[sortname] = 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
+        $Whalen[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/wha/341/default.jpg';
+        $Whalen[pich] = '280px';
+        $Whalen[size] = '110%';
+        $Whalen[pos] = '50% 40%';
+        $Whalen[category] = 'Civil War';
+        $Whalen[textshort] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.';
+        $Whalen[textlong] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.';
+        $Whalen[link] = 'Whalen.php';
+        $Whalen[coll] = 'wha';
+        $Whalen[location] = 'HWLC';
+        $Whalen[type] = 'collection';
+        $Whalen[flag] = '2';
 
-        // $cards[HDG][title] = 'Henry D. Green Photograph Collection';
-        // $cards[HDG][sortname] = 'Green, Henry D. Photograph Collection';
-        // $cards[HDG][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/hdg/123/default.jpg';
-        // $cards[HDG][pich] = '250px';
-        // $cards[HDG][size] = '110%';
-        // $cards[HDG][pos] = '50% 50%';
-        // $cards[HDG][category] = 'Neighborhoods';
-        // $cards[HDG][textshort] = 'Photographs by Henry Green of businesses, community groups, neighborhood celebrations, and school events on Chicago’s North Side, 1943-1951.';
-        // $cards[HDG][textlong] = 'Chicago Public Library’s Northside Neighborhood History Collection houses the photographs of Henry Green, a commercial photographer on Chicago’s North Side.';
-        // $cards[HDG][link] = 'Green.php';
-        // $cards[HDG][coll] = 'hdg';
-        // $cards[HDG][location] = 'NNHC';
-        // $cards[HDG][type] = 'collection';
-        // $cards[HDG][flag] = '7';
+    $HDG[title] = 'Henry D. Green Photograph Collection';
+        $HDG[sortname] = 'Green, Henry D. Photograph Collection';
+        $HDG[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/hdg/123/default.jpg';
+        $HDG[pich] = '250px';
+        $HDG[size] = '110%';
+        $HDG[pos] = '50% 50%';
+        $HDG[category] = 'Neighborhoods';
+        $HDG[textshort] = 'Photographs by Henry Green of businesses, community groups, neighborhood celebrations, and school events on Chicago’s North Side, 1943-1951.';
+        $HDG[textlong] = 'Chicago Public Library’s Northside Neighborhood History Collection houses the photographs of Henry Green, a commercial photographer on Chicago’s North Side.';
+        $HDG[textrich] = 'Subjects in the collection include local <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/hdg/searchterm/Business%20establishments/field/subjed/mode/all/conn/and/order/nosort">business establishments</a>, community groups, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/hdg/searchterm/Religious%20institutions/field/subjed/mode/all/conn/and/order/nosort">religious institutions</a>, celebrations in neighborhood parks and events at local schools. Many photographs reflect life on the North Side during World War II, including images of <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/hdg/searchterm/Military%20personnel/field/subjed/mode/all/conn/and/order/nosort">military personnel</a>.';
+        $HDG[link] = 'Green.php';
+        $HDG[findingaid] = array('text'=>'Henry Delorval Green Photograph Collection, 1942-1953','link'=>'http://chsmedia.org/media/fa/fa/1981/65.htm');
+        $HDG[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/hdg/6/default.jpg',
+                                       'text'=>'American Legion/Albany Park Post 24',
+                                       'size'=>'110%',
+                                       'align'=>'center');
+        $HDG[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/hdg/174/default.jpg',
+                                    'text'=>'Girl Scouts Troup 119 Tin Can Salvage',
+                                    'size'=>'130%',
+                                    'align'=>'40% 25%'),
+                                    array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/hdg/669/default.jpg',
+                                    'text'=>'Monadnock Coffee Shop',
+                                    'size'=>'',
+                                    'align'=>'47% 57%'),
+                                    array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/hdg/345/default.jpg',
+                                    'text'=>'Portrait of Henry Delorval Green',
+                                    'size'=>'120%',
+                                    'align'=>'45% 27%'),
+                                    array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/hdg/123/default.jpg',
+                                    'text'=>'Chicago Fire Department',
+                                    'size'=>'130%',
+                                    'align'=>'center'));
+        $HDG[coll] = 'hdg';
+        $HDG[location] = 'NNHC';
+        $HDG[type] = 'collection';
+        $HDG[flag] = '7';
         
-        $cards[RK][title] = 'Robert W. Krueger Photograph Collection';
-        $cards[RK][sortname] = 'Krueger, Robert W. Photograph Collection';
-        $cards[RK][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/1365/default.jpg';
-        $cards[RK][pich] = '210px';
-        $cards[RK][size] = '100%';
-        $cards[RK][pos] = '50% 50%';
-        $cards[RK][category] = 'Neighborhoods';
-        $cards[RK][textshort] = 'Local photographer Robert Krueger documented Chicago’s North Side with photographs of community events, buildings, and people.';
-        $cards[RK][textlong] = 'In 1984, Chicago Public Library began working with local photographer Robert Krueger to document the North Side.';
-        $cards[RK][link] = 'Krueger.php';
-        $cards[RK][coll] = 'rwk';
-        $cards[RK][location] = 'NNHC';
-        $cards[RK][type] = 'collection';
-        $cards[RK][flag] = '6';
+    $RK[title] = 'Robert W. Krueger Photograph Collection';
+        $RK[sortname] = 'Krueger, Robert W. Photograph Collection';
+        $RK[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/rwk/1365/default.jpg';
+        $RK[pich] = '210px';
+        $RK[size] = '100%';
+        $RK[pos] = '50% 50%';
+        $RK[category] = 'Neighborhoods';
+        $RK[textshort] = 'Local photographer Robert Krueger documented Chicago’s North Side with photographs of community events, buildings, and people.';
+        $RK[textlong] = 'In 1984, Chicago Public Library began working with local photographer Robert Krueger to document the North Side.';
+        $RK[link] = 'Krueger.php';
+        $RK[coll] = 'rwk';
+        $RK[location] = 'NNHC';
+        $RK[type] = 'collection';
+        $RK[flag] = '6';
 
-        $cards[MP][title] = 'Millennium Park. U.S. Equities Realty Collection';
-        $cards[MP][sortname] = 'Millennium Park. U.S. Equities Realty Collection';
-        $cards[MP][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/mpu/2239/default.jpg';
-        $cards[MP][pich] = '240px';
-        $cards[MP][size] = '130%';
-        $cards[MP][pos] = '35% 50%';
-        $cards[MP][category] = 'Parks';
-        $cards[MP][textshort] = 'Transformation from rail yard to dynamic urban park.';
-        $cards[MP][textlong] = 'Watch the Millennium Park site transform from an industrial wasteland to a new urban park of world renown from 1999-2005, under the project management of U.S. Equities Realty and acclaimed architects and artists.';
-        $cards[MP][link] = 'MillenniumPark.php';
-        $cards[MP][coll] = 'mpu';
-        $cards[MP][location] = 'HWLC';
-        $cards[MP][type] = 'collection';
-        $cards[MP][flag] = '3';
+    $MP[title] = 'Millennium Park. U.S. Equities Realty Collection';
+        $MP[sortname] = 'Millennium Park. U.S. Equities Realty Collection';
+        $MP[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/mpu/2239/default.jpg';
+        $MP[pich] = '240px';
+        $MP[size] = '130%';
+        $MP[pos] = '35% 50%';
+        $MP[category] = 'Parks';
+        $MP[textshort] = 'Transformation from rail yard to dynamic urban park.';
+        $MP[textlong] = 'Watch the Millennium Park site transform from an industrial wasteland to a new urban park of world renown from 1999-2005, under the project management of U.S. Equities Realty and acclaimed architects and artists.';
+        $MP[link] = 'MillenniumPark.php';
+        $MP[coll] = 'mpu';
+        $MP[location] = 'HWLC';
+        $MP[type] = 'collection';
+        $MP[flag] = '3';
         
-        $cards[NCO][title] = 'Northside Clubs and Organizations';
-        $cards[NCO][sortname] = 'Northside Clubs and Organizations';
-        $cards[NCO][pic] = '';
-        $cards[NCO][pich] = '250px';
-        $cards[NCO][size] = '110%';
-        $cards[NCO][pos] = '50% 50%';
-        $cards[NCO][category] = 'Neighborhoods';
-        $cards[NCO][textshort] = '';
-        $cards[NCO][textlong] = '';
-        $cards[NCO][link] = 'NCO.php';
-        $cards[NCO][coll] = 'cfc';
-        $cards[NCO][location] = 'NNHC';
-        $cards[NCO][type] = 'collection';
-        $cards[NCO][flag] = 'x';
+    $NCO[title] = 'Northside Clubs and Organizations';
+        $NCO[sortname] = 'Northside Clubs and Organizations';
+        $NCO[pic] = '';
+        $NCO[pich] = '250px';
+        $NCO[size] = '110%';
+        $NCO[pos] = '50% 50%';
+        $NCO[category] = 'Neighborhoods';
+        $NCO[textshort] = '';
+        $NCO[textlong] = '';
+        $NCO[link] = 'NCO.php';
+        $NCO[coll] = 'cfc';
+        $NCO[location] = 'NNHC';
+        $NCO[type] = 'collection';
+        $NCO[flag] = 'x';
 
-        $cards[NHS][title] = 'Northside High Schools';
-        $cards[NHS][sortname] = 'Northside High Schools';
-        $cards[NHS][pic] = '';
-        $cards[NHS][pich] = '250px';
-        $cards[NHS][size] = '110%';
-        $cards[NHS][pos] = '50% 50%';
-        $cards[NHS][category] = 'Neighborhoods';
-        $cards[NHS][textshort] = '';
-        $cards[NHS][textlong] = '';
-        $cards[NHS][link] = 'NHS.php';
-        $cards[NHS][coll] = 'ahs';
-        $cards[NHS][location] = 'NNHC';
-        $cards[NHS][type] = 'collection';
-        $cards[NHS][flag] = 'x';
+    $NHS[title] = 'Northside High Schools';
+        $NHS[sortname] = 'Northside High Schools';
+        $NHS[pic] = '';
+        $NHS[pich] = '250px';
+        $NHS[size] = '110%';
+        $NHS[pos] = '50% 50%';
+        $NHS[category] = 'Neighborhoods';
+        $NHS[textshort] = '';
+        $NHS[textlong] = '';
+        $NHS[link] = 'NHS.php';
+        $NHS[coll] = 'ahs';
+        $NHS[location] = 'NNHC';
+        $NHS[type] = 'collection';
+        $NHS[flag] = 'x';
 
-        $cards[ParkDistrict][title] = 'Chicago Park District Records: Photographs';
-        $cards[ParkDistrict][sortname] = 'Chicago Park District Records: Photographs';
-        $cards[ParkDistrict][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/rvw/1539/default.jpg';
-        $cards[ParkDistrict][pich] = '250px';
-        $cards[ParkDistrict][size] = '110%';
-        $cards[ParkDistrict][pos] = '10% 5%';
-        $cards[ParkDistrict][category] = 'Parks';
-        $cards[ParkDistrict][textshort] = 'Chicago Public Library is currently finalizing the Chicago Park District Records, which will be available in 2018.';
-        $cards[ParkDistrict][textlong] = 'Chicago Public Library is currently finalizing the Chicago Park District Records, which will be available in 2018.';
-        $cards[ParkDistrict][link] = 'CPD.php';
-        $cards[ParkDistrict][coll] = 'ChicagoParks';
-        $cards[ParkDistrict][type] = 'collection';
-        $cards[ParkDistrict][flag] = 'x';
+    $ParkDistrict[title] = 'Chicago Park District Records: Photographs';
+        $ParkDistrict[sortname] = 'Chicago Park District Records: Photographs';
+        $ParkDistrict[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/rvw/1539/default.jpg';
+        $ParkDistrict[pich] = '250px';
+        $ParkDistrict[size] = '110%';
+        $ParkDistrict[pos] = '10% 5%';
+        $ParkDistrict[category] = 'Parks';
+        $ParkDistrict[textshort] = 'Chicago Public Library is currently finalizing the Chicago Park District Records, which will be available in 2018.';
+        $ParkDistrict[textlong] = 'Chicago Public Library is currently finalizing the Chicago Park District Records, which will be available in 2018.';
+        $ParkDistrict[link] = 'CPD.php';
+        $ParkDistrict[coll] = 'ChicagoParks';
+        $ParkDistrict[type] = 'collection';
+        $ParkDistrict[flag] = 'x';
 
-        $cards[HW][title] = 'Remembering Harold Washington';
-        $cards[HW][sortname] = 'Remembering Harold Washington';
-        $cards[HW][sidebartitle] = 'Harold Washington';
-        $cards[HW][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/rhwc/30/default.jpg';
-        $cards[HW][pich] = '250px';
-        $cards[HW][size] = '200%';
-        $cards[HW][pos] = '75% 40%';
-        $cards[HW][category] = 'African Americans';
-        $cards[HW][textshort] = 'The first African American mayor of Chicago, serving from 1983 to 1987, and his importance in the city’s history.';
-        $cards[HW][textlong] = 'Harold Washington was the first African American mayor of Chicago, serving from 1983 to 1987. This collection captures Mayor Washington at community, political, and charity events and demonstrates his importance in the history of Chicago.';
-        $cards[HW][link] = 'HaroldWashington.php';
-        $cards[HW][coll] = 'rhwc';
-        $cards[HW][location] = 'HWLC';
-        $cards[HW][type] = 'collection';
-        $cards[HW][flag] = '5';
-        $cards[HW][sidebarflag] = 'x';
+    $HW[title] = 'Remembering Harold Washington';
+        $HW[sortname] = 'Remembering Harold Washington';
+        $HW[sidebartitle] = 'Harold Washington';
+        $HW[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/rhwc/30/default.jpg';
+        $HW[pich] = '250px';
+        $HW[size] = '200%';
+        $HW[pos] = '75% 40%';
+        $HW[category] = 'African Americans';
+        $HW[textshort] = 'The first African American mayor of Chicago, serving from 1983 to 1987, and his importance in the city’s history.';
+        $HW[textlong] = 'Harold Washington was the first African American mayor of Chicago, serving from 1983 to 1987. This collection captures Mayor Washington at community, political, and charity events and demonstrates his importance in the history of Chicago.';
+        $HW[link] = 'HaroldWashington.php';
+        $HW[coll] = 'rhwc';
+        $HW[location] = 'HWLC';
+        $HW[type] = 'collection';
+        $HW[flag] = '5';
+        $HW[sidebarflag] = 'x';
         
-        $cards[RWLV][title] = 'Ravenswood-Lake View Community Collection';
-        $cards[RWLV][sortname] = 'Ravenswood-Lake View Community Collection';
-        $cards[RWLV][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/rvw/1086/default.jpg';
-        $cards[RWLV][pich] = '250px';
-        $cards[RWLV][size] = '250%';
-        $cards[RWLV][pos] = '24% 45%';
-        $cards[RWLV][category] = array('Neighborhoods','Libraries &amp; Education');
-        $cards[RWLV][textshort] = 'Street scenes and community life on the North Side, 1860s-1990s';
-        $cards[RWLV][textlong] = 'Lake View Township and its evolution from an independent municipality into current Northside communities, 1860s-1990s';
-        $cards[RWLV][link] = 'RWLV.php';
-        $cards[RWLV][coll] = 'rvw';
-        $cards[RWLV][location] = 'NNHC';
-        $cards[RWLV][type] = 'collection';
-        $cards[RWLV][flag] = '1';
+    $RWLV[title] = 'Ravenswood-Lake View Community Collection';
+        $RWLV[sortname] = 'Ravenswood-Lake View Community Collection';
+        $RWLV[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/rvw/1086/default.jpg';
+        $RWLV[pich] = '250px';
+        $RWLV[size] = '250%';
+        $RWLV[pos] = '24% 45%';
+        $RWLV[category] = array('Neighborhoods','Libraries &amp; Education');
+        $RWLV[textshort] = 'Street scenes and community life on the North Side, 1860s-1990s';
+        $RWLV[textlong] = 'Lake View Township and its evolution from an independent municipality into current Northside communities, 1860s-1990s';
+        $RWLV[link] = 'RWLV.php';
+        $RWLV[coll] = 'rvw';
+        $RWLV[location] = 'NNHC';
+        $RWLV[type] = 'collection';
+        $RWLV[flag] = '1';
         
-        $cards[Sang][title] = 'Philip David Sang Collection';
-        $cards[Sang][sortname] = 'Sang, Philip David Collection';
-        $cards[Sang][pic] = '';
-        $cards[Sang][category] = array('African Americans','Civil War');
-        $cards[Sang][textshort] = '';
-        $cards[Sang][textlong] = '';
-        $cards[Sang][link] = 'Sang.php';
-        $cards[Sang][coll] = 'p16818coll6';
-        $cards[Sang][location] = 'Harsh';
-        $cards[Sang][type] = 'collection';
-        $cards[Sang][flag] = '4';
+    $Sang[title] = 'Philip David Sang Collection';
+        $Sang[sortname] = 'Sang, Philip David Collection';
+        $Sang[pic] = '';
+        $Sang[category] = array('African Americans','Civil War');
+        $Sang[textshort] = '';
+        $Sang[textlong] = '';
+        $Sang[link] = 'Sang.php';
+        $Sang[coll] = 'p16818coll6';
+        $Sang[location] = 'Harsh';
+        $Sang[type] = 'collection';
+        $Sang[flag] = '4';
 
-    //subcollections
+//subcollections
             
-        $cards[Amund][title] = 'Amundsen High School Collection';
-        $cards[Amund][sortname] = 'Amundsen High School Collection';
-        $cards[Amund][textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
-        $cards[Amund][link] = '#ahs';
-        $cards[Amund][type] = 'subcollection';
+    $Amund[title] = 'Amundsen High School Collection';
+        $Amund[sortname] = 'Amundsen High School Collection';
+        $Amund[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
+        $Amund[link] = '#ahs';
+        $Amund[type] = 'subcollection';
 
-        $cards[Kins][title] = 'Helen G. Kinsella Collection';
-        $cards[Kins][sortname] = 'Kinsella, Helen G. Collection';
-        $cards[Kins][textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
-        $cards[Kins][link] = '#ahs';
-        $cards[Kins][type] = 'subcollection';
+    $Kins[title] = 'Helen G. Kinsella Collection';
+        $Kins[sortname] = 'Kinsella, Helen G. Collection';
+        $Kins[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
+        $Kins[link] = '#ahs';
+        $Kins[type] = 'subcollection';
 
-        $cards[LVHS][title] = 'Lake View High School Collection';
-        $cards[LVHS][sortname] = 'Lake View High School Collection';
-        $cards[LVHS][textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
-        $cards[LVHS][link] = '#ahs';
-        $cards[LVHS][type] = 'subcollection';
+    $LVHS[title] = 'Lake View High School Collection';
+        $LVHS[sortname] = 'Lake View High School Collection';
+        $LVHS[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
+        $LVHS[link] = '#ahs';
+        $LVHS[type] = 'subcollection';
 
-        $cards[Walz][title] = 'Louis D. Walz Collection';
-        $cards[Walz][sortname] = 'Walz, Louis D. Collection';
-        $cards[Walz][textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
-        $cards[Walz][link] = '#ahs';
-        $cards[Walz][type] = 'subcollection';
+    $Walz[title] = 'Louis D. Walz Collection';
+        $Walz[sortname] = 'Walz, Louis D. Collection';
+        $Walz[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
+        $Walz[link] = '#ahs';
+        $Walz[type] = 'subcollection';
 
-        $cards[CFCC][title] = 'Christian Fellowship Church Collection';
-        $cards[CFCC][sortname] = 'Christian Fellowship Church Collection';
-        $cards[CFCC][textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
-        $cards[CFCC][link] = '#cfc';
-        $cards[CFCC][type] = 'subcollection';
+    $CFCC[title] = 'Christian Fellowship Church Collection';
+        $CFCC[sortname] = 'Christian Fellowship Church Collection';
+        $CFCC[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
+        $CFCC[link] = '#cfc';
+        $CFCC[type] = 'subcollection';
 
-        $cards[LVCRA][title] = 'Lake View Council on Religious Action';
-        $cards[LVCRA][sortname] = 'Lake View Council on Religious Action';
-        $cards[LVCRA][textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
-        $cards[LVCRA][link] = '#cfc';
-        $cards[LVCRA][type] = 'subcollection';
+    $LVCRA[title] = 'Lake View Council on Religious Action';
+        $LVCRA[sortname] = 'Lake View Council on Religious Action';
+        $LVCRA[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
+        $LVCRA[link] = '#cfc';
+        $LVCRA[type] = 'subcollection';
 
-        $cards[PortPark][title] = 'Portage Park Community Collection';
-        $cards[PortPark][sortname] = 'Portage Park Community Collection';
-        $cards[PortPark][textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
-        $cards[PortPark][link] = '#cfc';
-        $cards[PortPark][type] = 'subcollection';
+    $PortPark[title] = 'Portage Park Community Collection';
+        $PortPark[sortname] = 'Portage Park Community Collection';
+        $PortPark[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
+        $PortPark[link] = '#cfc';
+        $PortPark[type] = 'subcollection';
 
-        $cards[RMIA][title] = 'Ravenswood Manor Improvement Association Collection';
-        $cards[RMIA][sortname] = 'Ravenswood Manor Improvement Association Collection';
-        $cards[RMIA][textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
-        $cards[RMIA][link] = '#cfc';
-        $cards[RMIA][type] = 'subcollection';
+    $RMIA[title] = 'Ravenswood Manor Improvement Association Collection';
+        $RMIA[sortname] = 'Ravenswood Manor Improvement Association Collection';
+        $RMIA[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
+        $RMIA[link] = '#cfc';
+        $RMIA[type] = 'subcollection';
 
-        $cards[HWR][title] = 'Washington, Harold';
-        $cards[HWR][sortname] = 'Washington, Harold';
-        $cards[HWR][textlong] = 'See <a href="#rhwc">Remembering Harold Washington</a>';
-        $cards[HWR][link] = '#rhwc';
-        $cards[HWR][type] = 'subcollection';
+    $HWR[title] = 'Washington, Harold';
+        $HWR[sortname] = 'Washington, Harold';
+        $HWR[textlong] = 'See <a href="#rhwc">Remembering Harold Washington</a>';
+        $HWR[link] = '#rhwc';
+        $HWR[type] = 'subcollection';
 
-    //categories
+//categories
 
-        $cards[AfAm][title] = 'African Americans';
-        $cards[AfAm][sidebartitle] = 'African Americans';
-        $cards[AfAm][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/10/default.jpg';
-        $cards[AfAm][pich] = '250px';
-        $cards[AfAm][size] = '110%';
-        $cards[AfAm][pos] = '50% 50%';
-        $cards[AfAm][textshort] = 'Chicago Public Library collections that document African American history in Chicago and throughout the United States.';
-        $cards[AfAm][textlong] = 'Chicago Public Library collections that document African American history in Chicago and throughout the United States.';
-        $cards[AfAm][link] = 'AfAm.php';
-        $cards[AfAm][coll] = 'cr!rhwc!p16818coll6';
-        $cards[AfAm][type] = 'category';
-        $cards[AfAm][flag] = 'x';
-        $cards[AfAm][sidebarflag] = 'x';
+    $AfAm[title] = 'African Americans';
+        $AfAm[sidebartitle] = 'African Americans';
+        $AfAm[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/cr/10/default.jpg';
+        $AfAm[pich] = '250px';
+        $AfAm[size] = '110%';
+        $AfAm[pos] = '50% 50%';
+        $AfAm[textshort] = 'Chicago Public Library collections that document African American history in Chicago and throughout the United States.';
+        $AfAm[textlong] = 'Chicago Public Library collections that document African American history in Chicago and throughout the United States.';
+        $AfAm[catcoll] = 'materials documenting Black history in the United States';
+        $AfAm[CPLRes] = array(array('a'=>'http://gatekeeper.chipublib.org/login?url=http://search.proquest.com/hnpchicagodefender/ip?accountid=303',
+                                            'dt'=>'Chicago Defender Historical Archive',
+                                            'dd'=>'Offers full text, including display and classified advertisements, of this nationally significant African American newspaper from 1910 to 1975.'),
+                              array('a'=>'https://cpl.thehistorymakers.org/home',
+                                            'dt'=>'HistoryMakers',
+                                            'dd'=>'The largest African American video oral history archive in the world features interviews with African Americans who have made significant contributions in American life or culture.'),
+                              array('a'=>'https://www.chipublib.org/tag/african-american-history/',
+                                            'dt'=>'African American history blog posts',
+                                            'dd'=>'Written by CPL librarians and staff.'));
+        $AfAm[mainimage] = array('url'=>'hall033.jpg',
+            'text'=>'Women&rsquo;s reading group at Hall Branch, 1940',
+            'size'=>'100%',
+            'align'=>'50% 0%');
+        $AfAm[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/14/default.jpg',
+                'text'=>'Women&rsquo;s Army Corps (WAC) Band, 1944',
+                'size'=>'431px',
+                'align'=>'0% 20%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/8/default.jpg',
+                'text'=>'Marian Campfield at the Chicago Defender, 1948',
+                'size'=>'140%',
+                'align'=>'center'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/0/default.jpg',
+                'text'=>'Richard Durham, 1948',
+                'size'=>'112%',
+                'align'=>'75% 45%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rhwc/6/default.jpg',
+                'text'=>'Mayor Washington at the 27th Annual International Folk Fair',
+                'size'=>'200%',
+                'align'=>'40% 60%'),);
+        $AfAm[link] = 'AfAm.php';
+        $AfAm[coll] = 'cr!rhwc!p16818coll6';
+        $AfAm[type] = 'category';
+        $AfAm[flag] = 'x';
+        $AfAm[sidebarflag] = 'x';
 
-        $cards[CivilWar][title] = 'Civil War';
-        $cards[CivilWar][sidebartitle] = 'Civil War';
-        $cards[CivilWar][pic] = '';
-        $cards[CivilWar][pich] = '250px';
-        $cards[CivilWar][size] = '110%';
-        $cards[CivilWar][pos] = '50% 50%';
-        $cards[CivilWar][textshort] = '';
-        $cards[CivilWar][textlong] = '';
-        $cards[CivilWar][link] = 'CivilWar.php';
-        $cards[CivilWar][coll] = 'wha!p16818coll6';
-        $cards[CivilWar][type] = 'category';
-        $cards[CivilWar][flag] = 'x';
-        $cards[CivilWar][sidebarflag] = 'x';
+    $CivilWar[title] = 'Civil War';
+        $CivilWar[sidebartitle] = 'Civil War';
+        $CivilWar[pic] = '';
+        $CivilWar[pich] = '250px';
+        $CivilWar[size] = '110%';
+        $CivilWar[pos] = '50% 50%';
+        $CivilWar[textshort] = '';
+        $CivilWar[textlong] = '';
+        $CivilWar[link] = 'CivilWar.php';
+        $CivilWar[coll] = 'wha!p16818coll6';
+        $CivilWar[type] = 'category';
+        $CivilWar[flag] = 'x';
+        $CivilWar[sidebarflag] = 'x';
 
-        //Harold Washington
+    //Harold Washington
 
-        $cards[LibEd][title] = 'Libraries &amp; Education';
-        $cards[LibEd][sidebartitle] = 'Libraries &amp; Education';
-        $cards[LibEd][pic] = '';
-        $cards[LibEd][pich] = '250px';
-        $cards[LibEd][size] = '110%';
-        $cards[LibEd][pos] = '50% 50%';
-        $cards[LibEd][textshort] = 'Various content about libraries and education';
-        $cards[LibEd][textlong] = 'Various content about libraries and education';
-        $cards[LibEd][link] = 'LibEd.php';
-        $cards[LibEd][coll] = '';
-        $cards[LibEd][type] = 'category';
-        $cards[LibEd][flag] = 'x';
-        $cards[LibEd][sidebarflag] = 'x';
+    $LibEd[title] = 'Libraries &amp; Education';
+        $LibEd[sidebartitle] = 'Libraries &amp; Education';
+        $LibEd[pic] = '';
+        $LibEd[pich] = '250px';
+        $LibEd[size] = '110%';
+        $LibEd[pos] = '50% 50%';
+        $LibEd[textshort] = 'Various content about libraries and education';
+        $LibEd[textlong] = 'Various content about libraries and education';
+        $LibEd[link] = 'LibEd.php';
+        $LibEd[coll] = '';
+        $LibEd[type] = 'category';
+        $LibEd[flag] = 'x';
+        $LibEd[sidebarflag] = 'x';
 
-        $cards[News][title] = 'Chicago Newspapers';
-        $cards[News][sidebartitle] = 'Newspapers';
-        $cards[News][pic] = '';
-        $cards[News][pich] = '230px';
-        $cards[News][size] = '110%';
-        $cards[News][pos] = '50% 50%';
-        $cards[News][textshort] = '';
-        $cards[News][textlong] = '';
-        $cards[News][link] = 'Newspapers.php';
-        $cards[News][coll] = '';
-        $cards[News][type] = 'category';
-        $cards[News][flag] = 'x';
-        $cards[News][sidebarflag] = 'x';
+    $News[title] = 'Chicago Newspapers';
+        $News[sidebartitle] = 'Newspapers';
+        $News[pic] = '';
+        $News[pich] = '230px';
+        $News[size] = '110%';
+        $News[pos] = '50% 50%';
+        $News[textshort] = '';
+        $News[textlong] = '';
+        $News[link] = 'Newspapers.php';
+        $News[coll] = '';
+        $News[type] = 'category';
+        $News[flag] = 'x';
+        $News[sidebarflag] = 'x';
 
-        $cards[Neigh][title] = 'Chicago Neighborhoods';
-        $cards[Neigh][sidebartitle] = 'Neighborhoods';
-        $cards[Neigh][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/cfc/138/default.jpg';
-        //$cards[Neigh][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/cfc/104/default.jpg'; //alternate
-        $cards[Neigh][pich] = '230px';
-        $cards[Neigh][size] = '110%';
-        $cards[Neigh][pos] = '50% 50%';
-        $cards[Neigh][textshort] = 'Experience daily life in Chicago neighborhoods through photographs of street scenes, businesses, residences and portraits, 1860s to present';
-        $cards[Neigh][textlong] = 'Experience daily life in Chicago neighborhoods through photographs of street scenes, businesses, residences and portraits, 1860s to present';
-        $cards[Neigh][link] = 'Neighborhoods.php';
-        $cards[Neigh][coll] = '';
-        $cards[Neigh][type] = 'category';
-        $cards[Neigh][flag] = 'x';
-        $cards[Neigh][sidebarflag] = 'x';
+    $Neigh[title] = 'Chicago Neighborhoods';
+        $Neigh[sidebartitle] = 'Neighborhoods';
+        $Neigh[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/cfc/138/default.jpg';
+        //$Neigh[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/cfc/104/default.jpg'; //alternate
+        $Neigh[pich] = '230px';
+        $Neigh[size] = '110%';
+        $Neigh[pos] = '50% 50%';
+        $Neigh[textshort] = 'Experience daily life in Chicago neighborhoods through photographs of street scenes, businesses, residences and portraits, 1860s to present';
+        $Neigh[textlong] = 'Experience daily life in Chicago neighborhoods through photographs of street scenes, businesses, residences and portraits, 1860s to present';
+        $Neigh[link] = 'Neighborhoods.php';
+        $Neigh[coll] = '';
+        $Neigh[type] = 'category';
+        $Neigh[flag] = 'x';
+        $Neigh[sidebarflag] = 'x';
 
-        $cards[Parks][title] = 'Chicago Parks';
-        $cards[Parks][sidebartitle] = 'Parks';
-        $cards[Parks][pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/rvw/1539/default.jpg';
-        $cards[Parks][pich] = '250px';
-        $cards[Parks][size] = '110%';
-        $cards[Parks][pos] = '10% 5%';
-        $cards[Parks][textshort] = 'Visit Chicago’s vast collection of parks that emerged from a single, hard-fought-for narrow strip of land along the lakefront in 1836 to over 500 parks today.';
-        $cards[Parks][textlong] = 'Visit Chicago’s vast collection of parks that emerged from a single, hard-fought-for narrow strip of land along the lakefront in 1836 to over 500 parks today.  ';
-        $cards[Parks][link] = 'Parks.php';
-        $cards[Parks][coll] = '';
-        $cards[Parks][type] = 'category';
-        $cards[Parks][flag] = 'x';
-        $cards[Parks][sidebarflag] = 'x';
+    $Parks[title] = 'Chicago Parks';
+        $Parks[sidebartitle] = 'Parks';
+        $Parks[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/rvw/1539/default.jpg';
+        $Parks[pich] = '250px';
+        $Parks[size] = '110%';
+        $Parks[pos] = '10% 5%';
+        $Parks[textshort] = 'Visit Chicago’s vast collection of parks that emerged from a single, hard-fought-for narrow strip of land along the lakefront in 1836 to over 500 parks today.';
+        $Parks[textlong] = 'Visit Chicago’s vast collection of parks that emerged from a single, hard-fought-for narrow strip of land along the lakefront in 1836 to over 500 parks today.  ';
+        $Parks[link] = 'Parks.php';
+        $Parks[coll] = '';
+        $Parks[type] = 'category';
+        $Parks[flag] = 'x';
+        $Parks[sidebarflag] = 'x';
 
-        //Theater
+    //Theater
 
-    //locations
-        
-        $cards[HWLCSC][title] = 'Special Collections at HWLC';
-        $cards[HWLCSC][sortname] = 'Special Collections at HWLC';
-        $cards[HWLCSC][sidebartitle] = 'Special Collections at HWLC';
-        $cards[HWLCSC][pic] = '';
-        $cards[HWLCSC][textshort] = 'at Harold Washington Library Center';
-        $cards[HWLCSC][textlong] = '';
-        $cards[HWLCSC][link] = 'HWLCSC.php';
-        $cards[HWLCSC][coll] = '';
-        $cards[HWLCSC][type] = 'location';
+//locations
+    $HWLCSC[title] = 'Special Collections at HWLC';
+        $HWLCSC[sortname] = 'Special Collections at HWLC';
+        $HWLCSC[sidebartitle] = 'Special Collections at HWLC';
+        $HWLCSC[pic] = '';
+        $HWLCSC[textshort] = 'at Harold Washington Library Center';
+        $HWLCSC[textlong] = '';
+        $HWLCSC[link] = 'HWLCSC.php';
+        $HWLCSC[coll] = '';
+        $HWLCSC[type] = 'location';
 
-        $cards[MRC][title] = 'Municipal Reference Collection';
-        $cards[MRC][sortname] = 'Municipal Reference Collection';
-        $cards[MRC][sidebartitle] = 'Municipal Reference Collection';
-        $cards[MRC][pic] = '';
-        $cards[MRC][textshort] = 'at Harold Washington Library Center';
-        $cards[MRC][textlong] = '';
-        $cards[MRC][link] = 'MRC.php';
-        $cards[MRC][coll] = '';
-        $cards[MRC][type] = 'location';
+    $MRC[title] = 'Municipal Reference Collection';
+        $MRC[sortname] = 'Municipal Reference Collection';
+        $MRC[sidebartitle] = 'Municipal Reference Collection';
+        $MRC[pic] = '';
+        $MRC[textshort] = 'at Harold Washington Library Center';
+        $MRC[textlong] = '';
+        $MRC[link] = 'MRC.php';
+        $MRC[coll] = '';
+        $MRC[type] = 'location';
 
-        $cards[NNHC][title] = 'Northside Neighborhood History Collection';
-        $cards[NNHC][sortname] = 'Northside Neighborhood History Collection';
-        $cards[NNHC][sidebartitle] = 'Northside Neighborhood History Collection';
-        $cards[NNHC][pic] = '';
-        $cards[NNHC][textshort] = 'at Sulzer Regional Library';
-        $cards[NNHC][textlong] = '';
-        $cards[NNHC][link] = 'Sulzer.php';
-        $cards[NNHC][coll] = '';
-        $cards[NNHC][type] = 'location';
+    $NNHC[title] = 'Northside Neighborhood History Collection';
+        $NNHC[sortname] = 'Northside Neighborhood History Collection';
+        $NNHC[sidebartitle] = 'Northside Neighborhood History Collection';
+        $NNHC[pic] = '';
+        $NNHC[textshort] = 'at Sulzer Regional Library';
+        $NNHC[textlong] = '';
+        $NNHC[link] = 'Sulzer.php';
+        $NNHC[coll] = '';
+        $NNHC[type] = 'location';
 
-        $cards[Harsh][title] = 'Vivian G. Harsh Collection';
-        $cards[Harsh][sortname] = 'Harsh Collection';
-        $cards[Harsh][sidebartitle] = 'Vivian G. Harsh Collection';
-        $cards[Harsh][pic] = '';
-        $cards[Harsh][textshort] = 'at Woodson Regional Library';
-        $cards[Harsh][textlong] = 'The largest African American history and literature collection in the Midwest, the Vivian G. Harsh Research Collection of Afro-American History and Literature documents the black experience with a strong focus on Chicago.';
-        $cards[Harsh][link] = 'Harsh.php';
-        $cards[Harsh][coll] = 'cr!p16818coll6';
-        $cards[Harsh][type] = 'location';
+    $Harsh[title] = 'Vivian G. Harsh Collection';
+        $Harsh[sortname] = 'Harsh Collection';
+        $Harsh[sidebartitle] = 'Vivian G. Harsh Collection';
+        $Harsh[pic] = '';
+        $Harsh[textshort] = 'at Woodson Regional Library';
+        $Harsh[textlong] = 'The largest African American history and literature collection in the Midwest, the Vivian G. Harsh Research Collection of Afro-American History and Literature documents the black experience with a strong focus on Chicago.';
+        $Harsh[link] = 'Harsh.php';
+        $Harsh[coll] = 'cr!p16818coll6';
+        $Harsh[type] = 'location';
     
-        // $cards[][title] = '';
-        // $cards[][sortname] = '';
-        // $cards[][pic] = '';
-        // $cards[][category] = '';
-        // $cards[][textshort] = '';
-        // $cards[][textlong] = '';
-        // $cards[][link] = '';
-        // $cards[][coll] = '';
-        // $cards[][type] = '';
-        // $cards[][flag] = '';
+        // $[title] = '';
+        // $[sortname] = '';
+        // $[pic] = '';
+        // $[category] = '';
+        // $[textshort] = '';
+        // $[textlong] = '';
+        // $[link] = '';
+        // $[coll] = '';
+        // $[type] = '';
+        // $[flag] = '';
         
+// misc arrays
+
+    $cards = array($Examiner, $EB, $CPL, $ChiRen, $Sewers, $Theater, $Whalen, 
+                   $HDG, $RK, $MP, $NCO, $NHS, $ParkDistrict, $HW, $RWLV, $Sang, $Amund, 
+                   $Kins, $LVHS, $Walz, $CFCC, $LVCRA, $PortPark, $RMIA, $HWR, $AfAm, 
+                   $CivilWar, $LibEd, $News, $Neigh, $Parks, $HWLCSC, $MRC, $NNHC, $Harsh);
+
     $categories = array('AfAm.php'=>'African Americans','CivilWar.php'=>'Civil War',
-        'LibEd.php'=>'Libraries &amp; Education',
-        'Neighborhoods.php'=>'Neighborhoods', 'Parks.php'=>'Parks');
+                        'LibEd.php'=>'Libraries &amp; Education',
+                        'Neighborhoods.php'=>'Neighborhoods', 'Parks.php'=>'Parks');
         
     $LOCATIONLINKS = array('https://www.chipublib.org/locations/3'=>'Albany Park',
         'https://www.chipublib.org/locations/4'=>'Altgeld',

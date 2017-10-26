@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 <?php 
-	include 'variables.php';
-	$PAGE = $cards[HDG];
-	$PAGE_TITLE = $cards[HDG][title];
+    include 'variables.php';
+    $ID = $_GET['id'];
+	$PAGE = ${$ID};
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
-	<title> <?php echo $PAGE_TITLE ?> | Digital Collections | Chicago Public Library</title>
+	<title> <?php echo $PAGE[title] ?> | Digital Collections | Chicago Public Library</title>
 	    <link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
 		<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -60,18 +60,54 @@
                 <div class="center-button browseall">
                     <a href="http://digital.chipublib.org/digital/collection/<?php echo $PAGE[coll] ?>/search" class="btn btn-primary">Browse All</a>
                 </div>
-                <div class="center-copy-paragraph">
-                    <p>
-                    <?php echo $PAGE[textrich] ?>
-                    </p>
-                </div>
-				<div class="center-copy-list">
-					<h4>Finding Aid</h4>
-					<dl>
-						<dt><a href="<?php echo $PAGE[findingaidlink] ?>"><?php echo $PAGE[findingaidtext] ?></a></dt>
-						<dd>Descriptive inventory for the complete physical collection.</dd>
-					</dl>
-				</div>
+                    <?php 
+                    if ($PAGE[textrich]) {
+                        echo '<div class="center-copy-paragraph">
+                            <p>' . $PAGE[textrich] . '</p>
+                            </div>';
+                    }
+                    if ($PAGE[highlights]) {
+                        echo '<div class="center-copy-list">
+                            <h4>Collection Highlights</h4>
+                            <dl>';
+                        foreach ($PAGE[highlights] as $key=>$val){
+                            echo '<dt><a href="' . $val[a] . '">' . $val[dt] . '</a></dt><dd>' . $val[dd] . '</dd>';
+                        }
+                        echo '</dl></div>';
+                    }
+                    if ($PAGE[findingaid]) {
+                    echo '<div class="center-copy-list">
+                            <h4>Finding Aid</h4>
+                            <dl>
+                                <dt><a href="' . $PAGE[findingaid][link] . '">' . $PAGE[findingaid][text] . '</a></dt>
+                                <dd>Descriptive inventory for the complete physical collection.</dd>
+                            </dl>
+                        </div>';
+                    }
+                    if ($PAGE[type] == 'category'){
+                        echo '<div class="center-copy-paragraph">
+                            <p>Digital collections that include ' . $PAGE[catcoll] . ' include:<p>
+                            <dl>';
+						usort($cards, build_sorter('sortname'));
+						foreach ($cards as $key => $val){
+							if ((is_array($val[category]) && in_array($PAGE[title], $val[category])) || $val[category] == 'African Americans'){
+								echo '<dt><a href="' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
+							}
+                        }
+                        echo '</dl></div>';
+                    }
+                    if ($PAGE[CPLRes]){
+                        echo '<div class="center-copy-list">
+                            <h4>More CPL Resources</h4>
+                            <dl>';
+                        foreach ($PAGE[CPLRes] as $key => $val){
+                            echo '<dt><a href="' . $val[a] . '">' . $val[dt] . '</a></dt><dd>' . $val[dd] . '</dd>';
+                        }
+                        echo '</dl></div>';
+                    }
+                    
+
+                    ?>
 			</div>
 		<!-- right sidebar -->
 			<div class="hidden-md-down col-lg-3 right-sidebar">
