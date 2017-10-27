@@ -33,7 +33,7 @@
 		</div>
 		<div class="left-sidebar-main">
 			<div class="left-sidebar-viewall">
-					 <h4 class="left-sidebar-subtitle"><a href="AllCollections.php">View All Collections<!-- <span class="rsaquo">&rsaquo;</span> --></a></h4>
+					 <h4 class="left-sidebar-subtitle"><a href="content.php?id=All">View All Collections<!-- <span class="rsaquo">&rsaquo;</span> --></a></h4>
 			</div>
 			<div class="left-sidebar-location">
 				<h4 class="left-sidebar-subtitle">Browse by Subject</h4>
@@ -42,7 +42,7 @@
 					usort($cards, build_sorter('shortname'));
     				foreach ($cards as $key => $val){
         				if ($val[sidebarflag] == 'x'){
-							echo '<li class="left-sidebar-list"><a href="' . $val[link] . '" class="sidebar-links">' . $val[shortname] . '</a></li>';
+							echo '<li class="left-sidebar-list"><a href="content.php?id=' . $val[link] . '" class="sidebar-links">' . $val[shortname] . '</a></li>';
 						}
 					}
 				?>
@@ -55,7 +55,7 @@
 					usort($cards, build_sorter('sortname'));
     				foreach ($cards as $key => $val){
         				if ($val[type] == 'location'){
-							echo '<li class="left-sidebar-list"><a href="' . $val[link] . '" class="sidebar-links">' . $val[shortname] . '</a></li>';
+							echo '<li class="left-sidebar-list"><a href="content.php?id=' . $val[link] . '" class="sidebar-links">' . $val[shortname] . '</a></li>';
 						}
 					}
 				?>

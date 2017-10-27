@@ -147,6 +147,7 @@
         height: 34px;
         position: relative;
         left: 5px;
+        padding: 5px;
         /* width: 100%; */
     }
     .header-search-expanded-input input:focus, .header-search-dropped-input input:focus {
