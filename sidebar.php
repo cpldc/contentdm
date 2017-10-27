@@ -39,10 +39,10 @@
 				<h4 class="left-sidebar-subtitle">Browse by Subject</h4>
 				<ul>
 				<?php     
-					usort($cards, build_sorter('sidebartitle'));
+					usort($cards, build_sorter('shortname'));
     				foreach ($cards as $key => $val){
         				if ($val[sidebarflag] == 'x'){
-							echo '<li class="left-sidebar-list"><a href="' . $val[link] . '" class="sidebar-links">' . $val[sidebartitle] . '</a></li>';
+							echo '<li class="left-sidebar-list"><a href="' . $val[link] . '" class="sidebar-links">' . $val[shortname] . '</a></li>';
 						}
 					}
 				?>
@@ -55,7 +55,7 @@
 					usort($cards, build_sorter('sortname'));
     				foreach ($cards as $key => $val){
         				if ($val[type] == 'location'){
-							echo '<li class="left-sidebar-list"><a href="' . $val[link] . '" class="sidebar-links">' . $val[sidebartitle] . '</a></li>';
+							echo '<li class="left-sidebar-list"><a href="' . $val[link] . '" class="sidebar-links">' . $val[shortname] . '</a></li>';
 						}
 					}
 				?>
