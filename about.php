@@ -17,7 +17,7 @@
             usort($cards, build_sorter('sortname'));
             foreach ($cards as $key => $val){
                 if ($val[type] == 'location'){
-                    echo '<dt><a href="' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
+                    echo '<dt><a href="content.php?id=' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
                 }
             }
         ?>
@@ -33,7 +33,7 @@
         </dl>
         <h4>Order a Photo Reproduction</h4>
         <dl>
-            <dt><a href="https://www.chipublib.org/wp-content/uploads/sites/3/2013/10/photo-reproduction-form.pdf">Photo Reproduction Order Form</a></dt>
+            <dt><a href="https://www.chipublib.org/order-a-photo-reproduction/">Photo Reproduction Order Form</a></dt>
             <dd class="about-contact">We offer photo reproductions from our <a href="https://www.chipublib.org/archives-collections/">archival collections </a> and <a href="http://digital.chipublib.org/digital">digital collections.<a></dd>
         </dl>
         <h4>Copyright</h4>

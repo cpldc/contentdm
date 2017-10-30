@@ -17,10 +17,12 @@
 						$('.imageGallery1 a').simpleLightbox();
 					</script>
                 </div>
-                <div class="center-button browseall">
-                    <a href="http://digital.chipublib.org/digital/collection/<?php echo $PAGE[coll] ?>/search" class="btn btn-primary">Browse All</a>
-                </div>
-					<?php 
+				<?php 
+				if ($PAGE[coll]) {
+					echo '<div class="center-button browseall">
+                    	<a href="http://digital.chipublib.org/digital/collection/<?php echo $PAGE[coll] ?>/search" class="btn btn-primary">Browse All</a>
+					</div>';
+				}
                     if ($PAGE[textrich]) {
                         echo '<div class="center-copy-paragraph">
                             <p>' . $PAGE[textrich] . '</p>
@@ -67,7 +69,7 @@
 							}
 						}
 						echo '</dl></div><div class="center-copy-list"><dl>
-						<dt class="contact-list-item" style="padding-bottom: 7px">Contact this collection: </dt>
+						<dt class="contact-list-item" style="padding-bottom: 7px">Contact us: </dt>
 						<dd class="contact-list-item">Location: <a href="https://www.chipublib.org/locations/' . $PAGE[loclink] . '">' . $PAGE[locname] . '</a></dd>
 						<dd class="contact-list-item">Email: ' . $PAGE[locemail] . '</dd>
 						<dd class="contact-list-item">Call: ' . $PAGE[locphone] . '</dd></dl></div>';
