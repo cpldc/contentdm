@@ -18,11 +18,20 @@
 					</script>
                 </div>
 				<?php 
-				if ($PAGE[coll]) {
-					echo '<div class="center-button browseall">
-                    	<a href="http://digital.chipublib.org/digital/collection/<?php echo $PAGE[coll] ?>/search" class="btn btn-primary">Browse All</a>
-					</div>';
-				}
+					if ($PAGE[coll]) {
+						echo '<div class="center-button browseall"><a href="http://digital.chipublib.org/digital/search/collection/' . $PAGE[coll] . '/order/title/ad/asc" class="btn btn-primary">Browse All</a></div>';
+					}
+					if (!$PAGE[coll]) {
+						$COLL;
+						foreach ($cards as $key => $val) {
+							if (($PAGE[type] == 'location' && $PAGE[shortname] == $val[location]) || ($PAGE[type] == 'category' && ($PAGE[shortname] == $val[category] || (is_array($val[category]) && in_array($PAGE[shortname], $val[category]))))) {
+								if ($COLL == '') {$COLL = $val[coll];} else {$COLL = $COLL . '!' . $val[coll];}
+							}
+						}
+						if (!$COLL == ''){
+							echo '<div class="center-button browseall"><a href="http://digital.chipublib.org/digital/search/collection/' . $COLL . '/order/title/ad/asc" class="btn btn-primary">Browse All</a></div>';
+						}
+					}
                     if ($PAGE[textrich]) {
                         echo '<div class="center-copy-paragraph">
                             <p>' . $PAGE[textrich] . '</p>
@@ -49,7 +58,7 @@
 						usort($cards, build_sorter('sortname'));
 						foreach ($cards as $key => $val){
 							if ((is_array($val[category]) && in_array($PAGE[shortname], $val[category])) || $val[category] == $PAGE[shortname]){
-								echo '<dt><a href="' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
+								echo '<dt><a href="content.php?id=' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
 							}
                         }
                         echo '</dl></div>';
@@ -60,15 +69,18 @@
 						} else {
 							echo '<div class="center-copy-list">';
 						}
-						echo '<h4>Digital Collections</h4>
-                            <p>Digital collections from the ' . $PAGE[title] . ':<p><dl>';
-						usort($cards, build_sorter('sortname'));
-						foreach ($cards as $key => $val){
-							if ($val[location] == $PAGE[shortname]){
-								echo '<dt><a href="' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
+						if ($PAGE[shortname] != "MRC"){
+							echo '<h4>Digital Collections</h4>
+								<p>Digital collections from the ' . $PAGE[title] . ':<p><dl>';
+							usort($cards, build_sorter('sortname'));
+							foreach ($cards as $key => $val){
+								if ($val[location] == $PAGE[shortname]){
+									echo '<dt><a href="content.php?id=' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
+								}
 							}
+							echo '</dl></div><div class="center-copy-list">';
 						}
-						echo '</dl></div><div class="center-copy-list"><dl>
+						echo '<dl>
 						<dt class="contact-list-item" style="padding-bottom: 7px">Contact us: </dt>
 						<dd class="contact-list-item">Location: <a href="https://www.chipublib.org/locations/' . $PAGE[loclink] . '">' . $PAGE[locname] . '</a></dd>
 						<dd class="contact-list-item">Email: ' . $PAGE[locemail] . '</dd>

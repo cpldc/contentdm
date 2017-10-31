@@ -16,7 +16,7 @@
 </script>
 	<div class="left-sidebar">
 		<div class="left-sidebar-header clearfix">
-			<div class="left-sidebar-title">Digital Collections</div>
+			<div class="left-sidebar-title"><a href="Home.php">Digital Collections</a></div>
 			<script>
 				if (sidebarType == "collapsible") {
 					document.write('<div class="left-sidebar-togglebutton left-sidebar-togglebutton-hide " onclick="toggleLeftSidebar()">');
@@ -39,10 +39,10 @@
 				<h4 class="left-sidebar-subtitle">Browse by Subject</h4>
 				<ul>
 				<?php     
-					usort($cards, build_sorter('shortname'));
+					usort($cards, build_sorter('sidebarname'));
     				foreach ($cards as $key => $val){
         				if ($val[sidebarflag] == 'x'){
-							echo '<li class="left-sidebar-list"><a href="content.php?id=' . $val[link] . '" class="sidebar-links">' . $val[shortname] . '</a></li>';
+							echo '<li class="left-sidebar-list"><a href="content.php?id=' . $val[link] . '" class="sidebar-links">' . $val[sidebarname] . '</a></li>';
 						}
 					}
 				?>
@@ -55,7 +55,7 @@
 					usort($cards, build_sorter('sortname'));
     				foreach ($cards as $key => $val){
         				if ($val[type] == 'location'){
-							echo '<li class="left-sidebar-list"><a href="content.php?id=' . $val[link] . '" class="sidebar-links">' . $val[shortname] . '</a></li>';
+							echo '<li class="left-sidebar-list"><a href="content.php?id=' . $val[link] . '" class="sidebar-links">' . $val[sidebarname] . '</a></li>';
 						}
 					}
 				?>
