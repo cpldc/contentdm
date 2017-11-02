@@ -38,8 +38,11 @@
         </dl>
         <h4>Copyright</h4>
         <dl>
-            <dd class="about-contact">Usage, transmission, downloading or reproduction of protected items beyond that allowed by Fair Use Copyright Law requires the written permission of the copyright owners. Copyright or other information about restrictions may be difficult or even impossible to determine. When possible, CPL provides information about copyright owners and restrictions concerning its collections.</dd>
-            <dd class="about-contact">Determining the existence of copyright or any other legal restrictions, as well as obtaining permission from the copyright holder, is solely the responsibility of the user/patron</dd>
-            <dd class="about-contact"><a href="http://rightsstatements.org/page/1.0/?language=en">RightsStatements.org website</a></dd>
+            <dd class="about-contact">Usage, transmission, downloading or reproduction of protected items beyond that allowed by Fair Use Copyright Law requires the written permission of the copyright owners. When possible, CPL provides information about copyright owners and restrictions concerning its collections.</dd>
+            <dd class="about-contact">Determining the existence of copyright or any other legal restrictions, as well as obtaining permission from the copyright holder, is solely the responsibility of the patron.</dd>
+            <dd class="about-contact"><b>Notice: Warning Concerning Copyright Restrictions</b></dd>
+            <dd class="about-contact">The copyright law of the United States (Title 17, United States Code) governs the making of photocopies or other reproductions of copyrighted material.</dd>
+            <dd class="about-contact">Under certain conditions specified in the law, libraries and archives are authorized to furnish a photocopy or other reproduction. One of these specific conditions is that the photocopy or reproduction is not to be “used for any purpose other than private study, scholarship or research.” If a user makes a request for, or later uses, a photocopy or reproduction for purposes in excess of “fair use,” that user may be liable for copyright infringement.</dd>
+            <dd class="about-contact">This institution reserves the right to refuse a copying order if, in its judgment, fulfillment of the order would involve violation of copyright law.</dd>
         </dl>
     </div>
