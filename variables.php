@@ -113,7 +113,7 @@
             'pos'=>'50% -20px',
         );
         $CPL[category] = 'Libraries &amp; Education';
-        $CPL[textshort] = 'On January 1, 1873 the Chicago Public Library opened its doors in a water tank that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to the development of neighborhood libraries across the city.';
+        $CPL[textshort] = 'Photographs which trace the Library&rsquo;s history from a small water tank that survived the Great Chicago Fire to the extensive network of neighborhood libraries which span the city today.';
         $CPL[textlong] = 'On January 1, 1873 the Chicago Public Library opened its doors in a water tank that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to the development of neighborhood libraries across the city.';
         $CPL[textrich] = '<p>On January 1, 1873, Chicago Public Library opened its doors in a <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/woop/searchterm/Water+tank/field/subjed/mode/all/conn/and/order/nosort">circular water tank</a> at the southeast corner of LaSalle and Adams streets that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to a system of 80 locations across the city. </p><p>Explore CPL through those years, from <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/woop/searchterm/Delivery+stations/field/subjed/mode/all/conn/and/order/nosort">delivery stations</a> in the late 19th century to <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/woop/searchterm/Bookmobiles/field/subjed/mode/all/conn/and/order/nosort">bookmobiles</a> in the mid-20th century to <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/bar/searchterm/Working%20with%20children!Hild%20Regional%20Library/field/subjed!all/mode/all!all/conn/and!and/order/nosort/ad/asc">Hild Regional Library</a> in the 1970s. </p>';
         $CPL[mainimage] = array('url'=>'',
@@ -475,8 +475,8 @@
             'pos'=>'10% 5%'
         );
         $CPD[category] = 'Parks';
-        $CPD[textshort] = 'Chicago Public Library is currently finalizing the Chicago Park District Records, which will be available in 2018.';
-        $CPD[textlong] = 'Chicago Public Library is currently finalizing the Chicago Park District Records, which will be available in 2018.';
+        $CPD[textshort] = 'Chicago Public Library is currently finalizing the photographs from the  Chicago Park District Records, which will be available in the spring of 2018.';
+        $CPD[textlong] = 'Chicago Public Library is currently finalizing the photographs from the  Chicago Park District Records, which will be available in the spring of 2018.';
         $CPD[link] = 'CPD';
         $CPD[location] = 'HWLCSC';
         $CPD[coll] = 'ChicagoParks';
@@ -545,7 +545,7 @@
             'pos'=>'24% 45%'
         );
         $RWLV[category] = array('Neighborhoods','Libraries &amp; Education');
-        $RWLV[textshort] = 'Street scenes and community life on the North Side, 1860s-1990s';
+        $RWLV[textshort] = 'Street scenes and community life on the North Side, 1860s-1990s.';
         $RWLV[textlong] = 'Lake View Township and its evolution from an independent municipality into current Northside communities, 1860s-1990s';
         $RWLV[textrich] = '<p>More than <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/00000000-1889/field/date/mode/exact/conn/and/order/title/ad/asc">100 early photographs</a> represent Lake View Township and its residents, schools, homes, businesses and everyday rituals.</p><p>Over the next 100 years North Siders and their neighborhoods experienced tremendous changes as evidenced by their <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/clothing%20%26%20dress/field/subjea/mode/exact/conn/and/order/title/ad/asc">fashion</a>, <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/railroad!automobiles/field/subjea!subjea/mode/all!all/conn/or!and/order/nosort/ad/asc">modes of transportation</a>, and the establishment of a number of <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/schools%20--%20illinois%20--%20chicago/field/subjea/mode/exact/conn/and/order/title/ad/asc">schools</a>, <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/churches/field/subjea/mode/all/conn/and/order/title/ad/asc">churches</a> and <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/clubs/field/subjea/mode/all/conn/and/order/title/ad/asc">social clubs</a>. Notable local events include <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/Our%20Lady%20of%20Lourdes%20Church%20(Chicago%2C%20Ill.)!construction/field/subjec!subjea/mode/exact!all/conn/and!and/order/nosort/ad/asc">moving the Our Lady of Lourdes church building</a> across Ashland Avenue and <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/ground%20breaking%20ceremonies/field/subjea/mode/exact/conn/and/order/nosort/ad/asc">breaking ground for the Conrad Sulzer Regional Library</a>.</p>';
         $RWLV[CPLRes] = array(array('a'=>'https://www.chipublib.org/archival_post/ravenswood-lake-view-community-collection/','dt'=>'Ravenswood-Lake View Community Collection Finding Aid','dd'=>'Descriptive inventory for the complete physical collection.'),
@@ -699,12 +699,32 @@
         $CivilWar[sidebarname] = 'Civil War';
         $CivilWar[cardpic] = array(
             'pic'=>'',
-            'pich'=>'250px',
+            'pich'=>'280px',
             'size'=>'110%',
-            'pos'=>'50% 50%'
+            'pos'=>'50% 40%'
         );
+        $CivilWar[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/634/default.jpg',
+            'text'=>'Photographic Views of Sherman&rsquo;s Campaign by George N. Barnard',
+            'size'=>'auto 575px',
+            'align'=>'center');
+        $CivilWar[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/116/default.jpg',
+                'text'=>'Sword, Model 1850 Staff and Field Officer',
+                'size'=>'auto 120px',
+                'align'=>'center'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/721/default.jpg',
+                'text'=>'Uniform, artillery jacket',
+                'size'=>'auto 120px',
+                'align'=>'50% 15%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/35/default.jpg',
+                'text'=>'Grant, Ulysses S.',
+                'size'=>'120px auto',
+                'align'=>'50% 20%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/38/default.jpg',
+                'text'=>'Union Ticket',
+                'size'=>'110px auto',
+                'align'=>'55% 15%'));
         $CivilWar[textshort] = '';
-        $CivilWar[textlong] = '';
+        $CivilWar[textlong] = 'Chicago Public Library is home to one of the most ';
         $CivilWar[link] = 'CivilWar';
         $CivilWar[type] = 'category';
         $CivilWar[flag] = 'x';
@@ -753,7 +773,7 @@
             'size'=>'110%',
             'pos'=>'50% 50%'
         );
-        $Neigh[textshort] = 'Experience daily life in Chicago neighborhoods through photographs of street scenes, businesses, residences and portraits, 1860s to present';
+        $Neigh[textshort] = 'Experience daily life in Chicago neighborhoods through photographs of street scenes, businesses, residences and portraits, 1860s to the present.';
         $Neigh[textlong] = 'Connect with the residents of Chicago and their stories through these fascinating photographs dating from the 1860s through the 1990s.';
         $Neigh[catcoll] = 'that center around Chicago&rsquo;s neighborhoods';
         $Neigh[textrich] = '<p>This collection documents how Chicagoans lived their daily lives and how their neighborhoods changed and evolved over time.  Go back to <a href="http://digital.chipublib.org/cdm/search/searchterm/schools/field/subjec/mode/all/conn/and/order/nosort">school</a>, revisit favorite <a href="http://digital.chipublib.org/cdm/search/searchterm/restaurants%20--%20illinois%20--%20chicago/field/subjec/mode/all/conn/and/order/title/ad/asc">restaurants</a>, salute <a href="http://digital.chipublib.org/cdm/search/searchterm/military/field/subjec/mode/all/conn/and/order/nosort">members of the military</a> or just <a href="http://digital.chipublib.org/cdm/search/searchterm/transportation/field/subjec/mode/all/conn/and/order/nosort">ride around the city</a>.  Every neighborhood tells a story!</p>';
