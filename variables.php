@@ -830,7 +830,27 @@
         $HWLCSC[sortname] = 'Special Collections at HWLC';
         $HWLCSC[shortname] = 'HWLCSC';
         $HWLCSC[sidebarname] = 'Special Collections at HWLC';
-        $HWLCSC[pic] = '';
+        $HWLCSC[pic] = '';        
+        $HWLCSC[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/79/default.jpg',
+            'text'=>'Old Water Tank, exterior view, ca. 1870',
+            'size'=>'105%',
+            'align'=>'50% 50%');
+        $HWLCSC[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/2196/default.jpg',
+                'text'=>'Chicago Little Theatre, Philanderer (November 19, 1914)',
+                'size'=>'170%',
+                'align'=>'25% 22%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/4833/default.jpg',
+                'text'=>'Madden Park (0028) Activities, 1954-04-08',
+                'size'=>'140%',
+                'align'=>'center'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/42/default.jpg',
+                'text'=>'$100,000 Reward! The Murderer of Our Late Beloved President is Still at Large.',
+                'size'=>'105%',
+                'align'=>'50% 20%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/4066/default.jpg',
+                'text'=>'Crown Fountain, fountain preview, July 13, 2004',
+                'size'=>'370%',
+                'align'=>'50% 50%'));
         $HWLCSC[textshort] = 'at Harold Washington Library Center';
         $HWLCSC[textlong] = '';
         $HWLCSC[locname] = '';
