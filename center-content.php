@@ -46,6 +46,20 @@
                         }
                         echo '</dl></div>';
                     }
+                    if ($PAGE[hassubcollections]) {
+                        if(!$PAGE[textrich]){
+							echo '<div class="center-copy-list" style="border-top: none; padding: 15px">';
+						} else {
+							echo '<div class="center-copy-list">';
+						}
+							echo '<h4>Digital Collections</h4>
+							<p>This collection is made up of the following archival collections:</p>
+                            <dl>';
+                        foreach ($PAGE[subdigicoll] as $key=>$val){
+							echo '<dt><a href="' . $val[a] . '">' . $val[dt] . '</a></dt><dd>' . $val[dd] . '</dd>';
+                        }
+                        echo '</dl></div>';
+                    }
                     if ($PAGE[type] == 'category'){
 						if(!$PAGE[textrich]){
 							echo '<div class="center-copy-list" style="border-top: none; padding: 15px">';
@@ -71,7 +85,7 @@
 						}
 						if ($PAGE[shortname] != "MRC"){
 							echo '<h4>Digital Collections</h4>
-								<p>Digital collections from the ' . $PAGE[title] . ':<p><dl>';
+								<p>Digital collections from the ' . $PAGE[longname] . ':<p><dl>';
 							usort($cards, build_sorter('sortname'));
 							foreach ($cards as $key => $val){
 								if ($val[location] == $PAGE[shortname]){

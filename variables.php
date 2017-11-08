@@ -435,35 +435,85 @@
     $NCO[title] = 'Northside Clubs and Organizations';
         $NCO[sortname] = 'Northside Clubs and Organizations';
         $NCO[cardpic] = array(
-            'pic'=>'',
-            'pich'=>'250px',
-            'size'=>'110%',
-            'pos'=>'50% 50%'
+            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/130/default.jpg',
+            'pich'=>'240px',
+            'size'=>'175%',
+            'pos'=>'20% 55%'
         );
+        $NCO[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/24/default.jpg',
+            'text'=>'Christian Fellowship Church',
+            'size'=>'125%',
+            'align'=>'80% 40%');
+        $NCO[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/396/default.jpg',
+                'text'=>'Members of the Girls&rsquo; Patriotic Service League at Portage Park',
+                'size'=>'450px',
+                'align'=>'17% 27%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/61/default.jpg',
+                'text'=>'Ravenswood Manor Improvement Association - 70th anniversary celebration',
+                'size'=>'175%',
+                'align'=>'50% 50%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/144/default.jpg',
+                'text'=>'Ravenswood Manor Improvement Association&rsquo;s Annual Picnic',
+                'size'=>'375px',
+                'align'=>'60% 50%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/107/default.jpg',
+                'text'=>'Ravenswood Manor Improvement Association&rsquo;s Cleanup Campaign',
+                'size'=>'730px',
+                'align'=>'80% 40%'));
         $NCO[category] = 'Neighborhoods';
         $NCO[textshort] = 'A glimpse into the activities of the thriving civic service scene on the North Side as well as the rich ethnic and religious heritage of the community.';
         $NCO[textlong] = 'A glimpse into the activities of the thriving civic service scene on the North Side as well as the rich ethnic and religious heritage of the community.';
+        $NCO[subdigicoll] = array(array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort','dt'=>'Christian Fellowship Church Collection','dd'=>'Activities of the church founded by Conrad and Martha Wendtland in their home in 1926.'),
+                                array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort','dt'=>'Lake View Council on Religious Action','dd'=>'Representatives from local churches and synagogues and members of the Kiwanis Club of Lake View at work'),
+                                array('a'=>'http://digital.chipublib.org/digital/collection/cfc/search/searchterm/Portage%20Park%20Community%20Collection/field/collec/mode/exact/conn/and','dt'=>'Portage Park Community Collection','dd'=>'Patriotism on display during World War I.'),
+                                array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Ravenswood+Manor+Improvement+Association/field/collec/mode/all/conn/and/order/nosort','dt'=>'Ravenswood Manor Improvement Association','dd'=>'Community activism in the North Side riverfront neighborhood.'));
         $NCO[link] = 'NCO';
         $NCO[coll] = 'cfc';
         $NCO[location] = 'NNHC';
+        $NCO[hassubcollections] = 'x';
         $NCO[type] = 'collection';
         $NCO[flag] = 'x';
 
     $NHS[title] = 'Northside High Schools';
         $NHS[sortname] = 'Northside High Schools';
         $NHS[cardpic] = array(
-            'pic'=>'',
+            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/197/default.jpg',
             'pich'=>'250px',
             'size'=>'110%',
-            'pos'=>'50% 50%'
-        );
+            'pos'=>'center'
+        ); 
+        $NHS[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/634/default.jpg',
+            'text'=>'Captain Louis D. Walz and Lake View High School drum major and majorettes',
+            'size'=>'110%',
+            'align'=>'center');
+        $NHS[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/350/default.jpg',
+                'text'=>'Lake View High School',
+                'size'=>'150%',
+                'align'=>'center'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/149/default.jpg',
+                'text'=>'Lake View High School, plays',
+                'size'=>'150%',
+                'align'=>'50% 25%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/7/default.jpg',
+                'text'=>'Amundsen High School--Athletics',
+                'size'=>'150%',
+                'align'=>'center'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/245/default.jpg',
+                'text'=>'Lake View High School',
+                'size'=>'150%',
+                'align'=>'center'));
         $NHS[category] = array('Neighborhoods','Libraries &amp; Education');
         $NHS[textshort] = 'Photographs of high school football games, theatrical productions, dances and extracurricular activities from the 1870s to the 1950s.';
         $NHS[textlong] = 'Photographs of high school football games, theatrical productions, dances and extracurricular activities from the 1870s to the 1950s.';
+        $NHS[subdigicoll] = array(array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Amundsen+High+School+Collection/field/collec/mode/all/conn/and/order/nosort','dt'=>'Amundsen High School Collection','dd'=>'The Winnemac Park school opened in its doors in 1930.  Cheer on their football team as they do battle with Taft High School.'),
+                                array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Helen+G.+Kinsella+Collection/field/collec/mode/all/conn/and/order/nosort','dt'=>'Helen G. Kinsella Collection','dd'=>'Dramatic productions and other activities led by the award-winning Lake View High School drama and public speaking teacher.'),
+                                array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Lake+View+High+School+Collection/field/collec/mode/all/conn/and/order/nosort','dt'=>'Lake View High School Collection','dd'=>'Academics and extracurriculars at the first high school in Lake View Township.'),
+                                array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Walz/field/collec/mode/all/conn/and/order/nosort','dt'=>'Louis D. Walz Collection','dd'=>'The life of the long-time director of the Lake View High School band and World War I veteran.'));
         $NHS[link] = 'NHS';
         $NHS[coll] = 'ahs';
         $NHS[location] = 'NNHC';
         $NHS[type] = 'collection';
+        $NHS[hassubcollections] = 'x';
         $NHS[flag] = 'x';
 
     $CPD[title] = 'Chicago Park District Records: Photographs';
@@ -849,8 +899,9 @@
     $HWLCSC[title] = 'Special Collections at HWLC';
         $HWLCSC[sortname] = 'Special Collections at HWLC';
         $HWLCSC[shortname] = 'HWLCSC';
+        $HWLCSC[longname] = 'Special Collections at the Harold Washington Library Center';
         $HWLCSC[sidebarname] = 'Special Collections at HWLC';
-        $HWLCSC[pic] = '';        
+        $HWLCSC[pic] = '';      
         $HWLCSC[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/79/default.jpg',
             'text'=>'Old Water Tank, exterior view, ca. 1870',
             'size'=>'105%',
@@ -872,15 +923,17 @@
                 'size'=>'370%',
                 'align'=>'50% 50%'));
         $HWLCSC[textshort] = 'at Harold Washington Library Center';
-        $HWLCSC[textlong] = '';
-        $HWLCSC[locname] = '';
-        $HWLCSC[locemail] = '';
-        $HWLCSC[locphone] = '';
+        $HWLCSC[textlong] = 'The Special Collections and Preservation Division showcases rare books and archival material relating to Chicago History. Major collecting areas include: Chicago Authors and Publishing, Chicago Park District Chicago Public Library Archives, Chicago Theater, Civil War, Chicago&rsquo;s World&rsquo;s Fairs and Mayor Harold Washington.';
+        $HWLCSC[locname] = 'Harold Washington Library Center';
+        $HWLCSC[loclink] = '34';
+        $HWLCSC[locemail] = 'specoll@chipublib.org';
+        $HWLCSC[locphone] = '(312) 747-4875';
         $HWLCSC[link] = 'HWLCSC';
         $HWLCSC[type] = 'location';
 
     $MRC[title] = 'Municipal Reference Collection';
         $MRC[sortname] = 'Municipal Reference Collection';
+        $MRC[longname] = 'Municipal Reference Collection at the Harold Washington Library Center';
         $MRC[shortname] = 'MRC';
         $MRC[sidebarname] = 'Municipal Reference Collection';
         $MRC[pic] = '';
@@ -896,6 +949,7 @@
     $NNHC[title] = 'Northside Neighborhood History Collection';
         $NNHC[sortname] = 'Northside Neighborhood History Collection';
         $NNHC[shortname] = 'NNHC';
+        $NNHC[longname] = 'Northside Neighborhood History Collection at the Sulzer Regional Library';
         $NNHC[sidebarname] = 'Northside Neighborhood History Collection';
         $NNHC[pic] = '';
         $NNHC[textshort] = 'at Sulzer Regional Library';
@@ -928,6 +982,7 @@
 
     $Harsh[title] = 'Vivian G. Harsh Collection';
         $Harsh[sortname] = 'Harsh Collection';
+        $Harsh[longname] = 'Harsh Collection at the Woodson Regional Library';
         $Harsh[shortname] = 'Harsh';
         $Harsh[sidebarname] = 'Vivian G. Harsh Collection';
         $Harsh[pic] = '';
