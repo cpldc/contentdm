@@ -34,13 +34,21 @@
 					}
                     if ($PAGE[textrich]) {
                         echo '<div class="center-copy-paragraph">
-                            <p>' . $PAGE[textrich] . '</p>
-                            </div>';
-                    }
+							<p>' . $PAGE[textrich] . '</p>';
+							if ($PAGE[type] == 'collection'){
+								echo 'The ' . $PAGE[title] . ' is housed at the ' . $PAGE[location][longname] . '.';
+							}
+						echo '</div>';
+					}
                     if ($PAGE[highlights]) {
-                        echo '<div class="center-copy-list">
-                            <h4>Collection Highlights</h4>
-                            <dl>';
+						if($PAGE[textrich]){
+							echo '<div class="center-copy-list" style="border-top: none; padding-top: 5px;">
+							<dl>';
+						} else {
+							echo '<div class="center-copy-list">
+							<h4>Collection Highlights</h4>
+							<dl>';
+						}
                         foreach ($PAGE[highlights] as $key=>$val){
 							echo '<dt><a href="' . $val[a] . '">' . $val[dt] . '</a></dt><dd>' . $val[dd] . '</dd>';
                         }
@@ -88,7 +96,7 @@
 								<p>Digital collections from the ' . $PAGE[longname] . ':<p><dl>';
 							usort($cards, build_sorter('sortname'));
 							foreach ($cards as $key => $val){
-								if ($val[location] == $PAGE[shortname]){
+								if ($val[location] == $PAGE){
 									echo '<dt><a href="content.php?id=' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
 								}
 							}

@@ -8,6 +8,8 @@
             };
         }
 
+
+
 //array(array('a'=>'','dt'=>'','dd'=>''));
     $All[title] = 'Digital Collections A-Z';
     $About[title] = 'About CPL Digital Collections';
@@ -27,7 +29,123 @@
         <li>Assess the validity of the request;</li>
         <li>Upon request, we may temporarily remove the material from public view while we assess the concern.</li>
         </ul><p>Upon completion of the assessment, we will take appropriate action and communicate that action to you.</p>';
-    
+  
+//locations
+    $HWLCSC[title] = 'Special Collections at HWLC';
+        $HWLCSC[sortname] = 'Special Collections at HWLC';
+        $HWLCSC[shortname] = 'HWLCSC';
+        $HWLCSC[longname] = 'Special Collections at the Harold Washington Library Center';
+        $HWLCSC[sidebarname] = 'Special Collections at HWLC';
+        $HWLCSC[pic] = '';      
+        $HWLCSC[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/79/default.jpg',
+            'text'=>'Old Water Tank, exterior view, ca. 1870',
+            'size'=>'105%',
+            'align'=>'50% 50%');
+        $HWLCSC[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/2196/default.jpg',
+                'text'=>'Chicago Little Theatre, Philanderer (November 19, 1914)',
+                'size'=>'170%',
+                'align'=>'25% 22%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/4833/default.jpg',
+                'text'=>'Madden Park (0028) Activities, 1954-04-08',
+                'size'=>'140%',
+                'align'=>'center'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/42/default.jpg',
+                'text'=>'$100,000 Reward! The Murderer of Our Late Beloved President is Still at Large.',
+                'size'=>'105%',
+                'align'=>'50% 20%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/4066/default.jpg',
+                'text'=>'Crown Fountain, fountain preview, July 13, 2004',
+                'size'=>'370%',
+                'align'=>'50% 50%'));
+        $HWLCSC[textshort] = 'at Harold Washington Library Center';
+        $HWLCSC[textlong] = 'The Special Collections and Preservation Division showcases rare books and archival material relating to Chicago History. Major collecting areas include: Chicago Authors and Publishing, Chicago Park District Chicago Public Library Archives, Chicago Theater, Civil War, Chicago&rsquo;s World&rsquo;s Fairs and Mayor Harold Washington.';
+        $HWLCSC[locname] = 'Harold Washington Library Center';
+        $HWLCSC[loclink] = '34';
+        $HWLCSC[locemail] = 'specoll@chipublib.org';
+        $HWLCSC[locphone] = '(312) 747-4875';
+        $HWLCSC[link] = 'HWLCSC';
+        $HWLCSC[type] = 'location';
+
+    $MRC[title] = 'Municipal Reference Collection';
+        $MRC[sortname] = 'Municipal Reference Collection';
+        $MRC[longname] = 'Municipal Reference Collection at the Harold Washington Library Center';
+        $MRC[shortname] = 'MRC';
+        $MRC[sidebarname] = 'Municipal Reference Collection';
+        $MRC[pic] = '';
+        $MRC[textshort] = 'at Harold Washington Library Center';
+        $MRC[textlong] = '';
+        $MRC[textrich] = '<a href="https://www.chipublib.org/blogs/post/welcome-to-the-municipal-reference-collection/">Test test</a> test.';
+        $MRC[locname] = '';
+        $MRC[locemail] = '';
+        $MRC[locphone] = '(312) 747-4526';
+        $MRC[link] = 'MRC';
+        $MRC[type] = 'location';
+
+    $NNHC[title] = 'Northside Neighborhood History Collection';
+        $NNHC[sortname] = 'Northside Neighborhood History Collection';
+        $NNHC[shortname] = 'NNHC';
+        $NNHC[longname] = 'Northside Neighborhood History Collection at the Sulzer Regional Library';
+        $NNHC[sidebarname] = 'Northside Neighborhood History Collection';
+        $NNHC[pic] = '';
+        $NNHC[textshort] = 'at Sulzer Regional Library';
+        $NNHC[textlong] = '';
+        $NNHC[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/1182/default.jpg',
+            'text'=>'4700 North Lincoln',
+            'size'=>'125%',
+            'align'=>'50% 50%');
+        $NNHC[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/902/default.jpg',
+                'text'=>'Lake View High School drum majorette Mildred Douglas',
+                'size'=>'400px',
+                'align'=>'65% 15%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/567/default.jpg',
+                'text'=>'47th Ward neighborhood watch',
+                'size'=>'500px',
+                'align'=>'57% 37%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/653/default.jpg',
+                'text'=>'Complex Christmas star quilt',
+                'size'=>'auto 130%',
+                'align'=>'center'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/661/default.jpg',
+                'text'=>'Door with stained glass',
+                'size'=>'110%',
+                'align'=>'50% 25%'));
+        $NNHC[locname] = 'Sulzer Regional Library';
+        $NNHC[locemail] = 'northsidehistory@chipublib.org';
+        $NNHC[locphone] = '(312) 742-4455';
+        $NNHC[link] = 'NNHC';
+        $NNHC[type] = 'location';
+
+    $Harsh[title] = 'Vivian G. Harsh Collection';
+        $Harsh[sortname] = 'Harsh Collection';
+        $Harsh[longname] = 'Harsh Collection at the Woodson Regional Library';
+        $Harsh[shortname] = 'Harsh';
+        $Harsh[sidebarname] = 'Vivian G. Harsh Collection';
+        $Harsh[pic] = '';
+        $Harsh[textshort] = 'at Woodson Regional Library';
+        $Harsh[textlong] = 'The largest African American history and literature collection in the Midwest, the Vivian G. Harsh Research Collection of Afro-American History and Literature documents the black experience with a strong focus on Chicago.';
+        $Harsh[mainimage] = array('url'=>'ASNLH.jpg',
+            'text'=>'Committee in charge of the celebration of the twentieth anniversary of the Association for the Study of Negro Life and History, 1936',
+            'size'=>'auto 125%',
+            'align'=>'center');
+        $Harsh[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/18/default.jpg',
+                'text'=>'Congressman William L. Dawson campaigning, 1940s',
+                'size'=>'200%',
+                'align'=>'50% 10%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/21/default.jpg',
+                'text'=>'"The War&rsquo;s Greatest Scandal," 1943',
+                'size'=>'cover',
+                'align'=>'50% 50%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/2/default.jpg',
+                'text'=>'"Self-portrait" by Gordon Parks, 1941',
+                'size'=>'cover',
+                'align'=>'50% 50%'));
+        $Harsh[loclink] = '81';
+        $Harsh[locname] = 'Carter G. Woodson Regional Library';
+        $Harsh[locemail] = 'harshcollection@chipublib.org';
+        $Harsh[locphone] = '(312) 745-2080';
+        $Harsh[link] = 'Harsh';
+        $Harsh[type] = 'location';
+            
 //collections
     $Examiner[title] = 'Chicago Examiner';
         $Examiner[sortname] = 'Chicago Examiner';
@@ -70,7 +188,7 @@
                                             'dd'=>'111 Illinois newspapers dating back to 1831.'));
         $Examiner[link] = 'Examiner';
         $Examiner[coll] = 'examiner';
-        $Examiner[location] = 'HWLCSC';
+        $Examiner[location] = $HWLCSC;
         $Examiner[type] = 'collection';
         $Examiner[flag] = '1';
 
@@ -100,7 +218,7 @@
                     'align'=>'33% 22%'));
         $EB[link] = 'EB';
         $EB[coll] = 'bar';
-        $EB[location] = 'NNHC';
+        $EB[location] = $NNHC;
         $EB[type] = 'collection';
         $EB[flag] = '8';
 
@@ -138,7 +256,7 @@
                     'align'=>'25% 10%'));
         $CPL[link] = 'CPL';
         $CPL[coll] = 'woop';
-        $CPL[location] = 'HWLCSC';
+        $CPL[location] = $HWLCSC;
         $CPL[type] = 'collection';
         $CPL[flag] = '9';
 
@@ -178,7 +296,7 @@
                 'align'=>'center'));
         $ChiRen[link] = 'ChiRen';
         $ChiRen[coll] = 'cr';
-        $ChiRen[location] = 'Harsh';
+        $ChiRen[location] = $Harsh;
         $ChiRen[type] = 'collection';
         $ChiRen[flag] = '10';
         
@@ -217,55 +335,11 @@
                 'align'=>'40% 35%'));
         $Sewers[link] = 'Sewers';
         $Sewers[coll] = 'dtd';
-        $Sewers[location] = 'NNHC';
+        $Sewers[location] = $HWLCSC;
         $Sewers[type] = 'collection';
         $Sewers[flag] = 'x';
         
-    $Theater[title] = 'Chicago Theater Collection';
-        $Theater[shortname] = 'Theater';
-        $Theater[sidebarname] = 'Theater';
-        $Theater[sortname] = 'Chicago Theater Collection';
-        $Theater[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/image/CPB01/thumbnail',
-            'pich'=>'250px',
-            'size'=>'110%',
-            'pos'=>'auto'
-        );
-        $Theater[category] = '';
-        $Theater[textshort] = 'Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.';
-        $Theater[textlong] = 'A list of theater collections at Chicago Public Library representing theaters, designers, actors and more.';
-        $Theater[textrich] = '<p>Become a playgoer at Chicago&rsquo;s great early theaters. Examine more than 2,000 playbills and programs dating from 1848 to 1922. Of special interest are playbills from shows starring <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Booth%2C%20Edwin%2C%201833-1893/field/contri/mode/all/conn/and/order/title/ad/asc">Edwin Booth</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Jefferson%2C%20Joseph%2C%201829-1905/field/contri/mode/all/conn/and/order/title/ad/asc">Joseph Jefferson</a> and <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Bernhardt%2C%20Sarah%2C%201844-1923/field/contri/mode/all/conn/and/order/title/ad/asc">Sarah Bernhardt</a> at the well-known <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/mcvicker\'s/field/theata/mode/all/conn/and/order/title/ad/asc">McVicker&rsquo;s Theatre</a> as well as playbills from vaudeville houses and neighborhood theaters.</p><p>Alongside straight plays and musical works, numerous genres are represented in the collection, including <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/extravaganzas%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">extravaganzas</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/juggling%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">juggling</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/operettas%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">operettas</a> and <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/tragedies%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">tragedies</a>, among others.</p>';
-        $Theater[rights] = 'The Historic Programs digital collection is made possible by a generous grant from the Gaylord and Dorothy Donnelley Foundation through the Chicago Public Library Foundation.';
-        $Theater[highlights] = array(array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/','dt'=>'Chicago Theater Collection-Historic Playbills','dd'=>'Programs, playbills and newspaper clippings from more than 5,000 productions at Chicago&rsquo;s historic theaters dating back to the 1840s.'),
-                                    array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc','dt'=>'E.B. Gould Programs Collection','dd'=>'The annotated programs of a local Chicago businessman and enthusiastic playgoer.'));
-        $Theater[CPLRes] = array(array('a'=>'https://www.chipublib.org/fa-chicago-theater-collection-historic-programs/','dt'=>'Chicago Theater Collection-Historic Programs Finding Aid','dd'=>'The complete and ever-increasing inventory of theater programs past and present, some of which are presented here.'),
-                                array('a'=>'https://www.chipublib.org/archival_subject/theater/','dt'=>'Chicago Theater Collection','dd'=>'A list of theater collections at Chicago Public Library representing theaters, designers, actors and more.'));
-        $Theater[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/6053/default.jpg',
-            'text'=>'McVicker&rsquo;s Theatre, Camille (January 13, 1881)',
-            'size'=>'134%',
-            'align'=>'52% 15%');
-        $Theater[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/8601/default.jpg',
-                'text'=>'Chicago Little Theatre, Evening with Columbine (October 21, 1913)',
-                'size'=>'200%',
-                'align'=>'50% 85%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/6272/default.jpg',
-                'text'=>'Iroquois Theatre, Blue Beard (December 21, 1903)',
-                'size'=>'110%',
-                'align'=>'50% 30%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/6748/default.jpg',
-                'text'=>'McVicker&rsquo;s Theatre, Rivals (May 15, 1896)',
-                'size'=>'140%',
-                'align'=>'50% 40%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/9755/default.jpg',
-                'text'=>'Chicago Opera House, Mikado (March 6, 1886)',
-                'size'=>'200%',
-                'align'=>'68% 47%'));
-        $Theater[link] = 'Theater';
-        $Theater[coll] = 'CPB01';
-        $Theater[location] = 'HWLCSC';
-        $Theater[type] = 'collection';
-        $Theater[flag] = '4';
-        $Theater[sidebarflag] = 'x';
+
 
     $Whalen[title] = 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
         $Whalen[sortname] = 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
@@ -304,7 +378,7 @@
                 'align'=>'55% 15%'));
         $Whalen[link] = 'Whalen';
         $Whalen[coll] = 'wha';
-        $Whalen[location] = 'HWLCSC';
+        $Whalen[location] = $HWLCSC;
         $Whalen[type] = 'collection';
         $Whalen[flag] = '2';
 
@@ -343,7 +417,7 @@
                                     'align'=>'center'));
         $HDG[link] = 'HDG';
         $HDG[coll] = 'hdg';
-        $HDG[location] = 'NNHC';
+        $HDG[location] = $NNHC;
         $HDG[type] = 'collection';
         $HDG[flag] = '7';
         
@@ -385,7 +459,7 @@
                 'align'=>'center'));
         $RK[link] = 'RK';
         $RK[coll] = 'rwk';
-        $RK[location] = 'NNHC';
+        $RK[location] = $NNHC;
         $RK[type] = 'collection';
         $RK[flag] = '6';
 
@@ -428,7 +502,7 @@
                 'align'=>'center'));
         $MP[link] = 'MP';
         $MP[coll] = 'mpu';
-        $MP[location] = 'HWLCSC';
+        $MP[location] = $HWLCSC;
         $MP[type] = 'collection';
         $MP[flag] = '3';
         
@@ -467,9 +541,12 @@
                                 array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort','dt'=>'Lake View Council on Religious Action','dd'=>'Representatives from local churches and synagogues and members of the Kiwanis Club of Lake View at work'),
                                 array('a'=>'http://digital.chipublib.org/digital/collection/cfc/search/searchterm/Portage%20Park%20Community%20Collection/field/collec/mode/exact/conn/and','dt'=>'Portage Park Community Collection','dd'=>'Patriotism on display during World War I.'),
                                 array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Ravenswood+Manor+Improvement+Association/field/collec/mode/all/conn/and/order/nosort','dt'=>'Ravenswood Manor Improvement Association','dd'=>'Community activism in the North Side riverfront neighborhood.'));
+        $NCO[findingaid] = array(array('link'=>'https://www.chipublib.org/fa-northwest-federation-of-improvement-clubs-records/','text'=>'Northwest Federation of Improvement Clubs Records'), 
+                                array('link'=>'https://www.chipublib.org/archival_post/ravenswood-gardens-homeowners-association-records/','text'=>'Ravenswood Gardens Homeowners Association Records'),
+                                array('link'=>'https://www.chipublib.org/fa-united-woodlawn-inc-records/','text'=>'United Woodlawn, Inc. Records'));
         $NCO[link] = 'NCO';
         $NCO[coll] = 'cfc';
-        $NCO[location] = 'NNHC';
+        $NCO[location] = $NNHC;
         $NCO[hassubcollections] = 'x';
         $NCO[type] = 'collection';
         $NCO[flag] = 'x';
@@ -511,7 +588,7 @@
                                 array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Walz/field/collec/mode/all/conn/and/order/nosort','dt'=>'Louis D. Walz Collection','dd'=>'The life of the long-time director of the Lake View High School band and World War I veteran.'));
         $NHS[link] = 'NHS';
         $NHS[coll] = 'ahs';
-        $NHS[location] = 'NNHC';
+        $NHS[location] = $NNHC;
         $NHS[type] = 'collection';
         $NHS[hassubcollections] = 'x';
         $NHS[flag] = 'x';
@@ -528,7 +605,7 @@
         $CPD[textshort] = 'Chicago Public Library is currently finalizing the photographs from the  Chicago Park District Records, which will be available in the spring of 2018.';
         $CPD[textlong] = 'Chicago Public Library is currently finalizing the photographs from the  Chicago Park District Records, which will be available in the spring of 2018.';
         $CPD[link] = 'CPD';
-        $CPD[location] = 'HWLCSC';
+        $CPD[location] = $HWLCSC;
         $CPD[coll] = 'ChicagoParks';
         $CPD[type] = 'collection';
         $CPD[flag] = 'x';
@@ -581,7 +658,7 @@
                 'align'=>'71% 30%'));
         $HW[link] = 'HW';
         $HW[coll] = 'rhwc';
-        $HW[location] = 'HWLCSC';
+        $HW[location] = $HWLCSC;
         $HW[type] = 'collection';
         $HW[flag] = '5';
         $HW[sidebarflag] = 'x';
@@ -598,7 +675,8 @@
         $RWLV[textshort] = 'Street scenes and community life on the North Side, 1860s-1990s.';
         $RWLV[textlong] = 'Lake View Township and its evolution from an independent municipality into current Northside communities, 1860s-1990s';
         $RWLV[textrich] = '<p>More than <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/00000000-1889/field/date/mode/exact/conn/and/order/title/ad/asc">100 early photographs</a> represent Lake View Township and its residents, schools, homes, businesses and everyday rituals.</p><p>Over the next 100 years North Siders and their neighborhoods experienced tremendous changes as evidenced by their <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/clothing%20%26%20dress/field/subjea/mode/exact/conn/and/order/title/ad/asc">fashion</a>, <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/railroad!automobiles/field/subjea!subjea/mode/all!all/conn/or!and/order/nosort/ad/asc">modes of transportation</a>, and the establishment of a number of <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/schools%20--%20illinois%20--%20chicago/field/subjea/mode/exact/conn/and/order/title/ad/asc">schools</a>, <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/churches/field/subjea/mode/all/conn/and/order/title/ad/asc">churches</a> and <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/clubs/field/subjea/mode/all/conn/and/order/title/ad/asc">social clubs</a>. Notable local events include <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/Our%20Lady%20of%20Lourdes%20Church%20(Chicago%2C%20Ill.)!construction/field/subjec!subjea/mode/exact!all/conn/and!and/order/nosort/ad/asc">moving the Our Lady of Lourdes church building</a> across Ashland Avenue and <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/ground%20breaking%20ceremonies/field/subjea/mode/exact/conn/and/order/nosort/ad/asc">breaking ground for the Conrad Sulzer Regional Library</a>.</p>';
-        $RWLV[CPLRes] = array(array('a'=>'https://www.chipublib.org/archival_post/ravenswood-lake-view-community-collection/','dt'=>'Ravenswood-Lake View Community Collection Finding Aid','dd'=>'Descriptive inventory for the complete physical collection.'),
+        $RWLV[CPLRes] = array(
+                            // array('a'=>'https://www.chipublib.org/archival_post/ravenswood-lake-view-community-collection/','dt'=>'Ravenswood-Lake View Community Collection Finding Aid','dd'=>'Descriptive inventory for the complete physical collection.'),
                             array('a'=>'https://www.chipublib.org/chicago-newspapers-on-microfilm/','dt'=>'Chicago Newspapers','dd'=>'Online and microfilm.'));
         $RWLV[ExRes] = array(array('a'=>'http://www.ravenswoodhistorical.com/','dt'=>'Ravenswood-Lake View Historical Association','dd'=>'Programs, publications and tours focusing on Chicago northside neighborhood history.'),
         array('a'=>'http://www.edgewaterhistory.org/ehs/','dt'=>'Edgewater Historical Society','dd'=>'Exhibits, events and tours of the Edgewater neighborhood.'));
@@ -624,7 +702,7 @@
                 'align'=>'33% 20%'));
         $RWLV[link] = 'RWLV';
         $RWLV[coll] = 'rvw';
-        $RWLV[location] = 'NNHC';
+        $RWLV[location] = $NNHC;
         $RWLV[type] = 'collection';
         $RWLV[flag] = '1';
         
@@ -642,65 +720,11 @@
         $Sang[textlong] = '';
         $Sang[link] = 'Sang';
         $Sang[coll] = 'p16818coll6';
-        $Sang[location] = 'Harsh';
+        $Sang[location] = $Harsh;
         $Sang[type] = 'collection';
         $Sang[flag] = '4';
+    
 
-//subcollections
-            
-    $Amund[title] = 'Amundsen High School Collection';
-        $Amund[sortname] = 'Amundsen High School Collection';
-        $Amund[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
-        $Amund[link] = '#ahs';
-        $Amund[type] = 'subcollection';
-
-    $Kins[title] = 'Helen G. Kinsella Collection';
-        $Kins[sortname] = 'Kinsella, Helen G. Collection';
-        $Kins[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
-        $Kins[link] = '#ahs';
-        $Kins[type] = 'subcollection';
-
-    $LVHS[title] = 'Lake View High School Collection';
-        $LVHS[sortname] = 'Lake View High School Collection';
-        $LVHS[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
-        $LVHS[link] = '#ahs';
-        $LVHS[type] = 'subcollection';
-
-    $Walz[title] = 'Louis D. Walz Collection';
-        $Walz[sortname] = 'Walz, Louis D. Collection';
-        $Walz[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
-        $Walz[link] = '#ahs';
-        $Walz[type] = 'subcollection';
-
-    $CFCC[title] = 'Christian Fellowship Church Collection';
-        $CFCC[sortname] = 'Christian Fellowship Church Collection';
-        $CFCC[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
-        $CFCC[link] = '#cfc';
-        $CFCC[type] = 'subcollection';
-
-    $LVCRA[title] = 'Lake View Council on Religious Action';
-        $LVCRA[sortname] = 'Lake View Council on Religious Action';
-        $LVCRA[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
-        $LVCRA[link] = '#cfc';
-        $LVCRA[type] = 'subcollection';
-
-    $PortPark[title] = 'Portage Park Community Collection';
-        $PortPark[sortname] = 'Portage Park Community Collection';
-        $PortPark[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
-        $PortPark[link] = '#cfc';
-        $PortPark[type] = 'subcollection';
-
-    $RMIA[title] = 'Ravenswood Manor Improvement Association Collection';
-        $RMIA[sortname] = 'Ravenswood Manor Improvement Association Collection';
-        $RMIA[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
-        $RMIA[link] = '#cfc';
-        $RMIA[type] = 'subcollection';
-
-    $HWR[title] = 'Washington, Harold';
-        $HWR[sortname] = 'Washington, Harold';
-        $HWR[textlong] = 'See <a href="#rhwc">Remembering Harold Washington</a>';
-        $HWR[link] = '#rhwc';
-        $HWR[type] = 'subcollection';
 
 //categories
     $AfAm[title] = 'African Americans';
@@ -841,7 +865,7 @@
                 'text'=>'Oz Park',
                 'size'=>'',
                 'align'=>'57% 17%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/dtd/157/default.jpg?highlightTerms=',
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/dtd/157/default.jpg',
                 'text'=>'31st Street and Albany Avenue, repairing old brick outfall, July 20, 1936',
                 'size'=>'',
                 'align'=>'62% 37%'));
@@ -894,134 +918,126 @@
         $Parks[flag] = 'x';
         $Parks[sidebarflag] = 'x';
 
-    //Theater
-//locations
-    $HWLCSC[title] = 'Special Collections at HWLC';
-        $HWLCSC[sortname] = 'Special Collections at HWLC';
-        $HWLCSC[shortname] = 'HWLCSC';
-        $HWLCSC[longname] = 'Special Collections at the Harold Washington Library Center';
-        $HWLCSC[sidebarname] = 'Special Collections at HWLC';
-        $HWLCSC[pic] = '';      
-        $HWLCSC[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/79/default.jpg',
-            'text'=>'Old Water Tank, exterior view, ca. 1870',
-            'size'=>'105%',
-            'align'=>'50% 50%');
-        $HWLCSC[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/2196/default.jpg',
-                'text'=>'Chicago Little Theatre, Philanderer (November 19, 1914)',
-                'size'=>'170%',
-                'align'=>'25% 22%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/4833/default.jpg',
-                'text'=>'Madden Park (0028) Activities, 1954-04-08',
-                'size'=>'140%',
-                'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/42/default.jpg',
-                'text'=>'$100,000 Reward! The Murderer of Our Late Beloved President is Still at Large.',
-                'size'=>'105%',
-                'align'=>'50% 20%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/4066/default.jpg',
-                'text'=>'Crown Fountain, fountain preview, July 13, 2004',
-                'size'=>'370%',
-                'align'=>'50% 50%'));
-        $HWLCSC[textshort] = 'at Harold Washington Library Center';
-        $HWLCSC[textlong] = 'The Special Collections and Preservation Division showcases rare books and archival material relating to Chicago History. Major collecting areas include: Chicago Authors and Publishing, Chicago Park District Chicago Public Library Archives, Chicago Theater, Civil War, Chicago&rsquo;s World&rsquo;s Fairs and Mayor Harold Washington.';
-        $HWLCSC[locname] = 'Harold Washington Library Center';
-        $HWLCSC[loclink] = '34';
-        $HWLCSC[locemail] = 'specoll@chipublib.org';
-        $HWLCSC[locphone] = '(312) 747-4875';
-        $HWLCSC[link] = 'HWLCSC';
-        $HWLCSC[type] = 'location';
-
-    $MRC[title] = 'Municipal Reference Collection';
-        $MRC[sortname] = 'Municipal Reference Collection';
-        $MRC[longname] = 'Municipal Reference Collection at the Harold Washington Library Center';
-        $MRC[shortname] = 'MRC';
-        $MRC[sidebarname] = 'Municipal Reference Collection';
-        $MRC[pic] = '';
-        $MRC[textshort] = 'at Harold Washington Library Center';
-        $MRC[textlong] = '';
-        $MRC[textrich] = '<a href="https://www.chipublib.org/blogs/post/welcome-to-the-municipal-reference-collection/">Test test</a> test.';
-        $MRC[locname] = '';
-        $MRC[locemail] = '';
-        $MRC[locphone] = '(312) 747-4526';
-        $MRC[link] = 'MRC';
-        $MRC[type] = 'location';
-
-    $NNHC[title] = 'Northside Neighborhood History Collection';
-        $NNHC[sortname] = 'Northside Neighborhood History Collection';
-        $NNHC[shortname] = 'NNHC';
-        $NNHC[longname] = 'Northside Neighborhood History Collection at the Sulzer Regional Library';
-        $NNHC[sidebarname] = 'Northside Neighborhood History Collection';
-        $NNHC[pic] = '';
-        $NNHC[textshort] = 'at Sulzer Regional Library';
-        $NNHC[textlong] = '';
-        $NNHC[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/1182/default.jpg',
-            'text'=>'4700 North Lincoln',
-            'size'=>'125%',
-            'align'=>'50% 50%');
-        $NNHC[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/902/default.jpg',
-                'text'=>'Lake View High School drum majorette Mildred Douglas',
-                'size'=>'400px',
-                'align'=>'65% 15%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/567/default.jpg',
-                'text'=>'47th Ward neighborhood watch',
-                'size'=>'500px',
-                'align'=>'57% 37%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/653/default.jpg',
-                'text'=>'Complex Christmas star quilt',
-                'size'=>'auto 130%',
-                'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/661/default.jpg',
-                'text'=>'Door with stained glass',
-                'size'=>'110%',
-                'align'=>'50% 25%'));
-        $NNHC[locname] = 'Sulzer Regional Library';
-        $NNHC[locemail] = 'northsidehistory@chipublib.org';
-        $NNHC[locphone] = '(312) 742-4455';
-        $NNHC[link] = 'NNHC';
-        $NNHC[type] = 'location';
-
-    $Harsh[title] = 'Vivian G. Harsh Collection';
-        $Harsh[sortname] = 'Harsh Collection';
-        $Harsh[longname] = 'Harsh Collection at the Woodson Regional Library';
-        $Harsh[shortname] = 'Harsh';
-        $Harsh[sidebarname] = 'Vivian G. Harsh Collection';
-        $Harsh[pic] = '';
-        $Harsh[textshort] = 'at Woodson Regional Library';
-        $Harsh[textlong] = 'The largest African American history and literature collection in the Midwest, the Vivian G. Harsh Research Collection of Afro-American History and Literature documents the black experience with a strong focus on Chicago.';
-        $Harsh[mainimage] = array('url'=>'ASNLH.jpg',
-            'text'=>'Committee in charge of the celebration of the twentieth anniversary of the Association for the Study of Negro Life and History, 1936',
-            'size'=>'auto 125%',
-            'align'=>'center');
-        $Harsh[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/18/default.jpg',
-                'text'=>'Congressman William L. Dawson campaigning, 1940s',
+    $Theater[title] = 'Chicago Theater';
+        $Theater[shortname] = 'Theater';
+        $Theater[sidebarname] = 'Theater';
+        $Theater[sortname] = 'Chicago Theater';
+        $Theater[cardpic] = array(
+            'pic'=>'http://digital.chipublib.org/digital/image/CPB01/thumbnail',
+            'pich'=>'250px',
+            'size'=>'110%',
+            'pos'=>'auto'
+        );
+        $Theater[category] = '';
+        $Theater[textshort] = 'Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.';
+        $Theater[textlong] = 'A list of theater collections at Chicago Public Library representing theaters, designers, actors and more.';
+        $Theater[textrich] = '<p>Become a playgoer at Chicago&rsquo;s great early theaters. Examine more than 2,000 playbills and programs dating from 1848 to 1922. Of special interest are playbills from shows starring <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Booth%2C%20Edwin%2C%201833-1893/field/contri/mode/all/conn/and/order/title/ad/asc">Edwin Booth</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Jefferson%2C%20Joseph%2C%201829-1905/field/contri/mode/all/conn/and/order/title/ad/asc">Joseph Jefferson</a> and <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Bernhardt%2C%20Sarah%2C%201844-1923/field/contri/mode/all/conn/and/order/title/ad/asc">Sarah Bernhardt</a> at the well-known <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/mcvicker\'s/field/theata/mode/all/conn/and/order/title/ad/asc">McVicker&rsquo;s Theatre</a> as well as playbills from vaudeville houses and neighborhood theaters.</p><p>Alongside straight plays and musical works, numerous genres are represented in the collection, including <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/extravaganzas%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">extravaganzas</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/juggling%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">juggling</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/operettas%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">operettas</a> and <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/tragedies%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">tragedies</a>, among others.</p>';
+        $Theater[rights] = 'The Historic Programs digital collection is made possible by a generous grant from the Gaylord and Dorothy Donnelley Foundation through the Chicago Public Library Foundation.';
+        $Theater[highlights] = array(array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/','dt'=>'Chicago Theater Collection-Historic Playbills','dd'=>'Programs, playbills and newspaper clippings from more than 5,000 productions at Chicago&rsquo;s historic theaters dating back to the 1840s.'),
+                                    array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc','dt'=>'E.B. Gould Programs Collection','dd'=>'The annotated programs of a local Chicago businessman and enthusiastic playgoer.'));
+        $Theater[CPLRes] = array(array('a'=>'https://www.chipublib.org/fa-chicago-theater-collection-historic-programs/','dt'=>'Chicago Theater Collection-Historic Programs Finding Aid','dd'=>'The complete and ever-increasing inventory of theater programs past and present, some of which are presented here.'),
+                                array('a'=>'https://www.chipublib.org/archival_subject/theater/','dt'=>'Chicago Theater Collection','dd'=>'A list of theater collections at Chicago Public Library representing theaters, designers, actors and more.'));
+        $Theater[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/6053/default.jpg',
+            'text'=>'McVicker&rsquo;s Theatre, Camille (January 13, 1881)',
+            'size'=>'134%',
+            'align'=>'52% 15%');
+        $Theater[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/8601/default.jpg',
+                'text'=>'Chicago Little Theatre, Evening with Columbine (October 21, 1913)',
                 'size'=>'200%',
-                'align'=>'50% 10%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/21/default.jpg',
-                'text'=>'"The War&rsquo;s Greatest Scandal," 1943',
-                'size'=>'cover',
-                'align'=>'50% 50%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/2/default.jpg',
-                'text'=>'"Self-portrait" by Gordon Parks, 1941',
-                'size'=>'cover',
-                'align'=>'50% 50%'));
-        $Harsh[loclink] = '81';
-        $Harsh[locname] = 'Carter G. Woodson Regional Library';
-        $Harsh[locemail] = 'harshcollection@chipublib.org';
-        $Harsh[locphone] = '(312) 745-2080';
-        $Harsh[link] = 'Harsh';
-        $Harsh[type] = 'location';
-    
-        // $[title] = '';
-        // $[sortname] = '';
-        // $[pic] = '';
-        // $[category] = '';
-        // $[textshort] = '';
-        // $[textlong] = '';
-        // $[link] = '';
-        // $[coll] = '';
-        // $[type] = '';
-        // $[flag] = '';
-        
+                'align'=>'50% 85%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/6272/default.jpg',
+                'text'=>'Iroquois Theatre, Blue Beard (December 21, 1903)',
+                'size'=>'110%',
+                'align'=>'50% 30%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/6748/default.jpg',
+                'text'=>'McVicker&rsquo;s Theatre, Rivals (May 15, 1896)',
+                'size'=>'140%',
+                'align'=>'50% 40%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/9755/default.jpg',
+                'text'=>'Chicago Opera House, Mikado (March 6, 1886)',
+                'size'=>'200%',
+                'align'=>'68% 47%'));
+        $Theater[link] = 'Theater';
+        $Theater[coll] = 'CPB01';
+        $Theater[location] = $HWLCSC;
+        $Theater[type] = 'category';
+        $Theater[hassubcollections] = 'x';
+        $Theater[flag] = '4';
+        $Theater[sidebarflag] = 'x';
+        $Theater[title] = 'Chicago Theater';
+        $Theater[shortname] = 'Theater';
+        $Theater[sidebarname] = 'Theater';
+        $Theater[sortname] = 'Chicago Theater';
+        $Theater[cardpic] = array(
+            'pic'=>'http://digital.chipublib.org/digital/image/CPB01/thumbnail',
+            'pich'=>'250px',
+            'size'=>'110%',
+            'pos'=>'auto'
+        );
+
+//subcollections
+    // $subcollection = array(
+    //     'textlong' => 'See <a href="#' . $parent[link] . '">' . $parent[title] . '</a>';
+    // );
+
+    $EBG = $Theater;
+        $EBG[title] = 'E.B. Gould Programs Collection';
+        $EBG[type] = 'subcollection';
+                
+    $Amund[title] = 'Amundsen High School Collection';
+        $Amund[sortname] = 'Amundsen High School Collection';
+        $Amund[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
+        $Amund[link] = '#ahs';
+        $Amund[type] = 'subcollection';
+
+    $Kins[title] = 'Helen G. Kinsella Collection';
+        $Kins[sortname] = 'Kinsella, Helen G. Collection';
+        $Kins[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
+        $Kins[link] = '#ahs';
+        $Kins[type] = 'subcollection';
+
+    $LVHS[title] = 'Lake View High School Collection';
+        $LVHS[sortname] = 'Lake View High School Collection';
+        $LVHS[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
+        $LVHS[link] = '#ahs';
+        $LVHS[type] = 'subcollection';
+
+    $Walz[title] = 'Louis D. Walz Collection';
+        $Walz[sortname] = 'Walz, Louis D. Collection';
+        $Walz[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
+        $Walz[link] = '#ahs';
+        $Walz[type] = 'subcollection';
+
+    $CFCC[title] = 'Christian Fellowship Church Collection';
+        $CFCC[sortname] = 'Christian Fellowship Church Collection';
+        $CFCC[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
+        $CFCC[link] = '#cfc';
+        $CFCC[type] = 'subcollection';
+
+    $LVCRA[title] = 'Lake View Council on Religious Action';
+        $LVCRA[sortname] = 'Lake View Council on Religious Action';
+        $LVCRA[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
+        $LVCRA[link] = '#cfc';
+        $LVCRA[type] = 'subcollection';
+
+    $PortPark[title] = 'Portage Park Community Collection';
+        $PortPark[sortname] = 'Portage Park Community Collection';
+        $PortPark[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
+        $PortPark[link] = '#cfc';
+        $PortPark[type] = 'subcollection';
+
+    $RMIA[title] = 'Ravenswood Manor Improvement Association Collection';
+        $RMIA[sortname] = 'Ravenswood Manor Improvement Association Collection';
+        $RMIA[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
+        $RMIA[link] = '#cfc';
+        $RMIA[type] = 'subcollection';
+
+    $HWR[title] = 'Washington, Harold';
+        $HWR[sortname] = 'Washington, Harold';
+        $HWR[textlong] = 'See <a href="#rhwc">Remembering Harold Washington</a>';
+        $HWR[link] = '#rhwc';
+        $HWR[type] = 'subcollection';
+
 //misc arrays
     $cards = array($Examiner, $EB, $CPL, $ChiRen, $Sewers, $Theater, $Whalen, 
                    $HDG, $RK, $MP, $NCO, $NHS, $CPD, $HW, $RWLV, $Sang, $Amund, 

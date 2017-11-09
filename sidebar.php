@@ -38,11 +38,16 @@
 			<div class="left-sidebar-location">
 				<h4 class="left-sidebar-subtitle">Browse by Subject</h4>
 				<ul>
-				<?php     
+				<?php   
+					$underline = ' style="text-decoration: underline"';
 					usort($cards, build_sorter('sidebarname'));
     				foreach ($cards as $key => $val){
         				if ($val[sidebarflag] == 'x'){
-							echo '<li class="left-sidebar-list"><a href="content.php?id=' . $val[link] . '" class="sidebar-links">' . $val[sidebarname] . '</a></li>';
+							echo '<li class="left-sidebar-list"><a href="content.php?id=' . $val[link] . '" class="sidebar-links"';
+							if ($val[link] == $PAGE[link]) {
+								echo $underline;
+							}
+							echo '>' . $val[sidebarname] . '</a></li>';
 						}
 					}
 				?>
@@ -55,7 +60,11 @@
 					usort($cards, build_sorter('sortname'));
     				foreach ($cards as $key => $val){
         				if ($val[type] == 'location'){
-							echo '<li class="left-sidebar-list"><a href="content.php?id=' . $val[link] . '" class="sidebar-links">' . $val[sidebarname] . '</a></li>';
+							echo '<li class="left-sidebar-list"><a href="content.php?id=' . $val[link] . '" class="sidebar-links"';
+							if ($val[link] == $PAGE[link]) {
+								echo $underline;
+							}
+							echo '>' . $val[sidebarname] . '</a></li>';
 						}
 					}
 				?>
