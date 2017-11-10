@@ -20,8 +20,7 @@
 				<?php 
 					if ($PAGE[coll]) {
 						echo '<div class="center-button browseall"><a href="http://digital.chipublib.org/digital/search/collection/' . $PAGE[coll] . '/order/title/ad/asc" class="btn btn-primary">Browse All</a></div>';
-					}
-					if (!$PAGE[coll]) {
+					} else {
 						$COLL;
 						foreach ($cards as $key => $val) {
 							if (($PAGE[type] == 'location' && $PAGE[shortname] == $val[location]) || ($PAGE[type] == 'category' && ($PAGE[shortname] == $val[category] || (is_array($val[category]) && in_array($PAGE[shortname], $val[category]))))) {
@@ -36,7 +35,7 @@
                         echo '<div class="center-copy-paragraph">
 							<p>' . $PAGE[textrich] . '</p>';
 							if ($PAGE[type] == 'collection'){
-								echo 'The ' . $PAGE[title] . ' is housed at the ' . $PAGE[location][longname] . '.';
+								echo 'The ' . $PAGE[title] . ' is housed at ' . $PAGE[location][longname] . '.';
 							}
 						echo '</div>';
 					}
@@ -54,28 +53,28 @@
                         }
                         echo '</dl></div>';
                     }
-                    if ($PAGE[hassubcollections]) {
+                    if ($PAGE[subcollections]) {
                         if(!$PAGE[textrich]){
 							echo '<div class="center-copy-list" style="border-top: none; padding: 15px">';
 						} else {
 							echo '<div class="center-copy-list">';
 						}
 							echo '<h4>Digital Collections</h4>
-							<p>This collection is made up of the following archival collections:</p>
+							<span>This collection is made up of the following archival collections:</span>
                             <dl>';
-                        foreach ($PAGE[subdigicoll] as $key=>$val){
-							echo '<dt><a href="' . $val[a] . '">' . $val[dt] . '</a></dt><dd>' . $val[dd] . '</dd>';
+                        foreach ($PAGE[subcollections] as $key=>$val){
+							echo '<dt><a href="' . $val[browse] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
                         }
                         echo '</dl></div>';
                     }
-                    if ($PAGE[type] == 'category'){
+                    if ($PAGE[type] == 'category' && !$PAGE[subcollections]){
 						if(!$PAGE[textrich]){
 							echo '<div class="center-copy-list" style="border-top: none; padding: 15px">';
 						} else {
 							echo '<div class="center-copy-list">';
 						}
 						echo '<h4>Digital Collections</h4>
-                            <p>Collections ' . $PAGE[catcoll] . ' include:<p>
+                            <span>Collections ' . $PAGE[catcoll] . ' include:</span>
                             <dl>';
 						usort($cards, build_sorter('sortname'));
 						foreach ($cards as $key => $val){
@@ -151,7 +150,7 @@
                         echo '</dl></div>';
 					}
 					if ($PAGE[rights]){
-						echo '<div class="content-card-paragraph"><span class="rights">' . $PAGE[rights] . '</span></div>';
+						echo '<div class="center-copy-paragraph"><span class="rights">' . $PAGE[rights] . '</span></div>';
 					}
 					if ($PAGE[inclusions]) {
 						center_content($PAGE[inclusions]);

@@ -121,6 +121,7 @@
 				switchToFixedLayout();
 			}
 		}
+		$('[data-toggle="tooltip"]').tooltip()
 	});
 	function searchQuery() {
 		var query = document.getElementsByName("search-query")[0].value;

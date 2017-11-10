@@ -3,8 +3,13 @@
     usort($cards, build_sorter('sortname'));
     foreach ($cards as $key => $val){
         if ($val[type] == 'collection' || $val[type] == 'subcollection'){
-            echo '<dt class="' . $val[coll] . '"><a href="content.php?id=' . $val[link] . '" name="' . $val[coll] . '">' . $val[sortname] . '</a><span class="rsaquo"> &rsaquo;</span></dt>';
-            echo '<dd>' . $val[textlong] . '</dd>';
+            echo '<dt class="' . $val[coll] . '">';
+            if ($val[type] == 'collection'){
+                echo '<a href="content.php?id=' . $val[link] . '" name="' . $val[coll] . '">' . $val[sortname] . '</a><span class="rsaquo"> &rsaquo;</span>';
+            } else {
+                echo $val[sortname];
+            }
+            echo '</dt><dd>' . $val[textlong] . '</dd>';
             if (!$val[category] == ''){
                 if (is_array($val[category])) {
                     $catlink0 = array_search($val[category][0], $categories);

@@ -10,6 +10,7 @@
     <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether-theme-arrows-dark.css" integrity="sha256-h23kMHZF9EZB4pGSPypdDjFgPawq5Hmdr2X0jD7MCVE=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/a768f4e0c8.js"></script>
@@ -17,11 +18,6 @@
     <script src="imagesloaded.pkgd.min.js"></script>
     <script src="cpldc.js"></script>
     <link rel="stylesheet" href="cpldc.css" >
-<style>
-    div {
-        /* border: 1px solid black !important; */
-    }
-</style>
 </head>
 <body>
     <?php 
@@ -38,9 +34,11 @@
                 usort($cards, build_sorter('flag'));
                 foreach ($cards as $key => $val){
                     if (!$val[flag] == ''){
-                        echo '<div class="grid-item card" style="width: 20rem; margin-bottom: 10px;">';
-                        echo '<a href="content.php?id='. $val[link] . '" style="background: url(' . $val[cardpic][pic] . '); background-size: ' . $val[cardpic][size] . '; background-position: ' . $val[cardpic][pos] . '; height: ' . $val[cardpic][pich] . '" alt="' . $val[title] . '"></a>';
-                        echo '<div class="card-block" >';
+                        echo '<div class="grid-item card" style="width: 20rem; margin-bottom: 10px;"';
+                        if ($val[link] == 'MP') {
+                            echo ' data-toggle="tooltip" data-placement="top" title="' . $MP[rights];
+                        }
+                        echo '"><a href="content.php?id='. $val[link] . '" style="background: url(' . $val[cardpic][pic] . '); background-size: ' . $val[cardpic][size] . '; background-position: ' . $val[cardpic][pos] . '; height: ' . $val[cardpic][pich] . '" alt="' . $val[title] . '"></a><div class="card-block" >';
                         if (is_array($val[category])){
                                 $catLink0 = array_search($val[category][0], $categories);
                                 $catLink1 = array_search($val[category][1], $categories);

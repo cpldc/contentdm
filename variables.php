@@ -34,7 +34,7 @@
     $HWLCSC[title] = 'Special Collections at HWLC';
         $HWLCSC[sortname] = 'Special Collections at HWLC';
         $HWLCSC[shortname] = 'HWLCSC';
-        $HWLCSC[longname] = 'Special Collections at the Harold Washington Library Center';
+        $HWLCSC[longname] = 'Special Collections at Harold Washington Library Center';
         $HWLCSC[sidebarname] = 'Special Collections at HWLC';
         $HWLCSC[pic] = '';      
         $HWLCSC[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/79/default.jpg',
@@ -68,7 +68,7 @@
 
     $MRC[title] = 'Municipal Reference Collection';
         $MRC[sortname] = 'Municipal Reference Collection';
-        $MRC[longname] = 'Municipal Reference Collection at the Harold Washington Library Center';
+        $MRC[longname] = 'Municipal Reference Collection at Harold Washington Library Center';
         $MRC[shortname] = 'MRC';
         $MRC[sidebarname] = 'Municipal Reference Collection';
         $MRC[pic] = '';
@@ -84,7 +84,7 @@
     $NNHC[title] = 'Northside Neighborhood History Collection';
         $NNHC[sortname] = 'Northside Neighborhood History Collection';
         $NNHC[shortname] = 'NNHC';
-        $NNHC[longname] = 'Northside Neighborhood History Collection at the Sulzer Regional Library';
+        $NNHC[longname] = 'Northside Neighborhood History Collection at Sulzer Regional Library';
         $NNHC[sidebarname] = 'Northside Neighborhood History Collection';
         $NNHC[pic] = '';
         $NNHC[textshort] = 'at Sulzer Regional Library';
@@ -117,7 +117,7 @@
 
     $Harsh[title] = 'Vivian G. Harsh Collection';
         $Harsh[sortname] = 'Harsh Collection';
-        $Harsh[longname] = 'Harsh Collection at the Woodson Regional Library';
+        $Harsh[longname] = 'Harsh Collection at Woodson Regional Library';
         $Harsh[shortname] = 'Harsh';
         $Harsh[sidebarname] = 'Vivian G. Harsh Collection';
         $Harsh[pic] = '';
@@ -145,7 +145,93 @@
         $Harsh[locphone] = '(312) 745-2080';
         $Harsh[link] = 'Harsh';
         $Harsh[type] = 'location';
-            
+
+//subcollections
+    $EBG[title] = 'E.B. Gould Programs Collection';
+        $EBG[sortname] = 'Gould, E.B. Programs Collection';
+        $EBG[textlong] = 'See <a href="#CPB01">Chicago Theater</a>.';
+        $EBG[textshort] = 'The annotated programs of a local Chicago businessman and enthusiastic playgoer.';
+        $EBG[browse] = 'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc';
+        $EBG[type] = 'subcollection';
+
+    $Playbills[title] = 'Chicago Theater Collection-Historic Playbills';
+        $Playbills[sortname] = 'Chicago Theater Collection-Historic Playbills';
+        $Playbills[textlong] = 'See <a href="#CPB01">Chicago Theater</a>.';
+        $Playbills[textshort] = 'Programs, playbills and newspaper clippings from more than 5,000 productions at Chicago’s historic theaters dating back to the 1840s.';
+        $Playbills[browse] = 'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/';
+        $Playbills[type] = 'subcollection';
+                
+    $Amund[title] = 'Amundsen High School Collection';
+        $Amund[sortname] = 'Amundsen High School Collection';
+        $Amund[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>.';
+        $Amund[textshort] = 'The Winnemac Park school opened in its doors in 1930. Cheer on their football team as they do battle with Taft High School.';
+        $Amund[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Amundsen+High+School+Collection/field/collec/mode/all/conn/and/order/nosort';
+        $Amund[link] = '#ahs';
+        $Amund[type] = 'subcollection';
+
+    $Kins[title] = 'Helen G. Kinsella Collection';
+        $Kins[sortname] = 'Kinsella, Helen G. Collection';
+        $Kins[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>.';
+        $Kins[textshort] = 'Dramatic productions and other activities led by the award-winning Lake View High School drama and public speaking teacher.';
+        $Kins[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Helen+G.+Kinsella+Collection/field/collec/mode/all/conn/and/order/nosort';
+        $Kins[link] = '#ahs';
+        $Kins[type] = 'subcollection';
+
+    $LVHS[title] = 'Lake View High School Collection';
+        $LVHS[sortname] = 'Lake View High School Collection';
+        $LVHS[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>.';
+        $LVHS[textshort] = 'Academics and extracurriculars at the first high school in Lake View Township.';
+        $LVHS[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Lake+View+High+School+Collection/field/collec/mode/all/conn/and/order/nosort';
+        $LVHS[link] = '#ahs';
+        $LVHS[type] = 'subcollection';
+
+    $Walz[title] = 'Louis D. Walz Collection';
+        $Walz[sortname] = 'Walz, Louis D. Collection';
+        $Walz[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>.';
+        $Walz[textshort] = 'The life of the long-time director of the Lake View High School band and World War I veteran.';
+        $Walz[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Walz/field/collec/mode/all/conn/and/order/nosort';
+        $Walz[link] = '#ahs';
+        $Walz[type] = 'subcollection';
+
+    $CFCC[title] = 'Christian Fellowship Church Collection';
+        $CFCC[sortname] = 'Christian Fellowship Church Collection';
+        $CFCC[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>.';
+        $CFCC[textshort] = 'Activities of the church founded by Conrad and Martha Wendtland in their home in 1926.';
+        $CFCC[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort';
+        $CFCC[link] = '#cfc';
+        $CFCC[type] = 'subcollection';
+
+    $LVCRA[title] = 'Lake View Council on Religious Action';
+        $LVCRA[sortname] = 'Lake View Council on Religious Action';
+        $LVCRA[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>.';
+        $LVCRA[textshort] = 'Representatives from local churches and synagogues and members of the Kiwanis Club of Lake View at work.';
+        $LVCRA[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort';
+        $LVCRA[link] = '#cfc';
+        $LVCRA[type] = 'subcollection';
+
+    $PortPark[title] = 'Portage Park Community Collection';
+        $PortPark[sortname] = 'Portage Park Community Collection';
+        $PortPark[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>.';
+        $PortPark[textshort] = 'Patriotism on display during World War I.';
+        $PortPark[browse] = 'http://digital.chipublib.org/digital/collection/cfc/search/searchterm/Portage%20Park%20Community%20Collection/field/collec/mode/exact/conn/and';
+        $PortPark[link] = '#cfc';
+        $PortPark[type] = 'subcollection';
+
+    $RMIA[title] = 'Ravenswood Manor Improvement Association Collection';
+        $RMIA[sortname] = 'Ravenswood Manor Improvement Association Collection';
+        $RMIA[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>.';
+        $RMIA[textshort] = 'Community activism in the North Side riverfront neighborhood.';
+        $RMIA[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Ravenswood+Manor+Improvement+Association/field/collec/mode/all/conn/and/order/nosort';
+        $RMIA[link] = '#cfc';
+        $RMIA[type] = 'subcollection';
+
+    $HWR[title] = 'Washington, Harold';
+        $HWR[sortname] = 'Washington, Harold';
+        $HWR[textlong] = 'See <a href="#rhwc">Remembering Harold Washington</a>';
+        $HWR[link] = '#rhwc';
+        $HWR[type] = 'subcollection';
+
+
 //collections
     $Examiner[title] = 'Chicago Examiner';
         $Examiner[sortname] = 'Chicago Examiner';
@@ -473,10 +559,10 @@
         );
         $MP[category] = 'Parks';
         $MP[textshort] = 'Transformation from rail yard to dynamic urban park.';
-        $MP[textlong] = 'Watch the Millennium Park site transform from an industrial wasteland to a new urban park of world renown from 1999-2005, under the project management of U.S. Equities Realty and acclaimed architects and artists.';
+        $MP[textlong] = 'Watch the Millennium Park site transform from an industrial wasteland to a new urban park of world renown from 1999-2005, under the project management of U.S. Equities Realty and acclaimed architects, engineers and artists.';
         $MP[textrich] = '<p>Follow the construction of <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/BP+Bridge/field/book/mode/exact/conn/and/order/origin">BP Pedestrian Bridge</a>, the first bridge designed by Frank Gehry; Anish Kapoor&rsquo;s monumental public sculpture, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/Cloud+Gate/field/book/mode/exact/conn/and/order/origin">Cloud Gate</a>, aka The Bean; the Gehry-designed <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/Jay%20Pritzker%20Pavilion/field/book/mode/exact/conn/and/order/origin">Jay Pritzker Pavillion</a>, a soaring bandshell that hosts the U.S.&rsquo;s last free outdoor classical music series; Jaume Plensa&rsquo;s <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/Crown%20Fountain/field/book/mode/exact/conn/and/order/origin">Crown Fountain</a>, a cascading interactive video sculpture. Take in sweeping views with <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/Full%20Park/field/book/mode/all/conn/and/order/origin/page/1">full park images</a>.</p>';
-        $MP[highlights] = array(array('a'=>'http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/highlight/field/highli/mode/all/conn/and/order/origin','dt'=>'Collection Overview','dd'=>'Get a taste of how this transformation took place in a selected group of images.'));
-        $MP[findingaid] = array(array('link'=>'https://www.chipublib.org/fa-millennium-park-inc/','text'=>'Millennium Park, Inc. Archives Finding Aid'),
+        $MP[highlights] = array(array('a'=>'http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/highlight/field/highli/mode/all/conn/and/order/origin','dt'=>'Collection Highlights','dd'=>'Get a taste of how this transformation took place in a selected group of images.'));
+        $MP[findingaid] = array(array('link'=>'https://www.chipublib.org/fa-millennium-park-inc/','text'=>'Millennium Park, Inc. Finding Aid'),
                             array('link'=>'https://www.chipublib.org/fa-millennium-park-u-s-equities-realty-collection/','text'=>'Millennium Park / U.S. Equities Realty Collection Finding Aid'));
         $MP[CPLRes] = array(array('a'=>'https://www.chipublib.org/?post_type=post&s=Millennium+Park','dt'=>'Millennium Park Blog Posts','dd'=>'by CPL librarians and staff.'));
         $MP[rights] = 'The Millennium Park Digital Collection was made possible by generous gifts from U.S. Equities Realty and the Gaylord and Dorothy Donnelley Foundation through the Chicago Public Library Foundation.';
@@ -547,7 +633,7 @@
         $NCO[link] = 'NCO';
         $NCO[coll] = 'cfc';
         $NCO[location] = $NNHC;
-        $NCO[hassubcollections] = 'x';
+        $NCO[subcollections] = array($CFCC, $LVCRA, $PortPark, $RMIA);
         $NCO[type] = 'collection';
         $NCO[flag] = 'x';
 
@@ -590,7 +676,7 @@
         $NHS[coll] = 'ahs';
         $NHS[location] = $NNHC;
         $NHS[type] = 'collection';
-        $NHS[hassubcollections] = 'x';
+        $NHS[subcollections] = array($Amund, $Kins, $LVHS, $Walz);
         $NHS[flag] = 'x';
 
     $CPD[title] = 'Chicago Park District Records: Photographs';
@@ -933,8 +1019,8 @@
         $Theater[textlong] = 'A list of theater collections at Chicago Public Library representing theaters, designers, actors and more.';
         $Theater[textrich] = '<p>Become a playgoer at Chicago&rsquo;s great early theaters. Examine more than 2,000 playbills and programs dating from 1848 to 1922. Of special interest are playbills from shows starring <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Booth%2C%20Edwin%2C%201833-1893/field/contri/mode/all/conn/and/order/title/ad/asc">Edwin Booth</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Jefferson%2C%20Joseph%2C%201829-1905/field/contri/mode/all/conn/and/order/title/ad/asc">Joseph Jefferson</a> and <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Bernhardt%2C%20Sarah%2C%201844-1923/field/contri/mode/all/conn/and/order/title/ad/asc">Sarah Bernhardt</a> at the well-known <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/mcvicker\'s/field/theata/mode/all/conn/and/order/title/ad/asc">McVicker&rsquo;s Theatre</a> as well as playbills from vaudeville houses and neighborhood theaters.</p><p>Alongside straight plays and musical works, numerous genres are represented in the collection, including <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/extravaganzas%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">extravaganzas</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/juggling%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">juggling</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/operettas%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">operettas</a> and <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/tragedies%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">tragedies</a>, among others.</p>';
         $Theater[rights] = 'The Historic Programs digital collection is made possible by a generous grant from the Gaylord and Dorothy Donnelley Foundation through the Chicago Public Library Foundation.';
-        $Theater[highlights] = array(array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/','dt'=>'Chicago Theater Collection-Historic Playbills','dd'=>'Programs, playbills and newspaper clippings from more than 5,000 productions at Chicago&rsquo;s historic theaters dating back to the 1840s.'),
-                                    array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc','dt'=>'E.B. Gould Programs Collection','dd'=>'The annotated programs of a local Chicago businessman and enthusiastic playgoer.'));
+        // $Theater[highlights] = array(array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/','dt'=>'Chicago Theater Collection-Historic Playbills','dd'=>'Programs, playbills and newspaper clippings from more than 5,000 productions at Chicago&rsquo;s historic theaters dating back to the 1840s.'),
+                                    // array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc','dt'=>'E.B. Gould Programs Collection','dd'=>'The annotated programs of a local Chicago businessman and enthusiastic playgoer.'));
         $Theater[CPLRes] = array(array('a'=>'https://www.chipublib.org/fa-chicago-theater-collection-historic-programs/','dt'=>'Chicago Theater Collection-Historic Programs Finding Aid','dd'=>'The complete and ever-increasing inventory of theater programs past and present, some of which are presented here.'),
                                 array('a'=>'https://www.chipublib.org/archival_subject/theater/','dt'=>'Chicago Theater Collection','dd'=>'A list of theater collections at Chicago Public Library representing theaters, designers, actors and more.'));
         $Theater[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/6053/default.jpg',
@@ -960,8 +1046,8 @@
         $Theater[link] = 'Theater';
         $Theater[coll] = 'CPB01';
         $Theater[location] = $HWLCSC;
-        $Theater[type] = 'category';
-        $Theater[hassubcollections] = 'x';
+        $Theater[type] = 'collection';
+        $Theater[subcollections] = array($EBG, $Playbills);
         $Theater[flag] = '4';
         $Theater[sidebarflag] = 'x';
         $Theater[title] = 'Chicago Theater';
@@ -975,72 +1061,10 @@
             'pos'=>'auto'
         );
 
-//subcollections
-    // $subcollection = array(
-    //     'textlong' => 'See <a href="#' . $parent[link] . '">' . $parent[title] . '</a>';
-    // );
-
-    $EBG = $Theater;
-        $EBG[title] = 'E.B. Gould Programs Collection';
-        $EBG[type] = 'subcollection';
-                
-    $Amund[title] = 'Amundsen High School Collection';
-        $Amund[sortname] = 'Amundsen High School Collection';
-        $Amund[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
-        $Amund[link] = '#ahs';
-        $Amund[type] = 'subcollection';
-
-    $Kins[title] = 'Helen G. Kinsella Collection';
-        $Kins[sortname] = 'Kinsella, Helen G. Collection';
-        $Kins[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
-        $Kins[link] = '#ahs';
-        $Kins[type] = 'subcollection';
-
-    $LVHS[title] = 'Lake View High School Collection';
-        $LVHS[sortname] = 'Lake View High School Collection';
-        $LVHS[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
-        $LVHS[link] = '#ahs';
-        $LVHS[type] = 'subcollection';
-
-    $Walz[title] = 'Louis D. Walz Collection';
-        $Walz[sortname] = 'Walz, Louis D. Collection';
-        $Walz[textlong] = 'See <a href="#ahs">Northside High Schools Collection</a>';
-        $Walz[link] = '#ahs';
-        $Walz[type] = 'subcollection';
-
-    $CFCC[title] = 'Christian Fellowship Church Collection';
-        $CFCC[sortname] = 'Christian Fellowship Church Collection';
-        $CFCC[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
-        $CFCC[link] = '#cfc';
-        $CFCC[type] = 'subcollection';
-
-    $LVCRA[title] = 'Lake View Council on Religious Action';
-        $LVCRA[sortname] = 'Lake View Council on Religious Action';
-        $LVCRA[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
-        $LVCRA[link] = '#cfc';
-        $LVCRA[type] = 'subcollection';
-
-    $PortPark[title] = 'Portage Park Community Collection';
-        $PortPark[sortname] = 'Portage Park Community Collection';
-        $PortPark[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
-        $PortPark[link] = '#cfc';
-        $PortPark[type] = 'subcollection';
-
-    $RMIA[title] = 'Ravenswood Manor Improvement Association Collection';
-        $RMIA[sortname] = 'Ravenswood Manor Improvement Association Collection';
-        $RMIA[textlong] = 'See <a href="#cfc">Northside Clubs and Organizations Collection</a>';
-        $RMIA[link] = '#cfc';
-        $RMIA[type] = 'subcollection';
-
-    $HWR[title] = 'Washington, Harold';
-        $HWR[sortname] = 'Washington, Harold';
-        $HWR[textlong] = 'See <a href="#rhwc">Remembering Harold Washington</a>';
-        $HWR[link] = '#rhwc';
-        $HWR[type] = 'subcollection';
 
 //misc arrays
     $cards = array($Examiner, $EB, $CPL, $ChiRen, $Sewers, $Theater, $Whalen, 
-                   $HDG, $RK, $MP, $NCO, $NHS, $CPD, $HW, $RWLV, $Sang, $Amund, 
+                   $HDG, $RK, $MP, $NCO, $NHS, $CPD, $HW, $RWLV, $Sang, $EBG, $Playbills, $Amund, 
                    $Kins, $LVHS, $Walz, $CFCC, $LVCRA, $PortPark, $RMIA, $HWR, $AfAm, 
                    $CivilWar, $LibEd, $News, $Neigh, $Parks, $HWLCSC, $MRC, $NNHC, $Harsh);
 

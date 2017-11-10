@@ -313,22 +313,28 @@
     .center-button {
         padding: 20px 15px 0 15px;
     }
-    .center-copy-paragraph {
+    .center-copy-paragraph, .center-copy-list {
         padding: 15px;
     }
-    .center-copy-list, .center-copy-paragraph dl {
-        padding: 15px 15px 15px 40px;
+    .center-copy-list dl, .center-copy-list ul, .center-copy-paragraph dl {
+        padding: 10px 15px 5px 40px;
+        margin: 0;
+    }
+    .center-copy-list dd, .center-copy-list ul {
+        padding: 0;
+    }
+    .center-copy-list ul {
+        padding-left: 40px;
     }
     .center-copy-list h4 {
         font-weight: bold;
         font-size: 18px;
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
     }
     .center-copy-list {
         border-top: 1px solid #ccc;
     }
     .center-copy-list li a {
-        font-weight: bold;
         font-size: 0.9rem;
     }
     .center-copy-paragraph a, .center-copy-list li a {
@@ -348,7 +354,7 @@
         line-height: 1;
         margin-bottom: 20px;
     }
-    .all-collections dt a {
+    .all-collections dt a, .all-collections dt {
         font-size: 18px;
     }
     .all-collections dt {
@@ -394,7 +400,12 @@
     .about-contact a:hover {
         color: #428bca;
     }
-
+    div.tooltip-inner {
+        max-width: 350px;
+        background-color: #fff;
+        color: #666;
+        border: 1px solid black;
+    }
 /* left sidebar */
     .left-sidebar {
         background-color: #000;
