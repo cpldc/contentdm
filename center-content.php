@@ -3,12 +3,22 @@
                 <div class="center-lightbox">
 						<div class="container-fluid lightbox imageGallery1">
 						<div class="row">
-							<div class="col-12 lightbox-main-img-div"><a href="<?php echo $PAGE[mainimage][url]; ?>" title="<?php echo $PAGE[mainimage][text]; ?>"><img style="background: url(<?php echo $PAGE[mainimage][url]; ?>); background-size: <?php echo $PAGE[mainimage][size]; ?>; background-position: <?php echo $PAGE[mainimage][align]; ?> !important;"  class="lightbox-main-img"></a></div>
+							<div class="col-12 lightbox-main-img-div" 
+							<?php
+							if (strpos($PAGE[mainimage][url], 'mpu') !== false && $PAGE[link] !== 'MP') {
+                            	echo ' data-toggle="tooltip" data-placement="top" title="' . $MP[rights2];
+                        	}
+							?>
+							 "><a href="<?php echo $PAGE[mainimage][url]; ?>" title="<?php echo $PAGE[mainimage][text]; ?>"><img style="background: url(<?php echo $PAGE[mainimage][url]; ?>); background-size: <?php echo $PAGE[mainimage][size]; ?>; background-position: <?php echo $PAGE[mainimage][align]; ?> !important;"  class="lightbox-main-img"></a></div>
 						</div>
 						<div class="row lightbox-thumbs justify-content-center">
 						<?php 
 							foreach ($PAGE[thumbs] as $key => $val) {
-								echo '<div class="col-3 lightbox-thumb-wrapper"><a href="' . $val[url] . '" title="' . $val[text] . '"><img style="background: url(' . $val[url] . '); background-size: ' . $val[size] . '; background-position: ' . $val[align] . '!important;" class="lightbox-thumb" /></a></div>';
+								echo '<div class="col-3 lightbox-thumb-wrapper"';
+								if (strpos($val[url], 'mpu') !== false && $PAGE[link] !== 'MP') {
+    	                        	echo ' data-toggle="tooltip" data-placement="top" title="' . $MP[rights2];
+        	                	}
+								echo '"><a href="' . $val[url] . '" title="' . $val[text] . '"><img style="background: url(' . $val[url] . '); background-size: ' . $val[size] . '; background-position: ' . $val[align] . '!important;" class="lightbox-thumb" /></a></div>';
 							}
 						?>
 						</div>
@@ -35,7 +45,7 @@
                         echo '<div class="center-copy-paragraph">
 							<p>' . $PAGE[textrich] . '</p>';
 							if ($PAGE[type] == 'collection'){
-								echo 'The ' . $PAGE[title] . ' is housed at ' . $PAGE[location][longname] . '.';
+								echo 'The ' . $PAGE[title] . ' is housed in ' . $PAGE[location][longname] . '.';
 							}
 						echo '</div>';
 					}

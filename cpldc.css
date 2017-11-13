@@ -402,9 +402,9 @@
     }
     div.tooltip-inner {
         max-width: 350px;
-        background-color: #fff;
+        /* background-color: #fff;
         color: #666;
-        border: 1px solid black;
+        border: 1px solid black; */
     }
 /* left sidebar */
     .left-sidebar {

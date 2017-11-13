@@ -560,12 +560,13 @@
         $MP[category] = 'Parks';
         $MP[textshort] = 'Transformation from rail yard to dynamic urban park.';
         $MP[textlong] = 'Watch the Millennium Park site transform from an industrial wasteland to a new urban park of world renown from 1999-2005, under the project management of U.S. Equities Realty and acclaimed architects, engineers and artists.';
-        $MP[textrich] = '<p>Follow the construction of <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/BP+Bridge/field/book/mode/exact/conn/and/order/origin">BP Pedestrian Bridge</a>, the first bridge designed by Frank Gehry; Anish Kapoor&rsquo;s monumental public sculpture, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/Cloud+Gate/field/book/mode/exact/conn/and/order/origin">Cloud Gate</a>, aka The Bean; the Gehry-designed <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/Jay%20Pritzker%20Pavilion/field/book/mode/exact/conn/and/order/origin">Jay Pritzker Pavillion</a>, a soaring bandshell that hosts the U.S.&rsquo;s last free outdoor classical music series; Jaume Plensa&rsquo;s <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/Crown%20Fountain/field/book/mode/exact/conn/and/order/origin">Crown Fountain</a>, a cascading interactive video sculpture. Take in sweeping views with <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/Full%20Park/field/book/mode/all/conn/and/order/origin/page/1">full park images</a>.</p>';
-        $MP[highlights] = array(array('a'=>'http://cdm16818.contentdm.oclc.org/cdm/search/collection/mpu/searchterm/highlight/field/highli/mode/all/conn/and/order/origin','dt'=>'Collection Highlights','dd'=>'Get a taste of how this transformation took place in a selected group of images.'));
+        $MP[textrich] = '<p>Follow the construction of <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/bp%20bridge/field/book/mode/exact/conn/and/order/title/ad/asc">BP Pedestrian Bridge</a>, the first bridge designed by Frank Gehry; Anish Kapoor&rsquo;s monumental public sculpture, <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/cloud%20gate/field/book/mode/exact/conn/and/order/title/ad/asc">Cloud Gate</a>, aka The Bean; the Gehry-designed <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/jay%20pritzker%20pavilion/field/book/mode/exact/conn/and/order/title/ad/asc">Jay Pritzker Pavillion</a>, a soaring bandshell that hosts the U.S.&rsquo;s last free outdoor classical music series; Jaume Plensa&rsquo;s <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/crown%20fountain/field/book/mode/exact/conn/and/order/title/ad/asc">Crown Fountain</a>, a cascading interactive video sculpture; <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/millennium%20monument/field/book/mode/exact/conn/and/order/title/ad/asc">Millennium Monument</a>; <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/lurie%20garden/field/book/mode/exact/conn/and/order/title/ad/asc">Lurie Garden</a>; and <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/mccormick%20tribune%20plaza%20and%20ice%20rink/field/book/mode/exact/conn/and/order/title/ad/asc">McCormick Tribune Plaza and Ice Rink</a>.  Watch the park take shape with <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/general%20construction/field/book/mode/exact/conn/and/order/title/ad/asc">general construction photos</a>, or take in sweeping views with <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/full%20park/field/book/mode/exact/conn/and/order/title/ad/asc">full park images</a>.';
+        $MP[highlights] = array(array('a'=>'http://digital.chipublib.org/digital/collection/mpu/search/searchterm/highlight','dt'=>'Collection Highlights','dd'=>'Get a taste of how this transformation took place in a selected group of images.'));
         $MP[findingaid] = array(array('link'=>'https://www.chipublib.org/fa-millennium-park-inc/','text'=>'Millennium Park, Inc. Finding Aid'),
                             array('link'=>'https://www.chipublib.org/fa-millennium-park-u-s-equities-realty-collection/','text'=>'Millennium Park / U.S. Equities Realty Collection Finding Aid'));
         $MP[CPLRes] = array(array('a'=>'https://www.chipublib.org/?post_type=post&s=Millennium+Park','dt'=>'Millennium Park Blog Posts','dd'=>'by CPL librarians and staff.'));
-        $MP[rights] = 'The Millennium Park Digital Collection was made possible by generous gifts from U.S. Equities Realty and the Gaylord and Dorothy Donnelley Foundation through the Chicago Public Library Foundation.';
+        $MP[rights] = 'These images were made possible by generous gifts from U.S. Equities Realty and the Gaylord and Dorothy Donnelley Foundation through the Chicago Public Library Foundation.';
+        $MP[rights2] = 'Courtesy of U.S. Equities Realty and the men and women who built Millennium Park';
         $MP[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/1297/default.jpg',
             'text'=>'Millennium Monument at Wrigley Square, peristyle in winter, ca. 2003',
             'size'=>'110%',
@@ -591,7 +592,8 @@
         $MP[location] = $HWLCSC;
         $MP[type] = 'collection';
         $MP[flag] = '3';
-        
+        $MP2 = $MP;
+        $MP2[link] = 'MP2';
     $NCO[title] = 'Northside Clubs and Organizations';
         $NCO[sortname] = 'Northside Clubs and Organizations';
         $NCO[cardpic] = array(
@@ -708,7 +710,7 @@
         );
         $HW[category] = 'African Americans';
         $HW[textshort] = 'The first African American mayor of Chicago, serving from 1983 to 1987 and his importance in the city&rsquo;s history.';
-        $HW[textlong] = 'Harold Washington was the first African American mayor of Chicago, serving from 1983 to 1987. This collection captures Mayor Washington at community, political, and charity events and demonstrates his importance in the history of Chicago.';
+        $HW[textlong] = 'Mayor Harold Washington was elected 51st mayor of Chicago April 12, 1983; this collection documents his time in office and his work with diverse communities and individuals.';
         $HW[textrich] = '<p>This collection captures Mayor Washington at community, political, and charity events and demonstrates his importance in <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rhwc/searchterm/Politics/field/subjed/mode/all/conn/and/order/nosort">politics</a> and the history of Chicago.</p><p>Photographs in this collection capture Harold Washington&rsquo;s work with <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rhwc/searchterm/Constituency%20groups/field/subjed/mode/all/conn/and/order/nosort">ethnic and constituency groups</a>, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rhwc/searchterm/Famous%20persons/field/subjed/mode/all/conn/and/order/nosort">famous people</a>, <a href="http://cdm16818.contentdm.oclc.org/cdm/search/collection/rhwc/searchterm/Groundbreaking/field/subjed/mode/all/conn/and/order/nosort">groundbreaking and development projects</a> and more.</p><p>Chicago Public Library also holds an extensive <a href="https://www.chipublib.org/archival_subject/harold-washington/">Harold Washington Reseach Collection</a>.  Selections from those collections can be found in the Finding Aids section below.';
         $HW[CPLRes] = array(array('a'=>'https://www.chipublib.org/blogs/post/welcome-to-the-municipal-reference-collection/','dt'=>'Municipal Reference Collection','dd'=>'Collections include local government publications, city election results, maps, municipal ordinances, and more.'),
                     array('a'=>'https://www.chipublib.org/fa-brenetta-howell-barrett-papers/','dt'=>'Brenetta Howell Barrett Papers Finding Aid','dd'=>'Barrett served in the mayoral administrations of Harold Washington and Eugene Sawyer. She was a political activist for housing, environmental and civil liberties issues.'),
@@ -802,8 +804,15 @@
         );
         $Sang[pic] = '';
         $Sang[category] = array('African Americans','Civil War');
-        $Sang[textshort] = '';
-        $Sang[textlong] = '';
+        $Sang[textshort] = 'During the twentieth century, native Chicagoan and former President of the Illinois State Historical Society, Philip David Sang, collected a wide variety of documents and manuscripts exploring American history.';
+        $Sang[textlong] = 'During the twentieth century, native Chicagoan and former President of the Illinois State Historical Society, Philip David Sang, collected a wide variety of documents and manuscripts exploring American history.';
+        $Sang[textrich] = 'The Philip David Sang Collection is a collection containing unpublished and published works and ephemera united by its focus on the struggle of Africans and African Americans through the Middle Passage to the Civil Rights movement. The majority of the collection, and the selections made available here, document the African American experience in slavery and in the resistance which culminated in its abolition. Series include Runaways, Inventory and Birth Records, and Abolitionism.';
+        $Sang[CPLRes] = array(array('a'=>'http://www.chipublib.org/fa-richard-durham-papers/','dt'=>'Richard Durham Papers','dd'=>''),
+                            array('a'=>'http://www.chipublib.org/fa-madeline-stratton-morris-papers/','dt'=>'Madeline Stratton Morris Papers','dd'=>''),
+                            array('a'=>'http://www.chipublib.org/fa-illinois-writers-project-2/','dt'=>'Illinois Writers Project: “Negro in Illinois” Papers','dd'=>''),
+                            array('a'=>'http://www.chipublib.org/archival_post/civil-war-round-table-records/','dt'=>'Civil War Roundtable Records','dd'=>''));
+        $Sang[ExRes] = array(array('a'=>'https://archives.lib.siu.edu/?p=collections/controlcard&id=2072','dt'=>'Philip D. Sang Collection of Presidential Signatures, 1787-1956','dd'=>''), 
+                            array('a'=>'http://findingaids.brandeis.edu/agents/79?agent_type=agent_person','dt'=>'Philip D. Sang collections at Brandeis University','dd'=>''));
         $Sang[link] = 'Sang';
         $Sang[coll] = 'p16818coll6';
         $Sang[location] = $Harsh;
@@ -964,7 +973,7 @@
         $Parks[shortname] = 'Parks';
         $Parks[sidebarname] = 'Parks';
         $Parks[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/66/default.jpg',
+            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/1626/default.jpg',
             'pich'=>'250px',
             'size'=>'110%',
             'pos'=>'center'
@@ -983,10 +992,10 @@
             'text'=>'Crown Fountain, children play in the gargoyle spray of the north tower, opening day, July 16, 2004',
             'size'=>'730px',
             'align'=>'50% 87%');
-        $Parks[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/66/default.jpg',
+        $Parks[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/1626/default.jpg',
                 'text'=>'Altgeld Park (0206) Features - Playgrounds and swimming pools, 1968-07',
-                'size'=>'140%',
-                'align'=>'50% 50%'),
+                'size'=>'300px',
+                'align'=>'60% 50%'),
             array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/290/default.jpg',
                 'text'=>'American Indian Center',
                 'size'=>'110%',

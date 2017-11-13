@@ -36,7 +36,7 @@
                     if (!$val[flag] == ''){
                         echo '<div class="grid-item card" style="width: 20rem; margin-bottom: 10px;"';
                         if ($val[link] == 'MP') {
-                            echo ' data-toggle="tooltip" data-placement="top" title="' . $MP[rights];
+                            echo ' data-toggle="tooltip" data-placement="top" title="' . $MP[rights2];
                         }
                         echo '"><a href="content.php?id='. $val[link] . '" style="background: url(' . $val[cardpic][pic] . '); background-size: ' . $val[cardpic][size] . '; background-position: ' . $val[cardpic][pos] . '; height: ' . $val[cardpic][pich] . '" alt="' . $val[title] . '"></a><div class="card-block" >';
                         if (is_array($val[category])){
