@@ -1,13 +1,16 @@
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('[data-toggle="tooltip"]').tooltip()
-    });
-</script>
     <div class="center-lightbox">
-        <div class="col-12 lightbox-main-img-div" data-toggle="tooltip" data-placement="top" title=" <?php echo $MP[rights2] ?> ">
-            <a href="http://digital.chipublib.org/digital/collection/mpu/id/2232/rec/1" >
-                <img style="background: url(http://digital.chipublib.org/digital/api/singleitem/image/mpu/2232/default.jpg); background-size: 120%; background-position: 0px 60%;"  class="content-main-img">
-            </a>
+        <div class="col-12 lightbox-main-img-div about-image" title="Cloud Gate, assembly complete, view from above, July 16, 2004" class="content-main-img">
+                <i class="rights-i fa fa-info-circle"></i>
+                <div class="rights-overlay">
+                    <div class="rights-guts">
+                        <span class="rights-statement">
+                        <?php echo $MP[rights2] ?>
+                        </span>
+                    </div>
+                    <div class="rights-close">
+                        <i class="rights-close-icon fa fa-times"></i>
+                    </div>
+                </div>
         </div>
     </div>
     <div class="center-copy-paragraph">

@@ -34,11 +34,11 @@
                 usort($cards, build_sorter('flag'));
                 foreach ($cards as $key => $val){
                     if (!$val[flag] == ''){
-                        echo '<div class="grid-item card" style="width: 20rem; margin-bottom: 10px;"';
-                        if ($val[link] == 'MP') {
-                            echo ' data-toggle="tooltip" data-placement="top" title="' . $MP[rights2];
+                        echo '<div class="grid-item card cardpic" style="width: 20rem; margin-bottom: 10px;"><a href="content.php?id='. $val[link] . '" style="background: url(' . $val[cardpic][pic] . '); background-size: ' . $val[cardpic][size] . '; background-position: ' . $val[cardpic][pos] . '; height: ' . $val[cardpic][pich] . '" alt="' . $val[title] . '">';
+                        if ($val[link] == 'MP' ) {
+                            echo '<i class="rights-i fa fa-info-circle"></i><div class="rights-overlay"><div class="rights-guts"><span class="rights-statement">' . $MP[rights2]  . '</span></div><div class="rights-close"><i class="rights-close-icon fa fa-times"></i></div></div>';
                         }
-                        echo '"><a href="content.php?id='. $val[link] . '" style="background: url(' . $val[cardpic][pic] . '); background-size: ' . $val[cardpic][size] . '; background-position: ' . $val[cardpic][pos] . '; height: ' . $val[cardpic][pich] . '" alt="' . $val[title] . '"></a><div class="card-block" >';
+                        echo '</a><div class="card-block" >';
                         if (is_array($val[category])){
                                 $catLink0 = array_search($val[category][0], $categories);
                                 $catLink1 = array_search($val[category][1], $categories);

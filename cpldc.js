@@ -59,7 +59,6 @@
 		if ($(".PAGE_TYPE").hasClass("home") || $(".container").hasClass("main-container-collapsible")) {
 			$(".main-container-collapsible").css("padding-left","235px");
 		}
-
 	}
 	function hideLeftSidebar(){
 		$(".left-sidebar-togglebutton-target").empty();
@@ -107,6 +106,18 @@
 			}
 		}
 	});
+	function searchQuery() {
+		var query = document.getElementsByName("search-query")[0].value;
+		if ( query != "") {
+			window.location.href = 'http://digital.chipublib.org/digital/search/searchterm/' + query;
+		}
+	}
+	function searchQuery2() {
+		var query = document.getElementsByName("search-query2")[0].value;
+		if ( query != "") {
+			window.location.href = 'http://digital.chipublib.org/digital/search/searchterm/' + query;
+		}
+	}
 	$( document ).ready(function() {
 		// var viewportWidth = $(window).width();
 		if (viewportWidth < 976) {
@@ -122,16 +133,26 @@
 			}
 		}
 		$('[data-toggle="tooltip"]').tooltip()
-	});
-	function searchQuery() {
-		var query = document.getElementsByName("search-query")[0].value;
-		if ( query != "") {
-			window.location.href = 'http://digital.chipublib.org/digital/search/searchterm/' + query;
-		}
-	}
-	$(document).ready(function(){
 		$('#search-input').keypress(function(e){
-		  if(e.keyCode==13)
-		  	searchQuery();
+			if(e.keyCode==13)
+				searchQuery();
+		});
+		$('#search-input2').keypress(function(e){
+			if(e.keyCode==13)
+				searchQuery2();
+		});
+		$(".rights-i").click(function () {
+			event.preventDefault();
+			$(".rights-overlay").toggle();
+			$(".rights-i").toggle();
+		});
+		$(".rights-close").click(function() {
+			event.preventDefault();
+			$(".rights-overlay").toggle();
+			$(".rights-i").toggle();
+		});
+		$("img[src*='mpu']").each(function () {
+			console.log("check");
+			if($(this).parent().attr('class')  == "lightbox-main-img-div") { $(this).parent().addClass('mine')}
 		});
 	});

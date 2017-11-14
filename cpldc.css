@@ -406,6 +406,51 @@
         color: #666;
         border: 1px solid black; */
     }
+    .cardpic a {
+        position: relative;
+    }
+    .rights-i {
+        position: absolute; 
+        bottom: 5px;
+        left: 5px;
+    }
+    .rights-i {
+        color: #fff;
+        cursor: pointer;
+    }
+    .rights-overlay {
+        cursor: default;
+        display: none;
+        background-color: rgba(55,55,55,0.8);
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 75%;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 5px 10px;
+    }
+    .rights-close {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+        color: #fff;
+    }
+    .rights-guts {
+        position: relative;
+        display: inline-block;
+    }
+    .about-image {
+        width: 94% !important;
+        height: 250px;
+        margin: auto;
+        position: relative;
+        background: url(http://digital.chipublib.org/digital/api/singleitem/image/mpu/2232/default.jpg); 
+        background-size: 120%; 
+        background-position: 0px 60%;
+    }
 /* left sidebar */
     .left-sidebar {
         background-color: #000;
