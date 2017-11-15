@@ -36,7 +36,7 @@
                     if (!$val[flag] == ''){
                         echo '<div class="grid-item card cardpic" style="width: 20rem; margin-bottom: 10px;"><a href="content.php?id='. $val[link] . '" style="background: url(' . $val[cardpic][pic] . '); background-size: ' . $val[cardpic][size] . '; background-position: ' . $val[cardpic][pos] . '; height: ' . $val[cardpic][pich] . '" alt="' . $val[title] . '">';
                         if ($val[link] == 'MP' ) {
-                            echo '<i class="rights-i fa fa-info-circle"></i><div class="rights-overlay"><div class="rights-guts"><span class="rights-statement">' . $MP[rights2]  . '</span></div><div class="rights-close"><i class="rights-close-icon fa fa-times"></i></div></div>';
+                            echo '<i class="rights-i rights-i-card fa fa-info-circle"></i><div class="rights-overlay rights-overlay-card"><div class="rights-guts"><span class="rights-statement">' . $MP[rights2]  . '</span></div><div class="rights-close"><i class="rights-close-icon fa fa-times"></i></div></div>';
                         }
                         echo '</a><div class="card-block" >';
                         if (is_array($val[category])){

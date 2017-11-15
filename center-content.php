@@ -3,13 +3,14 @@
                 <div class="center-lightbox">
 						<div class="container-fluid lightbox imageGallery1">
 						<div class="row">
-							<div class="col-12 lightbox-main-img-div" 
-							<?php
-							if (strpos($PAGE[mainimage][url], 'mpu') !== false && $PAGE[link] !== 'MP') {
-                            	echo ' data-toggle="tooltip" data-placement="top" title="' . $MP[rights2];
-                        	}
-							?>
-							 "><a class="thisthis" href="<?php echo $PAGE[mainimage][url]; ?>" title="<?php echo $PAGE[mainimage][text]; ?>"><img style="background: url(<?php echo $PAGE[mainimage][url]; ?>); background-size: <?php echo $PAGE[mainimage][size]; ?>; background-position: <?php echo $PAGE[mainimage][align]; ?> !important;"  class="lightbox-main-img"></a></div>
+							<div class="col-12 lightbox-main-img-div">
+								<a class="center-images-main" href="<?php echo $PAGE[mainimage][url]; ?>" title="<?php echo $PAGE[mainimage][text]; ?>"><img style="background: url(<?php echo $PAGE[mainimage][url]; ?>); background-size: <?php echo $PAGE[mainimage][size]; ?>; background-position: <?php echo $PAGE[mainimage][align]; ?> !important;"  class="lightbox-main-img"></a>
+								<?php
+									if (strpos($PAGE[mainimage][url],'mpu') !== false ) {
+										echo '<i class="rights-i rights-i-main fa fa-info-circle"></i><div class="rights-overlay rights-overlay-main"><div class="rights-guts"><span class="rights-statement">' . $MP[rights2]  . '</span></div><div class="rights-close"><i class="rights-close-icon fa fa-times"></i></div></div>';
+									}
+								?>
+							</div>
 						</div>
 						<div class="row lightbox-thumbs justify-content-center">
 						<?php 

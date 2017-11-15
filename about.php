@@ -1,7 +1,7 @@
     <div class="center-lightbox">
         <div class="col-12 lightbox-main-img-div about-image" title="Cloud Gate, assembly complete, view from above, July 16, 2004" class="content-main-img">
-                <i class="rights-i fa fa-info-circle"></i>
-                <div class="rights-overlay">
+                <i class="rights-i rights-i-about fa fa-info-circle"></i>
+                <div class="rights-overlay rights-overlay-about">
                     <div class="rights-guts">
                         <span class="rights-statement">
                         <?php echo $MP[rights2] ?>

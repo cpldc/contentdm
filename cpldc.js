@@ -118,6 +118,21 @@
 			window.location.href = 'http://digital.chipublib.org/digital/search/searchterm/' + query;
 		}
 	}
+	function rightsInsertion() {
+		console.log('onload loading');
+		$(".slbImage").prepend('<p style="position: absolute; top: 0; left: 0; font-size: 24; color: #fff; z-index: 3000">asdfasdfasdf</p>');
+		//  '<i class="rights-i rights-i-lightbox fa fa-info-circle" style="top: 200px"></i>' + 
+		// 				'<div class="rights-overlay rights-overlay-main">' + 
+		// 					'<div class="rights-guts">' + 
+		// 						'<span class="rights-statement">' + 
+		// 							'Courtesy of U.S. Equities Realty and the men and women who built Millennium Park' + 
+		// 						'</span>' + 
+		// 					'</div>' + 
+		// 					'<div class="rights-close">' + 
+		// 						'<i class="rights-close-icon fa fa-times"></i>' + 
+		// 					'</div>' + 
+		// 				'</div>');
+	}
 	$( document ).ready(function() {
 		// var viewportWidth = $(window).width();
 		if (viewportWidth < 976) {

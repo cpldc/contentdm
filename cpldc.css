@@ -406,17 +406,33 @@
         color: #666;
         border: 1px solid black; */
     }
-    .cardpic a {
+    .cardpic a, .center-images-main {
         position: relative;
     }
     .rights-i {
         position: absolute; 
+        color: #fff;
+        cursor: pointer;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    .rights-i-card, .rights-i-about {
         bottom: 5px;
         left: 5px;
     }
-    .rights-i {
-        color: #fff;
-        cursor: pointer;
+    .rights-i-main {
+        bottom: 20px;
+        left: 20px;
+    }
+    .rights-i-lightbox {
+        left: 5px;
+    }
+    .rights-overlay-main {
+        bottom: 15px;
+        left: 15px;
+    }
+    .rights-overlay-card, .rights-overlay-about {
+        bottom: 0;
+        left: 0;
     }
     .rights-overlay {
         cursor: default;
@@ -424,8 +440,6 @@
         background-color: rgba(55,55,55,0.8);
         color: #fff;
         position: absolute;
-        bottom: 0;
-        left: 0;
         width: 75%;
         font-size: 12px;
         font-weight: bold;
@@ -716,6 +730,7 @@
         padding: 15px;
         width: 100%;
         overflow: hidden;
+        position: relative;
     }
     .lightbox-main-img {
         height: 350px;

@@ -19,7 +19,7 @@
 	<script src="https://use.fontawesome.com/a768f4e0c8.js"></script>
 	<script src="cpldc.js"></script>
 	<link rel="stylesheet" href="cpldc.css" >
-	<script src="simpleLightbox.min.js"></script>
+	<script src="simpleLightbox.js"></script>
 	<link rel="stylesheet" href="simpleLightbox.min.css">
 </head>
 <body>
