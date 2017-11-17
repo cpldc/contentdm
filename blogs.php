@@ -8,6 +8,12 @@
     $limit = 3;
     $htmlStr = '';
 
+    // if blogs.html is older than 12 hours (60 seconds * 60 minutes * 12), it 
+    //     gets the feed
+    //     assigns pieces of it to variables
+    //     pushes the variables into an array
+    //     iterates through all the arrays to put the variables into html
+    //     then saves blogs.html
     if ($cache_file && $timedif < $cache_time) {
         include $cache_file;
     } else {
@@ -23,7 +29,6 @@
                 'desc' => $node->getElementsByTagName('description')->item(0)->nodeValue,
                 'cat' => $node->getElementsByTagName('category')->item(0)->nodeValue,
                 );
-            // if ($node->getElementsByTagName('category')->item(0)->nodeValue == 'History and Genealogy') 
                 array_push($feed, $item);
         }
         for($x=0;$x<$limit;$x++) {

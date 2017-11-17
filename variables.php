@@ -2,17 +2,18 @@
     //  ini_set('display_errors',1); 
     //  error_reporting(E_ALL);
 
+    // this function is for ordering arrays on pages, either alphabetically like in the sidebar, or by flag, like the homepage cards
         function build_sorter($key) {
             return function ($a, $b) use ($key) {
                 return strnatcmp($a[$key], $b[$key]);
             };
         }
 
-
-
 //array(array('a'=>'','dt'=>'','dd'=>''));
+// since titles are written before center-content takes over, all pages need titles stored here; they also print at the top of the center-content area
     $All[title] = 'Digital Collections A-Z';
     $About[title] = 'About CPL Digital Collections';
+    // takedown is a mess, move along
     $Takedown[title] = 'Notice and Takedown Policy';
     $Takedown[textlong] = 'Notice to users: The Chicago Public Library works to ensure that it has appropriate rights to provide access to content through the Digital Collections website. These materials are made available for educational and scholarly use.';
     $Takedown[mainimage] = array('url'=>'default.jpg','text'=>'Notice and Takedown Policy','size'=>'cover','align'=>'center');
@@ -29,8 +30,10 @@
         <li>Assess the validity of the request;</li>
         <li>Upon request, we may temporarily remove the material from public view while we assess the concern.</li>
         </ul><p>Upon completion of the assessment, we will take appropriate action and communicate that action to you.</p>';
-  
+
 //locations
+    // locations will not get cards, but do get homepage arrays
+    // locations have to come before collections and subcollections, because the location array is passed into the location variable within the colls/subcolls
     $HWLCSC[title] = 'Special Collections at HWLC';
         $HWLCSC[sortname] = 'Special Collections at HWLC';
         $HWLCSC[shortname] = 'HWLCSC';
@@ -147,6 +150,8 @@
         $Harsh[type] = 'location';
 
 //subcollections
+    // subcollections have to come before collections, because their arrays are passed into the "subcollections" variable of their parent collection
+    // subcollections might eventually extend a base because they share so many values with each other, but not now
     $EBG[title] = 'E.B. Gould Programs Collection';
         $EBG[sortname] = 'Gould, E.B. Programs Collection';
         $EBG[textlong] = 'See <a href="#CPB01">Chicago Theater</a>.';
@@ -822,6 +827,7 @@
 
 
 //categories
+    // categories deserve the same treatment as subcollections (in the sense that their collection arrays should be passed as wholes into category variables), but there's danger of redundancy with theater and HW
     $AfAm[title] = 'African Americans';
         $AfAm[shortname] = 'African Americans';
         $AfAm[sidebarname] = 'African Americans';
@@ -1072,15 +1078,18 @@
 
 
 //misc arrays
+    // the $cards array is used to create cards on the home page, but also to create entries on the All Collections A-Z page
     $cards = array($Examiner, $EB, $CPL, $ChiRen, $Sewers, $Theater, $Whalen, 
                    $HDG, $RK, $MP, $NCO, $NHS, $CPD, $HW, $RWLV, $Sang, $EBG, $Playbills, $Amund, 
                    $Kins, $LVHS, $Walz, $CFCC, $LVCRA, $PortPark, $RMIA, $HWR, $AfAm, 
                    $CivilWar, $LibEd, $News, $Neigh, $Parks, $HWLCSC, $MRC, $NNHC, $Harsh);
-
+    
+    // the $categories array is used to transform category names into useable links; this could be deprecated when collection and subcollection arrays are passed into category arrays, but until then we use this
     $categories = array('AfAm'=>'African Americans','CivilWar'=>'Civil War',
                         'LibEd'=>'Libraries &amp; Education',
                         'Neigh'=>'Neighborhoods', 'Parks'=>'Parks');
         
+    // This is a verbatim copy of the array in locations.php; this version is not used; for some reason, it didn't work when I tried to use this one instead of the other one; some day I'll really have nothing better to do 
     $LOCATIONLINKS = array('https://www.chipublib.org/locations/3'=>'Albany Park',
         'https://www.chipublib.org/locations/4'=>'Altgeld',
         'https://www.chipublib.org/locations/5'=>'Archer Heights',

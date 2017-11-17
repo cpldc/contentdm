@@ -24,6 +24,17 @@
 </head>
 <body>
 <?php 
+// page is built like this: 
+// ----------------------------------------------------------------------------------------
+// 									header.html
+// ----------------------------------------------------------------------------------------
+// sidebar.php		| 		center-content.php 			| 	blogs.php -> produces blogs.html
+// 					|	(or all.php or about.php)		|----------------------------------
+// 					|									|	events.php -> events.html
+// ----------------------------------------------------------------------------------------
+// 									footer.html
+// ----------------------------------------------------------------------------------------
+
 	include 'header.html';
 ?>
 <main class="sidebar-target-collapsible PAGE_TYPE <?php echo $PAGE_TYPE; ?>">

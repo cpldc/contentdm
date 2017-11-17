@@ -31,14 +31,17 @@
         <div class="main-container-collapsible">
             <div class="grid">
             <?php
+            // sorts arrays by [flag] attribute
                 usort($cards, build_sorter('flag'));
+            // for each [flag], make a card
                 foreach ($cards as $key => $val){
                     if (!$val[flag] == ''){
                         echo '<div class="grid-item card cardpic" style="width: 20rem; margin-bottom: 10px;"><a href="content.php?id='. $val[link] . '" style="background: url(' . $val[cardpic][pic] . '); background-size: ' . $val[cardpic][size] . '; background-position: ' . $val[cardpic][pos] . '; height: ' . $val[cardpic][pich] . '" alt="' . $val[title] . '">';
-                        if ($val[link] == 'MP' ) {
+                        if (strpos($val[cardpic][pic], 'mpu') !== false ) {
                             echo '<i class="rights-i rights-i-card fa fa-info-circle"></i><div class="rights-overlay rights-overlay-card"><div class="rights-guts"><span class="rights-statement">' . $MP[rights2]  . '</span></div><div class="rights-close"><i class="rights-close-icon fa fa-times"></i></div></div>';
                         }
                         echo '</a><div class="card-block" >';
+                        // if the collection is assigned more than one category, it will be an array, so if it's an array, list both; if its not an array, just print the one; per spec, no collection can have less than 1 or more than 2
                         if (is_array($val[category])){
                                 $catLink0 = array_search($val[category][0], $categories);
                                 $catLink1 = array_search($val[category][1], $categories);
@@ -50,7 +53,6 @@
                         }
                         echo '<h4 class="card-title content-card-title"><a href="content.php?id=' . $val[link] . '">'. $val[title] . '</a></h4>';
                         echo '<p class="card-text content-card-copy">' . $val[textshort] . '</p>';
-                        // echo '<a href="' . $val[link] . '" class="bibbutton">Browse Collection&hellip;</a>';
                         echo '</div>';
                         echo '</div>';
                     }
@@ -61,15 +63,16 @@
     </main>
     <?php include 'footer.html'; ?>
     <script>
-    	// Masonry jQuery
-	var $grid = $('.grid').masonry({
-		gutter: 15,
-        itemSelector: '.card',
-        fitWidth: true
-	});
-	$grid.imagesLoaded().progress( function() {
-		$grid.masonry('layout');
-	});
+        // Masonry jQuery
+        var $grid = $('.grid').masonry({
+            gutter: 15,
+            itemSelector: '.card',
+            fitWidth: true
+        });
+        // allows slow load times to not destroy the card layout; requires imagesloaded.pkgd.min.js; also makes cards flow when changing positions on resize
+        $grid.imagesLoaded().progress( function() {
+            $grid.masonry('layout');
+        });
 	</script>
 </body>
 </html>

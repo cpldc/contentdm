@@ -17,9 +17,9 @@
 							foreach ($PAGE[thumbs] as $key => $val) {
 								echo '<div class="col-3 lightbox-thumb-wrapper"';
 								if (strpos($val[url], 'mpu') !== false && $PAGE[link] !== 'MP') {
-    	                        	echo ' data-toggle="tooltip" data-placement="top" title="' . $MP[rights2];
+    	                        	echo ' data-toggle="tooltip" data-placement="top" title="' . $MP[rights2] . '"';
         	                	}
-								echo '"><a href="' . $val[url] . '" title="' . $val[text] . '"><img style="background: url(' . $val[url] . '); background-size: ' . $val[size] . '; background-position: ' . $val[align] . '!important;" class="lightbox-thumb" /></a></div>';
+								echo '><a href="' . $val[url] . '" title="' . $val[text] . '"><img style="background: url(' . $val[url] . '); background-size: ' . $val[size] . '; background-position: ' . $val[align] . '!important;" class="lightbox-thumb" /></a></div>';
 							}
 						?>
 						</div>
