@@ -746,6 +746,10 @@
         width: 100px;
         height: 100px;
     }
+    .lightbox-main-img, .lightbox-thumb {
+        /* fixes magically non-appearing images in Firefox */
+        display: table;
+    }
     .lightbox-thumbs {
         padding: 5px 0;
     }
