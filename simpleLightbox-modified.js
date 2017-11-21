@@ -173,7 +173,7 @@
                 callback.call(self, $('<div class="slbIframeCont"><iframe class="slbIframe" frameborder="0" allowfullscreen src="' + url + '"></iframe></div>'));
 
             } else {
-                var $imageCont = $('<div class="slbImageWrap"><img onload="rightsInsertion(this)" class="slbImage" src="' + url + '" /></div>');
+                var $imageCont = $('<div class="slbImageWrap"><img onload="rightsInsertion()" class="slbImage" src="' + url + '" /></div>');
 
                 this.$currentImage = $imageCont.find('.slbImage');
 

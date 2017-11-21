@@ -142,20 +142,73 @@
 		}
 	}
 	// nonfunctional.  attempts to hijack all images onload and check whether they are from MP, and adds rights div if true
-	function rightsInsertion() {
-		console.log('onload loading');
-		$(".slbImage").prepend('<p style="position: absolute; top: 0; left: 0; font-size: 24; color: #fff; z-index: 3000">asdfasdfasdf</p>');
-		//  '<i class="rights-i rights-i-lightbox fa fa-info-circle" style="top: 200px"></i>' + 
-		// 				'<div class="rights-overlay rights-overlay-main">' + 
-		// 					'<div class="rights-guts">' + 
-		// 						'<span class="rights-statement">' + 
-		// 							'Courtesy of U.S. Equities Realty and the men and women who built Millennium Park' + 
-		// 						'</span>' + 
-		// 					'</div>' + 
-		// 					'<div class="rights-close">' + 
-		// 						'<i class="rights-close-icon fa fa-times"></i>' + 
-		// 					'</div>' + 
-		// 				'</div>');
+	function rightsInsertion(loc) {
+		var rightsDiv = '<div class="rights-block">' +
+				'<i class="rights-i rights-i-lightbox fa fa-info-circle"></i>' + 
+					'<div class="rights-overlay rights-overlay-lightbox">' + 
+						'<div class="rights-guts">' + 
+							'<span class="rights-statement">' + 
+								'Courtesy of U.S. Equities Realty and the men and women who built Millennium Park' + 
+							'</span>' + 
+						'</div>' + 
+						'<div class="rights-close">' + 
+							'<i class="rights-close-icon fa fa-times"></i>' + 
+						'</div>' + 
+					'</div>' + 
+				'</div>';
+		if (loc.src.indexOf("mpu") >= 0) {
+
+			if ($('.rights-overlay').is(":visible")){
+				$('.rights-overlay').hide();
+				$('.rights-i').show();
+			}
+
+			if ($(loc).children('.rights-i').length < 1) {
+
+				if ($(loc).attr('class') == 'slbImage') {
+					$('.slbContentOuter').prepend(rightsDiv);
+				} else {
+					$(loc).prepend(rightsDiv);
+				}
+			}
+
+			if ($('.rights-i').is(":hidden") && $('.rights-overlay').is(":hidden")) {
+				$(loc).children('.rights-i').show();	
+			}
+
+		} else if (loc.src.indexOf("mpu") < 0 ){
+			$(".slbContentOuter").children('.rights-block').hide();
+		}
+		RefreshEventListener();
+	}
+
+	function rightsClick(loc) {
+		console.log("clickin " + $(loc).attr('class'));
+		event.preventDefault();
+		if ($(loc).attr('class').indexOf("rights-i") >= 0){
+			$(loc).toggle();
+			$(loc).siblings(".rights-overlay").toggle();
+		} else {
+			$(loc).toggle();
+			$(loc).siblings(".rights-i").toggle();
+		}
+		RefreshEventListener();
+		return false;
+	}
+
+	function RefreshEventListener() {
+		// https://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
+		// turn off rights event listeners and turn them back on again when lightbox loads
+		$(".rights-i").off(); 
+		$(".rights-close").off(); 
+	
+		$(".rights-i").click(function () {
+			rightsClick(this);
+		});
+		$(".rights-close").click(function() {
+			loc = $(this).parent(".rights-overlay");
+			rightsClick(loc);
+		});
 	}
 	// docreadies: 
 	// 	checks window size to assign layout; 
@@ -176,7 +229,6 @@
 				switchToFixedLayout();
 			}
 		}
-		$('[data-toggle="tooltip"]').tooltip()
 		$('#search-input').keypress(function(e){
 			if(e.keyCode==13)
 				searchQuery();
@@ -185,18 +237,5 @@
 			if(e.keyCode==13)
 				searchQuery2();
 		});
-		$(".rights-i").click(function () {
-			event.preventDefault();
-			$(".rights-overlay").toggle();
-			$(".rights-i").toggle();
-		});
-		$(".rights-close").click(function() {
-			event.preventDefault();
-			$(".rights-overlay").toggle();
-			$(".rights-i").toggle();
-		});
-		$("img[src*='mpu']").each(function () {
-			console.log("check");
-			if($(this).parent().attr('class')  == "lightbox-main-img-div") { $(this).parent().addClass('mine')}
-		});
+		RefreshEventListener();
 	});
