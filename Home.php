@@ -22,7 +22,7 @@
 <body>
     <?php 
     include 'variables.php';
-    include 'header.html';
+    include 'header.php';
     $PAGE_TYPE = 'home';
 
     ?>

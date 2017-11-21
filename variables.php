@@ -558,8 +558,8 @@
         $RK[type] = 'collection';
         $RK[flag] = '6';
 
-    $MP[title] = 'Millennium Park. U.S. Equities Realty Collection';
-        $MP[sortname] = 'Millennium Park. U.S. Equities Realty Collection';
+    $MP[title] = 'Millennium Park U.S. Equities Realty Collection';
+        $MP[sortname] = 'Millennium Park U.S. Equities Realty Collection';
         $MP[cardpic] = array(
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/2239/default.jpg',
             'pich'=>'240px',

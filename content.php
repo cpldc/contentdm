@@ -35,7 +35,7 @@
 // 									footer.html
 // ----------------------------------------------------------------------------------------
 
-	include 'header.html';
+	include 'header.php';
 ?>
 <main class="sidebar-target-collapsible PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
 	<div class="container main-container-fixed">

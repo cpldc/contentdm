@@ -184,7 +184,7 @@
 
 	function rightsClick(loc) {
 		console.log("clickin " + $(loc).attr('class'));
-		event.preventDefault();
+		// event.preventDefault();
 		if ($(loc).attr('class').indexOf("rights-i") >= 0){
 			$(loc).toggle();
 			$(loc).siblings(".rights-overlay").toggle();
@@ -204,17 +204,20 @@
 	
 		$(".rights-i").click(function () {
 			rightsClick(this);
+			return false;
 		});
 		$(".rights-close").click(function() {
 			loc = $(this).parent(".rights-overlay");
 			rightsClick(loc);
+			return false;
 		});
 	}
+	
 	// docreadies: 
-	// 	checks window size to assign layout; 
-	// 	waits for enter key to be pressed after typing in search input (x2 for both search inputs); 
-	// 	waits for a click to show MP rights statement, or hide it
-	// 	checks img src in simpleLightbox for MP collection, doesn't work :(
+		// 	checks window size to assign layout; 
+		// 	waits for enter key to be pressed after typing in search input (x2 for both search inputs); 
+		// 	calls rights-i event listener refresh
+
 	$( document ).ready(function() {
 		// var viewportWidth = $(window).width();
 		if (viewportWidth < 976) {
