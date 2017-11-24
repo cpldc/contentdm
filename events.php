@@ -47,5 +47,5 @@
         include $cache_file;
     }
 ?>
-<div class="events-viewmore"><a href="https://chipublib.bibliocommons.com/events/search/index">View More <span class="rsaquo">&rsaquo;</span></a></div>
+<div class="events-viewmore"><a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)">View More <span class="rsaquo">&rsaquo;</span></a></div>
 

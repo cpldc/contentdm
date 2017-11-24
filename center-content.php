@@ -1,5 +1,5 @@
 		
-			<span><?php echo $PAGE[textlong]; ?></span>
+			<p class="center-copy-paragraph" style="padding: 0"><?php echo $PAGE[textlong]; ?></p>
                 <div class="center-lightbox">
 						<div class="container-fluid lightbox imageGallery1">
 						<div class="row">
@@ -113,10 +113,10 @@
 							echo '</dl></div><div class="center-copy-list">';
 						}
 						echo '<dl>
-						<dt class="contact-list-item" style="padding-bottom: 7px">Contact us: </dt>
-						<dd class="contact-list-item">Location: <a href="https://www.chipublib.org/locations/' . $PAGE[loclink] . '">' . $PAGE[locname] . '</a></dd>
-						<dd class="contact-list-item">Email: ' . $PAGE[locemail] . '</dd>
-						<dd class="contact-list-item">Call: ' . $PAGE[locphone] . '</dd></dl></div>';
+						<dt class="contact-list-item" style="padding-bottom: 7px">Contact Us </dt>
+						
+						<dd class="contact-list-item">Phone: ' . $PAGE[locphone] . '</dd>
+						<dd class="contact-list-item"><a href="mailto:' . $PAGE[locemail] . '">' . $PAGE[locemail] . '</a></dd></dl></div>';
                     }
                     if ($PAGE[CPLRes]){
                         echo '<div class="center-copy-list">

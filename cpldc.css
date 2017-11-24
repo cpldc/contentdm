@@ -77,6 +77,10 @@
         background-color: #000;
         color: #262626;
     }
+    .modal-dialog {
+        width: 80%;
+        max-width: 2000px;
+    }
     modal a {
         color: #262626;
     }
@@ -98,7 +102,7 @@
     }
     .modal-body {
         background-color: #f8f8f8;
-        padding: 5px 25px;
+        padding: 10px 25px 5px 25px;
     }
     .modal-body h4 {
         padding: 8px 15px;
@@ -260,6 +264,15 @@
     .header-dropdown-listitem, .header-modal-listitem {
         border: 0;
         background-color: inherit;
+    }
+    .header-modal-listitem {
+        padding: 0;
+    }
+    .header-modal-listitem a {
+        color: #3f4344;
+        font-size: 18px;
+        line-height: 45px;
+        padding: 3px 0 3px 30px;
     }
     .header-dropdown-listitem a {
         color: #3f4344;

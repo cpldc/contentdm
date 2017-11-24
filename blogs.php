@@ -44,4 +44,4 @@
         include $cache_file;
     }
 ?>
-<div class="blogs-viewmore"><a href="https://www.chipublib.org/blogs/">View More <span class="rsaquo">&rsaquo;</span></a></div>
+<div class="blogs-viewmore"><a href="https://www.chipublib.org/blogs/category/chicago-history/">View More <span class="rsaquo">&rsaquo;</span></a></div>

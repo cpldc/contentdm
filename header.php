@@ -1,19 +1,22 @@
 <?php
-	$format = array([type] => 'format', 
-		array([link] => 'http://www.chipublib.org/browse/books/', [text] => 'Books'),
-		array([link] => 'http://www.chipublib.org/browse/ebooks/', [text] => 'eBooks'),
-		array([link] => 'http://www.chipublib.org/browse/audiobooks/', [text] => 'Audiobooks'),
-		array([link] => 'http://www.chipublib.org/browse/movies/', [text] => 'Movies &amp; TV'),
-		array([link] => 'http://www.chipublib.org/browse/music/', [text] => 'Music'));
-	$aud = array([type] => 'aud', 
-		array([link] => 'http://www.chipublib.org/browse/kids/', [text] => 'Kids'),
-		array([link] => 'http://www.chipublib.org/browse/teens/', [text] => 'Teens'));
-	$more = array([type] => 'more', 
-		array([link] => 'http://www.chipublib.org/online-resources/', [text] => 'Online Resources'),
-		array([link] => 'http://www.chipublib.org/browse/jobs-small-business/', [text] => 'Jobs &amp; Small Business'),
-		array([link] => 'http://www.chipublib.org/browse/chicago-history/', [text] => 'Chicago History'),
-		array([link] => 'http://www.chipublib.org/archives-collections/', [text] => 'Archival Collections'),
-		array([link] => 'https://www.chipublib.org/browse_program/one-book-one-chicago/', [text] => 'One Book, One Chicago'));
+	$format[type] = 'format';
+	$format[typefull] = 'By Format';
+	$format[links] = array(array([link] => 'http://www.chipublib.org/browse/books/', 'text' => 'Books'),
+		array('link' => 'http://www.chipublib.org/browse/ebooks/', 'text' => 'eBooks'),
+		array('link' => 'http://www.chipublib.org/browse/audiobooks/', 'text' => 'Audiobooks'),
+		array('link' => 'http://www.chipublib.org/browse/movies/', 'text' => 'Movies &amp; TV'),
+		array('link' => 'http://www.chipublib.org/browse/music/', 'text' => 'Music'));
+	$aud[type] = 'aud';
+	$aud[typefull] = 'By Audience';
+	$aud[links] = array(array('link' => 'http://www.chipublib.org/browse/kids/', 'text' => 'Kids'),
+		array('link' => 'http://www.chipublib.org/browse/teens/', 'text' => 'Teens'));
+	$more[type] = 'more'; 
+	$more[typefull] = 'More'; 
+	$more[links] = array(array('link' => 'http://www.chipublib.org/online-resources/', 'text' => 'Online Resources'),
+		array('link' => 'http://www.chipublib.org/browse/jobs-small-business/', 'text' => 'Jobs &amp; Small Business'),
+		array('link' => 'http://www.chipublib.org/browse/chicago-history/', 'text' => 'Chicago History'),
+		array('link' => 'http://www.chipublib.org/archives-collections/', 'text' => 'Archival Collections'),
+		array('link' => 'https://www.chipublib.org/browse_program/one-book-one-chicago/', 'text' => 'One Book, One Chicago'));
 	$headerLinks = array($format, $aud, $more);
 ?>
 <header>
@@ -79,40 +82,13 @@
 				<div class="header-browse-dropdown-browse"><h2>Browse</h2></div>
 				<?php 
 					foreach ($headerLinks as $key => $val){
-						echo '<div class="header-browse-dropdown-section header-browse-dropdown-' . $val[type] . '"><span class="header-browse-dropdown-title">By Format</span><ul class="list-group">';
-						foreach ($val as $k => $v) {
-							echo '<li class="list-group-item header-dropdown-listitem"><a href="' . $k[link] . '">' . $k[text] . '</a></li>';
+						echo '<div class="header-browse-dropdown-section header-browse-dropdown-' . $val[type] . '"><span class="header-browse-dropdown-title">' . $val[typefull] . '</span><ul class="list-group">';
+						foreach ($val[links] as $k => $v) {
+							echo '<li class="list-group-item header-dropdown-listitem"><a href="' . $v[link] . '">' . $v[text] . '</a></li>';
 						}
 						echo '</ul></div>';
 					}
 				?>
-				<div class="header-browse-dropdown-section header-browse-dropdown-format">
-					<span class="header-browse-dropdown-title">By Format</span>
-					<ul class="list-group">
-						<li class="list-group-item header-dropdown-listitem"><a href="http://www.chipublib.org/browse/books/">Books</a></li>
-						<li class="list-group-item header-dropdown-listitem"><a href="http://www.chipublib.org/browse/ebooks/">eBooks</a></li>
-						<li class="list-group-item header-dropdown-listitem"><a href="http://www.chipublib.org/browse/audiobooks/">Audiobooks</a></li>
-						<li class="list-group-item header-dropdown-listitem"><a href="http://www.chipublib.org/browse/movies/">Movies &amp; TV</a></li>
-						<li class="list-group-item header-dropdown-listitem"><a href="http://www.chipublib.org/browse/music/">Music</a></li>
-					</ul>
-				</div>
-				<div class="header-browse-dropdown-section header-browse-dropdown-aud">
-					<span class="header-browse-dropdown-title">By Audience</span>
-					<ul class="list-group">
-						<li class="list-group-item header-dropdown-listitem"><a href="http://www.chipublib.org/browse/kids/">Kids</a></li>
-						<li class="list-group-item header-dropdown-listitem"><a href="http://www.chipublib.org/browse/teens/">Teens</a></li>
-					</ul>
-				</div>
-				<div class="header-browse-dropdown-section header-browse-dropdown-more">
-					<span class="header-browse-dropdown-title">More</span>
-					<ul class="list-group">
-						<li class="list-group-item header-dropdown-listitem"><a href="http://www.chipublib.org/online-resources/">Online Resources</a></li>
-						<li class="list-group-item header-dropdown-listitem"><a href="http://www.chipublib.org/browse/jobs-small-business/">Jobs &amp; Small Business</a></li>
-						<li class="list-group-item header-dropdown-listitem"><a href="http://www.chipublib.org/browse/chicago-history/">Chicago History</a></li>
-						<li class="list-group-item header-dropdown-listitem"><a href="http://www.chipublib.org/archives-collections/">Archival Collections</a></li>
-						<li class="list-group-item header-dropdown-listitem"><a href="https://www.chipublib.org/browse_program/one-book-one-chicago/">One Book, One Chicago</a></li>
-					</ul>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -127,26 +103,15 @@
 	  </button>
 	</div>
 	<div class="modal-body">
-			<h4 class="header-modal-listheader">By Format</h4>
-		<ul class="list-group">
-			<li class="list-group-item header-modal-listitem"><a href="http://www.chipublib.org/browse/books/">Books</a></li>
-			<li class="list-group-item header-modal-listitem"><a href="http://www.chipublib.org/browse/ebooks/">eBooks</a></li>
-			<li class="list-group-item header-modal-listitem"><a href="http://www.chipublib.org/browse/audiobooks/">Audiobooks</a></li>
-			<li class="list-group-item header-modal-listitem"><a href="http://www.chipublib.org/browse/movies/">Movies &amp; TV</a></li>
-			<li class="list-group-item header-modal-listitem"><a href="http://www.chipublib.org/browse/music/">Music</a></li>
-		</ul>
-		<h4 class="header-modal-listheader">By Audience</h4>
-		<ul class="list-group">
-			<li class="list-group-item header-modal-listitem"><a href="http://www.chipublib.org/browse/kids/">Kids</a></li>
-			<li class="list-group-item header-modal-listitem"><a href="http://www.chipublib.org/browse/teens/">Teens</a></li>
-		</ul>
-		<h4 class="header-modal-listheader">More</h4>
-		<ul class="list-group">
-			<li class="list-group-item header-modal-listitem"><a href="http://www.chipublib.org/online-resources/">Online Resources</a></li>
-			<li class="list-group-item header-modal-listitem"><a href="http://www.chipublib.org/browse/jobs-small-business/">Jobs &amp; Small Business</a></li>
-			<li class="list-group-item header-modal-listitem"><a href="http://www.chipublib.org/browse/chicago-history/">Chicago History</a></li>
-			<li class="list-group-item header-modal-listitem"><a href="http://www.chipublib.org/archives-collections/">Archival Collections</a></li>
-		</ul>
+		<?php 
+			foreach ($headerLinks as $key => $val){
+				echo '<h4 class="header-modal-listheader">' . $val[typefull] . '</h4><ul class="list-group">';
+				foreach ($val[links] as $k => $v) {
+					echo '<li class="list-group-item header-modal-listitem"><a href="' . $v[link] . '">' . $v[text] . '</a></li>';
+				}
+				echo '</ul>';
+			}
+		?>
 	</div>
   </div>
 </div>
