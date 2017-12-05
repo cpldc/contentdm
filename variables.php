@@ -695,14 +695,14 @@
     $CPD[title] = 'Chicago Park District Records: Photographs';
         $CPD[sortname] = 'Chicago Park District Records: Photographs';
         $CPD[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/rvw/1539/default.jpg',
+            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/1254/default.jpg',
             'pich'=>'250px',
-            'size'=>'110%',
-            'pos'=>'10% 5%'
+            'size'=>'250%',
+            'pos'=>'87% 47%'
         );
         $CPD[category] = 'Parks';
-        $CPD[textshort] = 'Chicago Public Library is currently finalizing photographs from the  Chicago Park District Records, which will be available in the spring of 2018.';
-        $CPD[textlong] = 'Chicago Public Library is currently finalizing photographs from the  Chicago Park District Records, which will be available in the spring of 2018.';
+        $CPD[textshort] = 'Chicago Public Library is currently finalizing photographs from the  Chicago Park District Records, which will be available in spring 2018.';
+        $CPD[textlong] = 'Chicago Public Library is currently finalizing photographs from the  Chicago Park District Records, which will be available in spring 2018.';
         $CPD[link] = 'CPD';
         $CPD[location] = $HWLCSC;
         $CPD[coll] = 'ChicagoParks';
@@ -808,10 +808,10 @@
     $Sang[title] = 'Philip David Sang Collection';
         $Sang[sortname] = 'Sang, Philip David Collection';
         $Sang[cardpic] = array(
-            'pic'=>'',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/p16818coll6/405/default.jpg',
             'pich'=>'250px',
             'size'=>'250%',
-            'pos'=>'24% 45%'
+            'pos'=>'25% 12%'
         );
         $Sang[pic] = '';
         $Sang[category] = array('African Americans','Civil War');
@@ -879,31 +879,39 @@
         $CivilWar[shortname] = 'Civil War';
         $CivilWar[sidebarname] = 'Civil War';
         $CivilWar[cardpic] = array(
-            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/p16818coll6/405/default.jpg',
+            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/721/default.jpg',
             'pich'=>'280px',
-            'size'=>'250%',
-            'pos'=>'25% 12%'
+            'size'=>'auto 120%',
+            'pos'=>'center'
         );
-        $CivilWar[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/634/default.jpg',
-            'text'=>'Photographic Views of Sherman&rsquo;s Campaign by George N. Barnard',
-            'size'=>'auto 575px',
+        $CivilWar[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/p16818coll6/231/default.jpg',
+            'text'=>'Poster for public auction of enslaved persons',
+            'size'=>'cover',
             'align'=>'center');
-        $CivilWar[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/116/default.jpg',
+        $CivilWar[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/173/default.jpg',
+                'text'=>'Pauline Cushman was a spy and scout for the Union Army until caught with secret papers and sentenced to death.  She was later rescued by Union forces,',
+                'size'=>'150%',
+                'align'=>'center 30%'),
+        // $CivilWar[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/p16818coll6/37/default.jpg',
+        //         'text'=>'Reward poster for capture of runaway slave man',
+        //         'size'=>'cover',
+        //         'align'=>'center 0%'),
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/116/default.jpg',
                 'text'=>'Sword, Model 1850 Staff and Field Officer',
                 'size'=>'auto 120px',
                 'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/721/default.jpg',
-                'text'=>'Uniform, artillery jacket',
-                'size'=>'auto 120px',
-                'align'=>'50% 15%'),
+        // array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/721/default.jpg',
+        //     'text'=>'Uniform, artillery jacket',
+        //     'size'=>'auto 120px',
+        //     'align'=>'50% 15%'),
             array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/35/default.jpg',
                 'text'=>'Grant, Ulysses S.',
                 'size'=>'120px auto',
                 'align'=>'50% 20%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/38/default.jpg',
-                'text'=>'Union Ticket',
-                'size'=>'110px auto',
-                'align'=>'55% 15%'));
+            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/p16818coll6/422/default.jpg?highlightTerms=Letter%20from%20John%20Brown,%20Jr.%20to%20relatives',
+                'text'=>'Letter from John Brown, Jr. to relatives',
+                'size'=>'200px',
+                'align'=>'55% 5%'));
         $CivilWar[textshort] = 'Personal narratives, artifacts and manuscripts tell the story of slaves and soldiers during the war that tore the nation apart.';
         $CivilWar[textlong] = 'A view into contemporary life during the Civil War via personal letters, documents detailing the slave trade and artifacts from the battlefield.';
         $CivilWar[textrich] = 'CPL is home to numerous artifacts and papers from the Civil War era.  A significant portion of the collection comprises material from the Illinois Department of the Grand Army of the Republic, including <a href="http://digital.chipublib.org/digital/collection/wha/search/searchterm/edged%20weapons">weaponry</a> and <a href="http://digital.chipublib.org/digital/collection/wha/search/searchterm/lincoln/field/subjec/mode/all/conn/and/order/nosort/ad/asc">Lincolniana</a>.  The papers housed at Harsh and HWLC are fascinating in their own right and include <a href="http://digital.chipublib.org/digital/collection/p16818coll6/search/searchterm/slave%20trade/field/all/mode/exact/conn/and/order/title/ad/asc">business documents pertaining to the slave trade</a> and <a href="http://digital.chipublib.org/digital/collection/p16818coll6/search/searchterm/correspondence!1855-1870/field/all!date/mode/all!exact/conn/and!and/order/title/ad/asc">correspondence of soldiers, politicians, and prominent abolitionists</a>.';
@@ -1032,14 +1040,14 @@
                                 array('link'=>'https://www.chipublib.org/fa-millennium-park-inc/','text'=>'Millennium Park, Inc. Finding Aid'),
                                 array('link'=>'https://www.chipublib.org/fa-millennium-park-u-s-equities-realty-collection/','text'=>'Millennium Park / U.S. Equities Realty Collection Finding Aid'),
                                 array('link'=>'https://www.chipublib.org/fa-open-space-section-records/','text'=>'Open Space Section Records'));
-        $Parks[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/4258/default.jpg',
-            'text'=>'Crown Fountain, children play in the gargoyle spray of the north tower, opening day, July 16, 2004',
-            'size'=>'730px',
-            'align'=>'50% 87%');
-        $Parks[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/1626/default.jpg',
-                'text'=>'Altgeld Park (0206) Features - Playgrounds and swimming pools, 1968-07',
-                'size'=>'300px',
-                'align'=>'60% 50%'),
+        $Parks[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/3708/default.jpg',
+            'text'=>'Horner Park (0228) Activities - Hula hooping, 1971',
+            'size'=>'110%',
+            'align'=>'center');
+        $Parks[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/4258/default.jpg',
+                'text'=>'Crown Fountain, children play in the gargoyle spray of the north tower, opening day, July 16, 2004',
+                'size'=>'cover',
+                'align'=>'center'),
             array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/290/default.jpg',
                 'text'=>'American Indian Center',
                 'size'=>'110%',
@@ -1062,10 +1070,10 @@
         $Theater[sidebarname] = 'Theater';
         $Theater[sortname] = 'Chicago Theater';
         $Theater[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/image/CPB01/thumbnail',
+            'pic'=>'theater-cardpic.png',
             'pich'=>'250px',
-            'size'=>'110%',
-            'pos'=>'auto'
+            'size'=>'auto 225%',
+            'pos'=>'45% 60%'
         );
         $Theater[category] = '';
         $Theater[textshort] = 'Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.';
@@ -1107,12 +1115,6 @@
         $Theater[shortname] = 'Theater';
         $Theater[sidebarname] = 'Theater';
         $Theater[sortname] = 'Chicago Theater';
-        $Theater[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/image/CPB01/thumbnail',
-            'pich'=>'250px',
-            'size'=>'110%',
-            'pos'=>'auto'
-        );
 
 
 //misc arrays
