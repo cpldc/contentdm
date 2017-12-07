@@ -74,7 +74,11 @@
         $MRC[longname] = 'Municipal Reference Collection at Harold Washington Library Center';
         $MRC[shortname] = 'MRC';
         $MRC[sidebarname] = 'Municipal Reference Collection';
-        $MRC[pic] = '';
+        $MRC[pic] = '';        
+        $MRC[mainimage] = array('url'=>'https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/02/Freight-Tunnel-Map.jpg',
+            'text'=>'1932 Freight Tunnel Map from the Journal of Proceedings of the City Council of the City of Chicago',
+            'size'=>'cover',
+            'align'=>'center');
         $MRC[textshort] = 'at Harold Washington Library Center';
         $MRC[textlong] = 'The Municipal Reference Collection at <a href="https://www.chipublib.org/locations/34">Harold Washington Library Center</a> chronicles almost every aspect of municipal life in Chicago, housing most City of Chicago documents published since the mid-1800s as well as documents from other local agencies such as the Chicago Board of Education and the Chicago Transit Authority.';
         $MRC[textrich] = '<h4>Digital Collections</h4><p>Digital collections from the Municipal Reference Collection are forthcoming.</p>';
@@ -331,26 +335,26 @@
         $CPL[textshort] = 'Photographs trace CPL&rsquo;s history from a small water tank that survived the Great Chicago Fire to the extensive network of neighborhood libraries that span the city today.';
         $CPL[textlong] = 'On January 1, 1873 the Chicago Public Library opened its doors in a water tank that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to the development of neighborhood libraries across the city.';
         $CPL[textrich] = '<p>On January 1, 1873, Chicago Public Library opened its doors in a <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Water+tank/field/subjed/mode/all/conn/and/order/nosort">circular water tank</a> at the southeast corner of LaSalle and Adams streets that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to a system of 80 locations across the city. </p><p>Explore CPL through those years, from <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Delivery+stations/field/subjed/mode/all/conn/and/order/nosort">delivery stations</a> in the late 19th century to <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Bookmobiles/field/subjed/mode/all/conn/and/order/nosort">bookmobiles</a> in the mid-20th century to <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/bar/searchterm/Working%20with%20children!Hild%20Regional%20Library/field/subjed!all/mode/all!all/conn/and!and/order/nosort/ad/asc">Hild Regional Library</a> in the 1970s. </p>';
-        $CPL[mainimage] = array('url'=>'',
-                'text'=>'',
-                'size'=>'150%',
-                'align'=>'78% 5%');
-        $CPL[thumbs] = array(array('url'=>'',
-                    'text'=>'',
-                    'size'=>'110px auto',
+        $CPL[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/80/default.jpg',
+                'text'=>'Book room in the Old Water Tank, ca. 1873',
+                'size'=>'cover',
+                'align'=>'50% 75%');
+        $CPL[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/5/default.jpg',
+                    'text'=>'Bookplate of the English Book Donation',
+                    'size'=>'cover',
                     'align'=>'center'),
-                array('url'=>'',
-                    'text'=>'',
-                    'size'=>'500px auto',
-                    'align'=>'10% 10%'),
-                array('url'=>'',
-                    'text'=>'',
-                    'size'=>'350px auto',
-                    'align'=>'90% 60%'),
-                array('url'=>'',
-                    'text'=>'',
-                    'size'=>'200px',
-                    'align'=>'25% 10%'));
+                array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/73/default.jpg',
+                    'text'=>'Trailer Service from the Legler Regional Library, ca. 1940',
+                    'size'=>'150%',
+                    'align'=>'100% 50%'),
+                array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/41/default.jpg',
+                    'text'=>'Timothy B. Blackstone Memorial Branch Library, exterior view, 1904',
+                    'size'=>'cover',
+                    'align'=>'0% '),
+                array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/74/default.jpg',
+                    'text'=>'Traveling Branch from the Legler [Regional] Library, ca. 1960s',
+                    'size'=>'cover',
+                    'align'=>'center'));
         $CPL[link] = 'CPL';
         $CPL[coll] = 'woop';
         $CPL[location] = $HWLCSC;
