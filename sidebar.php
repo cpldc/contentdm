@@ -75,7 +75,7 @@
 				<ul>
 					<li class="left-sidebar-list"><a href="http://www.chipublib.org/archives-collections/" class="sidebar-links">Archival Collections</a></li>
 					<li class="left-sidebar-list"><a href="http://www.chipublib.org/browse/chicago-history/" class="sidebar-links">Chicago History</a></li>
-					<li class="left-sidebar-list"><a href="https://www.chipublib.org/resources/history/" class="sidebar-links">Online Resources: History</a></li>
+					<li class="left-sidebar-list"><a href="https://www.chipublib.org/resources/history/" class="sidebar-links">Online Resources: History &amp; Social Science</a></li>
 				</ul>
 			</div>
 			<div class="left-sidebar-related">

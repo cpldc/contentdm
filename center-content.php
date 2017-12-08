@@ -46,7 +46,11 @@
                         echo '<div class="center-copy-paragraph">
 							<p>' . $PAGE[textrich] . '</p>';
 							if ($PAGE[type] == 'collection'){
-								echo 'The ' . $PAGE[title] . ' is housed in ' . $PAGE[location][longname] . '.';
+								if ($PAGE[title] == 'Remembering Harold Washington') {
+									echo 'The ' . $PAGE[title] . ' exhibit is housed in ' . $PAGE[location][longname] . '.';
+								} else {
+									echo 'The ' . $PAGE[title] . ' is housed in ' . $PAGE[location][longname] . '.';
+								}
 							}
 						echo '</div>';
 					}
