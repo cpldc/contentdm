@@ -9,6 +9,29 @@
             };
         }
 
+        $HW[flag] =         '1';
+        $Theater[flag] =    '2';
+        $Sang[flag] =       '3';
+        $Whalen[flag] =     '4';
+        $MP[flag] =         '5';
+        $CPD[flag] =        '6';
+        $Examiner[flag] =   '7';
+        $RK[flag] =         '8';
+        $HDG[flag] =        '9';
+        $EB[flag] =         '10';
+        $CPL[flag] =        '11';
+        $ChiRen[flag] =     '12';
+        $Sewers[flag] =     'x';
+        $NCO[flag] =        'x';
+        $NHS[flag] =        'x';
+        $RWLV[flag] =       'x';
+        $AfAm[flag] =       'x';
+        $News[flag] =       '';
+        $Neigh[flag] =      'x';
+        $CivilWar[flag] =   'x';
+        $Parks[flag] =      'x';
+        $LibEd[flag] =      'x';
+
 //array(array('a'=>'','dt'=>'','dd'=>''));
 // since titles are written before center-content takes over, all pages need titles stored here; they also print at the top of the center-content area
     $All[title] = 'Digital Collections A-Z';
@@ -291,7 +314,6 @@
         $Examiner[coll] = 'examiner';
         $Examiner[location] = $HWLCSC;
         $Examiner[type] = 'collection';
-        $Examiner[flag] = '1';
 
     $EB[title] = 'Esther A. Barlow Collection';
         $EB[sortname] = 'Barlow, Esther A. Collection';
@@ -321,7 +343,6 @@
         $EB[coll] = 'bar';
         $EB[location] = $NNHC;
         $EB[type] = 'collection';
-        $EB[flag] = '8';
 
     $CPL[title] = 'Chicago Public Library Archives';
         $CPL[sortname] = 'Chicago Public Library Archives';
@@ -359,7 +380,6 @@
         $CPL[coll] = 'woop';
         $CPL[location] = $HWLCSC;
         $CPL[type] = 'collection';
-        $CPL[flag] = '9';
 
     $ChiRen[title] = 'Chicago Renaissance';
         $ChiRen[sortname] = 'Chicago Renaissance';
@@ -399,7 +419,6 @@
         $ChiRen[coll] = 'cr';
         $ChiRen[location] = $Harsh;
         $ChiRen[type] = 'collection';
-        $ChiRen[flag] = '10';
         
     $Sewers[title] = 'Chicago Sewers Collection';
         $Sewers[sortname] = 'Chicago Sewers Collection';
@@ -438,7 +457,6 @@
         $Sewers[coll] = 'dtd';
         $Sewers[location] = $HWLCSC;
         $Sewers[type] = 'collection';
-        $Sewers[flag] = 'x';
         
 
 
@@ -481,7 +499,6 @@
         $Whalen[coll] = 'wha';
         $Whalen[location] = $HWLCSC;
         $Whalen[type] = 'collection';
-        $Whalen[flag] = '2';
 
     $HDG[title] = 'Henry D. Green Photograph Collection';
         $HDG[sortname] = 'Green, Henry D. Photograph Collection';
@@ -520,7 +537,6 @@
         $HDG[coll] = 'hdg';
         $HDG[location] = $NNHC;
         $HDG[type] = 'collection';
-        $HDG[flag] = '7';
         
     $RK[title] = 'Robert W. Krueger Photograph Collection';
         $RK[sortname] = 'Krueger, Robert W. Photograph Collection';
@@ -562,7 +578,6 @@
         $RK[coll] = 'rwk';
         $RK[location] = $NNHC;
         $RK[type] = 'collection';
-        $RK[flag] = '6';
 
     $MP[title] = 'Millennium Park U.S. Equities Realty Collection';
         $MP[sortname] = 'Millennium Park U.S. Equities Realty Collection';
@@ -606,9 +621,7 @@
         $MP[coll] = 'mpu';
         $MP[location] = $HWLCSC;
         $MP[type] = 'collection';
-        $MP[flag] = '3';
-        $MP2 = $MP;
-        $MP2[link] = 'MP2';
+
     $NCO[title] = 'Northside Clubs and Organizations';
         $NCO[sortname] = 'Northside Clubs and Organizations';
         $NCO[cardpic] = array(
@@ -652,7 +665,6 @@
         $NCO[location] = $NNHC;
         $NCO[subcollections] = array($CFCC, $LVCRA, $PortPark, $RMIA);
         $NCO[type] = 'collection';
-        $NCO[flag] = 'x';
 
     $NHS[title] = 'Northside High Schools';
         $NHS[sortname] = 'Northside High Schools';
@@ -694,7 +706,6 @@
         $NHS[location] = $NNHC;
         $NHS[type] = 'collection';
         $NHS[subcollections] = array($Amund, $Kins, $LVHS, $Walz);
-        $NHS[flag] = 'x';
 
     $CPD[title] = 'Chicago Park District Records: Photographs';
         $CPD[sortname] = 'Chicago Park District Records: Photographs';
@@ -715,7 +726,6 @@
         $CPD[location] = $HWLCSC;
         $CPD[coll] = 'ChicagoParks';
         $CPD[type] = 'collection';
-        $CPD[flag] = 'x';
 
     $HW[title] = 'Remembering Harold Washington';
         $HW[sortname] = 'Remembering Harold Washington';
@@ -767,7 +777,6 @@
         $HW[coll] = 'rhwc';
         $HW[location] = $HWLCSC;
         $HW[type] = 'collection';
-        $HW[flag] = '5';
         $HW[sidebarflag] = 'x';
         
     $RWLV[title] = 'Ravenswood-Lake View Community Collection';
@@ -811,15 +820,14 @@
         $RWLV[coll] = 'rvw';
         $RWLV[location] = $NNHC;
         $RWLV[type] = 'collection';
-        $RWLV[flag] = '1';
         
     $Sang[title] = 'Philip David Sang Collection';
         $Sang[sortname] = 'Sang, Philip David Collection';
         $Sang[cardpic] = array(
-            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/p16818coll6/405/default.jpg',
-            'pich'=>'250px',
-            'size'=>'250%',
-            'pos'=>'25% 12%'
+            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/p16818coll6/691/default.jpg',
+            'pich'=>'300px',
+            'size'=>'190%',
+            'pos'=>'20% 25%'
         );
         $Sang[pic] = '';
         $Sang[category] = array('African Americans','Civil War');
@@ -836,7 +844,6 @@
         $Sang[coll] = 'p16818coll6';
         $Sang[location] = $Harsh;
         $Sang[type] = 'collection';
-        $Sang[flag] = '4';
     
 
 
@@ -880,7 +887,6 @@
                 'align'=>'40% 60%'),);
         $AfAm[link] = 'AfAm';
         $AfAm[type] = 'category';
-        $AfAm[flag] = 'x';
         $AfAm[sidebarflag] = 'x';
 
     $CivilWar[title] = 'Civil War';
@@ -932,7 +938,6 @@
         array('link'=>'','text'=>'Philip David Sang Collection'));
         $CivilWar[link] = 'CivilWar';
         $CivilWar[type] = 'category';
-        $CivilWar[flag] = 'x';
         $CivilWar[sidebarflag] = 'x';
 
     //Harold Washington
@@ -973,7 +978,6 @@
             array('a'=>'https://www.chipublib.org/archival_subject/education/','dt'=>'Finding Aids: Education','dd'=>'Descriptive inventories of the archival collections of educators, schools and more.'));
         $LibEd[link] = 'LibEd';
         $LibEd[type] = 'category';
-        $LibEd[flag] = 'x';
         $LibEd[sidebarflag] = 'x';
 
     $News[title] = 'Chicago Newspapers';
@@ -989,7 +993,6 @@
         $News[textlong] = '';
         $News[link] = 'Examiner';
         $News[type] = 'category';
-        $News[flag] = '';
         $News[sidebarflag] = 'x';
 
     $Neigh[title] = 'Chicago Neighborhoods';
@@ -1026,7 +1029,6 @@
                 'align'=>'62% 37%'));
         $Neigh[link] = 'Neigh';
         $Neigh[type] = 'category';
-        $Neigh[flag] = 'x';
         $Neigh[sidebarflag] = 'x';
 
     $Parks[title] = 'Chicago Parks';
@@ -1070,11 +1072,11 @@
                 'align'=>'50% 50%'));
         $Parks[link] = 'Parks';
         $Parks[type] = 'category';
-        $Parks[flag] = 'x';
         $Parks[sidebarflag] = 'x';
 
     $Theater[title] = 'Chicago Theater';
         $Theater[shortname] = 'Theater';
+        $Theater[sortname] = 'Chicago Theater';
         $Theater[sidebarname] = 'Theater';
         $Theater[sortname] = 'Chicago Theater';
         $Theater[cardpic] = array(
@@ -1117,12 +1119,7 @@
         $Theater[location] = $HWLCSC;
         $Theater[type] = 'collection';
         $Theater[subcollections] = array($EBG, $Playbills);
-        $Theater[flag] = '4';
         $Theater[sidebarflag] = 'x';
-        $Theater[title] = 'Chicago Theater';
-        $Theater[shortname] = 'Theater';
-        $Theater[sidebarname] = 'Theater';
-        $Theater[sortname] = 'Chicago Theater';
 
 
 //misc arrays

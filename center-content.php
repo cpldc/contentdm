@@ -126,9 +126,6 @@
                         echo '<div class="center-copy-list">
                             <h4>More CPL Resources</h4>
                             <dl>';
-                        foreach ($PAGE[CPLRes] as $key => $val){
-                            echo '<dt><a href="' . $val[a] . '">' . $val[dt] . '</a></dt><dd>' . $val[dd] . '</dd>';
-						}
 						if($PAGE[findingaid]){
 							if(is_array($PAGE[findingaid][0])){
 								echo '<dt>Finding Aids</dt><dd>The descriptive inventories for other related archival collections.</dd><dd><ul>';
@@ -139,6 +136,9 @@
 							} else {
 								echo '<h4>Finding Aid</h4><dl><dt><a href="' . $PAGE[findingaid][link] . '">' . $PAGE[findingaid][text] . '</a></dt><dd>The descriptive inventory for the complete physical collection.</dl>';
 							}
+						}
+                        foreach ($PAGE[CPLRes] as $key => $val){
+                            echo '<dt><a href="' . $val[a] . '">' . $val[dt] . '</a></dt><dd>' . $val[dd] . '</dd>';
 						}
                         echo '</dl></div>';
                     }
