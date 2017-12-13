@@ -716,9 +716,9 @@
             'pos'=>'87% 47%'
         );
         $CPD[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/2811/default.jpg',
-        'text'=>'Grant Park (0024) Streets - Lake Shore Drive, 1946-01-23',
-        'size'=>'120%',
-        'align'=>'center');
+            'text'=>'<a href=test.html>Grant Park (0024) Streets - Lake Shore Drive, 1946-01-23</a>',
+            'size'=>'120%',
+            'align'=>'center');
         $CPD[category] = 'Parks';
         $CPD[textshort] = 'Chicago Public Library is currently finalizing photographs from the  Chicago Park District Records, which will be available in spring 2018.';
         $CPD[textlong] = 'Chicago Public Library is currently finalizing photographs from the  Chicago Park District Records, which will be available in spring 2018.';
