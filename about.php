@@ -15,7 +15,7 @@
     </div>
     <div class="center-copy-paragraph">
         <p>
-            Chicago Public Library’s digital program strengthens communities and sparks passion about the city by expanding access to our unique resources and special collections. We support community-based and scholarly research, document Chicago’s life and neighborhoods, and provide primary sources to tell our stories. Our digital collections showcase thousands of archival images, documents and artifacts.
+            Chicago Public Library’s digital program strengthens communities and sparks passion about the city by expanding access to our unique resources and special collections. We support community-based and scholarly research, document Chicago’s life and neighborhoods and provide primary sources to tell our stories. Our digital collections showcase thousands of archival images, documents and artifacts.
         </p>
         <p>
             Our digital collections come from CPL’s special collections:

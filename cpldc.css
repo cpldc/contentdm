@@ -350,12 +350,12 @@
     .center-copy-list li a {
         font-size: 0.9rem;
     }
-    .center-copy-paragraph a, .center-copy-list li a {
+    .center-copy-paragraph a, .center-copy-list li a, .all-links {
         color: #2d63af;
         text-decoration: none;
         border-bottom: 1px solid #909696;
     }
-    .center-copy-paragraph a:hover, .center-copy-list li a:hover {
+    .center-copy-paragraph a:hover, .center-copy-list li a:hover, .all-links:hover {
         text-decoration: none;
         border-bottom: 2px solid #909696;
     }

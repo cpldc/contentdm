@@ -49,7 +49,7 @@
 								if ($PAGE[title] == 'Remembering Harold Washington') {
 									echo 'The ' . $PAGE[title] . ' exhibit is housed in ' . $PAGE[location][longname] . '.';
 								} else {
-									echo 'The ' . $PAGE[title] . ' is housed in ' . $PAGE[location][longname] . '.';
+									echo 'The ' . $PAGE[title] . ' is housed in the ' . $PAGE[location][longname] . '.';
 								}
 							}
 						echo '</div>';
@@ -94,7 +94,11 @@
 						usort($cards, build_sorter('sortname'));
 						foreach ($cards as $key => $val){
 							if ((is_array($val[category]) && in_array($PAGE[shortname], $val[category])) || $val[category] == $PAGE[shortname]){
-								echo '<dt><a href="content.php?id=' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
+								echo '<dt><a href="content.php?id=' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort];
+								if ($PAGE[link] == 'LibEd' && $val[link] == 'RWLV') {
+									echo '  This collection contains images of high schools in the neighborhoods.';
+								}
+								echo '</dd>';
 							}
                         }
                         echo '</dl></div>';
@@ -113,14 +117,12 @@
 								if ($val[location] == $PAGE){
 									echo '<dt><a href="content.php?id=' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
 								}
+							} 
+							}else {
+								echo '<h4>Digital Collections</h4>
+								<p>Digital collections from the ' . $PAGE[title] . ' are forthcoming.';
 							}
-							echo '</dl></div><div class="center-copy-list">';
-						}
-						echo '<dl>
-						<dt class="contact-list-item" style="padding-bottom: 7px">Contact Us </dt>
-						
-						<dd class="contact-list-item">Phone: ' . $PAGE[locphone] . '</dd>
-						<dd class="contact-list-item"><a href="mailto:' . $PAGE[locemail] . '">' . $PAGE[locemail] . '</a></dd></dl></div>';
+							echo '</dl></div>';
                     }
                     if ($PAGE[CPLRes]){
                         echo '<div class="center-copy-list">
@@ -137,8 +139,10 @@
 								echo '<h4>Finding Aid</h4><dl><dt><a href="' . $PAGE[findingaid][link] . '">' . $PAGE[findingaid][text] . '</a></dt><dd>The descriptive inventory for the complete physical collection.</dl>';
 							}
 						}
+						usort($PAGE[CPLRes], build_sorter('dt'));
                         foreach ($PAGE[CPLRes] as $key => $val){
-                            echo '<dt><a href="' . $val[a] . '">' . $val[dt] . '</a></dt><dd>' . $val[dd] . '</dd>';
+							echo '<dt><a href="' . $val[a] . '">' . $val[dt] . '</a></dt><dd>' . $val[dd] . '</dd>';
+							echo $PAGE[CPLRes][dt];
 						}
                         echo '</dl></div>';
                     }
@@ -159,6 +163,7 @@
 						echo '<div class="center-copy-list">
 						<h4>External Resources</h4>
 						<dl>';
+						usort($PAGE[ExRes], build_sorter('dt'));
                         foreach ($PAGE[ExRes] as $key => $val){
                             echo '<dt><a href="' . $val[a] . '">' . $val[dt] . '</a></dt><dd>' . $val[dd] . '</dd>';
                         }
@@ -170,4 +175,11 @@
 					if ($PAGE[inclusions]) {
 						center_content($PAGE[inclusions]);
 					}
+                    if ($PAGE[type] == 'location'){
+						echo '<div class="center-copy-list"><dl>
+						<dt class="contact-list-item" style="padding-bottom: 7px">Contact Us </dt>
+						
+						<dd class="contact-list-item">Phone: ' . $PAGE[locphone] . '</dd>
+						<dd class="contact-list-item"><a href="mailto:' . $PAGE[locemail] . '">' . $PAGE[locemail] . '</a></dd></dl></div>';
+                    }
                     ?>
