@@ -767,22 +767,22 @@
         text-align: center;
     }
     /* hack to get captions as links to appear the same as SLB's default plain text */
+    .slbCaption {
+        overflow: visible !important;
+    }
     .slbCaption a {
-        display: inline-block;
-        max-width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        word-wrap: normal;
+        overflow: visible;
         font-size: 20px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        display: block;
+        position: relative;
+        text-align: center;
+        white-space: nowrap;
+        margin-left: -100%;
+        margin-right: -100%;
+        text-align: center;
         padding: .71429em 0;
         color: #fff;
         color: rgba(255,255,255,0.7);
-        text-align: center;
     }
 /* content card */
     .grid-item {

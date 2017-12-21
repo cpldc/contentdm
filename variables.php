@@ -63,23 +63,28 @@
         $HWLCSC[longname] = 'Special Collections at Harold Washington Library Center';
         $HWLCSC[sidebarname] = 'Special Collections at HWLC';
         $HWLCSC[pic] = '';      
-        $HWLCSC[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/79/default.jpg',
+        $HWLCSC[mainimage] = array('url'=>'79',
+            'coll' => 'woop',
             'text'=>'Old Water Tank, exterior view, ca. 1870',
             'size'=>'105%',
             'align'=>'50% 50%');
-        $HWLCSC[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/2196/default.jpg',
+        $HWLCSC[thumbs] = array(array('url'=>'2196',
+                'coll' => 'CPB01',
                 'text'=>'Chicago Little Theatre, Philanderer (November 19, 1914)',
                 'size'=>'170%',
                 'align'=>'25% 22%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/4833/default.jpg',
+            array('url'=>'4833',
+                'coll' => 'ChicagoParks',
                 'text'=>'Madden Park (0028) Activities, 1954-04-08',
                 'size'=>'140%',
                 'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/42/default.jpg',
+            array('url'=>'42',
+                'coll' => 'wha',
                 'text'=>'$100,000 Reward! The Murderer of Our Late Beloved President is Still at Large.',
                 'size'=>'105%',
                 'align'=>'50% 20%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/4066/default.jpg',
+            array('url'=>'4066',
+                'coll' => 'mpu',
                 'text'=>'Crown Fountain, fountain preview, July 13, 2004',
                 'size'=>'370%',
                 'align'=>'50% 50%'));
@@ -124,23 +129,28 @@
         $NNHC[pic] = '';
         $NNHC[textshort] = 'at Sulzer Regional Library';
         $NNHC[textlong] = 'The Northside Neighborhood History Collection at <a href="https://www.chipublib.org/locations/67">Sulzer Regional Library</a> highlights historical and contemporary materials about Northside neighborhoods.';
-        $NNHC[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/1182/default.jpg',
+        $NNHC[mainimage] = array('url'=>'1182',
+            'coll' => 'rwk',
             'text'=>'4700 North Lincoln',
             'size'=>'125%',
             'align'=>'50% 50%');
-        $NNHC[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/902/default.jpg',
+        $NNHC[thumbs] = array(array('url'=>'902',
+        'coll' => 'ahs',
                 'text'=>'Lake View High School drum majorette Mildred Douglas',
                 'size'=>'400px',
                 'align'=>'65% 15%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/567/default.jpg',
+            array('url'=>'567',
+            'coll' => 'rwk',
                 'text'=>'47th Ward neighborhood watch',
                 'size'=>'500px',
                 'align'=>'57% 37%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/653/default.jpg',
+            array('url'=>'653',
+            'coll' => 'rwk',
                 'text'=>'Complex Christmas star quilt',
                 'size'=>'auto 130%',
                 'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/661/default.jpg',
+            array('url'=>'661',
+            'coll' => 'rwk',
                 'text'=>'Door with stained glass',
                 'size'=>'110%',
                 'align'=>'50% 25%'));
@@ -159,23 +169,29 @@
         $Harsh[pic] = '';
         $Harsh[textshort] = 'at Woodson Regional Library';
         $Harsh[textlong] = 'The largest African American history and literature collection in the Midwest, the Vivian G. Harsh Research Collection of Afro-American History and Literature at <a href="https://www.chipublib.org/locations/81">Woodson Regional Library</a> documents the black experience with a strong focus on Chicago.';
+        // Harsh's main image uses an exception in center-content, as the contentDM version of the image is super low res
         $Harsh[mainimage] = array('url'=>'ASNLH.jpg',
+            'coll' => 'rwk',
             'text'=>'Committee in charge of the celebration of the twentieth anniversary of the Association for the Study of Negro Life and History, 1936',
             'size'=>'auto 125%',
             'align'=>'center');
-        $Harsh[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/18/default.jpg',
+        $Harsh[thumbs] = array(array('url'=>'18',
+        'coll' => 'cr',
                 'text'=>'Congressman William L. Dawson campaigning, 1940s',
                 'size'=>'200%',
                 'align'=>'50% 10%'),
-            array('url'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/p16818coll6/405/default.jpg',
+            array('url'=>'405',
+            'coll' => 'p16818coll6',
                 'text'=>'Note from Frederick Douglass; transcript and photo print',
                 'size'=>'400%',
                 'align'=>'29% 10%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/21/default.jpg',
+            array('url'=>'21',
+            'coll' => 'cr',
                 'text'=>'&ldquo;The War&rsquo;s Greatest Scandal,&rdquo; 1943',
                 'size'=>'250%',
                 'align'=>'55% 75%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/2/default.jpg',
+            array('url'=>'2',
+            'coll' => 'cr',
                 'text'=>'&ldquo;Self-portrait&rdquo; by Gordon Parks, 1941',
                 'size'=>'cover',
                 'align'=>'50% 40%'));
@@ -277,29 +293,30 @@
 
 //collections
     $Examiner[title] = 'Chicago Examiner';
+        $Examiner[coll] = 'examiner';
         $Examiner[sortname] = 'Chicago Examiner';
         $Examiner[cardpic] = array('pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/examiner/5449/default.jpg','pich'=>'19rem','size'=>'110% auto','pos'=>'50% -15px');
         $Examiner[category] = 'Newspapers';
         $Examiner[textshort] = 'Chicago Public Library&rsquo;s 10-year run of the <i>Chicago Examiner</i> extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
         $Examiner[textlong] = 'Chicago Public Library&rsquo;s 10-year run of the <i>Chicago Examiner</i> extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
         $Examiner[textrich] = '<p>The Chicago Public Library&rsquo;s 10-year run of the <i>Examiner</i>, while incomplete, extends from 1908 to 1918 and represents the longest run of the paper still available. It is a quintessential example of yellow journalism.</p><p>Follow the tragedy of the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Eastland!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">shipwreck of the Eastland,</a> a Great Lakes passenger steamer, in which 844 passengers and crew perished while the ship was tied to a dock in the Chicago River; the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Union!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">infamous 1910 Union Stock Yards fire,</a> the deadliest U.S. building collapse in terms of firefighter deaths until September 11, 2001; <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Dunne!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">the mystery of the Dunne Water Crib fire, </a>told through first-person accounts, reportage, photos and illustrations; and big early 19th century <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Cubs%20Sox!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">wins for the Cubs and the White Sox.</a></p>';
-        $Examiner[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/examiner/6812/default.jpg',
+        $Examiner[mainimage] = array('url'=>'6812',
             'text'=>'Chicago Examiner Vol. 7 no. 27',
             'size'=>'150%',
             'align'=>'78% 5%');
-        $Examiner[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/examiner/51184/default.jpg',
+        $Examiner[thumbs] = array(array('url'=>'51184',
                 'text'=>'Chicago Examiner Vol. 13 no. 187',
                 'size'=>'110px auto',
                 'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/examiner/12357/default.jpg',
+            array('url'=>'12357',
                 'text'=>'Chicago Examiner Vol. 6 no. 253',
                 'size'=>'500px auto',
                 'align'=>'10% 10%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/examiner/51163/default.jpg',
+            array('url'=>'51163',
                 'text'=>'Chicago Examiner Vol. 13 no. 186',
                 'size'=>'350px auto',
                 'align'=>'90% 60%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/examiner/477/default.jpg',
+            array('url'=>'477',
                 'text'=>'Chicago Examiner Vol. 12 no. 63',
                 'size'=>'200px',
                 'align'=>'25% 10%'));
@@ -316,11 +333,11 @@
                                             'dt'=>'Illinois Digital Newspaper Collections',
                                             'dd'=>'111 Illinois newspapers dating back to 1831.'));
         $Examiner[link] = 'Examiner';
-        $Examiner[coll] = 'examiner';
         $Examiner[location] = $HWLCSC;
         $Examiner[type] = 'collection';
 
     $EB[title] = 'Esther A. Barlow Collection';
+        $EB[coll] = 'bar';
         $EB[sortname] = 'Barlow, Esther A. Collection';
         $EB[cardpic] = array('pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/bar/43/default.jpg','pich'=>'20rem','size'=>'110%','pos'=>'auto');
         $EB[category] = 'Libraries &amp; Education';
@@ -328,28 +345,28 @@
         $EB[textlong] = 'Esther Barlow was a children&rsquo;s librarian in neighborhood branches of the Chicago Public Library from 1927 until 1976.';
         $EB[textrich] = 'Included in this collection are photographs of the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/bar/searchterm/Barlow%20family/field/subjed/mode/all/conn/and/order/nosort">Barlow family</a> and images of Esther Barlow at work at the Hild Regional Library and Lake View Branch Library. Photographs showcase Barlow with her colleagues and her <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/bar/searchterm/Working%20with%20children/field/subjed/mode/all/conn/and/order/nosort">work with children. </a>';
         $EB[mainimage] = array(
-            'url'=>'http://digital.chipublib.org/digital/api/singleitem/image/bar/52/default.jpg',
+            'url'=>'52',
             'text'=>'Lake View Branch, Group picture, staff on front steps',
             'size'=>'',
             'align'=>'55% 50%');
-        $EB[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/bar/199/default.jpg',
+        $EB[thumbs] = array(array('url'=>'199',
                     'text'=>'Hild Regional Library, Children&rsquo;s Department, Story Hour in Welles Park',
                     'size'=>'400px',
                     'align'=>'15% 20%'),
-                array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/bar/70/default.jpg',
+                array('url'=>'70',
                     'text'=>'Lake View Branch, Esther Barlow at circulation desk',
                     'size'=>'500px',
                     'align'=>'53% 49%'),
-                array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/bar/16/default.jpg',
+                array('url'=>'16',
                     'text'=>'Portrait of Esther Barlow and Buddy Flaskerud sitting in a wagon.',
                     'size'=>'400px',
                     'align'=>'33% 22%'));
         $EB[link] = 'EB';
-        $EB[coll] = 'bar';
         $EB[location] = $NNHC;
         $EB[type] = 'collection';
 
     $CPL[title] = 'Chicago Public Library Archives';
+        $CPL[coll] = 'woop';
         $CPL[sortname] = 'Chicago Public Library Archives';
         $CPL[cardpic] = array(
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/45/default.jpg',
@@ -361,32 +378,32 @@
         $CPL[textshort] = 'Photographs trace CPL&rsquo;s history from a small water tank that survived the Great Chicago Fire to the extensive network of neighborhood libraries that span the city today.';
         $CPL[textlong] = 'On January 1, 1873 the Chicago Public Library opened its doors in a water tank that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to the development of neighborhood libraries across the city.';
         $CPL[textrich] = '<p>On January 1, 1873, Chicago Public Library opened its doors in a <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Water+tank/field/subjed/mode/all/conn/and/order/nosort">circular water tank</a> at the southeast corner of LaSalle and Adams streets that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to a system of 80 locations across the city. </p><p>Explore CPL through those years, from <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Delivery+stations/field/subjed/mode/all/conn/and/order/nosort">delivery stations</a> in the late 19th century to <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Bookmobiles/field/subjed/mode/all/conn/and/order/nosort">bookmobiles</a> in the mid-20th century to <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/bar/searchterm/Working%20with%20children!Hild%20Regional%20Library/field/subjed!all/mode/all!all/conn/and!and/order/nosort/ad/asc">Hild Regional Library</a> in the 1970s. </p>';
-        $CPL[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/80/default.jpg',
+        $CPL[mainimage] = array('url'=>'80',
                 'text'=>'Book room in the Old Water Tank, ca. 1873',
                 'size'=>'cover',
                 'align'=>'50% 75%');
-        $CPL[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/5/default.jpg',
+        $CPL[thumbs] = array(array('url'=>'5',
                     'text'=>'Bookplate of the English Book Donation',
                     'size'=>'cover',
                     'align'=>'center'),
-                array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/73/default.jpg',
+                array('url'=>'73',
                     'text'=>'Trailer Service from the Legler Regional Library, ca. 1940',
                     'size'=>'150%',
                     'align'=>'100% 50%'),
-                array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/41/default.jpg',
+                array('url'=>'41',
                     'text'=>'Timothy B. Blackstone Memorial Branch Library, exterior view, 1904',
                     'size'=>'cover',
                     'align'=>'0% '),
-                array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/74/default.jpg',
+                array('url'=>'74',
                     'text'=>'Traveling Branch from the Legler [Regional] Library, ca. 1960s',
                     'size'=>'cover',
                     'align'=>'center'));
         $CPL[link] = 'CPL';
-        $CPL[coll] = 'woop';
         $CPL[location] = $HWLCSC;
         $CPL[type] = 'collection';
 
     $ChiRen[title] = 'Chicago Renaissance';
+        $ChiRen[coll] = 'cr';
         $ChiRen[sortname] = 'Chicago Renaissance';
         $ChiRen[cardpic] = array(
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/12/default.jpg',
@@ -404,32 +421,32 @@
             array('link'=>'https://www.chipublib.org/fa-horace-r-cayton-papers/','text'=>'Horace Cayton Papers Finding Aid'),
             array('link'=>'https://www.chipublib.org/fa-william-mcbride-papers/','text'=>'William McBride, Jr. Papers Finding Aid'));
         $ChiRen[CPLRes] = array(array('a'=>$AfAm[link],'dt'=>'African American Digital Collections','dd'=>'Digital collections that include materials documenting Black history in the United States.'));
-        $ChiRen[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/1/default.jpg',
-            'text'=>'Horace Cayton with "Blue Boy," 1944',
+        $ChiRen[mainimage] = array('url'=>'1',
+            'text'=>'Horace Cayton with &ldquo;Blue Boy,&rdquo; 1944',
             'size'=>'110%',
             'align'=>'50% 0');
-        $ChiRen[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/11/default.jpg',
+        $ChiRen[thumbs] = array(array('url'=>'11',
                 'text'=>'Langston Hughes and Gwendolyn Brooks, 1949',
                 'size'=>'100%',
                 'align'=>'50% 10%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/10/default.jpg',
+            array('url'=>'10',
                 'text'=>'Richard Durham, 1948',
                 'size'=>'150%',
                 'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/15/default.jpg',
+            array('url'=>'15',
                 'text'=>'C.L. Cook and his Dreamland Orchestra, 1923',
                 'size'=>'150%',
                 'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/12/default.jpg',
+            array('url'=>'12',
                 'text'=>'Margaret Walker, 1942',
                 'size'=>'cover',
                 'align'=>'50% 25%'));
         $ChiRen[link] = 'ChiRen';
-        $ChiRen[coll] = 'cr';
         $ChiRen[location] = $Harsh;
         $ChiRen[type] = 'collection';
         
     $Sewers[title] = 'Chicago Sewers Collection';
+        $Sewers[coll] = 'dtd';
         $Sewers[sortname] = 'Chicago Sewers Collection';
         $Sewers[cardpic] = array(
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/dtd/157/default.jpg',
@@ -442,34 +459,34 @@
         $Sewers[textlong] = 'The sewer systems and passageways that lie beneath our feet are critical to the health and well being of the city. Offering a rare look at the “underbelly” of Chicago, this collection of historical images features construction photographs of sewers and tunnels.';
         $Sewers[textrich] = '<p>In 1855, Boston engineer Ellis S. Chesbrough was invited to Chicago to design the first comprehensive system of underground sewers in the United States. His work lifted the city to make room for the new sewers which became the most extensive in the world. In the more than 150 years since Chicago&rsquo;s Department of Water Management continues to service and maintain this underground system.  </p><p>Take a look at these wonders in images from the 1920s-1960s as you start  <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/dtd/searchterm/Above+ground/field/contri/mode/all/conn/and/order/nosort">above ground</a> and work your way below the surface along <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/dtd/searchterm/Avenue+J/field/subjec/mode/all/conn/and/order/nosort">Avenue J</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/dtd/searchterm/California+Avenue/field/subjec/mode/all/conn/and/order/nosort">California</a> and <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/dtd/searchterm/Elston+Avenue/field/subjec/mode/all/conn/and/order/nosort">Elston</a> Avenues among others. </p>';
         $Sewers[CPLRes] = array(array('a'=>'https://www.chipublib.org/fa-chicago-sewers-collection/','dt'=>'Chicago Sewers Collection Finding Aid','dd'=>'The complete list of photographs, glass plate slides and documents, rich with geographic and technical details.'));
-        $Sewers[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/dtd/167/default.jpg',
+        $Sewers[mainimage] = array('url'=>'167',
             'text'=>'103rd Street and Rockwell Street, inspecting tile, June 1936',
             'size'=>'',
             'align'=>'center');
-        $Sewers[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/dtd/150/default.jpg',
+        $Sewers[thumbs] = array(array('url'=>'150',
                 'text'=>'Magnolia Avenue sewer system, August 11, 1933',
                 'size'=>'400%',
                 'align'=>'61% 37%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/dtd/142/default.jpg',
+            array('url'=>'142',
                 'text'=>'Broadway Street, 9 foot sewer in Rokeby Street [now Fremont Street], August 24, 1927',
                 'size'=>'250%',
                 'align'=>'30% 50%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/dtd/144/default.jpg',
+            array('url'=>'144',
                 'text'=>'Bryn Mawr Avenue, bricklayers, north heading, July 9, 1930',
                 'size'=>'250%',
                 'align'=>'0 50%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/dtd/155/default.jpg',
+            array('url'=>'155',
                 'text'=>'103rd Street and Rockwell Street, Pipe Yard, watering pipe, June 16, 1936',
                 'size'=>'250%',
                 'align'=>'40% 35%'));
         $Sewers[link] = 'Sewers';
-        $Sewers[coll] = 'dtd';
         $Sewers[location] = $HWLCSC;
         $Sewers[type] = 'collection';
         
 
 
     $Whalen[title] = 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
+        $Whalen[coll] = 'wha';
         $Whalen[sortname] = 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
         $Whalen[cardpic] = array(
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/341/default.jpg',
@@ -484,32 +501,32 @@
         $Whalen[rights] = '<p>The Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections is made possible by generous gifts to <a href="http://cplfoundation.org/">Chicago Public Library Foundation</a> by the partners of Skadden, Arps, Slate, Meagher &amp; Flom LLP in honor of Wayne Whalen&rsquo;s interest in Abraham Lincoln and the Civil War.</p>';
         $Whalen[CPLRes] = array(array('a'=>'https://www.chipublib.org/fa-american-civil-war-documents-manuscripts-letters-and-diaries-and-grand-army-of-the-republic-collection/','dt'=>'American Civil War Documents, Manuscripts, Letters and Diaries and Grand Army of the Republic Collections Finding Aid','dd'=>'A large portion of this collection focuses on the experience of soldiers and leaders from Illinois.'),
                                 array('a'=>'https://www.chipublib.org/archival_subject/military/','dt'=>'Military Archival Collections','dd'=>'A list of all archival collections related to the Civil War and other military topics, including records of the Daughters of Union Veterans of the Civil War, 1861-1865, and personal collections of service members.'));
-        $Whalen[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/634/default.jpg',
+        $Whalen[mainimage] = array('url'=>'634',
             'text'=>'Photographic Views of Sherman&rsquo;s Campaign by George N. Barnard',
             'size'=>'auto 575px',
             'align'=>'center');
-        $Whalen[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/116/default.jpg',
+        $Whalen[thumbs] = array(array('url'=>'116',
                 'text'=>'Sword, Model 1850 Staff and Field Officer',
                 'size'=>'auto 120px',
                 'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/721/default.jpg',
+            array('url'=>'721',
                 'text'=>'Uniform, artillery jacket',
                 'size'=>'auto 120px',
                 'align'=>'50% 15%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/35/default.jpg',
+            array('url'=>'35',
                 'text'=>'Grant, Ulysses S.',
                 'size'=>'120px auto',
                 'align'=>'50% 20%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/38/default.jpg',
+            array('url'=>'38',
                 'text'=>'Union Ticket',
                 'size'=>'110px auto',
                 'align'=>'55% 15%'));
         $Whalen[link] = 'Whalen';
-        $Whalen[coll] = 'wha';
         $Whalen[location] = $HWLCSC;
         $Whalen[type] = 'collection';
 
     $HDG[title] = 'Henry D. Green Photograph Collection';
+        $HDG[coll] = 'hdg';
         $HDG[sortname] = 'Green, Henry D. Photograph Collection';
         $HDG[cardpic] = array(
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/hdg/123/default.jpg',
@@ -523,32 +540,32 @@
         $HDG[textrich] = 'Subjects in the collection include local <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/hdg/searchterm/Business%20establishments/field/subjed/mode/all/conn/and/order/nosort">business establishments</a>, community groups, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/hdg/searchterm/Religious%20institutions/field/subjed/mode/all/conn/and/order/nosort">religious institutions</a>, celebrations in neighborhood parks and events at local schools. Many photographs reflect life on the North Side during World War II, including images of <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/hdg/searchterm/Military%20personnel/field/subjed/mode/all/conn/and/order/nosort">military personnel</a>.';
         // $HDG[findingaid] = array('text'=>'Henry Delorval Green Photograph Collection, 1942-1953','link'=>'http://chsmedia.org/media/fa/fa/1981/65.htm');
         $HDG[findingaid] = array('text'=>'Henry Delorval Green Photograph Collection, 1942-1953','link'=>'https://www.chipublib.org/archival_post/henry-d-green-photograph-collection/');
-        $HDG[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/hdg/6/default.jpg',
+        $HDG[mainimage] = array('url'=>'6',
                                        'text'=>'American Legion/Albany Park Post 24',
                                        'size'=>'110%',
                                        'align'=>'center');
-        $HDG[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/hdg/174/default.jpg',
+        $HDG[thumbs] = array(array('url'=>'174',
                                     'text'=>'Girl Scouts Troup 119 Tin Can Salvage',
                                     'size'=>'130%',
                                     'align'=>'40% 25%'),
-                                    array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/hdg/669/default.jpg',
+                                    array('url'=>'669',
                                     'text'=>'Monadnock Coffee Shop',
                                     'size'=>'',
                                     'align'=>'47% 57%'),
-                                    array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/hdg/345/default.jpg',
+                                    array('url'=>'345',
                                     'text'=>'Portrait of Henry Delorval Green',
                                     'size'=>'120%',
                                     'align'=>'45% 27%'),
-                                    array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/hdg/123/default.jpg',
+                                    array('url'=>'123',
                                     'text'=>'Chicago Fire Department',
                                     'size'=>'130%',
                                     'align'=>'center'));
         $HDG[link] = 'HDG';
-        $HDG[coll] = 'hdg';
         $HDG[location] = $NNHC;
         $HDG[type] = 'collection';
         
     $RK[title] = 'Robert W. Krueger Photograph Collection';
+        $RK[coll] = 'rwk';
         $RK[sortname] = 'Krueger, Robert W. Photograph Collection';
         $RK[cardpic] = array(
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/1365/default.jpg',
@@ -564,32 +581,32 @@
                     array('a'=>'https://www.chipublib.org/chicago-newspapers-on-microfilm/','dt'=>'Chicago Newspapers','dd'=>'Online and microfilm.'));
         $RK[ExRes] = array(array('a'=>'http://www.ravenswoodhistorical.com/','dt'=>'Ravenswood-Lake View Historical Association','dd'=>'Programs, publications and tours focusing on Chicago northside neighborhood history.'),
                     array('a'=>'http://www.edgewaterhistory.org/ehs/','dt'=>'Edgewater Historical Society','dd'=>'Exhibits, events and tours of the Edgewater neighborhood.'));
-        $RK[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/414/default.jpg',
+        $RK[mainimage] = array('url'=>'414',
             'text'=>'47th and 48th Ward clean-up on Clark Street',
             'size'=>'150%',
             'align'=>'50% 30%');
-        $RK[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/412/default.jpg',
+        $RK[thumbs] = array(array('url'=>'412',
                 'text'=>'German-American Festival',
                 'size'=>'300%',
                 'align'=>'50% 35%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/349/default.jpg',
+            array('url'=>'349',
                 'text'=>'Picasso statue unveiled at the Civic Center Plaza',
                 'size'=>'120%',
                 'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/828/default.jpg',
+            array('url'=>'828',
                 'text'=>'Henry C. Krueger with future wife Marie Wahl, her sister Lydia Wahl, and a friend',
                 'size'=>'200%',
                 'align'=>'50% 25%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/1365/default.jpg',
+            array('url'=>'1365',
                 'text'=>'1720-22 West Leland Avenue',
                 'size'=>'140%',
                 'align'=>'center'));
         $RK[link] = 'RK';
-        $RK[coll] = 'rwk';
         $RK[location] = $NNHC;
         $RK[type] = 'collection';
 
     $MP[title] = 'Millennium Park U.S. Equities Realty Collection';
+        $MP[coll] = 'mpu';
         $MP[sortname] = 'Millennium Park U.S. Equities Realty Collection';
         $MP[cardpic] = array(
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/2239/default.jpg',
@@ -607,32 +624,32 @@
         $MP[CPLRes] = array(array('a'=>'https://www.chipublib.org/?post_type=post&s=Millennium+Park','dt'=>'Millennium Park Blog Posts','dd'=>'Written by CPL librarians and staff.'));
         $MP[rights] = 'These images were made possible by generous gifts from U.S. Equities Realty and the Gaylord and Dorothy Donnelley Foundation through the <a href="http://cplfoundation.org/">Chicago Public Library Foundation</a>.';
         $MP[rights2] = 'Courtesy of U.S. Equities Realty and the men and women who built Millennium Park';
-        $MP[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/1297/default.jpg',
+        $MP[mainimage] = array('url'=>'1297',
             'text'=>'Millennium Monument at Wrigley Square, peristyle in winter, ca. 2003',
             'size'=>'110%',
             'align'=>'center');
-        $MP[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/1543/default.jpg',
+        $MP[thumbs] = array(array('url'=>'1543',
                 'text'=>'Cloud Gate, attaching steel plates, omphalos, March 22, 2004',
                 'size'=>'140%',
                 'align'=>'40% 50%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/4390/default.jpg',
+            array('url'=>'4390',
                 'text'=>'Crown Fountain, gargoyle spray, July 22, 2004',
                 'size'=>'140%',
                 'align'=>'40% 60%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/4781/default.jpg',
+            array('url'=>'4781',
                 'text'=>'Jay Pritzker Pavilion, headdress, March 4, 2004',
                 'size'=>'160%',
                 'align'=>'70% 0'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/4662/default.jpg',
+            array('url'=>'4662',
                 'text'=>'Jay Pritzker Pavilion, structural steel for the headdress, May 29, 2003',
                 'size'=>'',
                 'align'=>'center'));
         $MP[link] = 'MP';
-        $MP[coll] = 'mpu';
         $MP[location] = $HWLCSC;
         $MP[type] = 'collection';
 
     $NCO[title] = 'Northside Clubs and Organizations';
+        $NCO[coll] = 'cfc';
         $NCO[sortname] = 'Northside Clubs and Organizations';
         $NCO[cardpic] = array(
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/130/default.jpg',
@@ -640,23 +657,23 @@
             'size'=>'175%',
             'pos'=>'20% 55%'
         );
-        $NCO[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/24/default.jpg',
+        $NCO[mainimage] = array('url'=>'24',
             'text'=>'Christian Fellowship Church',
             'size'=>'125%',
             'align'=>'80% 40%');
-        $NCO[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/396/default.jpg',
+        $NCO[thumbs] = array(array('url'=>'396',
                 'text'=>'Members of the Girls&rsquo; Patriotic Service League at Portage Park',
                 'size'=>'450px',
                 'align'=>'17% 27%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/61/default.jpg',
+            array('url'=>'61',
                 'text'=>'Ravenswood Manor Improvement Association - 70th anniversary celebration',
                 'size'=>'175%',
                 'align'=>'50% 50%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/144/default.jpg',
+            array('url'=>'144',
                 'text'=>'Ravenswood Manor Improvement Association&rsquo;s Annual Picnic',
                 'size'=>'375px',
                 'align'=>'60% 50%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/107/default.jpg',
+            array('url'=>'107',
                 'text'=>'Ravenswood Manor Improvement Association&rsquo;s Cleanup Campaign',
                 'size'=>'730px',
                 'align'=>'80% 40%'));
@@ -672,12 +689,12 @@
                                 //removing this link - Woodlawn is a south side neighborhood
                                 //array('link'=>'https://www.chipublib.org/fa-united-woodlawn-inc-records/','text'=>'United Woodlawn, Inc. Records'));
         $NCO[link] = 'NCO';
-        $NCO[coll] = 'cfc';
         $NCO[location] = $NNHC;
         $NCO[subcollections] = array($CFCC, $LVCRA, $PortPark, $RMIA);
         $NCO[type] = 'collection';
 
     $NHS[title] = 'Northside High Schools';
+        $NHS[coll] = 'ahs';
         $NHS[sortname] = 'Northside High Schools';
         $NHS[cardpic] = array(
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/197/default.jpg',
@@ -685,23 +702,23 @@
             'size'=>'110%',
             'pos'=>'0% 45%'
         ); 
-        $NHS[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/634/default.jpg',
+        $NHS[mainimage] = array('url'=>'634',
             'text'=>'Captain Louis D. Walz and Lake View High School drum major and majorettes',
             'size'=>'110%',
             'align'=>'center');
-        $NHS[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/350/default.jpg',
+        $NHS[thumbs] = array(array('url'=>'350',
                 'text'=>'Lake View High School',
                 'size'=>'150%',
                 'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/149/default.jpg',
+            array('url'=>'149',
                 'text'=>'Lake View High School, plays',
                 'size'=>'150%',
                 'align'=>'50% 25%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/7/default.jpg',
+            array('url'=>'7',
                 'text'=>'Amundsen High School--Athletics',
                 'size'=>'150%',
                 'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/245/default.jpg',
+            array('url'=>'245',
                 'text'=>'Lake View High School',
                 'size'=>'150%',
                 'align'=>'center'));
@@ -713,7 +730,6 @@
                                 array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Lake+View+High+School+Collection/field/collec/mode/all/conn/and/order/nosort','dt'=>'Lake View High School Collection','dd'=>'Academics and extracurriculars at the first high school in Lake View Township.'),
                                 array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Walz/field/collec/mode/all/conn/and/order/nosort','dt'=>'Louis D. Walz Collection','dd'=>'The life of the long-time director of the Lake View High School band and World War I veteran.'));
         $NHS[link] = 'NHS';
-        $NHS[coll] = 'ahs';
         $NHS[location] = $NNHC;
         $NHS[type] = 'collection';
         $NHS[subcollections] = array($Amund, $Kins, $LVHS, $Walz);
@@ -727,24 +743,24 @@
             'size'=>'250%',
             'pos'=>'87% 47%'
         );
-        $CPD[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/6155/default.jpg',
+        $CPD[mainimage] = array('url'=>'6155',
             'text'=>'Ogden Park (0008) Events - Opening of bicycle program, 1956',
             'size'=>'125%',
             'align'=>'66% 50%');
-        $CPD[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/6221/default.jpg',
-                'text'=>'<a href=http://digital.chipublib.org/digital/collection/ChicagoParks/id/6221>Palmer Park (0013) Activities - Sports - Archery, circa 1935</a>',
+        $CPD[thumbs] = array(array('url'=>'6221',
+                'text'=>'Palmer Park (0013) Activities - Sports - Archery, circa 1935',
                 'size'=>'350%',
                 'align'=>'35% 25%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/8690/default.jpg',
-                'text'=>'<a href=http://digital.chipublib.org/digital/collection/ChicagoParks/id/8690>Stanford Park (0200) Activities - Toy lending, 1938-11-29</a>',
+            array('url'=>'8690',
+                'text'=>'Stanford Park (0200) Activities - Toy lending, 1938-11-29',
                 'size'=>'175%',
                 'align'=>'55% 18%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/112/default.jpg',
-                'text'=>'<a href=http://digital.chipublib.org/digital/collection/ChicagoParks/id/112>Addams Park (0262) Events, undated</a>',
+            array('url'=>'112',
+                'text'=>'112Addams Park (0262) Events, undated',
                 'size'=>'190%',
                 'align'=>'55% 18%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/' . $CPD[coll] . '/8686' . '/default.jpg',
-                'text'=>'<a href=http://digital.chipublib.org/digital/collection/ChicagoParks/id/8686>Stanford Park (0200) Activities - Gardening - Junior garden clubs, 1937-08-30</a>',
+            array('url'=>'8686',
+                'text'=>'Stanford Park (0200) Activities - Gardening - Junior garden clubs, 1937-08-30',
                 'size'=>'250%',
                 'align'=>'68% 18%'));
         $CPD[category] = 'Parks';
@@ -755,6 +771,7 @@
         $CPD[type] = 'collection';
 
     $HW[title] = 'Remembering Harold Washington';
+        $HW[coll] = 'rhwc';
         $HW[sortname] = 'Remembering Harold Washington';
         $HW[shortname] = 'Harold Washington';
         $HW[sidebarname] = 'Harold Washington';
@@ -780,33 +797,33 @@
                                     'text'=>'Illinois State Representative Records Finding Aid'),
                                 array('link'=>'https://www.chipublib.org/fa-harold-washington-archives-and-collections-pre-mayoral-photograph-collection/',
                                     'text'=>'Pre-Mayoral Photograph Collection Finding Aid'));
-        $HW[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rhwc/73/default.jpg',
+        $HW[mainimage] = array('url'=>'73',
             'text'=>'Mayor Washington addresses the International Circulation Managers Association',
             'size'=>'130%',
             'align'=>'80% 0');
-        $HW[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rhwc/72/default.jpg',
+        $HW[thumbs] = array(array('url'=>'72',
                 'text'=>'Mayor Washington reads to Dominik Przekota',
                 'size'=>'300%',
                 'align'=>'0 20%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rhwc/64/default.jpg',
+            array('url'=>'64',
                 'text'=>'Mayor Washington at the KOCO groundbreaking ceremony',
                 'size'=>'',
                 'align'=>'52% 15%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rhwc/13/default.jpg',
+            array('url'=>'13',
                 'text'=>'Mayor Washington with members of the Philippine Chamber of Commerce',
                 'size'=>'150%',
                 'align'=>'40% 40%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rhwc/30/default.jpg',
+            array('url'=>'30',
                 'text'=>'Mayor Washington at the Bud Billiken Parade',
                 'size'=>'400%',
                 'align'=>'71% 30%'));
         $HW[link] = 'HW';
-        $HW[coll] = 'rhwc';
         $HW[location] = $HWLCSC;
         $HW[type] = 'collection';
         $HW[sidebarflag] = 'x';
         
     $RWLV[title] = 'Ravenswood-Lake View Community Collection';
+        $RWLV[coll] = 'rvw';
         $RWLV[sortname] = 'Ravenswood-Lake View Community Collection';
         $RWLV[cardpic] = array(
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/rvw/1086/default.jpg',
@@ -822,33 +839,33 @@
                             // array('a'=>'https://www.chipublib.org/archival_post/ravenswood-lake-view-community-collection/','dt'=>'Ravenswood-Lake View Community Collection Finding Aid','dd'=>'Descriptive inventory for the complete physical collection.'),
                             array('a'=>'https://www.chipublib.org/chicago-newspapers-on-microfilm/','dt'=>'Chicago Newspapers','dd'=>'Online and microfilm.'));
         $RWLV[ExRes] = array(array('a'=>'http://www.ravenswoodhistorical.com/','dt'=>'Ravenswood-Lake View Historical Association','dd'=>'Programs, publications and tours focusing on Chicago northside neighborhood history.'),
-        array('a'=>'http://www.edgewaterhistory.org/ehs/','dt'=>'Edgewater Historical Society','dd'=>'Exhibits, events and tours of the Edgewater neighborhood.'));
-                        $RWLV[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rvw/421/default.jpg',
+                            array('a'=>'http://www.edgewaterhistory.org/ehs/','dt'=>'Edgewater Historical Society','dd'=>'Exhibits, events and tours of the Edgewater neighborhood.'));
+        $RWLV[mainimage] = array('url'=>'421',
             'text'=>'Lincoln &amp; Montrose Avenues',
             'size'=>'110%',
             'align'=>'50% 50%');
-        $RWLV[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rvw/1800/default.jpg',
+        $RWLV[thumbs] = array(array('url'=>'1800',
                 'text'=>'Arthur G. Bennett',
                 'size'=>'110%',
                 'align'=>'60% 10%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rvw/3142/default.jpg',
+            array('url'=>'3142',
                 'text'=>'Charles Perkins',
                 'size'=>'200%',
                 'align'=>'50% 10%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rvw/933/default.jpg',
+            array('url'=>'933',
                 'text'=>'Riverview Park',
                 'size'=>'170%',
                 'align'=>'50% 50%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rvw/1272/default.jpg',
+            array('url'=>'1272',
                 'text'=>'Klausen family salutes the American flag on their front lawn.',
                 'size'=>'601px',
                 'align'=>'33% 20%'));
         $RWLV[link] = 'RWLV';
-        $RWLV[coll] = 'rvw';
         $RWLV[location] = $NNHC;
         $RWLV[type] = 'collection';
         
     $Sang[title] = 'Philip David Sang Collection';
+        $Sang[coll] = 'p16818coll6';
         $Sang[sortname] = 'Sang, Philip David Collection';
         $Sang[cardpic] = array(
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/p16818coll6/691/default.jpg',
@@ -868,7 +885,6 @@
         $Sang[ExRes] = array(array('a'=>'https://archives.lib.siu.edu/?p=collections/controlcard&id=2072','dt'=>'Philip D. Sang Collection of Presidential Signatures, 1787-1956','dd'=>'Correspondence and documents written by prominent names in American history dating from the American Revolutionary War to the early 1950&rsquo;s.'), 
                             array('a'=>'http://findingaids.brandeis.edu/agents/79?agent_type=agent_person','dt'=>'Philip D. Sang collections at Brandeis University','dd'=>'Materials related to the signers of the Declaration of Independence and U.S. Constitution.'));
         $Sang[link] = 'Sang';
-        $Sang[coll] = 'p16818coll6';
         $Sang[location] = $Harsh;
         $Sang[type] = 'collection';
     
@@ -892,26 +908,31 @@
                               array('a'=>'https://www.chipublib.org/tag/african-american-history/',
                                             'dt'=>'African American History Blog Posts',
                                             'dd'=>'Written by CPL librarians and staff.'));
-        $AfAm[mainimage] = array('url'=>'hall033.jpg',
+        $AfAm[mainimage] = array('url'=>'4',
+            'coll' => 'cr',
             'text'=>'Women&rsquo;s reading group at Hall Branch, 1940',
             'size'=>'100%',
             'align'=>'50% 0%');
-        $AfAm[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/14/default.jpg',
+        $AfAm[thumbs] = array(array('url'=>'14',
+                'coll' => 'cr',
                 'text'=>'Women&rsquo;s Army Corps (WAC) Band, 1944',
                 'size'=>'431px',
                 'align'=>'0% 20%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/8/default.jpg',
+            array('url'=>'8g',
+                'coll' => 'cr',
                 'text'=>'Marian Campfield at the Chicago Defender, 1948',
                 'size'=>'140%',
                 'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/0/default.jpg',
+            array('url'=>'0',
+                'coll' => 'cr',
                 'text'=>'Catalog, &rdquo;Exhibition of the Art of the American Negro,&rdquo; 1940',
                 'size'=>'112%',
                 'align'=>'75% 45%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rhwc/6/default.jpg',
+            array('url'=>'6',
+                'coll' => 'rhwc',
                 'text'=>'Mayor Washington at the 27th Annual International Folk Fair',
                 'size'=>'200%',
-                'align'=>'40% 60%'),);
+                'align'=>'40% 60%'));
         $AfAm[link] = 'AfAm';
         $AfAm[type] = 'category';
         $AfAm[sidebarflag] = 'x';
@@ -925,11 +946,13 @@
             'size'=>'auto 120%',
             'pos'=>'center'
         );
-        $CivilWar[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/p16818coll6/231/default.jpg',
+        $CivilWar[mainimage] = array('url'=>'231',
+            'coll' => 'p16818coll6',
             'text'=>'Poster for public auction of enslaved persons',
             'size'=>'cover',
             'align'=>'center');
-        $CivilWar[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/173/default.jpg',
+        $CivilWar[thumbs] = array(array('url'=>'173',
+                'coll' => 'wha',
                 'text'=>'Pauline Cushman was a spy and scout for the Union Army until caught with secret papers and sentenced to death.  She was later rescued by Union forces,',
                 'size'=>'150%',
                 'align'=>'center 30%'),
@@ -937,7 +960,8 @@
         //         'text'=>'Reward poster for capture of runaway slave man',
         //         'size'=>'cover',
         //         'align'=>'center 0%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/116/default.jpg',
+            array('url'=>'116',
+                'coll' => 'wha',
                 'text'=>'Sword, Model 1850 Staff and Field Officer',
                 'size'=>'auto 120px',
                 'align'=>'center'),
@@ -945,11 +969,13 @@
         //     'text'=>'Uniform, artillery jacket',
         //     'size'=>'auto 120px',
         //     'align'=>'50% 15%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/35/default.jpg',
+            array('url'=>'35',
+            'coll' => 'wha',
                 'text'=>'Grant, Ulysses S.',
                 'size'=>'120px auto',
                 'align'=>'50% 20%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/p16818coll6/422/default.jpg?highlightTerms=Letter%20from%20John%20Brown,%20Jr.%20to%20relatives',
+            array('url'=>'422',
+                'coll' => 'p16818coll6',
                 'text'=>'Letter from John Brown, Jr. to relatives',
                 'size'=>'200px',
                 'align'=>'55% 5%'));
@@ -977,23 +1003,28 @@
             'size'=>'120%',
             'pos'=>'27% 0%'
             );
-        $LibEd[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rvw/3595/default.jpg',
+        $LibEd[mainimage] = array('url'=>'3595',
+            'coll' => 'rvw',
             'text'=>'Andersonville School',
             'size'=>'130%',
             'align'=>'center');
-        $LibEd[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/hdg/426/default.jpg',
+        $LibEd[thumbs] = array(array('url'=>'426',
+                'coll' => 'hdg',
                 'text'=>'Jamieson School',
                 'size'=>'130%',
                 'align'=>'50% 50%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rvw/4097/default.jpg',
+            array('url'=>'4097',  
+                'coll' => 'rvw',
                 'text'=>'Our Lady of Lourdes School',
                 'size'=>'300%',
                 'align'=>'40% 40%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/721/default.jpg',
+            array('url'=>'721',
+                'coll' => 'ahs',
                 'text'=>'Five Lake View High School drum majorettes pose in uniform',
                 'size'=>'cover',
                 'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/2/default.jpg',
+            array('url'=>'2',
+                'coll' => 'woop',
                 'text'=>'Chicago Public Library Bookmobile Service, ca. 1940',
                 'size'=>'150%',
                 'align'=>'27% 0%'));
@@ -1038,19 +1069,23 @@
         $Neigh[textrich] = '<p>This collection documents how Chicagoans lived their daily lives and how their neighborhoods changed and evolved over time.  Go back to <a href="http://digital.chipublib.org/digital/search/searchterm/schools/field/subjec/mode/all/conn/and/order/nosort">school</a>, revisit favorite <a href="http://digital.chipublib.org/digital/search/searchterm/restaurants%20--%20illinois%20--%20chicago/field/subjec/mode/all/conn/and/order/title/ad/asc">restaurants</a>, salute <a href="http://digital.chipublib.org/digital/search/searchterm/military/field/subjec/mode/all/conn/and/order/nosort">members of the military</a> or just <a href="http://digital.chipublib.org/digital/search/searchterm/transportation/field/subjec/mode/all/conn/and/order/nosort">ride around the city</a>.  Every neighborhood tells a story!</p>';
         $Neigh[CPLRes] = array(array('a'=>'https://www.chipublib.org/blogs/category/chicago-history/','dt'=>'Chicago History Blog Posts','dd'=>'Written by CPL librarians and staff.'), 
                                 array('a'=>'https://www.chipublib.org/archival_subject/neighborhoods/','dt'=>'Finding Aids','dd'=>'Descriptive inventories of the archival collections of community associations, religious organizations, high schools, notable Chicagoans and more'));
-        $Neigh[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/107/default.jpg',
+        $Neigh[mainimage] = array('url'=>'107',
+            'coll' => 'cfc',
             'text'=>'Ravenswood Manor Improvement Association&rsquo;s Cleanup Campaign',
             'size'=>'',
             'align'=>'90% 50%');
-        $Neigh[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/1239/default.jpg',
+        $Neigh[thumbs] = array(array('url'=>'1239',
+                'coll' => 'rwk',
                 'text'=>'Picasso statue unveiled at the Civic Center Plaza',
                 'size'=>'',
                 'align'=>'35% 47%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/782/default.jpg',
+            array('url'=>'782',
+                'coll' => 'rwk',
                 'text'=>'Oz Park',
                 'size'=>'',
                 'align'=>'57% 17%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/dtd/157/default.jpg',
+            array('url'=>'157',
+                'coll' => 'dtd',
                 'text'=>'31st Street and Albany Avenue, repairing old brick outfall, July 20, 1936',
                 'size'=>'',
                 'align'=>'62% 37%'));
@@ -1077,23 +1112,28 @@
                                 array('link'=>'https://www.chipublib.org/fa-millennium-park-inc/','text'=>'Millennium Park, Inc. Finding Aid'),
                                 array('link'=>'https://www.chipublib.org/fa-millennium-park-u-s-equities-realty-collection/','text'=>'Millennium Park / U.S. Equities Realty Collection Finding Aid'),
                                 array('link'=>'https://www.chipublib.org/fa-open-space-section-records/','text'=>'Open Space Section Records'));
-        $Parks[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/3708/default.jpg',
+        $Parks[mainimage] = array('url'=>'3708',
+            'coll' => 'ChicagoParks',
             'text'=>'Horner Park (0228) Activities - Hula hooping, 1971',
             'size'=>'110%',
             'align'=>'center');
-        $Parks[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/2239/default.jpg',
+        $Parks[thumbs] = array(array('url'=>'2239',
+                'coll' => 'mpu',
                 'text'=>'Cloud Gate, assembly complete, July 12, 2004',
                 'size'=>'cover',
                 'align'=>'center'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/rvw/1691/default.jpg',
+            array('url'=>'1691',
+                'coll' => 'rvw',
                 'text'=>'Welles Park',
                 'size'=>'110%',
                 'align'=>'50% 30%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/4752/default.jpg',
+            array('url'=>'4752',
+                'coll' => 'ChicagoParks',
                 'text'=>'Lake Meadow Park (0263) Events - Performances - Community concerts by Red Saunders, 1970-07-05',
                 'size'=>'500px',
                 'align'=>'55% 25%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/6209/default.jpg',
+            array('url'=>'6209',
+                'coll' => 'ChicagoParks',
                 'text'=>'Palmer Park (0013) Activities - Athletics, 1965',
                 'size'=>'140%',
                 'align'=>'50% 50%'));
@@ -1121,23 +1161,28 @@
                                     // array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc','dt'=>'E.B. Gould Programs Collection','dd'=>'The annotated programs of a local Chicago businessman and enthusiastic playgoer.'));
         $Theater[CPLRes] = array(array('a'=>'https://www.chipublib.org/fa-chicago-theater-collection-historic-programs/','dt'=>'Chicago Theater Collection-Historic Programs Finding Aid','dd'=>'The complete and ever-increasing inventory of theater programs past and present, some of which are presented here.'),
                                 array('a'=>'https://www.chipublib.org/archival_subject/theater/','dt'=>'Chicago Theater Collection','dd'=>'A list of theater collections at Chicago Public Library representing theaters, designers, actors and more.'));
-        $Theater[mainimage] = array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/6053/default.jpg',
+        $Theater[mainimage] = array('url'=>'6053',
+            'coll' => 'CPB01',
             'text'=>'McVicker&rsquo;s Theatre, Camille (January 13, 1881)',
             'size'=>'134%',
             'align'=>'52% 15%');
-        $Theater[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/8601/default.jpg',
+        $Theater[thumbs] = array(array('url'=>'8601',
+                'coll' => 'CPB01',
                 'text'=>'Chicago Little Theatre, Evening with Columbine (October 21, 1913)',
                 'size'=>'200%',
                 'align'=>'50% 85%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/6272/default.jpg',
+            array('url'=>'6272',
+                'coll' => 'CPB01',
                 'text'=>'Iroquois Theatre, Blue Beard (December 21, 1903)',
                 'size'=>'110%',
                 'align'=>'50% 30%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/6748/default.jpg',
+            array('url'=>'6748',
+                'coll' => 'CPB01',
                 'text'=>'McVicker&rsquo;s Theatre, Rivals (May 15, 1896)',
                 'size'=>'140%',
                 'align'=>'50% 40%'),
-            array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/CPB01/9755/default.jpg',
+            array('url'=>'9755',
+                'coll' => 'CPB01',
                 'text'=>'Chicago Opera House, Mikado (March 6, 1886)',
                 'size'=>'200%',
                 'align'=>'68% 47%'));

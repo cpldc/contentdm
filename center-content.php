@@ -4,22 +4,42 @@
 						<div class="container-fluid lightbox imageGallery1">
 						<div class="row">
 							<div class="col-12 lightbox-main-img-div">
-								<a class="center-images-main" href="<?php echo $PAGE[mainimage][url]; ?>" title="<?php echo $PAGE[mainimage][text]; ?>"><img style="background: url(<?php echo $PAGE[mainimage][url]; ?>); background-size: <?php echo $PAGE[mainimage][size]; ?>; background-position: <?php echo $PAGE[mainimage][align]; ?> !important;"  class="lightbox-main-img"></a>
-								<?php
-									if (strpos($PAGE[mainimage][url],'mpu') !== false ) {
-										echo '<i class="rights-i rights-i-main fa fa-info-circle"></i><div class="rights-overlay rights-overlay-main"><div class="rights-guts"><span class="rights-statement">' . $MP[rights2]  . '</span></div><div class="rights-close"><i class="rights-close-icon fa fa-times"></i></div></div>';
-									}
+							<?php 
+								if ($PAGE[type] == 'collection'){
+									$mainImgUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $PAGE[coll] . '/' . $PAGE[mainimage][url] . '/default.jpg';
+									$mainImgTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
+								} elseif ($PAGE[link] == 'MRC') {
+									$mainImgUrl = $PAGE[mainimage][url];
+									$mainImgTitle = $PAGE[mainimage][text];
+								} elseif ($PAGE[link] == 'Harsh') {
+									$mainImgUrl = 'https://cdm16818.contentdm.oclc.org/customizations/global/pages/ASNLH.jpg';
+									$mainImgTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[mainimage][coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
+								} else {
+									$mainImgUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $PAGE[mainimage][coll] . '/' . $PAGE[mainimage][url] . '/default.jpg';
+									$mainImgTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[mainimage][coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
+								}
+								echo '<a class="center-images-main" href="' . $mainImgUrl . '" data-caption="' . $mainImgTitle . '" title="' . $PAGE[mainimage][text] . '" ><img style="background: url(' . $mainImgUrl . '); background-size: ' . $PAGE[mainimage][size] . '; background-position: ' . $PAGE[mainimage][align] . ' !important;"  class="lightbox-main-img"></a>';
+								if (strpos($PAGE[mainimage][url],'mpu') !== false ) {
+									echo '<i class="rights-i rights-i-main fa fa-info-circle"></i><div class="rights-overlay rights-overlay-main"><div class="rights-guts"><span class="rights-statement">' . $MP[rights2]  . '</span></div><div class="rights-close"><i class="rights-close-icon fa fa-times"></i></div></div>';
+								}
 								?>
 							</div>
 						</div>
 						<div class="row lightbox-thumbs justify-content-center">
 						<?php 
 							foreach ($PAGE[thumbs] as $key => $val) {
+								if ($PAGE[type] == 'collection'){
+									$thumbUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $PAGE[coll] . "/" . $val[url] . '/default.jpg';
+									$thumbTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[coll] . "/id/" . $val[url] . '>' . $val[text] . '</a>';
+								} else {
+									$thumbUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $val[coll] . "/" . $val[url] . '/default.jpg';
+									$thumbTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $val[coll] . "/id/" . $val[url] . '>' . $val[text] . '</a>';
+								}
 								echo '<div class="col-3 lightbox-thumb-wrapper"';
 								if (strpos($val[url], 'mpu') !== false && $PAGE[link] !== 'MP') {
     	                        	echo ' data-toggle="tooltip" data-placement="top" title="' . $MP[rights2] . '"';
         	                	}
-								echo '><a href="' . $val[url] . '" title="' . $val[text] . '"><img style="background: url(' . $val[url] . '); background-size: ' . $val[size] . '; background-position: ' . $val[align] . '!important;" class="lightbox-thumb" /></a></div>';
+								echo '><a href="' . $thumbUrl . '" data-caption="' . $thumbTitle . '" title="' . $val[text] . '" ><img style="background: url(' . $thumbUrl . '); background-size: ' . $val[size] . '; background-position: ' . $val[align] . '!important;" class="lightbox-thumb" /></a></div>';
 							}
 						?>
 						</div>

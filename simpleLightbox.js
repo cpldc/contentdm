@@ -44,7 +44,7 @@
         nextOnImageClick: true,
         showCaptions: true,
 
-        captionAttribute: 'title', // choose data source for library to glean image caption from
+        captionAttribute: 'data-caption', // choose data source for library to glean image caption from
         urlAttribute: 'href', // where to expect large image
 
         startAt: 0, // start gallery at custom index
