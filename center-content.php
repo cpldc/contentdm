@@ -18,7 +18,7 @@
 									$mainImgUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $PAGE[mainimage][coll] . '/' . $PAGE[mainimage][url] . '/default.jpg';
 									$mainImgTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[mainimage][coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
 								}
-								echo '<a class="center-images-main" href="' . $mainImgUrl . '" data-caption="' . $mainImgTitle . '" title="' . $PAGE[mainimage][text] . '" ><img style="background: url(' . $mainImgUrl . '); background-size: ' . $PAGE[mainimage][size] . '; background-position: ' . $PAGE[mainimage][align] . ' !important;"  class="lightbox-main-img"></a>';
+								echo '<a class="center-images-main" href="' . $mainImgUrl . '" data-caption="' . $mainImgTitle . '" title="' . strip_tags(html_entity_decode($PAGE[mainimage][text])) . '" ><img style="background: url(' . $mainImgUrl . '); background-size: ' . $PAGE[mainimage][size] . '; background-position: ' . $PAGE[mainimage][align] . ' !important;"  class="lightbox-main-img" alt=""></a>';
 								if (strpos($PAGE[mainimage][url],'mpu') !== false ) {
 									echo '<i class="rights-i rights-i-main fa fa-info-circle"></i><div class="rights-overlay rights-overlay-main"><div class="rights-guts"><span class="rights-statement">' . $MP[rights2]  . '</span></div><div class="rights-close"><i class="rights-close-icon fa fa-times"></i></div></div>';
 								}
@@ -39,7 +39,7 @@
 								if (strpos($val[url], 'mpu') !== false && $PAGE[link] !== 'MP') {
     	                        	echo ' data-toggle="tooltip" data-placement="top" title="' . $MP[rights2] . '"';
         	                	}
-								echo '><a href="' . $thumbUrl . '" data-caption="' . $thumbTitle . '" title="' . $val[text] . '" ><img style="background: url(' . $thumbUrl . '); background-size: ' . $val[size] . '; background-position: ' . $val[align] . '!important;" class="lightbox-thumb" /></a></div>';
+								echo '><a href="' . $thumbUrl . '" data-caption="' . $thumbTitle . '" title="' . strip_tags(html_entity_decode($val[text])) . '" ><img style="background: url(' . $thumbUrl . '); background-size: ' . $val[size] . '; background-position: ' . $val[align] . '!important;" class="lightbox-thumb" alt="" /></a></div>';
 							}
 						?>
 						</div>
@@ -67,7 +67,7 @@
 							<p>' . $PAGE[textrich] . '</p>';
 							if ($PAGE[type] == 'collection'){
 								if ($PAGE[title] == 'Remembering Harold Washington') {
-									echo 'The ' . $PAGE[title] . ' exhibit is housed in ' . $PAGE[location][longname] . '.';
+									echo 'Photographs in the ' . $PAGE[title] . ' exhibit are housed in ' . $PAGE[location][longname] . '.';
 								} else {
 									echo 'The ' . $PAGE[title] . ' is housed in the ' . $PAGE[location][longname] . '.';
 								}
@@ -117,6 +117,9 @@
 								echo '<dt><a href="content.php?id=' . $val[link] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort];
 								if ($PAGE[link] == 'LibEd' && $val[link] == 'RWLV') {
 									echo '  This collection contains images of high schools in the neighborhoods.';
+								}
+								if ($PAGE[link] == 'CivilWar' && $val[link] == 'Sang') {
+									echo '  A number of documents in the collection were created during the Civil War.';
 								}
 								echo '</dd>';
 							}

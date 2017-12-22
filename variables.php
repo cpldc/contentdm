@@ -65,27 +65,27 @@
         $HWLCSC[pic] = '';      
         $HWLCSC[mainimage] = array('url'=>'79',
             'coll' => 'woop',
-            'text'=>'Old Water Tank, exterior view, ca. 1870',
+            'text'=>'Engraving, &ldquo;The Old Water Tank,&rdquo; circa 1870',
             'size'=>'105%',
             'align'=>'50% 50%');
         $HWLCSC[thumbs] = array(array('url'=>'2196',
                 'coll' => 'CPB01',
-                'text'=>'Chicago Little Theatre, Philanderer (November 19, 1914)',
+                'text'=>'<em>The Philanderer</em>, Chicago Little Theatre, 1914',
                 'size'=>'170%',
                 'align'=>'25% 22%'),
             array('url'=>'4833',
                 'coll' => 'ChicagoParks',
-                'text'=>'Madden Park (0028) Activities, 1954-04-08',
+                'text'=>'Dancers at Madden Park, 1954',
                 'size'=>'140%',
                 'align'=>'center'),
             array('url'=>'42',
                 'coll' => 'wha',
-                'text'=>'$100,000 Reward! The Murderer of Our Late Beloved President is Still at Large.',
+                'text'=>'Wanted poster, &ldquo;$100,000 Reward! The Murderer of our late beloved President, Abraham Lincoln,&rdquo; 1865',
                 'size'=>'105%',
                 'align'=>'50% 20%'),
             array('url'=>'4066',
                 'coll' => 'mpu',
-                'text'=>'Crown Fountain, fountain preview, July 13, 2004',
+                'text'=>'Crown Fountain preview, 2004',
                 'size'=>'370%',
                 'align'=>'50% 50%'));
         $HWLCSC[textshort] = 'at Harold Washington Library Center';
@@ -104,7 +104,7 @@
         $MRC[sidebarname] = 'Municipal Reference Collection';
         $MRC[pic] = '';        
         $MRC[mainimage] = array('url'=>'https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/02/Freight-Tunnel-Map.jpg',
-            'text'=>'1932 Freight Tunnel Map from the Journal of Proceedings of the City Council of the City of Chicago',
+            'text'=>'<a>1932 Freight Tunnel Map from the Journal of Proceedings of the City Council of the City of Chicago</a>',
             'size'=>'cover',
             'align'=>'center');
         $MRC[textshort] = 'at Harold Washington Library Center';
@@ -131,27 +131,27 @@
         $NNHC[textlong] = 'The Northside Neighborhood History Collection at <a href="https://www.chipublib.org/locations/67">Sulzer Regional Library</a> highlights historical and contemporary materials about Northside neighborhoods.';
         $NNHC[mainimage] = array('url'=>'1182',
             'coll' => 'rwk',
-            'text'=>'4700 North Lincoln',
+            'text'=>'Lincoln Square, 4700 N. Lincoln Ave., 2002',
             'size'=>'125%',
             'align'=>'50% 50%');
         $NNHC[thumbs] = array(array('url'=>'902',
         'coll' => 'ahs',
-                'text'=>'Lake View High School drum majorette Mildred Douglas',
+                'text'=>'Mildred Douglas, drum majorette, Lake View High School, circa 1942',
                 'size'=>'400px',
                 'align'=>'65% 15%'),
             array('url'=>'567',
             'coll' => 'rwk',
-                'text'=>'47th Ward neighborhood watch',
+                'text'=>'Alderman Gene Schulter assists with installation of 47th Ward neighborhood watch sign, 1989',
                 'size'=>'500px',
                 'align'=>'57% 37%'),
             array('url'=>'653',
             'coll' => 'rwk',
-                'text'=>'Complex Christmas star quilt',
+                'text'=>'Complex Christmas star quilt by Sandy Escontrias, circa 1992',
                 'size'=>'auto 130%',
                 'align'=>'center'),
             array('url'=>'661',
             'coll' => 'rwk',
-                'text'=>'Door with stained glass',
+                'text'=>'Stained glass and door, 1518-20 W. Wilson Ave., circa 1985',
                 'size'=>'110%',
                 'align'=>'50% 25%'));
         $NNHC[loclink] = '67';
@@ -172,22 +172,22 @@
         // Harsh's main image uses an exception in center-content, as the contentDM version of the image is super low res
         $Harsh[mainimage] = array('url'=>'ASNLH.jpg',
             'coll' => 'rwk',
-            'text'=>'Committee in charge of the celebration of the twentieth anniversary of the Association for the Study of Negro Life and History, 1936',
+            'text'=>'ASNLH 20th anniversary planning committee, 1936',
             'size'=>'auto 125%',
             'align'=>'center');
         $Harsh[thumbs] = array(array('url'=>'18',
         'coll' => 'cr',
-                'text'=>'Congressman William L. Dawson campaigning, 1940s',
+                'text'=>'U.S. Congressman William L. Dawson, 1940s',
                 'size'=>'200%',
                 'align'=>'50% 10%'),
             array('url'=>'405',
             'coll' => 'p16818coll6',
-                'text'=>'Note from Frederick Douglass; transcript and photo print',
+                'text'=>'Note from Frederick Douglass regarding A. Lincoln&rsquo;s death, 1865',
                 'size'=>'400%',
                 'align'=>'29% 10%'),
             array('url'=>'21',
             'coll' => 'cr',
-                'text'=>'&ldquo;The War&rsquo;s Greatest Scandal,&rdquo; 1943',
+                'text'=>'Pamphlet, &ldquo;The War&rsquo;s Greatest Scandal,&rdquo; 1943',
                 'size'=>'250%',
                 'align'=>'55% 75%'),
             array('url'=>'2',
@@ -301,23 +301,23 @@
         $Examiner[textlong] = 'Chicago Public Library&rsquo;s 10-year run of the <i>Chicago Examiner</i> extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
         $Examiner[textrich] = '<p>The Chicago Public Library&rsquo;s 10-year run of the <i>Examiner</i>, while incomplete, extends from 1908 to 1918 and represents the longest run of the paper still available. It is a quintessential example of yellow journalism.</p><p>Follow the tragedy of the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Eastland!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">shipwreck of the Eastland,</a> a Great Lakes passenger steamer, in which 844 passengers and crew perished while the ship was tied to a dock in the Chicago River; the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Union!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">infamous 1910 Union Stock Yards fire,</a> the deadliest U.S. building collapse in terms of firefighter deaths until September 11, 2001; <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Dunne!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">the mystery of the Dunne Water Crib fire, </a>told through first-person accounts, reportage, photos and illustrations; and big early 19th century <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Cubs%20Sox!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">wins for the Cubs and the White Sox.</a></p>';
         $Examiner[mainimage] = array('url'=>'6812',
-            'text'=>'Chicago Examiner Vol. 7 no. 27',
+            'text'=>'&ldquo;Make Chicago One of the Most Attractive Cities in the World,&rdquo; <em>Chicago Examiner</em>, vol. 10 no. 1, 1909',
             'size'=>'150%',
             'align'=>'78% 5%');
         $Examiner[thumbs] = array(array('url'=>'51184',
-                'text'=>'Chicago Examiner Vol. 13 no. 187',
+                'text'=>'&ldquo;Camera&rsquo;s Story of Day&rsquo;s Happenings in River Horror,&rdquo; <em>Chicago Examiner</em>, vol. 13 no. 187, 1915',
                 'size'=>'110px auto',
                 'align'=>'center'),
             array('url'=>'12357',
-                'text'=>'Chicago Examiner Vol. 6 no. 253',
+                'text'=>'&ldquo;Cubs Gain Big Lead for World&rsquo;s Championship,&rdquo; <em>Chicago Examiner</em>, vol. 6 no. 253, 1908',
                 'size'=>'500px auto',
                 'align'=>'10% 10%'),
             array('url'=>'51163',
-                'text'=>'Chicago Examiner Vol. 13 no. 186',
+                'text'=>'&ldquo;Unceasing Rescue Work on Eastland; Relief Efforts,&rdquo; <em>Chicago Examiner</em>, vol. 13 no. 186, 1915',
                 'size'=>'350px auto',
                 'align'=>'90% 60%'),
             array('url'=>'477',
-                'text'=>'Chicago Examiner Vol. 12 no. 63',
+                'text'=>'&ldquo;Men Clinging to Girders Drop Into Flames as the Steel Grows Red Hot,&rdquo; <em>Chicago Examiner</em>, vol. 7 no. 27, 1909',
                 'size'=>'200px',
                 'align'=>'25% 10%'));
         $Examiner[CPLRes] = array(array('dt'=>'Chicago Newspapers',
@@ -346,19 +346,19 @@
         $EB[textrich] = 'Included in this collection are photographs of the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/bar/searchterm/Barlow%20family/field/subjed/mode/all/conn/and/order/nosort">Barlow family</a> and images of Esther Barlow at work at the Hild Regional Library and Lake View Branch Library. Photographs showcase Barlow with her colleagues and her <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/bar/searchterm/Working%20with%20children/field/subjed/mode/all/conn/and/order/nosort">work with children. </a>';
         $EB[mainimage] = array(
             'url'=>'52',
-            'text'=>'Lake View Branch, Group picture, staff on front steps',
+            'text'=>'Chicago Public Library staff, Lake View Branch, circa 1950',
             'size'=>'',
             'align'=>'55% 50%');
         $EB[thumbs] = array(array('url'=>'199',
-                    'text'=>'Hild Regional Library, Children&rsquo;s Department, Story Hour in Welles Park',
+                    'text'=>'Story hour in Welles Park, Hild Regional Library, circa 1930',
                     'size'=>'400px',
                     'align'=>'15% 20%'),
                 array('url'=>'70',
-                    'text'=>'Lake View Branch, Esther Barlow at circulation desk',
+                    'text'=>'Esther Barlow at the circulation desk, Lake View Branch, 1951',
                     'size'=>'500px',
                     'align'=>'53% 49%'),
                 array('url'=>'16',
-                    'text'=>'Portrait of Esther Barlow and Buddy Flaskerud sitting in a wagon.',
+                    'text'=>'Ester Barlow and Buddy Flaskerud, 1913',
                     'size'=>'400px',
                     'align'=>'33% 22%'));
         $EB[link] = 'EB';
@@ -379,23 +379,23 @@
         $CPL[textlong] = 'On January 1, 1873 the Chicago Public Library opened its doors in a water tank that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to the development of neighborhood libraries across the city.';
         $CPL[textrich] = '<p>On January 1, 1873, Chicago Public Library opened its doors in a <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Water+tank/field/subjed/mode/all/conn/and/order/nosort">circular water tank</a> at the southeast corner of LaSalle and Adams streets that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to a system of 80 locations across the city. </p><p>Explore CPL through those years, from <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Delivery+stations/field/subjed/mode/all/conn/and/order/nosort">delivery stations</a> in the late 19th century to <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Bookmobiles/field/subjed/mode/all/conn/and/order/nosort">bookmobiles</a> in the mid-20th century to <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/bar/searchterm/Working%20with%20children!Hild%20Regional%20Library/field/subjed!all/mode/all!all/conn/and!and/order/nosort/ad/asc">Hild Regional Library</a> in the 1970s. </p>';
         $CPL[mainimage] = array('url'=>'80',
-                'text'=>'Book room in the Old Water Tank, ca. 1873',
+                'text'=>'Book room in the old water tank, circa 1873',
                 'size'=>'cover',
                 'align'=>'50% 75%');
         $CPL[thumbs] = array(array('url'=>'5',
-                    'text'=>'Bookplate of the English Book Donation',
+                    'text'=>'English Book Donation bookplate given by Queen Victoria, 1871',
                     'size'=>'cover',
                     'align'=>'center'),
                 array('url'=>'73',
-                    'text'=>'Trailer Service from the Legler Regional Library, ca. 1940',
+                    'text'=>'Trailer service from Legler Regional Library, circa 1940',
                     'size'=>'150%',
                     'align'=>'100% 50%'),
                 array('url'=>'41',
-                    'text'=>'Timothy B. Blackstone Memorial Branch Library, exterior view, 1904',
+                    'text'=>'Blackstone Memorial Branch Library, 1904',
                     'size'=>'cover',
                     'align'=>'0% '),
                 array('url'=>'74',
-                    'text'=>'Traveling Branch from the Legler [Regional] Library, ca. 1960s',
+                    'text'=>'Traveling branch, circa 1960s',
                     'size'=>'cover',
                     'align'=>'center'));
         $CPL[link] = 'CPL';
@@ -414,7 +414,7 @@
         $ChiRen[category] = 'African Americans';
         $ChiRen[textshort] = 'African American community leaders, performers, artists, writers and activists on Chicago&rsquo;s South Side, 1930-1950.';
         $ChiRen[textlong] = 'The Black Chicago Renaissance was a creative movement when activism and scholarship flourished with the prodigious work of African American community leaders, performers, artists, writers and activists.';
-        $ChiRen[textrich] = '<p>During and after the Great Depression (1930s-1950s), African Americans in Chicago created a new community on the South Side that was distinctly their own.</p><p>In <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Literature/field/subjed/mode/all/conn/and/order/nosort">literature</a> the Black Chicago Renaissance was represented by such giants as Richard Wright, Gwendolyn Brooks, Margaret Walker, Arna Bontemps and Fenton Johnson. The explosion of <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Music/field/subjed/mode/all/conn/and/order/nosort">musical</a> creativity in <a href="http://digital.chipublib.org/digital/collection/cr/search/searchterm/Bronzeville%20(Chicago%2C%20Ill.)!art/field/neighb!subjec/mode/all!all/conn/and!and/order/title/ad/asc">Bronzeville</a>&rsquo;s clubs and concert halls ranged from classical to jazz and from gospel to blues and pop. A new <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Social%20Science/field/subjed/mode/all/conn/and/order/nosort">social science</a> of Black urban life was born with the writing of St. Clair Drake and Horace Cayton&rsquo;s <em>Black Metropolis</em>. The <a href="http://digital.chipublib.org/digital/search/searchterm/art/field/subjec/mode/exact/conn/and/order/nosort/ad/asc">art</a> of William McBride, William Edouard Scott, Gordon Parks, Archibald Motley, Jr. and other local Chicago Black artists defined the era.</p>';
+        $ChiRen[textrich] = '<p>During and after the Great Depression (1930s-1950s), African Americans in Chicago created a new community on the South Side that was distinctly their own.</p><p>In <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Literature/field/subjed/mode/all/conn/and/order/nosort">literature</a> the Black Chicago Renaissance was represented by such giants as Richard Wright, Gwendolyn Brooks, Margaret Walker, Arna Bontemps and Fenton Johnson. The explosion of <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Music/field/subjed/mode/all/conn/and/order/nosort">musical</a> creativity in <a href="http://digital.chipublib.org/digital/collection/cr/search/searchterm/Bronzeville%20(Chicago%2C%20Ill.)!art/field/neighb!subjec/mode/all!all/conn/and!and/order/title/ad/asc">Bronzeville&rsquo;s</a> clubs and concert halls ranged from classical to jazz and from gospel to blues and pop. A new <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Social%20Science/field/subjed/mode/all/conn/and/order/nosort">social science</a> of Black urban life was born with the writing of St. Clair Drake and Horace Cayton&rsquo;s <em>Black Metropolis</em>. The <a href="http://digital.chipublib.org/digital/search/searchterm/art/field/subjec/mode/exact/conn/and/order/nosort/ad/asc">art</a> of William McBride, William Edouard Scott, Gordon Parks, Archibald Motley, Jr. and other local Chicago Black artists defined the era.</p>';
         $ChiRen[findingaid] = array(
             array('link'=>'https://www.chipublib.org/fa-charles-walton-papers/','text'=>'Charles Walton Papers Finding Aid'),
             array('link'=>'https://www.chipublib.org/fa-george-cleveland-hall-branch-archives/','text'=>'Chicago Public Library, George Cleveland Hall Branch Archives Finding Aid'),
@@ -460,23 +460,23 @@
         $Sewers[textrich] = '<p>In 1855, Boston engineer Ellis S. Chesbrough was invited to Chicago to design the first comprehensive system of underground sewers in the United States. His work lifted the city to make room for the new sewers which became the most extensive in the world. In the more than 150 years since Chicago&rsquo;s Department of Water Management continues to service and maintain this underground system.  </p><p>Take a look at these wonders in images from the 1920s-1960s as you start  <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/dtd/searchterm/Above+ground/field/contri/mode/all/conn/and/order/nosort">above ground</a> and work your way below the surface along <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/dtd/searchterm/Avenue+J/field/subjec/mode/all/conn/and/order/nosort">Avenue J</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/dtd/searchterm/California+Avenue/field/subjec/mode/all/conn/and/order/nosort">California</a> and <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/dtd/searchterm/Elston+Avenue/field/subjec/mode/all/conn/and/order/nosort">Elston</a> Avenues among others. </p>';
         $Sewers[CPLRes] = array(array('a'=>'https://www.chipublib.org/fa-chicago-sewers-collection/','dt'=>'Chicago Sewers Collection Finding Aid','dd'=>'The complete list of photographs, glass plate slides and documents, rich with geographic and technical details.'));
         $Sewers[mainimage] = array('url'=>'167',
-            'text'=>'103rd Street and Rockwell Street, inspecting tile, June 1936',
+            'text'=>'103rd and Rockwell Streets, inspecting tile, 1936',
             'size'=>'',
             'align'=>'center');
         $Sewers[thumbs] = array(array('url'=>'150',
-                'text'=>'Magnolia Avenue sewer system, August 11, 1933',
+                'text'=>'Magnolia Avenue sewer system, 1933',
                 'size'=>'400%',
                 'align'=>'61% 37%'),
             array('url'=>'142',
-                'text'=>'Broadway Street, 9 foot sewer in Rokeby Street [now Fremont Street], August 24, 1927',
+                'text'=>'Broadway Street, sewer in Rokeby Street, 1927',
                 'size'=>'250%',
                 'align'=>'30% 50%'),
             array('url'=>'144',
-                'text'=>'Bryn Mawr Avenue, bricklayers, north heading, July 9, 1930',
+                'text'=>'Bryn Mawr Avenue, bricklayers, 1930',
                 'size'=>'250%',
                 'align'=>'0 50%'),
             array('url'=>'155',
-                'text'=>'103rd Street and Rockwell Street, Pipe Yard, watering pipe, June 16, 1936',
+                'text'=>'103rd and Rockwell Streets, pipe yard, 1936',
                 'size'=>'250%',
                 'align'=>'40% 35%'));
         $Sewers[link] = 'Sewers';
@@ -495,30 +495,30 @@
             'pos'=>'50% 40%'
         );
         $Whalen[category] = 'Civil War';
-        $Whalen[textshort] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.';
-        $Whalen[textlong] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.';
+        $Whalen[textshort] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield.';
+        $Whalen[textlong] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield.';
         $Whalen[textrich] = '<p>Illinois supported the Union effort by sending hundreds of thousands of troops into battle, but the Civil War was also fought on the homefront. </p><p>Examine artifacts and photographs from both arenas, with a focus on the Illinois experience. Highlights include <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/wha/searchterm/camp+life/field/subjeb/mode/all/conn/and/order/title/ad/asc">camp life</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/wha/searchterm/small+arms/field/all/mode/exact/conn/and/order/nosort/ad/asc">swords</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/wha/searchterm/clothing/field/all/mode/exact/conn/and/order/nosort/ad/asc">uniforms</a>.</p> ';
         $Whalen[rights] = '<p>The Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections is made possible by generous gifts to <a href="http://cplfoundation.org/">Chicago Public Library Foundation</a> by the partners of Skadden, Arps, Slate, Meagher &amp; Flom LLP in honor of Wayne Whalen&rsquo;s interest in Abraham Lincoln and the Civil War.</p>';
         $Whalen[CPLRes] = array(array('a'=>'https://www.chipublib.org/fa-american-civil-war-documents-manuscripts-letters-and-diaries-and-grand-army-of-the-republic-collection/','dt'=>'American Civil War Documents, Manuscripts, Letters and Diaries and Grand Army of the Republic Collections Finding Aid','dd'=>'A large portion of this collection focuses on the experience of soldiers and leaders from Illinois.'),
                                 array('a'=>'https://www.chipublib.org/archival_subject/military/','dt'=>'Military Archival Collections','dd'=>'A list of all archival collections related to the Civil War and other military topics, including records of the Daughters of Union Veterans of the Civil War, 1861-1865, and personal collections of service members.'));
         $Whalen[mainimage] = array('url'=>'634',
-            'text'=>'Photographic Views of Sherman&rsquo;s Campaign by George N. Barnard',
+            'text'=>'&ldquo;Sherman and His Generals,&rdquo; <em>Photographic Views of Sherman&rsquo;s Campaign</em> by George N. Barnard, 1865',
             'size'=>'auto 575px',
             'align'=>'center');
         $Whalen[thumbs] = array(array('url'=>'116',
-                'text'=>'Sword, Model 1850 Staff and Field Officer',
+                'text'=>'Sword, model 1850 staff and field officer, circa 1860',
                 'size'=>'auto 120px',
                 'align'=>'center'),
             array('url'=>'721',
-                'text'=>'Uniform, artillery jacket',
+                'text'=>'Uniform, artillery jacket, 1862',
                 'size'=>'auto 120px',
                 'align'=>'50% 15%'),
             array('url'=>'35',
-                'text'=>'Grant, Ulysses S.',
+                'text'=>'Ulysses S. Grant, 1865',
                 'size'=>'120px auto',
                 'align'=>'50% 20%'),
             array('url'=>'38',
-                'text'=>'Union Ticket',
+                'text'=>'Union ticket, South Division, 1864',
                 'size'=>'110px auto',
                 'align'=>'55% 15%'));
         $Whalen[link] = 'Whalen';
@@ -582,23 +582,23 @@
         $RK[ExRes] = array(array('a'=>'http://www.ravenswoodhistorical.com/','dt'=>'Ravenswood-Lake View Historical Association','dd'=>'Programs, publications and tours focusing on Chicago northside neighborhood history.'),
                     array('a'=>'http://www.edgewaterhistory.org/ehs/','dt'=>'Edgewater Historical Society','dd'=>'Exhibits, events and tours of the Edgewater neighborhood.'));
         $RK[mainimage] = array('url'=>'414',
-            'text'=>'47th and 48th Ward clean-up on Clark Street',
+            'text'=>'47th and 48th Ward cleanup on Clark Street, 1988',
             'size'=>'150%',
             'align'=>'50% 30%');
         $RK[thumbs] = array(array('url'=>'412',
-                'text'=>'German-American Festival',
+                'text'=>'German-American Festival, 1988',
                 'size'=>'300%',
                 'align'=>'50% 35%'),
             array('url'=>'349',
-                'text'=>'Picasso statue unveiled at the Civic Center Plaza',
+                'text'=>'Picasso statue unveiled, 1967',
                 'size'=>'120%',
                 'align'=>'center'),
             array('url'=>'828',
-                'text'=>'Henry C. Krueger with future wife Marie Wahl, her sister Lydia Wahl, and a friend',
+                'text'=>'Henry Krueger, Marie and Lydia Wahl and a friend, 1923',
                 'size'=>'200%',
                 'align'=>'50% 25%'),
             array('url'=>'1365',
-                'text'=>'1720-22 West Leland Avenue',
+                'text'=>'1720-22 W. Leland Avenue, 1988',
                 'size'=>'140%',
                 'align'=>'center'));
         $RK[link] = 'RK';
@@ -625,23 +625,23 @@
         $MP[rights] = 'These images were made possible by generous gifts from U.S. Equities Realty and the Gaylord and Dorothy Donnelley Foundation through the <a href="http://cplfoundation.org/">Chicago Public Library Foundation</a>.';
         $MP[rights2] = 'Courtesy of U.S. Equities Realty and the men and women who built Millennium Park';
         $MP[mainimage] = array('url'=>'1297',
-            'text'=>'Millennium Monument at Wrigley Square, peristyle in winter, ca. 2003',
+            'text'=>'Millennium Monument at Wrigley Square, circa 2003',
             'size'=>'110%',
             'align'=>'center');
         $MP[thumbs] = array(array('url'=>'1543',
-                'text'=>'Cloud Gate, attaching steel plates, omphalos, March 22, 2004',
+                'text'=>'Cloud Gate, omphalos, 2004',
                 'size'=>'140%',
                 'align'=>'40% 50%'),
             array('url'=>'4390',
-                'text'=>'Crown Fountain, gargoyle spray, July 22, 2004',
+                'text'=>'Crown Fountain, gargoyle spray, 2004',
                 'size'=>'140%',
                 'align'=>'40% 60%'),
             array('url'=>'4781',
-                'text'=>'Jay Pritzker Pavilion, headdress, March 4, 2004',
+                'text'=>'Jay Pritzker Pavilion, headdress, 2004',
                 'size'=>'160%',
                 'align'=>'70% 0'),
             array('url'=>'4662',
-                'text'=>'Jay Pritzker Pavilion, structural steel for the headdress, May 29, 2003',
+                'text'=>'Jay Pritzker Pavilion, structural steel for the headdress, 2003',
                 'size'=>'',
                 'align'=>'center'));
         $MP[link] = 'MP';
@@ -658,23 +658,23 @@
             'pos'=>'20% 55%'
         );
         $NCO[mainimage] = array('url'=>'24',
-            'text'=>'Christian Fellowship Church',
+            'text'=>'Christian Fellowship Church, picnic at Schiller Park woods, 1930',
             'size'=>'125%',
             'align'=>'80% 40%');
         $NCO[thumbs] = array(array('url'=>'396',
-                'text'=>'Members of the Girls&rsquo; Patriotic Service League at Portage Park',
+                'text'=>'Members of the Girls&rsquo; Patriotic Service League at Portage Park, 1919',
                 'size'=>'450px',
                 'align'=>'17% 27%'),
             array('url'=>'61',
-                'text'=>'Ravenswood Manor Improvement Association - 70th anniversary celebration',
+                'text'=>'Mayor Harold Washington at the Ravenswood Manor Improvement Association, 70th anniversary celebration, 1984',
                 'size'=>'175%',
                 'align'=>'50% 50%'),
             array('url'=>'144',
-                'text'=>'Ravenswood Manor Improvement Association&rsquo;s Annual Picnic',
+                'text'=>'Annual picnic, Ravenswood Manor Improvement Association, circa 1984',
                 'size'=>'375px',
                 'align'=>'60% 50%'),
             array('url'=>'107',
-                'text'=>'Ravenswood Manor Improvement Association&rsquo;s Cleanup Campaign',
+                'text'=>'Cleanup Parade, Ravenswood Manor, 1965',
                 'size'=>'730px',
                 'align'=>'80% 40%'));
         $NCO[category] = 'Neighborhoods';
@@ -703,23 +703,23 @@
             'pos'=>'0% 45%'
         ); 
         $NHS[mainimage] = array('url'=>'634',
-            'text'=>'Captain Louis D. Walz and Lake View High School drum major and majorettes',
+            'text'=>'Captain Louis D. Walz and Lake View High School drum major and majorettes, 1942',
             'size'=>'110%',
             'align'=>'center');
         $NHS[thumbs] = array(array('url'=>'350',
-                'text'=>'Lake View High School',
+                'text'=>'Lake View High School, 1985',
                 'size'=>'150%',
                 'align'=>'center'),
             array('url'=>'149',
-                'text'=>'Lake View High School, plays',
+                'text'=>'<em>Gold in Them Thar Hills</em>, Lake View High School, 1940',
                 'size'=>'150%',
                 'align'=>'50% 25%'),
             array('url'=>'7',
-                'text'=>'Amundsen High School--Athletics',
+                'text'=>'Amundsen vs. Taft, Winnemac Park, 1949',
                 'size'=>'150%',
                 'align'=>'center'),
             array('url'=>'245',
-                'text'=>'Lake View High School',
+                'text'=>'Lake View High School football team en route to the Orange Bowl, Midway Airport, 1953',
                 'size'=>'150%',
                 'align'=>'center'));
         $NHS[category] = array('Neighborhoods','Libraries &amp; Education');
@@ -744,23 +744,23 @@
             'pos'=>'87% 47%'
         );
         $CPD[mainimage] = array('url'=>'6155',
-            'text'=>'Ogden Park (0008) Events - Opening of bicycle program, 1956',
+            'text'=>'Ogden Park, opening of bicycle program, 1956',
             'size'=>'125%',
             'align'=>'66% 50%');
         $CPD[thumbs] = array(array('url'=>'6221',
-                'text'=>'Palmer Park (0013) Activities - Sports - Archery, circa 1935',
+                'text'=>'Palmer Park, archery, circa 1935',
                 'size'=>'350%',
                 'align'=>'35% 25%'),
             array('url'=>'8690',
-                'text'=>'Stanford Park (0200) Activities - Toy lending, 1938-11-29',
+                'text'=>'Stanford Park, toy lending, 1938',
                 'size'=>'175%',
                 'align'=>'55% 18%'),
             array('url'=>'112',
-                'text'=>'112Addams Park (0262) Events, undated',
+                'text'=>'Addams Park, undated',
                 'size'=>'190%',
                 'align'=>'55% 18%'),
             array('url'=>'8686',
-                'text'=>'Stanford Park (0200) Activities - Gardening - Junior garden clubs, 1937-08-30',
+                'text'=>'Stanford Park, junior garden club, 1937',
                 'size'=>'250%',
                 'align'=>'68% 18%'));
         $CPD[category] = 'Parks';
@@ -783,8 +783,8 @@
         );
         $HW[category] = 'African Americans';
         $HW[textshort] = 'Chicago&rsquo;s first African American mayor of Chicago served from 1983 to 1987, and his legacy carries on.';
-        $HW[textlong] = 'Mayor Harold Washington was elected 51st mayor of Chicago April 12, 1983; this collection documents his time in office and his work with diverse communities and individuals.';
-        $HW[textrich] = '<p>This collection captures Mayor Washington at community, political and charity events and demonstrates his importance in <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Politics/field/subjed/mode/all/conn/and/order/nosort">politics</a> and the history of Chicago.</p><p>Photographs in this collection capture Harold Washington&rsquo;s work with <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Constituency%20groups/field/subjed/mode/all/conn/and/order/nosort">ethnic and constituency groups</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Famous%20persons/field/subjed/mode/all/conn/and/order/nosort">famous people</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Groundbreaking/field/subjed/mode/all/conn/and/order/nosort">groundbreaking and development projects</a> and more.</p><p>Chicago Public Library also holds an extensive <a href="https://www.chipublib.org/archival_subject/harold-washington/">Harold Washington Reseach Collection</a>.  Selections from those collections can be found in the Finding Aids section below.';
+        $HW[textlong] = 'Mayor Harold Washington, the first African American mayor of Chicago, transformed the city during his years in office (1983-1987).';
+        $HW[textrich] = '<p>This collection showcases Harold Washington&rsquo;s work with <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Constituency%20groups/field/subjed/mode/all/conn/and/order/nosort">ethnic and constituency groups</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Famous%20persons/field/subjed/mode/all/conn/and/order/nosort">famous people</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Groundbreaking/field/subjed/mode/all/conn/and/order/nosort">groundbreaking and development projects</a> and <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Politics/field/subjed/mode/all/conn/and/order/nosort">politics</a>.</p><p>Chicago Public Library also holds an extensive <a href="https://www.chipublib.org/archival_subject/harold-washington/">Harold Washington Reseach Collection</a>.  Selections from those collections can be found in the Finding Aids section below.';
         $HW[CPLRes] = array(array('a'=>'https://www.chipublib.org/blogs/post/welcome-to-the-municipal-reference-collection/','dt'=>'Municipal Reference Collection','dd'=>'Collections include local government publications, city election results, maps, municipal ordinances and more.'),
                     array('a'=>'https://www.chipublib.org/fa-brenetta-howell-barrett-papers/','dt'=>'Brenetta Howell Barrett Papers Finding Aid','dd'=>'Barrett served in the mayoral administrations of Harold Washington and Eugene Sawyer. She was a political activist for housing, environmental and civil liberties issues.'),
                     array('a'=>'https://www.chipublib.org/tag/harold-washington/','dt'=>'Harold Washington Blog Posts','dd'=>'Written by CPL librarians and staff.'),
@@ -798,23 +798,23 @@
                                 array('link'=>'https://www.chipublib.org/fa-harold-washington-archives-and-collections-pre-mayoral-photograph-collection/',
                                     'text'=>'Pre-Mayoral Photograph Collection Finding Aid'));
         $HW[mainimage] = array('url'=>'73',
-            'text'=>'Mayor Washington addresses the International Circulation Managers Association',
+            'text'=>'Mayor Washington addresses the International Circulation Managers Association, 1987',
             'size'=>'130%',
             'align'=>'80% 0');
         $HW[thumbs] = array(array('url'=>'72',
-                'text'=>'Mayor Washington reads to Dominik Przekota',
+                'text'=>'Mayor Washington reads to Dominik Przekota and class, 1986',
                 'size'=>'300%',
                 'align'=>'0 20%'),
             array('url'=>'64',
-                'text'=>'Mayor Washington at the KOCO groundbreaking ceremony',
+                'text'=>'Mayor Washington at the KOCO groundbreaking ceremony, 1987',
                 'size'=>'',
                 'align'=>'52% 15%'),
             array('url'=>'13',
-                'text'=>'Mayor Washington with members of the Philippine Chamber of Commerce',
+                'text'=>'Mayor Washington with members of the Philippine Chamber of Commerce, 1987',
                 'size'=>'150%',
                 'align'=>'40% 40%'),
             array('url'=>'30',
-                'text'=>'Mayor Washington at the Bud Billiken Parade',
+                'text'=>'Mayor Washington at the Bud Billiken Parade, 1987',
                 'size'=>'400%',
                 'align'=>'71% 30%'));
         $HW[link] = 'HW';
@@ -841,23 +841,23 @@
         $RWLV[ExRes] = array(array('a'=>'http://www.ravenswoodhistorical.com/','dt'=>'Ravenswood-Lake View Historical Association','dd'=>'Programs, publications and tours focusing on Chicago northside neighborhood history.'),
                             array('a'=>'http://www.edgewaterhistory.org/ehs/','dt'=>'Edgewater Historical Society','dd'=>'Exhibits, events and tours of the Edgewater neighborhood.'));
         $RWLV[mainimage] = array('url'=>'421',
-            'text'=>'Lincoln &amp; Montrose Avenues',
+            'text'=>'Lincoln &amp; Montrose Avenues, 1910',
             'size'=>'110%',
             'align'=>'50% 50%');
         $RWLV[thumbs] = array(array('url'=>'1800',
-                'text'=>'Arthur G. Bennett',
+                'text'=>'Arthur G. Bennett, undated',
                 'size'=>'110%',
                 'align'=>'60% 10%'),
             array('url'=>'3142',
-                'text'=>'Charles Perkins',
+                'text'=>'Charles Perkins, undated',
                 'size'=>'200%',
                 'align'=>'50% 10%'),
             array('url'=>'933',
-                'text'=>'Riverview Park',
+                'text'=>'Riverview Park, 1950s',
                 'size'=>'170%',
                 'align'=>'50% 50%'),
             array('url'=>'1272',
-                'text'=>'Klausen family salutes the American flag on their front lawn.',
+                'text'=>'Klausen family salutes the American flag, 1918',
                 'size'=>'601px',
                 'align'=>'33% 20%'));
         $RWLV[link] = 'RWLV';
@@ -873,16 +873,35 @@
             'size'=>'190%',
             'pos'=>'20% 25%'
         );
-        $Sang[pic] = '';
+        $Sang[mainimage] = array('url'=>'4',
+            'text'=>'Runaway slave poster, 1854',
+            'size'=>'cover',
+            'align'=>'auto 0px');
+        $Sang[thumbs] = array(array('url'=>'165',
+                'text'=>'Sheriff&rsquo;s bill of sale for two enslaved women, 1843',
+                'size'=>'cover',
+                'align'=>'auto 20%'),
+            array('url'=>'7',
+                'text'=>'Runaway slave advertisement, 1855',
+                'size'=>'cover',
+                'align'=>'auto 15%'),
+            array('url'=>'691',
+                'text'=>'Methodist worship booklet for Lincoln Day Sunday, 1930',
+                'size'=>'300%',
+                'align'=>'27% 25%'),
+            array('url'=>'231',
+                'text'=>'&ldquo;Marshal&rsquo;s Sale!,&rdquo; poster for public auction of enslaved persons, 1854',
+                'size'=>'cover',
+                'align'=>'center'));
         $Sang[category] = array('African Americans','Civil War');
         $Sang[textshort] = 'During the 20th century, Chicago native and former president of the Illinois State Historical Society Philip David Sang collected a wide variety of documents and manuscripts exploring American history.';
         $Sang[textlong] = 'During the 20th century, Chicago native and former president of the Illinois State Historical Society Philip David Sang collected a wide variety of documents and manuscripts exploring American history.';
-        $Sang[textrich] = 'The Philip David Sang Collection is a collection containing unpublished and published works and ephemera united by its focus on the struggle of Africans and African Americans through the Middle Passage to the Civil Rights movement. The majority of the collection, and the selections made available here, document the African American experience in slavery and in the resistance which culminated in its abolition. Series include Runaways, Inventory and Birth Records and Abolitionism.';
+        $Sang[textrich] = 'The Philip David Sang Collection is a collection containing unpublished and published works and ephemera united by its focus on the struggle of Africans and African Americans through the Middle Passage to the Civil Rights movement. The majority of the collection, and the selections made available here, document the African American experience in slavery and in the resistance which culminated in its abolition. Series include Abolitionism, Runaways, Inventory and Birth Records.';
         $Sang[CPLRes] = array(array('a'=>'http://www.chipublib.org/fa-richard-durham-papers/','dt'=>'Richard Durham Papers','dd'=>'Collection includes scripts for radio plays devoted to the Black experience in America.'),
                             array('a'=>'http://www.chipublib.org/fa-madeline-stratton-morris-papers/','dt'=>'Madeline Stratton Morris Papers','dd'=>'Includes manuscripts and clippings relating to slavery.'),
                             array('a'=>'http://www.chipublib.org/fa-illinois-writers-project-2/','dt'=>'Illinois Writers Project: “Negro in Illinois” Papers','dd'=>'Notes and documents collected by the WPA on slavery, abolition and the Underground Railroad.'),
                             array('a'=>'https://www.chipublib.org/fa-american-civil-war-documents-manuscripts-letters-and-diaries-and-grand-army-of-the-republic-collection/#P2S9','dt'=>'American Civil War Documents, Manuscripts, Letters and Diaries and Grand Army of the Republic Collections','dd'=>'Series 8 contains documents related to the sale and trade of slaves as well as published speeches.'));
-        $Sang[ExRes] = array(array('a'=>'https://archives.lib.siu.edu/?p=collections/controlcard&id=2072','dt'=>'Philip D. Sang Collection of Presidential Signatures, 1787-1956','dd'=>'Correspondence and documents written by prominent names in American history dating from the American Revolutionary War to the early 1950&rsquo;s.'), 
+        $Sang[ExRes] = array(array('a'=>'https://archives.lib.siu.edu/?p=collections/controlcard&id=2072','dt'=>'Philip D. Sang Collection of Presidential Signatures, 1787-1956','dd'=>'Correspondence and documents written by prominent names in American history dating from the American Revolutionary War to the early 1950s.'), 
                             array('a'=>'http://findingaids.brandeis.edu/agents/79?agent_type=agent_person','dt'=>'Philip D. Sang collections at Brandeis University','dd'=>'Materials related to the signers of the Declaration of Independence and U.S. Constitution.'));
         $Sang[link] = 'Sang';
         $Sang[location] = $Harsh;
@@ -915,12 +934,12 @@
             'align'=>'50% 0%');
         $AfAm[thumbs] = array(array('url'=>'14',
                 'coll' => 'cr',
-                'text'=>'Women&rsquo;s Army Corps (WAC) Band, 1944',
+                'text'=>'All-black WAC band, 1944',
                 'size'=>'431px',
                 'align'=>'0% 20%'),
             array('url'=>'8g',
                 'coll' => 'cr',
-                'text'=>'Marian Campfield at the Chicago Defender, 1948',
+                'text'=>'Marian Campfield, women&rsquo;s editor of the <em>Chicago Defender</em>, 1948',
                 'size'=>'140%',
                 'align'=>'center'),
             array('url'=>'0',
@@ -930,7 +949,7 @@
                 'align'=>'75% 45%'),
             array('url'=>'6',
                 'coll' => 'rhwc',
-                'text'=>'Mayor Washington at the 27th Annual International Folk Fair',
+                'text'=>'Mayor Washington at the 27th Annual International Folk Fair, 1986',
                 'size'=>'200%',
                 'align'=>'40% 60%'));
         $AfAm[link] = 'AfAm';
@@ -948,40 +967,40 @@
         );
         $CivilWar[mainimage] = array('url'=>'231',
             'coll' => 'p16818coll6',
-            'text'=>'Poster for public auction of enslaved persons',
+            'text'=>'&ldquo;Marshal&rsquo;s Sale!,&rdquo; poster for public auction of enslaved persons, 1854',
             'size'=>'cover',
             'align'=>'center');
         $CivilWar[thumbs] = array(array('url'=>'173',
                 'coll' => 'wha',
-                'text'=>'Pauline Cushman was a spy and scout for the Union Army until caught with secret papers and sentenced to death.  She was later rescued by Union forces,',
+                'text'=>'Pauline Cushman, actress and Union spy, undated',
                 'size'=>'150%',
                 'align'=>'center 30%'),
         // $CivilWar[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/p16818coll6/37/default.jpg',
         //         'text'=>'Reward poster for capture of runaway slave man',
         //         'size'=>'cover',
         //         'align'=>'center 0%'),
-            array('url'=>'116',
+            array('url'=>'314',
                 'coll' => 'wha',
-                'text'=>'Sword, Model 1850 Staff and Field Officer',
-                'size'=>'auto 120px',
-                'align'=>'center'),
+                'text'=>'Sword, model 1850 staff and field officer, 1861-1865',
+                'size'=>'auto 150px',
+                'align'=>'40% 30%'),
         // array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/721/default.jpg',
         //     'text'=>'Uniform, artillery jacket',
         //     'size'=>'auto 120px',
         //     'align'=>'50% 15%'),
             array('url'=>'35',
             'coll' => 'wha',
-                'text'=>'Grant, Ulysses S.',
+                'text'=>'Ulysses S. Grant, 1865',
                 'size'=>'120px auto',
                 'align'=>'50% 20%'),
             array('url'=>'422',
                 'coll' => 'p16818coll6',
-                'text'=>'Letter from John Brown, Jr. to relatives',
+                'text'=>'Letter from John Brown, Jr., 1859',
                 'size'=>'200px',
                 'align'=>'55% 5%'));
         $CivilWar[textshort] = 'Personal narratives, artifacts and manuscripts tell the story of slaves and soldiers during the war that tore the nation apart.';
-        $CivilWar[textlong] = 'A view into contemporary life during the Civil War via personal letters, documents detailing the slave trade and artifacts from the battlefield.';
-        $CivilWar[textrich] = 'CPL is home to numerous artifacts and papers from the Civil War era.  A significant portion of the collection comprises material from the Illinois Department of the Grand Army of the Republic, including <a href="http://digital.chipublib.org/digital/collection/wha/search/searchterm/edged%20weapons">weaponry</a> and <a href="http://digital.chipublib.org/digital/collection/wha/search/searchterm/lincoln/field/subjec/mode/all/conn/and/order/nosort/ad/asc">Lincolniana</a>.  The papers housed at Harsh and HWLC are fascinating in their own right and include <a href="http://digital.chipublib.org/digital/collection/p16818coll6/search/searchterm/slave%20trade/field/all/mode/exact/conn/and/order/title/ad/asc">business documents pertaining to the slave trade</a> and <a href="http://digital.chipublib.org/digital/collection/p16818coll6/search/searchterm/correspondence!1855-1870/field/all!date/mode/all!exact/conn/and!and/order/title/ad/asc">correspondence of soldiers, politicians and prominent abolitionists</a>.';
+        $CivilWar[textlong] = 'A view into life during the Civil War via personal letters, documents and photographs detailing battles, homefront activities and the fight to end slavery in the United States.';
+        $CivilWar[textrich] = 'A significant portion of the library&rsquo;s Civil War era material comes from the Illinois Department of the Grand Army of the Republic, including <a href="http://digital.chipublib.org/digital/collection/wha/search/searchterm/edged%20weapons">weaponry</a> and <a href="http://digital.chipublib.org/digital/collection/wha/search/searchterm/lincoln/field/subjec/mode/all/conn/and/order/nosort/ad/asc">Lincolniana</a>.  <p>Complementing the GAR material are collections in the Harsh Research Collection pertaining to the African American experience during the Civil War era.  Explore <a href="http://digital.chipublib.org/digital/collection/p16818coll6/search/searchterm/slave%20trade/field/all/mode/exact/conn/and/order/title/ad/asc">business documents pertaining to the slave trade</a> or <a href="http://digital.chipublib.org/digital/collection/p16818coll6/search/searchterm/correspondence!1855-1870/field/all!date/mode/all!exact/conn/and!and/order/title/ad/asc">correspondence of soldiers, politicians and prominent abolitionists</a>, among other topics.';
         $CivilWar[CPLRes] = array(array('a'=>'https://www.chipublib.org/?post_type=post&s=%22civil+war%22','dt'=>'Civil War blog posts','dd'=>'Written by CPL librarians and staff.'));
         $CivilWar[ExRes] = array(array('a'=>'https://www.loc.gov/collections/abraham-lincoln-papers/about-this-collection/','dt'=>'Abraham Lincoln Papers at the Library of Congress','dd'=>''), 
                                 array('a'=>'https://www.umbrasearch.org/','dt'=>'Umbra Search African American History','dd'=>''), 
@@ -1005,7 +1024,7 @@
             );
         $LibEd[mainimage] = array('url'=>'3595',
             'coll' => 'rvw',
-            'text'=>'Andersonville School',
+            'text'=>'Andersonville School, undated',
             'size'=>'130%',
             'align'=>'center');
         $LibEd[thumbs] = array(array('url'=>'426',
@@ -1015,17 +1034,17 @@
                 'align'=>'50% 50%'),
             array('url'=>'4097',  
                 'coll' => 'rvw',
-                'text'=>'Our Lady of Lourdes School',
+                'text'=>'Our Lady of Lourdes school library, circa 1942',
                 'size'=>'300%',
                 'align'=>'40% 40%'),
             array('url'=>'721',
                 'coll' => 'ahs',
-                'text'=>'Five Lake View High School drum majorettes pose in uniform',
+                'text'=>'Drum majorettes, Lave View High School, 1949',
                 'size'=>'cover',
                 'align'=>'center'),
             array('url'=>'2',
                 'coll' => 'woop',
-                'text'=>'Chicago Public Library Bookmobile Service, ca. 1940',
+                'text'=>'Chicago Public Library bookmobile service, circa 1940',
                 'size'=>'150%',
                 'align'=>'27% 0%'));
         $LibEd[textshort] = 'Learn about Chicago through its libraries and schools in these photographs dating from the 1860s through the 1990s.';
@@ -1066,27 +1085,27 @@
         $Neigh[textshort] = 'Experience daily life in Chicago neighborhoods through photographs of street scenes, businesses, residences and portraits, 1860s to the present.';
         $Neigh[textlong] = 'Connect with the residents of Chicago and their stories through these fascinating photographs dating from the 1860s through the 1990s.';
         $Neigh[catcoll] = 'that center around Chicago&rsquo;s neighborhoods';
-        $Neigh[textrich] = '<p>This collection documents how Chicagoans lived their daily lives and how their neighborhoods changed and evolved over time.  Go back to <a href="http://digital.chipublib.org/digital/search/searchterm/schools/field/subjec/mode/all/conn/and/order/nosort">school</a>, revisit favorite <a href="http://digital.chipublib.org/digital/search/searchterm/restaurants%20--%20illinois%20--%20chicago/field/subjec/mode/all/conn/and/order/title/ad/asc">restaurants</a>, salute <a href="http://digital.chipublib.org/digital/search/searchterm/military/field/subjec/mode/all/conn/and/order/nosort">members of the military</a> or just <a href="http://digital.chipublib.org/digital/search/searchterm/transportation/field/subjec/mode/all/conn/and/order/nosort">ride around the city</a>.  Every neighborhood tells a story!</p>';
+        $Neigh[textrich] = '<p>This collection documents how Chicagoans lived their daily lives and how their neighborhoods changed and evolved over time.  Go back to <a href="http://digital.chipublib.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/schools/field/subjec/mode/all/conn/and/order/nosort/ad/asc">school</a>, revisit favorite <a href="http://digital.chipublib.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/restaurants%20--%20illinois%20--%20chicago/field/subjec/mode/all/conn/and/order/title/ad/asc">restaurants</a>, salute <a href="http://digital.chipublib.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/military/field/subjec/mode/all/conn/and/order/nosort">members of the military</a> or just <a href="http://digital.chipublib.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/transportation/field/subjec/mode/all/conn/and/order/nosort">ride around the city</a>.  Every neighborhood tells a story!</p>';
         $Neigh[CPLRes] = array(array('a'=>'https://www.chipublib.org/blogs/category/chicago-history/','dt'=>'Chicago History Blog Posts','dd'=>'Written by CPL librarians and staff.'), 
                                 array('a'=>'https://www.chipublib.org/archival_subject/neighborhoods/','dt'=>'Finding Aids','dd'=>'Descriptive inventories of the archival collections of community associations, religious organizations, high schools, notable Chicagoans and more'));
         $Neigh[mainimage] = array('url'=>'107',
             'coll' => 'cfc',
-            'text'=>'Ravenswood Manor Improvement Association&rsquo;s Cleanup Campaign',
+            'text'=>'Cleanup Parade, Ravenswood Manor, 1965',
             'size'=>'',
             'align'=>'90% 50%');
-        $Neigh[thumbs] = array(array('url'=>'1239',
+        $Neigh[thumbs] = array(array('url'=>'1248',
                 'coll' => 'rwk',
-                'text'=>'Picasso statue unveiled at the Civic Center Plaza',
+                'text'=>'Picasso statue unveiled, 1967',
                 'size'=>'',
-                'align'=>'35% 47%'),
+                'align'=>'25% 60%'),
             array('url'=>'782',
                 'coll' => 'rwk',
-                'text'=>'Oz Park',
+                'text'=>'Tin Man sculpture, Oz Park, 2001',
                 'size'=>'',
                 'align'=>'57% 17%'),
             array('url'=>'157',
                 'coll' => 'dtd',
-                'text'=>'31st Street and Albany Avenue, repairing old brick outfall, July 20, 1936',
+                'text'=>'31st Street and Albany Avenue, repairing old brick outfall, 1936',
                 'size'=>'',
                 'align'=>'62% 37%'));
         $Neigh[link] = 'Neigh';
@@ -1104,7 +1123,7 @@
         );
         $Parks[textshort] = 'Visit Chicago&rsquo;s parks that emerged from a single, hard-fought-for narrow strip of land along the lakefront in 1836 to more than 500 parks today.';
         $Parks[textlong] = 'Visit Chicago&rsquo;s parks that emerged from a single, hard-fought-for narrow strip of land along the lakefront in 1836 to more than 500 parks today.  ';
-        $Parks[textrich] = '<p>While Chicago&rsquo;s <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/Grant%20Park!Lincoln%20Park!zoo%20hamlin!Millennium%20Park/field/descri!descri!all!all/mode/exact!exact!none!all/conn/or!or!or!and/order/nosort/ad/asc">lakefront parks</a> are popular with residents and tourists alike, public green space abounds in many parts of the city. Take in <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/lagoons/field/all/mode/all/conn/and/order/nosort/ad/asc/page/10">lagoons</a>, <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/prairie/field/all/mode/all/conn/and/order/nosort/ad/asc/page/6">prairies</a>, wetlands and woodlands across the urban landscape. Peek into <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/fieldhouses%20!field%20houses/field/all!all/mode/all!all/conn/or!and/order/nosort/ad/asc">field houses</a> and <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/refectories%20refectory/field/all/mode/any/conn/and/order/nosort/ad/asc">refectories</a>. Gaze at <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/bridges!park/field/all!all/mode/all!all/conn/and!and/order/nosort/ad/asc">bridges</a>, <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/pergolas%20pergola/field/all/mode/any/conn/and/order/nosort/ad/asc/page/3">pergolas</a> and <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/fountains/field/all/mode/any/conn/and/order/nosort/ad/asc">fountains</a>, from the utilitarian to the ornate. Observe how Chicagoans and visitors engage with the parks in all seasons by <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/bicycle*%20park/field/all/mode/all/conn/and/order/nosort/ad/asc/page/6">biking</a>, <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/ice%20skating/field/all/mode/all/conn/and/order/nosort/ad/asc">ice skating</a>, <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/sledding!sleds/field/all!all/mode/all!all/conn/or!and/order/nosort/ad/asc">sledding</a>, <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!rhwc!wha!woop!rwk!bar!hdg!ahs!cfc!ChicagoParks/searchterm/archery/field/all/mode/all/conn/and/order/nosort/ad/asc/page/2">competing in archery</a>, <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/frankel%20plates/field/all/mode/all/conn/and/order/nosort/ad/asc">taking selfies</a>, <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!wha!woop!rwk!ahs!cfc!ChicagoParks/searchterm/celebrations%20park/field/all/mode/all/conn/or/order/nosort/ad/asc">celebrating events</a> and more.</p>';
+        $Parks[textrich] = '<p>While Chicago&rsquo;s <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/Grant%20Park!Lincoln%20Park!zoo%20hamlin!Millennium%20Park/field/descri!descri!all!all/mode/exact!exact!none!all/conn/or!or!or!and/order/nosort/ad/asc">lakefront parks</a> are popular with residents and tourists alike, public green space abounds in many parts of the city. Take in <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/lagoons/field/all/mode/all/conn/and/order/nosort/ad/asc/page/10">lagoons</a>, <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/prairie/field/all/mode/all/conn/and/order/nosort/ad/asc/page/6">prairies</a>, wetlands and woodlands across the urban landscape. Peek into <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/fieldhouses%20!field%20houses/field/all!all/mode/all!all/conn/or!and/order/nosort/ad/asc">field houses</a> and <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/refectories%20refectory/field/all/mode/any/conn/and/order/nosort/ad/asc">refectories</a>. Gaze at <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/bridges!park/field/all!all/mode/all!all/conn/and!and/order/nosort/ad/asc">bridges</a>, <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/pergolas%20pergola/field/all/mode/any/conn/and/order/nosort/ad/asc/page/3">pergolas</a> and <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/fountains/field/all/mode/any/conn/and/order/nosort/ad/asc">fountains</a>, from the utilitarian to the ornate. Observe how Chicagoans and visitors engage with the parks in all seasons by <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/bicycle*%20park/field/all/mode/all/conn/and/order/nosort/ad/asc/page/6">biking</a>, <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/ice%20skating/field/all/mode/all/conn/and/order/nosort/ad/asc">ice skating</a>, <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/sledding!sleds/field/all!all/mode/all!all/conn/or!and/order/nosort/ad/asc">sledding</a>, <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/archery/field/all/mode/all/conn/and/order/nosort/ad/asc/page/2">competing in archery</a>, <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/frankel%20plates/field/all/mode/all/conn/and/order/nosort/ad/asc">taking selfies</a>, <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!wha!woop!rwk!ahs!cfc!ChicagoParks/searchterm/celebrations%20park/field/all/mode/all/conn/or/order/nosort/ad/asc">celebrating events</a> and more.</p>';
         $Parks[catcoll] = 'that focus on Chicago&rsquo;s parks';
         $Parks[CPLRes] = array(array('a'=>'https://www.chipublib.org/?post_type=post&s=parks','dt'=>'Park Blog Posts','dd'=>'Written by CPL librarians and staff.'));
         $Parks[findingaid] = array(array('link'=>'https://www.chipublib.org/fa-chicago-park-district-records/','text'=>'Chicago Park District Records: Drawings'),
@@ -1114,27 +1133,27 @@
                                 array('link'=>'https://www.chipublib.org/fa-open-space-section-records/','text'=>'Open Space Section Records'));
         $Parks[mainimage] = array('url'=>'3708',
             'coll' => 'ChicagoParks',
-            'text'=>'Horner Park (0228) Activities - Hula hooping, 1971',
+            'text'=>'Hula hooping in Horner Park, 1971',
             'size'=>'110%',
             'align'=>'center');
         $Parks[thumbs] = array(array('url'=>'2239',
                 'coll' => 'mpu',
-                'text'=>'Cloud Gate, assembly complete, July 12, 2004',
+                'text'=>'Cloud Gate, assembly complete, 2004',
                 'size'=>'cover',
                 'align'=>'center'),
-            array('url'=>'1691',
-                'coll' => 'rvw',
-                'text'=>'Welles Park',
-                'size'=>'110%',
-                'align'=>'50% 30%'),
+            array('url'=>'112',
+                'coll' => 'ChicagoParks',
+                'text'=>'Addams Park, undated',
+                'size'=>'200%',
+                'align'=>'52% 17%'),
             array('url'=>'4752',
                 'coll' => 'ChicagoParks',
-                'text'=>'Lake Meadow Park (0263) Events - Performances - Community concerts by Red Saunders, 1970-07-05',
+                'text'=>'Red Saunders performs in Lake Meadow Park, 1970',
                 'size'=>'500px',
                 'align'=>'55% 25%'),
             array('url'=>'6209',
                 'coll' => 'ChicagoParks',
-                'text'=>'Palmer Park (0013) Activities - Athletics, 1965',
+                'text'=>'Palmer Park, 1965',
                 'size'=>'140%',
                 'align'=>'50% 50%'));
         $Parks[link] = 'Parks';
@@ -1163,27 +1182,27 @@
                                 array('a'=>'https://www.chipublib.org/archival_subject/theater/','dt'=>'Chicago Theater Collection','dd'=>'A list of theater collections at Chicago Public Library representing theaters, designers, actors and more.'));
         $Theater[mainimage] = array('url'=>'6053',
             'coll' => 'CPB01',
-            'text'=>'McVicker&rsquo;s Theatre, Camille (January 13, 1881)',
+            'text'=>'Sarah Bernhardt in <em>Camille</em>, McVicker&rsquo;s Theatre, 1881',
             'size'=>'134%',
             'align'=>'52% 15%');
         $Theater[thumbs] = array(array('url'=>'8601',
                 'coll' => 'CPB01',
-                'text'=>'Chicago Little Theatre, Evening with Columbine (October 21, 1913)',
+                'text'=>'<em>Evening with Columbine</em>, Chicago Little Theatre, 1913',
                 'size'=>'200%',
                 'align'=>'50% 85%'),
             array('url'=>'6272',
                 'coll' => 'CPB01',
-                'text'=>'Iroquois Theatre, Blue Beard (December 21, 1903)',
+                'text'=>'<em>Mr. Blue Beard</em>, Iroquois Theatre, 1903',
                 'size'=>'110%',
                 'align'=>'50% 30%'),
             array('url'=>'6748',
                 'coll' => 'CPB01',
-                'text'=>'McVicker&rsquo;s Theatre, Rivals (May 15, 1896)',
+                'text'=>'Joseph Jefferson in <em>Rivals</em>, McVicker&rsquo;s Theatre, 1896',
                 'size'=>'140%',
                 'align'=>'50% 40%'),
             array('url'=>'9755',
                 'coll' => 'CPB01',
-                'text'=>'Chicago Opera House, Mikado (March 6, 1886)',
+                'text'=>'<em>The Mikado</em>, Chicago Opera House, 1886',
                 'size'=>'200%',
                 'align'=>'68% 47%'));
         $Theater[link] = 'Theater';
@@ -1204,7 +1223,7 @@
     // the $categories array is used to transform category names into useable links; this could be deprecated when collection and subcollection arrays are passed into category arrays, but until then we use this
     $categories = array('AfAm'=>'African Americans','CivilWar'=>'Civil War',
                         'LibEd'=>'Libraries &amp; Education',
-                        'Neigh'=>'Neighborhoods', 'Parks'=>'Parks');
+                        'Neigh'=>'Neighborhoods', 'Examiner'=>'Newspapers', 'Parks'=>'Parks');
         
     // This is a verbatim copy of the array in locations.php; this version is not used; for some reason, it didn't work when I tried to use this one instead of the other one; some day I'll really have nothing better to do 
     $LOCATIONLINKS = array('https://www.chipublib.org/locations/3'=>'Albany Park',
