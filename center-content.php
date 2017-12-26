@@ -68,6 +68,10 @@
 							if ($PAGE[type] == 'collection'){
 								if ($PAGE[title] == 'Remembering Harold Washington') {
 									echo 'Photographs in the ' . $PAGE[title] . ' exhibit are housed in ' . $PAGE[location][longname] . '.';
+								} elseif ($PAGE[link] == 'Examiner') {
+									echo 'The ' . $PAGE[title] . ' is housed in the ' . $PAGE[location][longname] . '; microfilm is available in the Newspapers Department at Harold Washington Library Center.';
+								} elseif ($PAGE[link] == 'Whalen') {
+									echo 'Artifacts from the ' . $PAGE[title] . ' are housed in the ' . $PAGE[location][longname] . '.';
 								} else {
 									echo 'The ' . $PAGE[title] . ' is housed in the ' . $PAGE[location][longname] . '.';
 								}
