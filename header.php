@@ -33,7 +33,7 @@
 					</a>
 				</div>
 				<div class="header-sm-button" data-toggle="modal" data-target="#myModal"><i class="fa fa-bars"></i></div>
-				<div class="header-sm-button light-left-border" onclick="javascript:location.href='https://chipublib.bibliocommons.com/events/search/index'"><i class="fa fa-calendar"></i></div>
+				<div class="inline-div"><a class="header-sm-button light-left-border" href="https://chipublib.bibliocommons.com/events/search/index"><i class="fa fa-calendar"></i></a></div>
 			</div>
 			<div class="col-3 col-lg-8 clearfix">
 				<div class="header-search-collapsed" onclick="expandSearch()">
@@ -52,7 +52,7 @@
 			<div class="hidden-md-down col-lg-12">
 				<div class="header-bottom">
 					<div class="header-lg-button" onclick="showDropdown()">Browse <i class="fa fa-angle-down"></i></div>
-					<div class="header-lg-button" onclick="javascript:location.href='https://chipublib.bibliocommons.com/events/search/index'"><i class="fa fa-calendar"></i> Events</div>
+					<div class="inline-div"><a class="header-lg-button" href="https://chipublib.bibliocommons.com/events/search/index"><i class="fa fa-calendar"></i> Events</a></div>
 				</div>
 			</div>
 		</div>

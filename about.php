@@ -31,7 +31,7 @@
         ?>
         </dl>
         <p></p>
-        <p></p>
+        <p>CPL presents these images and documents as part of the record of the past. It does not endorse the views expressed in these items, some of which may contain offensive materials.</p>
     </div>
     <div class="center-copy-list">
         <h4>Contact Us</h4>

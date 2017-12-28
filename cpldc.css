@@ -24,7 +24,7 @@
         transition: visibility 1s linear;
     }
 
-    .header-search-collapsed div, .header-search-expanded div, .header-lg-button, .header-sm-button, .header-sm-img, .footer-list, .left-sidebar-header div, .header-browse-dropdown-section, .header-browse-dropdown-browse {
+    .inline-div, .header-search-collapsed div, .header-search-expanded div, .header-lg-button, .header-sm-button, .header-sm-img, .footer-list, .left-sidebar-header div, .header-browse-dropdown-section, .header-browse-dropdown-browse {
         display: inline-block;
     }
     .header-search-collapsed, .header-search-dropped, .header-search-expanded {
@@ -225,9 +225,12 @@
         height: 50px;
         width: 100%;
     }
-    .header-lg-button {
+    .header-lg-button, .header-lg-button:focus {
         padding: 16px 20px;
         cursor: pointer;
+        color: #fff;
+        background-color: #000;
+        text-decoration: none;
     }
     .header-lg-button i {
         padding: 0 3px;
@@ -235,6 +238,7 @@
     .header-lg-button:hover {
         background-color: #fff;
         color: #000;
+        text-decoration: none;
     }
     .header-browse-dropdown-wrapper {
         position: absolute;
@@ -766,7 +770,7 @@
         overflow: hidden;
         text-align: center;
     }
-    /* hack to get captions as links to appear the same as SLB's default plain text */
+    /* lightbox captions should be links that appear the same as SLB's default plain text */
     .slbCaption {
         overflow: visible !important;
     }
