@@ -358,7 +358,7 @@
                     'size'=>'500px',
                     'align'=>'53% 49%'),
                 array('url'=>'16',
-                    'text'=>'Ester Barlow and Buddy Flaskerud, 1913',
+                    'text'=>'Esther Barlow and Buddy Flaskerud, 1913',
                     'size'=>'400px',
                     'align'=>'33% 22%'));
         $EB[link] = 'EB';
@@ -1049,7 +1049,7 @@
                 'align'=>'27% 0%'));
         $LibEd[textshort] = 'Learn about Chicago through its libraries and schools in these photographs dating from the 1860s through the 1990s.';
         $LibEd[textlong] = 'Learn about Chicago through its libraries and schools in these photographs dating from the 1860s through the 1990s.';
-        $LibEd[textrich] = 'Explore Chicago&rsquo;s development through <a href="http://digital.chipublib.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/exterior%20view%20school/field/all/mode/all/conn/and/order/title/ad/asc">school building exteriors</a>, feel the energy of its <a href="http://digital.chipublib.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/high%20school%20band/field/all/mode/all/conn/and/order/title/ad/asc">high school bands</a> and see its <a href="http://digital.chipublib.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/sports/field/all/mode/all/conn/and/order/title/ad/asc">sports teams and athletes</a> in action.';
+        $LibEd[textrich] = 'Explore Chicago&rsquo;s development, from the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Water+tank/field/subjed/mode/all/conn/and/order/nosort">circular water tank</a> that housed the first Chicago Public Library to <a href="http://digital.chipublib.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/exterior%20view%20school/field/all/mode/all/conn/and/order/title/ad/asc">school building exteriors</a> from the second half of the 19th century through the first half of 20th century. Feel the energy of its <a href="http://digital.chipublib.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/high%20school%20band/field/all/mode/all/conn/and/order/title/ad/asc">high school bands</a> and see its <a href="http://digital.chipublib.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/sports/field/all/mode/all/conn/and/order/title/ad/asc">sports teams and athletes</a> in action.';
         $LibEd[CPLRes] = array(array('a'=>'https://www.chipublib.org/blogs/category/chicago-history/','dt'=>'Chicago History Blog Posts','dd'=>'Written by CPL librarians and staff.'), 
             array('a'=>'https://www.chipublib.org/archival_subject/chicago-public-library/','dt'=>'Finding Aids: Chicago Public Library','dd'=>'Descriptive inventories of the archival collections documenting the development of Chicago Public Library.'),
             array('a'=>'https://www.chipublib.org/archival_subject/education/','dt'=>'Finding Aids: Education','dd'=>'Descriptive inventories of the archival collections of educators, schools and more.'));
