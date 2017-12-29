@@ -5,9 +5,11 @@
 		$(".header-search-collapsed").addClass("hide");
 		if (viewportWidth > 976) {
 			$(".header-search-expanded").removeClass("hide");
+			document.getElementById("search-input").focus();
 		}
 		if (viewportWidth < 976) {
 			$(".header-search-dropped").removeClass("hide");
+			document.getElementById("search-input2").focus();
 		}
 	}
 	// removes input field on search; only occurs when resizing - no "close" button in bibliocommons, so none here
@@ -37,7 +39,7 @@
         }
 	}
 	// how to swith to collapsible sidebar - detach() all contents of sidebar and dump them at the collapsible sidebar target; 
-	// change bootstrap breakpoints, show the button that collapses the sidebar
+	// change bootstrap breakpoints, show the button that shows/hides the sidebar
     function switchToCollapsibleLayout() {
         layout = "collapsible";
         var sidebarFull = $(".left-sidebar-toplevel").detach();
@@ -48,7 +50,7 @@
         $(".center-content").removeClass("col-8 col-lg-5");
         $(".center-content").addClass("col-12");
 	}
-	// how to switch to fixed: detach() and dump into fixed sidebar target; change bootstrap breakpoints, hit button
+	// how to switch to fixed: detach() and dump into fixed sidebar target; change bootstrap breakpoints, hide the show/hide button
     function switchToFixedLayout() {
         layout = "fixed";
         var sidebarFull = $(".left-sidebar-toplevel").detach();
@@ -141,7 +143,7 @@
 			window.location.href = 'http://digital.chipublib.org/digital/search/searchterm/' + query;
 		}
 	}
-	// nonfunctional.  attempts to hijack all images onload and check whether they are from MP, and adds rights div if true
+	// now functional!  attempts to hijack all (lightbox) images onload and check whether they are from MP, and adds rights div if true
 	function rightsInsertion(loc) {
 		var rightsDiv = '<div class="rights-block">' +
 				'<i class="rights-i rights-i-lightbox fa fa-info-circle"></i>' + 
@@ -212,7 +214,20 @@
 			return false;
 		});
 	}
-	
+	//press escape to hide the browse dropdown
+	$( document ).keyup(function(e){
+		if ($(".header-browse-dropdown-wrapper").is(":visible")) {
+			if (e.keyCode==27) {
+				showDropdown();
+				}
+			}
+		});
+
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) {
+			if (!$("nav ul").hasClass("hidden")) {$("nav ul").toggleClass("hidden")}
+		}
+	});
 	// docreadies: 
 		// 	checks window size to assign layout; 
 		// 	waits for enter key to be pressed after typing in search input (x2 for both search inputs); 

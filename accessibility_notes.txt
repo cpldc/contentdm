@@ -1,0 +1,49 @@
+JAWS review notes:
+    alt text
+    background content 
+        dont see any of that
+    ascii art
+        dependent on bibliocommons
+        can make some changes now, via css, no graphical changes
+    h1, h2, h3, h4, h5
+        ug
+            need to clean up when I do use it, and implement it where I don't
+    landmarks (main, article, etc)
+        should be ok, I use main correctly, and I don't rely have articles; 
+        section is used inconsistently, does that matter?
+    aria label navigation labels
+        not sure how to implement?
+        whatever it ends up being, it should be consistent with bibliocommons
+    ul/li
+        I don't think I do this 
+        maybe my lists should be nested?
+    form field labels
+        maybe get some explanation on this one, or maybe I'll be lucky and not have to care
+        probably get away with just "search digital collections"
+    iframes
+        nope
+    tables
+        events? those are divs tho
+
+    use dsplay: none instead of positioning things offscreen...
+
+    sequences 
+        shouldnt be a problem for me
+        cards are rendered the way cards are rendered, tough luck there 
+    color contrast ratios
+        that "view more" blue is a problem  
+            the darker version, used in some mouseovers, is ok
+            is it ok if the hover contrast is inadequate?
+                no.
+    font sizing
+        seems like a responsive issue - 
+        fixed sizes enlarge just fine, but if you have to horizontally sroll to read, that's a responsiveness problem, not a font size problem
+    keyboard navigation
+        none of my js-built header stuff is keyboard usable
+            search
+            browse
+            events
+        bibliocommons "skip to main navigation" in responsive is broken
+            should I replicate those?
+    
+

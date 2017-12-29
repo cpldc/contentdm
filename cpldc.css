@@ -66,6 +66,9 @@
         padding: 12px 15px;
         /* border: 1px solid black; */
         cursor: pointer;
+        border: 0;
+        background-color: #fff;
+        color: #000;
     }
     .header-sm-button i {
         font-size: 1.5rem;
@@ -114,6 +117,10 @@
         color: #262626;
         text-transform: uppercase;
         font-size: 16px;
+    }
+    .header-search-collapsed {
+        background-color: #fff;
+        border: 0;
     }
     .header-search-collapsed, .header-search-expanded {
         cursor: pointer;
@@ -226,6 +233,7 @@
         width: 100%;
     }
     .header-lg-button, .header-lg-button:focus {
+        border: 0;
         padding: 16px 20px;
         cursor: pointer;
         color: #fff;
