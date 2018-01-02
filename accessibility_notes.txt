@@ -45,5 +45,15 @@ JAWS review notes:
             events
         bibliocommons "skip to main navigation" in responsive is broken
             should I replicate those?
-    
+                pg 49 basically says yes
+    focus order
+        seems ok
+    link purpose
+        "view more" in the blogs/events
+    unrelated: mouseover should not be pointer on "serach te digital collections"
+    pg 51, example 2: they want images with alt text instead of <i> - but this disables font imagery, which is the future -
+        instead, per fontawesome, use aria-labels on the <a> around it, like: 
+            <a href="path/to/shopping/cart" aria-label="View 3 items in your shopping cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </a>
 
