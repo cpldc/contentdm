@@ -50,10 +50,24 @@ JAWS review notes:
         seems ok
     link purpose
         "view more" in the blogs/events
-    unrelated: mouseover should not be pointer on "serach te digital collections"
+    unrelated: mouseover should not be pointer on "search te digital collections"
     pg 51, example 2: they want images with alt text instead of <i> - but this disables font imagery, which is the future -
         instead, per fontawesome, use aria-labels on the <a> around it, like: 
             <a href="path/to/shopping/cart" aria-label="View 3 items in your shopping cart">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </a>
 
+> .visually-hidden { position: absolute; left: -10000px; }
+    don't do this
+    
+    parsing
+        /incorrect nesting:
+            should looki for this
+                (minor issue, because my html is probably perfect)
+        /duplicate id elements?
+        html checker: http://validator.w3.org/nu/
+
+> Remove the role="menuitemradio"and associated aria-checked attribute from each option
+    bibliocommons has so much js hanging on stuff like this, they're dug in
+
+    buttons used as links/vice versa

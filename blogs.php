@@ -38,10 +38,10 @@
             $description = $feed[$x]['desc'];
             $pos=strpos($description, ' ', 60);
             $date = date('F j, Y', strtotime($feed[$x]['date']));
-            $htmlStr .= '<div class="blogpost"><h4 class="blogpost-title"><a href="' . $link . '" class="blogpost-link">' . $title . '<i class="raquo fa fa-angle-double-right"></i></a></h4><div class="blogpost-author-date"> By: ' . $author . ', ' . $date . '</div><div class="blogpost-description">' . substr($description,0,65 ) . '&hellip;</div></div>';
+            $htmlStr .= '<div class="blogpost"><h4 class="blogpost-title"><a href="' . $link . '" class="blogpost-link">' . $title . '<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h4><div class="blogpost-author-date"> By: ' . $author . ', ' . $date . '</div><div class="blogpost-description">' . substr($description,0,65 ) . '&hellip;</div></div>';
         }
         file_put_contents('blogs.html', $htmlStr);
         include $cache_file;
     }
 ?>
-<div class="blogs-viewmore"><a href="https://www.chipublib.org/blogs/category/chicago-history/">View More <span class="rsaquo">&rsaquo;</span></a></div>
+<div class="blogs-viewmore"><a href="https://www.chipublib.org/blogs/category/chicago-history/">View More <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i></a></div>

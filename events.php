@@ -36,16 +36,17 @@
         }
         for($x=0;$x<$limit;$x++) {
             $title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);
+            if ($title == '') {break;}
             $link = $feed[$x]['link'];
             $location = $feed[$x]['loc'];
             $locationLink = array_search($location, $LOCATIONLINKS);
             $date = date('M j', strtotime($feed[$x]['date']));
             $time = date('g:iA', strtotime($feed[$x]['date']) - 60 * 60 * 6);
-            $htmlStr .= '<div class="event"> <h4 class="event-title"><a href="' . $link . '" class="event-link">' . $title . '<i class="raquo fa fa-angle-double-right"></i></a></h4><div class="event-location"><a href="' . $locationLink . '" class="event-location-link">' . $location . '</a></div><div class="event-datetime"><div class="event-date">' . $date . '</div><div class="event-time">' . $time . '</div></div></div>';
+            $htmlStr .= '<div class="event"> <h4 class="event-title"><a href="' . $link . '" class="event-link">' . $title . '<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h4><div class="event-location"><a href="' . $locationLink . '" class="event-location-link">' . $location . '</a></div><div class="event-datetime"><div class="event-date">' . $date . '</div><div class="event-time">' . $time . '</div></div></div>';
         }
         file_put_contents('events.html', $htmlStr);
         include $cache_file;
     }
 ?>
-<div class="events-viewmore"><a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)">View More <span class="rsaquo">&rsaquo;</span></a></div>
+<div class="events-viewmore"><a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)">View More <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i></a></div>
 
