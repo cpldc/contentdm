@@ -79,10 +79,10 @@
 	<div class="container header-browse-dropdown">
 		<div class="row">
 			<div class="col-lg-12 hidden-md-down">
-				<div class="header-browse-dropdown-browse"><h2>Browse</h2></div>
+				<div class="header-browse-dropdown-browse"><h1>Browse</h1></div>
 				<?php 
 					foreach ($headerLinks as $key => $val){
-						echo '<div class="header-browse-dropdown-section header-browse-dropdown-' . $val[type] . '"><span class="header-browse-dropdown-title">' . $val[typefull] . '</span><ul class="list-group">';
+						echo '<div class="header-browse-dropdown-section header-browse-dropdown-' . $val[type] . '"><h2 class="header-browse-dropdown-title">' . $val[typefull] . '</h2><ul class="list-group">';
 						foreach ($val[links] as $k => $v) {
 							echo '<li class="list-group-item header-dropdown-listitem"><a href="' . $v[link] . '">' . $v[text] . '</a></li>';
 						}
@@ -97,7 +97,7 @@
 <div class="modal-dialog" role="document">
   <div class="modal-content">
 	<div class="modal-header">
-	  <h5 class="modal-title" id="exampleModalLabel">Browse <i class="fa fa-angle-down"></i></h5>
+	  <h1 class="modal-title" id="exampleModalLabel">Browse <i class="fa fa-angle-down"></i></h1>
 	  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		<span aria-hidden="true">&times;</span>
 	  </button>
@@ -105,7 +105,7 @@
 	<div class="modal-body">
 		<?php 
 			foreach ($headerLinks as $key => $val){
-				echo '<h4 class="header-modal-listheader">' . $val[typefull] . '</h4><ul class="list-group">';
+				echo '<h2 class="header-modal-listheader">' . $val[typefull] . '</h2><ul class="list-group">';
 				foreach ($val[links] as $k => $v) {
 					echo '<li class="list-group-item header-modal-listitem"><a href="' . $v[link] . '">' . $v[text] . '</a></li>';
 				}

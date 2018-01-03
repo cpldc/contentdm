@@ -45,8 +45,8 @@
                         if (is_array($val[category])){
                                 $catLink0 = array_search($val[category][0], $categories);
                                 $catLink1 = array_search($val[category][1], $categories);
-                                echo '<span class="content-card-category"><a href="content.php?id=' . $catLink0 . '">' . $val[category][0] . '</a> | ';
-                                echo '<a href="content.php?id=' . $catLink1 . '">' . $val[category][1] . '</a></span>';
+                                echo '<span class="content-card-category"><a href="content.php?id=' . $catLink0 . '" class="catlink0">' . $val[category][0] . '</a>';
+                                echo '<a href="content.php?id=' . $catLink1 . '" class="catlink1">' . $val[category][1] . '</a></span>';
                             } else {
                                 $catLink = array_search($val[category], $categories);
                                 echo '<span class="content-card-category"><a href="content.php?id=' . $catLink . '">' . $val[category] . '</a></span>';

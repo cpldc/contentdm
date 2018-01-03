@@ -1,6 +1,6 @@
 
     <div class="events-title">
-        <h2>History &amp; Genealogy Events</h2>
+        <h1>History &amp; Genealogy Events</h1>
     </div>
 <?php
     $cache_time = 60 * 60 * 24;

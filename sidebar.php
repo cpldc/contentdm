@@ -33,10 +33,10 @@
 		</div>
 		<div class="left-sidebar-main">
 			<div class="left-sidebar-viewall">
-					 <h4 class="left-sidebar-subtitle"><a href="content.php?id=All">View All Collections<!-- <span class="rsaquo">&rsaquo;</span> --></a></h4>
+					 <h1 class="left-sidebar-subtitle"><a href="content.php?id=All">View All Collections<!-- <span class="rsaquo">&rsaquo;</span> --></a></h1>
 			</div>
 			<div class="left-sidebar-location">
-				<h4 class="left-sidebar-subtitle">Browse by Subject</h4>
+				<h1 class="left-sidebar-subtitle">Browse by Subject</h1>
 				<ul>
 				<?php   
 					$underline = ' style="text-decoration: underline"';
@@ -54,7 +54,7 @@
 				</ul>
 			</div>
 			<div class="left-sidebar-location">
-				<h4 class="left-sidebar-subtitle">Browse by Location</h4>
+				<h1 class="left-sidebar-subtitle">Browse by Location</h1>
 				<ul>
 				<?php     
 					usort($cards, build_sorter('sortname'));
@@ -71,7 +71,7 @@
 				</ul>
 			</div>
 			<div class="left-sidebar-related">
-				<h4 class="left-sidebar-subtitle">Related Links</h4>
+				<h1 class="left-sidebar-subtitle">Related Links</h1>
 				<ul>
 					<li class="left-sidebar-list"><a href="http://www.chipublib.org/archives-collections/" class="sidebar-links">Archival Collections</a></li>
 					<li class="left-sidebar-list"><a href="http://www.chipublib.org/browse/chicago-history/" class="sidebar-links">Chicago History</a></li>
@@ -79,7 +79,7 @@
 				</ul>
 			</div>
 			<div class="left-sidebar-related">
-				<h4 class="left-sidebar-subtitle">External Resources</h4>
+				<h1 class="left-sidebar-subtitle">External Resources</h1>
 				<ul>
 					<li class="left-sidebar-list"><a href="http://bmrc.lib.uchicago.edu/" class="sidebar-links">Black Metropolis Research Consortium</a></li>
 					<li class="left-sidebar-list"><a href="https://dp.la/" class="sidebar-links">Digital Public Library of America</a></li>

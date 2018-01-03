@@ -1,5 +1,5 @@
     <div class="blogs-title">
-        <h2>Chicago History Blog</h2>
+        <h1>Chicago History Blog</h1>
     </div>
 <?php
     $cache_time = 60 * 60 * 12;
@@ -38,7 +38,7 @@
             $description = $feed[$x]['desc'];
             $pos=strpos($description, ' ', 60);
             $date = date('F j, Y', strtotime($feed[$x]['date']));
-            $htmlStr .= '<div class="blogpost"><h4 class="blogpost-title"><a href="' . $link . '" class="blogpost-link">' . $title . '<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h4><div class="blogpost-author-date"> By: ' . $author . ', ' . $date . '</div><div class="blogpost-description">' . substr($description,0,65 ) . '&hellip;</div></div>';
+            $htmlStr .= '<div class="blogpost"><dl><dt class="blogpost-title"><a href="' . $link . '" class="blogpost-link">' . $title . '<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></dt><dd class="blogpost-author-date"> By: ' . $author . ', ' . $date . '</dd><dd class="blogpost-description">' . substr($description,0,65 ) . '&hellip;</dd></div>';
         }
         file_put_contents('blogs.html', $htmlStr);
         include $cache_file;

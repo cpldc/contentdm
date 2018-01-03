@@ -2,9 +2,9 @@ JAWS review notes:
     alt text
     background content 
         dont see any of that
-    ascii art
-        dependent on bibliocommons
-        can make some changes now, via css, no graphical changes
+//    ascii art
+//        dependent on bibliocommons
+//        can make some changes now, via css, no graphical changes
     h1, h2, h3, h4, h5
         ug
             need to clean up when I do use it, and implement it where I don't
@@ -35,6 +35,7 @@ JAWS review notes:
             the darker version, used in some mouseovers, is ok
             is it ok if the hover contrast is inadequate?
                 no.
+    widen everything to match bibliocommons
     font sizing
         seems like a responsive issue - 
         fixed sizes enlarge just fine, but if you have to horizontally sroll to read, that's a responsiveness problem, not a font size problem

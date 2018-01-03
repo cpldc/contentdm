@@ -99,7 +99,7 @@
     .modal-content {
         border-radius: 0;
     }
-    .modal-header h5 {
+    .modal-header h1 {
         font-size: 16px;
         line-height: 30px;
     }
@@ -107,7 +107,7 @@
         background-color: #f8f8f8;
         padding: 10px 25px 5px 25px;
     }
-    .modal-body h4 {
+    .modal-body h2 {
         padding: 8px 15px;
     }
     .modal-body .list-group {
@@ -256,7 +256,7 @@
         z-index: 2;
         box-shadow: 0 6px 12px rgba(0,0,0,0.175);
     }
-    .header-browse-dropdown h2 {
+    .header-browse-dropdown h1 {
         font-size: 24px;
         font-weight: bold;
         color: #292B2C;
@@ -485,6 +485,13 @@
         background-size: 120%; 
         background-position: 0px 60%;
     }
+    .catlink0 {
+        padding-right: 0.5rem;
+    }
+    .catlink1 {
+        padding-left: 0.5rem;
+        border-left: 1px solid #2d63af;
+    }
 /* left sidebar */
     .left-sidebar {
         background-color: #000;
@@ -581,19 +588,24 @@
     .blogpost, .blogs-viewmore, .event, .events-viewmore {
         padding: 10px 25px;
     }
-    .blogs-title h2, .events-title h2 {
+    .blogpost dl {
+        margin-bottom: 0;
+    }
+    .blogs-title h1, .events-title h1 {
         text-transform: uppercase;
         font-weight: bold;
         color: #3f4344;
         font-size: 16px;
     }
-    .blogpost-title, .event-title {
+    .blogpost-title, .event-title a, .blogpost-title a {
         font-weight: bold;
-        line-height: 19px;
+        line-height: 16px;
         margin-bottom: .25rem;
+        color: #000;
     }
     .blogpost-description, .blogpost-author-date {
         font-size: 14px;
+        margin-bottom: 0;
     }
     .blogpost-author-date {
         color: #666;
