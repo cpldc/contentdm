@@ -24,7 +24,7 @@
 		<div class="row justify-content-between align-items-center">
 			<div class="hidden-md-down col-lg-3">
 				<div class="header-logo-img"><a href="https://www.chipublib.org/"><img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="" /></a></div>
-				<div class="header-logo-text"><a href="Home.php">Digital Collections</a></div>
+				<div class="header-logo-text"><a href="index.php">Digital Collections</a></div>
 			</div>
 			<div class="hidden-lg-up col-6">
 				<div class="header-sm-img">

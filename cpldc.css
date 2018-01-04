@@ -738,6 +738,10 @@
         min-width: 165px;
         max-width: 212px;
     }
+    .footer-contactinfo address strong { 
+        line-height: 1.5em;
+        font-size: 0.94em;
+    }
     .footer-bottom {
         padding-top: 10px;
     }

@@ -9,57 +9,47 @@ JAWS review notes:
         ug
             need to clean up when I do use it, and implement it where I don't
     landmarks (main, article, etc)
-        should be ok, I use main correctly, and I don't rely have articles; 
-        section is used inconsistently, does that matter?
+        should be ok, I use main correctly, and I don't really have articles; 
+        section is used inconsistently, can probably clean that up
     aria label navigation labels
         not sure how to implement?
         whatever it ends up being, it should be consistent with bibliocommons
     ul/li
-        I don't think I do this 
-        maybe my lists should be nested?
+        maybe sidebar lists should be nested?
+            sidebar: ul>li>Browse By...>ul>li^^Browse by... etc
     form field labels
-        maybe get some explanation on this one, or maybe I'll be lucky and not have to care
+        get some explanation on this one
         probably get away with just "search digital collections"
     iframes
         nope
     tables
         events? those are divs tho
-
-    use dsplay: none instead of positioning things offscreen...
-
     sequences 
-        shouldnt be a problem for me
-        cards are rendered the way cards are rendered, tough luck there 
+        check with f12
     color contrast ratios
-        that "view more" blue is a problem  
-            the darker version, used in some mouseovers, is ok
-            is it ok if the hover contrast is inadequate?
-                no.
+        dependent on bibliocommons
+            wait?  switch blues now?
     widen everything to match bibliocommons
     font sizing
-        seems like a responsive issue - 
-        fixed sizes enlarge just fine, but if you have to horizontally sroll to read, that's a responsiveness problem, not a font size problem
+        seems like a responsive issue - fixed sizes enlarge just fine, but if you have to horizontally scroll to read, that's a responsiveness problem, not a font size problem
     keyboard navigation
-        none of my js-built header stuff is keyboard usable
+        js-built header stuff is keyboard unusable
             search
             browse
             events
         bibliocommons "skip to main navigation" in responsive is broken
-            should I replicate those?
-                pg 49 basically says yes
+            gotta replicate these 
     focus order
         seems ok
     link purpose
         "view more" in the blogs/events
-    unrelated: mouseover should not be pointer on "search te digital collections"
+    mouseover should not be pointer on "search te digital collections"
     pg 51, example 2: they want images with alt text instead of <i> - but this disables font imagery, which is the future -
         instead, per fontawesome, use aria-labels on the <a> around it, like: 
             <a href="path/to/shopping/cart" aria-label="View 3 items in your shopping cart">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </a>
 
-> .visually-hidden { position: absolute; left: -10000px; }
-    don't do this
     
     parsing
         /incorrect nesting:
