@@ -1,5 +1,5 @@
     <div class="blogs-title">
-        <h1>Chicago History Blog</h1>
+        <h2>Chicago History Blog</h2>
     </div>
 <?php
     $cache_time = 60 * 60 * 12;
@@ -44,4 +44,4 @@
         include $cache_file;
     }
 ?>
-<div class="blogs-viewmore"><a href="https://www.chipublib.org/blogs/category/chicago-history/">View More <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i></a></div>
+<div class="blogs-viewmore"><a href="https://www.chipublib.org/blogs/category/chicago-history/" aria-label="View More Blog Posts">View More <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i></a></div>

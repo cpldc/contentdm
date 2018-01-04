@@ -56,8 +56,15 @@
         padding: 15px 0 8px 0;
     }
     .header-logo-text {
-        font-weight: bold;
         padding: 0 0 8px 0;
+    }
+    .header-logo-text a, .header-logo-text h1 {
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 18px;
+        margin: 0;
+        padding: 0;
+        border: 0;
     }
     .header-logo-img img, .header-sm-img img {
         max-height: 65px;
@@ -99,7 +106,7 @@
     .modal-content {
         border-radius: 0;
     }
-    .modal-header h1 {
+    .modal-header h2 {
         font-size: 16px;
         line-height: 30px;
     }
@@ -256,7 +263,7 @@
         z-index: 2;
         box-shadow: 0 6px 12px rgba(0,0,0,0.175);
     }
-    .header-browse-dropdown h1 {
+    .header-browse-dropdown h2 {
         font-size: 24px;
         font-weight: bold;
         color: #292B2C;
@@ -591,15 +598,19 @@
     .blogpost dl {
         margin-bottom: 0;
     }
-    .blogs-title h1, .events-title h1 {
+    .blogs-title h2, .events-title h2 {
         text-transform: uppercase;
         font-weight: bold;
         color: #3f4344;
+        line-height: 19px;
         font-size: 16px;
     }
-    .blogpost-title, .event-title a, .blogpost-title a {
+    .blogpost-title {
+        font-size: 28px;
+    }
+    .blogpost-title, .event-title, .event-title a, .blogpost-title a {
         font-weight: bold;
-        line-height: 16px;
+        line-height: 19px;
         margin-bottom: .25rem;
         color: #000;
     }
@@ -681,7 +692,7 @@
         vertical-align: top;
         padding-left: 0;
     }
-    .footer-top h4 {
+    .footer-top h2 {
         font-weight: bold;
         color: #666;
         font-size: 1rem;
@@ -823,6 +834,10 @@
     }
     .card-block {
         padding: 7px 10px 15px 10px;;
+    }
+    .content-card-title  {
+        line-height: 24px;
+        font-size: 24px;
     }
     .content-card-title a {
         font-weight: bold;

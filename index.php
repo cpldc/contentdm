@@ -51,7 +51,7 @@
                                 $catLink = array_search($val[category], $categories);
                                 echo '<span class="content-card-category"><a href="content.php?id=' . $catLink . '">' . $val[category] . '</a></span>';
                         }
-                        echo '<h4 class="card-title content-card-title"><a href="content.php?id=' . $val[link] . '">'. $val[title] . '</a></h4>';
+                        echo '<h2 class="card-title content-card-title"><a href="content.php?id=' . $val[link] . '">'. $val[title] . '</a></h2>';
                         echo '<p class="card-text content-card-copy">' . $val[textshort] . '</p>';
                         echo '</div>';
                         echo '</div>';
