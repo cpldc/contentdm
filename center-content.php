@@ -1,31 +1,33 @@
-		
+		<section aria-label="Introduction">
 			<p class="center-copy-paragraph" style="padding: 0"><?php echo $PAGE[textlong]; ?></p>
-                <div class="center-lightbox">
-						<div class="container-fluid lightbox imageGallery1">
-						<div class="row">
-							<div class="col-12 lightbox-main-img-div">
-							<?php 
-								if ($PAGE[type] == 'collection'){
-									$mainImgUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $PAGE[coll] . '/' . $PAGE[mainimage][url] . '/default.jpg';
-									$mainImgTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
-								} elseif ($PAGE[link] == 'MRC') {
-									$mainImgUrl = $PAGE[mainimage][url];
-									$mainImgTitle = $PAGE[mainimage][text];
-								} elseif ($PAGE[link] == 'Harsh') {
-									$mainImgUrl = 'https://cdm16818.contentdm.oclc.org/customizations/global/pages/ASNLH.jpg';
-									$mainImgTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[mainimage][coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
-								} else {
-									$mainImgUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $PAGE[mainimage][coll] . '/' . $PAGE[mainimage][url] . '/default.jpg';
-									$mainImgTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[mainimage][coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
-								}
-								echo '<a class="center-images-main" href="' . $mainImgUrl . '" data-caption="' . $mainImgTitle . '" title="' . strip_tags(html_entity_decode($PAGE[mainimage][text])) . '" ><img style="background: url(' . $mainImgUrl . '); background-size: ' . $PAGE[mainimage][size] . '; background-position: ' . $PAGE[mainimage][align] . ' !important;"  class="lightbox-main-img" alt=""></a>';
-								if (strpos($PAGE[mainimage][url],'mpu') !== false ) {
-									echo '<i class="rights-i rights-i-main fa fa-info-circle"></i><div class="rights-overlay rights-overlay-main"><div class="rights-guts"><span class="rights-statement">' . $MP[rights2]  . '</span></div><div class="rights-close"><i class="rights-close-icon fa fa-times"></i></div></div>';
-								}
-								?>
-							</div>
+	</section>
+	<section aria-label="Images">
+			<div class="center-lightbox">
+				<div class="container-fluid lightbox imageGallery1">
+					<div class="row">
+						<div class="col-12 lightbox-main-img-div">
+						<?php 
+							if ($PAGE[type] == 'collection'){
+								$mainImgUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $PAGE[coll] . '/' . $PAGE[mainimage][url] . '/default.jpg';
+								$mainImgTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
+							} elseif ($PAGE[link] == 'MRC') {
+								$mainImgUrl = $PAGE[mainimage][url];
+								$mainImgTitle = $PAGE[mainimage][text];
+							} elseif ($PAGE[link] == 'Harsh') {
+								$mainImgUrl = 'https://cdm16818.contentdm.oclc.org/customizations/global/pages/ASNLH.jpg';
+								$mainImgTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[mainimage][coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
+							} else {
+								$mainImgUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $PAGE[mainimage][coll] . '/' . $PAGE[mainimage][url] . '/default.jpg';
+								$mainImgTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[mainimage][coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
+							}
+							echo '<a class="center-images-main" href="' . $mainImgUrl . '" data-caption="' . $mainImgTitle . '" title="' . strip_tags(html_entity_decode($PAGE[mainimage][text])) . '" ><img style="background: url(' . $mainImgUrl . '); background-size: ' . $PAGE[mainimage][size] . '; background-position: ' . $PAGE[mainimage][align] . ' !important;"  class="lightbox-main-img" alt=""></a>';
+							if (strpos($PAGE[mainimage][url],'mpu') !== false ) {
+								echo '<i class="rights-i rights-i-main fa fa-info-circle"></i><div class="rights-overlay rights-overlay-main"><div class="rights-guts"><span class="rights-statement">' . $MP[rights2]  . '</span></div><div class="rights-close"><i class="rights-close-icon fa fa-times"></i></div></div>';
+							}
+						?>
 						</div>
-						<div class="row lightbox-thumbs justify-content-center">
+					</div>
+					<div class="row lightbox-thumbs justify-content-center">
 						<?php 
 							foreach ($PAGE[thumbs] as $key => $val) {
 								if ($PAGE[type] == 'collection'){
@@ -42,12 +44,14 @@
 								echo '><a href="' . $thumbUrl . '" data-caption="' . $thumbTitle . '" title="' . strip_tags(html_entity_decode($val[text])) . '" ><img style="background: url(' . $thumbUrl . '); background-size: ' . $val[size] . '; background-position: ' . $val[align] . '!important;" class="lightbox-thumb" alt="" /></a></div>';
 							}
 						?>
-						</div>
 					</div>
-					<script>
-						$('.imageGallery1 a').simpleLightbox();
-					</script>
-                </div>
+				</div>
+				<script>
+					$('.imageGallery1 a').simpleLightbox();
+				</script>
+			</div>
+		</section>
+		<section aria-label="Collection Description">
 				<?php 
 					if ($PAGE[coll]) {
 						echo '<div class="center-button browseall"><a href="http://digital.chipublib.org/digital/search/collection/' . $PAGE[coll] . '/order/title/ad/asc" class="btn btn-primary">Browse All</a></div>';
@@ -91,8 +95,10 @@
 							echo '<dt><a href="' . $val[a] . '">' . $val[dt] . '</a></dt><dd>' . $val[dd] . '</dd>';
                         }
                         echo '</dl></div>';
-                    }
+					}
+					echo '</section>';
                     if ($PAGE[subcollections]) {
+						echo '<section aria-label="Collections in this group">';
                         if(!$PAGE[textrich]){
 							echo '<div class="center-copy-list" style="border-top: none; padding: 15px">';
 						} else {
@@ -104,9 +110,10 @@
                         foreach ($PAGE[subcollections] as $key=>$val){
 							echo '<dt><a href="' . $val[browse] . '">' . $val[title] . '</a></dt><dd>' . $val[textshort] . '</dd>';
                         }
-                        echo '</dl></div>';
+                        echo '</dl></div></section>';
                     }
                     if ($PAGE[type] == 'category' && !$PAGE[subcollections]){
+						echo '<section aria-label="Collections in this category">';
 						if(!$PAGE[textrich]){
 							echo '<div class="center-copy-list" style="border-top: none; padding: 15px">';
 						} else {
@@ -128,9 +135,10 @@
 								echo '</dd>';
 							}
                         }
-                        echo '</dl></div>';
+                        echo '</dl></div></section>';
                     }
                     if ($PAGE[type] == 'location'){
+						echo '<section aria-label="Collections from this location">';
 						if(!$PAGE[textrich]){
 							echo '<div class="center-copy-list" style="border-top: none; padding: 15px">';
 						} else {
@@ -149,15 +157,20 @@
 								echo '<h4>Digital Collections</h4>
 								<p>Digital collections from the ' . $PAGE[title] . ' are forthcoming.';
 							}
-							echo '</dl></div>';
-                    }
+							echo '</dl></div></section>';
+					}
                     if ($PAGE[CPLRes]){
+						echo '<section aria-labelleddby="CPLRes">';
                         echo '<div class="center-copy-list">
-                            <h4>More CPL Resources</h4>
+                            <h4 id="CPLRes">More CPL Resources</h4>
                             <dl>';
 						if($PAGE[findingaid]){
 							if(is_array($PAGE[findingaid][0])){
-								echo '<dt>Finding Aids</dt><dd>The descriptive inventories for other related archival collections.</dd><dd><ul>';
+								if ($PAGE[link] == 'HW') {
+									echo '<dt>Finding Aids</dt><dd>Chicago Public Library also holds extensive physical collections about Harold Washington, including his mayoral, congressional and state legislative years. Sample finding aids below.</dd><dd><ul>';
+								} else {
+									echo '<dt>Finding Aids</dt><dd>The descriptive inventories for other related archival collections.</dd><dd><ul>';
+								}
 								foreach ($PAGE[findingaid] as $key=>$val) {
 									echo '<li><a href="' . $val[link] . '">' . $val[text] . '</a></li>';
 								}
@@ -171,12 +184,12 @@
 							echo '<dt><a href="' . $val[a] . '">' . $val[dt] . '</a></dt><dd>' . $val[dd] . '</dd>';
 							echo $PAGE[CPLRes][dt];
 						}
-                        echo '</dl></div>';
+                        echo '</dl></div></section>';
                     }
                     if (!$PAGE[CPLRes] && $PAGE[findingaid]) {
-						echo '<div class="center-copy-list">';
+						echo '<section aria-labelledby="findingaids"><div class="center-copy-list">';
 						if(is_array($PAGE[findingaid][0])){
-							echo '<h4>Finding Aids</h4><p>The descriptive inventories for their physical collections.</p><ul>';
+							echo '<h4 id="findingaids">Finding Aids</h4><p>The descriptive inventories for their physical collections.</p><ul>';
 							foreach ($PAGE[findingaid] as $key=>$val) {
 								echo '<li><a href="' . $val[link] . '">' . $val[text] . '</a></li>';
 							}
@@ -184,26 +197,27 @@
 						} else {
 							echo '<h4>Finding Aid</h4><dl><dt><a href="' . $PAGE[findingaid][link] . '">' . $PAGE[findingaid][text] . '</a></dt><dd>The descriptive inventory for the complete physical collection.</dl>';
 						}
-						echo '</div>';
+						echo '</div></section>';
                     }
                     if ($PAGE[ExRes]){
-						echo '<div class="center-copy-list">
-						<h4>External Resources</h4>
+						echo '<section aria-labelledby="ExRes"><div class="center-copy-list">
+						<h4 id="ExRes">External Resources</h4>
 						<dl>';
 						usort($PAGE[ExRes], build_sorter('dt'));
                         foreach ($PAGE[ExRes] as $key => $val){
                             echo '<dt><a href="' . $val[a] . '">' . $val[dt] . '</a></dt><dd>' . $val[dd] . '</dd>';
                         }
-                        echo '</dl></div>';
+                        echo '</dl></div></section>';
 					}
 					if ($PAGE[rights]){
-						echo '<div class="center-copy-paragraph"><span class="rights">' . $PAGE[rights] . '</span></div>';
+						echo '<div class="center-copy-paragraph" aria-label="Additional Copyright Information"><span class="rights">' . $PAGE[rights] . '</span></div>';
 					}
+					// There aren't any inclusions right now; leaving it in case some come up later
 					if ($PAGE[inclusions]) {
 						center_content($PAGE[inclusions]);
 					}
                     if ($PAGE[type] == 'location'){
-						echo '<div class="center-copy-list"><dl>
+						echo '<div class="center-copy-list" aria-label="Location"><dl>
 						<dt class="contact-list-item" style="padding-bottom: 7px">Contact Us </dt>
 						
 						<dd class="contact-list-item">Phone: ' . $PAGE[locphone] . '</dd>

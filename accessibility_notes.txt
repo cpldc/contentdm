@@ -9,23 +9,23 @@ JAWS review notes:
 //    h1, h2, h3, h4, h5
 //        ug
 //            need to clean up when I do use it, and implement it where I don't
-    landmarks (main, article, etc)
-        should be ok, I use main correctly, and I don't really have articles; 
-        section is used inconsistently, can probably clean that up
-    aria label navigation labels
-        not sure how to implement?
-        whatever it ends up being, it should be consistent with bibliocommons
-    ul/li
-        maybe sidebar lists should be nested?
-            sidebar: ul>li>Browse By...>ul>li^^Browse by... etc
-    form field labels
-        get some explanation on this one
-        probably get away with just "search digital collections"
-            PER GP: do it like p 26
-    iframes
-        nope
-    tables
-        events? those are divs tho
+//    landmarks (main, article, etc)
+//        should be ok, I use main correctly, and I don't really have articles; 
+//        section is used inconsistently, can probably clean that up
+//    aria label navigation labels
+//        not sure how to implement?
+//        whatever it ends up being, it should be consistent with bibliocommons
+//    ul/li
+//        maybe sidebar lists should be nested?
+//            sidebar: ul>li>Browse By...>ul>li^^Browse by... etc
+//    form field labels
+//        get some explanation on this one
+//        probably get away with just "search digital collections"
+//            PER GP: do it like p 26
+//    iframes
+//        nope
+//    tables
+//        events? those are divs tho
     sequences 
         check with f12
     color contrast ratios

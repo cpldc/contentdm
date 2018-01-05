@@ -19,6 +19,12 @@
 		array('link' => 'https://www.chipublib.org/browse_program/one-book-one-chicago/', 'text' => 'One Book, One Chicago'));
 	$headerLinks = array($format, $aud, $more);
 ?>
+<section class="a11y-skip-links">
+	<span class="invisitext"><a href="#nav-sidebar" onclick="showLeftSidebar()" class="a11ylinks">Skip to Navigation</a></span>
+	<span class="invisitext hidden-lg-up"><a href="#search-query" onclick="expandSearch()" class="a11ylinks">Skip to Search</a></span>
+	<span class="invisitext hidden-md-down"><a href="#search-query2" onclick="expandSearch()" class="a11ylinks">Skip to Search</a></span>
+	<span class="invisitext"><a href="#content-top" class="a11ylinks">Skip to Content</a></span>
+</section>
 <header>
 	<section role="banner" aria-label="Header">
 		<div class="container">
@@ -44,7 +50,7 @@
 					<div class="header-search-expanded hide">
 						<div class="header-search-expanded-text hidden-lg-down" >Search the Digital Collections</div>
 						<div class="header-search-expanded-text hidden-xl-up" >Search</div>
-						<div class="header-search-expanded-input"><input type="text" name="search-query" id="search-input"></input></div>
+						<div class="header-search-expanded-input"><input aria-label="Search the Digital Collections" type="text" name="search-query" id="search-input"></input></div>
 						<div class="header-search-expanded-icon"><i class="fa fa-search" onclick="searchQuery()"  aria-hidden="true"></i></div>
 					</div>
 				</div>

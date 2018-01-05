@@ -45,7 +45,7 @@
 			?>
 		<!-- center content -->
 			<div class="col-8 col-lg-5 col-xl-6 center-content">
-				<h1><?php echo $PAGE[title]; ?></h1>
+				<h1 id="content-top"><?php echo $PAGE[title]; ?></h1>
 				<?php 
 					if ($PAGE[title] == 'Digital Collections A-Z'){
 						include 'all.php';

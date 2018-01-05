@@ -14,9 +14,9 @@
 	var togglebuttonLeft = '<i class="fa fa-caret-left"></i> <i class="fa fa-bars"></i>';
 	var togglebuttonRight = '<i class="fa fa-bars"></i> <i class="fa fa-caret-right"></i>';
 </script>
-	<div class="left-sidebar">
+	<div class="left-sidebar" role="navigation">
 		<div class="left-sidebar-header clearfix">
-			<div class="left-sidebar-title"><a href="Home.php">Digital Collections</a></div>
+			<div class="left-sidebar-title"><a href="index.php" name="nav-sidebar">Digital Collections</a></div>
 			<script>
 				if (sidebarType == "collapsible") {
 					document.write('<div class="left-sidebar-togglebutton left-sidebar-togglebutton-hide " onclick="toggleLeftSidebar()">');

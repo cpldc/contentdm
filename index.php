@@ -21,15 +21,14 @@
 </head>
 <body>
     <?php 
-    include 'variables.php';
-    include 'header.php';
-    $PAGE_TYPE = 'home';
-
+        include 'variables.php';
+        include 'header.php';
+        $PAGE_TYPE = 'home';
     ?>
     <main class="PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
         <?php include 'sidebar.php';?>
         <div class="main-container-collapsible">
-            <div class="grid">
+            <div class="grid" id="content-top">
             <?php
             // sorts arrays by [flag] attribute
                 usort($cards, build_sorter('flag'));
@@ -42,14 +41,16 @@
                         }
                         echo '</a><div class="card-block" >';
                         // if the collection is assigned more than one category, it will be an array, so if it's an array, list both; if its not an array, just print the one; per spec, no collection can have less than 1 or more than 2
-                        if (is_array($val[category])){
-                                $catLink0 = array_search($val[category][0], $categories);
-                                $catLink1 = array_search($val[category][1], $categories);
-                                echo '<span class="content-card-category"><a href="content.php?id=' . $catLink0 . '" class="catlink0">' . $val[category][0] . '</a>';
-                                echo '<a href="content.php?id=' . $catLink1 . '" class="catlink1">' . $val[category][1] . '</a></span>';
-                            } else {
-                                $catLink = array_search($val[category], $categories);
-                                echo '<span class="content-card-category"><a href="content.php?id=' . $catLink . '">' . $val[category] . '</a></span>';
+                        if ($val[category]){
+                            if (is_array($val[category])){
+                                    $catLink0 = array_search($val[category][0], $categories);
+                                    $catLink1 = array_search($val[category][1], $categories);
+                                    echo '<span class="content-card-category"><a aria-label="Collection Category" href="content.php?id=' . $catLink0 . '" class="catlink0">' . $val[category][0] . '</a>';
+                                    echo '<a aria-label="Collection Category" href="content.php?id=' . $catLink1 . '" class="catlink1">' . $val[category][1] . '</a></span>';
+                                } else {
+                                    $catLink = array_search($val[category], $categories);
+                                    echo '<span class="content-card-category"><a aria-label="Collection Category" href="content.php?id=' . $catLink . '">' . $val[category] . '</a></span>';
+                            }
                         }
                         echo '<h2 class="card-title content-card-title"><a href="content.php?id=' . $val[link] . '">'. $val[title] . '</a></h2>';
                         echo '<p class="card-text content-card-copy">' . $val[textshort] . '</p>';

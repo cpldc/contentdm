@@ -42,6 +42,11 @@
           padding-left: 0;
         }
       }
+      @media (min-width: 1200px) {
+        .container{
+            max-width: 1140px !important;
+        }
+    }
 /* header */
     header {
         position: relative;
@@ -309,6 +314,19 @@
     .header-browse-dropdown-more {
         border-left: 1px solid #ccc;
         padding-left: 30px;
+    }
+    .invisitext a {
+        background-color: #fff;
+        z-index: 999;
+        opacity: 0;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        padding: 5px;
+    }
+    .invisitext a:focus {
+        opacity: 1;
+        color: #123;
     }
 /* main */
     main {
