@@ -21,7 +21,6 @@
                     echo '<dd class="all-collections-category"> Found in <a href="content.php?id=' . $catlink . '">' . $val[category] . '</a></dd>';
                 }
             }
-            echo '<hr>';
         }
     }
 ?>

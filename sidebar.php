@@ -16,14 +16,14 @@
 </script>
 	<div class="left-sidebar" role="navigation">
 		<div class="left-sidebar-header clearfix">
-			<div class="left-sidebar-title"><a href="index.php" name="nav-sidebar">Digital Collections</a></div>
-			<script>
-				if (sidebarType == "collapsible") {
-					document.write('<div class="left-sidebar-togglebutton left-sidebar-togglebutton-hide " onclick="toggleLeftSidebar()">');
-				} else if (sidebarType == "fixed") {
-					document.write('<div class="left-sidebar-togglebutton left-sidebar-togglebutton-hide hide" onclick="toggleLeftSidebar()">');
-				}
-			</script>
+			<div class="left-sidebar-title"><a href="index.php" id="nav-sidebar">Digital Collections</a></div>
+				<script>
+					if (sidebarType == "collapsible") {
+						document.write('<div class="left-sidebar-togglebutton left-sidebar-togglebutton-hide " onclick="toggleLeftSidebar()">');
+					} else if (sidebarType == "fixed") {
+						document.write('<div class="left-sidebar-togglebutton left-sidebar-togglebutton-hide hide" onclick="toggleLeftSidebar()">');
+					}
+				</script>
 				<button class="left-sidebar-togglebutton-target">
 					<script>
 						document.write(togglebuttonLeft);

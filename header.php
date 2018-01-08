@@ -43,28 +43,28 @@
 					<div class="inline-div"><a class="header-sm-button light-left-border" href="https://chipublib.bibliocommons.com/events/search/index"><i class="fa fa-calendar" aria-hidden="true"></i></a></div>
 				</div>
 				<div class="col-3 col-lg-8 clearfix">
-				<div class="inline-div float-right">
-					<div class="header-search-collapsed" onclick="expandSearch()">
-						<div class="header-search-collapsed-text hidden-sm-down">Search</div>
-						<div class="header-search-collapsed-icon" ><i class="fa fa-search" aria-hidden="true"></i></div>
+					<div class="inline-div float-right">
+						<div class="header-search-collapsed" onclick="expandSearch()">
+							<div class="header-search-collapsed-text hidden-sm-down">Search</div>
+							<div class="header-search-collapsed-icon" ><i class="fa fa-search" aria-hidden="true"></i></div>
+						</div>
+						<div class="header-search-expanded hide">
+							<div class="header-search-expanded-text hidden-lg-down" >Search the Digital Collections</div>
+							<div class="header-search-expanded-text hidden-xl-up" >Search</div>
+							<div class="header-search-expanded-input"><input aria-label="Search the Digital Collections" type="text" name="search-query" id="search-input"></div>
+							<div class="header-search-expanded-icon"><i class="fa fa-search" onclick="searchQuery()"  aria-hidden="true"></i></div>
+						</div>
 					</div>
-					<div class="header-search-expanded hide">
-						<div class="header-search-expanded-text hidden-lg-down" >Search the Digital Collections</div>
-						<div class="header-search-expanded-text hidden-xl-up" >Search</div>
-						<div class="header-search-expanded-input"><input aria-label="Search the Digital Collections" type="text" name="search-query" id="search-input"></input></div>
-						<div class="header-search-expanded-icon"><i class="fa fa-search" onclick="searchQuery()"  aria-hidden="true"></i></div>
+				</div>
+				<div class="row align-items-center">
+					<div class="hidden-md-down col-lg-12">
+						<div class="header-bottom">
+							<div class="inline-div"><button class="header-lg-button" onclick="showDropdown()" tabindex="0" >Browse <i class="fa fa-angle-down" aria-hidden="true"></i></button></div>
+							<div class="inline-div"><a class="header-lg-button" href="https://chipublib.bibliocommons.com/events/search/index"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row align-items-center">
-				<div class="hidden-md-down col-lg-12">
-					<div class="header-bottom">
-						<div class="inline-div"><button class="header-lg-button" onclick="showDropdown()" tabindex="0" role="button">Browse <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-						<div class="inline-div"><a class="header-lg-button" href="https://chipublib.bibliocommons.com/events/search/index"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></div>
-					</div>
-				</div>
-			</div>
-
 		</div>
 	</section>
 	<section role="search" class="container header-search-dropped hide clearfix" aria-label="Search the Digital Collections">
@@ -74,7 +74,7 @@
 				Search
 			</div>
 			<div class="col-8 header-search-dropped-input">
-				<input type="text" name="search-query2" id="search-input2"></input>
+				<input type="text" name="search-query2" id="search-input2">
 			</div>
 			<div class="col-1 header-search-dropped-icon">
 				<i class="fa fa-search" onclick="searchQuery2()" aria-hidden="true"></i>
@@ -101,7 +101,7 @@
 			</div>
 		</div>
 	</section>
-	<section role="navigation" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-label="Browse CPL Website" aria-hidden="true">
+	<section role="navigation" class="modal fade" id="myModal" tabindex="-1" aria-label="Browse CPL Website" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">

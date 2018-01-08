@@ -352,7 +352,7 @@
         font-size: 28px;
         margin-bottom: 15px;
         color: #3f4344;
-        border-bottom: 1px solid #ccc;
+        /* border-bottom: 1px solid #ccc; */
         padding-bottom: 15px;
         font-weight: bold;
     }
@@ -404,8 +404,10 @@
         font-size: 18px;
     }
     .all-collections dt {
-        padding-top: 10px;
         padding-bottom: 10px;
+        padding-top: 24px;
+        margin-top: 16px;
+        border-top: 1px solid #ccc;
     }
     .raquo {
         font-size: 24px;
@@ -435,10 +437,6 @@
     .rights, .rights a {
         color: #666;
         font-size: 0.75rem;
-    }
-    main hr {
-        height: 0;
-        border-top: 1px solid #ccc;
     }
     .about-contact a {
         color: #2d63af;
