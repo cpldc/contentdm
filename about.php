@@ -1,5 +1,5 @@
-    <div class="center-lightbox">
-        <div class="col-12 lightbox-main-img-div about-image" title="Cloud Gate, assembly complete, view from above, July 16, 2004" class="content-main-img">
+    <div id="about-image" class="center-lightbox">
+        <div class="col-12 lightbox-main-img-div about-image content-main-img" title="Cloud Gate, assembly complete, view from above, July 16, 2004">
                 <i class="rights-i rights-i-about fa fa-info-circle"></i>
                 <div class="rights-overlay rights-overlay-about">
                     <div class="rights-guts">

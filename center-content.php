@@ -1,5 +1,5 @@
 		<section aria-label="Introduction">
-			<p class="center-copy-paragraph" style="padding: 0"><?php echo $PAGE[textlong]; ?></p>
+			<p class="center-copy-paragraph" id="intro"><?php echo $PAGE[textlong]; ?></p>
 	</section>
 	<section aria-label="Images">
 			<div class="center-lightbox">

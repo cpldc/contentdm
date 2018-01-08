@@ -5,7 +5,7 @@
         if ($val[type] == 'collection' || $val[type] == 'subcollection'){
             echo '<dt class="' . $val[coll] . '">';
             if ($val[type] == 'collection'){
-                echo '<a href="content.php?id=' . $val[link] . '" name="' . $val[coll] . '">' . $val[sortname] . '</a><span class="rsaquo"> &rsaquo;</span>';
+                echo '<a href="content.php?id=' . $val[link] . '" id="' . $val[coll] . '">' . $val[sortname] . ' </a><i class="rsaquo fa fa-angle-right" aria-hidden="true"></i>';
             } else {
                 echo $val[sortname];
             }
@@ -23,4 +23,5 @@
             }
         }
     }
+    echo '</dl><hr>';
 ?>

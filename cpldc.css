@@ -350,10 +350,10 @@
     }
     .center-content h1 {
         font-size: 28px;
-        margin-bottom: 15px;
+        margin-bottom: 0;
+        padding-bottom: 0;
         color: #3f4344;
         /* border-bottom: 1px solid #ccc; */
-        padding-bottom: 15px;
         font-weight: bold;
     }
     .center-button {
@@ -361,6 +361,19 @@
     }
     .center-copy-paragraph, .center-copy-list {
         padding: 15px;
+    }
+    #intro, #about-image {
+        padding: 15px 0 0 0;
+    }
+    #about-image {
+        border-top: 1px solid #ccc;
+        margin-top: 15px;
+    }
+    .center-content hr {
+        height: 0;
+        padding: 15px 0;
+        margin: 15px 0;
+        border-top-color: #ccc;
     }
     .center-copy-list dl, .center-copy-list ul, .center-copy-paragraph dl {
         padding: 10px 15px 5px 40px;
@@ -673,6 +686,7 @@
     .rsaquo {
         /* color: #2d63af; */
         font-size: 15px;
+        font-weight: 700;
     }
     .events-viewmore, .blogs-viewmore {
         padding-bottom: 20px;
