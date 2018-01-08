@@ -42,11 +42,6 @@
           padding-left: 0;
         }
       }
-      @media (min-width: 1200px) {
-        .container{
-            max-width: 1140px !important;
-        }
-    }
 /* header */
     header {
         position: relative;
@@ -133,9 +128,9 @@
     .header-search-collapsed {
         background-color: #fff;
         border: 0;
+        cursor: pointer;
     }
     .header-search-collapsed, .header-search-expanded {
-        cursor: pointer;
         float: right;
         padding: 12px;
     }
@@ -153,6 +148,7 @@
         font-size: 1.5rem;
     }
     .header-search-expanded-icon {
+        cursor: pointer;
         float: right;
         padding: 8px 15px;
         color: #fff;
@@ -430,8 +426,8 @@
     }
     .browseall .btn-primary:hover, .browseall a:focus {
         color: #fff !important;
-        background-color: #428bca !important;
-        border-color: #428bca !important;
+        background-color: #2d63af !important;
+        border-color: #2d63af !important;
     }
     .fa-angle-double-right {
         padding-left: 5px;
@@ -448,7 +444,7 @@
         color: #2d63af;
     }
     .about-contact a:hover {
-        color: #428bca;
+        color: #2d63af;
     }
     div.tooltip-inner {
         max-width: 350px;
@@ -685,7 +681,7 @@
     }
     .events-viewmore a, .blogs-viewmore a {
         font-size: 14px;
-        color: #428bca;
+        color: #2d63af;
     }
     .events-viewmore a:hover, .blogs-viewmore a:hover {
         color: #2d63af;

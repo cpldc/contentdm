@@ -26,29 +26,30 @@ JAWS review notes:
 //        nope
 //    tables
 //        events? those are divs tho
-    sequences 
-        check with f12
-    color contrast ratios
-        dependent on bibliocommons
-            wait?  switch blues now?
-            PER GP: get rid of all light blues
-    widen everything to match bibliocommons
-    font sizing
-        seems like a responsive issue - fixed sizes enlarge just fine, but if you have to horizontally scroll to read, that's a responsiveness problem, not a font size problem
-    keyboard navigation
-        js-built header stuff is keyboard unusable
-            search
-            browse
-            events
-        bibliocommons "skip to main navigation" in responsive is broken
-            gotta replicate these 
-        in page links work? notoriously don't
-    focus order
-        seems ok
-    link purpose
-        "view more" in the blogs/events
-            PER GP: use aria tag for these
-    mouseover should not be pointer on "search te digital collections"
+//    sequences 
+//        check with f12
+//    color contrast ratios
+//        dependent on bibliocommons
+//            wait?  switch blues now?
+//            PER GP: get rid of all light blues
+//    widen everything to match bibliocommons
+//        not working :( also GP prefers narrower, which is close to where mine is
+//    font sizing
+//        seems like a responsive issue - fixed sizes enlarge just fine, but if you have to horizontally scroll to read, that's a responsiveness problem, not a font size problem
+//    keyboard navigation
+//        js-built header stuff is keyboard unusable
+//            search
+//            browse
+//            events
+//        bibliocommons "skip to main navigation" in responsive is broken
+//            gotta replicate these 
+//        in page links work? notoriously don't
+//    focus order
+//        seems ok
+//    link purpose
+//        "view more" in the blogs/events
+//            PER GP: use aria tag for these
+//    mouseover should not be pointer on "search te digital collections"
     pg 51, example 2: they want images with alt text instead of <i> - but this disables font imagery, which is the future -
         instead, per fontawesome, use aria-labels on the <a> around it, like: 
             <a href="path/to/shopping/cart" aria-label="View 3 items in your shopping cart">

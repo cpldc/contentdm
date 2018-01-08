@@ -18,14 +18,14 @@
 		array('link' => 'http://www.chipublib.org/archives-collections/', 'text' => 'Archival Collections'),
 		array('link' => 'https://www.chipublib.org/browse_program/one-book-one-chicago/', 'text' => 'One Book, One Chicago'));
 	$headerLinks = array($format, $aud, $more);
-?>
+	?>
+<header>
 <section class="a11y-skip-links">
 	<span class="invisitext"><a href="#nav-sidebar" onclick="showLeftSidebar()" class="a11ylinks">Skip to Navigation</a></span>
 	<span class="invisitext hidden-lg-up"><a href="#search-query" onclick="expandSearch()" class="a11ylinks">Skip to Search</a></span>
 	<span class="invisitext hidden-md-down"><a href="#search-query2" onclick="expandSearch()" class="a11ylinks">Skip to Search</a></span>
 	<span class="invisitext"><a href="#content-top" class="a11ylinks">Skip to Content</a></span>
 </section>
-<header>
 	<section role="banner" aria-label="Header">
 		<div class="container">
 			<div class="row justify-content-between align-items-center">
@@ -39,11 +39,12 @@
 							<img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/mobile_logo.png?1505979997263" alt="" />
 						</a>
 					</div>
-					<div class="inline-div"><button class="header-sm-button" data-toggle="modal" data-target="#myModal" tabindex="0"><i class="fa fa-bars" aria-hidden="true"></i></div>
+					<div class="inline-div"><button class="header-sm-button" data-toggle="modal" data-target="#myModal" tabindex="0"><i class="fa fa-bars" aria-hidden="true"></i></button></div>
 					<div class="inline-div"><a class="header-sm-button light-left-border" href="https://chipublib.bibliocommons.com/events/search/index"><i class="fa fa-calendar" aria-hidden="true"></i></a></div>
 				</div>
 				<div class="col-3 col-lg-8 clearfix">
-				<div class="inline-div float-right"><button class="header-search-collapsed" onclick="expandSearch()">
+				<div class="inline-div float-right">
+					<div class="header-search-collapsed" onclick="expandSearch()">
 						<div class="header-search-collapsed-text hidden-sm-down">Search</div>
 						<div class="header-search-collapsed-icon" ><i class="fa fa-search" aria-hidden="true"></i></div>
 					</div>
