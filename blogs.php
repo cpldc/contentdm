@@ -38,8 +38,9 @@
             $description = $feed[$x]['desc'];
             $pos=strpos($description, ' ', 60);
             $date = date('F j, Y', strtotime($feed[$x]['date']));
-            $htmlStr .= '<div class="blogpost"><dl><dt class="blogpost-title"><a href="' . $link . '" class="blogpost-link">' . $title . '<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></dt><dd class="blogpost-author-date"> By: ' . $author . ', ' . $date . '</dd><dd class="blogpost-description">' . substr($description,0,65 ) . '&hellip;</dd></div>';
+            $htmlStr .= '<dl><dt class="blogpost-title"><a href="' . $link . '" class="blogpost-link">' . $title . '<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></dt><dd class="blogpost-author-date"> By: ' . $author . ', ' . $date . '</dd><dd class="blogpost-description">' . substr($description,0,65 ) . '&hellip;</dd></dl>';
         }
+        $htmlStr = '<div class="blogpost">' . $htmlStr . '</div>';
         file_put_contents('blogs.html', $htmlStr);
         include $cache_file;
     }

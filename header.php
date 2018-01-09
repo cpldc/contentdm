@@ -22,8 +22,8 @@
 <header>
 <section class="a11y-skip-links">
 	<span class="invisitext"><a href="#nav-sidebar" onclick="showLeftSidebar()" class="a11ylinks">Skip to Navigation</a></span>
-	<span class="invisitext hidden-lg-up"><a href="#search-query" onclick="expandSearch()" class="a11ylinks">Skip to Search</a></span>
-	<span class="invisitext hidden-md-down"><a href="#search-query2" onclick="expandSearch()" class="a11ylinks">Skip to Search</a></span>
+	<span class="invisitext hidden-lg-up"><a href="#search-query2" onclick="expandSearch()" class="a11ylinks">Skip to Search</a></span>
+	<span class="invisitext hidden-md-down"><a href="#search-query" onclick="expandSearch()" class="a11ylinks">Skip to Search</a></span>
 	<span class="invisitext"><a href="#content-top" class="a11ylinks">Skip to Content</a></span>
 </section>
 	<section role="banner" aria-label="Header">

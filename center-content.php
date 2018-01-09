@@ -6,6 +6,7 @@
 				<div class="container-fluid lightbox imageGallery1">
 					<div class="row">
 						<div class="col-12 lightbox-main-img-div">
+							<!-- Dear w3c, if you built a image crop that actually works, I wouldn't have to do nonsense like make an image the background of an image with no src.  Love, CPLDC. -->
 						<?php 
 							if ($PAGE[type] == 'collection'){
 								$mainImgUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $PAGE[coll] . '/' . $PAGE[mainimage][url] . '/default.jpg';
@@ -104,7 +105,7 @@
 						} else {
 							echo '<div class="center-copy-list">';
 						}
-							echo '<h4>Digital Collections</h4>
+							echo '<h2>Digital Collections</h2>
 							<span>This collection is made up of the following archival collections:</span>
                             <dl>';
                         foreach ($PAGE[subcollections] as $key=>$val){
@@ -119,7 +120,7 @@
 						} else {
 							echo '<div class="center-copy-list">';
 						}
-						echo '<h4>Digital Collections</h4>
+						echo '<h2>Digital Collections</h2>
                             <span>Collections ' . $PAGE[catcoll] . ' include:</span>
                             <dl>';
 						usort($cards, build_sorter('sortname'));
@@ -145,7 +146,7 @@
 							echo '<div class="center-copy-list">';
 						}
 						if ($PAGE[shortname] != "MRC"){
-							echo '<h4>Digital Collections</h4>
+							echo '<h2>Digital Collections</h2>
 								<p>Digital collections from the ' . $PAGE[longname] . ':<p><dl>';
 							usort($cards, build_sorter('sortname'));
 							foreach ($cards as $key => $val){
@@ -154,18 +155,18 @@
 								}
 							} 
 							}else {
-								echo '<h4>Digital Collections</h4>
+								echo '<h2>Digital Collections</h2>
 								<p>Digital collections from the ' . $PAGE[title] . ' are forthcoming.';
 							}
 							echo '</dl></div></section>';
 					}
                     if ($PAGE[CPLRes]){
-						echo '<section aria-labelleddby="CPLRes">';
+						echo '<section>';
                         echo '<div class="center-copy-list">
-                            <h4 id="CPLRes">More CPL Resources</h4>
-                            <dl>';
+                            <h2 id="CPLRes">More CPL Resources</h2>';
 						if($PAGE[findingaid]){
 							if(is_array($PAGE[findingaid][0])){
+								echo '<dl>';
 								if ($PAGE[link] == 'HW') {
 									echo '<dt>Finding Aids</dt><dd>Chicago Public Library also holds extensive physical collections about Harold Washington, including his mayoral, congressional and state legislative years. Sample finding aids below.</dd><dd><ul>';
 								} else {
@@ -174,12 +175,13 @@
 								foreach ($PAGE[findingaid] as $key=>$val) {
 									echo '<li><a href="' . $val[link] . '">' . $val[text] . '</a></li>';
 								}
-								echo '</ul></dd>';
+								echo '</ul></dd></dl>';
 							} else {
-								echo '<h4>Finding Aid</h4><dl><dt><a href="' . $PAGE[findingaid][link] . '">' . $PAGE[findingaid][text] . '</a></dt><dd>The descriptive inventory for the complete physical collection.</dl>';
+								echo '<h3 class="finding-aid-list">Finding Aid</h3><dl class="finding-aid-list"><dt><a href="' . $PAGE[findingaid][link] . '">' . $PAGE[findingaid][text] . '</a></dt><dd>The descriptive inventory for the complete physical collection.</dl>';
 							}
 						}
 						usort($PAGE[CPLRes], build_sorter('dt'));
+						echo '<dl>';
                         foreach ($PAGE[CPLRes] as $key => $val){
 							echo '<dt><a href="' . $val[a] . '">' . $val[dt] . '</a></dt><dd>' . $val[dd] . '</dd>';
 							echo $PAGE[CPLRes][dt];
@@ -201,7 +203,7 @@
                     }
                     if ($PAGE[ExRes]){
 						echo '<section aria-labelledby="ExRes"><div class="center-copy-list">
-						<h4 id="ExRes">External Resources</h4>
+						<h2 id="ExRes">External Resources</h2>
 						<dl>';
 						usort($PAGE[ExRes], build_sorter('dt'));
                         foreach ($PAGE[ExRes] as $key => $val){

@@ -42,7 +42,7 @@
             $locationLink = array_search($location, $LOCATIONLINKS);
             $date = date('M j', strtotime($feed[$x]['date']));
             $time = date('g:iA', strtotime($feed[$x]['date']) - 60 * 60 * 6);
-            $htmlStr .= '<div class="event"> <h3 class="event-title"><a href="' . $link . '" class="event-link">' . $title . '<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h4><div class="event-location"><a href="' . $locationLink . '" class="event-location-link">' . $location . '</a></div><div class="event-datetime"><div class="event-date">' . $date . '</div><div class="event-time">' . $time . '</div></div></div>';
+            $htmlStr .= '<div class="event"> <h3 class="event-title"><a href="' . $link . '" class="event-link">' . $title . '<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h3><div class="event-location"><a href="' . $locationLink . '" class="event-location-link">' . $location . '</a></div><div class="event-datetime"><div class="event-date">' . $date . '</div><div class="event-time">' . $time . '</div></div></div>';
         }
         file_put_contents('events.html', $htmlStr);
         include $cache_file;
