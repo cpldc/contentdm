@@ -161,6 +161,9 @@
         padding: 0 5px 0 0;
         font-weight: bold;
     }
+    .wider {
+        width: 100%;
+    }
     .header-search-expanded-input input {
         border: 1px solid #ccc;
         height: 34px;

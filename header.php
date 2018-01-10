@@ -43,7 +43,7 @@
 					<div class="inline-div"><a class="header-sm-button light-left-border" href="https://chipublib.bibliocommons.com/events/search/index"><i class="fa fa-calendar" aria-hidden="true"></i></a></div>
 				</div>
 				<div class="col-3 col-lg-8 clearfix">
-					<div class="inline-div float-right">
+					<div class="inline-div wider float-right">
 						<div class="header-search-collapsed" onclick="expandSearch()">
 							<div class="header-search-collapsed-text hidden-sm-down">Search</div>
 							<div class="header-search-collapsed-icon" ><i class="fa fa-search" aria-hidden="true"></i></div>
