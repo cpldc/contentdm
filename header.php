@@ -44,10 +44,10 @@
 				</div>
 				<div class="col-3 col-lg-8 clearfix">
 					<div class="inline-div wider float-right">
-						<div class="header-search-collapsed" onclick="expandSearch()">
+						<button class="header-search-collapsed" onclick="expandSearch()">
 							<div class="header-search-collapsed-text hidden-sm-down">Search</div>
 							<div class="header-search-collapsed-icon" ><i class="fa fa-search" aria-hidden="true"></i></div>
-						</div>
+						</button>
 						<div class="header-search-expanded hide">
 							<div class="header-search-expanded-text hidden-lg-down" >Search the Digital Collections</div>
 							<div class="header-search-expanded-text hidden-xl-up" >Search</div>
