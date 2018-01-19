@@ -44,10 +44,10 @@
 				</div>
 				<div class="col-3 col-lg-8 clearfix">
 					<div class="inline-div wider float-right">
-						<button class="header-search-collapsed" onclick="expandSearch()">
+						<div class="header-search-collapsed" onclick="expandSearch()" tabindex="0">
 							<div class="header-search-collapsed-text hidden-sm-down">Search</div>
 							<div class="header-search-collapsed-icon" ><i class="fa fa-search" aria-hidden="true"></i></div>
-						</button>
+						</div>
 						<div class="header-search-expanded hide">
 							<div class="header-search-expanded-text hidden-lg-down" >Search the Digital Collections</div>
 							<div class="header-search-expanded-text hidden-xl-up" >Search</div>
@@ -56,10 +56,11 @@
 						</div>
 					</div>
 				</div>
+				</div>
 				<div class="row align-items-center">
 					<div class="hidden-md-down col-lg-12">
 						<div class="header-bottom">
-							<div class="inline-div"><button class="header-lg-button" onclick="showDropdown()" tabindex="0" >Browse <i class="fa fa-angle-down" aria-hidden="true"></i></button></div>
+							<div class="inline-div"><a class="header-lg-button" onclick="showDropdown()" tabindex="0" >Browse <i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
 							<div class="inline-div"><a class="header-lg-button" href="https://chipublib.bibliocommons.com/events/search/index"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></div>
 						</div>
 					</div>

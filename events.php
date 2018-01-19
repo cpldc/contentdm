@@ -32,7 +32,12 @@
                 'date' => $node->getElementsByTagNameNS('http://bibliocommons.com/rss/1.0/modules/event/', 'start_date')->item(0)->nodeValue,
                 'cat' => $node->getElementsByTagName('category')->item(0)->nodeValue
                 );
-            if ($node->getElementsByTagName('category')->item(0)->nodeValue == 'History and Genealogy') array_push($feed, $item);
+                if ($node->getElementsByTagName('category')->item(0)->nodeValue == 'History and Genealogy' ||
+                    $node->getElementsByTagName('category')->item(1)->nodeValue == 'History and Genealogy' ||
+                    $node->getElementsByTagName('category')->item(2)->nodeValue == 'History and Genealogy') 
+                {
+                    array_push($feed, $item);
+                }
         }
         for($x=0;$x<$limit;$x++) {
             $title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);

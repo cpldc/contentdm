@@ -915,7 +915,7 @@
     $AfAm[title] = 'African Americans';
         $AfAm[shortname] = 'African Americans';
         $AfAm[sidebarname] = 'African Americans';
-        $AfAm[cardpic] = array('pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/10/default.jpg','pich'=>'250px','size'=>'110%','pos'=>'50% 50%');
+        $AfAm[cardpic] = array('pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/10/default.jpg','pich'=>'250px','size'=>'110%','pos'=>'50% 50%','alt'=>'Richard Durham sits at a desk with a typewriter.  He is reading some loose pages and has a pencil in his right hand.');
         $AfAm[textshort] = 'Chicago Public Library collections that document African American history in Chicago and throughout the United States.';
         $AfAm[textlong] = 'Chicago Public Library collections that document African American history in Chicago and throughout the United States.';
         $AfAm[catcoll] = 'documenting Black history in the United States';
@@ -932,27 +932,32 @@
             'coll' => 'cr',
             'text'=>'Women&rsquo;s reading group at Hall Branch, 1940',
             'size'=>'100%',
-            'align'=>'50% 0%');
+            'align'=>'50% 0%',
+            'alt'=>'A book club consisting of over two dozen women sit at a table in Hall Branch.');
         $AfAm[thumbs] = array(array('url'=>'14',
                 'coll' => 'cr',
                 'text'=>'All-black WAC band, 1944',
                 'size'=>'431px',
-                'align'=>'0% 20%'),
+                'align'=>'0% 20%',
+                'alt'=>'An African American Women&rsquo;s Army Corps band at a performance.'),
             array('url'=>'8g',
                 'coll' => 'cr',
                 'text'=>'Marian Campfield, women&rsquo;s editor of the <em>Chicago Defender</em>, 1948',
                 'size'=>'140%',
-                'align'=>'center'),
+                'align'=>'center',
+                'alt'=>'Marian Campfield stands outside the Chicago Defender offices next to a press car. '),
             array('url'=>'0',
                 'coll' => 'cr',
                 'text'=>'Catalog, &rdquo;Exhibition of the Art of the American Negro,&rdquo; 1940',
                 'size'=>'112%',
-                'align'=>'75% 45%'),
+                'align'=>'75% 45%',
+                'alt'=>'Cover of &ldquo;Exhibition of the Art of the American Negro&rdquo; catalog featuring an image of a  painting by Charles White.  '),
             array('url'=>'6',
                 'coll' => 'rhwc',
                 'text'=>'Mayor Washington at the 27th Annual International Folk Fair, 1986',
                 'size'=>'200%',
-                'align'=>'40% 60%'));
+                'align'=>'40% 60%',
+                'alt'=>'Mayor Washington stands with two men in front of three paintings at the DuSable Museum of African American History.'));
         $AfAm[link] = 'AfAm';
         $AfAm[type] = 'category';
         $AfAm[sidebarflag] = 'x';
@@ -1069,7 +1074,7 @@
         );
         $News[textshort] = '';
         $News[textlong] = '';
-        $News[link] = 'Examiner';
+        $News[link] = 'examiner';
         $News[type] = 'category';
         $News[sidebarflag] = 'x';
 

@@ -185,7 +185,6 @@
 	}
 
 	function rightsClick(loc) {
-		console.log("clickin " + $(loc).attr('class'));
 		// event.preventDefault();
 		if ($(loc).attr('class').indexOf("rights-i") >= 0){
 			$(loc).toggle();
@@ -255,5 +254,10 @@
 			if(e.keyCode==13)
 				searchQuery2();
 		});
+		$('.header-search-collapsed').keypress(function(e){
+			if(e.keyCode==13)
+				expandSearch();
+		});
+		
 		RefreshEventListener();
 	});
