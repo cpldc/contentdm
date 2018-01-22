@@ -9,28 +9,28 @@
             };
         }
 
-        $rhwc[flag] =         '1';
-        $CPB01[flag] =    '2';
-        $p16818coll6[flag] =       '3';
-        $wha[flag] =     '4';
-        $mpu[flag] =         '5';
-        $ChicagoParks[flag] =        '6';
-        $examiner[flag] =   '7';
-        $rwk[flag] =         '8';
-        $hdg[flag] =        '9';
-        $bar[flag] =         '10';
-        $woop[flag] =        '11';
-        $cr[flag] =     '12';
-        $dtd[flag] =     'x';
-        $cfc[flag] =        'x';
-        $ahs[flag] =        'x';
-        $rvw[flag] =       'x';
-        $AfAm[flag] =       'x';
-        $News[flag] =       '';
-        $Neigh[flag] =      'x';
-        $CivilWar[flag] =   'x';
-        $Parks[flag] =      'x';
-        $LibEd[flag] =      'x';
+        $rhwc[flag] =           '1';
+        $CPB01[flag] =          '2';
+        $mpu[flag] =            '3';
+        $cr[flag] =             '4';
+        $examiner[flag] =       '5';
+        $wha[flag] =            '7';
+        $rwk[flag] =            '8';
+        $hdg[flag] =            '6';
+        $bar[flag] =            '9';
+        $woop[flag] =           '11';
+        $p16818coll6[flag] =    '10';
+        $ChicagoParks[flag] =   '';
+        $dtd[flag] =            '12';
+        $cfc[flag] =            '';
+        $ahs[flag] =            '';
+        $rvw[flag] =            '';
+        $AfAm[flag] =           '';
+        $News[flag] =           '';
+        $Neigh[flag] =          '';
+        $CivilWar[flag] =       '';
+        $Parks[flag] =          '';
+        $LibEd[flag] =          '';
 
 //array(array('a'=>'','dt'=>'','dd'=>''));
 // since titles are written before center-content takes over, all pages need titles stored here; they also print at the top of the center-content area

@@ -55,7 +55,7 @@
 		<section aria-label="Collection Description">
 				<?php 
 					if ($PAGE[coll]) {
-						echo '<div class="center-button browseall"><a href="http://digital.chipublib.org/digital/search/collection/' . $PAGE[coll] . '/order/title/ad/asc" class="btn btn-primary">Browse All</a></div>';
+						echo '<div class="center-button browseall"><a href="http://digital.chipublib.org/digital/collection/' . $PAGE[coll] . '/search" class="btn btn-primary">Browse All</a></div>';
 					} else {
 						$COLL;
 						foreach ($cards as $key => $val) {
