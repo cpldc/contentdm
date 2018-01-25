@@ -52,6 +52,9 @@
         background: repeating-linear-gradient( #fff,#fff 114px,#000 114px,#000 168px);
         box-shadow: 0px 3px 4px 1px rgba(50,50,50,0.5);
     }
+    .header-banner-container {
+        position: relative;
+    }
     .header-logo-img {
         padding: 15px 0 8px 0;
     }
@@ -177,13 +180,14 @@
         box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
     }
     .header-search-dropped {
-        position: relative;
-        top: -10px;
+        position: absolute;
+        top: 52px;
+        right: 2%;
         margin: auto;
         z-index: 2;
         background-color: #f2f2f2;
         border: 1px solid #ccc;
-        /* width: 400px; */
+        width: 96%;
         padding: 0 0px 20px 0px;
     }
     .header-search-dropped-search {
@@ -229,7 +233,7 @@
         float: right;
         position: relative;
         top: -40px;
-        right: -1px;
+        right: 17px;
         padding: 4px 7px 3px 7px;
         background-color: #f2f2f2;
         border-left: 1px solid #ccc;

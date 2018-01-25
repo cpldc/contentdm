@@ -65,25 +65,26 @@
 						</div>
 					</div>
 				</div>
+			<div role="search" class="container header-search-dropped hide clearfix" aria-label="Search the Digital Collections">
+				<div class="header-search-dropped-close"><i class="fa fa-times fa-2x" onclick="hideSearch()" aria-hidden="true"></i></div>
+				<div class="row header-search-dropped-search no-gutters align-items-center clearfix">
+					<div class="col-2 header-search-dropped-text">
+						Search
+					</div>
+					<div class="col-8 header-search-dropped-input">
+						<input type="text" name="search-query2" id="search-input2">
+					</div>
+					<div class="col-1 header-search-dropped-icon">
+						<i class="fa fa-search" onclick="searchQuery2()" aria-hidden="true"></i>
+					</div>
+					<br />
+					<span class="header-search-dropped-adv"><a href="http://digital.chipublib.org/digital/search/advanced">Advanced Search</a></span>
+				</div>
+		</div>
 			</div>
 		</div>
 	</section>
-	<section role="search" class="container header-search-dropped hide clearfix" aria-label="Search the Digital Collections">
-		<div class="header-search-dropped-close"><i class="fa fa-times fa-2x" onclick="hideSearch()" aria-hidden="true"></i></div>
-		<div class="row header-search-dropped-search no-gutters align-items-center clearfix">
-			<div class="col-2 header-search-dropped-text">
-				Search
-			</div>
-			<div class="col-8 header-search-dropped-input">
-				<input type="text" name="search-query2" id="search-input2">
-			</div>
-			<div class="col-1 header-search-dropped-icon">
-				<i class="fa fa-search" onclick="searchQuery2()" aria-hidden="true"></i>
-			</div>
-			<br />
-			<span class="header-search-dropped-adv"><a href="http://digital.chipublib.org/digital/search/advanced">Advanced Search</a></span>
-		</div>
-	</section>
+
 	<section role="navigation" class="header-browse-dropdown-wrapper" style="display: none;" onclick="showDropdown()" aria-label="Browse CPL Website">
 		<div class="container header-browse-dropdown">
 			<div class="row">

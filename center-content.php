@@ -80,7 +80,9 @@
 								} elseif ($PAGE[link] == 'wha') {
 									echo 'Artifacts from the ' . $PAGE[creditname] . ' are housed in the ' . $PAGE[location][longname] . '.';
 								} elseif ($PAGE[link] == 'CPB01') {
-									echo 'The ' . $PAGE[title] . ' Collection is housed in the ' . $PAGE[location][longname] . '.';
+									echo 'Artifacts from the ' . $PAGE[creditname] . ' are housed in the ' . $PAGE[location][longname] . '.';
+								} elseif ($PAGE[link] == 'hdg') {
+									echo 'This collection is housed in the ' . $PAGE[location][longname] . '.  Additional materials by Henry Delorval Green are held at the Chicago History Museum.';
 								} else {
 									echo 'The ' . $PAGE[title] . ' is housed in the ' . $PAGE[location][longname] . '.';
 								}
