@@ -365,11 +365,14 @@
     .center-copy-paragraph, .center-copy-list {
         padding: 15px;
     }
-    #intro, #about-image {
+    #intro, #about-image, #announce-image {
         padding: 15px 0 0 0;
     }
-    #about-image {
+    #about-image, .hr {
         border-top: 1px solid #ccc;
+        margin-top: 15px;
+    }
+    #announce-image {
         margin-top: 15px;
     }
     .center-content hr {
@@ -517,14 +520,22 @@
         position: relative;
         display: inline-block;
     }
-    .about-image {
+    .about-image, .announce-image {
         width: 94% !important;
-        height: 250px;
         margin: auto;
         position: relative;
+    }
+    .about-image {
+        height: 250px;
         background: url(http://digital.chipublib.org/digital/api/singleitem/image/mpu/2232/default.jpg); 
         background-size: 120%; 
         background-position: 0px 60%;
+    }
+    .announce-image {
+        height: 375px !important;
+        background: url(http://digital.chipublib.org/digital/api/singleitem/image/woop/73/default.jpg); 
+        background-size: 150%; 
+        background-position: 100% 40%;
     }
     .catlink0 {
         padding-right: 0.5rem;
@@ -915,4 +926,10 @@
         background: #767d7d;
         color: #fff !important;
         text-decoration: none;
+    }
+
+/* caa */
+
+    .az, .az-intro {
+        /* display: none; */
     }

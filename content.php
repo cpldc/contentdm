@@ -49,8 +49,12 @@
 				<?php 
 					if ($PAGE[title] == 'Digital Collections A-Z'){
 						include 'all.php';
+					} elseif ($PAGE[title] == 'Chicago Artists Directory') {
+						include 'CAA.php';
 					} elseif ($PAGE[title] == 'About CPL Digital Collections') {
 						include 'about.php';
+					} elseif ($PAGE[title] == 'CPL Revamps Digital Collections Website') {
+						include 'announce.php';
 					} else {
 						include 'center-content.php';
 					}

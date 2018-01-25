@@ -8,20 +8,20 @@
                 return strnatcmp($a[$key], $b[$key]);
             };
         }
-
-        $rhwc[flag] =           '1';
-        $CPB01[flag] =          '2';
-        $mpu[flag] =            '3';
-        $cr[flag] =             '4';
-        $examiner[flag] =       '5';
+        $Announce[flag] =       '1';
+        $rhwc[flag] =           '2';
+        $CPB01[flag] =          '3';
+        $mpu[flag] =            '4';
+        $cr[flag] =             '5';
+        $examiner[flag] =       '6';
         $wha[flag] =            '7';
         $rwk[flag] =            '8';
-        $hdg[flag] =            '6';
-        $bar[flag] =            '9';
+        $hdg[flag] =            '9';
+        $bar[flag] =            '10';
         $woop[flag] =           '11';
-        $p16818coll6[flag] =    '10';
+        $p16818coll6[flag] =    '12';
+        // $dtd[flag] =            '12';
         $ChicagoParks[flag] =   '';
-        $dtd[flag] =            '12';
         $cfc[flag] =            '';
         $ahs[flag] =            '';
         $rvw[flag] =            '';
@@ -36,6 +36,15 @@
 // since titles are written before center-content takes over, all pages need titles stored here; they also print at the top of the center-content area
     $All[title] = 'Digital Collections A-Z';
     $About[title] = 'About CPL Digital Collections';
+    $Announce[title] = 'CPL Revamps Digital Collections Website'; 
+    $Announce[link] = 'Announce';
+    $Announce[cardpic] = array(
+        'pic'=>'https://www.chipublib.org/wp-content/uploads/sites/3/2018/01/cpl-logo-cdm-1.jpg',
+        'pich'=>'17rem',
+        'size'=>'cover',
+        'pos'=>'50% 50%');
+    $Announce[textshort] = 'We’ve updated our site to make it easier for you to find thousands of images, documents and artifacts from CPL’s special collections.';
+    $CAA[title] = 'Chicago Artists Directory';
     // takedown is a mess, move along
     $Takedown[title] = 'Notice and Takedown Policy';
     $Takedown[textlong] = 'Notice to users: The Chicago Public Library works to ensure that it has appropriate rights to provide access to content through the Digital Collections website. These materials are made available for educational and scholarly use.';
@@ -60,7 +69,7 @@
     $HWLCSC[title] = 'Special Collections at HWLC';
         $HWLCSC[sortname] = 'Special Collections at HWLC';
         $HWLCSC[shortname] = 'HWLCSC';
-        $HWLCSC[longname] = 'Special Collections at Harold Washington Library Center';
+        $HWLCSC[longname] = 'Special Collections and Preservation Division at Harold Washington Library Center';
         $HWLCSC[sidebarname] = 'Special Collections at HWLC';
         $HWLCSC[pic] = '';      
         $HWLCSC[mainimage] = array('url'=>'79',
@@ -216,7 +225,7 @@
     $Playbills[title] = 'Chicago Theater Collection-Historic Playbills';
         $Playbills[sortname] = 'Chicago Theater Collection-Historic Playbills';
         $Playbills[textlong] = 'See <a class="all-links" href="#CPB01">Chicago Theater</a>.';
-        $Playbills[textshort] = 'Programs, playbills and newspaper clippings from more than 5,000 productions at Chicago’s historic theaters dating back to the 1840s.';
+        $Playbills[textshort] = 'Programs, playbills and newspaper clippings from more than 2,000 productions at Chicago’s historic theaters dating back to the 1840s.';
         $Playbills[browse] = 'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/';
         $Playbills[type] = 'subcollection';
                 
@@ -299,7 +308,7 @@
         $examiner[category] = 'Newspapers';
         $examiner[textshort] = 'Chicago Public Library&rsquo;s 10-year run of the <i>Chicago Examiner</i> extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
         $examiner[textlong] = 'The Chicago Examiner was one of a dozen major newspapers published in Chicago at the turn of the last century. It was known for its sensational news stories.';
-        $examiner[textrich] = '<p>The Chicago Public Library&rsquo;s 10-year run of the <i>Examiner</i>, while incomplete, extends from 1908 to 1918 and represents the longest run of the paper still available.</p><p>Follow the tragedy of the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Eastland!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">shipwreck of the Eastland,</a> a Great Lakes passenger steamer, in which 844 passengers and crew perished while the ship was tied to a dock in the Chicago River; the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Union!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">infamous 1910 Union Stock Yards fire,</a> that killed more firefighters than any building collapse until September 11, 2001; <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Dunne!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">the mystery of the Dunne Water Crib fire, </a>told through first-person accounts, reportage, photos and illustrations; and big early <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Cubs%20Sox!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">wins for the Cubs and the White Sox.</a></p>';
+        $examiner[textrich] = '<p>The Chicago Public Library&rsquo;s 10-year run of the <i>Examiner,</i> while incomplete, extends from 1908 to 1918 and represents the longest run of the paper still available.</p><p>Follow the tragedy of the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Eastland!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">shipwreck of the Eastland,</a> a Great Lakes passenger steamer, in which 844 passengers and crew perished while the ship was tied to a dock in the Chicago River; the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Union!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">infamous 1910 Union Stock Yards fire,</a> that killed more firefighters than any building collapse until September 11, 2001; <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Dunne!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">the mystery of the Dunne Water Crib fire, </a>told through first-person accounts, reportage, photos and illustrations; and big early <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Cubs%20Sox!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">wins for the Cubs and the White Sox.</a></p>';
         $examiner[mainimage] = array('url'=>'6812',
             'text'=>'&ldquo;Make Chicago One of the Most Attractive Cities in the World,&rdquo; <em>Chicago Examiner</em>, vol. 10 no. 1, 1909',
             'size'=>'150%',
@@ -332,6 +341,13 @@
                                         array('a'=>'http://idnc.library.illinois.edu/',
                                             'dt'=>'Illinois Digital Newspaper Collections',
                                             'dd'=>'More than 100 Illinois newspapers dating back to 1831.'));
+        $examiner[findingaid] = array(array('link' => 'https://www.chipublib.org/fa-austin-newspapers-collection/','text' => 'Austin Newspapers Collection'),
+            array('link' => 'https://www.chipublib.org/fa-chicago-african-american-and-latino-newspapers-microfilm-collection/','text' => 'Chicago African American and Latino Newspapers Microfilm Collection'),
+            array('link' => 'https://www.chipublib.org/fa-englewood-newspaper-collection/','text' => 'Englewood Newspaper Collection'),
+            array('link' => 'https://www.chipublib.org/fa-south-chicago-newspapers-collection/','text' => 'South Chicago Newspapers Collection'),
+            array('link' => 'https://www.chipublib.org/fa-south-shore-newspapers-collection/','text' => 'South Shore Newspapers Collection'),
+            array('link' => 'https://www.chipublib.org/fa-the-greek-star-newspaper-collection','text' => 'Greek Star Newspaper Collection'),
+            array('link' => 'https://www.chipublib.org/fa-west-side-newspaper-collection/','text' => 'West Side Newspaper Collection'));
         $examiner[link] = 'examiner';
         $examiner[location] = $HWLCSC;
         $examiner[type] = 'collection';
@@ -342,7 +358,7 @@
         $bar[cardpic] = array('pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/bar/43/default.jpg','pich'=>'20rem','size'=>'110%','pos'=>'auto');
         $bar[category] = 'Libraries &amp; Education';
         $bar[textshort] = 'Family photographs of CPL Librarian Esther Barlow and images of her work at the former Hild Regional Library and Lake View Branch Library from 1927 to 1976.';
-        $bar[textlong] = 'Esther Barlow was a children&rsquo;s librarian in neighborhood branches of the Chicago Public Library from 1927 until 1976.';
+        $bar[textlong] = 'Esther Barlow was a children&rsquo;s librarian in neighborhood branches of Chicago Public Library from 1927 until 1976.';
         $bar[textrich] = 'Included in this collection are photographs of the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/bar/searchterm/Barlow%20family/field/subjed/mode/all/conn/and/order/nosort">Barlow family</a> and images of Esther Barlow at work at the Hild Regional Library and Lake View Branch Library. Photographs showcase Barlow with her colleagues and her <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/bar/searchterm/Working%20with%20children/field/subjed/mode/all/conn/and/order/nosort">work with children. </a>';
         $bar[mainimage] = array(
             'url'=>'52',
@@ -377,7 +393,7 @@
         $woop[category] = 'Libraries &amp; Education';
         $woop[textshort] = 'Photographs trace CPL&rsquo;s history from a small water tank that survived the Great Chicago Fire to the extensive network of neighborhood libraries that span the city today.';
         $woop[textlong] = 'On January 1, 1873 the Chicago Public Library opened its doors in a water tank that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to the development of neighborhood libraries across the city.';
-        $woop[textrich] = '<p>On January 1, 1873, Chicago Public Library opened its doors in a <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Water+tank/field/subjed/mode/all/conn/and/order/nosort">circular water tank</a> at the southeast corner of LaSalle and Adams streets that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to a system of 80 locations across the city. </p><p>Explore CPL through those years, from <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Delivery+stations/field/subjed/mode/all/conn/and/order/nosort">delivery stations</a> in the late 19th century to <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Bookmobiles/field/subjed/mode/all/conn/and/order/nosort">bookmobiles</a> in the mid-20th century to <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/bar/searchterm/Working%20with%20children!Hild%20Regional%20Library/field/subjed!all/mode/all!all/conn/and!and/order/nosort/ad/asc">Hild Regional Library</a> in the 1970s. </p>';
+        $woop[textrich] = '<p>Explore CPL through those years, from that <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Water+tank/field/subjed/mode/all/conn/and/order/nosort">circular water tank</a>, to <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Delivery+stations/field/subjed/mode/all/conn/and/order/nosort">delivery stations</a> in the late 19th century, to <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Bookmobiles/field/subjed/mode/all/conn/and/order/nosort">bookmobiles</a> in the mid-20th century to <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/bar/searchterm/Working%20with%20children!Hild%20Regional%20Library/field/subjed!all/mode/all!all/conn/and!and/order/nosort/ad/asc">Hild Regional Library</a> in the 1970s. </p>';
         $woop[mainimage] = array('url'=>'80',
                 'text'=>'Book room in the old water tank, circa 1873',
                 'size'=>'cover',
@@ -420,7 +436,7 @@
             array('link'=>'https://www.chipublib.org/fa-george-cleveland-hall-branch-archives/','text'=>'Chicago Public Library, George Cleveland Hall Branch Archives Finding Aid'),
             array('link'=>'https://www.chipublib.org/fa-horace-r-cayton-papers/','text'=>'Horace Cayton Papers Finding Aid'),
             array('link'=>'https://www.chipublib.org/fa-william-mcbride-papers/','text'=>'William McBride, Jr. Papers Finding Aid'));
-        $cr[CPLRes] = array(array('a'=>$AfAm[link],'dt'=>'African American Digital Collections','dd'=>'Digital collections that include materials documenting Black history in the United States.'));
+        $cr[CPLRes] = array(array('a'=>'content.php?id=AfAm','dt'=>'African American Digital Collections','dd'=>'Digital collections that include materials documenting Black history in the United States.'));
         $cr[mainimage] = array('url'=>'1',
             'text'=>'Horace Cayton with &ldquo;Blue Boy,&rdquo; 1944',
             'size'=>'110%',
@@ -485,9 +501,10 @@
         
 
 
-    $wha[title] = 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';-
+    $wha[title] = 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
         $wha[coll] = 'wha';
         $wha[sortname] = 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
+        $wha[creditname] = 'Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
         $wha[cardpic] = array(
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/341/default.jpg',
             'pich'=>'280px',
@@ -498,7 +515,7 @@
         $wha[textshort] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield.';
         $wha[textlong] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience. ';
         $wha[textrich] = '<p>Illinois supported the Union effort by sending hundreds of thousands of troops into battle, but the Civil War was also fought on the homefront. </p><p>Examine artifacts and photographs from both arenas. Highlights include <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/wha/searchterm/camp+life/field/subjeb/mode/all/conn/and/order/title/ad/asc">camp life</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/wha/searchterm/small+arms/field/all/mode/exact/conn/and/order/nosort/ad/asc">swords</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/wha/searchterm/clothing/field/all/mode/exact/conn/and/order/nosort/ad/asc">uniforms</a>.</p> ';
-        $wha[rights] = '<p>Artifacts from the Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections is made possible by generous gifts to <a href="http://cplfoundation.org/">Chicago Public Library Foundation</a> by the partners of Skadden, Arps, Slate, Meagher &amp; Flom LLP in honor of Wayne Whalen&rsquo;s interest in Abraham Lincoln and the Civil War.</p>';
+        $wha[rights] = '<p>The Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections is made possible by generous gifts to <a href="http://cplfoundation.org/">Chicago Public Library Foundation</a> by the partners of Skadden, Arps, Slate, Meagher &amp; Flom LLP in honor of Wayne Whalen&rsquo;s interest in Abraham Lincoln and the Civil War.</p>';
         $wha[CPLRes] = array(array('a'=>'https://www.chipublib.org/fa-american-civil-war-documents-manuscripts-letters-and-diaries-and-grand-army-of-the-republic-collection/','dt'=>'American Civil War Documents, Manuscripts, Letters and Diaries and Grand Army of the Republic Collections Finding Aid','dd'=>'A large portion of this collection focuses on the experience of soldiers and leaders from Illinois told through letters and diaries.'),
                                 array('a'=>'https://www.chipublib.org/archival_subject/military/','dt'=>'Military Archival Collections','dd'=>'A list of all archival collections related to the Civil War, including records of the Daughters of Union Veterans of the Civil War, as well as personal collections of service members from other conflicts, such as World War II. '));
         $wha[mainimage] = array('url'=>'634',
@@ -678,8 +695,8 @@
                 'size'=>'730px',
                 'align'=>'80% 40%'));
         $cfc[category] = 'Neighborhoods';
-        $cfc[textshort] = 'A glimpse into the activities of the thriving civic service scene on the North Side as well as the rich ethnic and religious heritage of the community.';
-        $cfc[textlong] = 'A glimpse into the activities of the thriving civic service scene on the North Side as well as the rich ethnic and religious heritage of the community.';
+        $cfc[textshort] = 'Glimpse into the activities of the thriving civic service scene on the North Side as well as the rich ethnic and religious heritage of the community.';
+        $cfc[textlong] = 'Glimpse into the activities of the thriving civic service scene on the North Side as well as the rich ethnic and religious heritage of the community.';
         $cfc[subdigicoll] = array(array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort','dt'=>'Christian Fellowship Church Collection','dd'=>'Activities of the church founded by Conrad and Martha Wendtland in their home in 1926.'),
                                 array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort','dt'=>'Lake View Council on Religious Action','dd'=>'Representatives from local churches and synagogues and members of the Kiwanis Club of Lake View at work'),
                                 array('a'=>'http://digital.chipublib.org/digital/collection/cfc/search/searchterm/Portage%20Park%20Community%20Collection/field/collec/mode/exact/conn/and','dt'=>'Portage Park Community Collection','dd'=>'Patriotism on display during World War I.'),
@@ -744,7 +761,7 @@
             'pos'=>'87% 47%'
         );
         $ChicagoParks[mainimage] = array('url'=>'6155',
-            'text'=>'Ogden Park, opening of bicycle program, 1956',
+            'text'=>'Mayor Richard J. Daley and Dr. Paul White, Ogden Park, opening of bicycle program, 1956',
             'size'=>'125%',
             'align'=>'66% 50%');
         $ChicagoParks[thumbs] = array(array('url'=>'6221',
@@ -782,7 +799,7 @@
             'pos'=>'75% 40%'
         );
         $rhwc[category] = 'African Americans';
-        $rhwc[textshort] = 'Chicago&rsquo;s first African American mayor of Chicago served from 1983 to 1987, and his legacy carries on.';
+        $rhwc[textshort] = 'Chicago&rsquo;s first African American mayor served from 1983 to 1987, and his legacy endures.';
         $rhwc[textlong] = 'Mayor Harold Washington, the first African American mayor of Chicago, transformed the city during his years in office (1983-1987).';
         $rhwc[textrich] = '<p>This collection showcases Harold Washington&rsquo;s work with <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Constituency%20groups/field/subjed/mode/all/conn/and/order/nosort">ethnic and constituency groups</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Famous%20persons/field/subjed/mode/all/conn/and/order/nosort">famous people</a>, <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Groundbreaking/field/subjed/mode/all/conn/and/order/nosort">groundbreaking and development projects</a> and <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/rhwc/searchterm/Politics/field/subjed/mode/all/conn/and/order/nosort">politics</a>.</p><p>Chicago Public Library also holds an extensive <a href="https://www.chipublib.org/archival_subject/harold-washington/">Harold Washington Reseach Collection</a>.  Selections from those collections can be found in the Finding Aids section below.';
         $rhwc[CPLRes] = array(array('a'=>'https://www.chipublib.org/blogs/post/welcome-to-the-municipal-reference-collection/','dt'=>'Municipal Reference Collection','dd'=>'Collections include local government publications, city election results, maps, municipal ordinances and more.'),
@@ -833,7 +850,7 @@
         );
         $rvw[category] = 'Neighborhoods';
         $rvw[textshort] = 'Street scenes and community life on the North Side, 1860s-1990s.';
-        $rvw[textlong] = 'Lake View Township and its evolution from an independent municipality into current Northside communities, 1860s-1990s';
+        $rvw[textlong] = 'Lake View Township and its evolution from an independent municipality into current Northside communities, 1860s-1990s.';
         $rvw[textrich] = '<p>More than <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/00000000-1889/field/date/mode/exact/conn/and/order/title/ad/asc">100 early photographs</a> represent Lake View Township and its residents, schools, homes, businesses and everyday rituals.</p><p>Over the next 100 years North Siders and their neighborhoods experienced tremendous changes as evidenced by their <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/clothing%20%26%20dress/field/subjea/mode/exact/conn/and/order/title/ad/asc">fashion</a>, <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/railroad!automobiles/field/subjea!subjea/mode/all!all/conn/or!and/order/nosort/ad/asc">modes of transportation</a> and the establishment of a number of <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/schools%20--%20illinois%20--%20chicago/field/subjea/mode/exact/conn/and/order/title/ad/asc">schools</a>, <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/churches/field/subjea/mode/all/conn/and/order/title/ad/asc">churches</a> and <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/clubs/field/subjea/mode/all/conn/and/order/title/ad/asc">social clubs</a>. Notable local events include <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/Our%20Lady%20of%20Lourdes%20Church%20(Chicago%2C%20Ill.)!construction/field/subjec!subjea/mode/exact!all/conn/and!and/order/nosort/ad/asc">moving the Our Lady of Lourdes church building</a> across Ashland Avenue and <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/ground%20breaking%20ceremonies/field/subjea/mode/exact/conn/and/order/nosort/ad/asc">breaking ground for the Conrad Sulzer Regional Library</a>.</p>';
         $rvw[CPLRes] = array(
                             // array('a'=>'https://www.chipublib.org/archival_post/ravenswood-lake-view-community-collection/','dt'=>'Ravenswood-Lake View Community Collection Finding Aid','dd'=>'Descriptive inventory for the complete physical collection.'),
@@ -895,9 +912,9 @@
                 'size'=>'cover',
                 'align'=>'center'));
         $p16818coll6[category] = array('African Americans','Civil War');
-        $p16818coll6[textshort] = 'During the 20th century, Chicago native and former president of the Illinois State Historical Society Philip David Sang collected a wide variety of documents and manuscripts exploring American history.';
-        $p16818coll6[textlong] = 'During the 20th century, Chicago native and former president of the Illinois State Historical Society Philip David Sang collected a wide variety of documents and manuscripts exploring American history.';
-        $p16818coll6[textrich] = 'The Philip David Sang Collection is a collection containing unpublished and published works and ephemera united by its focus on the struggle of Africans and African Americans through the Middle Passage to the Civil Rights movement. The majority of the collection, and the selections made available here, document the African American experience in slavery and in the resistance which culminated in its abolition. Series include Abolitionism, Runaways, Inventory and Birth Records.';
+        $p16818coll6[textshort] = 'The Philip David Sang Collection contains unpublished and published works and ephemera united by its focus on the struggle of Africans and African Americans through the Middle Passage to the Civil Rights movement.';
+        $p16818coll6[textlong] = 'The Philip David Sang Collection contains unpublished and published works and ephemera united by its focus on the struggle of Africans and African Americans through the Middle Passage to the Civil Rights movement.';
+        $p16818coll6[textrich] = 'During the 20th century, Chicago native and former president of the Illinois State Historical Society Philip David Sang collected a wide variety of documents and manuscripts exploring American history. The majority of the collection, and the selections made available here, document the African American experience in slavery and in the resistance which culminated in its abolition. Series include Abolitionism, Runaways, Inventory and Birth Records.';
         $p16818coll6[CPLRes] = array(array('a'=>'http://www.chipublib.org/fa-richard-durham-papers/','dt'=>'Richard Durham Papers','dd'=>'Collection includes scripts for radio plays devoted to the Black experience in America.'),
                             array('a'=>'http://www.chipublib.org/fa-madeline-stratton-morris-papers/','dt'=>'Madeline Stratton Morris Papers','dd'=>'Includes manuscripts and clippings relating to slavery.'),
                             array('a'=>'http://www.chipublib.org/fa-illinois-writers-project-2/','dt'=>'Illinois Writers Project: “Negro in Illinois” Papers','dd'=>'Notes and documents collected by the WPA on slavery, abolition and the Underground Railroad.'),
@@ -1179,8 +1196,8 @@
         );
         $CPB01[category] = '';
         $CPB01[textshort] = 'Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.';
-        $CPB01[textlong] = 'Theater collections at Chicago Public Library documents a vibrant local theater community.';
-        $CPB01[textrich] = '<p>Become a playgoer at Chicago&rsquo;s early theaters. Examine more than 2,000 playbills and programs dating from 1848 to 1922. Of special interest are playbills from shows starring <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Booth%2C%20Edwin%2C%201833-1893/field/contri/mode/all/conn/and/order/title/ad/asc">Edwin Booth</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Jefferson%2C%20Joseph%2C%201829-1905/field/contri/mode/all/conn/and/order/title/ad/asc">Joseph Jefferson</a> and <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Bernhardt%2C%20Sarah%2C%201844-1923/field/contri/mode/all/conn/and/order/title/ad/asc">Sarah Bernhardt</a> at the well-known <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/mcvicker\'s/field/theata/mode/all/conn/and/order/title/ad/asc">McVicker&rsquo;s Theatre</a> as well as playbills from vaudeville houses and neighborhood theaters.</p><p>Alongside traditional plays and musical works, numerous genres are represented in the collection, including <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/extravaganzas%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">extravaganzas</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/juggling%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">juggling</a>, and <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/magic%20--%20illinois%20--%20chicago/field/genre/mode/exact/conn/and/order/title/ad/asc">magic shows</a>, among others.</p>';
+        $CPB01[textlong] = 'Theater collections at Chicago Public Library document a vibrant local theater community.';
+        $CPB01[textrich] = '<p>Become a playgoer at Chicago&rsquo;s early theaters. Examine more than 2,000 playbills and programs dating from 1848 to 1922. Of special interest are playbills from shows starring <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Booth%2C%20Edwin%2C%201833-1893/field/contri/mode/all/conn/and/order/title/ad/asc">Edwin Booth</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Jefferson%2C%20Joseph%2C%201829-1905/field/contri/mode/all/conn/and/order/title/ad/asc">Joseph Jefferson</a> and <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Bernhardt%2C%20Sarah%2C%201844-1923/field/contri/mode/all/conn/and/order/title/ad/asc">Sarah Bernhardt</a> at the well-known <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/mcvicker\'s/field/theata/mode/all/conn/and/order/title/ad/asc">McVicker&rsquo;s Theatre</a> as well as playbills from vaudeville houses and neighborhood theaters.</p><p>Alongside traditional plays and musical works, numerous genres are represented in the collection, including <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/extravaganzas%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">extravaganzas</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/juggling%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">juggling</a> and <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/magic%20--%20illinois%20--%20chicago/field/genre/mode/exact/conn/and/order/title/ad/asc">magic shows</a>, among others.</p>';
         $CPB01[rights] = 'The Historic Programs digital collection is made possible by a generous grant from the Gaylord and Dorothy Donnelley Foundation through the <a href="http://cplfoundation.org/">Chicago Public Library Foundation</a>.';
         // $CPB01[highlights] = array(array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/','dt'=>'Chicago Theater Collection-Historic Playbills','dd'=>'Programs, playbills and newspaper clippings from more than 5,000 productions at Chicago&rsquo;s historic theaters dating back to the 1840s.'),
                                     // array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc','dt'=>'E.B. Gould Programs Collection','dd'=>'The annotated programs of a local Chicago businessman and enthusiastic playgoer.'));
@@ -1221,7 +1238,7 @@
 
 //misc arrays
     // the $cards array is used to create cards on the home page, but also to create entries on the All Collections A-Z page
-    $cards = array($examiner, $bar, $woop, $cr, $dtd, $CPB01, $wha, 
+    $cards = array($Announce, $examiner, $bar, $woop, $cr, $dtd, $CPB01, $wha, 
                    $hdg, $rwk, $mpu, $cfc, $ahs, $ChicagoParks, $rhwc, $rvw, $p16818coll6, $EBG, $Playbills, $Amund, 
                    $Kins, $LVHS, $Walz, $CFCC, $LVCRA, $PortPark, $RMIA, $HWR, $AfAm, 
                    $CivilWar, $LibEd, $News, $Neigh, $Parks, $HWLCSC, $MRC, $NNHC, $Harsh);

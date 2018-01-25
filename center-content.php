@@ -23,7 +23,7 @@
 							}
 							echo '<a class="center-images-main" href="' . $mainImgUrl . '" data-caption="' . $mainImgTitle . '" title="' . strip_tags(html_entity_decode($PAGE[mainimage][text])) . '" ><img style="background: url(' . $mainImgUrl . '); background-size: ' . $PAGE[mainimage][size] . '; background-position: ' . $PAGE[mainimage][align] . ' !important;"  class="lightbox-main-img" alt="' . $PAGE[mainimage][alt] . '"></a>';
 							if (strpos($PAGE[mainimage][url],'mpu') !== false ) {
-								echo '<i class="rights-i rights-i-main fa fa-info-circle"></i><div class="rights-overlay rights-overlay-main"><div class="rights-guts"><span class="rights-statement">' . $MP[rights2]  . '</span></div><div class="rights-close"><i class="rights-close-icon fa fa-times"></i></div></div>';
+								echo '<i class="rights-i rights-i-main fa fa-info-circle"></i><div class="rights-overlay rights-overlay-main"><div class="rights-guts"><span class="rights-statement">' . $mpu[rights2]  . '</span></div><div class="rights-close"><i class="rights-close-icon fa fa-times"></i></div></div>';
 							}
 						?>
 						</div>
@@ -40,7 +40,7 @@
 								}
 								echo '<div class="col-3 lightbox-thumb-wrapper"';
 								if (strpos($val[url], 'mpu') !== false && $PAGE[link] !== 'MP') {
-    	                        	echo ' data-toggle="tooltip" data-placement="top" title="' . $MP[rights2] . '"';
+    	                        	echo ' data-toggle="tooltip" data-placement="top" title="' . $mpu[rights2] . '"';
         	                	}
 								echo '><a href="' . $thumbUrl . '" data-caption="' . $thumbTitle . '" title="' . strip_tags(html_entity_decode($val[text])) . '" ><img style="background: url(' . $thumbUrl . '); background-size: ' . $val[size] . '; background-position: ' . $val[align] . '!important;" class="lightbox-thumb" alt="' . $val[alt] . '" /></a></div>';
 							}
@@ -71,12 +71,16 @@
                         echo '<div class="center-copy-paragraph">
 							<p>' . $PAGE[textrich] . '</p>';
 							if ($PAGE[type] == 'collection'){
-								if ($PAGE[title] == 'Remembering Harold Washington') {
-									echo 'Photographs in the ' . $PAGE[title] . ' exhibit are housed in ' . $PAGE[location][longname] . '.';
-								} elseif ($PAGE[link] == 'Examiner') {
+								if ($PAGE[title] == 'Remembering Harold Washington' || $PAGE[link] == 'cr') {
+									echo 'Photographs in the ' . $PAGE[title] . ' exhibit are housed in the ' . $PAGE[location][longname] . '.';
+								} elseif ($PAGE[link] == 'examiner') {
 									echo 'The ' . $PAGE[title] . ' is housed in the ' . $PAGE[location][longname] . '; microfilm is available in the Newspapers Department at Harold Washington Library Center.';
-								} elseif ($PAGE[link] == 'Whalen') {
-									echo 'Artifacts from the ' . $PAGE[title] . ' are housed in the ' . $PAGE[location][longname] . '.';
+								} elseif ($PAGE[link] == 'woop') {
+									echo 'The ' . $PAGE[title] . ' are housed in the ' . $PAGE[location][longname] . '.';
+								} elseif ($PAGE[link] == 'wha') {
+									echo 'Artifacts from the ' . $PAGE[creditname] . ' are housed in the ' . $PAGE[location][longname] . '.';
+								} elseif ($PAGE[link] == 'CPB01') {
+									echo 'The ' . $PAGE[title] . ' Collection is housed in the ' . $PAGE[location][longname] . '.';
 								} else {
 									echo 'The ' . $PAGE[title] . ' is housed in the ' . $PAGE[location][longname] . '.';
 								}
@@ -89,7 +93,7 @@
 							<dl>';
 						} else {
 							echo '<div class="center-copy-list">
-							<h4>Collection Highlights</h4>
+							<h3>Collection Highlights</h3>
 							<dl>';
 						}
                         foreach ($PAGE[highlights] as $key=>$val){
@@ -191,13 +195,13 @@
                     if (!$PAGE[CPLRes] && $PAGE[findingaid]) {
 						echo '<section aria-labelledby="findingaids"><div class="center-copy-list">';
 						if(is_array($PAGE[findingaid][0])){
-							echo '<h4 id="findingaids">Finding Aids</h4><p>The descriptive inventories for their physical collections.</p><ul>';
+							echo '<h3 id="findingaids">Finding Aids</h3><p>The descriptive inventories for their physical collections.</p><ul>';
 							foreach ($PAGE[findingaid] as $key=>$val) {
 								echo '<li><a href="' . $val[link] . '">' . $val[text] . '</a></li>';
 							}
 							echo '</ul>';
 						} else {
-							echo '<h4>Finding Aid</h4><dl><dt><a href="' . $PAGE[findingaid][link] . '">' . $PAGE[findingaid][text] . '</a></dt><dd>The descriptive inventory for the complete physical collection.</dl>';
+							echo '<h3>Finding Aid</h3><dl><dt><a href="' . $PAGE[findingaid][link] . '">' . $PAGE[findingaid][text] . '</a></dt><dd>The descriptive inventory for the complete physical collection.</dl>';
 						}
 						echo '</div></section>';
                     }

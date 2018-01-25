@@ -4,7 +4,7 @@
                 <div class="rights-overlay rights-overlay-about">
                     <div class="rights-guts">
                         <span class="rights-statement">
-                        <?php echo $MP[rights2] ?>
+                        <?php echo $mpu[rights2] ?>
                         </span>
                     </div>
                     <div class="rights-close">

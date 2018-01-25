@@ -261,3 +261,11 @@
 		
 		RefreshEventListener();
 	});
+	
+	
+	function Caa(let){
+		var letterClass = '.az-' + let;
+		console.log(let, letterClass);
+		$('.az').hide();
+		$(let).show();
+	}
