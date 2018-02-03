@@ -21,6 +21,16 @@
 	<link rel="stylesheet" href="cpldc.css" >
 	<script src="simpleLightbox.js"></script>
 	<link rel="stylesheet" href="simpleLightbox.min.css">
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-477834-3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-477834-3');
+		</script>
+	<!-- end gtag -->
 </head>
 <body>
 <?php 
@@ -49,8 +59,8 @@
 				<?php 
 					if ($PAGE[title] == 'Digital Collections A-Z'){
 						include 'all.php';
-					} elseif ($PAGE[title] == 'Chicago Artists Directory') {
-						include 'CAA.php';
+					} elseif ($PAGE[title] == 'Copyright and Takedown Policy') {
+						include 'takedown.php';
 					} elseif ($PAGE[title] == 'About CPL Digital Collections') {
 						include 'about.php';
 					} elseif ($PAGE[title] == 'CPL Revamps Digital Collections Website') {

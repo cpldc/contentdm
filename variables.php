@@ -46,7 +46,7 @@
     $Announce[textshort] = 'We’ve updated our site to make it easier for you to find thousands of images, documents and artifacts from CPL’s special collections.';
     $CAA[title] = 'Chicago Artists Directory';
     // takedown is a mess, move along
-    $Takedown[title] = 'Notice and Takedown Policy';
+    $Takedown[title] = 'Copyright and Takedown Policy';
     $Takedown[textlong] = 'Notice to users: The Chicago Public Library works to ensure that it has appropriate rights to provide access to content through the Digital Collections website. These materials are made available for educational and scholarly use.';
     $Takedown[mainimage] = array('url'=>'default.jpg','text'=>'Notice and Takedown Policy','size'=>'cover','align'=>'center');
     $Takedown[textrich] = 'If you are a rights holder and are concerned that you have found material on the Chicago Public Library&rsquo;s Digital Collections Website without your permission and believe our inclusion of this material on the Digital Collections Website violates your rights (e.g. inclusion is not covered by the Fair Use or other exemption to a copyright holder&rsquo;s rights), please contact webmaster@chipublib.org and include the following:
@@ -61,7 +61,14 @@
         <li>Promptly acknowledge the request via email or other means of communication if you do not have an email account;</li>
         <li>Assess the validity of the request;</li>
         <li>Upon request, we may temporarily remove the material from public view while we assess the concern.</li>
-        </ul><p>Upon completion of the assessment, we will take appropriate action and communicate that action to you.</p>';
+        </ul><p>Upon completion of the assessment, we will take appropriate action and communicate that action to you.</p> <h2>Copyright</h2>
+        <p class="about-contact-p about-contact-p-first">Usage, transmission, downloading or reproduction of protected items beyond that allowed by Fair Use Copyright Law requires the written permission of the copyright owners. When possible, CPL provides information about copyright owners and restrictions concerning its collections.</p>
+        <p class="about-contact-p">Determining the existence of copyright or any other legal restrictions, as well as obtaining permission from the copyright holder, is solely the responsibility of the patron.</p>
+        <p class="about-contact-p"><b>Notice: Warning Concerning Copyright Restrictions</b></p>
+        <p class="about-contact-p">The copyright law of the United States (Title 17, United States Code) governs the making of photocopies or other reproductions of copyrighted material.</p>
+        <p class="about-contact-p">Under certain conditions specified in the law, libraries and archives are authorized to furnish a photocopy or other reproduction. One of these specific conditions is that the photocopy or reproduction is not to be “used for any purpose other than private study, scholarship or research.” If a user makes a request for, or later uses, a photocopy or reproduction for purposes in excess of “fair use,” that user may be liable for copyright infringement.</p>
+        <p class="about-contact-p about-contact-p-last">This institution reserves the right to refuse a copying order if, in its judgment, fulfillment of the order would involve violation of copyright law.</p>
+';
 
 //locations
     // locations will not get cards, but do get landing pages

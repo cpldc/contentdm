@@ -18,6 +18,16 @@
     <script src="imagesloaded.pkgd.min.js"></script>
     <script src="cpldc.js"></script>
     <link rel="stylesheet" href="cpldc.css" >
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-477834-3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-477834-3');
+		</script>
+	<!-- end gtag -->
 </head>
 <body>
     <?php 
