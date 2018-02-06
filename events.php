@@ -9,7 +9,7 @@
     $limit = 5;
     $htmlStr = '';
     include 'locations.php';
-
+    date_default_timezone_set('America/Chicago');
     // if events.html is older than 12 hours (60 seconds * 60 minutes * 12), it 
     //     gets the feed
     //     assigns pieces of it to variables
@@ -46,7 +46,7 @@
             $location = $feed[$x]['loc'];
             $locationLink = array_search($location, $LOCATIONLINKS);
             $date = date('M j', strtotime($feed[$x]['date']));
-            $time = date('g:iA', strtotime($feed[$x]['date']) - 60 * 60 * 6);
+            $time = date('g:iA', strtotime($feed[$x]['date']));
             $htmlStr .= '<div class="event"> <h3 class="event-title"><a href="' . $link . '" class="event-link">' . $title . '<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h3><div class="event-location"><a href="' . $locationLink . '" class="event-location-link">' . $location . '</a></div><div class="event-datetime"><div class="event-date">' . $date . '</div><div class="event-time">' . $time . '</div></div></div>';
         }
         file_put_contents('events.html', $htmlStr);
