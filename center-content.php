@@ -4,7 +4,7 @@
 	<section aria-label="Images">
 			<div class="center-lightbox">
 				<div class="container-fluid lightbox imageGallery1">
-					<div class="row">
+					<div class="row"> 
 						<div class="col-12 lightbox-main-img-div">
 							<!-- Dear w3c, if you built a image crop that actually works, I wouldn't have to do nonsense like make an image the background of an image with no src.  Love, CPLDC. -->
 						<?php 
@@ -21,7 +21,7 @@
 								$mainImgUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $PAGE[mainimage][coll] . '/' . $PAGE[mainimage][url] . '/default.jpg';
 								$mainImgTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[mainimage][coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
 							}
-							echo '<a class="center-images-main" href="' . $mainImgUrl . '" data-caption="' . $mainImgTitle . '" title="' . strip_tags(html_entity_decode($PAGE[mainimage][text])) . '" ><img style="background: url(' . $mainImgUrl . '); background-size: ' . $PAGE[mainimage][size] . '; background-position: ' . $PAGE[mainimage][align] . ' !important;"  class="lightbox-main-img" alt="' . $PAGE[mainimage][alt] . '"></a>';
+							echo '<a class="center-images-main" href="' . $mainImgUrl . '" data-caption="' . $mainImgTitle . '" data-alt="' . $PAGE[mainimage][alt] . '" title="' . strip_tags(html_entity_decode($PAGE[mainimage][text])) . '" ><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="background: url(' . $mainImgUrl . '); background-size: ' . $PAGE[mainimage][size] . '; background-position: ' . $PAGE[mainimage][align] . ' !important;"  class="lightbox-main-img" alt="' . $PAGE[mainimage][alt] . '"></a>';
 							if (strpos($PAGE[mainimage][url],'mpu') !== false ) {
 								echo '<i class="rights-i rights-i-main fa fa-info-circle"></i><div class="rights-overlay rights-overlay-main"><div class="rights-guts"><span class="rights-statement">' . $mpu[rights2]  . '</span></div><div class="rights-close"><i class="rights-close-icon fa fa-times"></i></div></div>';
 							}
@@ -42,7 +42,7 @@
 								if (strpos($val[url], 'mpu') !== false && $PAGE[link] !== 'MP') {
     	                        	echo ' data-toggle="tooltip" data-placement="top" title="' . $mpu[rights2] . '"';
         	                	}
-								echo '><a href="' . $thumbUrl . '" data-caption="' . $thumbTitle . '" title="' . strip_tags(html_entity_decode($val[text])) . '" ><img style="background: url(' . $thumbUrl . '); background-size: ' . $val[size] . '; background-position: ' . $val[align] . '!important;" class="lightbox-thumb" alt="' . $val[alt] . '" /></a></div>';
+								echo '><a href="' . $thumbUrl . '" data-caption="' . $thumbTitle . '" data-alt="' . $val[alt] . '" title="' . strip_tags(html_entity_decode($val[text])) . '" ><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="background: url(' . $thumbUrl . '); background-size: ' . $val[size] . '; background-position: ' . $val[align] . '!important;" class="lightbox-thumb" alt="' . $val[alt] . '" /></a></div>';
 							}
 						?>
 					</div>

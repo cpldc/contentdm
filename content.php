@@ -20,7 +20,7 @@
 	<script src="cpldc.js"></script>
 	<link rel="stylesheet" href="cpldc.css" >
 	<script src="simpleLightbox.js"></script>
-	<link rel="stylesheet" href="simpleLightbox.min.css">
+	<link rel="stylesheet" href="simpleLightbox.css">
 	<!-- Global Site Tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-477834-3"></script>
 		<script>

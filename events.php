@@ -13,7 +13,7 @@
     // if events.html is older than 12 hours (60 seconds * 60 minutes * 12), it 
     //     gets the feed
     //     assigns pieces of it to variables
-    //     pushes the variables into an array
+    //     pushes the variables into an array if category = hist&genea
             // nb we have to use namespaces here; all you have to do is name the namespace though, you don't have to actually access it, which is good, because they're dead links
             // also nb we search the $LOCATIONLINKS array stored in locations.php in order to create a link to the location's page on chipublib
     //     iterates through 5 arrays to put the variables into html

@@ -45,7 +45,7 @@
             // for each [flag], make a card
                 foreach ($cards as $key => $val){
                     if (!$val[flag] == ''){
-                        echo '<div class="grid-item card cardpic" style="width: 20rem; margin-bottom: 10px;"><a href="content.php?id='. $val[link] . '" style="background: url(' . $val[cardpic][pic] . '); background-size: ' . $val[cardpic][size] . '; background-position: ' . $val[cardpic][pos] . '; height: ' . $val[cardpic][pich] . '" aria-label="' . $val[title] . '">';
+                        echo '<div class="grid-item card cardpic" style="width: 20rem; margin-bottom: 10px;"><a href="content.php?id='. $val[link] . '" style="background: url(' . $val[cardpic][pic] . '); background-size: ' . $val[cardpic][size] . '; background-position: ' . $val[cardpic][pos] . '; height: ' . $val[cardpic][pich] . '" aria-label="' . $val[cardpic][alt] . '">';
                         // aria label here should be alt text for the image; this is an <a> and not <img> so can't use "alt="
                         if (strpos($val[cardpic][pic], 'mpu') !== false ) {
                             echo '<i class="rights-i rights-i-card fa fa-info-circle"></i><div class="rights-overlay rights-overlay-card"><div class="rights-guts"><span class="rights-statement">' . $mpu[rights2]  . '</span></div><div class="rights-close"><i class="rights-close-icon fa fa-times"></i></div></div>';

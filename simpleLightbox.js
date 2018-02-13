@@ -45,6 +45,7 @@
         showCaptions: true,
 
         captionAttribute: 'data-caption', // choose data source for library to glean image caption from
+        altAttribute: 'data-alt', //added by CPLDC, add alt text for lightbox image here
         urlAttribute: 'href', // where to expect large image
 
         startAt: 0, // start gallery at custom index
@@ -68,6 +69,7 @@
             this.ens = '.slb' + (++instanceNum);
             this.items = [];
             this.captions = [];
+            this.alts = [];
 
             var self = this;
 
@@ -81,6 +83,7 @@
 
                     self.items.push($item.attr(self.options.urlAttribute));
                     self.captions.push($item.attr(self.options.captionAttribute));
+                    self.alts.push($item.attr(self.options.altAttribute));
 
                 });
 
@@ -165,7 +168,8 @@
 
             var self = this,
                 url = this.items[position];
-
+                altText = this.alts[position]; 
+                
             this.loading(true);
 
             if (this.options.videoRegex.test(url)) {
@@ -173,7 +177,7 @@
                 callback.call(self, $('<div class="slbIframeCont"><iframe class="slbIframe" frameborder="0" allowfullscreen src="' + url + '"></iframe></div>'));
 
             } else {
-                var $imageCont = $('<div class="slbImageWrap"><img onload="rightsInsertion(this)" class="slbImage" src="' + url + '" /></div>');
+                var $imageCont = $('<div class="slbImageWrap"><img onload="rightsInsertion(this)" class="slbImage" src="' + url + '" alt="' + altText + '"/></div>');
 
                 this.$currentImage = $imageCont.find('.slbImage');
 

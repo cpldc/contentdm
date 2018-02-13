@@ -10,16 +10,16 @@
         }
         $Announce[flag] =       '1';
         $rhwc[flag] =           '2';
-        $CPB01[flag] =          '3';
-        $mpu[flag] =            '4';
-        $cr[flag] =             '5';
-        $examiner[flag] =       '6';
+        $p16818coll6[flag] =    '3';
+        $CPB01[flag] =          '4';
+        $mpu[flag] =            '5';
+        $cr[flag] =             '6';
         $wha[flag] =            '7';
-        $rwk[flag] =            '8';
-        $hdg[flag] =            '9';
-        $bar[flag] =            '10';
-        $woop[flag] =           '11';
-        $p16818coll6[flag] =    '12';
+        $examiner[flag] =       '8';
+        $rwk[flag] =            '9';
+        $hdg[flag] =            '10';
+        $bar[flag] =            '11';
+        $woop[flag] =           '12';
         // $dtd[flag] =            '12';
         $ChicagoParks[flag] =   '';
         $cfc[flag] =            '';
@@ -86,7 +86,7 @@
             'align'=>'50% 50%');
         $HWLCSC[thumbs] = array(array('url'=>'2196',
                 'coll' => 'CPB01',
-                'text'=>'<em>The Philanderer</em>, Chicago Little Theatre, 1914',
+                'text'=>'<em>The Philanderer</em>, Chicago Little Theatre, 1914',
                 'size'=>'170%',
                 'align'=>'25% 22%'),
             array('url'=>'4833',
@@ -317,7 +317,7 @@
         $examiner[textlong] = 'The Chicago Examiner was one of a dozen major newspapers published in Chicago at the turn of the last century. It was known for its sensational news stories.';
         $examiner[textrich] = '<p>The Chicago Public Library&rsquo;s 10-year run of the <i>Examiner,</i> while incomplete, extends from 1908 to 1918 and represents the longest run of the paper still available.</p><p>Follow the tragedy of the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Eastland!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">shipwreck of the Eastland,</a> a Great Lakes passenger steamer, in which 844 passengers and crew perished while the ship was tied to a dock in the Chicago River; the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Union!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">infamous 1910 Union Stock Yards fire,</a> that killed more firefighters than any building collapse until September 11, 2001; <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Dunne!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosortt">the mystery of the Dunne Water Crib fire, </a>told through first-person accounts, reportage, photos and illustrations; and big early <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/examiner/searchterm/Cubs%20Sox!1/field/subjea!page/mode/any!exact/conn/and!and/order/nosort">wins for the Cubs and the White Sox.</a></p>';
         $examiner[mainimage] = array('url'=>'6812',
-            'text'=>'&ldquo;Make Chicago One of the Most Attractive Cities in the World,&rdquo; <em>Chicago Examiner</em>, vol. 10 no. 1, 1909',
+            'text'=>'&ldquo;Make Chicago One of the Most Attractive Cities in the World,&rdquo; <em>Chicago Examiner</em>, vol. 10 no. 1, 1909',
             'size'=>'150%',
             'align'=>'78% 5%');
         $examiner[thumbs] = array(array('url'=>'51184',
@@ -362,7 +362,7 @@
     $bar[title] = 'Esther A. Barlow Collection';
         $bar[coll] = 'bar';
         $bar[sortname] = 'Barlow, Esther A. Collection';
-        $bar[cardpic] = array('pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/bar/43/default.jpg','pich'=>'20rem','size'=>'110%','pos'=>'auto');
+        $bar[cardpic] = array('pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/bar/43/default.jpg','pich'=>'20rem','size'=>'110%','pos'=>'auto','alt'=>'Esther Barlow as a young woman.');
         $bar[category] = 'Libraries &amp; Education';
         $bar[textshort] = 'Family photographs of CPL Librarian Esther Barlow and images of her work at the former Hild Regional Library and Lake View Branch Library from 1927 to 1976.';
         $bar[textlong] = 'Esther Barlow was a children&rsquo;s librarian in neighborhood branches of Chicago Public Library from 1927 until 1976.';
@@ -371,19 +371,23 @@
             'url'=>'52',
             'text'=>'Chicago Public Library staff, Lake View Branch, circa 1950',
             'size'=>'',
-            'align'=>'55% 50%');
+            'align'=>'55% 50%',
+            'alt'=>'Esther Barlow and 11 other library staff, all women, pose on the front steps of the Lakeview Branch.');
         $bar[thumbs] = array(array('url'=>'199',
                     'text'=>'Story hour in Welles Park, Hild Regional Library, circa 1930',
                     'size'=>'400px',
-                    'align'=>'15% 20%'),
+                    'align'=>'15% 20%',
+                    'alt'=>'A large group of children, some wearing bunny masks, pose for a picture. '),
                 array('url'=>'70',
                     'text'=>'Esther Barlow at the circulation desk, Lake View Branch, 1951',
                     'size'=>'500px',
-                    'align'=>'53% 49%'),
+                    'align'=>'53% 49%',
+                    'alt'=>'Esther Barlow sits at a desk. Next to her desk is a tall bookshelf filled with children\'s books.'),
                 array('url'=>'16',
                     'text'=>'Esther Barlow and Buddy Flaskerud, 1913',
                     'size'=>'400px',
-                    'align'=>'33% 22%'));
+                    'align'=>'33% 22%',
+                    'alt'=>'A baby Esther Barlow sits with a little boy in a small wagon hitched to a goat.'));
         $bar[link] = 'bar';
         $bar[location] = $NNHC;
         $bar[type] = 'collection';
@@ -396,6 +400,7 @@
             'pich'=>'200px;',
             'size'=>'100%',
             'pos'=>'50% -20px',
+            'alt'=>'View of Michigan Avenue and Washington Street sides of the original Chicago Public Library Central Library.'
         );
         $woop[category] = 'Libraries &amp; Education';
         $woop[textshort] = 'Photographs trace CPL&rsquo;s history from a small water tank that survived the Great Chicago Fire to the extensive network of neighborhood libraries that span the city today.';
@@ -404,23 +409,28 @@
         $woop[mainimage] = array('url'=>'80',
                 'text'=>'Book room in the old water tank, circa 1873',
                 'size'=>'cover',
-                'align'=>'50% 75%');
+                'align'=>'50% 75%',
+                'alt'=>'A woodcut print depicts people reading at tables and getting books from bookshelves in the circular Book Room.');
         $woop[thumbs] = array(array('url'=>'5',
                     'text'=>'English Book Donation bookplate given by Queen Victoria, 1871',
                     'size'=>'cover',
-                    'align'=>'center'),
+                    'align'=>'center',
+                    'alt'=>'The bookplate from a book donated by Queen Victoria reads: Presented to the City of Chicago, toward the formation of a free library after the great fire of 1871, as a mark of English sympathy, by Her Majesty the Queen Victoria.'),
                 array('url'=>'73',
                     'text'=>'Trailer service from Legler Regional Library, circa 1940',
                     'size'=>'150%',
-                    'align'=>'100% 50%'),
+                    'align'=>'100% 50%',
+                    'alt'=>'A trailer that reads &ldquo;The Chicago Public Library Bookmobile Traveling Library Service&rdquo; is hitched to the back of a car.'),
                 array('url'=>'41',
                     'text'=>'Blackstone Memorial Branch Library, 1904',
                     'size'=>'cover',
-                    'align'=>'0% '),
+                    'align'=>'0% ',
+                    'alt'=>'The front of Blackstone Branch seen from 49th Street.'),
                 array('url'=>'74',
                     'text'=>'Traveling branch, circa 1960s',
                     'size'=>'cover',
-                    'align'=>'center'));
+                    'align'=>'center',
+                    'alt'=>'Side view of a bus that reads &ldquo;The Chicago Public Library Traveling Branch&rdquo; with separate doors for Entrance and Exit. '));
         $woop[link] = 'woop';
         $woop[location] = $HWLCSC;
         $woop[type] = 'collection';
@@ -526,7 +536,7 @@
         $wha[CPLRes] = array(array('a'=>'https://www.chipublib.org/fa-american-civil-war-documents-manuscripts-letters-and-diaries-and-grand-army-of-the-republic-collection/','dt'=>'American Civil War Documents, Manuscripts, Letters and Diaries and Grand Army of the Republic Collections Finding Aid','dd'=>'A large portion of this collection focuses on the experience of soldiers and leaders from Illinois told through letters and diaries.'),
                                 array('a'=>'https://www.chipublib.org/archival_subject/military/','dt'=>'Military Archival Collections','dd'=>'A list of all archival collections related to the Civil War, including records of the Daughters of Union Veterans of the Civil War, as well as personal collections of service members from other conflicts, such as World War II. '));
         $wha[mainimage] = array('url'=>'634',
-            'text'=>'&ldquo;Sherman and His Generals,&rdquo; <em>Photographic Views of Sherman&rsquo;s Campaign</em> by George N. Barnard, 1865',
+            'text'=>'&ldquo;Sherman and His Generals,&rdquo; <em>Photographic Views of Sherman&rsquo;s Campaign</em> by George N. Barnard, 1865',
             'size'=>'auto 575px',
             'align'=>'center');
         $wha[thumbs] = array(array('url'=>'116',
@@ -735,7 +745,7 @@
                 'size'=>'150%',
                 'align'=>'center'),
             array('url'=>'149',
-                'text'=>'<em>Gold in Them Thar Hills</em>, Lake View High School, 1940',
+                'text'=>'<em>Gold in Them Thar Hills</em>, Lake View High School, 1940',
                 'size'=>'150%',
                 'align'=>'50% 25%'),
             array('url'=>'7',
@@ -803,7 +813,8 @@
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/rhwc/30/default.jpg',
             'pich'=>'250px',
             'size'=>'200%',
-            'pos'=>'75% 40%'
+            'pos'=>'75% 40%',
+            'alt'=>'Mayor Washington smiles and points to the crowd while riding on the back of a convertible.'
         );
         $rhwc[category] = 'African Americans';
         $rhwc[textshort] = 'Chicago&rsquo;s first African American mayor served from 1983 to 1987, and his legacy endures.';
@@ -824,23 +835,28 @@
         $rhwc[mainimage] = array('url'=>'73',
             'text'=>'Mayor Washington addresses the International Circulation Managers Association, 1987',
             'size'=>'130%',
-            'align'=>'80% 0');
+            'align'=>'80% 0',
+            'alt'=>'Mayor Washington smiles and waves from podium.');
         $rhwc[thumbs] = array(array('url'=>'72',
                 'text'=>'Mayor Washington reads to Dominik Przekota and class, 1986',
                 'size'=>'300%',
-                'align'=>'0 20%'),
+                'align'=>'0 20%',
+                'alt'=>'Mayor Washington sits with book in front of a group of children in a library. One boy stands at front, video cameraman stands at back.'),
             array('url'=>'64',
                 'text'=>'Mayor Washington at the KOCO groundbreaking ceremony, 1987',
                 'size'=>'',
-                'align'=>'52% 15%'),
+                'align'=>'52% 15%',
+                'alt'=>'Mayor Washington and six others pose holding shovels full of dirt.'),
             array('url'=>'13',
                 'text'=>'Mayor Washington with members of the Philippine Chamber of Commerce, 1987',
                 'size'=>'150%',
-                'align'=>'40% 40%'),
+                'align'=>'40% 40%',
+                'alt'=>'Mayor Washington poses with three women, one of whom holds a plaque.'),
             array('url'=>'30',
                 'text'=>'Mayor Washington at the Bud Billiken Parade, 1987',
                 'size'=>'400%',
-                'align'=>'71% 30%'));
+                'align'=>'71% 30%',
+                'alt'=>'Mayor Washington smiles and points to the crowd while riding on the back of a convertible.'));
         $rhwc[link] = 'rhwc';
         $rhwc[location] = $HWLCSC;
         $rhwc[type] = 'collection';
@@ -940,7 +956,7 @@
     $AfAm[title] = 'African Americans';
         $AfAm[shortname] = 'African Americans';
         $AfAm[sidebarname] = 'African Americans';
-        $AfAm[cardpic] = array('pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/10/default.jpg','pich'=>'250px','size'=>'110%','pos'=>'50% 50%');
+        $AfAm[cardpic] = array('pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/10/default.jpg','pich'=>'250px','size'=>'110%','pos'=>'50% 50%','alt'=>'Richard Durham sits at a desk with a typewriter. He is reading some loose pages and has a pencil in his right hand.');
         $AfAm[textshort] = 'Chicago Public Library collections that document African American history in Chicago and throughout the United States.';
         $AfAm[textlong] = 'Chicago Public Library collections that document African American history in Chicago and throughout the United States.';
         $AfAm[catcoll] = 'documenting Black history in the United States';
@@ -957,27 +973,32 @@
             'coll' => 'cr',
             'text'=>'Women&rsquo;s reading group at Hall Branch, 1940',
             'size'=>'100%',
-            'align'=>'50% 0%');
+            'align'=>'50% 0%', 
+            'alt'=>'A book club consisting of over two dozen women sit at a table in Hall Branch.');
         $AfAm[thumbs] = array(array('url'=>'14',
                 'coll' => 'cr',
                 'text'=>'All-black WAC band, 1944',
                 'size'=>'431px',
-                'align'=>'0% 20%'),
+                'align'=>'0% 20%',
+                'alt'=>'An African American Women\'s Army Corps band at a performance.'),
             array('url'=>'8g',
                 'coll' => 'cr',
-                'text'=>'Marian Campfield, women&rsquo;s editor of the <em>Chicago Defender</em>, 1948',
+                'text'=>'Marian Campfield, women&rsquo;s editor of the <em>Chicago Defender</em>, 1948',
                 'size'=>'140%',
-                'align'=>'center'),
+                'align'=>'center',
+                'alt'=>'Marian Campfield stands outside the Chicago Defender offices next to a press car. '),
             array('url'=>'0',
                 'coll' => 'cr',
-                'text'=>'Catalog, &rdquo;Exhibition of the Art of the American Negro,&rdquo; 1940',
+                'text'=>'Catalog, &rdquo;Exhibition of the Art of the American Negro,&ldquo; 1940',
                 'size'=>'112%',
-                'align'=>'75% 45%'),
+                'align'=>'75% 45%',
+                'alt'=>'Cover of &rdquo;Exhibition of the Art of the American Negro&ldquo; catalog featuring an image of a painting by Charles White.  '),
             array('url'=>'6',
                 'coll' => 'rhwc',
                 'text'=>'Mayor Washington at the 27th Annual International Folk Fair, 1986',
                 'size'=>'200%',
-                'align'=>'40% 60%'));
+                'align'=>'40% 60%',
+                'alt'=>'Mayor Washington stands with two men in front of three paintings at the DuSable Museum of African American History.'));
         $AfAm[link] = 'AfAm';
         $AfAm[type] = 'category';
         $AfAm[sidebarflag] = 'x';
@@ -989,18 +1010,21 @@
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/721/default.jpg',
             'pich'=>'280px',
             'size'=>'auto 120%',
-            'pos'=>'center'
+            'pos'=>'center',
+            'alt'=>'An 1854 artillery jacket, Civil War uniform, showcased on a mannequin.'
         );
         $CivilWar[mainimage] = array('url'=>'231',
             'coll' => 'p16818coll6',
             'text'=>'&ldquo;Marshal&rsquo;s Sale!,&rdquo; poster for public auction of enslaved persons, 1854',
             'size'=>'cover',
-            'align'=>'center');
+            'align'=>'center',
+            'alt'=>'1854 poster advertising a marshal\'s sale, a public auction of enslaved persons.');
         $CivilWar[thumbs] = array(array('url'=>'173',
                 'coll' => 'wha',
                 'text'=>'Pauline Cushman, actress and Union spy, undated',
                 'size'=>'150%',
-                'align'=>'center 30%'),
+                'align'=>'center 30%',
+                'alt'=>'Portrait of Pauline Cushman, handwritten text under the portrait includes &rdquo;Miss Major Pauline Cushman. Union spy&ldquo;'),
         // $CivilWar[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/p16818coll6/37/default.jpg',
         //         'text'=>'Reward poster for capture of runaway slave man',
         //         'size'=>'cover',
@@ -1009,7 +1033,8 @@
                 'coll' => 'wha',
                 'text'=>'Sword, model 1850 staff and field officer, 1861-1865',
                 'size'=>'auto 150px',
-                'align'=>'40% 30%'),
+                'align'=>'40% 30%',
+                'alt'=>'Blade and handle of 1850 model sword.'),
         // array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/721/default.jpg',
         //     'text'=>'Uniform, artillery jacket',
         //     'size'=>'auto 120px',
@@ -1018,12 +1043,14 @@
             'coll' => 'wha',
                 'text'=>'Ulysses S. Grant, 1865',
                 'size'=>'120px auto',
-                'align'=>'50% 20%'),
+                'align'=>'50% 20%',
+                'alt'=>'Portrait of Ulysses S. Grant, typed caption under the image is &rdquo;Lieut. Gen. U. S. Grant.&ldquo;'),
             array('url'=>'422',
                 'coll' => 'p16818coll6',
                 'text'=>'Letter from John Brown, Jr., 1859',
                 'size'=>'200px',
-                'align'=>'55% 5%'));
+                'align'=>'55% 5%',
+                'alt'=>'Handwritten 1859 letter from John Brown, Jr. to his uncle, aunt, and cousins.'));
         $CivilWar[textshort] = 'Personal narratives, artifacts and manuscripts tell the story of slaves and soldiers during the war that tore the nation apart.';
         $CivilWar[textlong] = 'A view into life during the Civil War via personal letters, documents and photographs detailing battles, homefront activities and the fight to end slavery in the United States.';
         $CivilWar[textrich] = 'A significant portion of the library&rsquo;s Civil War era material comes from the Illinois Department of the Grand Army of the Republic, including <a href="http://digital.chipublib.org/digital/collection/wha/search/searchterm/edged%20weapons">weaponry</a> and <a href="http://digital.chipublib.org/digital/collection/wha/search/searchterm/lincoln/field/subjec/mode/all/conn/and/order/nosort/ad/asc">Lincolniana</a>.  <p>Complementing the GAR material are items in the Harsh Research Collection&rsquo;s Philip David Sang Collection pertaining to <a href="http://digital.chipublib.org/digital/collection/p16818coll6/search/searchterm/186104-1865/field/date/mode/exact/conn/and/order/title/ad/asc">the African American experience during the Civil War era.</a></p>';
@@ -1046,33 +1073,39 @@
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/2/default.jpg',
             'pich'=>'250px',
             'size'=>'120%',
-            'pos'=>'27% 0%'
+            'pos'=>'27% 0%',
+            'alt'=>'Four children stand in front of a bookmobile trailer, reading. The bookmobile is hitched to a car. The back of the trailer reads &rdquo;The Chicago Public Library Bookmobile.&ldquo;'
             );
         $LibEd[mainimage] = array('url'=>'3595',
             'coll' => 'rvw',
             'text'=>'Andersonville School, undated',
             'size'=>'130%',
-            'align'=>'center');
+            'align'=>'center',
+            'alt'=>'Andersonville School');
         $LibEd[thumbs] = array(array('url'=>'426',
                 'coll' => 'hdg',
                 'text'=>'Jamieson School, 1944',
                 'size'=>'130%',
-                'align'=>'50% 50%'),
+                'align'=>'50% 50%',
+                'alt'=>'Members of the Jamieson School student council pose in front of a school banner and an American flag.  Six are seated and behind them more students stand in a row.'),
             array('url'=>'4097',  
                 'coll' => 'rvw',
                 'text'=>'Our Lady of Lourdes school library, circa 1942',
                 'size'=>'300%',
-                'align'=>'40% 40%'),
+                'align'=>'40% 40%',
+                'alt'=>'Several students sit at tables studying in the library of Our Lady of Lourdes School.  A nun holding open a book stands next to a male student.'),
             array('url'=>'721',
                 'coll' => 'ahs',
                 'text'=>'Drum majorettes, Lave View High School, 1949',
                 'size'=>'cover',
-                'align'=>'center'),
+                'align'=>'center',
+                'alt'=>'Five drum majorettes from Lake View High School in full uniform. Caption reads: Lois Dunston, Gerry Gruen, Lorette Loewe, Diane Baxter, Sandy Colby, May 1949'),
             array('url'=>'2',
                 'coll' => 'woop',
                 'text'=>'Chicago Public Library bookmobile service, circa 1940',
                 'size'=>'150%',
-                'align'=>'27% 0%'));
+                'align'=>'27% 0%',
+                'alt'=>'Four children stand in front of a bookmobile trailer, reading.  The bookmobile is hitched to a car.  The back of the trailer reads &rdquo;The Chicago Public Library Bookmobile.&ldquo;'));
         $LibEd[textshort] = 'Learn about Chicago through its libraries and schools in these photographs dating from the 1860s through the 1990s.';
         $LibEd[textlong] = 'Learn about Chicago through its libraries and schools in these photographs dating from the 1860s through the 1990s.';
         $LibEd[textrich] = 'Explore Chicago&rsquo;s development, from the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Water+tank/field/subjed/mode/all/conn/and/order/nosort">circular water tank</a> that housed the first Chicago Public Library to <a href="http://digital.chipublib.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/exterior%20view%20school/field/all/mode/all/conn/and/order/title/ad/asc">school building exteriors</a> from the second half of the 19th century through the first half of 20th century. Feel the energy of its <a href="http://digital.chipublib.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/high%20school%20band/field/all/mode/all/conn/and/order/title/ad/asc">high school bands</a> and see its <a href="http://digital.chipublib.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/sports/field/all/mode/all/conn/and/order/title/ad/asc">sports teams and athletes</a> in action.';
@@ -1106,7 +1139,8 @@
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/138/default.jpg',
             'pich'=>'230px',
             'size'=>'110%',
-            'pos'=>'50% 50%'
+            'pos'=>'50% 50%',
+            'alt'=>'Two young boys sit in a tree.'
         );
         $Neigh[textshort] = 'Experience daily life in Chicago neighborhoods through photographs of street scenes, businesses, residences and portraits, 1860s to the present.';
         $Neigh[textlong] = 'Connect with the residents of Chicago and their stories through these fascinating photographs dating from the 1860s through the 1990s.';
@@ -1118,22 +1152,26 @@
             'coll' => 'cfc',
             'text'=>'Cleanup Parade, Ravenswood Manor, 1965',
             'size'=>'',
-            'align'=>'90% 50%');
+            'align'=>'90% 50%',
+            'alt'=>'Parade participants include a fire truck, Boy Scouts on foot carrying flags, and a convertible.  The door and fire truck reads &ldquo;Hollywood Kiddieland, Lincoln-McCormick-Devon, Chicago Fire Dept.&rdquo;');
         $Neigh[thumbs] = array(array('url'=>'1248',
                 'coll' => 'rwk',
                 'text'=>'Picasso statue unveiled, 1967',
                 'size'=>'',
-                'align'=>'25% 60%'),
+                'align'=>'25% 60%',
+                'alt'=>'Elevated view of the Picasso statue at the Civic Center Plaza being unveiled. The plaza is completely filled with onlookers.'),
             array('url'=>'782',
                 'coll' => 'rwk',
                 'text'=>'Tin Man sculpture, Oz Park, 2001',
                 'size'=>'',
-                'align'=>'57% 17%'),
+                'align'=>'57% 17%',
+                'alt'=>'Tin Man sculpture in Oz Park.  It stands on top of a pedestal with a plaque that reads &ldquo;The Tin Man from The Wizard of Oz by Frank Baum Welcomes You to Oz Park, A Heartfelt Salute to the Community from the Lincoln Park Chamber of Commerce October 1995.&rdquo;'),
             array('url'=>'157',
                 'coll' => 'dtd',
                 'text'=>'31st Street and Albany Avenue, repairing old brick outfall, 1936',
                 'size'=>'',
-                'align'=>'62% 37%'));
+                'align'=>'62% 37%',
+                'alt'=>'Three men repair a brick sewer outfall.'));
         $Neigh[link] = 'Neigh';
         $Neigh[type] = 'category';
         $Neigh[sidebarflag] = 'x';
@@ -1145,7 +1183,8 @@
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/1626/default.jpg',
             'pich'=>'250px',
             'size'=>'110%',
-            'pos'=>'center'
+            'pos'=>'center',
+            'alt'=>'Five boys furiously set off on a running race from the starting line on an outdoor track in a park while several adult males look on.'
         );
         $Parks[textshort] = 'Visit Chicago&rsquo;s parks that emerged from a single, hard-fought-for narrow strip of land along the lakefront in 1836 to more than 500 parks today.';
         $Parks[textlong] = 'Parks have always been a part of Chicago’s city planning. Explore their growth and development from six large parks begun around 1870 to over 500 today.';
@@ -1161,27 +1200,32 @@
             'coll' => 'ChicagoParks',
             'text'=>'Hula hooping in Horner Park, 1971',
             'size'=>'110%',
-            'align'=>'center');
+            'align'=>'center',
+            'alt'=>'A boy spins two large hoola hoops, one around each wrist, in Horner Park. Several children, one a girl on a bicycle, look on.');
         $Parks[thumbs] = array(array('url'=>'2239',
                 'coll' => 'mpu',
                 'text'=>'Cloud Gate, assembly complete, 2004',
                 'size'=>'cover',
-                'align'=>'center'),
+                'align'=>'center',
+                'alt'=>'Completed assembly of Cloud Gate, aka The Bean, outside in Millennium Park. SBC Plaza is still under construction and there is construction equipment scattered around. Two construction workers are working to the left of the sculpture and the tall buildings of Michigan Avenue are visible behind the sculpture. '),
             array('url'=>'112',
                 'coll' => 'ChicagoParks',
                 'text'=>'Addams Park, undated',
                 'size'=>'200%',
-                'align'=>'52% 17%'),
+                'align'=>'52% 17%',
+                'alt'=>'Three boys in suits play recorders while standing  in a semi-circle around a microphone in a park building. Several adults standing together look on from behind them.'),
             array('url'=>'4752',
                 'coll' => 'ChicagoParks',
                 'text'=>'Red Saunders performs in Lake Meadow Park, 1970',
                 'size'=>'500px',
-                'align'=>'55% 25%'),
+                'align'=>'55% 25%',
+                'alt'=>'Musician, Red Saunders, stands on a stage and plays electric guitar in front of a microphone with a band sitting behind him on an outdoor stage in Lake Meadow Park. An audience, both sitting and standing, take in the performance.'),
             array('url'=>'6209',
                 'coll' => 'ChicagoParks',
                 'text'=>'Palmer Park, 1965',
                 'size'=>'140%',
-                'align'=>'50% 50%'));
+                'align'=>'50% 50%',
+                'alt'=>'A group of approximately fifty girls in athletic uniform perform standing calisthenics with their arms over their heads in a field house gymnasium in Palmer Park. Three artistic murals are overhead on the wall behind them.'));
         $Parks[link] = 'Parks';
         $Parks[type] = 'category';
         $Parks[sidebarflag] = 'x';
@@ -1195,7 +1239,8 @@
             'pic'=>'theater-cardpic.png',
             'pich'=>'250px',
             'size'=>'auto 225%',
-            'pos'=>'45% 60%'
+            'pos'=>'45% 60%',
+            'alt'=>'A black and white drawing depicts a woman looking through a monocle. Her hair is styled into a high bun.'
         );
         $CPB01[category] = '';
         $CPB01[textshort] = 'Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.';
@@ -1208,29 +1253,34 @@
                                 array('a'=>'https://www.chipublib.org/archival_subject/theater/','dt'=>'Chicago Theater Collection','dd'=>'A list of collections at Chicago Public Library representing theaters, designers, actors and other members of the theater community. '));
         $CPB01[mainimage] = array('url'=>'6053',
             'coll' => 'CPB01',
-            'text'=>'Sarah Bernhardt in <em>Camille</em>, McVicker&rsquo;s Theatre, 1881',
+            'text'=>'Sarah Bernhardt in <em>Camille</em>, McVicker&rsquo;s Theatre, 1881',
             'size'=>'134%',
-            'align'=>'52% 15%');
+            'align'=>'52% 15%',
+            'alt'=>'Theater playbill cover for Camille starring Sarah Bernhardt at McVicker\'s Theatre');
         $CPB01[thumbs] = array(array('url'=>'8601',
                 'coll' => 'CPB01',
-                'text'=>'<em>Evening with Columbine</em>, Chicago Little Theatre, 1913',
+                'text'=>'<em>Evening with Columbine</em>, Chicago Little Theatre, 1913',
                 'size'=>'200%',
-                'align'=>'50% 85%'),
+                'align'=>'50% 85%',
+                'alt'=>'Theater program cover reads &ldquo;Chicago Little Theatre, affiliated with the Incorporated Stage Society, London, England, second season, 1913-14&rdquo;. Black and white drawing depicts a woman in a short skirt, supported by two men, kneeling in front of a large circle. '),
             array('url'=>'6272',
                 'coll' => 'CPB01',
-                'text'=>'<em>Mr. Blue Beard</em>, Iroquois Theatre, 1903',
+                'text'=>'<em>Mr. Blue Beard</em>, Iroquois Theatre, 1903',
                 'size'=>'110%',
-                'align'=>'50% 30%'),
+                'align'=>'50% 30%',
+                'alt'=>'Theater program cover reads, &ldquo;Iroquois Theatre, Randolph St. between State and Dearborn Streets, Chicago,&rdquo; and depicts a Greek revival door, topped by an Iroquois face in headdress and flanked by Native American shields.'),
             array('url'=>'6748',
                 'coll' => 'CPB01',
-                'text'=>'Joseph Jefferson in <em>Rivals</em>, McVicker&rsquo;s Theatre, 1896',
+                'text'=>'Joseph Jefferson in <em>Rivals</em>, McVicker&rsquo;s Theatre, 1896',
                 'size'=>'140%',
-                'align'=>'50% 40%'),
+                'align'=>'50% 40%',
+                'alt'=>'Theater program cover reads, &rdquo;38th year, McVicker\'s Theatre, Bill of the Play, 1857-1896,&rdquo; and depicts a bas relief, inside the theater, a scene from the World\'s Columbian Exposition and a white haired man framed by a floral motif.'),
             array('url'=>'9755',
                 'coll' => 'CPB01',
-                'text'=>'<em>The Mikado</em>, Chicago Opera House, 1886',
+                'text'=>'<em>The Mikado</em>, Chicago Opera House, 1886',
                 'size'=>'200%',
-                'align'=>'68% 47%'));
+                'align'=>'68% 47%',
+                'alt'=>'Theater program cover reads, &ldquo;Chicago Opera House, The Mikado&rdquo; and depicts a drawing of a stage with an actor downstage, and a large circle upstage showcasing a drawing of a person in Japanese-style dress. A woman holding a fan looks on from a balcony which is supported by a feminine stature. The stage is flanked by curtains and plants. '));
         $CPB01[link] = 'CPB01';
         $CPB01[coll] = 'CPB01';
         $CPB01[location] = $HWLCSC;
