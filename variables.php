@@ -20,7 +20,7 @@
         $hdg[flag] =            '10';
         $bar[flag] =            '11';
         $woop[flag] =           '12';
-        // $dtd[flag] =            '12';
+        $dtd[flag] =            '';
         $ChicagoParks[flag] =   '';
         $cfc[flag] =            '';
         $ahs[flag] =            '';
@@ -377,7 +377,7 @@
                     'text'=>'Story hour in Welles Park, Hild Regional Library, circa 1930',
                     'size'=>'400px',
                     'align'=>'15% 20%',
-                    'alt'=>'A large group of children, some wearing bunny masks, pose for a picture. '),
+                    'alt'=>'A large group of children, some wearing bunny masks, pose for a picture.'),
                 array('url'=>'70',
                     'text'=>'Esther Barlow at the circulation desk, Lake View Branch, 1951',
                     'size'=>'500px',
@@ -430,7 +430,7 @@
                     'text'=>'Traveling branch, circa 1960s',
                     'size'=>'cover',
                     'align'=>'center',
-                    'alt'=>'Side view of a bus that reads &ldquo;The Chicago Public Library Traveling Branch&rdquo; with separate doors for Entrance and Exit. '));
+                    'alt'=>'Side view of a bus that reads &ldquo;The Chicago Public Library Traveling Branch&rdquo; with separate doors for Entrance and Exit.'));
         $woop[link] = 'woop';
         $woop[location] = $HWLCSC;
         $woop[type] = 'collection';
@@ -442,7 +442,8 @@
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/12/default.jpg',
             'pich'=>'20rem',
             'size'=>'100%',
-            'pos'=>'auto'
+            'pos'=>'auto',
+            'alt'=>'Margaret Walker\'s face, smiling'
         );
         $cr[category] = 'African Americans';
         $cr[textshort] = 'African American community leaders, performers, artists, writers and activists on Chicago&rsquo;s South Side, 1930-1950.';
@@ -457,23 +458,28 @@
         $cr[mainimage] = array('url'=>'1',
             'text'=>'Horace Cayton with &ldquo;Blue Boy,&rdquo; 1944',
             'size'=>'110%',
-            'align'=>'50% 0');
+            'align'=>'50% 0',
+            'alt'=>'Horace Cayton shows three paintings to two women. One of the paintings is Charles Sebree\'s &ldquo;Blue Boy.&rdquo;');
         $cr[thumbs] = array(array('url'=>'11',
                 'text'=>'Langston Hughes and Gwendolyn Brooks, 1949',
                 'size'=>'100%',
-                'align'=>'50% 10%'),
+                'align'=>'50% 10%',
+                'alt'=>'Langston Hughes and Gwendolyn Brooks. Hughes is holding a copy of the book &ldquo;The Poetry of the Negro.&rdquo;"'),
             array('url'=>'10',
                 'text'=>'Richard Durham, 1948',
                 'size'=>'150%',
-                'align'=>'center'),
+                'align'=>'center',
+                'alt'=>'Richard Durham sits at a desk with a typewriter.  He is reading some loose pages and has a pencil in his right hand.'),
             array('url'=>'15',
                 'text'=>'C.L. Cook and his Dreamland Orchestra, 1923',
                 'size'=>'150%',
-                'align'=>'center'),
+                'align'=>'center',
+                'alt'=>'An advertisement for &ldquo;Cook&rdquo; and his Dreamland Orchestra, now playing at Harmon\'s Dreamland. Photos depict individual members of the band and the group.'),
             array('url'=>'12',
                 'text'=>'Margaret Walker, 1942',
                 'size'=>'cover',
-                'align'=>'50% 25%'));
+                'align'=>'50% 25%',
+                'alt'=>'Margaret Walker\'s face, smiling'));
         $cr[link] = 'cr';
         $cr[location] = $Harsh;
         $cr[type] = 'collection';
@@ -485,7 +491,8 @@
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/dtd/157/default.jpg',
             'pich'=>'200px',
             'size'=>'120%',
-            'pos'=>'50% -20px'
+            'pos'=>'50% -20px',
+            'alt'=>'Three men working on an unfinished sewer.'
         );
         $dtd[category] = 'Neighborhoods';
         $dtd[textshort] = 'Photographs of sewer systems and passageways from 1925 to 1949 offer a rare look at the underbelly of Chicago.';
@@ -495,23 +502,28 @@
         $dtd[mainimage] = array('url'=>'167',
             'text'=>'103rd and Rockwell Streets, inspecting tile, 1936',
             'size'=>'',
-            'align'=>'center');
+            'align'=>'center',
+            'alt'=>'Two men peer into a section of large concrete pipe.  Two more men stand inside the section of pipe.');
         $dtd[thumbs] = array(array('url'=>'150',
                 'text'=>'Magnolia Avenue sewer system, 1933',
                 'size'=>'400%',
-                'align'=>'61% 37%'),
+                'align'=>'61% 37%',
+                'alt'=>'A large sewer pipe splits into two directions.  Men are standing in both sections of the sewer with waste coming up above their knees.'),
             array('url'=>'142',
                 'text'=>'Broadway Street, sewer in Rokeby Street, 1927',
                 'size'=>'250%',
-                'align'=>'30% 50%'),
+                'align'=>'30% 50%',
+                'alt'=>'A construction worker is perched on top of a wooden fence,  operating a piece of machinery.  Another man stands on the ground and holds the machinery; a third man holds onto a metal pipe.'),
             array('url'=>'144',
                 'text'=>'Bryn Mawr Avenue, bricklayers, 1930',
                 'size'=>'250%',
-                'align'=>'0 50%'),
+                'align'=>'0 50%',
+                'alt'=>'A group of construction workers stand on wooden planks inside a large unfinished sewer pipe.  Bricks are scattered on the ground.'),
             array('url'=>'155',
                 'text'=>'103rd and Rockwell Streets, pipe yard, 1936',
                 'size'=>'250%',
-                'align'=>'40% 35%'));
+                'align'=>'40% 35%',
+                'alt'=>'Men walk among several sections of very large pipes covered with tarpaulins.  One man stands on top of a pipe and sprays it with water.'));
         $dtd[link] = 'dtd';
         $dtd[location] = $HWLCSC;
         $dtd[type] = 'collection';
@@ -530,11 +542,11 @@
         );
         $wha[category] = 'Civil War';
         $wha[textshort] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield.';
-        $wha[textlong] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience. ';
+        $wha[textlong] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.';
         $wha[textrich] = '<p>Illinois supported the Union effort by sending hundreds of thousands of troops into battle, but the Civil War was also fought on the homefront. </p><p>Examine artifacts and photographs from both arenas. Highlights include <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/wha/searchterm/camp+life/field/subjeb/mode/all/conn/and/order/title/ad/asc">camp life</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/wha/searchterm/small+arms/field/all/mode/exact/conn/and/order/nosort/ad/asc">swords</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/wha/searchterm/clothing/field/all/mode/exact/conn/and/order/nosort/ad/asc">uniforms</a>.</p> ';
         $wha[rights] = '<p>The Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections is made possible by generous gifts to <a href="http://cplfoundation.org/">Chicago Public Library Foundation</a> by the partners of Skadden, Arps, Slate, Meagher &amp; Flom LLP in honor of Wayne Whalen&rsquo;s interest in Abraham Lincoln and the Civil War.</p>';
         $wha[CPLRes] = array(array('a'=>'https://www.chipublib.org/fa-american-civil-war-documents-manuscripts-letters-and-diaries-and-grand-army-of-the-republic-collection/','dt'=>'American Civil War Documents, Manuscripts, Letters and Diaries and Grand Army of the Republic Collections Finding Aid','dd'=>'A large portion of this collection focuses on the experience of soldiers and leaders from Illinois told through letters and diaries.'),
-                                array('a'=>'https://www.chipublib.org/archival_subject/military/','dt'=>'Military Archival Collections','dd'=>'A list of all archival collections related to the Civil War, including records of the Daughters of Union Veterans of the Civil War, as well as personal collections of service members from other conflicts, such as World War II. '));
+                                array('a'=>'https://www.chipublib.org/archival_subject/military/','dt'=>'Military Archival Collections','dd'=>'A list of all archival collections related to the Civil War, including records of the Daughters of Union Veterans of the Civil War, as well as personal collections of service members from other conflicts, such as World War II.'));
         $wha[mainimage] = array('url'=>'634',
             'text'=>'&ldquo;Sherman and His Generals,&rdquo; <em>Photographic Views of Sherman&rsquo;s Campaign</em> by George N. Barnard, 1865',
             'size'=>'auto 575px',
@@ -646,7 +658,8 @@
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/2239/default.jpg',
             'pich'=>'240px',
             'size'=>'130%',
-            'pos'=>'35% 50%'
+            'pos'=>'35% 50%',
+            'alt'=>'Completed assembly of Cloud Gate, also known as The Bean, outside in Millennium Park. SBC Plaza is still under construction and there is construction equipment scattered around. The tall buildings of Michigan Avenue are visible behind the sculpture.'
         );
         $mpu[category] = 'Parks';
         $mpu[textshort] = 'See a rail yard transform into a dynamic urban park.';
@@ -661,23 +674,28 @@
         $mpu[mainimage] = array('url'=>'1297',
             'text'=>'Millennium Monument at Wrigley Square, circa 2003',
             'size'=>'110%',
-            'align'=>'center');
+            'align'=>'center',
+            'alt'=>'Stone marker with the words Millennium Park is in the foreground and the stone peristyle, Millennium Monument, is in the background. It is a winter scene with snow.');
         $mpu[thumbs] = array(array('url'=>'1543',
                 'text'=>'Cloud Gate, omphalos, 2004',
                 'size'=>'140%',
-                'align'=>'40% 50%'),
+                'align'=>'40% 50%',
+                'alt'=>'Cloud Gate, also known as The Bean, is under construction outside on the park plaza, with steel plates being attached. A single white skyscraper is visible in the background.'),
             array('url'=>'4390',
                 'text'=>'Crown Fountain, gargoyle spray, 2004',
                 'size'=>'140%',
-                'align'=>'40% 60%'),
+                'align'=>'40% 60%',
+                'alt'=>'Five children, dressed in shorts or summer clothes, huddle together under a spray of water from the lips of a woman in a video projected on Crown Fountain.'),
             array('url'=>'4781',
                 'text'=>'Jay Pritzker Pavilion, headdress, 2004',
                 'size'=>'160%',
-                'align'=>'70% 0'),
+                'align'=>'70% 0',
+                'alt'=>' A view of the underside of the undulating ribbons on the headdress of Jay Prizker Pavillion, under construction in the park. A worker’s yellow hard hat is visible between the folds of steel.'),
             array('url'=>'4662',
                 'text'=>'Jay Pritzker Pavilion, structural steel for the headdress, 2003',
                 'size'=>'',
-                'align'=>'center'));
+                'align'=>'center',
+                'alt'=>'Looking north toward the Jay Prizker Pavilion where the structural steel for the headdress is being installed. Construction equipment and a truck are in the foreground and tall buildings are in the background.'));
         $mpu[link] = 'mpu';
         $mpu[location] = $HWLCSC;
         $mpu[type] = 'collection';
@@ -689,28 +707,34 @@
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/130/default.jpg',
             'pich'=>'240px',
             'size'=>'175%',
-            'pos'=>'20% 55%'
+            'pos'=>'20% 55%',
+            'alt'=>'A juggler performs for onlooking children; a balloon floats in the foreground.'
         );
         $cfc[mainimage] = array('url'=>'24',
             'text'=>'Christian Fellowship Church, picnic at Schiller Park woods, 1930',
             'size'=>'125%',
-            'align'=>'80% 40%');
+            'align'=>'80% 40%',
+            'alt'=>'Members of the Christian Fellowship Church stand in a circle holding hands in Schiller Park.');
         $cfc[thumbs] = array(array('url'=>'396',
                 'text'=>'Members of the Girls&rsquo; Patriotic Service League at Portage Park, 1919',
                 'size'=>'450px',
-                'align'=>'17% 27%'),
+                'align'=>'17% 27%',
+                'alt'=>'Five members of the Girls\' Patriotic Service League in old-fashioned bathing costumes stand in a shallow pool of water.'),
             array('url'=>'61',
                 'text'=>'Mayor Harold Washington at the Ravenswood Manor Improvement Association, 70th anniversary celebration, 1984',
                 'size'=>'175%',
-                'align'=>'50% 50%'),
+                'align'=>'50% 50%',
+                'alt'=>'Mayor Washington smiles and shakes hands with an older woman.'),
             array('url'=>'144',
                 'text'=>'Annual picnic, Ravenswood Manor Improvement Association, circa 1984',
                 'size'=>'375px',
-                'align'=>'60% 50%'),
+                'align'=>'60% 50%',
+                'alt'=>'A clown and a group of children attend a picnic.  Balloons float above their heads.'),
             array('url'=>'107',
                 'text'=>'Cleanup Parade, Ravenswood Manor, 1965',
                 'size'=>'730px',
-                'align'=>'80% 40%'));
+                'align'=>'80% 40%',
+                'alt'=>'Parade participants include a fire truck, Boy Scouts on foot carrying flags, and a convertible.  The door and fire truck reads &ldquo;Hollywood Kiddieland, Lincoln-McCormick-Devon, Chicago Fire Dept.&rdquo;'));
         $cfc[category] = 'Neighborhoods';
         $cfc[textshort] = 'Glimpse into the activities of the thriving civic service scene on the North Side as well as the rich ethnic and religious heritage of the community.';
         $cfc[textlong] = 'Glimpse into the activities of the thriving civic service scene on the North Side as well as the rich ethnic and religious heritage of the community.';
@@ -734,28 +758,34 @@
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/197/default.jpg',
             'pich'=>'250px',
             'size'=>'110%',
-            'pos'=>'0% 45%'
+            'pos'=>'0% 45%',
+            'alt'=>'Lake View High School baseball team, seated for posed photograph, 1893'
         ); 
         $ahs[mainimage] = array('url'=>'634',
             'text'=>'Captain Louis D. Walz and Lake View High School drum major and majorettes, 1942',
             'size'=>'110%',
-            'align'=>'center');
+            'align'=>'center',
+            'alt'=>'Louis D. Walz poses with eight drum majorettes and one drum major.  They are all wearing marching band uniforms.');
         $ahs[thumbs] = array(array('url'=>'350',
                 'text'=>'Lake View High School, 1985',
                 'size'=>'150%',
-                'align'=>'center'),
+                'align'=>'center',
+                'alt'=>'Cars drive past Lake View High School.'),
             array('url'=>'149',
                 'text'=>'<em>Gold in Them Thar Hills</em>, Lake View High School, 1940',
                 'size'=>'150%',
-                'align'=>'50% 25%'),
+                'align'=>'50% 25%',
+                'alt'=>'Lake View High School students, three girls and two boys, pose in costume for a production of &ldquo;Gold in Them Thar Hills.&rdquo;'),
             array('url'=>'7',
                 'text'=>'Amundsen vs. Taft, Winnemac Park, 1949',
                 'size'=>'150%',
-                'align'=>'center'),
+                'align'=>'center',
+                'alt'=>'Football game between Amundsen High School and Taft High School at Winnemac Park.  The bleachers are half full.'),
             array('url'=>'245',
                 'text'=>'Lake View High School football team en route to the Orange Bowl, Midway Airport, 1953',
                 'size'=>'150%',
-                'align'=>'center'));
+                'align'=>'center',
+                'alt'=>'The Lake View High School football team stands on the tarmac in front of an airplane.  They are on their way to watch the Orange Bowl.'));
         $ahs[category] = array('Neighborhoods','Libraries &amp; Education');
         $ahs[textshort] = 'Photographs of high school football games, theatrical productions, dances and extracurricular activities from the 1870s to the 1950s.';
         $ahs[textlong] = 'Photographs of high school football games, theatrical productions, dances and extracurricular activities from the 1870s to the 1950s.';
@@ -869,7 +899,8 @@
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/rvw/1086/default.jpg',
             'pich'=>'250px',
             'size'=>'250%',
-            'pos'=>'24% 45%'
+            'pos'=>'24% 45%',
+            'alt'=>'A man seated at a soda counter, looking into his drink.  He is wearing a bowler hat high on his head.'
         );
         $rvw[category] = 'Neighborhoods';
         $rvw[textshort] = 'Street scenes and community life on the North Side, 1860s-1990s.';
@@ -884,23 +915,28 @@
         $rvw[mainimage] = array('url'=>'421',
             'text'=>'Lincoln &amp; Montrose Avenues, 1910',
             'size'=>'110%',
-            'align'=>'50% 50%');
+            'align'=>'50% 50%',
+            'alt'=>'A man and woman sit on a bench facing the intersection of Lincoln and Montrose Avenues.  Retail businesses occupy the two- and three-story buildings on those streets.');
         $rvw[thumbs] = array(array('url'=>'1800',
                 'text'=>'Arthur G. Bennett, undated',
                 'size'=>'110%',
-                'align'=>'60% 10%'),
+                'align'=>'60% 10%',
+                'alt'=>'A young man dressed in form-fitting clothing and cap rides a bicycle.  The bicycle has a very large front tire and a small back tire.'),
             array('url'=>'3142',
                 'text'=>'Charles Perkins, undated',
                 'size'=>'200%',
-                'align'=>'50% 10%'),
+                'align'=>'50% 10%',
+                'alt'=>'A man steers an old-fashioned automobile using a long handle attached to the front axle.  A small engine is mounted on the rear axle.  In the background three boys stand under a tree looking at the car.'),
             array('url'=>'933',
                 'text'=>'Riverview Park, 1950s',
                 'size'=>'170%',
-                'align'=>'50% 50%'),
+                'align'=>'50% 50%',
+                'alt'=>'An elevated view of an attraction at Riverview Park.  The facade of the building is the head of a genie with a thin moustache and a long thin beard.  He is wearing a turban and holding a lamp.'),
             array('url'=>'1272',
                 'text'=>'Klausen family salutes the American flag, 1918',
                 'size'=>'601px',
-                'align'=>'33% 20%'));
+                'align'=>'33% 20%',
+                'alt'=>'A young man holds two small American flags while five women to his left salute.  They are standing in front of a house whose front porch is decorated with American flags.'));
         $rvw[link] = 'rvw';
         $rvw[location] = $NNHC;
         $rvw[type] = 'collection';
@@ -912,28 +948,34 @@
             'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/p16818coll6/691/default.jpg',
             'pich'=>'300px',
             'size'=>'190%',
-            'pos'=>'20% 25%'
+            'pos'=>'20% 25%',
+            'alt'=>'Woodcut print featuring a portrait of a Black man surrounded with images of African Americans at work, at graduation, and walking around town. Image is from Burdens Unbound, a 1930 Methodist worship booklet.'
         );
         $p16818coll6[mainimage] = array('url'=>'4',
             'text'=>'Runaway slave poster, 1854',
             'size'=>'cover',
-            'align'=>'auto 0px');
+            'align'=>'auto 0px',
+            'alt'=>'1854 poster advertising as much as a $100 reward for information on a runaway enslaved man named Osborne.');
         $p16818coll6[thumbs] = array(array('url'=>'165',
                 'text'=>'Sheriff&rsquo;s bill of sale for two enslaved women, 1843',
                 'size'=>'cover',
-                'align'=>'auto 20%'),
+                'align'=>'auto 20%',
+                'alt'=>'1843 South Carolina sheriff\'s bill of sale for two enslaved women named Jane and Sarah.'),
             array('url'=>'7',
                 'text'=>'Runaway slave advertisement, 1855',
                 'size'=>'cover',
-                'align'=>'auto 15%'),
+                'align'=>'auto 15%',
+                'alt'=>'1855 print advertisement offering up to $100 as a reward for the apprehension of a runaway enslaved man named Ben.'),
             array('url'=>'691',
                 'text'=>'Methodist worship booklet for Lincoln Day Sunday, 1930',
                 'size'=>'300%',
-                'align'=>'27% 25%'),
+                'align'=>'27% 25%',
+                'alt'=>'Cover page of Burdens Unbound, a 1930 Methodist worship booklet for Lincoln Day Sunday; features a woodcut print with a portrait of a Black man surrounded with images of African Americans at work, at graduation, and walking around town.'),
             array('url'=>'231',
                 'text'=>'&ldquo;Marshal&rsquo;s Sale!,&rdquo; poster for public auction of enslaved persons, 1854',
                 'size'=>'cover',
-                'align'=>'center'));
+                'align'=>'center',
+                'alt'=>'1854 poster advertising a marshal\'s sale, a public auction of enslaved persons.'));
         $p16818coll6[category] = array('African Americans','Civil War');
         $p16818coll6[textshort] = 'The Philip David Sang Collection contains unpublished and published works and ephemera united by its focus on the struggle of Africans and African Americans through the Middle Passage to the Civil Rights movement.';
         $p16818coll6[textlong] = 'The Philip David Sang Collection contains unpublished and published works and ephemera united by its focus on the struggle of Africans and African Americans through the Middle Passage to the Civil Rights movement.';
@@ -986,7 +1028,7 @@
                 'text'=>'Marian Campfield, women&rsquo;s editor of the <em>Chicago Defender</em>, 1948',
                 'size'=>'140%',
                 'align'=>'center',
-                'alt'=>'Marian Campfield stands outside the Chicago Defender offices next to a press car. '),
+                'alt'=>'Marian Campfield stands outside the Chicago Defender offices next to a press car.'),
             array('url'=>'0',
                 'coll' => 'cr',
                 'text'=>'Catalog, &rdquo;Exhibition of the Art of the American Negro,&ldquo; 1940',
@@ -1207,7 +1249,7 @@
                 'text'=>'Cloud Gate, assembly complete, 2004',
                 'size'=>'cover',
                 'align'=>'center',
-                'alt'=>'Completed assembly of Cloud Gate, aka The Bean, outside in Millennium Park. SBC Plaza is still under construction and there is construction equipment scattered around. Two construction workers are working to the left of the sculpture and the tall buildings of Michigan Avenue are visible behind the sculpture. '),
+                'alt'=>'Completed assembly of Cloud Gate, aka The Bean, outside in Millennium Park. SBC Plaza is still under construction and there is construction equipment scattered around. Two construction workers are working to the left of the sculpture and the tall buildings of Michigan Avenue are visible behind the sculpture.'),
             array('url'=>'112',
                 'coll' => 'ChicagoParks',
                 'text'=>'Addams Park, undated',
@@ -1250,7 +1292,7 @@
         // $CPB01[highlights] = array(array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/','dt'=>'Chicago Theater Collection-Historic Playbills','dd'=>'Programs, playbills and newspaper clippings from more than 5,000 productions at Chicago&rsquo;s historic theaters dating back to the 1840s.'),
                                     // array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc','dt'=>'E.B. Gould Programs Collection','dd'=>'The annotated programs of a local Chicago businessman and enthusiastic playgoer.'));
         $CPB01[CPLRes] = array(array('a'=>'https://www.chipublib.org/fa-chicago-theater-collection-historic-programs/','dt'=>'Chicago Theater Collection-Historic Programs Finding Aid','dd'=>'The complete and ever-increasing inventory of theater programs past and present, some of which are presented here.'),
-                                array('a'=>'https://www.chipublib.org/archival_subject/theater/','dt'=>'Chicago Theater Collection','dd'=>'A list of collections at Chicago Public Library representing theaters, designers, actors and other members of the theater community. '));
+                                array('a'=>'https://www.chipublib.org/archival_subject/theater/','dt'=>'Chicago Theater Collection','dd'=>'A list of collections at Chicago Public Library representing theaters, designers, actors and other members of the theater community.'));
         $CPB01[mainimage] = array('url'=>'6053',
             'coll' => 'CPB01',
             'text'=>'Sarah Bernhardt in <em>Camille</em>, McVicker&rsquo;s Theatre, 1881',
@@ -1262,7 +1304,7 @@
                 'text'=>'<em>Evening with Columbine</em>, Chicago Little Theatre, 1913',
                 'size'=>'200%',
                 'align'=>'50% 85%',
-                'alt'=>'Theater program cover reads &ldquo;Chicago Little Theatre, affiliated with the Incorporated Stage Society, London, England, second season, 1913-14&rdquo;. Black and white drawing depicts a woman in a short skirt, supported by two men, kneeling in front of a large circle. '),
+                'alt'=>'Theater program cover reads &ldquo;Chicago Little Theatre, affiliated with the Incorporated Stage Society, London, England, second season, 1913-14&rdquo;. Black and white drawing depicts a woman in a short skirt, supported by two men, kneeling in front of a large circle.'),
             array('url'=>'6272',
                 'coll' => 'CPB01',
                 'text'=>'<em>Mr. Blue Beard</em>, Iroquois Theatre, 1903',
@@ -1280,7 +1322,7 @@
                 'text'=>'<em>The Mikado</em>, Chicago Opera House, 1886',
                 'size'=>'200%',
                 'align'=>'68% 47%',
-                'alt'=>'Theater program cover reads, &ldquo;Chicago Opera House, The Mikado&rdquo; and depicts a drawing of a stage with an actor downstage, and a large circle upstage showcasing a drawing of a person in Japanese-style dress. A woman holding a fan looks on from a balcony which is supported by a feminine stature. The stage is flanked by curtains and plants. '));
+                'alt'=>'Theater program cover reads, &ldquo;Chicago Opera House, The Mikado&rdquo; and depicts a drawing of a stage with an actor downstage, and a large circle upstage showcasing a drawing of a person in Japanese-style dress. A woman holding a fan looks on from a balcony which is supported by a feminine stature. The stage is flanked by curtains and plants.'));
         $CPB01[link] = 'CPB01';
         $CPB01[coll] = 'CPB01';
         $CPB01[location] = $HWLCSC;
