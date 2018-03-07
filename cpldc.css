@@ -407,13 +407,18 @@
         font-size: 0.9rem;
     }
     .center-copy-paragraph a, .center-copy-list li a, .all-links {
-        color: #2d63af;
+        color: #234c86;
         text-decoration: none;
         border-bottom: 1px solid #909696;
     }
     .center-copy-paragraph a:hover, .center-copy-list li a:hover, .all-links:hover {
         text-decoration: none;
+        color: #234c86;
         border-bottom: 2px solid #909696;
+    }
+    .all-collections-category a:hover {
+        text-decoration: none;
+        border-bottom: 1px solid #909696;
     }
     .center-title {
         color: #000;
@@ -441,9 +446,9 @@
         color: #3f4344;
     }
     .all-collections-category a {
+        border-bottom: 1px dotted #909696;
         font-size: 14px;
-        color: #2d63af;
-        text-decoration: underline;
+        color: #234c86;
     }
     .browseall .btn-primary {
         background-color: #2d63af !important;

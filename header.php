@@ -51,8 +51,10 @@
 						<div class="header-search-expanded hide">
 							<div class="header-search-expanded-text hidden-lg-down" >Search the Digital Collections</div>
 							<div class="header-search-expanded-text hidden-xl-up" >Search</div>
-							<div class="header-search-expanded-input"><input aria-label="Search the Digital Collections" type="text" name="search-query" id="search-input"></div>
-							<div class="header-search-expanded-icon"><i class="fa fa-search" onclick="searchQuery()"  aria-hidden="true"></i></div>
+							<div class="header-search-expanded-input">
+								<input aria-label="Search the Digital Collections" type="text" name="search-query" id="search-input">
+							</div>
+							<div class="header-search-expanded-icon" onclick="searchQuery()" ><i class="fa fa-search"  aria-hidden="true"></i></div>
 						</div>
 					</div>
 				</div>
