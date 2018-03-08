@@ -70,6 +70,7 @@
 		var leftSidebarButton = $(".left-sidebar-togglebutton").detach();
 		$(".left-sidebar-header").append(leftSidebarButton);
 		$(".left-sidebar-togglebutton").css("float","right");
+		$(".left-sidebar-togglebutton").css("position","relative");
 		if ($(".PAGE_TYPE").hasClass("content") && $(".container").hasClass("main-container-fixed")) {
 			$(".main-container-fixed").css("margin-left","235px");
 		}
@@ -85,6 +86,7 @@
 		var leftSidebarButton = $(".left-sidebar-togglebutton").detach();
 		$("main").prepend(leftSidebarButton);
 		$(".left-sidebar-togglebutton").css("float","left");
+		$(".left-sidebar-togglebutton").css("position","absolute");
 		if ($(".PAGE_TYPE").hasClass("content")) {
 			$(".main-container-fixed").css("margin-left","auto");
 		}

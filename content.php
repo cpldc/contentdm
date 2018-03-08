@@ -7,7 +7,12 @@
 	$PAGE = ${$ID};
 	$PAGE_TYPE = 'content';
 ?>
-	<meta charset="UTF-8">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
 	<title> <?php echo $PAGE[title] ?> | Digital Collections | Chicago Public Library</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
 	<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">

@@ -33,7 +33,7 @@
 					<div class="header-logo-img"><a href="https://www.chipublib.org/"><img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="Chicago Public Library" /></a></div>
 					<div class="header-logo-text"><?php if ($PAGE_TYPE == 'content'){echo '<h1><a href="index.php">Digital Collections</a></h1>';} else {echo '<a href="index.php">Digital Collections</a>';}?></div>
 				</div>
-				<div class="hidden-lg-up col-6">
+				<div class="hidden-lg-up col-7">
 					<div class="header-sm-img">
 						<a href="https://www.chipublib.org/">
 							<img src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/mobile_logo.png?1505979997263" alt="Chicago Public Library" />

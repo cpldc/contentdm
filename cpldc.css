@@ -593,9 +593,11 @@
         height: 53px;
         width: 49px;
         float: right;
-        position: relative;
+        /* position: relative; */
         z-index: 1 !important;
     }
+
+
     .left-sidebar-togglebutton button {
         background-color: #000;
         border: none;
