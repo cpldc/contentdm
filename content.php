@@ -6,8 +6,19 @@
     $ID = $_GET['id'];
 	$PAGE = ${$ID};
 	$PAGE_TYPE = 'content';
-?>
 
+	$COLL;
+	foreach ($cards as $key => $val) {
+		if (($PAGE[type] == 'location' && $PAGE[shortname] == $val[location]) || ($PAGE[type] == 'category' && ($PAGE[shortname] == $val[category] || (is_array($val[category]) && in_array($PAGE[shortname], $val[category]))))) {
+			if ($COLL == '') {$COLL = $val[coll];} else {$COLL = $COLL . '!' . $val[coll];}
+		}
+	}
+?>
+<script type="text/javascript">
+	var pagelink = "<?= $PAGE[link]; ?>"; 
+	var pagetype = "<?= $PAGE[type]; ?>";
+	var pagecolls = "<?= $COLL; ?>";
+</script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,7 +70,7 @@
 				include 'sidebar.php';
 			?>
 		<!-- center content -->
-			<div class="col-8 col-lg-5 col-xl-6 center-content">
+			<div class="col-8 col-xl-6 center-content">
 				<h1 id="content-top"><?php echo $PAGE[title]; ?></h1>
 				<?php 
 					if ($PAGE[title] == 'Digital Collections A-Z'){
@@ -76,7 +87,7 @@
 				?>
 			</div>
 		<!-- right sidebar -->
-			<div class="hidden-md-down col-lg-3 right-sidebar">
+			<div class="hidden-lg-down col-lg-3 right-sidebar">
 				<div class="right-sidebar">
 					<div class="blogs">
 						<?php

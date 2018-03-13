@@ -21,7 +21,7 @@
 					if (sidebarType == "collapsible") {
 						document.write('<div class="left-sidebar-togglebutton left-sidebar-togglebutton-hide " onclick="toggleLeftSidebar()">');
 					} else if (sidebarType == "fixed") {
-						document.write('<div class="left-sidebar-togglebutton left-sidebar-togglebutton-hide hide" onclick="toggleLeftSidebar()">');
+						document.write('<div class="left-sidebar-togglebutton left-sidebar-togglebutton-hide hidden" onclick="toggleLeftSidebar()">');
 					}
 				</script>
 				<button class="left-sidebar-togglebutton-target">

@@ -1,4 +1,5 @@
 	var viewportWidth = $(window).width();
+	
 	// click on search icon, input field appears
 	function expandSearch() {
 		var viewportWidth = $(window).width();
@@ -47,7 +48,7 @@
         $(".left-sidebar-toplevel").addClass("left-sidebar-collapsible");
         $(".left-sidebar-toplevel").removeClass("left-sidebar-fixed col-4 col-lg-4 col-xl-3 ");
         $(".left-sidebar-togglebutton").removeClass("hide");
-        $(".center-content").removeClass("col-8 col-lg-5");
+        $(".center-content").removeClass("col-8");
         $(".center-content").addClass("col-12");
 	}
 	// how to switch to fixed: detach() and dump into fixed sidebar target; change bootstrap breakpoints, hide the show/hide button
@@ -58,7 +59,7 @@
         $(".left-sidebar-toplevel").removeClass("left-sidebar-collapsible");
         $(".left-sidebar-toplevel").addClass("left-sidebar-fixed col-4 col-lg-4 col-xl-3 ");
         $(".left-sidebar-togglebutton").addClass("hide");
-        $(".center-content").addClass("col-8 col-lg-5");
+        $(".center-content").addClass("col-8");
 		$(".main-container-fixed").css("margin-left","auto");
 		$(".center-content").removeClass("col-12");
 	}
@@ -130,19 +131,34 @@
 				switchToFixedLayout();
 			}
 		}
+		$(".lightbox-main-img").height($(".lightbox-main-img").width() * 0.7383);
 	});
 	// sends user's input to end of url, which is how contentdm searches
 	function searchQuery() {
+		if ( pagetype === "collection") {
+			var searchLink = 'http://digital.chipublib.org/digital/collection/' + pagelink + '/search/searchterm/' + query + '/field/all/mode/all/conn/all/order/nosort/ad/asc';
+		} else if ( pagecolls != '') {
+			var searchLink = 'http://digital.chipublib.org/digital/search/collection/' + pagecolls + '/searchterm/asdf/field/all/mode/all/conn/all/order/nosort/ad/asc';
+		} else {
+			var searchLink = 'http://digital.chipublib.org/digital/search/searchterm/' + query;
+		}
 		var query = document.getElementsByName("search-query")[0].value;
 		if ( query != "") {
-			window.location.href = 'http://digital.chipublib.org/digital/search/searchterm/' + query;
+			window.location.href = searchLink;
 		}
 	}
 	// needed a separate function to search from the dropped-down search input or else the page wouldn't pull the input from either
 	function searchQuery2() {
+		if ( pagetype === "collection") {
+			var searchLink = 'http://digital.chipublib.org/digital/collection/' + pagelink + '/search/searchterm/' + query + '/field/all/mode/all/conn/all/order/nosort/ad/asc';
+		} else if ( pagecolls != '') {
+			var searchLink = 'http://digital.chipublib.org/digital/search/collection/' + pagecolls + '/searchterm/asdf/field/all/mode/all/conn/all/order/nosort/ad/asc';
+		} else {
+			var searchLink = 'http://digital.chipublib.org/digital/search/searchterm/' + query;
+		}
 		var query = document.getElementsByName("search-query2")[0].value;
 		if ( query != "") {
-			window.location.href = 'http://digital.chipublib.org/digital/search/searchterm/' + query;
+			window.location.href = searchLink;
 		}
 	}
 	// now functional!  attempts to hijack all (lightbox) images onload and check whether they are from MP, and adds rights div if true
@@ -224,7 +240,7 @@
 			}
 		});
 
-	$(document).keyup(function(e) {
+	$( document ).keyup(function(e) {
 		if (e.keyCode == 27) {
 			if (!$("nav ul").hasClass("hidden")) {$("nav ul").toggleClass("hidden")}
 		}
@@ -232,6 +248,7 @@
 	// docreadies: 
 		// 	checks window size to assign layout; 
 		// 	waits for enter key to be pressed after typing in search input (x2 for both search inputs); 
+		//  sets main image height to be relative to image width
 		// 	calls rights-i event listener refresh
 
 	$( document ).ready(function() {
@@ -260,14 +277,9 @@
 			if(e.keyCode==13)
 				expandSearch();
 		});
+		$(".lightbox-main-img").outerHeight($(".lightbox-main-img").outerWidth() * 0.7383);
 		
 		RefreshEventListener();
 	});
 	
 	
-	function Caa(let){
-		var letterClass = '.az-' + let;
-		console.log(let, letterClass);
-		$('.az').hide();
-		$(let).show();
-	}

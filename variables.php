@@ -286,13 +286,14 @@
         $CFCC[link] = '#cfc';
         $CFCC[type] = 'subcollection';
 
-    $LVCRA[title] = 'Lake View Council on Religious Action';
-        $LVCRA[sortname] = 'Lake View Council on Religious Action';
-        $LVCRA[textlong] = 'See <a class="all-links" href="#cfc">Northside Clubs and Organizations</a>.';
-        $LVCRA[textshort] = 'Representatives from local churches and synagogues and members of the Kiwanis Club of Lake View at work.';
-        $LVCRA[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort';
-        $LVCRA[link] = '#cfc';
-        $LVCRA[type] = 'subcollection';
+    // $LVCRA[title] = 'Lake View Council on Religious Action';
+        // removed due to rights concerns; inactive in contentDM
+        // $LVCRA[sortname] = 'Lake View Council on Religious Action';
+        // $LVCRA[textlong] = 'See <a class="all-links" href="#cfc">Northside Clubs and Organizations</a>.';
+        // $LVCRA[textshort] = 'Representatives from local churches and synagogues and members of the Kiwanis Club of Lake View at work.';
+        // $LVCRA[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort';
+        // $LVCRA[link] = '#cfc';
+        // $LVCRA[type] = 'subcollection';
 
     $PortPark[title] = 'Portage Park Community Collection';
         $PortPark[sortname] = 'Portage Park Community Collection';

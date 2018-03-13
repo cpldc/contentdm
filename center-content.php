@@ -1,11 +1,11 @@
-		<section aria-label="Introduction">
-			<p class="center-copy-paragraph" id="intro"><?php echo $PAGE[textlong]; ?></p>
+	<section aria-label="Introduction">
+		<p class="center-copy-paragraph" id="intro"><?php echo $PAGE[textlong]; ?></p>
 	</section>
 	<section aria-label="Images">
 			<div class="center-lightbox">
 				<div class="container-fluid lightbox imageGallery1">
 					<div class="row"> 
-						<div class="col-12 lightbox-main-img-div">
+						<div class="col-12 lightbox-main-img-div justify-content-center">
 							<!-- Dear w3c, if you built a image crop that actually works, I wouldn't have to do nonsense like make an image the background of an image with no src.  Love, CPLDC. -->
 						<?php 
 							if ($PAGE[type] == 'collection'){
@@ -30,6 +30,7 @@
 					</div>
 					<div class="row lightbox-thumbs justify-content-center">
 						<?php 
+								$i = 1;
 							foreach ($PAGE[thumbs] as $key => $val) {
 								if ($PAGE[type] == 'collection'){
 									$thumbUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $PAGE[coll] . "/" . $val[url] . '/default.jpg';
@@ -38,11 +39,18 @@
 									$thumbUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $val[coll] . "/" . $val[url] . '/default.jpg';
 									$thumbTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $val[coll] . "/id/" . $val[url] . '>' . $val[text] . '</a>';
 								}
-								echo '<div class="col-3 lightbox-thumb-wrapper"';
+								if ($i < 3){
+									echo '<div class="col lightbox-thumb-wrapper"';
+								} elseif ($i ==3 ) {
+									echo '<div class="col lightbox-thumb-wrapper hidden-sm-down"';
+								} else {
+									echo '<div class="col lightbox-thumb-wrapper hidden-xs-down"';
+								}
 								if (strpos($val[url], 'mpu') !== false && $PAGE[link] !== 'MP') {
     	                        	echo ' data-toggle="tooltip" data-placement="top" title="' . $mpu[rights2] . '"';
         	                	}
 								echo '><a href="' . $thumbUrl . '" data-caption="' . $thumbTitle . '" data-alt="' . $val[alt] . '" title="' . strip_tags(html_entity_decode($val[text])) . '" ><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="background: url(' . $thumbUrl . '); background-size: ' . $val[size] . '; background-position: ' . $val[align] . '!important;" class="lightbox-thumb" alt="' . $val[alt] . '" /></a></div>';
+								$i++;
 							}
 						?>
 					</div>
@@ -57,12 +65,6 @@
 					if ($PAGE[coll]) {
 						echo '<div class="center-button browseall"><a href="http://digital.chipublib.org/digital/collection/' . $PAGE[coll] . '/search" class="btn btn-primary">Browse All</a></div>';
 					} else {
-						$COLL;
-						foreach ($cards as $key => $val) {
-							if (($PAGE[type] == 'location' && $PAGE[shortname] == $val[location]) || ($PAGE[type] == 'category' && ($PAGE[shortname] == $val[category] || (is_array($val[category]) && in_array($PAGE[shortname], $val[category]))))) {
-								if ($COLL == '') {$COLL = $val[coll];} else {$COLL = $COLL . '!' . $val[coll];}
-							}
-						}
 						if (!$COLL == ''){
 							echo '<div class="center-button browseall"><a href="http://digital.chipublib.org/digital/search/collection/' . $COLL . '/order/title/ad/asc" class="btn btn-primary">Browse All</a></div>';
 						}
