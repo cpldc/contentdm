@@ -49,8 +49,16 @@
 							<div class="header-search-collapsed-icon" ><i class="fa fa-search" aria-hidden="true"></i></div>
 						</div>
 						<div class="header-search-expanded hide">
-							<div class="header-search-expanded-text hidden-lg-down" >Search the Digital Collections</div>
-							<div class="header-search-expanded-text hidden-xl-up" >Search</div>
+							<div class="header-search-expanded-text" ><span>Search</span>
+<div class="dropdown">
+	<button class="dropdown-toggle bib-button-searchthe" id="selectSearchTarget" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">This <script>$(this).html(pagetype)</script></button>
+	<div class="dropdown-menu bib-button-searchthe-optionbox" aria-labelledby="dropdownMenuButton">
+		
+		<a class="dropdown-item bib-button-searchthe-option" onClick="selectSearch($(this).text())" href="#">This <script>document.write(pagetype)</script></a>
+		<a class="dropdown-item bib-button-searchthe-option" onClick="selectSearch($(this).text())" href="#">All <script>document.write(pagetype)</script>s</a>
+	</div>
+</div>
+							</div>
 							<div class="header-search-expanded-input">
 								<input aria-label="Search the Digital Collections" type="text" name="search-query" id="search-input">
 							</div>
