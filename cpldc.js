@@ -14,7 +14,12 @@
 		}
 	}
 	function selectSearch(param) {
-		$("#selectSearchTarget").html(param);
+		$("#selectSearchTarget").text(param);
+		console.log($('#selectSearchTarget').text().indexOf('All'));
+	}
+	function selectSearch2(param) {
+		$("#selectSearchTarget2").text(param);
+		console.log($('#selectSearchTarget').text().indexOf('All'));
 	}
 	// removes input field on search; only occurs when resizing - no "close" button in bibliocommons, so none here
 	function hideSearch() {
@@ -139,10 +144,10 @@
 	// sends user's input to end of url, which is how contentdm searches
 	function searchQuery() {
 		var query = document.getElementsByName("search-query")[0].value;
-		var selectSearchType = $('#selectSearchTarget').text();
-		if ( pagetype === "collection" && selectSearchType != 'All Collections') {
+		var selectSearchType = $('#selectSearchTarget').text().indexOf('All');
+		if ( pagetype === "collection" && selectSearchType < 0) {
 			var searchLink = 'http://digital.chipublib.org/digital/collection/' + pagelink + '/search/searchterm/' + query + '/field/all/mode/all/conn/all/order/nosort/ad/asc';
-		} else if ( pagecolls != '' && selectSearchType != 'All Collections') {
+		} else if ( pagecolls != '' && selectSearchType < 0) {
 			var searchLink = 'http://digital.chipublib.org/digital/search/collection/' + pagecolls + '/searchterm/' + query + '/field/all/mode/all/conn/all/order/nosort/ad/asc';
 		} else {
 			var searchLink = 'http://digital.chipublib.org/digital/search/searchterm/' + query;
@@ -154,9 +159,10 @@
 	// needed a separate function to search from the dropped-down search input or else the page wouldn't pull the input from either
 	function searchQuery2() {
 		var query = document.getElementsByName("search-query2")[0].value;
-		if ( pagetype === "collection") {
+		var selectSearchType = $('#selectSearchTarget2').text().indexOf('All');
+		if ( pagetype === "collection" && selectSearchType < 0) {
 			var searchLink = 'http://digital.chipublib.org/digital/collection/' + pagelink + '/search/searchterm/' + query + '/field/all/mode/all/conn/all/order/nosort/ad/asc';
-		} else if ( pagecolls != '') {
+		} else if ( pagecolls != '' && selectSearchType < 0) {
 			var searchLink = 'http://digital.chipublib.org/digital/search/collection/' + pagecolls + '/searchterm/' + query + '/field/all/mode/all/conn/all/order/nosort/ad/asc';
 		} else {
 			var searchLink = 'http://digital.chipublib.org/digital/search/searchterm/' + query;

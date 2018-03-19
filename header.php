@@ -19,6 +19,21 @@
 		array('link' => 'https://www.chipublib.org/browse_program/one-book-one-chicago/', 'text' => 'One Book, One Chicago'));
 	$headerLinks = array($format, $aud, $more);
 	?>
+				
+<script>
+	var typeSingular;
+	var typePlural;
+	if (pagetype === 'category'){
+		typeSingular = 'This Category';
+		typePlural = 'All Categories';
+	} else if ( pagetype === 'location'){
+		typeSingular = 'This Location';
+		typePlural = 'All Locations';
+	} else if ( pagetype === 'collection'){
+		typeSingular = 'This Collection';
+		typePlural = 'All Collections';
+	}
+</script>	
 <header>
 <section class="a11y-skip-links">
 	<span class="invisitext"><a href="#nav-sidebar" onclick="showLeftSidebar()" class="a11ylinks">Skip to Navigation</a></span>
@@ -49,15 +64,14 @@
 							<div class="header-search-collapsed-icon" ><i class="fa fa-search" aria-hidden="true"></i></div>
 						</div>
 						<div class="header-search-expanded hide">
-							<div class="header-search-expanded-text" ><span>Search</span>
-<div class="dropdown">
-	<button class="dropdown-toggle bib-button-searchthe" id="selectSearchTarget" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">This <script>$(this).html(pagetype)</script></button>
-	<div class="dropdown-menu bib-button-searchthe-optionbox" aria-labelledby="dropdownMenuButton">
-		
-		<a class="dropdown-item bib-button-searchthe-option" onClick="selectSearch($(this).text())" href="#">This <script>document.write(pagetype)</script></a>
-		<a class="dropdown-item bib-button-searchthe-option" onClick="selectSearch($(this).text())" href="#">All <script>document.write(pagetype)</script>s</a>
-	</div>
-</div>
+							<div class="header-search-expanded-text" >Search
+							<div class="dropdown <?php if ($PAGE_TYPE == "home") {echo "hidden";}?> ">
+									<button class="dropdown-toggle bib-button-searchthe" id="selectSearchTarget" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><script>document.write(typeSingular)</script></button>
+									<div class="dropdown-menu bib-button-searchthe-optionbox" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item bib-button-searchthe-option" onClick="selectSearch(typeSingular)" href="#"><script>document.write(typeSingular)</script></a>
+										<a class="dropdown-item bib-button-searchthe-option" onClick="selectSearch(typePlural)" href="#"><script>document.write(typePlural)</script></a>
+									</div>
+								</div>
 							</div>
 							<div class="header-search-expanded-input">
 								<input aria-label="Search the Digital Collections" type="text" name="search-query" id="search-input">
@@ -75,22 +89,38 @@
 						</div>
 					</div>
 				</div>
-			<div role="search" class="container header-search-dropped hide clearfix" aria-label="Search the Digital Collections">
-				<div class="header-search-dropped-close"><i class="fa fa-times fa-2x" onclick="hideSearch()" aria-hidden="true"></i></div>
-				<div class="row header-search-dropped-search no-gutters align-items-center clearfix">
-					<div class="col-2 header-search-dropped-text">
-						Search
+				<div role="search" class="container header-search-dropped hide" aria-label="Search the Digital Collections">
+					<div class="header-search-dropped-close"><i class="fa fa-times fa-2x" onclick="hideSearch()" aria-hidden="true"></i></div>
+					<div class="header-search-dropped-search">
+						<div class="header-search-row-textrow">
+							<div class="header-search-dropped-text">
+								<h2>Search</h2>
+							</div>
+						</div>
+						<?php 
+							if ($PAGE_TYPE != "home") {echo '<div class="header-search-row">
+									<button class="dropdown-toggle bib-button-searchthe-dropdown" id="selectSearchTarget2" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><script>document.write(typeSingular)</script></button>
+									<div class="dropdown-menu bib-button-searchthe-optionbox-dropdown" aria-labelledby="dropdownMenuButton2">
+										<a class="dropdown-item bib-button-searchthe-option" onClick="selectSearch2(typeSingular)" href="#"><script>document.write(typeSingular)</script></a>
+										<a class="dropdown-item bib-button-searchthe-option" onClick="selectSearch2(typePlural)" href="#"><script>document.write(typePlural)</script></a>
+									</div>
+								</div>';
+							}
+						?>
+						<div class="header-search-row">
+							<div class="header-search-dropped-input">
+								<input type="text" name="search-query2" id="search-input2">
+							</div
+							><div class="header-search-dropped-icon"  onclick="searchQuery2()" >
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div
+						></div>
+							<div class="header-search-row-textrow clearfix">
+								<span class="header-search-dropped-adv"><a href="http://digital.chipublib.org/digital/search/advanced">Advanced Search</a></span>
+							</div>
+									</div>
 					</div>
-					<div class="col-8 header-search-dropped-input">
-						<input type="text" name="search-query2" id="search-input2">
-					</div>
-					<div class="col-1 header-search-dropped-icon">
-						<i class="fa fa-search" onclick="searchQuery2()" aria-hidden="true"></i>
-					</div>
-					<br />
-					<span class="header-search-dropped-adv"><a href="http://digital.chipublib.org/digital/search/advanced">Advanced Search</a></span>
 				</div>
-		</div>
 			</div>
 		</div>
 	</section>

@@ -31,9 +31,9 @@
 </head>
 <body>
     <?php 
+        $PAGE_TYPE = 'home';
         include 'variables.php';
         include 'header.php';
-        $PAGE_TYPE = 'home';
     ?>
     <main class="PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
         <?php include 'sidebar.php';?>
