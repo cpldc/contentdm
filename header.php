@@ -97,16 +97,13 @@
 								<h2>Search</h2>
 							</div>
 						</div>
-						<?php 
-							if ($PAGE_TYPE != "home") {echo '<div class="header-search-row">
+						<div class="header-search-row <?php if ($PAGE_TYPE == "home") {echo "hidden";}?> ">
 									<button class="dropdown-toggle bib-button-searchthe-dropdown" id="selectSearchTarget2" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><script>document.write(typeSingular)</script></button>
 									<div class="dropdown-menu bib-button-searchthe-optionbox-dropdown" aria-labelledby="dropdownMenuButton2">
 										<a class="dropdown-item bib-button-searchthe-option" onClick="selectSearch2(typeSingular)" href="#"><script>document.write(typeSingular)</script></a>
 										<a class="dropdown-item bib-button-searchthe-option" onClick="selectSearch2(typePlural)" href="#"><script>document.write(typePlural)</script></a>
 									</div>
-								</div>';
-							}
-						?>
+								</div>
 						<div class="header-search-row">
 							<div class="header-search-dropped-input">
 								<input type="text" name="search-query2" id="search-input2">

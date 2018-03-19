@@ -368,6 +368,7 @@
             array('link' => 'https://www.chipublib.org/fa-west-side-newspaper-collection/','text' => 'West Side Newspaper Collection'));
         $examiner[link] = 'examiner';
         $examiner[location] = $HWLCSC;
+        $examiner[homeloc] = 'HWLCSC';
         $examiner[type] = 'collection';
 
     $bar[title] = 'Esther A. Barlow Collection';
@@ -401,6 +402,7 @@
                     'alt'=>'A baby Esther Barlow sits with a little boy in a small wagon hitched to a goat.'));
         $bar[link] = 'bar';
         $bar[location] = $NNHC;
+        $bar[homeloc] = 'NNHC';
         $bar[type] = 'collection';
 
     $woop[title] = 'Chicago Public Library Archives';
@@ -444,6 +446,7 @@
                     'alt'=>'Side view of a bus that reads &ldquo;The Chicago Public Library Traveling Branch&rdquo; with separate doors for Entrance and Exit.'));
         $woop[link] = 'woop';
         $woop[location] = $HWLCSC;
+        $woop[homeloc] = 'HWLCSC';
         $woop[type] = 'collection';
 
     $cr[title] = 'Chicago Renaissance';
@@ -493,6 +496,7 @@
                 'alt'=>'Margaret Walker\'s face, smiling'));
         $cr[link] = 'cr';
         $cr[location] = $Harsh;
+        $cr[homeloc] = 'Harsh';
         $cr[type] = 'collection';
         
     $dtd[title] = 'Chicago Sewers Collection';
@@ -537,6 +541,7 @@
                 'alt'=>'Men walk among several sections of very large pipes covered with tarpaulins.  One man stands on top of a pipe and sprays it with water.'));
         $dtd[link] = 'dtd';
         $dtd[location] = $HWLCSC;
+        $dtd[homeloc] = 'HWLCSC';
         $dtd[type] = 'collection';
         
 
@@ -585,6 +590,7 @@
                 'alt'=>'List of names on union ticket, decorative drawing of an eagle in a circle at the top of the page'));
         $wha[link] = 'wha';
         $wha[location] = $HWLCSC;
+        $wha[homeloc] = 'HWLCSC';
         $wha[type] = 'collection';
 
     $hdg[title] = 'Henry D. Green Photograph Collection';
@@ -630,6 +636,7 @@
                                     'alt'=>'Five men from the fire department pose with a fire engine. Three are standing, and two are riding in the vehicle. One of the men has a white shirt and tie. Part of the fire house and two neighboring houses are pictured in the background'));
         $hdg[link] = 'hdg';
         $hdg[location] = $NNHC;
+        $hdg[homeloc] = 'NNHC';
         $hdg[type] = 'collection';
         
     $rwk[title] = 'Robert W. Krueger Photograph Collection';
@@ -677,6 +684,7 @@
                 'alt'=>'The front of a two-story duplex viewed from the street.  Two people sit at the entrance to one of the homes.'));
         $rwk[link] = 'rwk';
         $rwk[location] = $NNHC;
+        $rwk[homeloc] = 'NNHC';
         $rwk[type] = 'collection';
 
     $mpu[title] = 'Millennium Park U.S. Equities Realty Collection';
@@ -726,6 +734,7 @@
                 'alt'=>'Looking north toward the Jay Prizker Pavilion where the structural steel for the headdress is being installed. Construction equipment and a truck are in the foreground and tall buildings are in the background.'));
         $mpu[link] = 'mpu';
         $mpu[location] = $HWLCSC;
+        $mpu[homeloc] = 'HWLCSC';
         $mpu[type] = 'collection';
 
     $cfc[title] = 'Northside Clubs and Organizations';
@@ -776,6 +785,7 @@
                                 //array('link'=>'https://www.chipublib.org/fa-united-woodlawn-inc-records/','text'=>'United Woodlawn, Inc. Records'));
         $cfc[link] = 'cfc';
         $cfc[location] = $NNHC;
+        $cfc[homeloc] = 'NNHC';
         $cfc[subcollections] = array($CFCC, $LVCRA, $PortPark, $RMIA);
         $cfc[type] = 'collection';
 
@@ -823,6 +833,7 @@
                                 array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/ahs/searchterm/Walz/field/collec/mode/all/conn/and/order/nosort','dt'=>'Louis D. Walz Collection','dd'=>'The life of the long-time director of the Lake View High School band and World War I veteran.'));
         $ahs[link] = 'ahs';
         $ahs[location] = $NNHC;
+        $ahs[homeloc] = 'NNHC';
         $ahs[type] = 'collection';
         $ahs[subcollections] = array($Amund, $Kins, $LVHS, $Walz);
 
@@ -865,6 +876,7 @@
         $ChicagoParks[textlong] = 'Chicago Public Library is currently finalizing the Chicago Park District Records: Photographs digital collection. It will be completed in spring 2018, but you can search many of the photographs now.';
         $ChicagoParks[link] = 'ChicagoParks';
         $ChicagoParks[location] = $HWLCSC;
+        $ChicagoParks[homeloc] = 'HWLCSC';
         $ChicagoParks[type] = 'collection';
 
     $rhwc[title] = 'Remembering Harold Washington';
@@ -922,6 +934,7 @@
                 'alt'=>'Mayor Washington smiles and points to the crowd while riding on the back of a convertible.'));
         $rhwc[link] = 'rhwc';
         $rhwc[location] = $HWLCSC;
+        $rhwc[homeloc] = 'HWLCSC';
         $rhwc[type] = 'collection';
         $rhwc[sidebarflag] = 'x';
         
@@ -972,6 +985,7 @@
                 'alt'=>'A young man holds two small American flags while five women to his left salute.  They are standing in front of a house whose front porch is decorated with American flags.'));
         $rvw[link] = 'rvw';
         $rvw[location] = $NNHC;
+        $rvw[homeloc] = 'NNHC';
         $rvw[type] = 'collection';
         
     $p16818coll6[title] = 'Philip David Sang Collection';
@@ -1022,6 +1036,7 @@
                             array('a'=>'http://findingaids.brandeis.edu/agents/79?agent_type=agent_person','dt'=>'Philip D. Sang collections at Brandeis University','dd'=>'Materials related to the signers of the Declaration of Independence and U.S. Constitution.'));
         $p16818coll6[link] = 'p16818coll6';
         $p16818coll6[location] = $Harsh;
+        $p16818coll6[homeloc] = 'Harsh';
         $p16818coll6[type] = 'collection';
     
 
@@ -1359,6 +1374,7 @@
         $CPB01[link] = 'CPB01';
         $CPB01[coll] = 'CPB01';
         $CPB01[location] = $HWLCSC;
+        $CPB01[homeloc] = 'HWLCSC';
         $CPB01[type] = 'collection';
         $CPB01[subcollections] = array($EBG, $Playbills);
         $CPB01[sidebarflag] = 'x';

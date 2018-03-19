@@ -9,7 +9,15 @@
 
 	$COLL;
 	foreach ($cards as $key => $val) {
-		if (($PAGE[type] == 'location' && $PAGE[shortname] == $val[location]) || ($PAGE[type] == 'category' && ($PAGE[shortname] == $val[category] || (is_array($val[category]) && in_array($PAGE[shortname], $val[category]))))) {
+		if (
+			($PAGE[type] == 'location' && $PAGE[shortname] == $val[homeloc]) || 
+			($PAGE[type] == 'category' && (
+				$PAGE[shortname] == $val[category] || (
+					is_array($val[category]) && in_array($PAGE[shortname], $val[category])
+					)
+				)
+			)
+		) {
 			if ($COLL == '') {$COLL = $val[coll];} else {$COLL = $COLL . '!' . $val[coll];}
 		}
 	}
@@ -18,6 +26,7 @@
 	var pagelink = "<?= $PAGE[link]; ?>"; 
 	var pagetype = "<?= $PAGE[type]; ?>";
 	var pagecolls = "<?= $COLL; ?>";
+	console.log(pagecolls);
 </script>
 
     <meta charset="UTF-8">
