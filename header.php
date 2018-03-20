@@ -21,18 +21,20 @@
 	?>
 				
 <script>
+	// select search type dropdown box; see function searchSelect() in cpldc.js
 	var typeSingular;
 	var typePlural;
+	var getsSearchType;
 	if (pagetype === 'category'){
-		typeSingular = 'This Category';
-		typePlural = 'All Categories';
+		typeSingular = 'This Subject';
+		typePlural = 'All Subjects';
 	} else if ( pagetype === 'location'){
 		typeSingular = 'This Location';
 		typePlural = 'All Locations';
 	} else if ( pagetype === 'collection'){
 		typeSingular = 'This Collection';
 		typePlural = 'All Collections';
-	}
+	} 
 </script>	
 <header>
 <section class="a11y-skip-links">
@@ -65,7 +67,7 @@
 						</div>
 						<div class="header-search-expanded hide">
 							<div class="header-search-expanded-text" >Search
-							<div class="dropdown <?php if ($PAGE_TYPE == "home") {echo "hidden";}?> ">
+							<div class="dropdown <?php if (!$PAGE[sortname]) {echo "hidden";}?> ">
 									<button class="dropdown-toggle bib-button-searchthe" id="selectSearchTarget" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><script>document.write(typeSingular)</script></button>
 									<div class="dropdown-menu bib-button-searchthe-optionbox" aria-labelledby="dropdownMenuButton">
 										<a class="dropdown-item bib-button-searchthe-option" onClick="selectSearch(typeSingular)" href="#"><script>document.write(typeSingular)</script></a>
@@ -97,7 +99,7 @@
 								<h2>Search</h2>
 							</div>
 						</div>
-						<div class="header-search-row <?php if ($PAGE_TYPE == "home") {echo "hidden";}?> ">
+						<div class="header-search-row <?php if (!$PAGE[sortname]) {echo "hidden";}?> ">
 									<button class="dropdown-toggle bib-button-searchthe-dropdown" id="selectSearchTarget2" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><script>document.write(typeSingular)</script></button>
 									<div class="dropdown-menu bib-button-searchthe-optionbox-dropdown" aria-labelledby="dropdownMenuButton2">
 										<a class="dropdown-item bib-button-searchthe-option" onClick="selectSearch2(typeSingular)" href="#"><script>document.write(typeSingular)</script></a>

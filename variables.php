@@ -35,6 +35,7 @@
 //array(array('a'=>'','dt'=>'','dd'=>''));
 // since titles are written before center-content takes over, all pages need titles stored here; they also print at the top of the center-content area
     $All[title] = 'Digital Collections A-Z';
+    $All[link] = 'All';
     $About[title] = 'About CPL Digital Collections';
     $Announce[title] = 'CPL Revamps Digital Collections Website'; 
     $Announce[link] = 'Announce';
