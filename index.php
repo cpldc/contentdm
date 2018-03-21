@@ -28,10 +28,17 @@
 			gtag('config', 'UA-477834-3');
 		</script>
 	<!-- end gtag -->
+    <script type="text/javascript">
+        var pagelink = ""; 
+        var pagetype = "home";
+        var pagecolls = "";
+        console.log(pagecolls);
+    </script>
 </head>
 <body>
     <?php 
         $PAGE_TYPE = 'home';
+        
         include 'variables.php';
         include 'header.php';
     ?>

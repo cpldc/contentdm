@@ -26,7 +26,7 @@
 	var pagelink = "<?= $PAGE[link]; ?>"; 
 	var pagetype = "<?= $PAGE[type]; ?>";
 	var pagecolls = "<?= $COLL; ?>";
-	console.log(pagecolls);
+	// console.log(pagetype + " " + pagecolls + " " + pagelink);
 </script>
 
     <meta charset="UTF-8">
