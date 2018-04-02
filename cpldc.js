@@ -227,7 +227,7 @@
 
 	function RefreshEventListener() {
 		// https://stackoverflow.com/questions/1359018/in-jquery-how-to-attach-events-to-dynamic-html-elements
-		// turn off rights event listeners and turn them back on again when lightbox loads
+		// turns off the event listeners for the MPU rights "i" and turn them back on again; happens when lightbox loads an image, otherwise the event listener won't notice the new image
 		$(".rights-i").off(); 
 		$(".rights-close").off(); 
 	
