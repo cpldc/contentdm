@@ -72,48 +72,22 @@
     <?php 
         $PAGE_TYPE = 'home';
         
-        include 'variables.php';
+        include 'fmexhibit-variables.php';
         include 'header.php';
     ?>
     <main class="PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
         <?php include 'sidebar.php';?>
         <div class="container card">
             <div class="row">
-                <div class="col-7">
-                    <h2 class="exhibit-section-heading">
-                        Section Heading
-                    </h2>
-                    <p class="exhibit-text">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quaerat debitis omnis? Ipsum voluptates, ab vitae pariatur adipisci rerum corporis expedita dolores? Repudiandae minima reiciendis ipsa at nemo excepturi distinctio!
-                    </p><p class="exhibit-text">
-                        Sint odit asperiores perspiciatis dolore recusandae cumque rerum? Aliquam, asperiores! Blanditiis quis perferendis culpa in itaque sit quia laudantium magnam sunt, dolore sapiente! Veniam ducimus, quo exercitationem atque eius provident.
-                    </p><p class="exhibit-text">
-                        Dignissimos culpa expedita explicabo qui minima tempora, voluptate reprehenderit veniam eius animi libero in iste dolorum! Vero est maxime aspernatur debitis ipsa tempore incidunt magni ullam atque, veritatis blanditiis voluptas.
-                    </p><p class="exhibit-text">
-                        Cum, esse? Facere rem repellendus aliquam veniam voluptatibus non molestias, velit eligendi laudantium nemo quis quaerat architecto impedit ut! Natus id soluta, eligendi porro fugiat repudiandae hic eum at iste.
-                    </p><p class="exhibit-text">
-                        Distinctio officia quod molestias consectetur, asperiores, fugiat nulla corporis perspiciatis, error inventore sapiente corrupti soluta hic tempora architecto harum voluptates sit doloribus dignissimos libero nisi dolor? Exercitationem omnis voluptatem harum?
-                    </p><p class="exhibit-text">
-                        Quo exercitationem optio illum, suscipit fugiat nesciunt sint minima ullam reiciendis distinctio labore perferendis, obcaecati, saepe ipsam vel earum? Quibusdam, a officia. Aperiam minus alias consectetur facilis incidunt aliquam tenetur.
-                    </p><p class="exhibit-text">
-                        Tempore labore pariatur sequi. Quibusdam a quaerat vero beatae voluptate obcaecati ad explicabo quas esse, exercitationem sequi veniam consectetur porro ea tempore voluptas at optio, sint culpa nulla deserunt omnis!
-                    </p><p class="exhibit-text">
-                        Esse inventore accusantium nisi quasi animi aut debitis iure perferendis distinctio maxime sed vel, nesciunt consectetur, nulla repellendus totam qui odit at ipsum odio. Tempore voluptas minima laboriosam iste cupiditate.
-                    </p><p class="exhibit-text">
-                        Ratione accusamus aut voluptatibus ut, asperiores molestias fuga quos, soluta quisquam odit omnis dolore! Quam repellat eveniet mollitia eaque rem vitae error, iure odio nisi, unde iste, harum explicabo ipsum.
-                    </p><p class="exhibit-text">
-                        Reiciendis, possimus tempora laborum consequuntur officiis nihil animi corporis sapiente. Quae minima impedit sapiente recusandae beatae ratione? Itaque quisquam quos numquam blanditiis nemo, expedita tenetur quaerat dolorum, atque eos inventore!</span>';
-                    </p>
-                </div>
                 <div class="col-5">
                     <?php 
-                        $count = 5;
-                        foreach ($cards as $key => $val){
-                            if (!$val[flag] == ''){
-                                echo '<div class="exhibit-image-box"><div class="exhibit-image" src="" style="background: url(' . $val[cardpic][pic] . '); background-size: ' . $val[cardpic][size] . '; background-position: ' . $val[cardpic][pos] . '; height: ' . $val[cardpic][pich] . '" aria-label="' . $val[cardpic][alt] . '"></div><div class="exhibit-image-caption">' . $val[textshort] . '</div></div>';
-                                }
+                        foreach ($fmexAll as $key => $val){
+                            echo '<h2 class="exhibit-section-heading>' . $val[title] . '</h2>';
+                            echo '<span class="exhibit-text"><em>' . $val[source] . '</em>' . $val[year] . '</span>';
+                            foreach ($val[content] as &$v) {
+                                echo '<p class="exhibit-text">' . $v . '</p>';
                             }
-
+                        }
                     ?>
                 </div>
             </div>
