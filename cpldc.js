@@ -292,4 +292,11 @@
 		RefreshEventListener();
 	});
 	
-	
+	function fmexFocus(param) {
+		event.preventDefault();
+		$('#fmex-subtitle').text(fmexContent[param].title);
+		$('#fmex-source').text(fmexContent[param].source);
+		$('#fmex-year').text(fmexContent[param].year);
+		var imgSrc = "fmex/" + fmexContent[param].year;
+		$('#fmex-img').attr("src","fmex/" + fmexContent[param].img);
+	}

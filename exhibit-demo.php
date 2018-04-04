@@ -88,9 +88,9 @@
         include 'header.php';
     ?>
     <main class="PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
+            <div class="container ">
         <?php include 'sidebar.php';?>
         <div class="grid" id="content-top">
-            <div class="container ">
                 <div class="row fmex">
                 <h1 class="center-content"> Forced Migration Photovoice Project </h1>
                         <?php 

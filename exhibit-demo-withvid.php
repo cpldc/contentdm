@@ -85,10 +85,10 @@
     ?>
     <main class="PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
         <?php include 'sidebar.php';?>
+            <div class="container main-container-collapsible" >
         <div class="grid" id="content-top">
-            <div class="container ">
                 <div class="row fmex">
-                <h1 class="center-content"> Forced Migration Photovoice Project </h1>
+                    <h1 class="center-content"> Forced Migration Photovoice Project </h1>
                         <?php 
                             foreach ($fmexAll as $key => $val){
                                 echo '<div class="center-content exhibit-section clearfix imageGallery1">';
