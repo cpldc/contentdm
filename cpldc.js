@@ -140,6 +140,10 @@
 			}
 		}
 		$(".lightbox-main-img").height($(".lightbox-main-img").width() * 0.7383);
+
+		$grid.imagesLoaded().progress( function() {
+            $grid.masonry('layout');
+        });
 	});
 	// sends user's input to end of url, which is how contentdm searches
 	function searchQuery() {
@@ -294,13 +298,17 @@
 	
 	function fmexFocus(param) {
 		event.preventDefault();
-		$('#fmex-subtitle').text(fmexContent[param].title);
-		$('#fmex-source').text(fmexContent[param].source + ", ");
-		$('#fmex-year').text(fmexContent[param].year);
-		var imgSrc = "fmex/" + fmexContent[param].year;
-		$('#fmex-img').attr("src","fmex/" + fmexContent[param].img);
-		for (var i = 0; i < fmexContent[param].content.length; i++) {
-			$('#fmex-year').text('<p>' + fmexContent[param].content + '</p>');
+		if ($(".fmex-content").is( ":hidden")) {
+			$(".fmex-content").show();
+		}
+		$('#fmex-subtitle').text(fmexJson[param].title);
+		$('#fmex-source').text(fmexJson[param].source + ", ");
+		$('#fmex-year').text(fmexJson[param].year);
+		var imgSrc = "fmex/" + fmexJson[param].year;
+		$('#fmex-img').attr("src","fmex/" + fmexJson[param].img);
+		$('#fmex-text').empty()
+		for (var i = 0; i < fmexJson[param].content.length; i++) {
+			$('#fmex-text').append('<p>' + fmexJson[param].content[i] + '</p>');
 		}
 		$grid.imagesLoaded().progress( function() {
             $grid.masonry('layout');
