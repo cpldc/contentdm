@@ -104,6 +104,7 @@
                                             <em id="fmex-source"></em>
                                             <span id="fmex-year"></span>
                                         </p>
+                                        <span id="fmex-text"></span>
                                         <?php 
                                             foreach ($fmexAll[0][content] as $item) {
                                                 echo '<p>' . $item . '</p>';
@@ -112,9 +113,7 @@
                                         </span>
                                     </div>
                                     <div class="col-7">
-                                        <span id="focus-image-target">
                                         <img class="fmex-img" id="fmex-img" src="" />
-                                        </span>
                                     </div>
                                 </div>
                             </div>
