@@ -50,6 +50,7 @@
         }
         .stamp2 {
             top: 108px;
+            height: 0;
         }
         .fmex-content {
             background-color: #fff;
@@ -104,12 +105,7 @@
                                             <em id="fmex-source"></em>
                                             <span id="fmex-year"></span>
                                         </p>
-                                        <span id="fmex-text"></span>
-                                        <?php 
-                                            foreach ($fmexAll[0][content] as $item) {
-                                                echo '<p>' . $item . '</p>';
-                                            }
-                                            ?>
+                                        <p id="fmex-text"></p>
                                         </span>
                                     </div>
                                     <div class="col-7">
