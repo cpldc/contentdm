@@ -299,4 +299,11 @@
 		$('#fmex-year').text(fmexContent[param].year);
 		var imgSrc = "fmex/" + fmexContent[param].year;
 		$('#fmex-img').attr("src","fmex/" + fmexContent[param].img);
+		for (var i = 0; i < fmexContent[param].content.length; i++) {
+			$('#fmex-year').text('<p>' + fmexContent[param].content + '</p>');
+		}
+		$grid.imagesLoaded().progress( function() {
+            $grid.masonry('layout');
+        });
+		
 	}
