@@ -105,7 +105,7 @@
 					</div>
 					<div class="events">
 						<?php 
-							include 'events.php';
+							include 'eventsjs.html';
 						?>
 					</div>
 				</div>

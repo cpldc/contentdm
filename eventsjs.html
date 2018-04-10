@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+</head>
+<body>
+ 
+        <div class="events-title">
+                <h2>History &amp; Genealogy Events</h2>
+            </div>
+            <div class="main"></div>
+            <div class="events-viewmore"><a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)" aria-label="View More Events">View More <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i></a></div>
+    <script>
+$(document).ready(function () {
+$.ajax({
+    type: "GET",
+    url: "https://chipublib.bibliocommons.com/events/events/rss/all?nocache=",
+    dataType: "xml",
+    success: xmlParser
+   });
+});
+
+function xmlParser(xml) {
+
+    var i = 0;
+    $(xml).find("item").each(function () {
+        if( $(this).find("category").text().indexOf("History and Genealogy") >= 0 ){
+            i++;
+            var location = $(this).find("bc\\:location").find("bc\\:name").text();
+            var locationLink = locations[location];
+            var eventDate = new Date($(this).find("bc\\:start_date").text());
+            var eventDateOptions = { month: 'short' , day: 'numeric'};
+            var eventTimeOptions = { hour: 'numeric', minute:  'numeric', hour12: true};
+            $(".main").append('<div class="event"> <h3 class="event-title"><a href="' + $(this).find("link").text() + '" class="event-link">' + $(this).find("title").text() + '<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h3><div class="event-location"><a href="' + locationLink + '" class="event-location-link">' + $(this).find("bc\\:location").find("bc\\:name").text() + '</a></div><div class="event-datetime"><div class="event-date">' + eventDate.toLocaleString("en-US",eventDateOptions) + '</div><div class="event-time">' + eventDate.toLocaleString("en-US",eventTimeOptions) + '</div></div></div>');
+        }
+        if (i>4){
+            return false;
+        }
+    });
+
+}
+var locations = {
+    'Albany Park':'https://www.chipublib.org/locations/3',
+    'Altgeld':'https://www.chipublib.org/locations/4',
+    'Archer Heights':'https://www.chipublib.org/locations/5',
+    'Austin':'https://www.chipublib.org/locations/6',
+    'Austin-Irving':'https://www.chipublib.org/locations/7',
+    'Avalon':'https://www.chipublib.org/locations/8',
+    'Back of the Yards':'https://www.chipublib.org/locations/9',
+    'Beverly':'https://www.chipublib.org/locations/10',
+    'Bezazian':'https://www.chipublib.org/locations/11',
+    'Blackstone':'https://www.chipublib.org/locations/12',
+    'Brainerd':'https://www.chipublib.org/locations/13',
+    'Brighton Park':'https://www.chipublib.org/locations/14',
+    'Bucktown-Wicker Park':'https://www.chipublib.org/locations/15',
+    'Budlong Woods':'https://www.chipublib.org/locations/16',
+    'Canaryville':'https://www.chipublib.org/locations/17',
+    'Chicago Bee':'https://www.chipublib.org/locations/18',
+    'Chicago Lawn':'https://www.chipublib.org/locations/19',
+    'Chinatown':'https://www.chipublib.org/locations/20',
+    'Clearing':'https://www.chipublib.org/locations/21',
+    'Coleman':'https://www.chipublib.org/locations/22',
+    'Daley, Richard J.-Bridgeport':'https://www.chipublib.org/locations/23',
+    'Daley, Richard M.-W Humboldt':'https://www.chipublib.org/locations/24',
+    'Douglass':'https://www.chipublib.org/locations/25',
+    'Dunning':'https://www.chipublib.org/locations/26',
+    'Edgebrook':'https://www.chipublib.org/locations/27',
+    'Edgewater':'https://www.chipublib.org/locations/28',
+    'Gage Park':'https://www.chipublib.org/locations/29',
+    'Galewood-Mont Clare':'https://www.chipublib.org/locations/30',
+    'Garfield Ridge':'https://www.chipublib.org/locations/31',
+    'Greater Grand Crossing':'https://www.chipublib.org/locations/32',
+    'Hall':'https://www.chipublib.org/locations/33',
+    'Harold Washington Library Center':'https://www.chipublib.org/locations/34',
+    'Hegewisch':'https://www.chipublib.org/locations/35',
+    'Humboldt Park':'https://www.chipublib.org/locations/36',
+    'Independence':'https://www.chipublib.org/locations/37',
+    'Jefferson Park':'https://www.chipublib.org/locations/38',
+    'Jeffery Manor':'https://www.chipublib.org/locations/39',
+    'Kelly':'https://www.chipublib.org/locations/40',
+    'King':'https://www.chipublib.org/locations/41',
+    'Legler':'https://www.chipublib.org/locations/42',
+    'Lincoln Belmont':'https://www.chipublib.org/locations/43',
+    'Lincoln Park':'https://www.chipublib.org/locations/44',
+    'Little Village':'https://www.chipublib.org/locations/45',
+    'Logan Square':'https://www.chipublib.org/locations/46',
+    'Lozano':'https://www.chipublib.org/locations/47',
+    'Manning':'https://www.chipublib.org/locations/48',
+    'Mayfair':'https://www.chipublib.org/locations/49',
+    'McKinley Park':'https://www.chipublib.org/locations/50',
+    'Merlo':'https://www.chipublib.org/locations/51',
+    'Mount Greenwood':'https://www.chipublib.org/locations/52',
+    'Near North':'https://www.chipublib.org/locations/53',
+    'North Austin':'https://www.chipublib.org/locations/54',
+    'North Pulaski':'https://www.chipublib.org/locations/55',
+    'Northtown':'https://www.chipublib.org/locations/56',
+    'Oriole Park':'https://www.chipublib.org/locations/57',
+    'Portage-Cragin':'https://www.chipublib.org/locations/58',
+    'Pullman':'https://www.chipublib.org/locations/59',
+    'Roden':'https://www.chipublib.org/locations/60',
+    'Rogers Park':'https://www.chipublib.org/locations/61',
+    'Roosevelt':'https://www.chipublib.org/locations/62',
+    'Scottsdale':'https://www.chipublib.org/locations/63',
+    'Sherman Park':'https://www.chipublib.org/locations/64',
+    'South Chicago':'https://www.chipublib.org/locations/65',
+    'South Shore':'https://www.chipublib.org/locations/66',
+    'Sulzer Regional':'https://www.chipublib.org/locations/67',
+    'Thurgood Marshall':'https://www.chipublib.org/locations/68',
+    'Toman':'https://www.chipublib.org/locations/69',
+    'Uptown':'https://www.chipublib.org/locations/70',
+    'Vodak-East Side':'https://www.chipublib.org/locations/71',
+    'Walker':'https://www.chipublib.org/locations/72',
+    'Water Works':'https://www.chipublib.org/locations/73',
+    'West Belmont':'https://www.chipublib.org/locations/74',
+    'West Chicago Avenue':'https://www.chipublib.org/locations/75',
+    'West Englewood':'https://www.chipublib.org/locations/76',
+    'West Lawn':'https://www.chipublib.org/locations/77',
+    'West Pullman':'https://www.chipublib.org/locations/78',
+    'West Town':'https://www.chipublib.org/locations/79',
+    'Whitney M. Young, Jr.':'https://www.chipublib.org/locations/80',
+    'Woodson Regional':'https://www.chipublib.org/locations/81',
+    'Wrightwood-Ashburn':'https://www.chipublib.org/locations/82'
+};
+    </script>
+</body>
+</html>
