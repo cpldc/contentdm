@@ -1,0 +1,36 @@
+
+<div class="blogs-title">
+    <h2>Chicago History Blog</h2>
+</div>
+<div class="blogs-main"></div>
+<div class="blogs-viewmore"><a href="https://www.chipublib.org/blogs/category/chicago-history/" aria-label="View More Blog Posts">View More <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i></a></div>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "feed.rss",
+            dataType: "xml",
+            success: xmlBlogsParser
+        });
+    });
+
+function xmlBlogsParser(xml) {
+
+    var i = 0;
+    $(xml).find("item").each(function () {
+        if( $(this).find("category").text().indexOf("Chicago History") >= 0 ){
+            i++;
+            var title = $(this).find("title").text();
+            var link = $(this).find("link").text();
+            var author = $(this).find("dc\\:creator, creator").text();
+            var date = new Date($(this).find("pubDate").text());
+            var desc = $(this).find("description").text();
+            $(".blogs-main").append('<div class="blogpost"><dl><dt class="blogpost-title"><a href="' + link + '" class="blogpost-link">' + title + '<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></dt><dd class="blogpost-author-date"> By: ' + author + ', ' + date + '</dd><dd class="blogpost-description">' + desc.substr(0,65 ) + '&hellip;</dd></dl></div>');
+        }
+        if (i>2){
+            return false;
+        }
+    });
+}
+
+    </script>

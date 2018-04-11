@@ -80,27 +80,15 @@
 			?>
 		<!-- center content -->
 			<div class="col-8 col-xl-6 center-content">
-				<h1 id="content-top"><?php echo $PAGE[title]; ?></h1>
-				<?php 
-					if ($PAGE[title] == 'Digital Collections A-Z'){
-						include 'all.php';
-					} elseif ($PAGE[title] == 'Copyright and Takedown Policy') {
-						include 'takedown.php';
-					} elseif ($PAGE[title] == 'About CPL Digital Collections') {
-						include 'about.php';
-					} elseif ($PAGE[title] == 'CPL Revamps Digital Collections Website') {
-						include 'announce.php';
-					} else {
-						include 'center-content.php';
-					}
-				?>
-			</div>
+            <script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd2dGEKbAE6qj0sKEScDdT6YlIP_2FPMSii3U_2Fvt9xXAky3.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script><a style="font: 12px Helvetica, sans-serif; color: #999; text-decoration: none;" href=https://www.surveymonkey.com> Create your own user feedback survey </a>
+			</div><div class="iareader"></div>
+			
 		<!-- right sidebar -->
 			<div class="hidden-lg-down col-lg-3 right-sidebar">
 				<div class="right-sidebar">
 					<div class="blogs">
 						<?php
-							include 'blogsjs.html';
+							include 'blogs.php';
 						?>
 					</div>
 					<div class="events">

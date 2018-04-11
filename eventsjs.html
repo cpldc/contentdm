@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-</head>
-<body>
- 
+
         <div class="events-title">
                 <h2>History &amp; Genealogy Events</h2>
             </div>
-            <div class="main"></div>
+            <div class="events-main"></div>
             <div class="events-viewmore"><a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)" aria-label="View More Events">View More <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i></a></div>
     <script>
 $(document).ready(function () {
@@ -21,22 +10,22 @@ $.ajax({
     type: "GET",
     url: "https://chipublib.bibliocommons.com/events/events/rss/all?nocache=",
     dataType: "xml",
-    success: xmlParser
+    success: xmlEventsParser
    });
 });
 
-function xmlParser(xml) {
+function xmlEventsParser(xml) {
 
     var i = 0;
     $(xml).find("item").each(function () {
         if( $(this).find("category").text().indexOf("History and Genealogy") >= 0 ){
             i++;
-            var location = $(this).find("bc\\:location").find("bc\\:name").text();
+            var location = $(this).find("bc\\:location, location").find("bc\\:name, name").text();
             var locationLink = locations[location];
-            var eventDate = new Date($(this).find("bc\\:start_date").text());
+            var eventDate = new Date($(this).find("bc\\:start_date, start_date").text());
             var eventDateOptions = { month: 'short' , day: 'numeric'};
             var eventTimeOptions = { hour: 'numeric', minute:  'numeric', hour12: true};
-            $(".main").append('<div class="event"> <h3 class="event-title"><a href="' + $(this).find("link").text() + '" class="event-link">' + $(this).find("title").text() + '<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h3><div class="event-location"><a href="' + locationLink + '" class="event-location-link">' + $(this).find("bc\\:location").find("bc\\:name").text() + '</a></div><div class="event-datetime"><div class="event-date">' + eventDate.toLocaleString("en-US",eventDateOptions) + '</div><div class="event-time">' + eventDate.toLocaleString("en-US",eventTimeOptions) + '</div></div></div>');
+            $(".events-main").append('<div class="event"> <h3 class="event-title"><a href="' + $(this).find("link").text() + '" class="event-link">' + $(this).find("title").text() + '<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h3><div class="event-location"><a href="' + locationLink + '" class="event-location-link">' + location + '</a></div><div class="event-datetime"><div class="event-date">' + eventDate.toLocaleString("en-US",eventDateOptions) + '</div><div class="event-time">' + eventDate.toLocaleString("en-US",eventTimeOptions) + '</div></div></div>');
         }
         if (i>4){
             return false;
@@ -127,5 +116,3 @@ var locations = {
     'Wrightwood-Ashburn':'https://www.chipublib.org/locations/82'
 };
     </script>
-</body>
-</html>
