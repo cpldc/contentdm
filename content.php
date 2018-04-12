@@ -100,12 +100,12 @@
 				<div class="right-sidebar">
 					<div class="blogs">
 						<?php
-							include 'blogsjs.html';
+							include 'blogs.php';
 						?>
 					</div>
 					<div class="events">
 						<?php 
-							include 'eventsjs.html';
+							include 'events.php';
 						?>
 					</div>
 				</div>

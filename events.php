@@ -4,6 +4,7 @@
     </div>
 <?php
     $cache_time = 60 * 60 * 24;
+    // $cache_time = 1;
     $cache_file = 'events.html';
     $timedif = (time() - filemtime($cache_file));
     $limit = 5;
@@ -18,9 +19,7 @@
             // also nb we search the $LOCATIONLINKS array stored in locations.php in order to create a link to the location's page on chipublib
     //     iterates through 5 arrays to put the variables into html
     //     then saves events.html
-    if ($cache_file && $timedif < $cache_time) {
-        include $cache_file;
-    } else {
+    if ($cache_file && $timedif > $cache_time) {
         $rss = new DOMDocument();
         $rss->load('https://chipublib.bibliocommons.com/events/events/rss/all?nocache=');
         $feed = array();
@@ -50,8 +49,8 @@
             $htmlStr .= '<div class="event"> <h3 class="event-title"><a href="' . $link . '" class="event-link">' . $title . '<i class="raquo fa fa-angle-double-right" aria-hidden="true"></i></a></h3><div class="event-location"><a href="' . $locationLink . '" class="event-location-link">' . $location . '</a></div><div class="event-datetime"><div class="event-date">' . $date . '</div><div class="event-time">' . $time . '</div></div></div>';
         }
         file_put_contents('events.html', $htmlStr);
-        include $cache_file;
     }
+    include $cache_file;
 ?>
 <div class="events-viewmore"><a href="https://chipublib.bibliocommons.com/events/search/fq=types:(53f20436e04c1e3b1c00d09d)" aria-label="View More Events">View More <i class="rsaquo fa fa-angle-right"  aria-hidden="true"></i></a></div>
 
