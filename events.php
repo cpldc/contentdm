@@ -3,7 +3,7 @@
         <h2>History &amp; Genealogy Events</h2>
     </div>
 <?php
-    $cache_time = 60 * 60 * 24;
+    $cache_time = 60 * 60 * 12;
     // $cache_time = 1;
     $cache_file = 'events.html';
     $timedif = (time() - filemtime($cache_file));
