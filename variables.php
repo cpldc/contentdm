@@ -9,19 +9,19 @@
             };
         }
         $Announce[flag] =       '1';
-        $rhwc[flag] =           '2';
+        $ChicagoParks[flag] =   '2';
         $p16818coll6[flag] =    '3';
         $CPB01[flag] =          '4';
         $mpu[flag] =            '5';
-        $cr[flag] =             '6';
+        $rhwc[flag] =           '6';
         $wha[flag] =            '7';
         $examiner[flag] =       '8';
-        $rwk[flag] =            '9';
-        $hdg[flag] =            '10';
-        $bar[flag] =            '11';
-        $woop[flag] =           '12';
+        $cr[flag] =             '9';
+        $rwk[flag] =            '10';
+        $hdg[flag] =            '11';
+        $bar[flag] =            '12';
+        $woop[flag] =           '13';
         $dtd[flag] =            '';
-        $ChicagoParks[flag] =   'x';
         $cfc[flag] =            '';
         $ahs[flag] =            '';
         $rvw[flag] =            '';
@@ -69,7 +69,7 @@
         <p class="about-contact-p">The copyright law of the United States (Title 17, United States Code) governs the making of photocopies or other reproductions of copyrighted material.</p>
         <p class="about-contact-p">Under certain conditions specified in the law, libraries and archives are authorized to furnish a photocopy or other reproduction. One of these specific conditions is that the photocopy or reproduction is not to be “used for any purpose other than private study, scholarship or research.” If a user makes a request for, or later uses, a photocopy or reproduction for purposes in excess of “fair use,” that user may be liable for copyright infringement.</p>
         <p class="about-contact-p about-contact-p-last">This institution reserves the right to refuse a copying order if, in its judgment, fulfillment of the order would involve violation of copyright law.</p>
-';
+        ';
 
 //locations
     // locations will not get cards, but do get landing pages
@@ -873,16 +873,16 @@
                 'align'=>'68% 18%',
                 'alt'=>'Young children tend plants in a narrow vegetable garden at the side of a building.'));
         $ChicagoParks[category] = 'Parks';
-        // $ChicagoParks[textshort] = 'Photographs from the Chicago Park District document more than a century&lsquo;s activities and growth of the city&lsquo;s parks.';
-        // $ChicagoParks[textlong] = 'Parks have always been a part of Chicago’s city planning. Explore their growth, development and use from six large parks begun around 1870 to over 500 today.';
-        // $ChicagoParks[textrich] = 'These 10,000 images give a sample of Chicago’s parks from all around the city and throughout their history. See <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/Concerts--Illinois--Chicago/field/subjea/mode/exact/conn/and">musical concerts performed in the parks</a>, watch <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/construction%20progress%20photographs/field/subjec/mode/exact/conn/and/order/title/ad/asc">parks being built from the ground up,</a> get a <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/aerial%20views/field/subjec/mode/exact/conn/and/order/title/ad/asc">birds’ eye view of parks around the city,</a> and watch people of all ages <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/sports/field/subjec/mode/exact/conn/and/order/title/ad/asc">playing sports,</a> doing <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/Arts%20and%20Crafts/field/subjec/mode/exact/conn/and/order/title/ad/asc">arts and crafts,</a> and <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/people/field/subjec/mode/exact/conn/and/order/title/ad/asc/page/2">generally enjoying their local parks.</a> 93 of Chicago’s over 500 parks are represented here and cover the city’s wide geography.';
-        // $ChicagoParks[findingaid] = array(
-            // array('link'=>'https://www.chipublib.org/fa-chicago-park-district-records-photographs/','text'=>'Chicago Park District Records: Photographs'), 
-            // array('link'=>'https://www.chipublib.org/fa-chicago-park-district-records/','text'=>'Chicago Park District Records: Drawings'));
-        // $ChicagoParks[CPLRes] = array(array('a'=>'https://www.chipublib.org/tag/chicago-park-district/','dt'=>'Chicago Park District Blog Posts','dd'=>'Written by CPL librarians and staff'));
+        $ChicagoParks[textshort] = 'Photographs from the Chicago Park District document more than a century&lsquo;s activities and growth of the city&lsquo;s parks.';
+        $ChicagoParks[textlong] = 'Parks have always been a part of Chicago’s city planning. Explore their growth, development and use from six large parks begun around 1870 to over 500 today.';
+        $ChicagoParks[textrich] = 'These 10,000 images give a sample of Chicago’s parks from all around the city and throughout their history. See <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/Concerts--Illinois--Chicago/field/subjea/mode/exact/conn/and">musical concerts performed in the parks</a>, watch <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/construction%20progress%20photographs/field/subjec/mode/exact/conn/and/order/title/ad/asc">parks being built from the ground up,</a> get a <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/aerial%20views/field/subjec/mode/exact/conn/and/order/title/ad/asc">birds’ eye view of parks around the city,</a> and watch people of all ages <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/sports/field/subjec/mode/exact/conn/and/order/title/ad/asc">playing sports,</a> doing <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/Arts%20and%20Crafts/field/subjec/mode/exact/conn/and/order/title/ad/asc">arts and crafts,</a> and <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/people/field/subjec/mode/exact/conn/and/order/title/ad/asc/page/2">generally enjoying their local parks.</a> 93 of Chicago’s over 500 parks are represented here and cover the city’s wide geography.';
+        $ChicagoParks[findingaid] = array(
+            array('link'=>'https://www.chipublib.org/fa-chicago-park-district-records-photographs/','text'=>'Chicago Park District Records: Photographs'), 
+            array('link'=>'https://www.chipublib.org/fa-chicago-park-district-records/','text'=>'Chicago Park District Records: Drawings'));
+        $ChicagoParks[CPLRes] = array(array('a'=>'https://www.chipublib.org/tag/chicago-park-district/','dt'=>'Chicago Park District Blog Posts','dd'=>'Written by CPL librarians and staff'));
         $ChicagoParks[link] = 'ChicagoParks';
-        $ChicagoParks[textshort] = 'Chicago Public Library is currently finalizing photographs from the  Chicago Park District Records, which will be available in spring 2018.';
-        $ChicagoParks[textlong] = 'Chicago Public Library is currently finalizing the Chicago Park District Records: Photographs digital collection. It will be completed in spring 2018, but you can search many of the photographs now.';
+        // $ChicagoParks[textshort] = 'Chicago Public Library is currently finalizing photographs from the  Chicago Park District Records, which will be available in spring 2018.';
+        // $ChicagoParks[textlong] = 'Chicago Public Library is currently finalizing the Chicago Park District Records: Photographs digital collection. It will be completed in spring 2018, but you can search many of the photographs now.';
         $ChicagoParks[location] = $HWLCSC;
         $ChicagoParks[homeloc] = 'HWLCSC';
         $ChicagoParks[type] = 'collection';

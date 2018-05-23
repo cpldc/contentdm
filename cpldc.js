@@ -128,6 +128,13 @@
 			if ($(".PAGE_TYPE").hasClass("content")) {
 				switchToCollapsibleLayout();
 			}
+			if (!$(".footer-social").hasClass("footer-social-horiz")){
+				$(".footer-social").addClass("footer-social-horiz");
+			}
+			if ($(".footer-list").hasClass("footer-floatright")){
+				$(".footer-list").removeClass("footer-floatright");
+				$(".footer-contactinfo").removeClass("footer-floatright");
+			}
 		}
 		if (viewportWidth > 976) {
 			if (!($(".header-search-dropped").hasClass("hide"))) {
@@ -137,6 +144,13 @@
 			showLeftSidebar();
 			if ($(".PAGE_TYPE").hasClass("content")) {
 				switchToFixedLayout();
+			}
+			if ($(".footer-social").hasClass("footer-social-horiz")){
+				$(".footer-social").removeClass("footer-social-horiz");
+			}
+			if (!$(".footer-list").hasClass("footer-floatright")){
+				$(".footer-list").addClass("footer-floatright");
+				$(".footer-contactinfo").addClass("footer-floatright");
 			}
 		}
 		$(".lightbox-main-img").height($(".lightbox-main-img").width() * 0.7383);
@@ -272,11 +286,26 @@
 			if ($(".PAGE_TYPE").hasClass("content")) {
 				switchToCollapsibleLayout();
 			}
+			if (!$(".footer-social").hasClass("footer-social-horiz")){
+				$(".footer-social").addClass("footer-social-horiz");
+			}
+			if ($(".footer-list").hasClass("footer-floatright")){
+				$(".footer-list").removeClass("footer-floatright");
+				$(".footer-contactinfo").removeClass("footer-floatright");
+			}
 		}
 		if (viewportWidth > 976) {
 			showLeftSidebar();
 			if ($(".PAGE_TYPE").hasClass("content")) {
 				switchToFixedLayout();
+			}
+			
+			if ($(".footer-social").hasClass("footer-social-horiz")){
+				$(".footer-social").removeClass("footer-social-horiz");
+			}
+			if (!$(".footer-list").hasClass("footer-floatright")){
+				$(".footer-list").addClass("footer-floatright");
+				$(".footer-contactinfo").addClass("footer-floatright");
 			}
 		}
 		$('#search-input').keypress(function(e){
