@@ -1,9 +1,9 @@
-    .aldermen a {
+    .alderman a {
         color: #234c86;
         text-decoration: none;
         border-bottom: 1px solid #909696;
     }
-    .aldermen a:hover {
+    .alderman a:hover {
         border-bottom: 2px solid #909696;
     }
     .anyway-button, .go-button {
@@ -19,7 +19,10 @@
     .anyway-button {
         margin-top: 7px;
     }
-    .go-button, .label-container {
+    .go-button {
+        margin: 0 0 10px 0;
+    }
+    .label-container {
         margin: 0;
     }
     .filter {
@@ -28,6 +31,14 @@
         margin: auto;
         padding: 3px;
     }
+    .filter-column {
+        width: 250px;
+        min-width: 250px;
+        padding: 0 15px;
+    }
+    .filter-list {
+        border-bottom: 1px solid #ccc;
+    }
     #date-slider {
         border: 0;
     }
@@ -35,7 +46,6 @@
         padding: 7px 0;
     }
     .alderman {
-        /* border: 1px solid #666; */
         margin: 5px 7px 5px 0;
         padding: 5px 7px 5px 0;
     }
@@ -71,7 +81,7 @@
         list-style-type: none;
     }
     .filter-list-title {
-        padding: 10px 0 3px 0;
+        padding: 0 0 5px 0;
         margin: 10px 0 3px 0;
         font-weight: 700;
     }
