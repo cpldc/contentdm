@@ -14,7 +14,7 @@
 	<script src="https://use.fontawesome.com/a768f4e0c8.js"></script>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="caa-json.js"></script>
+    <script src="caa-asdf.js"></script>
 	
     <title>Document</title>
     <script>
@@ -34,11 +34,19 @@
                     (caaJson[k].notes != "" ? '<p class="artist-details>Notes: ' + caaJson[k].notes + '</p>' : '' ) + 
                     '<p class="caa-contents-header">Chicago Artists File Contents:' +
                         '<ul class="caa-contents-list">' + 
-                            '<li>File: ' + ( caaJson[k].file === "TRUE" ? "Yes" : "No") + '</li>' +
-                            '<li>Slides: ' + ( caaJson[k].slides === "TRUE" ? "Yes" : "No") + '</li>' +
-                            '<li>Video: ' + ( caaJson[k].video === "TRUE" ? "Yes" : "No") + '</li>' +
-                            '</p>' +
-                            '</div>');
+                            '<li>File: ' + (caaJson[k].file === '1' ? 'Yes' : 'No') + '</li>' + 
+                            ( caaJson[k].slides === '1' ? '<li>Slides: Yes </li>' : '') +
+                            ( caaJson[k].videos === '1' ? '<li>Video: Yes </li>' : '') +
+                            ( caaJson[k].resume === '1' ? '<li>Resume: Yes </li>' : '') +
+                            ( caaJson[k].article === '1' ? '<li>Article: Yes </li>' : '') +
+                            ( caaJson[k].poster === '1' ? '<li>Poster: Yes </li>' : '') +
+                            ( caaJson[k].folio === '1' ? '<li>Folio: Yes </li>' : '') +
+                            ( caaJson[k].cdrom === '1' ? '<li>CD-ROM: Yes </li>' : '') + 
+                            ( caaJson[k].artistStatement === '1' ? '<li>Artist Statement: Yes </li>' : '') + 
+                            ( caaJson[k].galleryNotice === '1' ? '<li>Gallery Notice: Yes </li>' : '') + 
+                        '</ul>' +
+                        '</p>' +
+                        '</div>');
                             console.log("count");
                         }
         }

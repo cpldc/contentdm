@@ -8,7 +8,7 @@
 	$PAGE_TYPE = 'content';
 ?>
 	<meta charset="UTF-8">
-	<title> Aldermen</title>
+	<title>Chicago's Elected Officials</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLOpenBook_web_16x16-1.png">
 	<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://chicago.bibliocms.com/wp-content/uploads/sites/3/2016/04/CPLreverse_web_200x200-150x150.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
