@@ -79,37 +79,30 @@
         // globals
             var currYear = new Date().getFullYear(),
                 count = 0,
-                caaFilters = [  {"file":"false"},
-                                {"slides":"false"},
-                                {"video":"false"},
-                                {"resume":"false"},
-                                {"article":"false"},
-                                {"poster":"false"},
-                                {"folio":"false"},
-                                {"cdrom":"false"},
-                                {"artistStatement":"false"},
-                                {"galleryNotice":"false"}],
-                caaContent = caaFilters;
-                // caaFilters = [{"id":"file","text":"File","check":"false"},
-                //     {"id":"slides","text":"Slides","check":"false"},
-                //     {"id":"video","text":"Video","check":"false"},
-                //     {"id":"resume","text":"Resume/Vita","check":"false"},
-                //     {"id":"article","text":"Article","check":"false"},
-                //     {"id":"poster","text":"Poster","check":"false"},
-                //     {"id":"folio","text":"Folio","check":"false"},
-                //     {"id":"cdrom","text":"CD-ROM","check":"false"},
-                //     {"id":"artistStatement","text":"Artist's Statement","check":"false"},
-                //     {"id":"galleryNotice","text":"Gallery Notice","check":"false"}];
+                drawFiltersArray = [];
+
+
+        // draw the filters that are present in the results
+            function drawFilters(){
+                console.log(drawFiltersArray);
+                // var drawFiltersArray = [];
+                $('#caa-filters').empty();
+                for (var f in drawFiltersArray){
+                    $('#caa-filters').append('<li class="caa-filter">' + 
+                            '<input name="contentFilter" type="checkbox" id="filter-type-' + drawFiltersArray[f].id + '" class="filter-type" value="' + drawFiltersArray[f].id + '">' +
+                            '<label for="filter-type-' + drawFiltersArray[f].id + '">' + drawFiltersArray[f].text + '</label>' +
+                        '</li>');
+                }
+            }
         // text button
             function textButton(){
                 var input = $('#textInput').val();
                 if (input.length > 0 ){
-                    caaContent = caaFilters;
                     textFilter(input);
                     $('input[type=checkbox]').prop('checked',false); 
                     if (count < 500){
                         $('.filter-text').addClass('filter-list');
-                        // $('#caa-filters').slideDown();
+                        $('#caa-filters').slideDown();
                         drawFilters();
                     }
                 } else if (input == null || input.length < 1) {
@@ -117,17 +110,6 @@
                     $('#artists').empty();
                     $('#ald-header').empty().append('0 Results.');
                     $('.filter-text').removeClass('filter-list');
-                }
-            }
-            function drawFilters(){
-                var drawFiltersArray = [];
-                for (var f in caaContent){
-                    if (caaContent[f].check){
-                        drawFiltersArray.push('<li class="caa-filter">' + 
-                            '<input name="contentFilter" type="checkbox" id="filter-type-' + caaFilters[f].id + '" class="filter-type" value="' + caaFilters[f].id + '">' +
-                            '<label for="filter-type-' + caaFilters[f].id + '">' + caaFilters[f].text + '</label>' +
-                        '</li>');
-                    }
                 }
             }
         // text filter
@@ -151,55 +133,50 @@
         // create HTML
             function drawAlderman(caaJsonSingle){
                 var sorter = caaJsonSingle.name,
-                    filters = {
-                        "file": +caaJsonSingle.file,
-                        "slides": +caaJsonSingle.slides,
-                        "videos": +caaJsonSingle.videos,
-                        "resume": +caaJsonSingle.resume,
-                        "article": +caaJsonSingle.article,
-                        "poster": +caaJsonSingle.poster,
-                        "folio": +caaJsonSingle.folio,
-                        "cdrom": +caaJsonSingle.cdrom,
-                        "artistStatement": +caaJsonSingle.artistStatement,
-                        "galleryNotice": +caaJsonSingle.galleryNotice
-                    },
-                    filterNames = Object.keys(filters),
-                    dataFilters = '';
+                    dataFilters = [
+                        {"id":"file","text":"File","check": (caaJsonSingle.file == "TRUE")},
+                        {"id":"slides","text":"Slides","check": (caaJsonSingle.slides == "TRUE")},
+                        {"id":"videos","text":"Videos","check": (caaJsonSingle.videos == "TRUE")},
+                        {"id":"resume","text":"Resume","check": (caaJsonSingle.resume == "TRUE")},
+                        {"id":"article","text":"Article","check": (caaJsonSingle.article == "TRUE")},
+                        {"id":"poster","text":"Poster","check": (caaJsonSingle.poster == "TRUE")},
+                        {"id":"folio","text":"Folio","check": (caaJsonSingle.folio == "TRUE")},
+                        {"id":"cdrom","text":"CD-ROM","check": (caaJsonSingle.cdrom == "TRUE")},
+                        {"id":"artistStatement","text":"Artist's  Statement","check": (caaJsonSingle.artistStatement == "TRUE")},
+                        {"id":"galleryNotice","text":"Gallery Notice","check": (caaJsonSingle.galleryNotice == "TRUE")}],
                     fileContent = false;
-                for (var f in filters){
-                    if (filters[f]){
+                for (var f in dataFilters){
+                    if (dataFilters[f].check){
                         fileContent = true;
-                    }
-                }
-                // if (file || slides || videos || resume || article || poster || folio || cdrom || artistStatement || galleryNotice){
-                //     fileContent = true;
-                // }
-                $.extend(true, caaContent, filters);
-                for (var f in caaContent){
-                    console.log(filterNames[f] + ': ' + filters[f]);
-                    if (filters[f] === '1'){
-                            dataFilters += filterNames[f] + ' ';
+                        for (var i = 0; i < drawFiltersArray.length; i++){
+                            console.log("gonna look..");
+                            if (dataFilters[f].id === drawFiltersArray[v].id){ 
+                                console.log("its there");
+                            } else {
+                                console.log("its not there");
+                                drawFiltersArray.push(dataFilters[f]);
+                            }
                         }
                     }
-                console.log(dataFilters);
-                return '<div class="artist" data-filters="' + dataFilters + '" data-sort="' + sorter + '" id="' + caaJsonSingle.id + '"><h2 class="artist-name">' + caaJsonSingle.name + '</h2>' + 
+                }
+                return '<div class="artist" data-filters="' + dataFilters + '" data-sort="' + sorter + '" id="' + caaJsonSingle.id + '"><h2 class="artist-name">' + sorter + '</h2>' + 
                     ((caaJsonSingle.dob !=  '' || caaJsonSingle.dod != '') ? '<p class="artist-details">' + caaJsonSingle.dob + '-' + caaJsonSingle.dod + '</p>' : '' ) + 
-                    (caaJsonSingle.combo48 != '' ? '<p class="artist-details">Gender: ' + caaJsonSingle.combo48 + '</p>': '') + 
+                    (caaJsonSingle.gender != '' ? '<p class="artist-details">Gender: ' + caaJsonSingle.gender + '</p>': '') + 
                     (caaJsonSingle.notes != '' ? '<p class="artist-details>Notes: ' + caaJsonSingle.notes + '</p>' : '' ) + 
-                    // (fileContent ? '<p class="caa-contents-header">Chicago Artists File Contents:' +
-                    //     '<ul class="caa-contents-list">' + 
-                    //         ( file ? '<li>File: Yes </li>' : '') +
-                    //         ( slides ? '<li>Slides: Yes </li>' : '') +
-                    //         ( videos ? '<li>Video: Yes </li>' : '') +
-                    //         ( resume ? '<li>Resume: Yes </li>' : '') +
-                    //         ( article ? '<li>Article: Yes </li>' : '') +
-                    //         ( poster ? '<li>Poster: Yes </li>' : '') +
-                    //         ( folio ? '<li>Folio: Yes </li>' : '') +
-                    //         ( cdrom ? '<li>CD-ROM: Yes </li>' : '') + 
-                    //         ( artistStatement ? '<li>Artist Statement: Yes </li>' : '') + 
-                    //         ( galleryNotice ? '<li>Gallery Notice: Yes </li>' : '') + 
-                    //     '</ul>' +
-                        // '</p>' : '') +
+                    (fileContent ? '<p class="caa-contents-header">Chicago Artists File Contents:' +
+                        '<ul class="caa-contents-list">' + 
+                            ( caaJsonSingle.file == "TRUE" ? '<li>File: Yes </li>' : '') +
+                            ( caaJsonSingle.slides == "TRUE" ? '<li>Slides: Yes </li>' : '') +
+                            ( caaJsonSingle.videos == "TRUE" ? '<li>Video: Yes </li>' : '') +
+                            ( caaJsonSingle.resume == "TRUE" ? '<li>Resume: Yes </li>' : '') +
+                            ( caaJsonSingle.article == "TRUE" ? '<li>Article: Yes </li>' : '') +
+                            ( caaJsonSingle.poster == "TRUE" ? '<li>Poster: Yes </li>' : '') +
+                            ( caaJsonSingle.folio == "TRUE" ? '<li>Folio: Yes </li>' : '') +
+                            ( caaJsonSingle.cdrom == "TRUE" ? '<li>CD-ROM: Yes </li>' : '') + 
+                            ( caaJsonSingle.artistStatement == "TRUE" ? '<li>Artist Statement: Yes </li>' : '') + 
+                            ( caaJsonSingle.galleryNotice == "TRUE" ? '<li>Gallery Notice: Yes </li>' : '') + 
+                        '</ul>' +
+                        '</p>' : '') +
                         '</div>';
                     }
         // puts html in page
@@ -247,6 +224,7 @@
                     });
                 });
                 $('.artist').hide().filter($filteredResults).show();
+                console.log($filteredResults);
             });
         // docready for checkbox changing & pressing enter in text field
             $( document ).ready(function() {
