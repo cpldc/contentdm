@@ -5,57 +5,20 @@
                         <input type="text" class="filter-text-input" id="textInput"  placeholder="Search for an artist..." title="Type in a name">
                         <button class="go-button" onclick="textButton()">Go</button>
                     </div>
-                    <ul class="filter-list" id="caa-filters" style="display: none">
-                        <li class="caa-filter">
-                            <input name="contentFilter" type="checkbox" id="filter-type-file" class="filter-type" value="file">
-                            <label for="filter-type-file">File</label>
-                            <label for="filter-type-file" class="label-desc">Whether the Chicago Artist File contains some content related to the artist.</label>
-                        </li>
-                        <li class="caa-filter">
-                            <input name="contentFilter" type="checkbox" id="filter-type-slides" class="filter-type" value="slides">
-                            <label for="filter-type-slides">Slides</label>
-                            <label for="filter-type-slides" class="label-desc">Whether CPL has slides of the artist's work.</label>
-                        </li>
-                        <li class="caa-filter">
-                            <input name="contentFilter" type="checkbox" id="filter-type-video" class="filter-type" value="video">
-                            <label for="filter-type-video">Video</label>
-                            <label for="filter-type-video" class="label-desc">Whether CPL has videos by the artist.</label>
-                        </li>
-                        <li class="caa-filter">
-                            <input name="contentFilter" type="checkbox" id="filter-type-resume" class="filter-type" value="resume">
-                            <label for="filter-type-resume">Resume/Vita</label>
-                            <label for="filter-type-resume" class="label-desc">Whether CPL has the artist's resume or CV.</label>
-                        </li>
-                        <li class="caa-filter">
-                            <input name="contentFilter" type="checkbox" id="filter-type-article" class="filter-type" value="article">
-                            <label for="filter-type-article">Article</label>
-                            <label for="filter-type-article" class="label-desc">Whether CPL has articles on the artist.</label>
-                        </li>
-                        <li class="caa-filter">
-                            <input name="contentFilter" type="checkbox" id="filter-type-poster" class="filter-type" value="poster">
-                            <label for="filter-type-poster">Poster</label>
-                            <label for="filter-type-poster" class="label-desc">Whether CPL has posters of the artist's work.</label>
-                        </li>
-                        <li class="caa-filter">
-                            <input name="contentFilter" type="checkbox" id="filter-type-folio" class="filter-type" value="folio">
-                            <label for="filter-type-folio">Folio</label>
-                            <label for="filter-type-folio" class="label-desc">Whether CPL has folios of the artist's work.</label>
-                        </li>
-                        <li class="caa-filter">
-                            <input name="contentFilter" type="checkbox" id="filter-type-cdrom" class="filter-type" value="cdrom">
-                            <label for="filter-type-cdrom">CD-ROM</label>
-                            <label for="filter-type-cdrom" class="label-desc">Whether CPL has CDs of the artist's work.</label>
-                        </li>
-                        <li class="caa-filter">
-                            <input name="contentFilter" type="checkbox" id="filter-type-artistStatement" class="filter-type" value="artistStatement">
-                            <label for="filter-type-artistStatement">Artist's Statement</label>
-                            <label for="filter-type-artistStatement" class="label-desc">Whether CPL has a copy of the artist's statement.</label>
-                        </li>
-                        <li class="caa-filter">
-                            <input name="contentFilter" type="checkbox" id="filter-type-galleryNotice" class="filter-type" value="galleryNotice">
-                            <label for="filter-type-galleryNotice">Gallery Notice</label>
-                            <label for="filter-type-galleryNotice" class="label-desc">Whether CPL has gallery notices of the artist's exhibits.</label>
-                        </li>
+                    <div>
+                        <h4>Additional Filters</h4>
+                        <span class="label-desc">These filter lists are long; click to expand.</span>
+                        <div class="filters">
+                            <div id="filter-terms">
+                                <h5 onClick="toggleList('terms')">Medium</h5>
+                                <ul id="filter-terms-list"  class="filter-list" style="display: none"></ul>
+                            </div>
+                            <div id="filter-cultures">
+                                <h5 onClick="toggleList('cultures')">Cultural Affiliation</h5>
+                                <ul id="filter-cultures-list" class="filter-list" style="display: none"></ul>
+                            </div>
+                        </div>
+                    </div>
                     </ul>
                 </div>
             </div>
@@ -63,9 +26,8 @@
                 <div class="aldermen-header">
                     <div class="main-content-header ">
                         <h1>CPL's Chicago Artists File</h1>
-                        
                     </div>
-                    <p id="ald-header">Please select filters from the left.</p>
+                    <p id="ald-header">Please search for an artist by name, or select filters from the left.</p>
                 </div>
                 <div class="aldermen-target" id="artists">
                     <p>The Chicago Artists File is a blah blah Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut necessitatibus cumque dicta! Voluptate, tempora impedit quod perspiciatis accusamus iure rerum corrupti quasi minima nam maxime dicta ut dignissimos maiores recusandae.</p>
@@ -83,38 +45,43 @@
 
 
         // draw the filters that are present in the results
-            function drawFilters(){
-                console.log(drawFiltersArray);
-                // var drawFiltersArray = [];
-                $('#caa-filters').empty();
-                for (var f in drawFiltersArray){
-                    $('#caa-filters').append('<li class="caa-filter">' + 
-                            '<input name="contentFilter" type="checkbox" id="filter-type-' + drawFiltersArray[f].id + '" class="filter-type" value="' + drawFiltersArray[f].id + '">' +
-                            '<label for="filter-type-' + drawFiltersArray[f].id + '">' + drawFiltersArray[f].text + '</label>' +
-                        '</li>');
-                }
+            function toggleList(n){
+                console.log('.filter-' + n + '-list')
+                $('#filter-' + n + '-list').toggle();
             }
+            for (var m in artTerms) {
+                $('#filter-terms-list').append(
+                    '<li class="caa-filter">' +
+                            '<input name="contentFilter" type="checkbox" id="filter-type-'  + artTerms[m] + '" class="filter-cultures" value="'  + artTerms[m] + '">' + 
+                            '<label for="filter-type-'  + artTerms[m] + '"> '  + artTerms[m] + '</label>' + 
+                    '</li>');
+            }
+            for (var c in cultures) {
+                $('#filter-cultures-list').append(
+                    '<li class="caa-filter">' +
+                            '<input name="contentFilter" type="checkbox" id="filter-type-'  + cultures[c] + '" class="filter-cultures" value="'  + cultures[c] + '">' + 
+                            '<label for="filter-type-'  + cultures[c] + '"> '  + cultures[c] + '</label>' + 
+                    '</li>');
+            }
+ 
         // text button
             function textButton(){
                 var input = $('#textInput').val();
                 if (input.length > 0 ){
                     textFilter(input);
-                    $('input[type=checkbox]').prop('checked',false); 
                     if (count < 500){
                         $('.filter-text').addClass('filter-list');
-                        $('#caa-filters').slideDown();
-                        drawFilters();
                     }
                 } else if (input == null || input.length < 1) {
-                    $('#caa-filters').slideUp();
                     $('#artists').empty();
                     $('#ald-header').empty().append('0 Results.');
                     $('.filter-text').removeClass('filter-list');
                 }
             }
         // text filter
+            var artistArray = [];
             function textFilter(userInput){
-                var artistArray = [];
+                artistArray = [];
                 count = 0;
                 for (var a in caaJson){
                     if (caaJson[a].name.toUpperCase().indexOf(userInput.toUpperCase()) > -1 ){
@@ -127,61 +94,60 @@
                     $('#artists').empty();
                     $('#ald-header').empty().append(count + ' results.  Show anyway? <br /><button class="anyway-button" onclick="appendAldArray()">Ok</button>');
                 } else {
-                    appendAldArray(artistArray);
+                    appendAldArray();
                 }
             }
         // create HTML
             function drawAlderman(caaJsonSingle){
-                var sorter = caaJsonSingle.name,
-                    dataFilters = [
-                        {"id":"file","text":"File","check": (caaJsonSingle.file == "TRUE")},
-                        {"id":"slides","text":"Slides","check": (caaJsonSingle.slides == "TRUE")},
-                        {"id":"videos","text":"Videos","check": (caaJsonSingle.videos == "TRUE")},
-                        {"id":"resume","text":"Resume","check": (caaJsonSingle.resume == "TRUE")},
-                        {"id":"article","text":"Article","check": (caaJsonSingle.article == "TRUE")},
-                        {"id":"poster","text":"Poster","check": (caaJsonSingle.poster == "TRUE")},
-                        {"id":"folio","text":"Folio","check": (caaJsonSingle.folio == "TRUE")},
-                        {"id":"cdrom","text":"CD-ROM","check": (caaJsonSingle.cdrom == "TRUE")},
-                        {"id":"artistStatement","text":"Artist's  Statement","check": (caaJsonSingle.artistStatement == "TRUE")},
-                        {"id":"galleryNotice","text":"Gallery Notice","check": (caaJsonSingle.galleryNotice == "TRUE")}],
-                    fileContent = false;
-                for (var f in dataFilters){
-                    if (dataFilters[f].check){
-                        fileContent = true;
-                        for (var i = 0; i < drawFiltersArray.length; i++){
-                            console.log("gonna look..");
-                            if (dataFilters[f].id === drawFiltersArray[v].id){ 
-                                console.log("its there");
-                            } else {
-                                console.log("its not there");
-                                drawFiltersArray.push(dataFilters[f]);
-                            }
+                var sorter = caaJsonSingle.name;
+                function arrayer(n){
+                    var string = ''
+                    for (var e in n){
+                        var prepend = '';
+                        if (string != ''){
+                            prepend = ', ';
                         }
+                        string += prepend + n[e];
                     }
+                    return '<span>' + string + '</span>';
                 }
-                return '<div class="artist" data-filters="' + dataFilters + '" data-sort="' + sorter + '" id="' + caaJsonSingle.id + '"><h2 class="artist-name">' + sorter + '</h2>' + 
+                function arrayerCitations(n){
+                    var citations = '';
+                    for (var c in n){
+                        var author = n[c].firstName + ' ' + n[c].lastName;
+                        // var attribution = 'by ' + author;
+                        var callNo = n[c].callNumber.replace(/ /g,"+");
+                        var url = 'http://chipublib.bibliocommons.com/search?custom_query=callnumber%3A%28%22' + callNo + '*%22%29';
+                        citations += '<li><a href=' + url + '>' + n[c].title + '</a>' + (author != ' ' ? ' by ' + n[c].firstName + ' ' + n[c].lastName : '' ) + '</li>'
+                    }
+                    return '<ul>' + citations + '</ul>';
+                }
+                return '<div class="artist" data-filters="dataFilters" data-sort="' + sorter + '" id="' + caaJsonSingle.accNumber + '"><h2 class="artist-name">' + sorter + '</h2>' + 
                     ((caaJsonSingle.dob !=  '' || caaJsonSingle.dod != '') ? '<p class="artist-details">' + caaJsonSingle.dob + '-' + caaJsonSingle.dod + '</p>' : '' ) + 
                     (caaJsonSingle.gender != '' ? '<p class="artist-details">Gender: ' + caaJsonSingle.gender + '</p>': '') + 
-                    (caaJsonSingle.notes != '' ? '<p class="artist-details>Notes: ' + caaJsonSingle.notes + '</p>' : '' ) + 
-                    (fileContent ? '<p class="caa-contents-header">Chicago Artists File Contents:' +
+                    (caaJsonSingle.artTerms != '' ? '<p class="artist-details">Medium(s): ' + arrayer(caaJsonSingle.artTerms) + '</p>' : '' ) + 
+                    (caaJsonSingle.cultures != '' ? '<p class="artist-details">Cultural Affiliation(s): ' + arrayer(caaJsonSingle.cultures) + '</p>' : '' ) + 
+                    (caaJsonSingle.monographs != '' ? '<p class="artist-citations">Citations from the CPL Collection: ' + arrayerCitations(caaJsonSingle.monographs) + '</p>' : '' ) + 
+                    '<p class="caa-contents-header">Chicago Artists File Contents:' +
                         '<ul class="caa-contents-list">' + 
-                            ( caaJsonSingle.file == "TRUE" ? '<li>File: Yes </li>' : '') +
-                            ( caaJsonSingle.slides == "TRUE" ? '<li>Slides: Yes </li>' : '') +
-                            ( caaJsonSingle.videos == "TRUE" ? '<li>Video: Yes </li>' : '') +
+                            '<li>File: ' + ( caaJsonSingle.file == "TRUE" ? 'Yes' : 'No') + '</li>' +
+                            '<li>Slides: ' + ( caaJsonSingle.slides == "TRUE" ? 'Yes' : 'No') + '</li>' +
+                            '<li>Video: ' + ( caaJsonSingle.videos == "TRUE" ? 'Yes' : 'No') + '</li>' +
                             ( caaJsonSingle.resume == "TRUE" ? '<li>Resume: Yes </li>' : '') +
                             ( caaJsonSingle.article == "TRUE" ? '<li>Article: Yes </li>' : '') +
                             ( caaJsonSingle.poster == "TRUE" ? '<li>Poster: Yes </li>' : '') +
                             ( caaJsonSingle.folio == "TRUE" ? '<li>Folio: Yes </li>' : '') +
-                            ( caaJsonSingle.cdrom == "TRUE" ? '<li>CD-ROM: Yes </li>' : '') + 
-                            ( caaJsonSingle.artistStatement == "TRUE" ? '<li>Artist Statement: Yes </li>' : '') + 
-                            ( caaJsonSingle.galleryNotice == "TRUE" ? '<li>Gallery Notice: Yes </li>' : '') + 
+                            ( caaJsonSingle.cdrom == "TRUE" ? '<li>CD-ROM: Yes </li>' : '') +
+                            ( caaJsonSingle.artistStatement == "TRUE" ? '<li>Artist Statement: Yes' : '') + 
+                            ( caaJsonSingle.galleryNotice == "TRUE" ? '<li>Gallery Notice: Yes' : '') + 
                         '</ul>' +
-                        '</p>' : '') +
+                        '</p>' +
+                    (caaJsonSingle.notes != '' ? '<p class="artist-notes">Notes: ' + caaJsonSingle.notes + '</p>' : '' ) + 
                         '</div>';
                     }
         // puts html in page
-            function appendAldArray(content){
-                $('#artists').empty().append(content);
+            function appendAldArray(){
+                $('#artists').empty().append(artistArray);
                 $('#ald-header').empty().append(count + " Results.")
             };
         // sort aldermen: https://stackoverflow.com/a/17127455/9942821
