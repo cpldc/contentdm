@@ -8,6 +8,7 @@
                     <div>
                         <h4>Additional Filters</h4>
                         <span class="label-desc">These filter lists are long; click to expand.</span>
+                        <!-- if #artists has artists (check artistArray?) filter #artists; else filter caaJson -->
                         <div class="filters">
                             <div id="filter-terms">
                                 <h5 onClick="toggleList('terms')">Medium</h5>
@@ -67,11 +68,10 @@
         // text button
             function textButton(){
                 var input = $('#textInput').val();
-                if (input.length > 0 ){
+                if (input.length > 1 ){
                     textFilter(input);
-                    if (count < 500){
-                        $('.filter-text').addClass('filter-list');
-                    }
+                } else if (input.length == 1 ) {
+                    firstAlphaFilter(input);
                 } else if (input == null || input.length < 1) {
                     $('#artists').empty();
                     $('#ald-header').empty().append('0 Results.');
@@ -80,6 +80,23 @@
             }
         // text filter
             var artistArray = [];
+            function firstAlphaFilter(userInput){
+                artistArray = [];
+                count = 0;
+                for (var a in caaJson){
+                    if (caaJson[a].name.charAt(0) === userInput.toUpperCase() ){
+                        count++;
+                        var htmlArtist = drawAlderman(caaJson[a]);
+                        artistArray.push(htmlArtist);
+                    }
+                }
+                if (count > 500){
+                    $('#artists').empty();
+                    $('#ald-header').empty().append(count + ' results.  Show anyway? <br /><button class="anyway-button" onclick="appendAldArray()">Ok</button>');
+                } else {
+                    appendAldArray();
+                }
+            }
             function textFilter(userInput){
                 artistArray = [];
                 count = 0;
@@ -109,7 +126,7 @@
                         }
                         string += prepend + n[e];
                     }
-                    return '<span>' + string + '</span>';
+                    return string;
                 }
                 function arrayerCitations(n){
                     var citations = '';
@@ -122,10 +139,10 @@
                     }
                     return '<ul>' + citations + '</ul>';
                 }
-                return '<div class="artist" data-filters="dataFilters" data-sort="' + sorter + '" id="' + caaJsonSingle.accNumber + '"><h2 class="artist-name">' + sorter + '</h2>' + 
+                return '<div class="artist" data-filters="' + arrayer(caaJsonSingle.artTerms) + '" data-sort="' + sorter + '" id="' + caaJsonSingle.accNumber + '"><h2 class="artist-name">' + sorter + '</h2>' + 
                     ((caaJsonSingle.dob !=  '' || caaJsonSingle.dod != '') ? '<p class="artist-details">' + caaJsonSingle.dob + '-' + caaJsonSingle.dod + '</p>' : '' ) + 
                     (caaJsonSingle.gender != '' ? '<p class="artist-details">Gender: ' + caaJsonSingle.gender + '</p>': '') + 
-                    (caaJsonSingle.artTerms != '' ? '<p class="artist-details">Medium(s): ' + arrayer(caaJsonSingle.artTerms) + '</p>' : '' ) + 
+                    (caaJsonSingle.artTerms != '' ? '<p class="artist-details">Medium(s): <span>' + arrayer(caaJsonSingle.artTerms) + '</span></p>' : '' ) + 
                     (caaJsonSingle.cultures != '' ? '<p class="artist-details">Cultural Affiliation(s): ' + arrayer(caaJsonSingle.cultures) + '</p>' : '' ) + 
                     (caaJsonSingle.monographs != '' ? '<p class="artist-citations">Citations from the CPL Collection: ' + arrayerCitations(caaJsonSingle.monographs) + '</p>' : '' ) + 
                     '<p class="caa-contents-header">Chicago Artists File Contents:' +
