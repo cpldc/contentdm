@@ -37,18 +37,18 @@
 // 									footer.html
 // ----------------------------------------------------------------------------------------
 
-	// include 'header.php';
+	include 'header.php';
 ?>
 <main class="sidebar-target-collapsible PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
 	<div class="container main-container-fixed">
 				<?php 
 					
-						include 'caa-center-content.html';
+						include 'caa-center-content-2.html';
 				?>
 	</div>
 </main>
 <?php 
-	// include 'footer.html';
+	include 'footer.html';
 ?>
 </body>
 </html>

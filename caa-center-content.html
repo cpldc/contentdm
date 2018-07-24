@@ -11,11 +11,11 @@
                         <!-- if #artists has artists (check artistArray?) filter #artists; else filter caaJson -->
                         <div class="filters">
                             <div id="filter-terms">
-                                <h5 onClick="toggleList('terms')">Medium</h5>
+                                <h5 class="clickable-title" onClick="toggleList('terms')">Medium</h5>
                                 <ul id="filter-terms-list"  class="filter-list" style="display: none"></ul>
                             </div>
                             <div id="filter-cultures">
-                                <h5 onClick="toggleList('cultures')">Cultural Affiliation</h5>
+                                <h5 class="clickable-title" onClick="toggleList('cultures')">Cultural Affiliation</h5>
                                 <ul id="filter-cultures-list" class="filter-list" style="display: none"></ul>
                             </div>
                         </div>
@@ -30,7 +30,8 @@
                     </div>
                     <p id="ald-header">Please search for an artist by name, or select filters from the left.</p>
                 </div>
-                <div class="aldermen-target" id="artists">
+                <div class="aldermen-target" id="artists"></div>
+                <div id="intro-text">
                     <p>The Chicago Artists File is a blah blah Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut necessitatibus cumque dicta! Voluptate, tempora impedit quod perspiciatis accusamus iure rerum corrupti quasi minima nam maxime dicta ut dignissimos maiores recusandae.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quae labore molestiae officiis? Dolorem nesciunt cupiditate eum, ipsum fugiat sapiente, quos ex hic praesentium aperiam et minima nobis cum enim.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa illum ipsum impedit eveniet aliquid, et dicta, commodi iusto libero explicabo tempore quidem consequuntur quod? Optio consectetur illum repellendus quaerat quam.</p>
@@ -53,28 +54,33 @@
             for (var m in artTerms) {
                 $('#filter-terms-list').append(
                     '<li class="caa-filter">' +
-                            '<input name="contentFilter" type="checkbox" id="filter-type-'  + artTerms[m] + '" class="filter-cultures" value="'  + artTerms[m] + '">' + 
-                            '<label for="filter-type-'  + artTerms[m] + '"> '  + artTerms[m] + '</label>' + 
+                            '<input name="contentFilter" type="checkbox" id="filter-type-'  + artTerms[m].replace(/ /g,"") + '" class="filter-cultures" value="'  + artTerms[m].replace(/ /g,"") + '">' + 
+                            '<label for="filter-type-'  + artTerms[m].replace(/ /g,"") + '"> '  + artTerms[m] + '</label>' + 
                     '</li>');
             }
             for (var c in cultures) {
                 $('#filter-cultures-list').append(
                     '<li class="caa-filter">' +
-                            '<input name="contentFilter" type="checkbox" id="filter-type-'  + cultures[c] + '" class="filter-cultures" value="'  + cultures[c] + '">' + 
-                            '<label for="filter-type-'  + cultures[c] + '"> '  + cultures[c] + '</label>' + 
+                            '<input name="contentFilter" type="checkbox" id="filter-type-'  + cultures[c].replace(/ /g,"") + '" class="filter-cultures" value="'  + cultures[c].replace(/ /g,"") + '">' + 
+                            '<label for="filter-type-'  + cultures[c].replace(/ /g,"") + '"> '  + cultures[c] + '</label>' + 
                     '</li>');
             }
- 
+        function clearCenter(){
+            $('#artists').empty();
+            $('#intro-text').empty();
+        }
         // text button
+            var input = $('#textInput').val();
             function textButton(){
-                var input = $('#textInput').val();
+                input = $('#textInput').val();
+
                 if (input.length > 1 ){
                     textFilter(input);
                 } else if (input.length == 1 ) {
                     firstAlphaFilter(input);
                 } else if (input == null || input.length < 1) {
-                    $('#artists').empty();
-                    $('#ald-header').empty().append('0 Results.');
+                    clearCenter();
+                    $('#ald-header').empty().append('Please search for an artist by name, or select filters from the left.');
                     $('.filter-text').removeClass('filter-list');
                 }
             }
@@ -91,7 +97,7 @@
                     }
                 }
                 if (count > 500){
-                    $('#artists').empty();
+                    clearCenter();
                     $('#ald-header').empty().append(count + ' results.  Show anyway? <br /><button class="anyway-button" onclick="appendAldArray()">Ok</button>');
                 } else {
                     appendAldArray();
@@ -108,7 +114,7 @@
                     }
                 }
                 if (count > 500){
-                    $('#artists').empty();
+                    clearCenter();
                     $('#ald-header').empty().append(count + ' results.  Show anyway? <br /><button class="anyway-button" onclick="appendAldArray()">Ok</button>');
                 } else {
                     appendAldArray();
@@ -139,7 +145,7 @@
                     }
                     return '<ul>' + citations + '</ul>';
                 }
-                return '<div class="artist" data-filters="' + arrayer(caaJsonSingle.artTerms) + '" data-sort="' + sorter + '" id="' + caaJsonSingle.accNumber + '"><h2 class="artist-name">' + sorter + '</h2>' + 
+                return '<div class="artist" data-filters="' + arrayer(caaJsonSingle.artTerms).replace(/ /g,"") + '" data-sort="' + sorter + '" id="' + caaJsonSingle.accNumber + '"><h2 class="artist-name">' + sorter + '</h2>' + 
                     ((caaJsonSingle.dob !=  '' || caaJsonSingle.dod != '') ? '<p class="artist-details">' + caaJsonSingle.dob + '-' + caaJsonSingle.dod + '</p>' : '' ) + 
                     (caaJsonSingle.gender != '' ? '<p class="artist-details">Gender: ' + caaJsonSingle.gender + '</p>': '') + 
                     (caaJsonSingle.artTerms != '' ? '<p class="artist-details">Medium(s): <span>' + arrayer(caaJsonSingle.artTerms) + '</span></p>' : '' ) + 
@@ -164,7 +170,9 @@
                     }
         // puts html in page
             function appendAldArray(){
-                $('#artists').empty().append(artistArray);
+                clearCenter();
+                $('#artists').append(artistArray).sortDivs('sort');
+                // artistArray.sortDivs('sort');
                 $('#ald-header').empty().append(count + " Results.")
             };
         // sort aldermen: https://stackoverflow.com/a/17127455/9942821
@@ -175,7 +183,12 @@
             }
         // filter results
             var $filterCheckboxes = $('input[type="checkbox"]');
+            console.log( $filterCheckboxes);
             $filterCheckboxes.on('change', function() {
+                if (input.length < 1) {
+                    console.log("hip hip hooray");
+                    checkboxFilterNoText();
+                } else {
                 var selectedFilters = {};
                 $filterCheckboxes.filter(':checked').each(function() {
                     if (!selectedFilters.hasOwnProperty(this.name)) {
@@ -183,14 +196,14 @@
                     }   
                     selectedFilters[this.name].push(this.value);
                 });  
-            // create a collection containing all of the filterable elements
+                // create a collection containing all of the filterable elements
                 var $filteredResults = $('.artist');
-            // loop over the selected filter name -> (array) values pairs
+                // loop over the selected filter name -> (array) values pairs
                 $.each(selectedFilters, function(name, filterValues) {
                     // filter each .flower element
                     $filteredResults = $filteredResults.filter(function() {
                         var matched = false,
-                            currentFilterValues = $(this).data('filters').split(' ');
+                            currentFilterValues = $(this).data('filters').split(',');
                 // loop over each category value in the current .flower's data-category
                         $.each(currentFilterValues, function(_, currentFilterValue) {
                 // if the current category exists in the selected filters array
@@ -207,8 +220,48 @@
                     });
                 });
                 $('.artist').hide().filter($filteredResults).show();
-                console.log($filteredResults);
+            }
+                // console.log($filteredResults);
             });
+
+            function checkboxFilterNoText(){
+                aldArray = [];
+                filterTerms = $('#filter-terms-list').find(':checkbox:checked').map(function () {
+                        return $(this).val();
+                    }).get();
+                filterCultures = $('#filter-cultures-list').find(':checkbox:checked').map(function () {
+                        return $(this).val();
+                    }).get();
+                count = 0;
+                for (var k in caaJson){
+                    if (filterCheck(caaJson[k].artTerms, filterTerms) || filterCheck(caaJson[k].cultures, filterCultures)){
+                        count++
+                        console.log("rabbit");
+                        var htmlArtist = drawAlderman(caaJson[k]);
+                        artistArray.push(htmlArtist);
+                    }
+                }
+                if (count >= 500){
+                    clearCenter();
+                    $('#ald-header').empty().append(count + ' results.  Show anyway? <br /><button class="anyway-button" onclick="appendAldArray()">Ok</button>');
+                } else {
+                    appendAldArray();
+                }
+            }
+        // text (ward and alpha) filters
+            function filterCheck(range, indices) {
+                var check = false;
+                for (var i in indices) {
+                    for(var r in range){
+                        if (range[r] && range[r] === indices[i]){
+                            check = true;
+                        } 
+                    }
+                }
+                if (check === true) {
+                    return true;
+                } 
+            }
         // docready for checkbox changing & pressing enter in text field
             $( document ).ready(function() {
                 $('#textInput').keypress(function(e){

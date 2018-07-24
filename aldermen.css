@@ -2,6 +2,9 @@
         min-height: calc(100vh - 466px);
         /* padding-bottom: 60px; Should be equal to the height of your footer */
     }
+    .clickable-title {
+        cursor: pointer;
+    }
     .alderman a, .artist a {
         color: #234c86;
         text-decoration: none;
