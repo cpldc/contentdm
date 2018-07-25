@@ -120,6 +120,9 @@
         font-style: italic;
         line-height: 0.8rem;
     }
+    .data-filter-header {
+        margin-bottom: 15px;    
+    }
     #caa-filters {
         border-bottom: 0;
     }
