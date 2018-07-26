@@ -27,6 +27,7 @@
         margin-top: 7px;
     }
     .go-button {
+        cursor: pointer;
         margin: 0 0 10px 0;
     }
     .label-container {
@@ -105,6 +106,7 @@
         font-weight: 700;
     }
     .filter-text-input {
+        width: 100%;
         padding: 3px;
         margin-bottom: 10px;
     }
