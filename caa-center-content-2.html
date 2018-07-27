@@ -138,8 +138,10 @@
                         '</div>');
                 }
                 if ( count > 500 ) {
+                    clearCenter();
                     $('#helper-text').empty().append(count + ' results.  Show anyway? <br /><button class="anyway-button" onclick="appendResultsHtml()">Ok</button>');
                 } else if (count === 0 ) {
+                    clearCenter();
                     $('#helper-text').empty().append('Please search for an artist by name, or select filters from the left.');
                 } else {
                     appendResultsHtml();
@@ -168,7 +170,6 @@
                 }
             }
             filterCheckboxes.change(function(){
-                resultsArray = [];
                 firstFilter();
             });
         // initial filter function: loops through array and sends records to filters; if filter functions return true, record is added to results.
