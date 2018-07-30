@@ -1,6 +1,11 @@
         <div class="row center-content">
             <div class="filter-column">
                 <div class="filters">
+                    <div class="filter-text clearfix">
+                        <input type="text" id="text-input" class="filter-text-input" />
+                        <button class="go-button" onClick="activateTextSearch()">Go</button>
+                        <button class="go-button float-right" onClick="clearFilters()">Clear Filters</button>
+                    </div>
                     <div class="filter-list">
                         <p class="filter-list-title">Filter by Date</p>
                         <div class="silder-box">
@@ -31,8 +36,6 @@
                             <label for="filter-pos-clerk">Mayors</label>
                         </li>
                     </ul>
-                    <p class="filter-list-title">Filter by Name</p>
-                    <ul class="filter-list" id="alpha-list"></ul>
                     <p class="filter-list-title">Filter by Ward</p>
                     <ul class="filter-list" id="ward-list"></ul>
                     <button class="go-button" onclick="clearFilters()">Clear All Filters</button>
@@ -97,12 +100,18 @@
                 }
             });
             $("#date-slider").empty().append( minDate + "-" + maxDate);
-        // date button
+        // date / text go button
             function dateButton(){
                 $('#aldermen').empty();
                 drawAldermen();
             }
-        // date filter
+            function activateTextSearch(){
+                input = $('#text-input').val();
+                if (input.length > 0 ){
+                    drawAldermen();
+                }
+            }
+        // date & text filters
             function filterDate(ald){
                 for (var k in ald.positionArray){
                     var endDate;
@@ -116,16 +125,17 @@
                     }
                 }
             }
+            function filterText(haystack){
+                input = $('#text-input').val();
+                if (( haystack.name && haystack.name.toUpperCase().indexOf(input.toUpperCase()) === 0 ) || input.length < 1 ){
+                    return true;
+                }
+            }
         // text (ward and alpha) filters
             function filterCheckboxes(ald) {
                 var alphaCheck = false,
                     wardCheck = false,
                     posCheck = false;
-                for (var a in filterAlpha){
-                    if (ald.id.charAt(0) === filterAlpha[a]){
-                        alphaCheck = true;
-                    } 
-                } 
                 for (var w in filterWard) {
                     for(var p in ald.positionArray){
                         if (ald.positionArray[p].ward && ald.positionArray[p].ward === filterWard[w]){
@@ -144,7 +154,7 @@
                         }
                     }
                 }
-                if ((filterAlpha.length === 0 || alphaCheck === true) && (filterWard.length === 0 || wardCheck === true) && (filterPos.length === 0 || posCheck === true)) {
+                if ( (filterWard.length === 0 || wardCheck === true) && (filterPos.length === 0 || posCheck === true)) {
                     return true;
                 } 
             }
@@ -167,15 +177,15 @@
                     }
                     positions += '<div class="alderman-position" data-date="' + ald.positionArray[p].startDate + '">' + ald.positionArray[p].startDate + '-' + ald.positionArray[p].endDate + ' ' + ald.positionArray[p].position + (ald.positionArray[p].position === 'Alderman' ? ', ' + ward + ' Ward' : '') + '</div>';
                 }
-                aldArray += '<div class="alderman" data-id="'+ ald.id + '" data-date="' + earliestDate + '" id="'+ ald.id + '">' + (ald.pic ? '<img class="float-right alderman-pic" src="150/' + ald.pic + '" alt="">' : '') + '<h2 class="alderman-name">' + ald.name + '</h2>'  + '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
+                // removing pics for now, until we find them
+                // aldArray += '<div class="alderman" data-id="'+ ald.id + '" data-date="' + earliestDate + '" id="'+ ald.id + '">' + (ald.pic ? '<img class="float-right alderman-pic" src="150/' + ald.pic + '" alt="">' : '') + '<h2 class="alderman-name">' + ald.name + '</h2>'  + '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
+                aldArray += '<div class="alderman" data-id="'+ ald.id + '" data-date="' + earliestDate + '" id="'+ ald.id + '">' + '<h2 class="alderman-name">' + ald.name + '</h2>'  + '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
             
             }
         // master function; gets filters, sends each aldermen to date and text filters
             function drawAldermen(){
                 aldArray = [];
-                filterAlpha = $('#alpha-list').find(':checkbox:checked').map(function () {
-                        return $(this).val();
-                    }).get();
+                filterAlpha = $('#text-input').val();
                 filterWard = $('#ward-list').find(':checkbox:checked').map(function () {
                         return $(this).val();
                     }).get();
@@ -184,7 +194,7 @@
                     }).get();
                 count = 0;
                 for (var k in aldermen){
-                    if (((filterAlpha.length === 0 && filterWard.length === 0 && filterPos.length === 0) || filterCheckboxes(aldermen[k])) && filterDate(aldermen[k])){
+                    if ((( filterWard.length === 0 && filterPos.length === 0) || filterCheckboxes(aldermen[k])) && filterText(aldermen[k]) && filterDate(aldermen[k])){
                         count++
                         drawAlderman(aldermen[k]);
                     }
@@ -232,20 +242,12 @@
                     // count = 0;
                     drawAldermen();
                 });
+                $('#text-input').keypress(function(e){
+                    if(e.keyCode==13)
+                        activateTextSearch();
+                });
             });
         // creating checkboxes
-            for (var cc = 65; cc <= 90; cc++) {
-                var newLine = '';
-                if ( (cc - 64) % 5 === 0 ){
-                    newLine = '<br />';
-                }
-                var alphaLetter = String.fromCharCode(cc);
-                $('#alpha-list').append(
-                    '<li class="filter">\
-                        <input type="checkbox" value="' + alphaLetter + '" id="filter-alpha-' + alphaLetter + '" class="filter-alpha"  />\
-                        <label for="filter-alpha-' + alphaLetter + '">' + alphaLetter + '</label>\
-                    </li>' + newLine);
-            }
             for (var w = 1; w <= 50 ; w++) {
                 var newLine = '';
                 if (w % 5 === 0){
@@ -261,6 +263,7 @@
         // clearing filters
             function clearFilters() {
                 $('#aldermen').empty();
+                $('#text-input').val('');
                 minDate = 1837;
                 maxDate = currYear;
                 $('#ald-header').empty().append('Please select filters from the left.');

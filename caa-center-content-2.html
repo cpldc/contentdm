@@ -4,20 +4,20 @@
             <div class="filter-text clearfix">
                 <input type="text" id="text-input" class="filter-text-input" />
                 <button class="go-button" onClick="activateTextSearch()">Go</button>
-                <button class="float-right go-button" onClick="clearFilters()">Clear Filters</button>
+                <button class="go-button float-right" onClick="clearFilters()">Clear Filters</button>
             </div>
             <div class="filter-vocab">
                 <div class="data-filter-header">
                     <h4>Additional Filters</h4>
-                    <span class="label-desc">These filter lists are long; click to expand.</span>
+                    <span class="label-desc">Click to expand.</span>
                 </div>
                 <div id="filter-terms">
-                    <h5 class="clickable-title" onClick="toggleFilterList('terms')">Filter by Medium</h5>
-                    <ul class="filter-list" id="filter-terms-list" style="display: none"></ul>
+                    <h5 class="clickable-title" onClick="toggleFilterList('filter-terms-toplevel')">Filter by Medium</h5>
+                    <ul class="filter-list" id="filter-terms-toplevel" style="display: none"></ul>
                 </div>
                 <div id="filter-cultures">
-                    <h5 class="clickable-title" onClick="toggleFilterList('cultures')">Filter by Cultural Affiliation</h5>
-                    <ul class="filter-list" id="filter-cultures-list" style="display: none"></ul>
+                    <h5 class="clickable-title" onClick="toggleFilterList('filter-culture-toplevel')">Filter by Cultural Affiliation</h5>
+                    <ul class="filter-list" id="filter-culture-toplevel" style="display: none"></ul>
                 </div>
             </div>
         </div>
@@ -31,33 +31,69 @@
         <div id="intro-text">Intro text.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae totam repudiandae quo esse reprehenderit, minus dolorum! Repellendus alias consequatur pariatur repudiandae, minus error? Nostrum, perferendis blanditiis dignissimos eveniet vel necessitatibus.</div>
     </div>
 </div>
+
 <script>
     // nonfunctions: 
-        // iterate over filter list arrays (terms, cultures); draw them with checkboxes
-        for (var m in artTerms) {
-                $('#filter-terms-list').append(
-                    '<li data-sort="' + m + '" class="caa-filter">' +
-                            '<input name="contentFilter" type="checkbox" id="filter-type-'  + m + '" class="filter-cultures" value="'  + m + '">' + 
-                            '<label for="filter-type-'  + m + '"> '  + m + '</label>' + 
-                    '</li>');
-            }
-        for (var c in cultures) {
-            $('#filter-cultures-list').append(
-                '<li data-sort="' + c + '" class="caa-filter">' +
-                        '<input name="contentFilter" type="checkbox" id="filter-type-'  + c + '" class="filter-cultures" value="'  + c + '">' + 
-                        '<label for="filter-type-'  + c + '"> '  + c + '</label>' + 
-                '</li>');
-        }
-        // listen for enter key while in input field and activateTextSearch()
-        $( document ).ready(function() {
-            $('#text-input').keypress(function(e){
-                if(e.keyCode==13)
-                    activateTextSearch();
-            });
-        });
     // globals: 
             // results array is the array of objects for search results
             // results html is ithe results array with html added
+
+            var cultures = [
+                {"group": "mistakes", "name": "Mistakes & Inconsistencies", "ids": ["Columbia","Colombian","German","Painting","Germany (?)","Korean","Moroccan","Native America","Philpino","Italian","Ukranian","African America","Armenian","Bulgarian"]},
+                {"group": "americas", "name":"Americas" , "ids": ["Venezuela","Franco-American","Chile","Haiti","Inca","Guatamala","Panama Canal Zone","Dominican Republic","Colombia","Nicaragua","Italian American","Mestizo","African American","Mexico","Afro-Hispanic","apache","Belize","Puerto Rico","Argentina","Canada","Brazil","Jamaica","Hispanic","Navajo","Cuba","Native American"]},
+                {"group": "africa",  "name":"Africa & ME", "ids" : ["Nigeria","South Africa","Cameroon","Egypt","Sudan","Tunisia","Morocco","Israel","Iran","Iraq","Afghanistan"]},
+                {"group": "asia", "name":"Asia & Pacific Islands", "ids": ["China","Hawaii","Japan","South Korea","Taiwan","Korea","Philippines","Hong Kong","Nepal","India","Vietnam","Indonesia","Bangladesh","Asian / Pacific Islander" ]},
+                {"group": "europe",  "name":"Europe", "ids": ["Belgium","British","Bohemia","Turkey","Serbia","Estonia","Moravia","Georgia","Netherlands","Bulgaria","Germany","Luxembourg","Cyprus","Poland","Latvia","Wales","Basque","Belarus","Switzerland","Holland","Lithuania","Scotland","Armenia","Greece","Sweden","Russia","Italy","Yugoslavia","Romania","Spain","Denmark","Ireland","Ukraine","Austria","England","Czechoslovakia","France","Norway","Hungary"]},
+                {"group": "religions",  "name":"Religions & Ethnicities", "ids": ["Jewish","Christian","Muslim"]}];
+        // iterate over filter list arrays (terms, cultures); draw them with checkboxes
+            // for (var m in artTerms) {
+            //     $('#filter-terms-toplevel').append(
+            //         '<li data-sort="' + m + '" class="caa-filter">' +
+            //                 '<input name="contentFilter" type="checkbox" id="filter-type-'  + m + '" class="filter-cultures" value="'  + m + '">' + 
+            //                 '<label for="filter-type-'  + m + '"> '  + m + '</label>' + 
+            //         '</li>');
+            // }
+        // sorts results, filters, filter categories
+            jQuery.fn.sortElements = function sortElements(el) {
+                $('> ' + el , this[0]).sort(dec_sort).appendTo(this[0]);
+                function dec_sort(a, b){ return ($(b).data('sort')) < ($(a).data('sort')) ? 1 : -1; }
+            }
+        // creates culture filters
+        var i = 0;
+        var group =  1;
+            for ( var t in artTerms ) {
+                if (i % 16 === 0){
+                    $('#filter-terms-toplevel').append('<li class="filter-terms-group" data-sort="group-' + group + '" id="group-' + group + '" >' + 
+                        '<h6 class="filter-culture-group-text" onClick="toggleFilterList(\'filter-list-group-' + group + '\')">' + 
+                            'Group ' + group + 
+                        '</h6>' + 
+                        '<ul class="filter-culture-group-toplevel" id="filter-list-group-' + group + '" style="display: none">' + 
+                        '</ul>' + 
+                    '</li>');
+                    group++;
+                        }
+                    i++;
+                    // console.log('#filter-list-group-' + group);
+                    $('#filter-list-group-' + (group - 1)).append('<li class="filter-culture-group-item" data-sort="' + t + '">' +
+                            '<input name="contentFilter" type="checkbox" id="filter-type-' + t + '" class="filter-cultures" value="' + t+ '"> ' +
+                            '<label for="filter-type-' + t + '">' + t + '</label>' + 
+                        '</li>').sortElements('li');
+            }
+            for (var l in cultures) {
+                $('#filter-culture-toplevel').append('<li class="filter-culture-group" data-sort="' + cultures[l].group + '" id="' + cultures[l].group + '" >' + 
+                        '<h6 class="filter-culture-group-text" onClick="toggleFilterList(\'filter-list-' + cultures[l].group + '\')">' + 
+                            cultures[l].name + 
+                        '</h6>' + 
+                        '<ul class="filter-culture-group-toplevel" id="filter-list-' + cultures[l].group + '" style="display: none">' + 
+                        '</ul>' + 
+                    '</li>').sortElements('li');
+                for (var c in cultures[l].ids ) {
+                    $('#filter-list-' + cultures[l].group).append('<li class="filter-culture-group-item" data-sort="' + cultures[l].ids[c] + '">' +
+                            '<input name="contentFilter" type="checkbox" id="filter-type-' + cultures[l].ids[c] + '" class="filter-cultures" value="' + cultures[l].ids[c] + '"> ' +
+                            '<label for="filter-type-' + cultures[l].ids[c] + '">' + cultures[l].ids[c] + '</label>' + 
+                        '</li>').sortElements('li');
+                }
+            }
         var resultsArray = [],
             resultsHtml = [],
             sourceArray = [],
@@ -65,10 +101,19 @@
             input = $('#text-input').val(),
             filterTerms = [],
             filterCultures = [];
+    // listen for enter key while in input field and activateTextSearch()
+        $( document ).ready(function() {
+            $('#text-input').keypress(function(e){
+                if(e.keyCode==13)
+                    activateTextSearch();
+            });
+        });
     // functions: 
         // show/hide the lists of filters    
-            function toggleFilterList(filterList){
-                $('#filter-' + filterList + '-list').slideToggle().sortLi('sort');
+            function toggleFilterList(list){
+                $('#' + list).slideToggle();
+                // $('#' + list).slideToggle().sortElements('ul');
+                // $('.culture-toplevel').sortElements('ul > li');
             }
         // clears all filters
             function clearFilters(){
@@ -147,19 +192,10 @@
                     appendResultsHtml();
                 }
             }
-        // sorts results
-            jQuery.fn.sortDivs = function sortDivs(sortType) {
-                $("> div", this[0]).sort(dec_sort).appendTo(this[0]);
-                function dec_sort(a, b){ return ($(b).data(sortType)) < ($(a).data(sortType)) ? 1 : -1; }
-            }
-            jQuery.fn.sortLi = function sortLi(sortType) {
-                $("> li", this[0]).sort(dec_sort).appendTo(this[0]);
-                function dec_sort(a, b){ return ($(b).data(sortType)) < ($(a).data(sortType)) ? 1 : -1; }
-            }
         // adds resultsHTML to web page
             function appendResultsHtml(){
                 clearCenter();
-                $('#results').append(resultsHtml).sortDivs('sort');
+                $('#results').append(resultsHtml).sortElements('div');
                 $('#helper-text').append(count + " results.")
             }
         // activate text search - the go button
@@ -177,13 +213,16 @@
             function firstFilter(){
                 resultsArray = [];
                 var filteredIds = dataFilter(caaJson);
-                // console.log(filteredIds);
-                if (filteredIds.length > 0){
+                if (filteredIds.length > 0 ){
                     for (var i in filteredIds){
                         if ( textFilter(caaJson[filteredIds[i]])){
                             resultsArray.push(caaJson[filteredIds[i]]);
                         }
                     }
+                } else if ( $('input:checked').length ) {
+                    clearCenter();
+                    $('#helper-text').empty().append('No results.  Try widening your search.');
+                    return false;
                 } else {
                     for ( var a in caaJson ) {
                         if ( textFilter(caaJson[a])){
@@ -201,10 +240,10 @@
                 }
             }
             function dataFilter(haystack){
-                filterTerms = $('#filter-terms-list').find(':checkbox:checked').map(function () {
+                filterTerms = $('#filter-terms-toplevel').find(':checkbox:checked').map(function () {
                         return $(this).val();
                     }).get();
-                filterCultures = $('#filter-cultures-list').find(':checkbox:checked').map(function () {
+                filterCultures = $('#filter-culture-toplevel').find(':checkbox:checked').map(function () {
                         return $(this).val();
                     }).get();
                 if (filterTerms.length === 0 && filterCultures.length === 0 && $('#text-input').val().length === 0) {
@@ -221,7 +260,7 @@
                 termsArrayUniqueIds = idArray.slice().sort(function(a,b){return a > b}).reduce(function(a,b){if (a.slice(-1)[0] !== b) a.push(b);return a;},[]);
                 idArray = [];
                 for (var f in filterCultures) {
-                    idArray = idArray.concat(cultures[filterCultures[f]]);
+                    idArray = idArray.concat(culturesWithIds[filterCultures[f]]);
                 }
                 culturesArrayUniqueIds = idArray.slice().sort(function(a,b){return a > b}).reduce(function(a,b){if (a.slice(-1)[0] !== b) a.push(b);return a;},[]);
                 filteredIds = [];
