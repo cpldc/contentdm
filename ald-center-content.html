@@ -2,9 +2,10 @@
             <div class="filter-column">
                 <div class="filters">
                     <div class="filter-text clearfix">
+                            <p class="filter-list-title">Search by Name</p>
                         <input type="text" id="text-input" class="filter-text-input" />
-                        <button class="go-button" onClick="activateTextSearch()">Go</button>
-                        <button class="go-button float-right" onClick="clearFilters()">Clear Filters</button>
+                        <!-- <button class="go-button" onClick="activateTextSearch()">Go</button>
+                        <button class="go-button float-right" onClick="clearFilters()">Clear Filters</button> -->
                     </div>
                     <div class="filter-list">
                         <p class="filter-list-title">Filter by Date</p>
@@ -16,6 +17,7 @@
                             <label type="text" id="date-slider" />
                         </p>
                         <button class="go-button" onclick="dateButton()">Go</button>
+                        <button class="go-button float-right" onClick="clearFilters()">Clear Filters</button>
                     </div>
                     <p class="filter-list-title">Filter by Position</p>
                     <ul class="filter-list" id="pos-list">
@@ -38,7 +40,6 @@
                     </ul>
                     <p class="filter-list-title">Filter by Ward</p>
                     <ul class="filter-list" id="ward-list"></ul>
-                    <button class="go-button" onclick="clearFilters()">Clear All Filters</button>
                 </div>
             </div>
             <div class="col aldermen">
@@ -87,6 +88,11 @@
                 }
                 return i + "th";
             }
+        // sort aldermen: https://stackoverflow.com/a/17127455/9942821
+            jQuery.fn.sortElements = function sortElements(el) {
+                $('> ' + el , this[0]).sort(dec_sort).appendTo(this[0]);
+                function dec_sort(a, b){ return ($(b).data('sort')) < ($(a).data('sort')) ? 1 : -1; }
+            }
         // slider
             $('#slider-container').slider({
                 range: true,
@@ -127,7 +133,19 @@
             }
             function filterText(haystack){
                 input = $('#text-input').val();
-                if (( haystack.name && haystack.name.toUpperCase().indexOf(input.toUpperCase()) === 0 ) || input.length < 1 ){
+                if (input.indexOf(' ') > -1){
+                    var inputArray = input.split(' '),
+                        inputArrayCheck = 0;
+                    for (var i in inputArray){
+                        if ( haystack.name && haystack.name.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) > -1  ){
+                            inputArrayCheck++;
+                        }
+                    } 
+                    if (inputArray.length === inputArrayCheck) {
+                        return true;
+                    }
+                }
+                if (( haystack.name && haystack.name.toUpperCase().indexOf(input.toUpperCase()) > -1 ) || input.length < 1 ){
                     return true;
                 }
             }
@@ -162,8 +180,7 @@
             function drawAlderman(ald){
                 var positions = '',
                     lists = '',
-                    pic,
-                    earliestDate = currYear;
+                    pic;
                 if (ald.cj || ald.refs){
                     lists = '<ul class="alderman-list"><li>' + (ald.cj ? ald.cj + '</li>' : '') + (ald.refs ? 'References: <ul class="alderman-list">' + ald.refs + '</li></ul>' : '') + '</ul>';
                 }
@@ -172,14 +189,11 @@
                     if (ald.positionArray[p].ward) {
                         ward = ordinal_suffix_of(ald.positionArray[p].ward);
                     }
-                    if (earliestDate > ald.positionArray[p].startDate){
-                        earliestDate = ald.positionArray[p].startDate;
-                    }
                     positions += '<div class="alderman-position" data-date="' + ald.positionArray[p].startDate + '">' + ald.positionArray[p].startDate + '-' + ald.positionArray[p].endDate + ' ' + ald.positionArray[p].position + (ald.positionArray[p].position === 'Alderman' ? ', ' + ward + ' Ward' : '') + '</div>';
                 }
                 // removing pics for now, until we find them
                 // aldArray += '<div class="alderman" data-id="'+ ald.id + '" data-date="' + earliestDate + '" id="'+ ald.id + '">' + (ald.pic ? '<img class="float-right alderman-pic" src="150/' + ald.pic + '" alt="">' : '') + '<h2 class="alderman-name">' + ald.name + '</h2>'  + '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
-                aldArray += '<div class="alderman" data-id="'+ ald.id + '" data-date="' + earliestDate + '" id="'+ ald.id + '">' + '<h2 class="alderman-name">' + ald.name + '</h2>'  + '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
+                aldArray += '<div class="alderman" data-sort="'+ ald.id + '" id="'+ ald.id + '">' + '<h2 class="alderman-name">' + ald.name + '</h2>'  + '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
             
             }
         // master function; gets filters, sends each aldermen to date and text filters
@@ -208,7 +222,7 @@
         // puts html in page
             function appendAldArray(){
                 $('#aldermen').empty().append(aldArray);
-                $('#aldermen').sortDivs($(".btn:first-child").val());
+                $('#aldermen').sortElements('div');
                 // sorts aldermen positions by start date when there's more than onea 
                 $('.positions').each(function(index){
                     if($(this).children().length > 1){
@@ -219,11 +233,6 @@
                 $('#ald-header').empty().append(count + " Results.")
                 $( 'p:empty' ).remove();
             };
-        // sort aldermen: https://stackoverflow.com/a/17127455/9942821
-            jQuery.fn.sortDivs = function sortDivs(sortType) {
-                $("> div", this[0]).sort(dec_sort).appendTo(this[0]);
-                function dec_sort(a, b){ return ($(b).data(sortType)) < ($(a).data(sortType)) ? 1 : -1; }
-            }
         // change sort type button
             $(function(){
                 $(".dropdown-menu").on('click', 'a', function(){

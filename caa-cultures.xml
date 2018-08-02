@@ -1,0 +1,1755 @@
+<cultures>
+<africanAmerican>
+	<fullTerm>
+		African American
+	</fullTerm>
+	<id>artist53</id>
+	<id>artist67</id>
+	<id>artist89</id>
+	<id>artist124</id>
+	<id>artist130</id>
+	<id>artist159</id>
+	<id>artist166</id>
+	<id>artist226</id>
+	<id>artist255</id>
+	<id>artist276</id>
+	<id>artist304</id>
+	<id>artist363</id>
+	<id>artist392</id>
+	<id>artist394</id>
+	<id>artist431</id>
+	<id>artist532</id>
+	<id>artist609</id>
+	<id>artist649</id>
+	<id>artist667</id>
+	<id>artist675</id>
+	<id>artist711</id>
+	<id>artist715</id>
+	<id>artist741</id>
+	<id>artist805</id>
+	<id>artist876</id>
+	<id>artist909</id>
+	<id>artist913</id>
+	<id>artist914</id>
+	<id>artist919</id>
+	<id>artist922</id>
+	<id>artist928</id>
+	<id>artist1026</id>
+	<id>artist1096</id>
+	<id>artist1112</id>
+	<id>artist1158</id>
+	<id>artist1162</id>
+	<id>artist1163</id>
+	<id>artist1178</id>
+	<id>artist1185</id>
+	<id>artist1196</id>
+	<id>artist1237</id>
+	<id>artist1324</id>
+	<id>artist1325</id>
+	<id>artist1465</id>
+	<id>artist1489</id>
+	<id>artist1523</id>
+	<id>artist1596</id>
+	<id>artist1627</id>
+	<id>artist1631</id>
+	<id>artist1641</id>
+	<id>artist1645</id>
+	<id>artist1657</id>
+	<id>artist1723</id>
+	<id>artist1776</id>
+	<id>artist1777</id>
+	<id>artist1832</id>
+	<id>artist2015</id>
+	<id>artist2098</id>
+	<id>artist2135</id>
+	<id>artist2180</id>
+	<id>artist2266</id>
+	<id>artist2368</id>
+	<id>artist2450</id>
+	<id>artist2483</id>
+	<id>artist2518</id>
+	<id>artist2612</id>
+	<id>artist2624</id>
+	<id>artist2626</id>
+	<id>artist2769</id>
+	<id>artist2797</id>
+	<id>artist2822</id>
+	<id>artist3048</id>
+	<id>artist3062</id>
+	<id>artist3067</id>
+	<id>artist3073</id>
+	<id>artist3098</id>
+	<id>artist3165</id>
+	<id>artist3207</id>
+	<id>artist3267</id>
+	<id>artist3291</id>
+	<id>artist3332</id>
+	<id>artist3401</id>
+	<id>artist3435</id>
+	<id>artist3453</id>
+	<id>artist3538</id>
+	<id>artist3544</id>
+	<id>artist3545</id>
+	<id>artist3602</id>
+	<id>artist3612</id>
+	<id>artist3614</id>
+	<id>artist3681</id>
+	<id>artist3685</id>
+	<id>artist3694</id>
+	<id>artist3701</id>
+	<id>artist3710</id>
+	<id>artist3712</id>
+	<id>artist3725</id>
+	<id>artist3729</id>
+	<id>artist3960</id>
+	<id>artist4003</id>
+	<id>artist4326</id>
+	<id>artist4405</id>
+	<id>artist4427</id>
+	<id>artist4519</id>
+	<id>artist4713</id>
+	<id>artist4746</id>
+	<id>artist4763</id>
+	<id>artist4789</id>
+	<id>artist4933</id>
+	<id>artist4977</id>
+	<id>artist5128</id>
+	<id>artist5242</id>
+	<id>artist5245</id>
+	<id>artist5257</id>
+	<id>artist5316</id>
+	<id>artist5330</id>
+	<id>artist5360</id>
+	<id>artist5365</id>
+	<id>artist5413</id>
+	<id>artist5479</id>
+	<id>artist5489</id>
+	<id>artist5672</id>
+	<id>artist5696</id>
+	<id>artist5715</id>
+	<id>artist5726</id>
+	<id>artist5778</id>
+	<id>artist5785</id>
+	<id>artist5799</id>
+	<id>artist5839</id>
+	<id>artist5933</id>
+	<id>artist5950</id>
+	<id>artist6009</id>
+	<id>artist6062</id>
+	<id>artist6114</id>
+	<id>artist6153</id>
+	<id>artist6161</id>
+	<id>artist6213</id>
+	<id>artist6262</id>
+	<id>artist6270</id>
+	<id>artist6286</id>
+	<id>artist6336</id>
+	<id>artist6349</id>
+	<id>artist6429</id>
+	<id>artist6453</id>
+	<id>artist6483</id>
+	<id>artist6623</id>
+	<id>artist6684</id>
+	<id>artist6727</id>
+	<id>artist6728</id>
+	<id>artist6813</id>
+	<id>artist6855</id>
+	<id>artist7010</id>
+	<id>artist7029</id>
+	<id>artist7034</id>
+	<id>artist7042</id>
+	<id>artist7077</id>
+	<id>artist7156</id>
+	<id>artist7195</id>
+	<id>artist7290</id>
+	<id>artist7349</id>
+	<id>artist7379</id>
+	<id>artist7390</id>
+	<id>artist7419</id>
+	<id>artist7485</id>
+	<id>artist7494</id>
+	<id>artist7545</id>
+	<id>artist7680</id>
+	<id>artist7692</id>
+	<id>artist7695</id>
+	<id>artist7757</id>
+	<id>artist7841</id>
+	<id>artist7852</id>
+	<id>artist7892</id>
+	<id>artist7894</id>
+	<id>artist7966</id>
+	<id>artist7968</id>
+	<id>artist8019</id>
+	<id>artist8021</id>
+	<id>artist8028</id>
+	<id>artist8040</id>
+	<id>artist8069</id>
+	<id>artist8150</id>
+	<id>artist8180</id>
+	<id>artist8194</id>
+	<id>artist8209</id>
+	<id>artist8244</id>
+	<id>artist8245</id>
+	<id>artist8250</id>
+	<id>artist8257</id>
+	<id>artist8258</id>
+	<id>artist8267</id>
+	<id>artist8271</id>
+	<id>artist8276</id>
+	<id>artist8293</id>
+	<id>artist8301</id>
+	<id>artist8368</id>
+	<id>artist8413</id>
+	<id>artist8429</id>
+	<id>artist8446</id>
+	<id>artist8487</id>
+	<id>artist8571</id>
+	<id>artist8576</id>
+	<id>artist8579</id>
+	<id>artist8590</id>
+	<id>artist8647</id>
+	<id>artist8649</id>
+	<id>artist8697</id>
+	<id>artist8698</id>
+	<id>artist8704</id>
+	<id>artist8708</id>
+	<id>artist8709</id>
+	<id>artist8713</id>
+	<id>artist8821</id>
+	<id>artist8839</id>
+	<id>artist8972</id>
+	<id>artist8973</id>
+	<id>artist9049</id>
+	<id>artist9163</id>
+	<id>artist9409</id>
+	<id>artist9414</id>
+	<id>artist9709</id>
+	<id>artist9723</id>
+	<id>artist9763</id>
+	<id>artist10146</id>
+	<id>artist10220</id>
+	<id>artist10479</id>
+	<id>artist10483</id>
+	<id>artist10720</id>
+	<id>artist10723</id>
+	<id>artist10736</id>
+	<id>artist10771</id>
+	<id>artist10772</id>
+	<id>artist11214</id>
+	<id>artist11292</id>
+	<id>artist11354</id>
+	<id>artist11429</id>
+	<id>artist11459</id>
+	<id>artist11618</id>
+	<id>artist11628</id>
+	<id>artist11725</id>
+	<id>artist11979</id>
+	<id>artist11980</id>
+	<id>artist11981</id>
+	<id>artist11982</id>
+	<id>artist11983</id>
+	<id>artist11984</id>
+	<id>artist11985</id>
+	<id>artist11986</id>
+	<id>artist11987</id>
+	<id>artist11988</id>
+	<id>artist11989</id>
+	<id>artist11990</id>
+	<id>artist11991</id>
+	<id>artist11993</id>
+	<id>artist11997</id>
+	<id>artist12015</id>
+	<id>artist12018</id>
+	<id>artist12039</id>
+	<id>artist12078</id>
+	<id>artist12084</id>
+	<id>artist12085</id>
+	<id>artist12086</id>
+	<id>artist12106</id>
+	<id>artist12114</id>
+	<id>artist12115</id>
+	<id>artist12143</id>
+	<id>artist12144</id>
+	<id>artist12145</id>
+	<id>artist12146</id>
+	<id>artist12147</id>
+	<id>artist12148</id>
+	<id>artist12149</id>
+	<id>artist12150</id>
+	<id>artist12151</id>
+	<id>artist12154</id>
+	<id>artist12156</id>
+	<id>artist12159</id>
+	<id>artist12164</id>
+	<id>artist12170</id>
+	<id>artist12171</id>
+	<id>artist12176</id>
+</africanAmerican>
+<jewish>
+	<fullTerm>
+		Jewish
+	</fullTerm>
+	<id>artist126</id>
+	<id>artist143</id>
+	<id>artist145</id>
+	<id>artist180</id>
+	<id>artist183</id>
+	<id>artist212</id>
+	<id>artist231</id>
+	<id>artist270</id>
+	<id>artist283</id>
+	<id>artist305</id>
+	<id>artist362</id>
+	<id>artist374</id>
+	<id>artist380</id>
+	<id>artist513</id>
+	<id>artist567</id>
+	<id>artist572</id>
+	<id>artist578</id>
+	<id>artist581</id>
+	<id>artist585</id>
+	<id>artist660</id>
+	<id>artist744</id>
+	<id>artist824</id>
+	<id>artist843</id>
+	<id>artist879</id>
+	<id>artist965</id>
+	<id>artist1036</id>
+	<id>artist1109</id>
+	<id>artist1231</id>
+	<id>artist1257</id>
+	<id>artist1277</id>
+	<id>artist1371</id>
+	<id>artist1372</id>
+	<id>artist1379</id>
+	<id>artist1440</id>
+	<id>artist1453</id>
+	<id>artist1485</id>
+	<id>artist1622</id>
+	<id>artist1737</id>
+	<id>artist1755</id>
+	<id>artist1826</id>
+	<id>artist1871</id>
+	<id>artist1882</id>
+	<id>artist1968</id>
+	<id>artist2000</id>
+	<id>artist2033</id>
+	<id>artist2040</id>
+	<id>artist2125</id>
+	<id>artist2157</id>
+	<id>artist2167</id>
+	<id>artist2184</id>
+	<id>artist2196</id>
+	<id>artist2200</id>
+	<id>artist2217</id>
+	<id>artist2252</id>
+	<id>artist2284</id>
+	<id>artist2330</id>
+	<id>artist2356</id>
+	<id>artist2403</id>
+	<id>artist2423</id>
+	<id>artist2455</id>
+	<id>artist2506</id>
+	<id>artist2578</id>
+	<id>artist2580</id>
+	<id>artist2582</id>
+	<id>artist2750</id>
+	<id>artist2752</id>
+	<id>artist2754</id>
+	<id>artist2763</id>
+	<id>artist2820</id>
+	<id>artist2878</id>
+	<id>artist2888</id>
+	<id>artist3092</id>
+	<id>artist3155</id>
+	<id>artist3257</id>
+	<id>artist3271</id>
+	<id>artist3300</id>
+	<id>artist3303</id>
+	<id>artist3361</id>
+	<id>artist3369</id>
+	<id>artist3385</id>
+	<id>artist3528</id>
+	<id>artist3552</id>
+	<id>artist3557</id>
+	<id>artist3566</id>
+	<id>artist3595</id>
+	<id>artist3735</id>
+	<id>artist3778</id>
+	<id>artist3785</id>
+	<id>artist3807</id>
+	<id>artist3818</id>
+	<id>artist3840</id>
+	<id>artist3851</id>
+	<id>artist3853</id>
+	<id>artist3923</id>
+	<id>artist4033</id>
+	<id>artist4061</id>
+	<id>artist4110</id>
+	<id>artist4175</id>
+	<id>artist4201</id>
+	<id>artist4413</id>
+	<id>artist4420</id>
+	<id>artist4453</id>
+	<id>artist4461</id>
+	<id>artist4491</id>
+	<id>artist4508</id>
+	<id>artist4513</id>
+	<id>artist4517</id>
+	<id>artist4524</id>
+	<id>artist4608</id>
+	<id>artist4650</id>
+	<id>artist4891</id>
+	<id>artist4912</id>
+	<id>artist4925</id>
+	<id>artist4940</id>
+	<id>artist4959</id>
+	<id>artist5012</id>
+	<id>artist5097</id>
+	<id>artist5124</id>
+	<id>artist5132</id>
+	<id>artist5134</id>
+	<id>artist5139</id>
+	<id>artist5152</id>
+	<id>artist5236</id>
+	<id>artist5268</id>
+	<id>artist5469</id>
+	<id>artist5683</id>
+	<id>artist5705</id>
+	<id>artist5756</id>
+	<id>artist5758</id>
+	<id>artist5809</id>
+	<id>artist5820</id>
+	<id>artist5931</id>
+	<id>artist5938</id>
+	<id>artist5947</id>
+	<id>artist5979</id>
+	<id>artist6125</id>
+	<id>artist6140</id>
+	<id>artist6174</id>
+	<id>artist6204</id>
+	<id>artist6212</id>
+	<id>artist6298</id>
+	<id>artist6320</id>
+	<id>artist6357</id>
+	<id>artist6390</id>
+	<id>artist6546</id>
+	<id>artist6549</id>
+	<id>artist6550</id>
+	<id>artist6614</id>
+	<id>artist6624</id>
+	<id>artist6655</id>
+	<id>artist6669</id>
+	<id>artist6670</id>
+	<id>artist6673</id>
+	<id>artist6682</id>
+	<id>artist6701</id>
+	<id>artist6708</id>
+	<id>artist6711</id>
+	<id>artist6734</id>
+	<id>artist6792</id>
+	<id>artist6838</id>
+	<id>artist6869</id>
+	<id>artist6873</id>
+	<id>artist6878</id>
+	<id>artist6884</id>
+	<id>artist6923</id>
+	<id>artist6926</id>
+	<id>artist6962</id>
+	<id>artist6968</id>
+	<id>artist6969</id>
+	<id>artist7013</id>
+	<id>artist7018</id>
+	<id>artist7050</id>
+	<id>artist7052</id>
+	<id>artist7059</id>
+	<id>artist7060</id>
+	<id>artist7101</id>
+	<id>artist7119</id>
+	<id>artist7188</id>
+	<id>artist7291</id>
+	<id>artist7309</id>
+	<id>artist7312</id>
+	<id>artist7316</id>
+	<id>artist7317</id>
+	<id>artist7348</id>
+	<id>artist7449</id>
+	<id>artist7472</id>
+	<id>artist7490</id>
+	<id>artist7569</id>
+	<id>artist7582</id>
+	<id>artist7588</id>
+	<id>artist7589</id>
+	<id>artist7590</id>
+	<id>artist7591</id>
+	<id>artist7659</id>
+	<id>artist7735</id>
+	<id>artist7801</id>
+	<id>artist7808</id>
+	<id>artist8088</id>
+	<id>artist8092</id>
+	<id>artist8098</id>
+	<id>artist8100</id>
+	<id>artist8108</id>
+	<id>artist8112</id>
+	<id>artist8159</id>
+	<id>artist8291</id>
+	<id>artist8309</id>
+	<id>artist8430</id>
+	<id>artist8431</id>
+	<id>artist8452</id>
+	<id>artist8529</id>
+	<id>artist8535</id>
+	<id>artist8628</id>
+	<id>artist8629</id>
+	<id>artist8631</id>
+	<id>artist8664</id>
+	<id>artist8683</id>
+	<id>artist8703</id>
+	<id>artist8737</id>
+	<id>artist8788</id>
+	<id>artist8790</id>
+	<id>artist12169</id>
+</jewish>
+<germany>
+	<fullTerm>
+		Germany
+	</fullTerm>
+	<id>artist88</id>
+	<id>artist113</id>
+	<id>artist126</id>
+	<id>artist127</id>
+	<id>artist230</id>
+	<id>artist267</id>
+	<id>artist300</id>
+	<id>artist374</id>
+	<id>artist484</id>
+	<id>artist511</id>
+	<id>artist589</id>
+	<id>artist590</id>
+	<id>artist662</id>
+	<id>artist718</id>
+	<id>artist731</id>
+	<id>artist827</id>
+	<id>artist834</id>
+	<id>artist975</id>
+	<id>artist1035</id>
+	<id>artist1769</id>
+	<id>artist1805</id>
+	<id>artist1882</id>
+	<id>artist1908</id>
+	<id>artist1986</id>
+	<id>artist2008</id>
+	<id>artist2502</id>
+	<id>artist2615</id>
+	<id>artist2689</id>
+	<id>artist2856</id>
+	<id>artist2888</id>
+	<id>artist2921</id>
+	<id>artist2961</id>
+	<id>artist3069</id>
+	<id>artist3183</id>
+	<id>artist3226</id>
+	<id>artist3270</id>
+	<id>artist3293</id>
+	<id>artist3295</id>
+	<id>artist3301</id>
+	<id>artist3313</id>
+	<id>artist3450</id>
+	<id>artist3595</id>
+	<id>artist3764</id>
+	<id>artist3937</id>
+	<id>artist3938</id>
+	<id>artist4008</id>
+	<id>artist4240</id>
+	<id>artist4404</id>
+	<id>artist4527</id>
+	<id>artist4528</id>
+	<id>artist4952</id>
+	<id>artist5044</id>
+	<id>artist5054</id>
+	<id>artist5118</id>
+	<id>artist5139</id>
+	<id>artist5266</id>
+	<id>artist5562</id>
+	<id>artist5677</id>
+	<id>artist6347</id>
+	<id>artist6407</id>
+	<id>artist6445</id>
+	<id>artist6526</id>
+	<id>artist6669</id>
+	<id>artist6932</id>
+	<id>artist6948</id>
+	<id>artist7050</id>
+	<id>artist7522</id>
+	<id>artist7667</id>
+	<id>artist7857</id>
+	<id>artist8110</id>
+	<id>artist8145</id>
+	<id>artist8212</id>
+	<id>artist8310</id>
+	<id>artist8400</id>
+	<id>artist8489</id>
+	<id>artist9406</id>
+	<id>artist9408</id>
+	<id>artist11378</id>
+</germany>
+<poland>
+	<fullTerm>
+		Poland
+	</fullTerm>
+	<id>artist126</id>
+	<id>artist305</id>
+	<id>artist332</id>
+	<id>artist350</id>
+	<id>artist628</id>
+	<id>artist1052</id>
+	<id>artist1098</id>
+	<id>artist1219</id>
+	<id>artist1259</id>
+	<id>artist1372</id>
+	<id>artist1569</id>
+	<id>artist1797</id>
+	<id>artist1824</id>
+	<id>artist1826</id>
+	<id>artist1909</id>
+	<id>artist2742</id>
+	<id>artist2750</id>
+	<id>artist2966</id>
+	<id>artist3534</id>
+	<id>artist3591</id>
+	<id>artist3600</id>
+	<id>artist3768</id>
+	<id>artist3857</id>
+	<id>artist3942</id>
+	<id>artist3987</id>
+	<id>artist4061</id>
+	<id>artist4076</id>
+	<id>artist4143</id>
+	<id>artist4161</id>
+	<id>artist4198</id>
+	<id>artist4240</id>
+	<id>artist4287</id>
+	<id>artist4408</id>
+	<id>artist4546</id>
+	<id>artist4572</id>
+	<id>artist4576</id>
+	<id>artist4941</id>
+	<id>artist5236</id>
+	<id>artist5407</id>
+	<id>artist5625</id>
+	<id>artist5857</id>
+	<id>artist6120</id>
+	<id>artist6606</id>
+	<id>artist6698</id>
+	<id>artist7006</id>
+	<id>artist7291</id>
+	<id>artist7336</id>
+	<id>artist7355</id>
+	<id>artist7574</id>
+	<id>artist7599</id>
+	<id>artist7744</id>
+	<id>artist7766</id>
+	<id>artist7893</id>
+	<id>artist7962</id>
+	<id>artist8348</id>
+	<id>artist8382</id>
+	<id>artist8484</id>
+	<id>artist8629</id>
+	<id>artist8643</id>
+	<id>artist8689</id>
+	<id>artist9179</id>
+	<id>artist9428</id>
+	<id>artist9591</id>
+	<id>artist10845</id>
+	<id>artist11406</id>
+	<id>artist11639</id>
+	<id>artist11640</id>
+	<id>artist11642</id>
+	<id>artist11646</id>
+</poland>
+<lithuania>
+	<fullTerm>
+		Lithuania
+	</fullTerm>
+	<id>artist86</id>
+	<id>artist268</id>
+	<id>artist296</id>
+	<id>artist372</id>
+	<id>artist379</id>
+	<id>artist721</id>
+	<id>artist3525</id>
+	<id>artist3577</id>
+	<id>artist3965</id>
+	<id>artist4273</id>
+	<id>artist4938</id>
+	<id>artist4939</id>
+	<id>artist4962</id>
+	<id>artist5371</id>
+	<id>artist5408</id>
+	<id>artist5982</id>
+	<id>artist5985</id>
+	<id>artist6372</id>
+	<id>artist7278</id>
+	<id>artist7435</id>
+	<id>artist7667</id>
+	<id>artist7730</id>
+	<id>artist7910</id>
+	<id>artist7911</id>
+	<id>artist7960</id>
+	<id>artist8472</id>
+	<id>artist8531</id>
+	<id>artist9434</id>
+</lithuania>
+<sweden>
+	<fullTerm>
+		Sweden
+	</fullTerm>
+	<id>artist57</id>
+	<id>artist220</id>
+	<id>artist664</id>
+	<id>artist1584</id>
+	<id>artist2421</id>
+	<id>artist2936</id>
+	<id>artist2979</id>
+	<id>artist2981</id>
+	<id>artist2989</id>
+	<id>artist3558</id>
+	<id>artist3592</id>
+	<id>artist4137</id>
+	<id>artist4566</id>
+	<id>artist5337</id>
+	<id>artist5576</id>
+	<id>artist5602</id>
+	<id>artist5639</id>
+	<id>artist5697</id>
+	<id>artist5709</id>
+	<id>artist5812</id>
+	<id>artist5973</id>
+	<id>artist6470</id>
+	<id>artist6692</id>
+	<id>artist7269</id>
+	<id>artist7603</id>
+	<id>artist7934</id>
+	<id>artist8634</id>
+</sweden>
+<russia>
+	<fullTerm>
+		Russia
+	</fullTerm>
+	<id>artist180</id>
+	<id>artist183</id>
+	<id>artist202</id>
+	<id>artist513</id>
+	<id>artist1224</id>
+	<id>artist1242</id>
+	<id>artist2270</id>
+	<id>artist2506</id>
+	<id>artist2522</id>
+	<id>artist3198</id>
+	<id>artist3785</id>
+	<id>artist3808</id>
+	<id>artist4420</id>
+	<id>artist5041</id>
+	<id>artist6212</id>
+	<id>artist6505</id>
+	<id>artist6604</id>
+	<id>artist6792</id>
+	<id>artist7018</id>
+	<id>artist7165</id>
+	<id>artist7808</id>
+	<id>artist8096</id>
+	<id>artist8421</id>
+	<id>artist8633</id>
+	<id>artist9167</id>
+	<id>artist9203</id>
+</russia>
+<mexico>
+	<fullTerm>
+		Mexico
+	</fullTerm>
+	<id>artist95</id>
+	<id>artist199</id>
+	<id>artist1236</id>
+	<id>artist1458</id>
+	<id>artist1680</id>
+	<id>artist1759</id>
+	<id>artist1804</id>
+	<id>artist3151</id>
+	<id>artist4638</id>
+	<id>artist5314</id>
+	<id>artist6330</id>
+	<id>artist6417</id>
+	<id>artist6635</id>
+	<id>artist6747</id>
+	<id>artist6860</id>
+	<id>artist8640</id>
+	<id>artist9044</id>
+	<id>artist9106</id>
+	<id>artist9355</id>
+	<id>artist10095</id>
+	<id>artist11078</id>
+	<id>artist11696</id>
+	<id>artist12045</id>
+</mexico>
+<hispanic>
+	<fullTerm>
+		Hispanic
+	</fullTerm>
+	<id>artist1900</id>
+	<id>artist2478</id>
+	<id>artist2494</id>
+	<id>artist2903</id>
+	<id>artist4764</id>
+	<id>artist7875</id>
+	<id>artist9261</id>
+	<id>artist11364</id>
+	<id>artist11600</id>
+	<id>artist11813</id>
+	<id>artist11997</id>
+	<id>artist12008</id>
+	<id>artist12035</id>
+	<id>artist12080</id>
+	<id>artist12087</id>
+	<id>artist12104</id>
+	<id>artist12111</id>
+	<id>artist12131</id>
+	<id>artist12178</id>
+</hispanic>
+<ukraine>
+	<fullTerm>
+		Ukraine
+	</fullTerm>
+	<id>artist93</id>
+	<id>artist128</id>
+	<id>artist2277</id>
+	<id>artist2580</id>
+	<id>artist2829</id>
+	<id>artist2866</id>
+	<id>artist3369</id>
+	<id>artist3778</id>
+	<id>artist3855</id>
+	<id>artist4092</id>
+	<id>artist4249</id>
+	<id>artist4250</id>
+	<id>artist4251</id>
+	<id>artist5224</id>
+	<id>artist5723</id>
+	<id>artist5756</id>
+	<id>artist6549</id>
+	<id>artist8430</id>
+	<id>artist8431</id>
+	<id>artist9590</id>
+</ukraine>
+<china>
+	<fullTerm>
+		China
+	</fullTerm>
+	<id>artist614</id>
+	<id>artist2925</id>
+	<id>artist3281</id>
+	<id>artist3499</id>
+	<id>artist3639</id>
+	<id>artist4313</id>
+	<id>artist4586</id>
+	<id>artist4587</id>
+	<id>artist5225</id>
+	<id>artist6756</id>
+	<id>artist7051</id>
+	<id>artist7148</id>
+	<id>artist7457</id>
+	<id>artist8492</id>
+	<id>artist8494</id>
+	<id>artist8495</id>
+	<id>artist8496</id>
+	<id>artist9162</id>
+</china>
+<cuba>
+	<fullTerm>
+		Cuba
+	</fullTerm>
+	<id>artist1683</id>
+	<id>artist1758</id>
+	<id>artist2097</id>
+	<id>artist2493</id>
+	<id>artist2562</id>
+	<id>artist2733</id>
+	<id>artist2905</id>
+	<id>artist3042</id>
+	<id>artist4634</id>
+	<id>artist5005</id>
+	<id>artist5078</id>
+	<id>artist5088</id>
+	<id>artist5792</id>
+	<id>artist7268</id>
+	<id>artist7905</id>
+	<id>artist8636</id>
+	<id>artist11485</id>
+</cuba>
+<italy>
+	<fullTerm>
+		Italy
+	</fullTerm>
+	<id>artist266</id>
+	<id>artist539</id>
+	<id>artist624</id>
+	<id>artist726</id>
+	<id>artist1309</id>
+	<id>artist1733</id>
+	<id>artist2179</id>
+	<id>artist3488</id>
+	<id>artist4344</id>
+	<id>artist4472</id>
+	<id>artist6119</id>
+	<id>artist6310</id>
+	<id>artist6569</id>
+	<id>artist7086</id>
+	<id>artist7454</id>
+	<id>artist7484</id>
+	<id>artist8516</id>
+	<id>artist9120</id>
+</italy>
+<austria>
+	<fullTerm>
+		Austria
+	</fullTerm>
+	<id>artist965</id>
+	<id>artist2108</id>
+	<id>artist2439</id>
+	<id>artist2877</id>
+	<id>artist3315</id>
+	<id>artist3501</id>
+	<id>artist4164</id>
+	<id>artist4282</id>
+	<id>artist4676</id>
+	<id>artist5021</id>
+	<id>artist5718</id>
+	<id>artist6301</id>
+	<id>artist6390</id>
+	<id>artist6446</id>
+	<id>artist6734</id>
+	<id>artist7799</id>
+	<id>artist8354</id>
+</austria>
+<england>
+	<fullTerm>
+		England
+	</fullTerm>
+	<id>artist190</id>
+	<id>artist223</id>
+	<id>artist335</id>
+	<id>artist1042</id>
+	<id>artist1268</id>
+	<id>artist1536</id>
+	<id>artist1581</id>
+	<id>artist2308</id>
+	<id>artist2594</id>
+	<id>artist2845</id>
+	<id>artist3242</id>
+	<id>artist3949</id>
+	<id>artist5954</id>
+	<id>artist6225</id>
+	<id>artist7590</id>
+	<id>artist7800</id>
+	<id>artist8540</id>
+</england>
+<czechoslovakia>
+	<fullTerm>
+		Czechoslovakia
+	</fullTerm>
+	<id>artist879</id>
+	<id>artist937</id>
+	<id>artist1311</id>
+	<id>artist2692</id>
+	<id>artist4892</id>
+	<id>artist5124</id>
+	<id>artist5619</id>
+	<id>artist5761</id>
+	<id>artist6198</id>
+	<id>artist6203</id>
+	<id>artist6618</id>
+	<id>artist7416</id>
+	<id>artist7610</id>
+	<id>artist8098</id>
+	<id>artist8308</id>
+	<id>artist8620</id>
+</czechoslovakia>
+<france>
+	<fullTerm>
+		France
+	</fullTerm>
+	<id>artist1049</id>
+	<id>artist1090</id>
+	<id>artist1232</id>
+	<id>artist1392</id>
+	<id>artist1449</id>
+	<id>artist1540</id>
+	<id>artist2201</id>
+	<id>artist2258</id>
+	<id>artist2399</id>
+	<id>artist2521</id>
+	<id>artist2593</id>
+	<id>artist3197</id>
+	<id>artist3742</id>
+	<id>artist5596</id>
+	<id>artist11153</id>
+</france>
+<norway>
+	<fullTerm>
+		Norway
+	</fullTerm>
+	<id>artist13</id>
+	<id>artist92</id>
+	<id>artist154</id>
+	<id>artist246</id>
+	<id>artist269</id>
+	<id>artist314</id>
+	<id>artist542</id>
+	<id>artist604</id>
+	<id>artist646</id>
+	<id>artist1124</id>
+	<id>artist2257</id>
+	<id>artist2912</id>
+	<id>artist3104</id>
+	<id>artist5508</id>
+	<id>artist5767</id>
+	<id>artist6676</id>
+	<id>artist7739</id>
+</norway>
+<hungary>
+	<fullTerm>
+		Hungary
+	</fullTerm>
+	<id>artist1304</id>
+	<id>artist1743</id>
+	<id>artist2520</id>
+	<id>artist3210</id>
+	<id>artist3851</id>
+	<id>artist3955</id>
+	<id>artist4084</id>
+	<id>artist4122</id>
+	<id>artist5070</id>
+	<id>artist5270</id>
+	<id>artist5808</id>
+	<id>artist6462</id>
+	<id>artist7292</id>
+	<id>artist7719</id>
+</hungary>
+<nativeAmerican>
+	<fullTerm>
+		Native American
+	</fullTerm>
+	<id>artist1678</id>
+	<id>artist2861</id>
+	<id>artist5668</id>
+	<id>artist7335</id>
+	<id>artist7631</id>
+	<id>artist8006</id>
+	<id>artist8640</id>
+	<id>artist8912</id>
+	<id>artist8999</id>
+	<id>artist11729</id>
+	<id>artist11730</id>
+	<id>artist12139</id>
+	<id>artist12178</id>
+</nativeAmerican>
+<japan>
+	<fullTerm>
+		Japan
+	</fullTerm>
+	<id>artist262</id>
+	<id>artist1376</id>
+	<id>artist2573</id>
+	<id>artist3113</id>
+	<id>artist3523</id>
+	<id>artist3774</id>
+	<id>artist5511</id>
+	<id>artist5673</id>
+	<id>artist6053</id>
+	<id>artist7067</id>
+	<id>artist8411</id>
+	<id>artist8439</id>
+	<id>artist10192</id>
+</japan>
+<puertoRico>
+	<fullTerm>
+		Puerto Rico
+	</fullTerm>
+	<id>artist1544</id>
+	<id>artist2069</id>
+	<id>artist4878</id>
+	<id>artist5006</id>
+	<id>artist5738</id>
+	<id>artist6589</id>
+	<id>artist6601</id>
+	<id>artist7279</id>
+	<id>artist7281</id>
+	<id>artist7696</id>
+	<id>artist7903</id>
+	<id>artist9381</id>
+	<id>artist9599</id>
+</puertoRico>
+<canada>
+	<fullTerm>
+		Canada
+	</fullTerm>
+	<id>artist182</id>
+	<id>artist474</id>
+	<id>artist1089</id>
+	<id>artist2332</id>
+	<id>artist2778</id>
+	<id>artist3095</id>
+	<id>artist3500</id>
+	<id>artist4778</id>
+	<id>artist5582</id>
+	<id>artist6179</id>
+	<id>artist6273</id>
+	<id>artist11601</id>
+</canada>
+<yugoslavia>
+	<fullTerm>
+		Yugoslavia
+	</fullTerm>
+	<id>artist312</id>
+	<id>artist808</id>
+	<id>artist839</id>
+	<id>artist3739</id>
+	<id>artist4407</id>
+	<id>artist4545</id>
+	<id>artist5252</id>
+	<id>artist5575</id>
+	<id>artist6318</id>
+	<id>artist6391</id>
+	<id>artist8498</id>
+	<id>artist11492</id>
+</yugoslavia>
+<spain>
+	<fullTerm>
+		Spain
+	</fullTerm>
+	<id>artist65</id>
+	<id>artist987</id>
+	<id>artist1201</id>
+	<id>artist1353</id>
+	<id>artist1663</id>
+	<id>artist2216</id>
+	<id>artist4913</id>
+	<id>artist6140</id>
+	<id>artist6753</id>
+	<id>artist7175</id>
+	<id>artist11142</id>
+</spain>
+<denmark>
+	<fullTerm>
+		Denmark
+	</fullTerm>
+	<id>artist2576</id>
+	<id>artist3023</id>
+	<id>artist3338</id>
+	<id>artist3413</id>
+	<id>artist3636</id>
+	<id>artist3637</id>
+	<id>artist3645</id>
+	<id>artist5564</id>
+	<id>artist5698</id>
+	<id>artist7466</id>
+</denmark>
+<ireland>
+	<fullTerm>
+		Ireland
+	</fullTerm>
+	<id>artist3646</id>
+	<id>artist4209</id>
+	<id>artist4780</id>
+	<id>artist4838</id>
+	<id>artist5394</id>
+	<id>artist5397</id>
+	<id>artist5662</id>
+	<id>artist7524</id>
+	<id>artist8107</id>
+</ireland>
+<korea>
+	<fullTerm>
+		Korea
+	</fullTerm>
+	<id>artist1286</id>
+	<id>artist3978</id>
+	<id>artist3982</id>
+	<id>artist3984</id>
+	<id>artist4104</id>
+	<id>artist4433</id>
+	<id>artist5443</id>
+	<id>artist6497</id>
+	<id>artist6773</id>
+</korea>
+<philippines>
+	<fullTerm>
+		Philippines
+	</fullTerm>
+	<id>artist645</id>
+	<id>artist1061</id>
+	<id>artist4905</id>
+	<id>artist6797</id>
+	<id>artist7280</id>
+	<id>artist10685</id>
+	<id>artist11478</id>
+</philippines>
+<brazil>
+	<fullTerm>
+		Brazil
+	</fullTerm>
+	<id>artist1165</id>
+	<id>artist1603</id>
+	<id>artist3769</id>
+	<id>artist5754</id>
+	<id>artist8537</id>
+	<id>artist9075</id>
+	<id>artist9080</id>
+</brazil>
+<romania>
+	<fullTerm>
+		Romania
+	</fullTerm>
+	<id>artist212</id>
+	<id>artist514</id>
+	<id>artist1283</id>
+	<id>artist3490</id>
+	<id>artist3507</id>
+	<id>artist8623</id>
+	<id>artist9107</id>
+</romania>
+<nigeria>
+	<fullTerm>
+		Nigeria
+	</fullTerm>
+	<id>artist63</id>
+	<id>artist1954</id>
+	<id>artist3512</id>
+	<id>artist4351</id>
+	<id>artist5638</id>
+	<id>artist11308</id>
+</nigeria>
+<belgium>
+	<fullTerm>
+		Belgium
+	</fullTerm>
+	<id>artist96</id>
+	<id>artist297</id>
+	<id>artist1529</id>
+	<id>artist2316</id>
+	<id>artist2892</id>
+	<id>artist10334</id>
+</belgium>
+<turkey>
+	<fullTerm>
+		Turkey
+	</fullTerm>
+	<id>artist52</id>
+	<id>artist69</id>
+	<id>artist1835</id>
+	<id>artist8423</id>
+	<id>artist11129</id>
+	<id>artist11526</id>
+</turkey>
+<hawaii>
+	<fullTerm>
+		Hawaii
+	</fullTerm>
+	<id>artist2149</id>
+	<id>artist2772</id>
+	<id>artist2773</id>
+	<id>artist3236</id>
+	<id>artist7737</id>
+</hawaii>
+<latvia>
+	<fullTerm>
+		Latvia
+	</fullTerm>
+	<id>artist1615</id>
+	<id>artist2125</id>
+	<id>artist3914</id>
+	<id>artist7674</id>
+	<id>artist7682</id>
+</latvia>
+<argentina>
+	<fullTerm>
+		Argentina
+	</fullTerm>
+	<id>artist621</id>
+	<id>artist2204</id>
+	<id>artist2641</id>
+	<id>artist4425</id>
+	<id>artist4881</id>
+</argentina>
+<scotland>
+	<fullTerm>
+		Scotland
+	</fullTerm>
+	<id>artist552</id>
+	<id>artist2809</id>
+	<id>artist4758</id>
+	<id>artist6247</id>
+	<id>artist7174</id>
+</scotland>
+<israel>
+	<fullTerm>
+		Israel
+	</fullTerm>
+	<id>artist143</id>
+	<id>artist769</id>
+	<id>artist3371</id>
+	<id>artist6709</id>
+	<id>artist7588</id>
+</israel>
+<armenia>
+	<fullTerm>
+		Armenia
+	</fullTerm>
+	<id>artist6337</id>
+	<id>artist8461</id>
+	<id>artist9075</id>
+	<id>artist9102</id>
+</armenia>
+<greece>
+	<fullTerm>
+		Greece
+	</fullTerm>
+	<id>artist4529</id>
+	<id>artist6255</id>
+	<id>artist7341</id>
+	<id>artist8652</id>
+</greece>
+<india>
+	<fullTerm>
+		India
+	</fullTerm>
+	<id>artist1732</id>
+	<id>artist3665</id>
+	<id>artist4216</id>
+	<id>artist6723</id>
+</india>
+<navajo>
+	<fullTerm>
+		Navajo
+	</fullTerm>
+	<id>artist11</id>
+	<id>artist508</id>
+	<id>artist509</id>
+	<id>artist510</id>
+	<id>artist8429</id>
+</navajo>
+<venezuela>
+	<fullTerm>
+		Venezuela
+	</fullTerm>
+	<id>artist3205</id>
+	<id>artist5159</id>
+	<id>artist5570</id>
+	<id>artist8279</id>
+</venezuela>
+<chile>
+	<fullTerm>
+		Chile
+	</fullTerm>
+	<id>artist279</id>
+	<id>artist2489</id>
+	<id>artist5008</id>
+	<id>artist6327</id>
+</chile>
+<colombia>
+	<fullTerm>
+		Colombia
+	</fullTerm>
+	<id>artist208</id>
+	<id>artist3597</id>
+	<id>artist5035</id>
+	<id>artist9407</id>
+</colombia>
+<netherlands>
+	<fullTerm>
+		Netherlands
+	</fullTerm>
+	<id>artist782</id>
+	<id>artist1430</id>
+	<id>artist4235</id>
+	<id>artist6221</id>
+</netherlands>
+<bulgarian>
+	<fullTerm>
+		Bulgarian
+	</fullTerm>
+	<id>artist10887</id>
+	<id>artist11994</id>
+	<id>artist12016</id>
+</bulgarian>
+<bohemia>
+	<fullTerm>
+		Bohemia
+	</fullTerm>
+	<id>artist1937</id>
+	<id>artist4691</id>
+	<id>artist9075</id>
+</bohemia>
+<vietnam>
+	<fullTerm>
+		Vietnam
+	</fullTerm>
+	<id>artist3908</id>
+	<id>artist4411</id>
+	<id>artist6002</id>
+</vietnam>
+<wales>
+	<fullTerm>
+		Wales
+	</fullTerm>
+	<id>artist3726</id>
+	<id>artist4342</id>
+	<id>artist9077</id>
+</wales>
+<switzerland>
+	<fullTerm>
+		Switzerland
+	</fullTerm>
+	<id>artist390</id>
+	<id>artist5265</id>
+	<id>artist5998</id>
+</switzerland>
+<columbia>
+	<fullTerm>
+		Columbia
+	</fullTerm>
+	<id>artist3640</id>
+	<id>artist10281</id>
+</columbia>
+<cyprus>
+	<fullTerm>
+		Cyprus
+	</fullTerm>
+	<id>artist3396</id>
+	<id>artist4095</id>
+</cyprus>
+<holland>
+	<fullTerm>
+		Holland
+	</fullTerm>
+	<id>artist5097</id>
+	<id>artist5637</id>
+</holland>
+<indonesia>
+	<fullTerm>
+		Indonesia
+	</fullTerm>
+	<id>artist4437</id>
+	<id>artist6070</id>
+</indonesia>
+<jamaica>
+	<fullTerm>
+		Jamaica
+	</fullTerm>
+	<id>artist2367</id>
+	<id>artist5740</id>
+</jamaica>
+<southAfrica>
+	<fullTerm>
+		South Africa
+	</fullTerm>
+	<id>artist2514</id>
+	<id>artist4976</id>
+</southAfrica>
+<tunisia>
+	<fullTerm>
+		Tunisia
+	</fullTerm>
+	<id>artist1998</id>
+	<id>artist2945</id>
+</tunisia>
+<serbia>
+	<fullTerm>
+		Serbia
+	</fullTerm>
+	<id>artist839</id>
+	<id>artist2136</id>
+</serbia>
+<asianPacificIslander>
+	<fullTerm>
+		Asian / Pacific Islander
+	</fullTerm>
+	<id>artist12092</id>
+</asianPacificIslander>
+<british>
+	<fullTerm>
+		British
+	</fullTerm>
+	<id>artist12141</id>
+</british>
+<cameroon>
+	<fullTerm>
+		Cameroon
+	</fullTerm>
+	<id>artist12078</id>
+</cameroon>
+<colombian>
+	<fullTerm>
+		Colombian
+	</fullTerm>
+	<id>artist12130</id>
+</colombian>
+<francoAmerican>
+	<fullTerm>
+		Franco-American
+	</fullTerm>
+	<id>artist12001</id>
+</francoAmerican>
+<german>
+	<fullTerm>
+		German
+	</fullTerm>
+	<id>artist12140</id>
+</german>
+<haiti>
+	<fullTerm>
+		Haiti
+	</fullTerm>
+	<id>artist10502</id>
+</haiti>
+<inca>
+	<fullTerm>
+		Inca
+	</fullTerm>
+	<id>artist12111</id>
+</inca>
+<iran>
+	<fullTerm>
+		Iran
+	</fullTerm>
+	<id>artist11517</id>
+</iran>
+<korean>
+	<fullTerm>
+		Korean
+	</fullTerm>
+	<id>artist12179</id>
+</korean>
+<moroccan>
+	<fullTerm>
+		Moroccan
+	</fullTerm>
+	<id>artist12010</id>
+</moroccan>
+<nativeAmerica>
+	<fullTerm>
+		Native America
+	</fullTerm>
+	<id>artist12114</id>
+</nativeAmerica>
+<nepal>
+	<fullTerm>
+		Nepal
+	</fullTerm>
+	<id>artist11564</id>
+</nepal>
+<nicaragua>
+	<fullTerm>
+		Nicaragua
+	</fullTerm>
+	<id>artist11695</id>
+</nicaragua>
+<philpino>
+	<fullTerm>
+		Philpino
+	</fullTerm>
+	<id>artist12089</id>
+</philpino>
+<ukranian>
+	<fullTerm>
+		Ukranian
+	</fullTerm>
+	<id>artist12093</id>
+</ukranian>
+<afghanistan>
+	<fullTerm>
+		Afghanistan
+	</fullTerm>
+	<id>artist5834</id>
+</afghanistan>
+<africanAmerica>
+	<fullTerm>
+		African America
+	</fullTerm>
+	<id>artist9216</id>
+</africanAmerica>
+<afroHispanic>
+	<fullTerm>
+		Afro-Hispanic
+	</fullTerm>
+	<id>artist1175</id>
+</afroHispanic>
+<apache>
+	<fullTerm>
+		Apache
+	</fullTerm>
+	<id>artist7335</id>
+</apache>
+<armenian>
+	<fullTerm>
+		Armenian
+	</fullTerm>
+	<id>artist3872</id>
+</armenian>
+<bangladesh>
+	<fullTerm>
+		Bangladesh
+	</fullTerm>
+	<id>artist3828</id>
+</bangladesh>
+<basque>
+	<fullTerm>
+		Basque
+	</fullTerm>
+	<id>artist1984</id>
+</basque>
+<belarus>
+	<fullTerm>
+		Belarus
+	</fullTerm>
+	<id>artist6152</id>
+</belarus>
+<belize>
+	<fullTerm>
+		Belize
+	</fullTerm>
+	<id>artist1243</id>
+</belize>
+<bulgaria>
+	<fullTerm>
+		Bulgaria
+	</fullTerm>
+	<id>artist6718</id>
+</bulgaria>
+<christian>
+	<fullTerm>
+		Christian
+	</fullTerm>
+	<id>artist9262</id>
+</christian>
+<egypt>
+	<fullTerm>
+		Egypt
+	</fullTerm>
+	<id>artist8283</id>
+</egypt>
+<estonia>
+	<fullTerm>
+		Estonia
+	</fullTerm>
+	<id>artist4484</id>
+</estonia>
+<georgia>
+	<fullTerm>
+		Georgia
+	</fullTerm>
+	<id>artist1284</id>
+</georgia>
+<germanyMaybe>
+	<fullTerm>
+		Germany (?)
+	</fullTerm>
+	<id>artist8068</id>
+</germanyMaybe>
+<guatemala>
+	<fullTerm>
+		Guatemala
+	</fullTerm>
+	<id>artist1971</id>
+</guatemala>
+<hongKong>
+	<fullTerm>
+		Hong Kong
+	</fullTerm>
+	<id>artist4380</id>
+</hongKong>
+<iraq>
+	<fullTerm>
+		Iraq
+	</fullTerm>
+	<id>artist9173</id>
+</iraq>
+<italian>
+	<fullTerm>
+		Italian
+	</fullTerm>
+	<id>artist2213</id>
+</italian>
+<italianAmerican>
+	<fullTerm>
+		Italian American
+	</fullTerm>
+	<id>artist1118</id>
+</italianAmerican>
+<luxembourg>
+	<fullTerm>
+		Luxembourg
+	</fullTerm>
+	<id>artist5588</id>
+</luxembourg>
+<mestizo>
+	<fullTerm>
+		Mestizo
+	</fullTerm>
+	<id>artist2467</id>
+</mestizo>
+<moravia>
+	<fullTerm>
+		Moravia
+	</fullTerm>
+	<id>artist5377</id>
+</moravia>
+<morocco>
+	<fullTerm>
+		Morocco
+	</fullTerm>
+	<id>artist1888</id>
+</morocco>
+<muslim>
+	<fullTerm>
+		Muslim
+	</fullTerm>
+	<id>artist1888</id>
+</muslim>
+<painting>
+	<fullTerm>
+		Painting
+	</fullTerm>
+	<id>artist7866</id>
+</painting>
+<southKorea>
+	<fullTerm>
+		South Korea
+	</fullTerm>
+	<id>artist9550</id>
+</southKorea>
+<sudan>
+	<fullTerm>
+		Sudan
+	</fullTerm>
+	<id>artist5620</id>
+</sudan>
+<taiwan>
+	<fullTerm>
+		Taiwan
+	</fullTerm>
+	<id>artist4316</id>
+</taiwan>
+<panamaCanalZone>
+	<fullTerm>
+		Panama Canal Zone
+	</fullTerm>
+	<id>artist545</id>
+</panamaCanalZone>
+<dominicanRepublic>
+	<fullTerm>
+		Dominican Republic
+	</fullTerm>
+	<id>artist16</id>
+</dominicanRepublic>
+</cultures>

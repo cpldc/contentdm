@@ -131,6 +131,10 @@
         padding: 10px 0;
         margin: 10px 0;
     }
+    .filters > .filter-text {
+        margin: 0;
+        padding: 0;
+    }
     .filter-list > .caa-filter {
         list-style-type: none;
     }
