@@ -11889,6 +11889,8 @@
 		<id>7423</id>
 	</artTerm>
 	<artTerm id="acrylics" name="Acrylics">
+		<id fake="fake">5834</id>
+		<id fake="fake">9</id>
 		<id>2665</id>
 		<id>6310</id>
 		<id>8197</id>

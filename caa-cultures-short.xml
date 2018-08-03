@@ -1339,6 +1339,7 @@
 		<id>12093</id>
 	</culture>
 	<culture id="afghanistan" name="Afghanistan">
+		<id fake="fake">9</id>
 		<id>5834</id>
 	</culture>
 	<culture id="africanamerica" name="African America">

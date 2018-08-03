@@ -2,27 +2,27 @@
 </div>
 
 <script>
-    var caaArtists, caaArtTerms, caaCultures;
+    var caaArtists, caaArtTerms, caaCultures, count = 0;
+    var $caaArtists, $caaArtTerms, $caaCultures;
     $.when(
-
-    $.get('caa-artists-short.xml').done(function(xml){
-        caaArtists = $(xml);
-        var result = $(xml).find("artist[accNumber=9]").attr('name');
-        console.log(result);
-    }),
-    $.get("caa-artTerms-short.xml").done(function(xml) {
-        caaArtTerms = $(xml);
-    }),
-    $.get("caa-cultures-short.xml").done(function(xml) {
-        caaCultures = $(xml);
-    })
+        $.get('caa-artists-short.xml').done(function(xml){
+            caaArtists = $(xml);
+            // var result = $(xml).find("artist[accNumber=9]").attr('name');
+            // console.log(result);
+        }),
+        $.get("caa-artTerms-short.xml").done(function(xml) {
+            caaArtTerms = $(xml);
+        }),
+        $.get("caa-cultures-short.xml").done(function(xml) {
+            caaCultures = $(xml);
+        })
     ).then(function(){
         $('.center-content').append('<div class="filter-column">' +
             '<div class="filters">' + 
                 '<div class="filter-text clearfix"> <p class="filter-list-title">Search by Name</p>' + 
                     '<input type="text" id="text-input" class="filter-text-input" />' + 
-                    '<button class="go-button" onClick="goButton()">Go</button>' + 
-                    '<button class="go-button float-right" onClick="clearFilters()">Clear Filters</button>' + 
+                    '<button class="go-button" id="goButton" onClick="goButton()">Go</button>' + 
+                    '<button class="go-button float-right" onClick="clearFilters()" id="clearFilters">Clear Filters</button>' + 
                 '</div>' + 
                 '<div class="filter-vocab">' + 
                     '<div class="data-filter-header">' + 
@@ -48,24 +48,28 @@
             '<div class="results-target" id="results"></div>' +
             '<div id="intro-text">Intro text.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae totam repudiandae quo esse reprehenderit, minus dolorum! Repellendus alias consequatur pariatur repudiandae, minus error? Nostrum, perferendis blanditiis dignissimos eveniet vel necessitatibus.</div>' +
         '</div>');
-
-            for (var l in cultures) {
-                $('#filter-culture-toplevel').append('<li class="filter-culture-group" data-sort="' + cultures[l].group + '" id="' + cultures[l].group + '" >' + 
-                        '<h6 class="filter-culture-group-text" onClick="toggleFilterList(\'filter-list-' + cultures[l].group + '\')">' + 
-                            cultures[l].name + 
-                        '</h6>' + 
-                        '<ul class="filter-culture-group-toplevel" id="filter-list-' + cultures[l].group + '" style="display: none">' + 
-                        '</ul>' + 
-                    '</li>').sortElements('li');
-                for (var c in cultures[l].ids ) {
-                    $('#filter-list-' + cultures[l].group).append('<li class="filter-culture-group-item" data-sort="' + cultures[l].ids[c] + '">' +
-                            '<input name="contentFilter" type="checkbox" id="filter-type-' + cultures[l].ids[c] + '" class="filter-cultures" value="' + cultures[l].ids[c] + '"> ' +
-                            '<label for="filter-type-' + cultures[l].ids[c] + '">' + cultures[l].ids[c] + '</label>' + 
-                        '</li>').sortElements('li');
-                }
-            }
+            $('artTerm', caaArtTerms).each(function(){
+                var id = $(this).attr('id'),
+                    name = $(this).attr('name');
+                $('#filter-terms-toplevel').append('<li data-sort="' + id + '" class="caa-filter">' +
+                            '<input name="contentFilter" type="checkbox" id="filter-type-'  + id + '" class="filter-terms" value="'  + id + '">' + 
+                            '<label for="filter-type-'  + id + '"> '  + name + '</label>' + 
+                    '</li>');
+            });
+            $('culture', caaCultures).each(function(){
+                var id = $(this).attr('id'),
+                    name = $(this).attr('name');
+                $('#filter-culture-toplevel').append('<li data-sort="' + id + '" class="caa-filter">' +
+                            '<input name="contentFilter" type="checkbox" id="filter-type-'  + id + '" class="filter-cultures" value="'  + id + '">' + 
+                            '<label for="filter-type-'  + id + '"> '  + name + '</label>' + 
+                    '</li>');
+            });
+            $('#text-input').keypress(function(e){
+                if(e.keyCode==13)
+                    goButton();
+            });
     });
-                var cultures = [
+    var cultures = [
                 {"group": "mistakes", "name": "Mistakes & Inconsistencies", "ids": ["Columbia","Colombian","German","Painting","Germany (?)","Korean","Moroccan","Native America","Philpino","Italian","Ukranian","African America","Armenian","Bulgarian"]},
                 {"group": "americas", "name":"Americas" , "ids": ["Venezuela","Franco-American","Chile","Haiti","Inca","Guatamala","Panama Canal Zone","Dominican Republic","Colombia","Nicaragua","Italian American","Mestizo","African American","Mexico","Afro-Hispanic","apache","Belize","Puerto Rico","Argentina","Canada","Brazil","Jamaica","Hispanic","Navajo","Cuba","Native American"]},
                 {"group": "africa",  "name":"Africa & ME", "ids" : ["Nigeria","South Africa","Cameroon","Egypt","Sudan","Tunisia","Morocco","Israel","Iran","Iraq","Afghanistan"]},
@@ -90,36 +94,145 @@
         $('#intro-text').empty();
     }   
     function toggleFilterList(list){
-        $('#' + list).slideToggle();
-    }
-    function masterFilter(){
-        var resultsXML;
-        var filteredArtistIds = dataFilter(caaArtists);
-        console.log('thats the end');
+        $('#' + list).slideToggle().sortElements('li');
     }
     jQuery.fn.sortElements = function sortElements(el) {
         $('> ' + el , this[0]).sort(dec_sort).appendTo(this[0]);
         function dec_sort(a, b){ return ($(b).data('sort')) < ($(a).data('sort')) ? 1 : -1; }
     }
+    function masterFilter(){
+        var resultsXml = [];
+        var filteredArtistIds = dataFilter(caaArtists);
+        // console.log(filteredArtistIds);
+        if (filteredArtistIds.length > 0 ){
+            for (var i in filteredArtistIds){
+                var arti = caaArtists.find('artists > artist[accNumber=' + filteredArtistIds[i] + ']');
+                if ( textFilter(arti) ) {
+                    resultsXml.push(arti);
+                }
+            }    
+        } else if ( $('input:checked').length ) {
+            clearCenter();
+            $('#helper-text').empty().append('No results.  Try widening your search.');
+            return false;
+        } else {
+            caaArtists.find('artist').each(function(){
+                if ( textFilter(this) ) {
+                    resultsXml.push(this);
+                }
+            });
+        }
+        htmlify(resultsXml);
+    }
     function dataFilter(xml){
         filterTerms = $('#filter-terms-toplevel').find(':checkbox:checked').map(function () {
-            return $(this).val();
+            return $(this).attr('value');
         }).get();
         filterCultures = $('#filter-culture-toplevel').find(':checkbox:checked').map(function () {
-            return $(this).val();
+            return $(this).attr('value');
         }).get();
         if (filterTerms.length === 0 && filterCultures.length === 0 && $('#text-input').val().length === 0) {
             clearCenter();
         }
-        var idList,
-            termsUniqueIdList,
-            culturesUniqueIdList,
-            filteredIds,
-            uniqueFilteredIds;
+        var idList = [],
+            termsUniqueIdList = [],
+            culturesUniqueIdList = [],
+            filteredIds = [],
+            uniqueFilteredIds = [];
+        for ( var f in filterTerms){
+            caaArtTerms.find('artTerm[id=' + filterTerms[f] + '] > id').each( function(val){
+                idList.push($(this).text());
+            });
+         
+        }
+        termsUniqueIdList = idList.slice().sort(function(a,b){return a > b}).reduce(function(a,b){if (a.slice(-1)[0] !== b) a.push(b);return a;},[]);
+        idList = [];
         for ( var f in filterCultures){
-            console.log(filterCultures[f]);
-            idList = caaCultures.find('culture[id=' + filterCultures[f] + ']');
-            console.log(idList);
-        } 
+            caaCultures.find('culture[id=' + filterCultures[f] + '] > id').each( function(val){
+                idList.push($(this).text());
+            });
+        }
+        culturesUniqueIdList = idList.slice().sort(function(a,b){return a > b}).reduce(function(a,b){if (a.slice(-1)[0] !== b) a.push(b);return a;},[]);
+        // $('#helper-text').empty().append("cultures: " +  "; terms: " + termsUniqueIdList); 
+        if (culturesUniqueIdList.length > 0 && termsUniqueIdList.length > 0 ) {
+            filteredIds = termsUniqueIdList.filter(function(element) {
+                return culturesUniqueIdList.indexOf(element) !== -1;
+            });
+        } else {
+            filteredIds = termsUniqueIdList.concat(culturesUniqueIdList);
+        }
+        uniqueFilteredIds = filteredIds.reduce(function(a,b){
+            if (a.indexOf(b) < 0 ) a.push(b);
+                return a;
+        },[]);
+        return uniqueFilteredIds;
+    }
+    function textFilter(xml){
+        input = $('#text-input').val();
+        var haystack = $(xml).attr('name');
+        if (( haystack && haystack.toUpperCase().indexOf(input.toUpperCase()) > -1 ) || input.length < 1 ){
+            // console.log("its true");
+            return true;
+        }
+    }
+    function htmlify(xml){
+        console.log(xml);
+        var htmlifiedXml = [];
+            // citations = [];
+        // function citationify(monographs){
+        // }
+        count = 0;
+        for (var x in xml ){
+            count++;
+            var name = $(xml[x]).attr('name'), 
+                id = $(xml[x]).attr('id'), 
+                dob = $(xml[x]).attr('dob'), 
+                dod = $(xml[x]).attr('dod'), 
+                gender = $(xml[x]).attr('gender')
+                file = $(xml[x]).attr('file')
+                slides = $(xml[x]).attr('slides'),
+                videos = $(xml[x]).attr('videos'),
+                resume = $(xml[x]).attr('resume'),
+                artistsstatement = $(xml[x]).attr('artistsstatement'),
+                gallerynotice = $(xml[x]).attr('gallerynotice'),
+                article = $(xml[x]).attr('article'),
+                poster = $(xml[x]).attr('poster'),
+                folio = $(xml[x]).attr('folio'),
+                cdrom = $(xml[x]).attr('cdrom'),
+                citations = [],
+                sorter = name.replace(/[|&;$%@"<>()-+, ]/g, "").toLowerCase();
+                // cultures = arrayify(xml[x].find('cultures')),
+                // mediums = arrayify(xml[x].find('mediums')),
+                // citations = citationify($(xml[x]).find('monogrpahs'));
+            $(xml[x]).find('monographs').find('monograph').each(function(){
+                var firstName = $(this).attr('firstName'), 
+                    lastName = $(this).attr('lastName'), 
+                    name = firstName + ' ' + lastName, 
+                    title = $(this).attr('title'), 
+                    callNo = $(this).attr('callNo'), 
+                    url = 'http://chipublib.bibliocommons.com/search?custom_query=callnumber%3A%28%22' + callNo + '*%22%29';
+                // <monograph callNumber="N11.C5Y6" title="Role and impact : the Chicago Society of Artists" lastName="Yochim" firstName="Louise Dunn" year="1979" />
+                    citations += '<li><a href="' + url + '">' + title + '</a> By ' + name + '</li>';
+            });
+            htmlifiedXml.push('<div class="artist" data-sort="' + sorter + '"><h2>' + name + '</h2>' +
+            ( dob != '' || dod != '' ? '<p class="artist-details">' + dob + '-' + dod + '</p>' : '') +
+            ( gender != '' ? '<p class="artist-details">Gender: ' + gender + '</p>' : '' ) +
+            '<p class="artist-details">File: ' + ( file === 'TRUE' ? 'Yes' : 'No') + '</p>' +
+            '<p class="artist-details">Slides: ' + ( slides === 'TRUE' ? 'Yes' : 'No') + '</p>' +
+            '<p class="artist-details">Videos: ' + ( videos === 'TRUE' ? 'Yes' : 'No') + '</p>' +
+            ( artistsstatement === 'TRUE' ? '<p class="artist-details">Artist&rsquo;s Statement: Yes </p>' : '' ) +
+            ( gallerynotice === 'TRUE' ? '<p class="artist-details">Gallery Notice(s): Yes </p>' : '' ) +
+            ( article === 'TRUE' ? '<p class="artist-details">Article(s): ' + article + ' </p>' : '' ) +
+            ( poster === 'TRUE' ? '<p class="artist-details">Poster(s): Yes </p>' : '' ) +
+            ( folio === 'TRUE' ? '<p class="artist-details">Folio(s): Yes </p>' : '' ) +
+            ( cdrom === 'TRUE' ? '<p class="artist-details">CD-ROM(s): Yes </p>' : '' ) +
+            ( citations.length > 0 ? '<p class="artist-citations">Citations from the CPL Collection:</p><ul>' + citations : ''));
+        }
+        appendResults(htmlifiedXml);
+    }
+    function appendResults(results){
+        clearCenter();
+        $('#helper-text').append(count + " results.")
+        $('#results').empty().append(results).sortElements('div');
     }
 </script>
