@@ -43,7 +43,7 @@
 	<div class="container main-container-fixed">
 				<?php 
 					
-						include 'caa-center-content-xml.html';
+						include 'caa-center-content-xml2.html';
 				?>
 	</div>
 </main>

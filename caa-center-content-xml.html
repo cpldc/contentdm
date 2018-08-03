@@ -36,25 +36,61 @@
     // nonfunctions: 
     // globals: 
     //xmls
-        var caaArtists, caaArtTerms, caaCultures;
+        var caaArtists, caaArtTerms, caaCultures, done = false;
 
-        $( document ).ready(function() {
-            $.get('caa-artists.xml', function(data) {
-                console.log("got artists");
-                caaArtists = $.parseXML(data);
+        // $( document ).ready(function() {
+        //     $.get('caa-artists-short.xml', function(data) {
+        //         caaArtists = $.parseXML(data);
+        //         console.log("got artists");
+        //         var $caaArtists = $(caaArtists);
+        //         var gertrude = $($caaArtists).find("artist[accNumber=9]");
+        //         console.log(caaArtists);
+        //     });
+        //     $.get('caa-artTerms-short.xml', function(data) {
+        //         console.log("got terms");
+        //         caaArtTerms = $.parseXML(data);
+        //     });
+        //     $.get('caa-cultures-short.xml', function(data) {
+        //         console.log("got cultures");
+        //         caaCultures = $.parseXML(data);
+                
+        //     });
+        //     var $artists = $(caaArtists),
+        //         $artTerms = $(caaArtTerms),
+        //         $cultures = $(caaCultures);
+        // });
+            $.get('caa-artists-short.xml').done(function(xml){
+                caaArtists = $(xml);
+                var result = $(xml).find("artist[accNumber=9]").attr('name');
+                console.log(result);
+            })
+            $.get("caa-artTerms-short.xml").done(function(xml) {
+                caaArtTerms = $(xml);
             });
-            $.get('caa-artTerms.xml', function(data) {
-                console.log("got terms");
-                caaArtTerms = $.parseXML(data);
+            $.get("caa-cultures-short.xml").done(function(xml) {
+                caaCultures = $(xml);
             });
-            $.get('caa-cultures.xml', function(data) {
-                console.log("got cultures");
-                caaCultures = $.parseXML(data);
-            });
-            var $artists = $(caaArtists),
-                $artTerms = $(caaArtTerms),
-                $cultures = $(caaCultures);
-        });
+        $( document ).ajaxComplete(function() {
+        // $.ajax({
+        //     url:'caa-artists-short.xml',
+        //     success:function(xml) {
+        //         caaArtists = $(xml);
+        //         var result = $(xml).find("artist[accNumber=9]").attr('name');
+        //         console.log(result);
+        //     }
+        // }),
+        // $.ajax({
+        //     url:'caa-artTerms-short.xml',
+        //     success:function(xml) {
+        //         caaArtTerms = $(xml);
+        //     }
+        // }),
+        // $.ajax({
+        //     url:'caa-cultures-short.xml',
+        //     success:function(xml) {
+        //         caaCultures = $(xml);
+        //     }
+        // })
             var cultures = [
                 {"group": "mistakes", "name": "Mistakes & Inconsistencies", "ids": ["Columbia","Colombian","German","Painting","Germany (?)","Korean","Moroccan","Native America","Philpino","Italian","Ukranian","African America","Armenian","Bulgarian"]},
                 {"group": "americas", "name":"Americas" , "ids": ["Venezuela","Franco-American","Chile","Haiti","Inca","Guatamala","Panama Canal Zone","Dominican Republic","Colombia","Nicaragua","Italian American","Mestizo","African American","Mexico","Afro-Hispanic","apache","Belize","Puerto Rico","Argentina","Canada","Brazil","Jamaica","Hispanic","Navajo","Cuba","Native American"]},
@@ -76,8 +112,8 @@
                 function dec_sort(a, b){ return ($(b).data('sort')) < ($(a).data('sort')) ? 1 : -1; }
             }
         // creates culture filters
-        var i = 0;
-        var group =  1;
+            var i = 0;
+            var group =  1;
             for ( var t in artTerms ) {
                 if (i % 16 === 0){
                     $('#filter-terms-toplevel').append('<li class="filter-terms-group" data-sort="group-' + group + '" id="group-' + group + '" >' + 
@@ -124,7 +160,9 @@
                 if(e.keyCode==13)
                     activateTextSearch();
             });
+
         });
+        $('#helper-text').append((caaArtists).find("artist[accNumber=9]").attr('dod'));
     // functions: 
         // show/hide the lists of filters    
             function toggleFilterList(list){
@@ -215,7 +253,7 @@
                 $('#results').append(resultsHtml).sortElements('div');
                 $('#helper-text').append(count + " results.")
             }
-        // activate text search - the go button
+        // activate search - the go button
             function activateTextSearch(){
                 input = $('#text-input').val();
                 if (input.length > 0 ){
@@ -228,12 +266,14 @@
         // initial filter function: loops through array and sends records to filters; if filter functions return true, record is added to results.
         // if there are already search results (resultsArray.length > 0), we will search them; otherwise, we search the main caaJson array    
             function firstFilter(){
+                if(done){
+
                 resultsArray = [];
-                var filteredIds = dataFilter(caaJson);
+                var filteredIds = dataFilter(caaArtists);
                 if (filteredIds.length > 0 ){
                     for (var i in filteredIds){
-                        if ( textFilter(caaJson[filteredIds[i]])){
-                            resultsArray.push(caaJson[filteredIds[i]]);
+                        if ( textFilter(caaArtists[filteredIds[i]])){
+                            resultsArray.push(caaArtists[filteredIds[i]]);
                         }
                     }
                 } else if ( $('input:checked').length ) {
@@ -248,6 +288,7 @@
                     }
                 }
                 htmlifyResult();
+                }
             }
         // textFilter checks to see if the user input string is located at array position 0 - *only looks for start of name*
             function textFilter(haystack){
@@ -284,7 +325,9 @@
                     filteredIds = [],
                     filteredUniqueIds = [];
                 for (var f in filterTerms) {
-                    idArray = idArray.concat(artTerms[filterTerms[f]]);
+                    idArray = caaArtTerms.find('artTerm[id=' + filterTerms[f] + ']').getElementsByTagName('id')
+                    console.log(idArray);
+                    // idArray = idArray.concat(artTerms[filterTerms[f]]);
                 }
                 termsArrayUniqueIds = idArray.slice().sort(function(a,b){return a > b}).reduce(function(a,b){if (a.slice(-1)[0] !== b) a.push(b);return a;},[]);
                 idArray = [];
@@ -307,5 +350,6 @@
                 return filteredUniqueIds;
             }
    
+        });
 
 </script>   

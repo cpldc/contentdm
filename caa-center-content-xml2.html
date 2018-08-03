@@ -1,0 +1,125 @@
+<div class="row center-content">
+</div>
+
+<script>
+    var caaArtists, caaArtTerms, caaCultures;
+    $.when(
+
+    $.get('caa-artists-short.xml').done(function(xml){
+        caaArtists = $(xml);
+        var result = $(xml).find("artist[accNumber=9]").attr('name');
+        console.log(result);
+    }),
+    $.get("caa-artTerms-short.xml").done(function(xml) {
+        caaArtTerms = $(xml);
+    }),
+    $.get("caa-cultures-short.xml").done(function(xml) {
+        caaCultures = $(xml);
+    })
+    ).then(function(){
+        $('.center-content').append('<div class="filter-column">' +
+            '<div class="filters">' + 
+                '<div class="filter-text clearfix"> <p class="filter-list-title">Search by Name</p>' + 
+                    '<input type="text" id="text-input" class="filter-text-input" />' + 
+                    '<button class="go-button" onClick="goButton()">Go</button>' + 
+                    '<button class="go-button float-right" onClick="clearFilters()">Clear Filters</button>' + 
+                '</div>' + 
+                '<div class="filter-vocab">' + 
+                    '<div class="data-filter-header">' + 
+                        '<h4>Additional Filters</h4>' + 
+                        '<span class="label-desc">Click to expand.</span>' + 
+                    '</div>' + 
+                    '<div id="filter-terms">' + 
+                        '<h5 class="clickable-title" onClick="toggleFilterList(\'filter-terms-toplevel\')">Filter by Medium</h5>' + 
+                        '<ul class="filter-list" id="filter-terms-toplevel" style="display: none"></ul>' + 
+                    '</div>' + 
+                    '<div id="filter-cultures">' + 
+                        '<h5 class="clickable-title" onClick="toggleFilterList(\'filter-culture-toplevel\')">Filter by Cultural Affiliation</h5>' + 
+                        '<ul class="filter-list" id="filter-culture-toplevel" style="display: none"></ul>' + 
+                    '</div>' + 
+                '</div>' + 
+            '</div>' + 
+        '</div>' + 
+        '<div class="col artists">' +
+            '<div class="content-header">' +
+                '<h1>CPL&rsquo;s Chicago Artists File</h1>' +
+                '<p id="helper-text">Please search for an artist by name, or select filters from the left.</p>' +
+            '</div>' +
+            '<div class="results-target" id="results"></div>' +
+            '<div id="intro-text">Intro text.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae totam repudiandae quo esse reprehenderit, minus dolorum! Repellendus alias consequatur pariatur repudiandae, minus error? Nostrum, perferendis blanditiis dignissimos eveniet vel necessitatibus.</div>' +
+        '</div>');
+
+            for (var l in cultures) {
+                $('#filter-culture-toplevel').append('<li class="filter-culture-group" data-sort="' + cultures[l].group + '" id="' + cultures[l].group + '" >' + 
+                        '<h6 class="filter-culture-group-text" onClick="toggleFilterList(\'filter-list-' + cultures[l].group + '\')">' + 
+                            cultures[l].name + 
+                        '</h6>' + 
+                        '<ul class="filter-culture-group-toplevel" id="filter-list-' + cultures[l].group + '" style="display: none">' + 
+                        '</ul>' + 
+                    '</li>').sortElements('li');
+                for (var c in cultures[l].ids ) {
+                    $('#filter-list-' + cultures[l].group).append('<li class="filter-culture-group-item" data-sort="' + cultures[l].ids[c] + '">' +
+                            '<input name="contentFilter" type="checkbox" id="filter-type-' + cultures[l].ids[c] + '" class="filter-cultures" value="' + cultures[l].ids[c] + '"> ' +
+                            '<label for="filter-type-' + cultures[l].ids[c] + '">' + cultures[l].ids[c] + '</label>' + 
+                        '</li>').sortElements('li');
+                }
+            }
+    });
+                var cultures = [
+                {"group": "mistakes", "name": "Mistakes & Inconsistencies", "ids": ["Columbia","Colombian","German","Painting","Germany (?)","Korean","Moroccan","Native America","Philpino","Italian","Ukranian","African America","Armenian","Bulgarian"]},
+                {"group": "americas", "name":"Americas" , "ids": ["Venezuela","Franco-American","Chile","Haiti","Inca","Guatamala","Panama Canal Zone","Dominican Republic","Colombia","Nicaragua","Italian American","Mestizo","African American","Mexico","Afro-Hispanic","apache","Belize","Puerto Rico","Argentina","Canada","Brazil","Jamaica","Hispanic","Navajo","Cuba","Native American"]},
+                {"group": "africa",  "name":"Africa & ME", "ids" : ["Nigeria","South Africa","Cameroon","Egypt","Sudan","Tunisia","Morocco","Israel","Iran","Iraq","Afghanistan"]},
+                {"group": "asia", "name":"Asia & Pacific Islands", "ids": ["China","Hawaii","Japan","South Korea","Taiwan","Korea","Philippines","Hong Kong","Nepal","India","Vietnam","Indonesia","Bangladesh","Asian / Pacific Islander" ]},
+                {"group": "europe",  "name":"Europe", "ids": ["Belgium","British","Bohemia","Turkey","Serbia","Estonia","Moravia","Georgia","Netherlands","Bulgaria","Germany","Luxembourg","Cyprus","Poland","Latvia","Wales","Basque","Belarus","Switzerland","Holland","Lithuania","Scotland","Armenia","Greece","Sweden","Russia","Italy","Yugoslavia","Romania","Spain","Denmark","Ireland","Ukraine","Austria","England","Czechoslovakia","France","Norway","Hungary"]},
+                {"group": "religions",  "name":"Religions & Ethnicities", "ids": ["Jewish","Christian","Muslim"]}];
+    function goButton(){
+        input = $('#text-input').val();
+        if (input.length > 0 ){
+            masterFilter();
+        }
+    }
+    function clearFilters(){
+        $('input[type=checkbox]').prop('checked',false); 
+        $('#text-input').val('');
+        clearCenter();
+        $('#helper-text').empty().append('Please search for an artist by name, or select filters from the left.');
+    }
+    function clearCenter(){
+        $('#helper-text').empty();
+        $('#results').empty();
+        $('#intro-text').empty();
+    }   
+    function toggleFilterList(list){
+        $('#' + list).slideToggle();
+    }
+    function masterFilter(){
+        var resultsXML;
+        var filteredArtistIds = dataFilter(caaArtists);
+        console.log('thats the end');
+    }
+    jQuery.fn.sortElements = function sortElements(el) {
+        $('> ' + el , this[0]).sort(dec_sort).appendTo(this[0]);
+        function dec_sort(a, b){ return ($(b).data('sort')) < ($(a).data('sort')) ? 1 : -1; }
+    }
+    function dataFilter(xml){
+        filterTerms = $('#filter-terms-toplevel').find(':checkbox:checked').map(function () {
+            return $(this).val();
+        }).get();
+        filterCultures = $('#filter-culture-toplevel').find(':checkbox:checked').map(function () {
+            return $(this).val();
+        }).get();
+        if (filterTerms.length === 0 && filterCultures.length === 0 && $('#text-input').val().length === 0) {
+            clearCenter();
+        }
+        var idList,
+            termsUniqueIdList,
+            culturesUniqueIdList,
+            filteredIds,
+            uniqueFilteredIds;
+        for ( var f in filterCultures){
+            console.log(filterCultures[f]);
+            idList = caaCultures.find('culture[id=' + filterCultures[f] + ']');
+            console.log(idList);
+        } 
+    }
+</script>
