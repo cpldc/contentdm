@@ -1,64 +1,69 @@
 <div class="row center-content">
+    <div class="filter-column">
+        <div class="filters">
+            <div class="filter-text clearfix" id="name-search">
+                <p class="filter-list-title" >Search by Name</p>
+                <input type="text" id="text-input" class="filter-text-input" />
+            </div>
+            <div class="filter-vocab">
+                <div class="data-filter-header">
+                    <h4>Additional Filters</h4>
+                    <span class="label-desc">Click to expand.</span>
+                </div>
+                <div id="filter-terms"></div>
+                <div id="filter-cultures"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col artists">
+        <div class="content-header">
+            <h1>CPL&rsquo;s Chicago Artists File</h1>
+            <p id="helper-text">Please search for an artist by name, or select filters from the left.</p>
+        </div>
+        <div class="results-target" id="results"></div>
+        <div id="intro-text">Intro text.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae totam repudiandae quo esse reprehenderit, minus dolorum! Repellendus alias consequatur pariatur repudiandae, minus error? Nostrum, perferendis blanditiis dignissimos eveniet vel necessitatibus.</div>
+    </div>
+</div> 
 </div>
 
 <script>
     var caaArtists, caaArtTerms, caaCultures, count = 0;
     var $caaArtists, $caaArtTerms, $caaCultures;
     $.when(
-        $.get('caa-artists-short.xml').done(function(xml){
+        $.get('caa-artists.xml').done(function(xml){
             caaArtists = $(xml);
             // var result = $(xml).find("artist[accNumber=9]").attr('name');
             // console.log(result);
+        }).fail(function(xml, textStatus, errorThrown){
+            console.log("caaArtists error: " + errorThrown);
         }),
-        $.get("caa-artTerms-short.xml").done(function(xml) {
+        $.get("caa-artTerms.xml").done(function(xml) {
             caaArtTerms = $(xml);
+        }).fail(function(xml, textStatus, errorThrown){
+            console.log(" artTerms error: "  + errorThrown);
         }),
-        $.get("caa-cultures-short.xml").done(function(xml) {
+        $.get("caa-cultures.xml").done(function(xml) {
             caaCultures = $(xml);
+        }).fail(function(xml, textStatus, errorThrown){
+            console.log("cultures error; " + errorThrown);
         })
     ).then(function(){
-        $('.center-content').append('<div class="filter-column">' +
-            '<div class="filters">' + 
-                '<div class="filter-text clearfix"> <p class="filter-list-title">Search by Name</p>' + 
-                    '<input type="text" id="text-input" class="filter-text-input" />' + 
-                    '<button class="go-button" id="goButton" onClick="goButton()">Go</button>' + 
-                    '<button class="go-button float-right" onClick="clearFilters()" id="clearFilters">Clear Filters</button>' + 
-                '</div>' + 
-                '<div class="filter-vocab">' + 
-                    '<div class="data-filter-header">' + 
-                        '<h4>Additional Filters</h4>' + 
-                        '<span class="label-desc">Click to expand.</span>' + 
-                    '</div>' + 
-                    '<div id="filter-terms">' + 
-                        '<h5 class="clickable-title" onClick="toggleFilterList(\'filter-terms-toplevel\')">Filter by Medium</h5>' + 
-                        '<ul class="filter-list" id="filter-terms-toplevel" style="display: none"></ul>' + 
-                    '</div>' + 
-                    '<div id="filter-cultures">' + 
-                        '<h5 class="clickable-title" onClick="toggleFilterList(\'filter-culture-toplevel\')">Filter by Cultural Affiliation</h5>' + 
-                        '<ul class="filter-list" id="filter-culture-toplevel" style="display: none"></ul>' + 
-                    '</div>' + 
-                '</div>' + 
-            '</div>' + 
-        '</div>' + 
-        '<div class="col artists">' +
-            '<div class="content-header">' +
-                '<h1>CPL&rsquo;s Chicago Artists File</h1>' +
-                '<p id="helper-text">Please search for an artist by name, or select filters from the left.</p>' +
-            '</div>' +
-            '<div class="results-target" id="results"></div>' +
-            '<div id="intro-text">Intro text.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae totam repudiandae quo esse reprehenderit, minus dolorum! Repellendus alias consequatur pariatur repudiandae, minus error? Nostrum, perferendis blanditiis dignissimos eveniet vel necessitatibus.</div>' +
-        '</div>');
+            $('#name-search').append('<button class="go-button" id="goButton" onClick="goButton()">Go</button>' +
+                    '<button class="go-button float-right" onClick="clearFilters()" id="clearFilters">Clear Filters</button>');
+            $('#filter-terms').append('<h5 class="clickable-title" onClick="toggleFilterList(\'filter-terms-toplevel\')">Filter by Medium</h5>' +
+                '<ul class="filter-list" id="filter-terms-toplevel" style="display: none"></ul>');
+            $('#filter-cultures').append('<h5 class="clickable-title" onClick="toggleFilterList(\'filter-culture-toplevel\')">Filter by Cultural Affiliation</h5>' + 
+                '<ul class="filter-list" id="filter-culture-toplevel" style="display: none"></ul>');
             $('artTerm', caaArtTerms).each(function(){
                 var id = $(this).attr('id'),
-                    name = $(this).attr('name');
+                    name = $(this).find('name').text();
                 $('#filter-terms-toplevel').append('<li data-sort="' + id + '" class="caa-filter">' +
                             '<input name="contentFilter" type="checkbox" id="filter-type-'  + id + '" class="filter-terms" value="'  + id + '">' + 
                             '<label for="filter-type-'  + id + '"> '  + name + '</label>' + 
                     '</li>');
-            });
-            $('culture', caaCultures).each(function(){
+            });            $('culture', caaCultures).each(function(){
                 var id = $(this).attr('id'),
-                    name = $(this).attr('name');
+                    name = $(this).find('name').text();
                 $('#filter-culture-toplevel').append('<li data-sort="' + id + '" class="caa-filter">' +
                             '<input name="contentFilter" type="checkbox" id="filter-type-'  + id + '" class="filter-cultures" value="'  + id + '">' + 
                             '<label for="filter-type-'  + id + '"> '  + name + '</label>' + 
@@ -106,7 +111,7 @@
         // console.log(filteredArtistIds);
         if (filteredArtistIds.length > 0 ){
             for (var i in filteredArtistIds){
-                var arti = caaArtists.find('artists > artist[accNumber=' + filteredArtistIds[i] + ']');
+                var arti = caaArtists.find('artists > artist[id=' + filteredArtistIds[i] + ']');
                 if ( textFilter(arti) ) {
                     resultsXml.push(arti);
                 }
@@ -169,7 +174,7 @@
     }
     function textFilter(xml){
         input = $('#text-input').val();
-        var haystack = $(xml).attr('name');
+        var haystack = $(xml).find('name').text();
         if (( haystack && haystack.toUpperCase().indexOf(input.toUpperCase()) > -1 ) || input.length < 1 ){
             // console.log("its true");
             return true;
@@ -184,49 +189,72 @@
         count = 0;
         for (var x in xml ){
             count++;
-            var name = $(xml[x]).attr('name'), 
-                id = $(xml[x]).attr('id'), 
-                dob = $(xml[x]).attr('dob'), 
-                dod = $(xml[x]).attr('dod'), 
-                gender = $(xml[x]).attr('gender')
-                file = $(xml[x]).attr('file')
-                slides = $(xml[x]).attr('slides'),
-                videos = $(xml[x]).attr('videos'),
-                resume = $(xml[x]).attr('resume'),
-                artistsstatement = $(xml[x]).attr('artistsstatement'),
-                gallerynotice = $(xml[x]).attr('gallerynotice'),
-                article = $(xml[x]).attr('article'),
-                poster = $(xml[x]).attr('poster'),
-                folio = $(xml[x]).attr('folio'),
-                cdrom = $(xml[x]).attr('cdrom'),
+            var name = $(xml[x]).find('name').text(), 
+                id = $(xml[x]).find('id').text(), 
+                dob = $(xml[x]).find('dob').text(), 
+                dod = $(xml[x]).find('dod').text(), 
+                gender = $(xml[x]).find('gender').text(), 
+                file = $(xml[x]).find('file').text(), 
+                slides = $(xml[x]).find('slides').text(), 
+                videos = $(xml[x]).find('videos').text(), 
+                resume = $(xml[x]).find('resume').text(), 
+                artistsstatement = $(xml[x]).find('artistsstatement').text(), 
+                gallerynotice = $(xml[x]).find('gallerynotice').text(), 
+                article = $(xml[x]).find('article').text(), 
+                poster = $(xml[x]).find('poster').text(), 
+                folio = $(xml[x]).find('folio').text(), 
+                cdrom = $(xml[x]).find('cdrom').text(), 
+                mediums = '',
+                cultures = '',
                 citations = [],
                 sorter = name.replace(/[|&;$%@"<>()-+, ]/g, "").toLowerCase();
-                // cultures = arrayify(xml[x].find('cultures')),
-                // mediums = arrayify(xml[x].find('mediums')),
-                // citations = citationify($(xml[x]).find('monogrpahs'));
             $(xml[x]).find('monographs').find('monograph').each(function(){
-                var firstName = $(this).attr('firstName'), 
-                    lastName = $(this).attr('lastName'), 
-                    name = firstName + ' ' + lastName, 
-                    title = $(this).attr('title'), 
-                    callNo = $(this).attr('callNo'), 
-                    url = 'http://chipublib.bibliocommons.com/search?custom_query=callnumber%3A%28%22' + callNo + '*%22%29';
-                // <monograph callNumber="N11.C5Y6" title="Role and impact : the Chicago Society of Artists" lastName="Yochim" firstName="Louise Dunn" year="1979" />
-                    citations += '<li><a href="' + url + '">' + title + '</a> By ' + name + '</li>';
+                if($(this).attr('error') === "TRUE"){
+                    console.log($(this).attr('errorType'));
+                    citations += "";
+                } else {
+                    var firstName = $(this).find('firstName').text(), 
+                        lastName = $(this).find('lastName').text(), 
+                        name = firstName + ' ' + lastName, 
+                        title = $(this).find('title').text(), 
+                        callNo = $(this).find('callNo').text(), 
+                        url = 'http://chipublib.bibliocommons.com/search?custom_query=callnumber%3A%28%22' + callNo + '*%22%29';
+                    // <monograph callNumber="N11.C5Y6" title="Role and impact : the Chicago Society of Artists" lastName="Yochim" firstName="Louise Dunn" year="1979" />
+                        citations += '<li><a href="' + url + '">' + title + '</a> By ' + name + '</li>';
+                }
             });
-            htmlifiedXml.push('<div class="artist" data-sort="' + sorter + '"><h2>' + name + '</h2>' +
+            $(xml[x]).find('mediums').find('medium').each(function(){
+                var bumper = '';
+                if (mediums != ''){
+                    bumper = ', ';
+                }
+                mediums += bumper + $(this).text();
+            });
+            $(xml[x]).find('cultures').find('culture').each(function(){
+                var bumper = '';
+                if (cultures != ''){
+                    bumper = ', ';
+                }
+                cultures += bumper + $(this).text();
+            });
+            htmlifiedXml.push('<div class="artist" data-sort="' + sorter + '"><h2 class="artist-name">' + name + '</h2>' +
             ( dob != '' || dod != '' ? '<p class="artist-details">' + dob + '-' + dod + '</p>' : '') +
             ( gender != '' ? '<p class="artist-details">Gender: ' + gender + '</p>' : '' ) +
-            '<p class="artist-details">File: ' + ( file === 'TRUE' ? 'Yes' : 'No') + '</p>' +
-            '<p class="artist-details">Slides: ' + ( slides === 'TRUE' ? 'Yes' : 'No') + '</p>' +
-            '<p class="artist-details">Videos: ' + ( videos === 'TRUE' ? 'Yes' : 'No') + '</p>' +
-            ( artistsstatement === 'TRUE' ? '<p class="artist-details">Artist&rsquo;s Statement: Yes </p>' : '' ) +
-            ( gallerynotice === 'TRUE' ? '<p class="artist-details">Gallery Notice(s): Yes </p>' : '' ) +
-            ( article === 'TRUE' ? '<p class="artist-details">Article(s): ' + article + ' </p>' : '' ) +
-            ( poster === 'TRUE' ? '<p class="artist-details">Poster(s): Yes </p>' : '' ) +
-            ( folio === 'TRUE' ? '<p class="artist-details">Folio(s): Yes </p>' : '' ) +
-            ( cdrom === 'TRUE' ? '<p class="artist-details">CD-ROM(s): Yes </p>' : '' ) +
-            ( citations.length > 0 ? '<p class="artist-citations">Citations from the CPL Collection:</p><ul>' + citations : ''));
+            ( mediums != '' ? '<p class="artist-details">Medium(s): ' + mediums + '</p>' : '' ) +
+            ( cultures != '' ? '<p class="caa-contents-header">Cultural Affiliations: ' + cultures + '</p>' : '' ) +
+            '<p class="caa-contents-header">Chicago Artists File Contents: <ul class="caa-contents-list">' + 
+            '<li >File: ' + ( file === 'TRUE' ? 'Yes' : 'No') + '</li>' +
+            '<li >Slides: ' + ( slides === 'TRUE' ? 'Yes' : 'No') + '</li>' +
+            '<li >Videos: ' + ( videos === 'TRUE' ? 'Yes' : 'No') + '</li>' +
+            ( artistsstatement === 'TRUE' ? '<li>Artist&rsquo;s Statement: Yes </li>' : '' ) +
+            ( gallerynotice === 'TRUE' ? '<li>Gallery Notice(s): Yes </li>' : '' ) +
+            ( article === 'TRUE' ? '<li>Article(s): ' + article + ' </li>' : '' ) +
+            ( poster === 'TRUE' ? '<li>Poster(s): Yes </li>' : '' ) +
+            ( folio === 'TRUE' ? '<li>Folio(s): Yes </li>' : '' ) +
+            ( cdrom === 'TRUE' ? '<li>CD-ROM(s): Yes </li>' : '' ) +
+            '</ul>' +
+            ( citations.length > 0 ? '<p class="artist-citations">Citations from the CPL Collection:</p><ul>' + citations : '') + 
+            '</ul></div>');
         }
         appendResults(htmlifiedXml);
     }
