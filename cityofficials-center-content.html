@@ -137,9 +137,7 @@
                     var inputArray = input.split(' '),
                         inputArrayCheck = 0;
                     for (var i in inputArray){
-                        console.log(haystack.lastName  + ' ' + haystack.firstNameMi);
-                        if (( haystack.lastName && haystack.lastName.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) === 0  )
-                            || ( haystack.firstNameMi && haystack.firstNameMi.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) === 0  )){
+                        if ( haystack.name && haystack.name.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) > -1  ){
                             inputArrayCheck++;
                         }
                     } 
@@ -147,9 +145,7 @@
                         return true;
                     }
                 }
-                if (( haystack.lastName && haystack.lastName.toUpperCase().indexOf(input.toUpperCase()) === 0 ) 
-                        || ( haystack.firstNameMi && haystack.firstNameMi.toUpperCase().indexOf(input.toUpperCase()) === 0 ) 
-                        || input.length < 1 ){
+                if (( haystack.name && haystack.name.toUpperCase().indexOf(input.toUpperCase()) > -1 ) || input.length < 1 ){
                     return true;
                 }
             }
