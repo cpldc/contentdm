@@ -1,16 +1,27 @@
-    .center-content {
+    .center-content-search {
         min-height: calc(100vh - 466px);
         /* padding-bottom: 60px; Should be equal to the height of your footer */
+    }
+    .main-container-fixed > h1 {
+        font-size: 28px;
     }
     .clickable-title {
         cursor: pointer;
     }
-    .alderman a, .artist a {
+    .alderman, #aldermen-intro {
+        background-color: #fff;
+        box-shadow: 4px 4px 0 #B0B4B4;
+        padding: 15px;
+    }
+    .alderman {
+        margin: 0 0 24px 0 ;
+    }
+    .alderman a, .artist a, #aldermen-intro a {
         color: #234c86;
         text-decoration: none;
         border-bottom: 1px solid #909696;
     }
-    .alderman a:hover, .artist a:hover {
+    .alderman a:hover, .artist a:hover, #aldermen-intro a:hover {
         border-bottom: 2px solid #909696;
     }
     .anyway-button, .go-button {
@@ -23,7 +34,18 @@
         border-bottom: 4px solid #4d4d4d;
         text-align: center;
     }
-    .content-header h1{
+    .nonbutton {
+        color: #000;
+        text-decoration: underline;
+        background-color: transparent;
+        cursor: pointer;
+        box-shadow: none;
+        border-radius: 0;
+        border: 0;
+    }
+    .content-header {
+        font-size: 28px;
+        font-weight: bold;
         padding-bottom: 10px;
     }
     .anyway-button {
@@ -43,9 +65,12 @@
         padding: 3px;
     }
     .filter-column {
+        background-color: #fff;
+        box-shadow: 4px 4px 0 #B0B4B4;
         width: 250px;
         min-width: 250px;
         padding: 0 15px;
+        margin-bottom: 10px;
     }
     .filter-vocab h6 {
         font-size: 0.9rem;
@@ -61,19 +86,19 @@
         list-style-type: none;
         /* padding-left: 10px; */
     }
-    .filter-list {
+    /* .filter-list {
         border-bottom: 1px solid #ccc;
-    }
+    } */
     #date-slider {
         border: 0;
     }
     #ald-header {
         padding: 7px 0;
     }
-    .alderman {
+    /* .alderman {
         margin: 5px 7px 5px 0;
         padding: 5px 7px 5px 0;
-    }
+    } */
     .alderman-name, .artist-name, h4 {
         font-size: 1.25rem;
         line-height: 1.3rem;
@@ -118,8 +143,17 @@
         list-style-type: none;
     }
     .filter-list-title {
+        /* from bibliocommons events */
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            /* margin: 0 0 10px 0; */
+            line-height: 20px;
+            /* padding-top: 10px; */
+            border-bottom: 1px solid #e5e5e5;
         padding: 0 0 5px 0;
-        margin: 10px 0 3px 0;
+        margin: 10px 0 ;
         font-weight: 700;
     }
     .filter-text-input {
