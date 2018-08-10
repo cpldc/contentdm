@@ -4,12 +4,10 @@
 </h1>
         <div class="row center-content-search">
             <div class="filter-column">
-                <div class="filters">
+                <div class="filters" id="all-filters">
                     <div class="filter-text clearfix">
                             <p class="filter-list-title">Name</p>
-                        <input type="text" id="text-input" class="filter-text-input" />
-                        <!-- <button class="go-button" onClick="activateTextSearch()">Go</button>
-                        <button class="go-button float-right" onClick="clearFilters()">Clear Filters</button> -->
+                        <input type="text" id="textInput" class="filter-text-input" />
                     </div>
                     <div class="filter-list">
                         <p class="filter-list-title">Date</p>
@@ -20,7 +18,6 @@
                         <p class="label-container">
                             <label type="text" id="date-slider" />
                         </p>
-                        <!-- <button class="go-button float-right" onClick="clearFilters()">Clear Filters</button> -->
                     </div>
                     <p class="filter-list-title">Position</p>
                     <ul class="filter-list" id="pos-list">
@@ -52,13 +49,18 @@
     </div>
 <script>
         // globals
+            var filterValues = JSON.parse(localStorage.getItem('filterValues')) || {};
+            var $checkboxes = $('#all-filters :checkbox');
             var currYear = new Date().getFullYear(),
                 count = 0,
-                minDate = 1837,
-                maxDate = currYear,
+                minDate = (filterValues ? filterValues['minimumDate'] : 1837),
+                maxDate = (filterValues ? filterValues['maximumDate'] : currYear),
                 aldArray = '',
                 filterWard = [],
                 filterAlpha = [];
+                if (filterValues){
+                 console.log(filterValues['maximumDate'] + ' ' + maxDate);
+                }    
 
             var introText = '<div class="alderman"><h2 class="content-header">Chicago Aldermen and Other Elected Officials, 1837-' + currYear + '</h2>' + 
                 '<ul>' + 
@@ -128,8 +130,8 @@
         // slider
             $('#slider-container').slider({
                 range: true,
-                min: minDate,
-                max: maxDate,
+                min: 1837,
+                max: currYear,
                 values: [minDate, maxDate],
                 slide: function (event, ui) {
                     $("#date-slider").empty().append(ui.values[0] + "-" + ui.values[1]);
@@ -146,7 +148,7 @@
                 drawAldermen();
             }
             function activateTextSearch(){
-                input = $('#text-input').val();
+                input = $('#textInput').val();
                 if (input.length > 0 ){
                     drawAldermen();
                 }
@@ -166,12 +168,12 @@
                 }
             }
             function filterText(haystack){
-                input = $('#text-input').val();
+                input = $('#textInput').val();
                 if (input.indexOf(' ') > -1){
                     var inputArray = input.split(' '),
                         inputArrayCheck = 0;
                     for (var i in inputArray){
-                        console.log(haystack.lastName  + ' ' + haystack.firstNameMi);
+                        // console.log(haystack.lastName  + ' ' + haystack.firstNameMi);
                         if (( haystack.lastName && haystack.lastName.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) === 0  )
                             || ( haystack.firstNameMi && haystack.firstNameMi.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) === 0  )){
                             inputArrayCheck++;
@@ -237,7 +239,7 @@
         // master function; gets filters, sends each aldermen to date and text filters
             function drawAldermen(){
                 aldArray = [];
-                filterAlpha = $('#text-input').val();
+                filterAlpha = $('#textInput').val();
                 filterWard = $('#ward-list').find(':checkbox:checked').map(function () {
                         return $(this).val();
                     }).get();
@@ -259,6 +261,7 @@
             }
         // puts html in page
             function appendAldArray(){
+                saveFilters();
                 clearCenter();
                 $('#aldermen').append(aldArray);
                 $('#aldermen').sortElements('div');
@@ -276,10 +279,9 @@
             $( document ).ready(function() {
                 $('input[type="checkbox"]').on('change', function() {
                     $('#aldermen').empty();
-                    // count = 0;
                     drawAldermen();
                 });
-                $('#text-input').keypress(function(e){
+                $('#textInput').keypress(function(e){
                     if(e.keyCode==13)
                         activateTextSearch();
                 });
@@ -305,7 +307,7 @@
             function clearFilters() {
                 clearCenter();
                 $('#aldermen').append(introText);
-                $('#text-input').val('');
+                $('#textInput').val('');
                 minDate = 1837;
                 maxDate = currYear;
                 // $('#ald-header').empty().append('Please select filters from the left.');
@@ -313,5 +315,39 @@
                 $('#slider-container').slider('values', 0, minDate);
                 $('#slider-container').slider('values', 1, maxDate);
                 $("#date-slider").empty().append( minDate + "-" + maxDate);
+                localStorage.clear();
             }
+        // filters will persist after page reload
+function saveFilters(){
+
+    $checkboxes.each(function(){
+        filterValues[this.id] = this.checked;
+    });
+    filterValues['textInput'] = $('#textInput').val();
+    filterValues['minimumDate'] = $('#slider-container').slider('values', 0);
+    filterValues['maximumDate'] = $('#slider-container').slider('values', 1);
+    localStorage.setItem('filterValues', JSON.stringify(filterValues));
+}
+$.each(filterValues, function(key, value){
+    var filterChangeCheck = false;
+    if($('#' + key).is('input[type=checkbox]')){
+        $("#" + key).prop('checked', value);
+        ( value === 'true' ? filterChangeCheck = true : '' );
+    } else if ( key === 'textInput' && value != '') {
+        $('#textInput').val(value);
+        filterChangeCheck = true;
+    } else if ( key === 'minimumDate' ) {
+        filterChangeCheck = true;
+        $('#slider-container').slider('values', 0, value);
+        $("#date-slider").empty().append( filterValues['minimumDate'] + "-" + filterValues['maximumDate']);
+    } else if ( key === 'maximumDate' ) {
+        filterChangeCheck = true;
+        $('#slider-container').slider('values', 1, value);
+        $("#date-slider").empty().append( filterValues['minimumDate'] + "-" + filterValues['maximumDate']);
+    } else {
+        console.log('not sure what happened. key:' + key + '; value: ' + value);
+    } if (filterChangeCheck) {
+        drawAldermen();
+    }
+});
 </script>

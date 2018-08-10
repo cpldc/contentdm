@@ -23,10 +23,9 @@
 	}
 ?>
 <script type="text/javascript">
-	var pagelink = "<?= $PAGE[link]; ?>"; 
-	var pagetype = "<?= $PAGE[type]; ?>";
-	var pagecolls = "<?= $COLL; ?>";
-	// console.log(pagetype + " " + pagecolls + " " + pagelink);
+	var pagelink = "<?= $PAGE[link]; ?>", 
+		pagetype = "<?= $PAGE[type]; ?>",
+		pagecolls = "<?= $COLL; ?>";
 </script>
 
     <meta charset="UTF-8">

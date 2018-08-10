@@ -22,9 +22,12 @@
 				
 <script>
 	// select search type dropdown box; see function searchSelect() in cpldc.js
-	var typeSingular;
-	var typePlural;
-	var getsSearchType;
+	var typeSingular, typePlural, getsSearchType;
+	if(!pagetype){
+		var pagetype;
+	} if (!togglebuttonLeft){
+		var togglebuttonLeft;
+	}
 	if (pagetype === 'category'){
 		typeSingular = 'This Subject';
 		typePlural = 'All Subjects';
@@ -34,7 +37,7 @@
 	} else if ( pagetype === 'collection'){
 		typeSingular = 'This Collection';
 		typePlural = 'All Collections';
-	} 
+	}
 </script>	
 <header>
 <section class="a11y-skip-links">
