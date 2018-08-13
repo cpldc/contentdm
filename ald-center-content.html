@@ -30,11 +30,11 @@
                             <label for="filter-pos-clerk">City Clerks</label>
                         </li>
                         <li class="filter">
-                            <input type="checkbox" value="City Treasurer" class="filter-pos" id="filter-pos-clerk" />
+                            <input type="checkbox" value="City Treasurer" class="filter-pos" id="filter-pos-treas" />
                             <label for="filter-pos-clerk">City Treaurers</label>
                         </li>
                         <li class="filter">
-                            <input type="checkbox" value="Mayor" class="filter-pos" id="filter-pos-clerk" />
+                            <input type="checkbox" value="Mayor" class="filter-pos" id="filter-pos-mayor" />
                             <label for="filter-pos-clerk">Mayors</label>
                         </li>
                     </ul>
@@ -49,19 +49,15 @@
     </div>
 <script>
         // globals
-            var filterValues = JSON.parse(localStorage.getItem('filterValues')) || {};
-            var $checkboxes = $('#all-filters :checkbox');
+            var filterValues = JSON.parse(localStorage.getItem('filterValues')) || {},
+                $checkboxes = $('#all-filters :checkbox');
             var currYear = new Date().getFullYear(),
                 count = 0,
-                minDate = (filterValues ? filterValues['minimumDate'] : 1837),
-                maxDate = (filterValues ? filterValues['maximumDate'] : currYear),
+                minDate = ($.isEmptyObject(filterValues) ? 1837 : filterValues['minimumDate']),
+                maxDate = ($.isEmptyObject(filterValues) ? currYear : filterValues['maximumDate']),
                 aldArray = '',
                 filterWard = [],
                 filterAlpha = [];
-                if (filterValues){
-                 console.log(filterValues['maximumDate'] + ' ' + maxDate);
-                }    
-
             var introText = '<div class="alderman"><h2 class="content-header">Chicago Aldermen and Other Elected Officials, 1837-' + currYear + '</h2>' + 
                 '<ul>' + 
                 '<li><a href="#About">About This Guide</a></li>' + 
@@ -222,7 +218,7 @@
                     lists = '',
                     pic;
                 if (ald.cj || ald.refs){
-                    lists = '<ul class="alderman-list"><li>' + (ald.cj ? ald.cj + '</li>' : '') + (ald.refs ? 'References: <ul class="alderman-list">' + ald.refs + '</li></ul>' : '') + '</ul>';
+                    lists = '<ul class="alderman-list"><li>' + (ald.cj ? ald.cj + '</li>' : '') + (ald.refs ? 'References: <ul class="alderman-list"><li>' + ald.refs + '</li></ul>' : '') + '</ul>';
                 }
                 for (var p in ald.positionArray){
                     var ward = '';
@@ -272,7 +268,7 @@
                         function dec_sort(a, b){ return ($(b).data("date")) < ($(a).data("date")) ? 1 : -1; }
                     }
                 });
-                $('#search-count-target').append('&nbsp;›&nbsp;<small id="search-results-count">' + count + ' results <button class="nonbutton" id="clearFilters" onClick="clearFilters()">Clear Filters</button></small>');
+                $('#search-count-target').append('&nbsp;›&nbsp;<small id="search-results-count">' + count + ' result' + (count === 1 ? '' : 's' ) + ' <button class="nonbutton" id="clearFilters" onClick="clearFilters()">Clear Filters</button></small>');
                 $( 'p:empty' ).remove();
             };
         // docready for checkbox changing
@@ -310,7 +306,6 @@
                 $('#textInput').val('');
                 minDate = 1837;
                 maxDate = currYear;
-                // $('#ald-header').empty().append('Please select filters from the left.');
                 $('input[type=checkbox]').prop('checked',false); 
                 $('#slider-container').slider('values', 0, minDate);
                 $('#slider-container').slider('values', 1, maxDate);
@@ -318,36 +313,35 @@
                 localStorage.clear();
             }
         // filters will persist after page reload
-function saveFilters(){
-
-    $checkboxes.each(function(){
-        filterValues[this.id] = this.checked;
-    });
-    filterValues['textInput'] = $('#textInput').val();
-    filterValues['minimumDate'] = $('#slider-container').slider('values', 0);
-    filterValues['maximumDate'] = $('#slider-container').slider('values', 1);
-    localStorage.setItem('filterValues', JSON.stringify(filterValues));
-}
-$.each(filterValues, function(key, value){
-    var filterChangeCheck = false;
-    if($('#' + key).is('input[type=checkbox]')){
-        $("#" + key).prop('checked', value);
-        ( value === 'true' ? filterChangeCheck = true : '' );
-    } else if ( key === 'textInput' && value != '') {
-        $('#textInput').val(value);
-        filterChangeCheck = true;
-    } else if ( key === 'minimumDate' ) {
-        filterChangeCheck = true;
-        $('#slider-container').slider('values', 0, value);
-        $("#date-slider").empty().append( filterValues['minimumDate'] + "-" + filterValues['maximumDate']);
-    } else if ( key === 'maximumDate' ) {
-        filterChangeCheck = true;
-        $('#slider-container').slider('values', 1, value);
-        $("#date-slider").empty().append( filterValues['minimumDate'] + "-" + filterValues['maximumDate']);
-    } else {
-        console.log('not sure what happened. key:' + key + '; value: ' + value);
-    } if (filterChangeCheck) {
-        drawAldermen();
-    }
-});
+            function saveFilters(){
+                $checkboxes.each(function(){
+                    filterValues[this.id] = this.checked;
+                });
+                filterValues['textInput'] = $('#textInput').val();
+                filterValues['minimumDate'] = $('#slider-container').slider('values', 0);
+                filterValues['maximumDate'] = $('#slider-container').slider('values', 1);
+                localStorage.setItem('filterValues', JSON.stringify(filterValues));
+            }
+            $.each(filterValues, function(key, value){
+                var filterChangeCheck = false;
+                if($('#' + key).is('input[type=checkbox]')){
+                    $("#" + key).prop('checked', value);
+                    ( value === 'true' ? filterChangeCheck = true : '' );
+                } else if ( key === 'textInput' && value != '') {
+                    $('#textInput').val(value);
+                    filterChangeCheck = true;
+                } else if ( key === 'minimumDate' ) {
+                    filterChangeCheck = true;
+                    $('#slider-container').slider('values', 0, value);
+                    $("#date-slider").empty().append( filterValues['minimumDate'] + "-" + filterValues['maximumDate']);
+                } else if ( key === 'maximumDate' ) {
+                    filterChangeCheck = true;
+                    $('#slider-container').slider('values', 1, value);
+                    $("#date-slider").empty().append( filterValues['minimumDate'] + "-" + filterValues['maximumDate']);
+                } else {
+                    console.log('not sure what happened. key:' + key + '; value: ' + value);
+                } if (filterChangeCheck) {
+                    drawAldermen();
+                }
+            });
 </script>

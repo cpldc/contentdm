@@ -139,9 +139,6 @@
         padding: 5px 0;
         margin: 10px;
     }
-    .alderman-list {
-        list-style-type: none;
-    }
     .filter-list-title {
         /* from bibliocommons events */
             text-transform: uppercase;

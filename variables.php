@@ -8,20 +8,19 @@
                 return strnatcmp($a[$key], $b[$key]);
             };
         }
-        $Announce[flag] =       '1';
-        $ChicagoParks[flag] =   '2';
-        $p16818coll6[flag] =    '3';
-        $CPB01[flag] =          '4';
-        $mpu[flag] =            '5';
-        $rhwc[flag] =           '6';
-        $wha[flag] =            '7';
-        $examiner[flag] =       '8';
-        $cr[flag] =             '9';
-        $rwk[flag] =            '10';
-        $hdg[flag] =            '11';
-        $bar[flag] =            '12';
-        $woop[flag] =           '13';
-        $dtd[flag] =            '';
+        $ChicagoParks[flag] =   '1';
+        $p16818coll6[flag] =    '2';
+        $CPB01[flag] =          '3';
+        $mpu[flag] =            '4';
+        $rhwc[flag] =           '5';
+        $wha[flag] =            '6';
+        $examiner[flag] =       '7';
+        $cr[flag] =             '8';
+        $rwk[flag] =            '9';
+        $hdg[flag] =            '10';
+        $bar[flag] =            '11';
+        $woop[flag] =           '12';
+        $dtd[flag] =            '13';
         $cfc[flag] =            '';
         $ahs[flag] =            '';
         $rvw[flag] =            '';
@@ -31,6 +30,7 @@
         $CivilWar[flag] =       '';
         $Parks[flag] =          '';
         $LibEd[flag] =          '';
+        $Announce[flag] =       '';
 
 //array(array('a'=>'','dt'=>'','dd'=>''));
 // since titles are written before center-content takes over, all pages need titles stored here; they also print at the top of the center-content area

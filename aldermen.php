@@ -43,7 +43,6 @@
 <main class="sidebar-target-collapsible PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
 	<div class="container main-container-fixed">
 				<?php 
-					
 						include 'ald-center-content.html';
 				?>
 	</div>
