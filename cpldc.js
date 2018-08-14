@@ -72,6 +72,9 @@
 		$(".center-content").removeClass("col-12");
 	}
 	// shows sidebar; happens when clicking the button or resizing to larger sizes
+
+	var togglebuttonLeft = '<i class="fa fa-caret-left"></i> <i class="fa fa-bars"></i>';
+	var togglebuttonRight = '<i class="fa fa-bars"></i> <i class="fa fa-caret-right"></i>';
 	function showLeftSidebar(){
 		$(".left-sidebar-togglebutton-target").empty();
 		$(".left-sidebar-toplevel").show();

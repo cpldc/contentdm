@@ -1,10 +1,11 @@
-<div class="row center-content">
+<h1 >Chicago Artists File<span id="search-count-target">
+
+</span>
+</h1><div class="row center-content-search">
     <div class="filter-column">
         <div class="filters">
             <div class="filter-text clearfix"> <p class="filter-list-title">Search by Name</p>
                 <input type="text" id="text-input" class="filter-text-input" />
-                <button class="go-button" onClick="activateTextSearch()">Go</button>
-                <button class="go-button float-right" onClick="clearFilters()">Clear Filters</button>
             </div>
             <div class="filter-vocab">
                 <div class="data-filter-header">
@@ -20,15 +21,15 @@
                     <ul class="filter-list" id="filter-culture-toplevel" style="display: none"></ul>
                 </div>
             </div>
+            <button class="go-button" onClick="activateTextSearch()">Apply Filters</button>
         </div>
     </div>
     <div class="col artists">
-        <div class="content-header">
-            <h1>CPL's Chicago Artists File</h1>
-            <p id="helper-text">Please search for an artist by name, or select filters from the left.</p>
+            
+        <div class="results-target" id="results">
+
+            <div class="artist" id="intro-text">Intro text.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae totam repudiandae quo esse reprehenderit, minus dolorum! Repellendus alias consequatur pariatur repudiandae, minus error? Nostrum, perferendis blanditiis dignissimos eveniet vel necessitatibus.</div>
         </div>
-        <div class="results-target" id="results"></div>
-        <div id="intro-text">Intro text.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae totam repudiandae quo esse reprehenderit, minus dolorum! Repellendus alias consequatur pariatur repudiandae, minus error? Nostrum, perferendis blanditiis dignissimos eveniet vel necessitatibus.</div>
     </div>
 </div>
 
@@ -122,11 +123,11 @@
                 resultsArray = [];
                 resultsHtml = [];
                 clearCenter();
-                $('#helper-text').empty().append('Please search for an artist by name, or select filters from the left.');
+                $('#results').empty().append('<div class="artist" id="helper-text">Please search for an artist by name, or select filters from the left.</div>');
             }
         // clear out middle section, used a lot
             function clearCenter(){
-                $('#helper-text').empty();
+                $('#search-count-target').empty();
                 $('#results').empty();
                 $('#intro-text').empty();
             }
@@ -196,7 +197,7 @@
             function appendResultsHtml(){
                 clearCenter();
                 $('#results').append(resultsHtml).sortElements('div');
-                $('#helper-text').append(count + " results.")
+                $('#search-count-target').append('&nbsp;›&nbsp;<small id="search-results-count">' + count + ' result' + (count === 1 ? '' : 's' ) + ' <button class="nonbutton" id="clearFilters" onClick="clearFilters()">Clear Filters</button></small>');
             }
         // activate text search - the go button
             function activateTextSearch(){

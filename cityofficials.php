@@ -19,6 +19,7 @@
 	<script src="https://use.fontawesome.com/a768f4e0c8.js"></script>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<script src="cpldc.js"></script>
 	<script src="aldermen-withFLN.js"></script>
 	<link rel="stylesheet" href="cpldc.css" >
@@ -38,13 +39,12 @@
 // 									footer.html
 // ----------------------------------------------------------------------------------------
 
-	include 'header.php';
+	include 'header-4dbs.php';
 ?>
 <main class="sidebar-target-collapsible PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
-	<div class="container main-container-fixed">
+	<div class="container main-container-fixed" id="content-top">
 				<?php 
-					
-						include 'cityofficials-center-content.html';
+						include 'ald-center-content.html';
 				?>
 	</div>
 </main>

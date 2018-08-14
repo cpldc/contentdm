@@ -43,6 +43,7 @@
 	<script src="https://use.fontawesome.com/a768f4e0c8.js"></script>
 	<script src="cpldc.js"></script>
 	<link rel="stylesheet" href="cpldc.css" >
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<script src="simpleLightbox.js"></script>
 	<link rel="stylesheet" href="simpleLightbox.css">
 	<!-- Global Site Tag (gtag.js) - Google Analytics -->

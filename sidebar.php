@@ -11,8 +11,6 @@
 	} else if (sidebarType == "fixed") {
 		document.write('<div class="left-sidebar-toplevel left-sidebar-fixed col-4 col-lg-4 col-xl-3">');
 	}
-	var togglebuttonLeft = '<i class="fa fa-caret-left"></i> <i class="fa fa-bars"></i>';
-	var togglebuttonRight = '<i class="fa fa-bars"></i> <i class="fa fa-caret-right"></i>';
 </script>
 	<div class="left-sidebar" role="navigation">
 		<div class="left-sidebar-header clearfix">

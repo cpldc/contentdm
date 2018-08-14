@@ -1,34 +1,35 @@
-<div class="row center-content">
+<h1 >Chicago Artists File<span id="search-count-target">
+
+</span>
+</h1><div class="row center-content-search">
     <div class="filter-column">
         <div class="filters">
-            <div class="filter-text clearfix">
+            <div class="filter-text clearfix"> <p class="filter-list-title">Name</p>
                 <input type="text" id="text-input" class="filter-text-input" />
-                <button class="go-button" onClick="activateTextSearch()">Go</button>
-                <button class="go-button float-right" onClick="clearFilters()">Clear Filters</button>
             </div>
             <div class="filter-vocab">
                 <div class="data-filter-header">
-                    <h4>Additional Filters</h4>
+                    <p class="filter-title-title">Additional Filters</p>
                     <span class="label-desc">Click to expand.</span>
                 </div>
                 <div id="filter-terms">
-                    <h5 class="clickable-title" onClick="toggleFilterList('filter-terms-toplevel')">Filter by Medium</h5>
+                    <p class="clickable-title filter-list-title" onClick="toggleFilterList('filter-terms-toplevel')">Medium</h5>
                     <ul class="filter-list" id="filter-terms-toplevel" style="display: none"></ul>
                 </div>
                 <div id="filter-cultures">
-                    <h5 class="clickable-title" onClick="toggleFilterList('filter-culture-toplevel')">Filter by Cultural Affiliation</h5>
+                    <p class="clickable-title filter-list-title" onClick="toggleFilterList('filter-culture-toplevel')">Cultural Affiliation</h5>
                     <ul class="filter-list" id="filter-culture-toplevel" style="display: none"></ul>
                 </div>
             </div>
+            <button class="go-button" onClick="activateTextSearch()">Apply Filters</button>
         </div>
     </div>
     <div class="col artists">
-        <div class="content-header">
-            <h1>CPL's Chicago Artists File</h1>
-            <p id="helper-text">Please search for an artist by name, or select filters from the left.</p>
+            
+        <div class="results-target" id="results">
+
+            <div class="artist" id="intro-text">Intro text.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae totam repudiandae quo esse reprehenderit, minus dolorum! Repellendus alias consequatur pariatur repudiandae, minus error? Nostrum, perferendis blanditiis dignissimos eveniet vel necessitatibus.</div>
         </div>
-        <div class="results-target" id="results"></div>
-        <div id="intro-text">Intro text.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae totam repudiandae quo esse reprehenderit, minus dolorum! Repellendus alias consequatur pariatur repudiandae, minus error? Nostrum, perferendis blanditiis dignissimos eveniet vel necessitatibus.</div>
     </div>
 </div>
 
@@ -73,7 +74,6 @@
                     group++;
                         }
                     i++;
-                    // console.log('#filter-list-group-' + group);
                     $('#filter-list-group-' + (group - 1)).append('<li class="filter-culture-group-item" data-sort="' + t + '">' +
                             '<input name="contentFilter" type="checkbox" id="filter-type-' + t + '" class="filter-cultures" value="' + t+ '"> ' +
                             '<label for="filter-type-' + t + '">' + t + '</label>' + 
@@ -122,11 +122,11 @@
                 resultsArray = [];
                 resultsHtml = [];
                 clearCenter();
-                $('#helper-text').empty().append('Please search for an artist by name, or select filters from the left.');
+                $('#results').empty().append('<div class="artist" id="helper-text">Please search for an artist by name, or select filters from the left.</div>');
             }
         // clear out middle section, used a lot
             function clearCenter(){
-                $('#helper-text').empty();
+                $('#search-count-target').empty();
                 $('#results').empty();
                 $('#intro-text').empty();
             }
@@ -184,10 +184,11 @@
                 }
                 if ( count > 500 ) {
                     clearCenter();
-                    $('#helper-text').empty().append(count + ' results.  Show anyway? <br /><button class="anyway-button" onclick="appendResultsHtml()">Ok</button>');
+                    $('#results').empty().append('<div class="artist" id="helper-text">' + count + ' results.  Show anyway? <br /><button class="anyway-button" onclick="appendResultsHtml()">Ok</button></div>');
                 } else if (count === 0 ) {
                     clearCenter();
-                    $('#helper-text').empty().append('Please search for an artist by name, or select filters from the left.');
+                    $('#results').empty().append('<div class="artist" id="helper-text">No results.  Please search for an artist by name, or select filters from the left.</div>');
+                    // $('#helper-text').empty().append('No results.');
                 } else {
                     appendResultsHtml();
                 }
@@ -196,7 +197,7 @@
             function appendResultsHtml(){
                 clearCenter();
                 $('#results').append(resultsHtml).sortElements('div');
-                $('#helper-text').append(count + " results.")
+                $('#search-count-target').append('&nbsp;›&nbsp;<small id="search-results-count">' + count + ' result' + (count === 1 ? '' : 's' ) + ' <button class="nonbutton" id="clearFilters" onClick="clearFilters()">Clear Filters</button></small>');
             }
         // activate text search - the go button
             function activateTextSearch(){
@@ -235,7 +236,19 @@
         // textFilter checks to see if the user input string is located at array position 0 - *only looks for start of name*
             function textFilter(haystack){
                 input = $('#text-input').val();
-                if (( haystack.name && haystack.name.toUpperCase().indexOf(input.toUpperCase()) === 0 ) || input.length < 1 ){
+                if (input.indexOf(' ') > -1){
+                    var inputArray = input.split(' '),
+                        inputArrayCheck = 0;
+                    for (var i in inputArray){
+                        if ( haystack.name && haystack.name.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) > -1  ){
+                            inputArrayCheck++;
+                        }
+                    } 
+                    if (inputArray.length === inputArrayCheck) {
+                        return true;
+                    }
+                }
+                if (( haystack.name && haystack.name.toUpperCase().indexOf(input.toUpperCase()) > -1 ) || input.length < 1 ){
                     return true;
                 }
             }

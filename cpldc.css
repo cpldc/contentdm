@@ -1,6 +1,9 @@
 /* core */
-    body {
+    header {
         font-family: "Open Sans", Arial, sans-serif;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
         background-color: #e5e5e5;
         line-height: 18px;
         margin: 0;
@@ -149,6 +152,9 @@
     .header-search-collapsed-text {
         font-size: 1.08rem;
         padding-right: 5px;
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 17.5px;
+        font-weight: 600;
     }
     .header-search-collapsed-icon {
         font-size: 1.5rem;
