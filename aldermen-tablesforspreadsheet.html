@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="aldermen-withFLN.js"></script>
+</head>
+<body>
+    <div class="positions">
+
+        positions
+        <table id="positionTarget">
+            <tr>
+                <td>last name</td>
+                <td>first name</td>
+                <td>id</td>
+                <td>position</td>
+                <td>ward</td>
+                <td>start year</td>
+                <td>end year</td>
+            </tr>
+        </table>
+    </div>
+    <div class="cjs">council journals and notes
+        <table id="cjTarget">
+            <tr>
+                <td>last name</td>
+                <td>first name</td>
+                <td>id</td>
+                <td>cj</td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+<script>
+    var positionDable = '',
+        cjDable = '',
+        refDable = '';
+    for (var a in aldermen) {
+        for (var p in aldermen[a].positionArray ){
+            positionDable += '<tr id="' + aldermen[a].id + '>' + 
+                '<td>' + aldermen[a].lastName + '</td>' +
+                '<td>' + aldermen[a].firstNameMi + '</td>' +
+                '<td>' + aldermen[a].id + '</td>' +
+                '<td>' + aldermen[a].positionArray[p].position + '</td>' +
+                '<td>' + aldermen[a].positionArray[p].ward + '</td>' +
+                '<td>' + aldermen[a].positionArray[p].startDate + '</td>' +
+                '<td>' + aldermen[a].positionArray[p].endDate + '</td>';
+        } 
+        if (aldermen[a].cj != ''){
+            cjDable += '<tr id="' + aldermen[a].id + '>' + 
+                '<td>' + aldermen[a].lastName + '</td>' +
+                '<td>' + aldermen[a].firstNameMi + '</td>' +
+                '<td>' + aldermen[a].id + '</td>' +
+                '<td>' + aldermen[a].cj + '</td>';
+            }
+        if (aldermen[a].refs != ''){
+            refDable += '<tr id="' + aldermen[a].id + '>' + 
+                '<td>' + aldermen[a].lastName + '</td>' +
+                '<td>' + aldermen[a].firstNameMi + '</td>' +
+                '<td>' + aldermen[a].id + '</td>' +
+                '<td>' + aldermen[a].refs + '</td>';
+            }
+    }
+    $('#positionTarget').append(positionDable);
+    $('#cjTarget').append(cjDable);
+    $('#refTarget').append(refDable);
+</script>
+</html>
