@@ -170,16 +170,17 @@
                         inputArrayCheck = 0;
                     for (var i in inputArray){
                         // console.log(haystack.lastName  + ' ' + haystack.firstNameMi);
-                        if (( haystack.lastName && haystack.lastName.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) === 0  )
+                        if (( haystack.id && haystack.id.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,']/g, "")) === 0  )
                             || ( haystack.firstNameMi && haystack.firstNameMi.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) === 0  )){
-                            inputArrayCheck++;
+                            console.log(input);
+                                inputArrayCheck++;
                         }
                     } 
                     if (inputArray.length === inputArrayCheck) {
                         return true;
                     }
                 }
-                if (( haystack.lastName && haystack.lastName.toUpperCase().indexOf(input.toUpperCase()) === 0 ) 
+                if (( haystack.id && haystack.id.toUpperCase().indexOf(input.toUpperCase().replace(/[|&;$%@"<>()-+,']/g, "")) === 0 ) 
                         || ( haystack.firstNameMi && haystack.firstNameMi.toUpperCase().indexOf(input.toUpperCase()) === 0 ) 
                         || input.length < 1 ){
                     return true;

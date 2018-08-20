@@ -7,12 +7,28 @@
     <title>Document</title>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="aldermen-withFLN.js"></script>
+    <script src="aldermen-withFLN.js"></script>
+    <style>
+        #positionTarget td {
+            border-bottom: 1px solid #F00;
+        }
+        #cjTarget td {
+            border-bottom: 1px solid #0F0;
+        }
+        #refsTarget td {
+            border-bottom: 1px solid #00F;
+        }
+        .subTables td {
+            border-bottom: 1px solid #00F;
+        }
+    
+    </style>
 </head>
 <body>
     <div class="positions">
-
-        positions
+        <h1>
+            positions
+        </h1>
         <table id="positionTarget">
             <tr>
                 <td>last name</td>
@@ -25,7 +41,10 @@
             </tr>
         </table>
     </div>
-    <div class="cjs">council journals and notes
+    <div class="cjs">
+        <h1>
+            council journals and notes
+        </h1>
         <table id="cjTarget">
             <tr>
                 <td>last name</td>
@@ -36,11 +55,27 @@
         </table>
 
     </div>
+    <div class="refs">
+        <h1>
+            references
+        </h1>   
+        <table id="refsTarget">
+            <tr>
+                <td>last name</td>
+                <td>first name</td>
+                <td>id</td>
+                <td>refs</td>
+            </tr>
+        </table>
+    </div>
 </body>
 <script>
     var positionDable = '',
         cjDable = '',
         refDable = '';
+    function removeLi(html){
+        html = html.replace
+    }
     for (var a in aldermen) {
         for (var p in aldermen[a].positionArray ){
             positionDable += '<tr id="' + aldermen[a].id + '>' + 
@@ -50,25 +85,23 @@
                 '<td>' + aldermen[a].positionArray[p].position + '</td>' +
                 '<td>' + aldermen[a].positionArray[p].ward + '</td>' +
                 '<td>' + aldermen[a].positionArray[p].startDate + '</td>' +
-                '<td>' + aldermen[a].positionArray[p].endDate + '</td>';
+                '<td>' + aldermen[a].positionArray[p].endDate + '</td></tr>';
         } 
         if (aldermen[a].cj != ''){
             cjDable += '<tr id="' + aldermen[a].id + '>' + 
-                '<td>' + aldermen[a].lastName + '</td>' +
-                '<td>' + aldermen[a].firstNameMi + '</td>' +
                 '<td>' + aldermen[a].id + '</td>' +
-                '<td>' + aldermen[a].cj + '</td>';
+                '<td><li>' + aldermen[a].cj + '</td>' +
+                '</tr>';
             }
         if (aldermen[a].refs != ''){
+            var reffa = aldermen[a].refs.replace(/<li><\/li>/g, '</td><td>');
             refDable += '<tr id="' + aldermen[a].id + '>' + 
-                '<td>' + aldermen[a].lastName + '</td>' +
-                '<td>' + aldermen[a].firstNameMi + '</td>' +
                 '<td>' + aldermen[a].id + '</td>' +
-                '<td>' + aldermen[a].refs + '</td>';
+                '<td>' + reffa + '</td></tr>';
             }
     }
     $('#positionTarget').append(positionDable);
     $('#cjTarget').append(cjDable);
-    $('#refTarget').append(refDable);
+    $('#refsTarget').append(refDable);
 </script>
 </html>

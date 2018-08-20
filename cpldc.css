@@ -1,5 +1,5 @@
 /* core */
-    header {
+    .header-search-collapsed, .header-search-expanded, .header-search-dropped {
         font-family: "Open Sans", Arial, sans-serif;
     }
     body {
