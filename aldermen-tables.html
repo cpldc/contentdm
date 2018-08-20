@@ -78,7 +78,7 @@
     }
     for (var a in aldermen) {
         for (var p in aldermen[a].positionArray ){
-            positionDable += '<tr id="' + aldermen[a].id + '>' + 
+            positionDable += '<tr>' + 
                 '<td>' + aldermen[a].lastName + '</td>' +
                 '<td>' + aldermen[a].firstNameMi + '</td>' +
                 '<td>' + aldermen[a].id + '</td>' +
@@ -87,19 +87,20 @@
                 '<td>' + aldermen[a].positionArray[p].startDate + '</td>' +
                 '<td>' + aldermen[a].positionArray[p].endDate + '</td></tr>';
         } 
-        if (aldermen[a].cj != ''){
-            cjDable += '<tr id="' + aldermen[a].id + '>' + 
+
+        // if (aldermen[a].cj != ''){
+            cjDable += '<tr>' + 
                 '<td>' + aldermen[a].id + '</td>' +
                 '<td><li>' + aldermen[a].cj + '</td>' +
                 '</tr>';
-            }
+            // }
         if (aldermen[a].refs != ''){
-            var reffa = aldermen[a].refs.replace(/<li><\/li>/g, '</td><td>');
-            refDable += '<tr id="' + aldermen[a].id + '>' + 
+            refDable += '<tr>' + 
                 '<td>' + aldermen[a].id + '</td>' +
-                '<td>' + reffa + '</td></tr>';
+                '<td>' + aldermen[a].refs + '</td></tr>';
             }
     }
+    console.log()
     $('#positionTarget').append(positionDable);
     $('#cjTarget').append(cjDable);
     $('#refsTarget').append(refDable);
