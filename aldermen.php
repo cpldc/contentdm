@@ -21,7 +21,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<script src="cpldc.js"></script>
-	<script src="aldermen-withFLN.js"></script>
+	<script src="aldermen-db.js"></script>
 	<link rel="stylesheet" href="cpldc.css" >
 	<link rel="stylesheet" href="aldermen.css" >
 

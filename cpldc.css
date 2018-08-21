@@ -1,6 +1,9 @@
 /* core */
-    .header-search-collapsed, .header-search-expanded, .header-search-dropped {
+    header {
         font-family: "Open Sans", Arial, sans-serif;
+    }
+    .header-logo-text {
+        font-family: Arial, Helvetica, sans-serif;
     }
     body {
         font-family: Arial, Helvetica, sans-serif;
@@ -160,14 +163,12 @@
         font-size: 1.5rem;
     }
     .header-search-expanded-icon {
+        margin-top: 1px;
         cursor: pointer;
         float: right;
         padding: 8px 15px;
         color: #fff;
         background-color: #000;
-    }
-    .header-search-expanded-icon i {
-        padding-left: 5px;
     }
     .header-search-expanded-text {
         padding: 0 5px 0 0;
@@ -223,9 +224,12 @@
         border: 1px solid #ccc;
         height: 34px;
         position: relative;
-        left: 5px;
+        /* left: 8px; */
         padding: 5px;
         /* width: 100%; */
+    }
+    .header-search-expanded-input {
+        left: 8px;
     }
     .header-search-expanded-input input:focus, .header-search-dropped-input input:focus {
         border: 1px solid #66afe9;
