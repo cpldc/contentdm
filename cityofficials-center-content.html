@@ -169,18 +169,19 @@
                     var inputArray = input.split(' '),
                         inputArrayCheck = 0;
                     for (var i in inputArray){
-                        // console.log(haystack.lastName  + ' ' + haystack.firstNameMi);
-                        if (( haystack.lastName && haystack.lastName.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) === 0  )
-                            || ( haystack.firstNameMi && haystack.firstNameMi.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) === 0  )){
-                            inputArrayCheck++;
+                        // console.log(haystack.lastName  + ' ' + haystack.firstName);
+                        if (( haystack.id && haystack.id.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,']/g, "")) === 0  )
+                            || ( haystack.firstName && haystack.firstName.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) === 0  )){
+                            console.log(input);
+                                inputArrayCheck++;
                         }
                     } 
                     if (inputArray.length === inputArrayCheck) {
                         return true;
                     }
                 }
-                if (( haystack.lastName && haystack.lastName.toUpperCase().indexOf(input.toUpperCase()) === 0 ) 
-                        || ( haystack.firstNameMi && haystack.firstNameMi.toUpperCase().indexOf(input.toUpperCase()) === 0 ) 
+                if (( haystack.id && haystack.id.toUpperCase().indexOf(input.toUpperCase().replace(/[|&;$%@"<>()-+,']/g, "")) === 0 ) 
+                        || ( haystack.firstName && haystack.firstName.toUpperCase().indexOf(input.toUpperCase()) === 0 ) 
                         || input.length < 1 ){
                     return true;
                 }
@@ -199,11 +200,11 @@
                 }
                 for (var pos in filterPos){
                     for(var p in ald.positionArray){
-                        if  (ald.positionArray[p].position === filterPos[pos] || 
-                            (ald.positionArray[p].position === 'Acting Mayor' && filterPos[pos] === 'Mayor') ||
-                            (ald.positionArray[p].position === 'Mayor-elect' && filterPos[pos] === 'Mayor') ||
-                            (ald.positionArray[p].position === 'Mayor Pro tem' && filterPos[pos] === 'Mayor') ||
-                            (ald.positionArray[p].position === 'City Treasurer (Acting)' && filterPos[pos] === 'City Treasurer')){
+                        if  (ald.positionArray[p].pos === filterPos[pos] || 
+                            (ald.positionArray[p].pos === 'Acting Mayor' && filterPos[pos] === 'Mayor') ||
+                            (ald.positionArray[p].pos === 'Mayor-elect' && filterPos[pos] === 'Mayor') ||
+                            (ald.positionArray[p].pos === 'Mayor Pro tem' && filterPos[pos] === 'Mayor') ||
+                            (ald.positionArray[p].pos === 'City Treasurer (Acting)' && filterPos[pos] === 'City Treasurer')){
                                 posCheck = true;
                         }
                     }
@@ -216,20 +217,37 @@
             function drawAlderman(ald){
                 var positions = '',
                     lists = '',
-                    pic;
+                    pic,
+                    councilJournalList = '',
+                    referenceList = '';
+                function lister(listItem){
+                    return '<li>' +
+                        (listItem.preText && listItem.preText != '' ? listItem.preText + ' ' : '' ) + 
+                        (listItem.url && listItem.url != '' ? '<a href="' + listItem.url + '">' + listItem.urlText + '</a> ' : '') +
+                        (listItem.interText && listItem.interText != '' ? listItem.interText + (listItem.interText[listItem.interText.length - 1] === '(' ? '' : ' ') : '' ) + 
+                        (listItem.url2 && listItem.url2 != '' ? '<a href="' + listItem.url2 + '">' + listItem.url2Text + '</a>' + (listItem.endText[0] === ')' ? '' : ' ')  : '') +
+                        (listItem.endText && listItem.endText != '' ? listItem.endText + ' ' : '' ) + 
+                        '</li>';
+                }
+                for (var r in ald.refs){
+                    referenceList += lister(ald.refs[r]); 
+                }
+                for (var c in ald.cjs) {
+                    councilJournalList += lister(ald.cjs[c]);
+                }
                 if (ald.cj || ald.refs){
-                    lists = '<ul class="alderman-list"><li>' + (ald.cj ? ald.cj + '</li>' : '') + (ald.refs ? 'References: <ul class="alderman-list"><li>' + ald.refs + '</li></ul>' : '') + '</ul>';
+                    lists = '<ul class="alderman-list">' + councilJournalList + (referenceList != '' ? 'References: <ul class="alderman-list">' + referenceList + '</ul>' : '') + '</ul>';
                 }
                 for (var p in ald.positionArray){
                     var ward = '';
                     if (ald.positionArray[p].ward) {
                         ward = ordinal_suffix_of(ald.positionArray[p].ward);
                     }
-                    positions += '<div class="alderman-position" data-date="' + ald.positionArray[p].startDate + '">' + ald.positionArray[p].startDate + '-' + ald.positionArray[p].endDate + ' ' + ald.positionArray[p].position + (ald.positionArray[p].position === 'Alderman' ? ', ' + ward + ' Ward' : '') + '</div>';
+                    positions += '<div class="alderman-position" data-date="' + ald.positionArray[p].startDate + '">' + ald.positionArray[p].startDate + '-' + ald.positionArray[p].endDate + ' ' + ald.positionArray[p].pos + (ald.positionArray[p].pos === 'Alderman' ? ', ' + ward + ' Ward' : '') + '</div>';
                 }
                 // removing pics for now, until we find them
                 // aldArray += '<div class="alderman" data-id="'+ ald.id + '" data-date="' + earliestDate + '" id="'+ ald.id + '">' + (ald.pic ? '<img class="float-right alderman-pic" src="150/' + ald.pic + '" alt="">' : '') + '<h2 class="alderman-name">' + ald.name + '</h2>'  + '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
-                aldArray += '<div class="alderman" data-sort="'+ ald.id + '" id="'+ ald.id + '">' + '<h2 class="alderman-name">' + ald.name + '</h2>'  + '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
+                aldArray += '<div class="alderman" data-sort="'+ ald.id + '" id="'+ ald.id + '">' + '<h2 class="alderman-name">' + ald.fullName + '</h2>'  + '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
             
             }
         // master function; gets filters, sends each aldermen to date and text filters
@@ -271,7 +289,7 @@
                 $('#search-count-target').append('&nbsp;›&nbsp;<small id="search-results-count">' + count + ' result' + (count === 1 ? '' : 's' ) + ' <button class="nonbutton" id="clearFilters" onClick="clearFilters()">Clear Filters</button></small>');
                 $( 'p:empty' ).remove();
             };
-        // docready for checkbox changing
+        // docready for checkbox changing & pressing enter in the text input
             $( document ).ready(function() {
                 $('input[type="checkbox"]').on('change', function() {
                     $('#aldermen').empty();

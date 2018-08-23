@@ -4,6 +4,16 @@
 </h1>
         <div class="row center-content-search">
             <div class="filter-column">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active filter-list-tabs" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Filters</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link filter-list-tabs" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lists</a>
+                            </li>
+                          </ul>
+                          <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="filters" id="all-filters">
                     <div class="filter-text clearfix">
                             <p class="filter-list-title">Name</p>
@@ -43,6 +53,32 @@
 
                     <button class="go-button" onclick="dateButton()">Apply Filters</button>
                 </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="lists" id="all-lists">
+                        <p class="lists-list-title">
+                            Chronological Lists
+                        </p>
+                        <p class="lists-list-title">
+                            By Position
+                        </p>
+                        
+                        <form id="lists-pos-list">
+                            <ul class="lists-list">
+                                <li class="lists-radio-pos"><input name="position" type="radio" value="clerks">City Clerks<br /></li>
+                                <li class="lists-radio-pos"><input name="position" type="radio" value="treas">City Treasurers<br /></li>
+                                <li class="lists-radio-pos"><input name="position" type="radio" value="mayors">Mayors<br /></li>
+                            </ul>
+                            </form>
+                        <p class="lists-list-title">
+                            Aldermen by Ward
+                        </p>
+                        <form id="lists-ward-list-form"><ul class="lists-list"  id="lists-ward-list"></ul></form>
+                </div>
+                
+            </div>
+          </div>
+                
             </div>
             <div class="col aldermen" id="aldermen"></div>
         </div>
@@ -312,6 +348,8 @@
                         <label for="filter-ward-' + w + '" >' + w + '</label>\
                     </li>'
                     + newLine);
+                $('#lists-ward-list').append(
+                    '<li class="lists-radio-ward"><input name="position" type="radio" value="' + w + '">' + w + '</li>' + newLine);
             }
         // clearing filters
             function clearCenter(){

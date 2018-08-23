@@ -21,7 +21,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<script src="cpldc.js"></script>
-	<script src="aldermen-withFLN.js"></script>
+	<script src="aldermen-db.js"></script>
 	<link rel="stylesheet" href="cpldc.css" >
 	<link rel="stylesheet" href="aldermen.css" >
 
@@ -44,7 +44,7 @@
 <main class="sidebar-target-collapsible PAGE_TYPE <?php echo $PAGE_TYPE; ?>">
 	<div class="container main-container-fixed" id="content-top">
 				<?php 
-						include 'ald-center-content.html';
+						include 'cityofficials-center-content.html';
 				?>
 	</div>
 </main>

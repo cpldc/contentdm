@@ -84,21 +84,13 @@
     }
     .filter-vocab li {
         list-style-type: none;
-        /* padding-left: 10px; */
     }
-    /* .filter-list {
-        border-bottom: 1px solid #ccc;
-    } */
     #date-slider {
         border: 0;
     }
     #ald-header {
         padding: 7px 0;
     }
-    /* .alderman {
-        margin: 5px 7px 5px 0;
-        padding: 5px 7px 5px 0;
-    } */
     .alderman-name, .artist-name, h4 {
         font-size: 1.25rem;
         line-height: 1.3rem;
@@ -201,4 +193,37 @@
     }
     .center-content {
         flex: 1;
+    }
+    .list-header {
+        font-weight: 700;
+    }
+
+    /* bootstrap overwrites:  */
+    .nav-tabs {
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .nav-link {
+        border-top-right-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+        border-color: #e5e5e5;
+    }
+    .filter-list-tabs, .lists-list-title {
+        /* from bibliocommons events */
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            margin: 15px 0 0 0;
+            line-height: 20px;
+            /* padding-top: 10px; */
+        font-weight: 700;
+    }
+    .lists-radio-ward {
+        width: 34px;
+        height: 26px;
+        padding: 3px;
+    }
+    .lists-radio-ward, .lists-radio-pos {
+        display: inline;
+        list-style-type: none;
     }
