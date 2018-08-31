@@ -16,13 +16,25 @@
     .alderman, .artist {
         margin: 0 0 24px 0 ;
     }
-    .alderman a, .artist a, #aldermen-intro a {
+    .alderman a, .artist a, #aldermen-intro a, #moreInfo a {
         color: #234c86;
         text-decoration: none;
         border-bottom: 1px solid #909696;
     }
-    .alderman a:hover, .artist a:hover, #aldermen-intro a:hover {
+    .alderman a:hover, .artist a:hover, #aldermen-intro a:hover, #moreInfo a:hover {
         border-bottom: 2px solid #909696;
+    }
+    .expandingAlderman, .expandedAlderman {
+        background-color: #fff;
+        box-shadow: 4px 4px 0 #B0B4B4;
+        padding: 10px 15px;
+        margin: 0 0 7px 0;
+    }
+    #moreInfo {
+        margin-top: 10px;
+    }
+    #moreInfo em {
+        font-weight: 700;
     }
     .anyway-button, .go-button {
         background-color: #000;
@@ -58,11 +70,14 @@
     .label-container {
         margin: 0;
     }
-    .filter {
-        display: inline-block;
+    .filter, .lists-li {
+        list-style-type: none;
         min-width: 40px;
         margin: auto;
         padding: 3px;
+    }
+    .filter {
+        display: inline-block;
     }
     .filter-column {
         background-color: #fff;
@@ -207,10 +222,12 @@
         border-top-left-radius: 0 !important;
         border-color: #e5e5e5;
     }
+    .filter-list-tabs {
+        font-size: 14px;
+    }
     .filter-list-tabs, .lists-list-title {
         /* from bibliocommons events */
             text-transform: uppercase;
-            font-size: 14px;
             font-weight: bold;
             color: #333;
             margin: 15px 0 0 0;
@@ -218,12 +235,38 @@
             /* padding-top: 10px; */
         font-weight: 700;
     }
+    .lists-list-title {
+        font-size: 1rem;
+    }
+    
+    .lists-list {
+        padding: 0;
+        margin-top: 0.5rem;
+    }
     .lists-radio-ward {
-        width: 34px;
-        height: 26px;
+        min-width: 40px;
         padding: 3px;
+        margin: auto;
     }
     .lists-radio-ward, .lists-radio-pos {
         display: inline;
         list-style-type: none;
+    }
+
+    label {
+        font-size: 0.8rem;
+        line-height: 1rem;
+        display: inline-block;
+        margin-bottom: .5rem;
+    }
+    .list-dates {
+        font-size: 1rem;
+        font-weight: 400;
+        display: inline-block;
+        margin: auto;
+    }
+    .list-short {
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 50%;
     }

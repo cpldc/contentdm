@@ -157,7 +157,6 @@
 			}
 		}
 		$(".lightbox-main-img").height($(".lightbox-main-img").width() * 0.7383);
-
 		$grid.imagesLoaded().progress( function() {
             $grid.masonry('layout');
         });

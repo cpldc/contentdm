@@ -6,15 +6,18 @@
             <div class="filter-column">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
-                              <a class="nav-link active filter-list-tabs" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Filters</a>
+                              <a class="nav-link active filter-list-tabs" id="filters-tab" data-toggle="tab" href="#filters-div" role="tab" aria-controls="filters-tab" aria-selected="true">Filters</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link filter-list-tabs" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lists</a>
+                              <a class="nav-link filter-list-tabs" id="lists-tab" data-toggle="tab" href="#lists-div" role="tab" aria-controls="lists-tab" aria-selected="false">Lists</a>
                             </li>
                           </ul>
                           <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="tab-pane fade show active" id="filters-div" role="tabpanel" aria-labelledby="filters-tab">
                 <div class="filters" id="all-filters">
+                    <p class="lists-list-title">
+                        Search
+                    </p>
                     <div class="filter-text clearfix">
                             <p class="filter-list-title">Name</p>
                         <input type="text" id="textInput" class="filter-text-input" />
@@ -54,26 +57,32 @@
                     <button class="go-button" onclick="dateButton()">Apply Filters</button>
                 </div>
             </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="tab-pane fade" id="lists-div" role="tabpanel" aria-labelledby="lists-tab">
                 <div class="lists" id="all-lists">
-                        <p class="lists-list-title">
-                            Chronological Lists
-                        </p>
-                        <p class="lists-list-title">
-                            By Position
-                        </p>
-                        
-                        <form id="lists-pos-list">
-                            <ul class="lists-list">
-                                <li class="lists-radio-pos"><input name="position" type="radio" value="clerks">City Clerks<br /></li>
-                                <li class="lists-radio-pos"><input name="position" type="radio" value="treas">City Treasurers<br /></li>
-                                <li class="lists-radio-pos"><input name="position" type="radio" value="mayors">Mayors<br /></li>
-                            </ul>
-                            </form>
-                        <p class="lists-list-title">
+                    <p class="lists-list-title">
+                        Chronological Lists
+                    </p>
+                    <p class="filter-list-title">By Position</p>
+                    <form id="lists-form">
+                    <ul class="filter-list" id="lists-pos-list">
+                        <li class="lists-li">
+                            <input name="chronList" type="radio" value="clerks" class="filter-pos" id="lists-pos-clerks" />
+                            <label for="lists-pos-clerks" id="lists-label-clerks">City Clerks</label>
+                        </li>
+                        <li class="lists-li">
+                            <input name="chronList" type="radio" value="treas" class="filter-pos" id="lists-pos-treas" />
+                            <label for="lists-pos-treas" id="lists-label-treas">City Treaurers</label>
+                        </li>
+                        <li class="lists-li">
+                            <input name="chronList" type="radio" value="mayors" class="filter-pos" id="lists-pos-mayors" />
+                            <label for="lists-pos-mayors" id="lists-label-mayors">Mayors</label>
+                        </li>
+                    </ul>
+                        <p class="filter-list-title">
                             Aldermen by Ward
                         </p>
-                        <form id="lists-ward-list-form"><ul class="lists-list"  id="lists-ward-list"></ul></form>
+                        <ul class="lists-list filter-list"  id="lists-ward-list"></ul>
+                    </form>
                 </div>
                 
             </div>
@@ -86,7 +95,8 @@
 <script>
         // globals
             var filterValues = JSON.parse(localStorage.getItem('filterValues')) || {},
-                $checkboxes = $('#all-filters :checkbox');
+                $checkboxes = $('#all-filters :checkbox'),
+                $radioButtons = $('#lists-form :radio');    
             var currYear = new Date().getFullYear(),
                 count = 0,
                 minDate = ($.isEmptyObject(filterValues) ? 1837 : filterValues['minimumDate']),
@@ -94,6 +104,18 @@
                 aldArray = '',
                 filterWard = [],
                 filterAlpha = [];
+            var alderTable = '',
+                wardTable = [];
+                posTable = {
+                    'mayors': [],
+                    'treas': [],
+                    'clerks': []
+                };
+            var i;
+            for (i = 0; i < 50; i++) { 
+                var tempWard = [];
+                wardTable.push(tempWard)
+            }
             var introText = '<div class="alderman"><h2 class="content-header">Chicago Aldermen and Other Elected Officials, 1837-' + currYear + '</h2>' + 
                 '<ul>' + 
                 '<li><a href="#About">About This Guide</a></li>' + 
@@ -154,10 +176,32 @@
                 }
                 return i + "th";
             }
-        // sort aldermen: https://stackoverflow.com/a/17127455/9942821
+        // sorters:  both based on: https://stackoverflow.com/a/17127455/9942821
             jQuery.fn.sortElements = function sortElements(el) {
                 $('> ' + el , this[0]).sort(dec_sort).appendTo(this[0]);
                 function dec_sort(a, b){ return ($(b).data('sort')) < ($(a).data('sort')) ? 1 : -1; }
+            }
+            jQuery.fn.sortElementsByTwoDatas = function sortElements(el) {
+                $('> ' + el , this[0]).sort(dec_sort).appendTo(this[0]);
+                function dec_sort(a, b){ 
+                    if ($(b).data('sort') === $(a).data('sort') ){
+                        if ($(b).data('enddate') === $(a).data('enddate')){
+                            return ($(b).data('name')) < ($(a).data('name')) ? 1 : -1; 
+                        } else {
+                            return ($(b).data('enddate')) < ($(a).data('enddate')) ? 1 : -1; 
+                        }
+                    } else {
+                        return ($(b).data('sort')) < ($(a).data('sort')) ? 1 : -1; 
+                    }
+                }
+            }
+            function sortPositions(){
+                $('.positions').each(function(index){
+                    if($(this).children().length > 1){
+                        $(this).children().sort(dec_sort).appendTo(this);
+                        function dec_sort(a, b){ return ($(b).data("date")) < ($(a).data("date")) ? 1 : -1; }
+                    }
+                });
             }
         // slider
             $('#slider-container').slider({
@@ -250,14 +294,14 @@
                 } 
             }
         // create HTML
-            function drawAlderman(ald){
+            function drawAlderman(ald, type){
                 var positions = '',
                     lists = '',
                     pic,
                     councilJournalList = '',
                     referenceList = '';
                 function lister(listItem){
-                    return '<li>' +
+                    return '<li">' +
                         (listItem.preText && listItem.preText != '' ? listItem.preText + ' ' : '' ) + 
                         (listItem.url && listItem.url != '' ? '<a href="' + listItem.url + '">' + listItem.urlText + '</a> ' : '') +
                         (listItem.interText && listItem.interText != '' ? listItem.interText + (listItem.interText[listItem.interText.length - 1] === '(' ? '' : ' ') : '' ) + 
@@ -272,7 +316,10 @@
                     councilJournalList += lister(ald.cjs[c]);
                 }
                 if (ald.cj || ald.refs){
-                    lists = '<ul class="alderman-list">' + councilJournalList + (referenceList != '' ? 'References: <ul class="alderman-list">' + referenceList + '</ul>' : '') + '</ul>';
+                    lists = '<ul class="alderman-list">' + councilJournalList + (referenceList != '' ? 'Sources: <ul class="alderman-list">' + referenceList + '</ul>' : '') + '</ul>';
+                }
+                if (ald.positionArray.length === 1){
+                    var noPositions = true;
                 }
                 for (var p in ald.positionArray){
                     var ward = '';
@@ -280,11 +327,16 @@
                         ward = ordinal_suffix_of(ald.positionArray[p].ward);
                     }
                     positions += '<div class="alderman-position" data-date="' + ald.positionArray[p].startDate + '">' + ald.positionArray[p].startDate + '-' + ald.positionArray[p].endDate + ' ' + ald.positionArray[p].pos + (ald.positionArray[p].pos === 'Alderman' ? ', ' + ward + ' Ward' : '') + '</div>';
+                    $(positions).sortElements('div');
                 }
                 // removing pics for now, until we find them
                 // aldArray += '<div class="alderman" data-id="'+ ald.id + '" data-date="' + earliestDate + '" id="'+ ald.id + '">' + (ald.pic ? '<img class="float-right alderman-pic" src="150/' + ald.pic + '" alt="">' : '') + '<h2 class="alderman-name">' + ald.name + '</h2>'  + '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
-                aldArray += '<div class="alderman" data-sort="'+ ald.id + '" id="'+ ald.id + '">' + '<h2 class="alderman-name">' + ald.fullName + '</h2>'  + '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
-            
+                if (type === 'filter') {
+                    return '<div class="alderman" data-sort="'+ ald.id + '" id="'+ ald.id + '">' + '<h2 class="alderman-name">' + ald.fullName + '</h2>'  + 
+                        '<div class="positions" id="' + ald.id + '-position">' + positions + '</div>' + lists + '</div>';
+                } else if (type === 'list') {
+                    return '<div id="moreInfo">' + (noPositions ? '' : '<em>Full list of positions: </em><div class="positions" id="' + ald.id + '-position">' + positions + '</div>') + lists + '</div>';
+                }
             }
         // master function; gets filters, sends each aldermen to date and text filters
             function drawAldermen(){
@@ -300,7 +352,7 @@
                 for (var k in aldermen){
                     if ((( filterWard.length === 0 && filterPos.length === 0) || filterCheckboxes(aldermen[k])) && filterText(aldermen[k]) && filterDate(aldermen[k])){
                         count++
-                        drawAlderman(aldermen[k]);
+                        aldArray += drawAlderman(aldermen[k], 'filter');
                     }
                 }
                 if (count >= 500){
@@ -315,13 +367,7 @@
                 clearCenter();
                 $('#aldermen').append(aldArray);
                 $('#aldermen').sortElements('div');
-                // sorts aldermen positions by start date when there's more than onea 
-                $('.positions').each(function(index){
-                    if($(this).children().length > 1){
-                        $(this).children().sort(dec_sort).appendTo(this);
-                        function dec_sort(a, b){ return ($(b).data("date")) < ($(a).data("date")) ? 1 : -1; }
-                    }
-                });
+                sortPositions();
                 $('#search-count-target').append('&nbsp;›&nbsp;<small id="search-results-count">' + count + ' result' + (count === 1 ? '' : 's' ) + ' <button class="nonbutton" id="clearFilters" onClick="clearFilters()">Clear Filters</button></small>');
                 $( 'p:empty' ).remove();
             };
@@ -330,6 +376,10 @@
                 $('input[type="checkbox"]').on('change', function() {
                     $('#aldermen').empty();
                     drawAldermen();
+                });
+                $('input[type="radio"]').on('change', function() {
+                    $('#aldermen').empty();
+                    chronList();
                 });
                 $('#textInput').keypress(function(e){
                     if(e.keyCode==13)
@@ -349,9 +399,13 @@
                     </li>'
                     + newLine);
                 $('#lists-ward-list').append(
-                    '<li class="lists-radio-ward"><input name="position" type="radio" value="' + w + '">' + w + '</li>' + newLine);
+                    '<li class="filter">\
+                        <input name="chronList" type="radio" value="' + w + '" id="filter-ward-' + w + '" class="filter-ward" />\
+                        <label for="filter-ward-' + w + '" >' + w + '</label>\
+                    </li>'
+                    + newLine);
             }
-        // clearing filters
+        // clearing filters"
             function clearCenter(){
                 $('#aldermen').empty();
                 $('#search-count-target').empty();
@@ -363,23 +417,112 @@
                 minDate = 1837;
                 maxDate = currYear;
                 $('input[type=checkbox]').prop('checked',false); 
+                $('input[type=radio]').prop('checked',false); 
                 $('#slider-container').slider('values', 0, minDate);
                 $('#slider-container').slider('values', 1, maxDate);
                 $("#date-slider").empty().append( minDate + "-" + maxDate);
                 localStorage.clear();
+            }
+        // create chronological lists 
+            for (var a in aldermen) {
+                for (var p in aldermen[a].positionArray){
+                    if (aldermen[a].positionArray[p].pos === 'Mayor' ||
+                        aldermen[a].positionArray[p].pos === 'Acting Mayor' ||
+                        aldermen[a].positionArray[p].pos === 'Mayor-elect' ||
+                        aldermen[a].positionArray[p].pos === 'Mayor Pro tem') {
+                            var mayor = {"id": aldermen[a].id,
+                                "fullName": aldermen[a].fullName,
+                                "startDate": aldermen[a].positionArray[p].startDate,
+                                "endDate": aldermen[a].positionArray[p].endDate};
+                            posTable.mayors.push(mayor);
+                    }
+                    if (aldermen[a].positionArray[p].pos === 'City Treasurer' ||
+                        aldermen[a].positionArray[p].pos === 'City Treasurer (Acting)'){
+                            var treasurer = {"id": aldermen[a].id,
+                                "fullName": aldermen[a].fullName,
+                                "startDate": aldermen[a].positionArray[p].startDate,
+                                "endDate": aldermen[a].positionArray[p].endDate};
+                            posTable.treas.push(treasurer)
+                    }
+                    if (aldermen[a].positionArray[p].pos === 'City Clerk'){
+                            var clerk = {"id": aldermen[a].id,
+                                "fullName": aldermen[a].fullName,
+                                "startDate": aldermen[a].positionArray[p].startDate,
+                                "endDate": aldermen[a].positionArray[p].endDate};
+                            posTable.clerks.push(clerk);
+                    }
+                    if (aldermen[a].positionArray[p].pos === 'Alderman'){
+                        var offByOne = aldermen[a].positionArray[p].ward - 1;
+                        var alderman = {"id": aldermen[a].id,
+                                "fullName": aldermen[a].fullName,
+                                "startDate": aldermen[a].positionArray[p].startDate,
+                                "endDate": aldermen[a].positionArray[p].endDate}
+                        wardTable[offByOne].push(alderman);
+                    }
+                }
+            }
+            function chronList() { 
+                saveFilters();
+                alderTable = '';
+                var userRequest = $('#lists-form').find(':radio:checked').val(),
+                    properName = $('#lists-label-' + userRequest).text();
+                function listListing(list){
+                    return '<div data-sort="' + list.startDate + '" data-enddate="'  + list.endDate + '"  data-name="'  + list.id + '" class="clearfix expandingAlderman" id="' + list.id + '" onClick="expandAlderman(\'' + list.id + '\')"><h2 class="alderman-name list-short">' + list.fullName  + '<span class="list-dates float-right">' + 
+                            list.startDate + '-' + list.endDate + '</span></h2></div>'
+                }
+                $('#search-count-target').empty().append('&nbsp;›&nbsp;<small>Viewing ' + (properName.length > 0 ? properName : 'Aldermen') + '<button class="nonbutton" id="clearFilters" onClick="clearFilters()">Clear</button></small>')
+                if (isNaN(Number(userRequest))){
+                    var list = $.uniqueSort( posTable[userRequest] );
+                    for (var l in posTable[userRequest]){
+                        alderTable += listListing(list[l]);
+                    }
+                } else {
+                    userRequest = userRequest - 1;
+                    var list = $.uniqueSort( wardTable[userRequest] );
+                    for (var l in wardTable[userRequest]){
+                        alderTable += listListing(list[l]);
+                    }
+                }
+                $('#aldermen').empty().append(alderTable).sortElementsByTwoDatas('div');
+
+            }
+            function expandAlderman(userClickId){
+                var ald = $.grep(aldermen, function(obj){return obj.id === userClickId;})[0],
+                    $alderman = $('#' + userClickId);
+                if ($($alderman).hasClass('expandingAlderman')){
+                    var moreInfo = drawAlderman(ald, 'list');
+                    $($alderman).removeClass('expandingAlderman').addClass('expandedAlderman').append(moreInfo);
+                    sortPositions();
+                } else if ($($alderman).hasClass('expandedAlderman') && !$( event.target ).is( "a" )){
+                    $($alderman).removeClass('expandedAlderman').addClass('expandingAlderman').children('#moreInfo').remove();
+                } else {
+                    console.log('something broke');
+                }
+                console.log(ald);
             }
         // filters will persist after page reload
             function saveFilters(){
                 $checkboxes.each(function(){
                     filterValues[this.id] = this.checked;
                 });
+                $radioButtons = $('#lists-form :radio');   
+                console.log($radioButtons);
+                $radioButtons.each(function(){
+                    filterValues[this.id] = this.checked;
+                })
+                if($('#lists-tab').hasClass("active")){
+                    filterValues['activeTab'] = true;
+                } 
                 filterValues['textInput'] = $('#textInput').val();
                 filterValues['minimumDate'] = $('#slider-container').slider('values', 0);
                 filterValues['maximumDate'] = $('#slider-container').slider('values', 1);
                 localStorage.setItem('filterValues', JSON.stringify(filterValues));
+                    var res = document.getElementById('aldermen');
+                    localStorage.setItem('results', res.innerHTML);
             }
             $.each(filterValues, function(key, value){
-                var filterChangeCheck = false;
+                var filterChangeCheck = false,
+                    listsChangeCheck = false;
                 if($('#' + key).is('input[type=checkbox]')){
                     $("#" + key).prop('checked', value);
                     ( value === 'true' ? filterChangeCheck = true : '' );
@@ -394,10 +537,25 @@
                     filterChangeCheck = true;
                     $('#slider-container').slider('values', 1, value);
                     $("#date-slider").empty().append( filterValues['minimumDate'] + "-" + filterValues['maximumDate']);
+                } else if ($('#' + key).is('input[type=radio]')){
+                    console.log('radio: ' + key + ' ' + value);
+                    $("#" + key).prop('checked', value);
+                    chronList();
+                } else if ( key === 'activeTab' ) {
+                    $('#lists-tab').addClass("active");
+                    $('#filters-tab').removeClass("active");
+                    $('#lists-div').addClass("active").addClass("show");
+                    $('#filters-div').removeClass("active").removeClass("show");
+                    chronList();
+                    filterChangeCheck = false;
+                } else if ( key === 'content') {
+                    console.log("this is the content step");
+                    $('#aldermen').innerHTML = value;
                 } else {
                     console.log('not sure what happened. key:' + key + '; value: ' + value);
-                } if (filterChangeCheck) {
+                } if (filterChangeCheck === true) {
                     drawAldermen();
-                }
+                } 
             });
+
 </script>
