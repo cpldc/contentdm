@@ -95,6 +95,7 @@
 <script>
         // globals
             var filterValues = JSON.parse(localStorage.getItem('filterValues')) || {},
+                expandedAldermen = JSON.parse(localStorage.getItem('expandedAldermen')) || [],
                 $checkboxes = $('#all-filters :checkbox'),
                 $radioButtons = $('#lists-form :radio');    
             var currYear = new Date().getFullYear(),
@@ -104,17 +105,15 @@
                 aldArray = '',
                 filterWard = [],
                 filterAlpha = [];
-            var alderTable = '',
-                wardTable = [];
-                posTable = {
-                    'mayors': [],
-                    'treas': [],
-                    'clerks': []
-                };
-            var i;
-            for (i = 0; i < 50; i++) { 
-                var tempWard = [];
-                wardTable.push(tempWard)
+            var alderTable = '';
+            var wardTable =  JSON.parse(localStorage.getItem('wardTable')) || [];
+                posTable = JSON.parse(localStorage.getItem('posTable')) || {'mayors': [],'treas': [],'clerks': []};
+            if (wardTable.length < 1){
+                var i;
+                for (i = 0; i < 50; i++) { 
+                    var tempWard = [];
+                    wardTable.push(tempWard)
+                }
             }
             var introText = '<div class="alderman"><h2 class="content-header">Chicago Aldermen and Other Elected Officials, 1837-' + currYear + '</h2>' + 
                 '<ul>' + 
@@ -221,6 +220,7 @@
         // date / text go button
             function dateButton(){
                 $('#aldermen').empty();
+                clearOtherTab();
                 drawAldermen();
             }
             function activateTextSearch(){
@@ -249,10 +249,9 @@
                     var inputArray = input.split(' '),
                         inputArrayCheck = 0;
                     for (var i in inputArray){
-                        // console.log(haystack.lastName  + ' ' + haystack.firstName);
                         if (( haystack.id && haystack.id.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,']/g, "")) === 0  )
                             || ( haystack.firstName && haystack.firstName.toUpperCase().indexOf(inputArray[i].toUpperCase().replace(/[|&;$%@"<>()-+,]/g, "")) === 0  )){
-                            console.log(input);
+                                console.log(input);
                                 inputArrayCheck++;
                         }
                     } 
@@ -301,13 +300,11 @@
                     councilJournalList = '',
                     referenceList = '';
                 function lister(listItem){
-                    return '<li">' +
-                        (listItem.preText && listItem.preText != '' ? listItem.preText + ' ' : '' ) + 
+                    return '<li>' + (listItem.preText && listItem.preText != '' ? listItem.preText + ' ' : '' ) + 
                         (listItem.url && listItem.url != '' ? '<a href="' + listItem.url + '">' + listItem.urlText + '</a> ' : '') +
                         (listItem.interText && listItem.interText != '' ? listItem.interText + (listItem.interText[listItem.interText.length - 1] === '(' ? '' : ' ') : '' ) + 
                         (listItem.url2 && listItem.url2 != '' ? '<a href="' + listItem.url2 + '">' + listItem.url2Text + '</a>' + (listItem.endText[0] === ')' ? '' : ' ')  : '') +
-                        (listItem.endText && listItem.endText != '' ? listItem.endText + ' ' : '' ) + 
-                        '</li>';
+                        (listItem.endText && listItem.endText != '' ? listItem.endText + ' ' : '' ) + '</li>';
                 }
                 for (var r in ald.refs){
                     referenceList += lister(ald.refs[r]); 
@@ -374,16 +371,20 @@
         // docready for checkbox changing & pressing enter in the text input
             $( document ).ready(function() {
                 $('input[type="checkbox"]').on('change', function() {
-                    $('#aldermen').empty();
+                    clearCenter();
+                    clearOtherTab();
                     drawAldermen();
                 });
                 $('input[type="radio"]').on('change', function() {
-                    $('#aldermen').empty();
+                    clearCenter();
+                    clearOtherTab();
                     chronList();
                 });
                 $('#textInput').keypress(function(e){
-                    if(e.keyCode==13)
+                    if(e.keyCode==13){
                         activateTextSearch();
+                        clearOtherTab();
+                    }
                 });
             });
         // creating checkboxes
@@ -400,15 +401,34 @@
                     + newLine);
                 $('#lists-ward-list').append(
                     '<li class="filter">\
-                        <input name="chronList" type="radio" value="' + w + '" id="filter-ward-' + w + '" class="filter-ward" />\
-                        <label for="filter-ward-' + w + '" >' + w + '</label>\
+                        <input name="chronList" type="radio" value="' + w + '" id="lists-ward-' + w + '" class="filter-ward" />\
+                        <label for="lists-ward-' + w + '" >' + w + '</label>\
                     </li>'
                     + newLine);
             }
-        // clearing filters"
+        // clearing 
+            // clear center just empties results area and count
+            // clear other tab clears all filters or selections from the hidden tab when you make any selections 
+            // clearfilters clears everything, including local storage
             function clearCenter(){
                 $('#aldermen').empty();
                 $('#search-count-target').empty();
+                expandedAldermen = [];
+            }
+            function clearOtherTab(){
+                clearCenter();
+                if($('#lists-tab').hasClass('active')){
+                    $('#aldermen').append(introText);
+                    $('#textInput').val('');
+                    minDate = 1837;
+                    maxDate = currYear;
+                    $('input[type=checkbox]').prop('checked',false); 
+                    $('#slider-container').slider('values', 0, minDate);
+                    $('#slider-container').slider('values', 1, maxDate);
+                    $("#date-slider").empty().append( minDate + "-" + maxDate);
+                } else if ($('#filters-tab').hasClass('active')){
+                    $('input[type=radio]').prop('checked',false); 
+                }
             }
             function clearFilters() {
                 clearCenter();
@@ -417,50 +437,55 @@
                 minDate = 1837;
                 maxDate = currYear;
                 $('input[type=checkbox]').prop('checked',false); 
-                $('input[type=radio]').prop('checked',false); 
                 $('#slider-container').slider('values', 0, minDate);
                 $('#slider-container').slider('values', 1, maxDate);
                 $("#date-slider").empty().append( minDate + "-" + maxDate);
+                $('input[type=radio]').prop('checked',false); 
                 localStorage.clear();
             }
-        // create chronological lists 
-            for (var a in aldermen) {
-                for (var p in aldermen[a].positionArray){
-                    if (aldermen[a].positionArray[p].pos === 'Mayor' ||
-                        aldermen[a].positionArray[p].pos === 'Acting Mayor' ||
-                        aldermen[a].positionArray[p].pos === 'Mayor-elect' ||
-                        aldermen[a].positionArray[p].pos === 'Mayor Pro tem') {
-                            var mayor = {"id": aldermen[a].id,
-                                "fullName": aldermen[a].fullName,
-                                "startDate": aldermen[a].positionArray[p].startDate,
-                                "endDate": aldermen[a].positionArray[p].endDate};
-                            posTable.mayors.push(mayor);
-                    }
-                    if (aldermen[a].positionArray[p].pos === 'City Treasurer' ||
-                        aldermen[a].positionArray[p].pos === 'City Treasurer (Acting)'){
-                            var treasurer = {"id": aldermen[a].id,
-                                "fullName": aldermen[a].fullName,
-                                "startDate": aldermen[a].positionArray[p].startDate,
-                                "endDate": aldermen[a].positionArray[p].endDate};
-                            posTable.treas.push(treasurer)
-                    }
-                    if (aldermen[a].positionArray[p].pos === 'City Clerk'){
-                            var clerk = {"id": aldermen[a].id,
-                                "fullName": aldermen[a].fullName,
-                                "startDate": aldermen[a].positionArray[p].startDate,
-                                "endDate": aldermen[a].positionArray[p].endDate};
-                            posTable.clerks.push(clerk);
-                    }
-                    if (aldermen[a].positionArray[p].pos === 'Alderman'){
-                        var offByOne = aldermen[a].positionArray[p].ward - 1;
-                        var alderman = {"id": aldermen[a].id,
-                                "fullName": aldermen[a].fullName,
-                                "startDate": aldermen[a].positionArray[p].startDate,
-                                "endDate": aldermen[a].positionArray[p].endDate}
-                        wardTable[offByOne].push(alderman);
+        // create chronological list variables 
+            if ( wardTable.length < 1 || posTable['mayors'].length < 1 ){
+                for (var a in aldermen) {
+                    for (var p in aldermen[a].positionArray){
+                        if (aldermen[a].positionArray[p].pos === 'Mayor' ||
+                            aldermen[a].positionArray[p].pos === 'Acting Mayor' ||
+                            aldermen[a].positionArray[p].pos === 'Mayor-elect' ||
+                            aldermen[a].positionArray[p].pos === 'Mayor Pro tem') {
+                                var mayor = {"id": aldermen[a].id,
+                                    "fullName": aldermen[a].fullName,
+                                    "startDate": aldermen[a].positionArray[p].startDate,
+                                    "endDate": aldermen[a].positionArray[p].endDate};
+                                posTable.mayors.push(mayor);
+                        }
+                        if (aldermen[a].positionArray[p].pos === 'City Treasurer' ||
+                            aldermen[a].positionArray[p].pos === 'City Treasurer (Acting)'){
+                                var treasurer = {"id": aldermen[a].id,
+                                    "fullName": aldermen[a].fullName,
+                                    "startDate": aldermen[a].positionArray[p].startDate,
+                                    "endDate": aldermen[a].positionArray[p].endDate};
+                                posTable.treas.push(treasurer)
+                        }
+                        if (aldermen[a].positionArray[p].pos === 'City Clerk'){
+                                var clerk = {"id": aldermen[a].id,
+                                    "fullName": aldermen[a].fullName,
+                                    "startDate": aldermen[a].positionArray[p].startDate,
+                                    "endDate": aldermen[a].positionArray[p].endDate};
+                                posTable.clerks.push(clerk);
+                        }
+                        if (aldermen[a].positionArray[p].pos === 'Alderman'){
+                            var offByOne = aldermen[a].positionArray[p].ward - 1;
+                            var alderman = {"id": aldermen[a].id,
+                                    "fullName": aldermen[a].fullName,
+                                    "startDate": aldermen[a].positionArray[p].startDate,
+                                    "endDate": aldermen[a].positionArray[p].endDate}
+                            wardTable[offByOne].push(alderman);
+                        }
                     }
                 }
+                localStorage.setItem('wardTable', JSON.stringify(wardTable));
+                localStorage.setItem('posTable', JSON.stringify(posTable));
             }
+        // create chron lists
             function chronList() { 
                 saveFilters();
                 alderTable = '';
@@ -470,7 +495,6 @@
                     return '<div data-sort="' + list.startDate + '" data-enddate="'  + list.endDate + '"  data-name="'  + list.id + '" class="clearfix expandingAlderman" id="' + list.id + '" onClick="expandAlderman(\'' + list.id + '\')"><h2 class="alderman-name list-short">' + list.fullName  + '<span class="list-dates float-right">' + 
                             list.startDate + '-' + list.endDate + '</span></h2></div>'
                 }
-                $('#search-count-target').empty().append('&nbsp;›&nbsp;<small>Viewing ' + (properName.length > 0 ? properName : 'Aldermen') + '<button class="nonbutton" id="clearFilters" onClick="clearFilters()">Clear</button></small>')
                 if (isNaN(Number(userRequest))){
                     var list = $.uniqueSort( posTable[userRequest] );
                     for (var l in posTable[userRequest]){
@@ -484,7 +508,7 @@
                     }
                 }
                 $('#aldermen').empty().append(alderTable).sortElementsByTwoDatas('div');
-
+                $('#search-count-target').empty().append('&nbsp;›&nbsp;<small>Viewing All ' + $('#aldermen').children().length + ' ' + (properName.length > 0 ? properName : 'Aldermen') + '<button class="nonbutton" id="clearFilters" onClick="clearFilters()">Clear</button></small>')
             }
             function expandAlderman(userClickId){
                 var ald = $.grep(aldermen, function(obj){return obj.id === userClickId;})[0],
@@ -492,13 +516,16 @@
                 if ($($alderman).hasClass('expandingAlderman')){
                     var moreInfo = drawAlderman(ald, 'list');
                     $($alderman).removeClass('expandingAlderman').addClass('expandedAlderman').append(moreInfo);
+                    if (expandedAldermen.indexOf(userClickId) < 0 ){
+                        expandedAldermen.push(userClickId);
+                    }
+                    saveFilters();
                     sortPositions();
                 } else if ($($alderman).hasClass('expandedAlderman') && !$( event.target ).is( "a" )){
                     $($alderman).removeClass('expandedAlderman').addClass('expandingAlderman').children('#moreInfo').remove();
                 } else {
-                    console.log('something broke');
+                    console.log('something broke: ' + userClickId);
                 }
-                console.log(ald);
             }
         // filters will persist after page reload
             function saveFilters(){
@@ -506,56 +533,57 @@
                     filterValues[this.id] = this.checked;
                 });
                 $radioButtons = $('#lists-form :radio');   
-                console.log($radioButtons);
                 $radioButtons.each(function(){
                     filterValues[this.id] = this.checked;
-                })
+                });
                 if($('#lists-tab').hasClass("active")){
                     filterValues['activeTab'] = true;
-                } 
+                } else {
+                    filterValues['activeTab'] = false;
+                }
                 filterValues['textInput'] = $('#textInput').val();
                 filterValues['minimumDate'] = $('#slider-container').slider('values', 0);
                 filterValues['maximumDate'] = $('#slider-container').slider('values', 1);
                 localStorage.setItem('filterValues', JSON.stringify(filterValues));
-                    var res = document.getElementById('aldermen');
-                    localStorage.setItem('results', res.innerHTML);
+                localStorage.setItem('expandedAldermen', JSON.stringify(expandedAldermen));
             }
             $.each(filterValues, function(key, value){
-                var filterChangeCheck = false,
-                    listsChangeCheck = false;
+                var changeCheck = false;
                 if($('#' + key).is('input[type=checkbox]')){
                     $("#" + key).prop('checked', value);
-                    ( value === 'true' ? filterChangeCheck = true : '' );
-                } else if ( key === 'textInput' && value != '') {
-                    $('#textInput').val(value);
-                    filterChangeCheck = true;
+                    ( value === 'true' ? changeCheck = true : '' );
+                } else if ( key === 'textInput' ) {
+                    if (value != ''){
+                        $('#textInput').val(value);
+                        changeCheck = true;
+                    }
                 } else if ( key === 'minimumDate' ) {
-                    filterChangeCheck = true;
+                    changeCheck = true;
                     $('#slider-container').slider('values', 0, value);
                     $("#date-slider").empty().append( filterValues['minimumDate'] + "-" + filterValues['maximumDate']);
                 } else if ( key === 'maximumDate' ) {
-                    filterChangeCheck = true;
+                    changeCheck = true;
                     $('#slider-container').slider('values', 1, value);
                     $("#date-slider").empty().append( filterValues['minimumDate'] + "-" + filterValues['maximumDate']);
-                } else if ($('#' + key).is('input[type=radio]')){
-                    console.log('radio: ' + key + ' ' + value);
-                    $("#" + key).prop('checked', value);
-                    chronList();
-                } else if ( key === 'activeTab' ) {
+                } else if ( key === 'activeTab' && value === true) {
                     $('#lists-tab').addClass("active");
                     $('#filters-tab').removeClass("active");
                     $('#lists-div').addClass("active").addClass("show");
                     $('#filters-div').removeClass("active").removeClass("show");
-                    chronList();
-                    filterChangeCheck = false;
-                } else if ( key === 'content') {
-                    console.log("this is the content step");
-                    $('#aldermen').innerHTML = value;
+                } else if ($('#' + key).is('input[type=radio]')){
+                    $("#" + key).prop('checked', value);
+                    ( value === 'true' ? changeCheck = true : '' );
                 } else {
-                    console.log('not sure what happened. key:' + key + '; value: ' + value);
-                } if (filterChangeCheck === true) {
-                    drawAldermen();
+                    console.log('LocalStorage item not processed. Key: ' + key + '; value: ' + value);
+                } if (changeCheck === true) {
+                    if($('#filters-tab').hasClass('active')){
+                        drawAldermen();
+                    } else if ($('#lists-tab').hasClass('active')){
+                        chronList();
+                    }
                 } 
             });
-
+            for (var e in expandedAldermen){
+                expandAlderman(expandedAldermen[e]);
+            }
 </script>

@@ -134,6 +134,7 @@
         margin: 0 0 5px 0;
     }
     .alderman-list {
+        list-style-type: disc;
         margin: 7px 0;
     }
     .filters {
