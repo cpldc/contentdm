@@ -237,14 +237,14 @@
         $EBG[sortname] = 'Gould, E.B. Programs Collection';
         $EBG[textlong] = 'See <a class="all-links" href="#CPB01">Chicago Theater</a>.';
         $EBG[textshort] = 'The annotated programs of a local Chicago businessman and enthusiastic playgoer.';
-        $EBG[browse] = 'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc';
+        $EBG[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc';
         $EBG[type] = 'subcollection';
 
     $Playbills[title] = 'Chicago Theater Collection-Historic Playbills';
         $Playbills[sortname] = 'Chicago Theater Collection-Historic Playbills';
         $Playbills[textlong] = 'See <a class="all-links" href="#CPB01">Chicago Theater</a>.';
         $Playbills[textshort] = 'Programs, playbills and newspaper clippings from more than 2,000 productions at Chicago’s historic theaters dating back to the 1840s.';
-        $Playbills[browse] = 'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/';
+        $Playbills[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/';
         $Playbills[type] = 'subcollection';
                 
     $Amund[title] = 'Amundsen High School Collection';
@@ -300,7 +300,7 @@
         $PortPark[sortname] = 'Portage Park Community Collection';
         $PortPark[textlong] = 'See <a class="all-links" href="#cfc">Northside Clubs and Organizations</a>.';
         $PortPark[textshort] = 'Patriotism on display during World War I.';
-        $PortPark[browse] = 'http://digital.chipublib.org/digital/collection/cfc/search/searchterm/Portage%20Park%20Community%20Collection/field/collec/mode/exact/conn/and';
+        $PortPark[browse] = 'https://cdm16818.contentdm.oclc.org/digital/collection/cfc/search/searchterm/Portage%20Park%20Community%20Collection/field/collec/mode/exact/conn/and';
         $PortPark[link] = '#cfc';
         $PortPark[type] = 'subcollection';
 
@@ -323,7 +323,7 @@
     $examiner[title] = 'Chicago Examiner';
         $examiner[coll] = 'examiner';
         $examiner[sortname] = 'Chicago Examiner';
-        $examiner[cardpic] = array('pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/examiner/5449/default.jpg','pich'=>'19rem','size'=>'110% auto','pos'=>'50% -15px');
+        $examiner[cardpic] = array('pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/examiner/5449/default.jpg','pich'=>'19rem','size'=>'110% auto','pos'=>'50% -15px');
         $examiner[category] = 'Newspapers';
         $examiner[textshort] = 'Chicago Public Library&rsquo;s 10-year run of the <i>Chicago Examiner</i> extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
         $examiner[textlong] = 'The Chicago Examiner was one of a dozen major newspapers published in Chicago at the turn of the last century. It was known for its sensational news stories.';
@@ -375,7 +375,7 @@
     $bar[title] = 'Esther A. Barlow Collection';
         $bar[coll] = 'bar';
         $bar[sortname] = 'Barlow, Esther A. Collection';
-        $bar[cardpic] = array('pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/bar/43/default.jpg','pich'=>'20rem','size'=>'110%','pos'=>'auto','alt'=>'Esther Barlow as a young woman.');
+        $bar[cardpic] = array('pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/bar/43/default.jpg','pich'=>'20rem','size'=>'110%','pos'=>'auto','alt'=>'Esther Barlow as a young woman.');
         $bar[category] = 'Libraries &amp; Education';
         $bar[textshort] = 'Family photographs of CPL Librarian Esther Barlow and images of her work at the former Hild Regional Library and Lake View Branch Library from 1927 to 1976.';
         $bar[textlong] = 'Esther Barlow was a children&rsquo;s librarian in neighborhood branches of Chicago Public Library from 1927 until 1976.';
@@ -410,7 +410,7 @@
         $woop[coll] = 'woop';
         $woop[sortname] = 'Chicago Public Library Archives';
         $woop[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/45/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/woop/45/default.jpg',
             'pich'=>'200px;',
             'size'=>'100%',
             'pos'=>'50% -20px',
@@ -454,7 +454,7 @@
         $cr[coll] = 'cr';
         $cr[sortname] = 'Chicago Renaissance';
         $cr[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/12/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cr/12/default.jpg',
             'pich'=>'20rem',
             'size'=>'100%',
             'pos'=>'auto',
@@ -463,7 +463,7 @@
         $cr[category] = 'African Americans';
         $cr[textshort] = 'African American community leaders, performers, artists, writers and activists on Chicago&rsquo;s South Side, 1930-1950.';
         $cr[textlong] = 'The Black Chicago Renaissance was a creative movement when activism and scholarship flourished with the prodigious work of African American community leaders, performers, artists, writers and activists.';
-        $cr[textrich] = '<p>During and after the Great Depression (1930s-1950s), African Americans in Chicago created a new community on the South Side that was distinctly their own.</p><p>In <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Literature/field/subjed/mode/all/conn/and/order/nosort">literature</a> the Black Chicago Renaissance was represented by such giants as Richard Wright, Gwendolyn Brooks, Margaret Walker, Arna Bontemps and Fenton Johnson. The explosion of <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Music/field/subjed/mode/all/conn/and/order/nosort">musical</a> creativity in <a href="http://digital.chipublib.org/digital/collection/cr/search/searchterm/Bronzeville%20(Chicago%2C%20Ill.)!art/field/neighb!subjec/mode/all!all/conn/and!and/order/title/ad/asc">Bronzeville&rsquo;s</a> clubs and concert halls ranged from classical to jazz and from gospel to blues and pop. A new <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Social%20Science/field/subjed/mode/all/conn/and/order/nosort">social science</a> of Black urban life was born with the writing of St. Clair Drake and Horace Cayton&rsquo;s <em>Black Metropolis</em>. The <a href="http://digital.chipublib.org/digital/search/searchterm/art/field/subjec/mode/exact/conn/and/order/nosort/ad/asc">art</a> of William McBride, William Edouard Scott, Gordon Parks, Archibald Motley, Jr. and other local Chicago Black artists defined the era.</p>';
+        $cr[textrich] = '<p>During and after the Great Depression (1930s-1950s), African Americans in Chicago created a new community on the South Side that was distinctly their own.</p><p>In <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Literature/field/subjed/mode/all/conn/and/order/nosort">literature</a> the Black Chicago Renaissance was represented by such giants as Richard Wright, Gwendolyn Brooks, Margaret Walker, Arna Bontemps and Fenton Johnson. The explosion of <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Music/field/subjed/mode/all/conn/and/order/nosort">musical</a> creativity in <a href="https://cdm16818.contentdm.oclc.org/digital/collection/cr/search/searchterm/Bronzeville%20(Chicago%2C%20Ill.)!art/field/neighb!subjec/mode/all!all/conn/and!and/order/title/ad/asc">Bronzeville&rsquo;s</a> clubs and concert halls ranged from classical to jazz and from gospel to blues and pop. A new <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/cr/searchterm/Social%20Science/field/subjed/mode/all/conn/and/order/nosort">social science</a> of Black urban life was born with the writing of St. Clair Drake and Horace Cayton&rsquo;s <em>Black Metropolis</em>. The <a href="https://cdm16818.contentdm.oclc.org/digital/search/searchterm/art/field/subjec/mode/exact/conn/and/order/nosort/ad/asc">art</a> of William McBride, William Edouard Scott, Gordon Parks, Archibald Motley, Jr. and other local Chicago Black artists defined the era.</p>';
         $cr[findingaid] = array(
             array('link'=>'https://www.chipublib.org/fa-charles-walton-papers/','text'=>'Charles Walton Papers Finding Aid'),
             array('link'=>'https://www.chipublib.org/fa-george-cleveland-hall-branch-archives/','text'=>'Chicago Public Library, George Cleveland Hall Branch Archives Finding Aid'),
@@ -504,7 +504,7 @@
         $dtd[coll] = 'dtd';
         $dtd[sortname] = 'Chicago Sewers Collection';
         $dtd[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/dtd/157/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/dtd/157/default.jpg',
             'pich'=>'200px',
             'size'=>'120%',
             'pos'=>'50% -20px',
@@ -552,7 +552,7 @@
         $wha[sortname] = 'Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
         $wha[creditname] = 'Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections';
         $wha[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/341/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/wha/341/default.jpg',
             'pich'=>'280px',
             'size'=>'110%',
             'pos'=>'50% 40%'
@@ -598,7 +598,7 @@
         $hdg[coll] = 'hdg';
         $hdg[sortname] = 'Green, Henry D. Photograph Collection';
         $hdg[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/hdg/123/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/hdg/123/default.jpg',
             'pich'=>'250px',
             'size'=>'110%',
             'pos'=>'50% 50%',
@@ -644,7 +644,7 @@
         $rwk[coll] = 'rwk';
         $rwk[sortname] = 'Krueger, Robert W. Photograph Collection';
         $rwk[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/rwk/1365/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rwk/1365/default.jpg',
             'pich'=>'210px',
             'size'=>'100%',
             'pos'=>'50% 50%',
@@ -692,7 +692,7 @@
         $mpu[coll] = 'mpu';
         $mpu[sortname] = 'Millennium Park U.S. Equities Realty Collection';
         $mpu[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/mpu/2239/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/mpu/2239/default.jpg',
             'pich'=>'240px',
             'size'=>'130%',
             'pos'=>'35% 50%',
@@ -701,8 +701,8 @@
         $mpu[category] = 'Parks';
         $mpu[textshort] = 'See a rail yard transform into a dynamic urban park.';
         $mpu[textlong] = 'Watch the Millennium Park site transform from an industrial wasteland to a new urban park of world renown from 1999-2005, under the project management of U.S. Equities Realty and acclaimed architects, engineers and artists.';
-        $mpu[textrich] = '<p>Follow the construction of <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/bp%20bridge/field/book/mode/exact/conn/and/order/title/ad/asc">BP Pedestrian Bridge</a>, the first bridge designed by Frank Gehry; Anish Kapoor&rsquo;s monumental public sculpture, <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/cloud%20gate/field/book/mode/exact/conn/and/order/title/ad/asc">Cloud Gate</a>, aka The Bean; the Gehry-designed <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/jay%20pritzker%20pavilion/field/book/mode/exact/conn/and/order/title/ad/asc">Jay Pritzker Pavilion</a>, a soaring bandshell that hosts the U.S.&rsquo;s last free outdoor classical music series; Jaume Plensa&rsquo;s <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/crown%20fountain/field/book/mode/exact/conn/and/order/title/ad/asc">Crown Fountain</a>, a cascading interactive video sculpture; <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/millennium%20monument/field/book/mode/exact/conn/and/order/title/ad/asc">Millennium Monument</a>; <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/lurie%20garden/field/book/mode/exact/conn/and/order/title/ad/asc">Lurie Garden</a>; and <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/mccormick%20tribune%20plaza%20and%20ice%20rink/field/book/mode/exact/conn/and/order/title/ad/asc">McCormick Tribune Plaza and Ice Rink</a>.  Watch the park take shape with <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/general%20construction/field/book/mode/exact/conn/and/order/title/ad/asc">general construction photos</a>, or take in sweeping views with <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/full%20park/field/book/mode/exact/conn/and/order/title/ad/asc">full park images</a>.';
-        $mpu[highlights] = array(array('a'=>'http://digital.chipublib.org/digital/collection/mpu/search/searchterm/highlight','dt'=>'Collection Highlights','dd'=>'Get a taste of how this transformation took place in a selected group of images.'));
+        $mpu[textrich] = '<p>Follow the construction of <a href="https://cdm16818.contentdm.oclc.org/digital/collection/mpu/search/searchterm/bp%20bridge/field/book/mode/exact/conn/and/order/title/ad/asc">BP Pedestrian Bridge</a>, the first bridge designed by Frank Gehry; Anish Kapoor&rsquo;s monumental public sculpture, <a href="https://cdm16818.contentdm.oclc.org/digital/collection/mpu/search/searchterm/cloud%20gate/field/book/mode/exact/conn/and/order/title/ad/asc">Cloud Gate</a>, aka The Bean; the Gehry-designed <a href="https://cdm16818.contentdm.oclc.org/digital/collection/mpu/search/searchterm/jay%20pritzker%20pavilion/field/book/mode/exact/conn/and/order/title/ad/asc">Jay Pritzker Pavilion</a>, a soaring bandshell that hosts the U.S.&rsquo;s last free outdoor classical music series; Jaume Plensa&rsquo;s <a href="https://cdm16818.contentdm.oclc.org/digital/collection/mpu/search/searchterm/crown%20fountain/field/book/mode/exact/conn/and/order/title/ad/asc">Crown Fountain</a>, a cascading interactive video sculpture; <a href="https://cdm16818.contentdm.oclc.org/digital/collection/mpu/search/searchterm/millennium%20monument/field/book/mode/exact/conn/and/order/title/ad/asc">Millennium Monument</a>; <a href="https://cdm16818.contentdm.oclc.org/digital/collection/mpu/search/searchterm/lurie%20garden/field/book/mode/exact/conn/and/order/title/ad/asc">Lurie Garden</a>; and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/mpu/search/searchterm/mccormick%20tribune%20plaza%20and%20ice%20rink/field/book/mode/exact/conn/and/order/title/ad/asc">McCormick Tribune Plaza and Ice Rink</a>.  Watch the park take shape with <a href="https://cdm16818.contentdm.oclc.org/digital/collection/mpu/search/searchterm/general%20construction/field/book/mode/exact/conn/and/order/title/ad/asc">general construction photos</a>, or take in sweeping views with <a href="https://cdm16818.contentdm.oclc.org/digital/collection/mpu/search/searchterm/full%20park/field/book/mode/exact/conn/and/order/title/ad/asc">full park images</a>.';
+        $mpu[highlights] = array(array('a'=>'https://cdm16818.contentdm.oclc.org/digital/collection/mpu/search/searchterm/highlight','dt'=>'Collection Highlights','dd'=>'Get a taste of how this transformation took place in a selected group of images.'));
         $mpu[findingaid] = array(array('link'=>'https://www.chipublib.org/fa-millennium-park-inc/','text'=>'Millennium Park, Inc. Archives Finding Aid'),
                             array('link'=>'https://www.chipublib.org/fa-millennium-park-u-s-equities-realty-collection/','text'=>'Millennium Park / U.S. Equities Realty Collection Finding Aid'));
         $mpu[CPLRes] = array(array('a'=>'https://www.chipublib.org/?post_type=post&s=Millennium+Park','dt'=>'Millennium Park Blog Posts','dd'=>'Written by CPL librarians and staff.'));
@@ -742,7 +742,7 @@
         $cfc[coll] = 'cfc';
         $cfc[sortname] = 'Northside Clubs and Organizations';
         $cfc[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/130/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cfc/130/default.jpg',
             'pich'=>'240px',
             'size'=>'175%',
             'pos'=>'20% 55%',
@@ -778,7 +778,7 @@
         $cfc[textlong] = 'Glimpse into the activities of the thriving civic service scene on the North Side as well as the rich ethnic and religious heritage of the community.';
         $cfc[subdigicoll] = array(array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort','dt'=>'Christian Fellowship Church Collection','dd'=>'Activities of the church founded by Conrad and Martha Wendtland in their home in 1926.'),
                                 array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort','dt'=>'Lake View Council on Religious Action','dd'=>'Representatives from local churches and synagogues and members of the Kiwanis Club of Lake View at work'),
-                                array('a'=>'http://digital.chipublib.org/digital/collection/cfc/search/searchterm/Portage%20Park%20Community%20Collection/field/collec/mode/exact/conn/and','dt'=>'Portage Park Community Collection','dd'=>'Patriotism on display during World War I.'),
+                                array('a'=>'https://cdm16818.contentdm.oclc.org/digital/collection/cfc/search/searchterm/Portage%20Park%20Community%20Collection/field/collec/mode/exact/conn/and','dt'=>'Portage Park Community Collection','dd'=>'Patriotism on display during World War I.'),
                                 array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Ravenswood+Manor+Improvement+Association/field/collec/mode/all/conn/and/order/nosort','dt'=>'Ravenswood Manor Improvement Association','dd'=>'Community activism in the North Side riverfront neighborhood.'));
         $cfc[findingaid] = array(array('link'=>'https://www.chipublib.org/fa-northwest-federation-of-improvement-clubs-records/','text'=>'Northwest Federation of Improvement Clubs Records Finding Aid'), 
                                 array('link'=>'https://www.chipublib.org/archival_post/ravenswood-gardens-homeowners-association-records/','text'=>'Ravenswood Gardens Homeowners Association Records Finding Aid'));
@@ -794,7 +794,7 @@
         $ahs[coll] = 'ahs';
         $ahs[sortname] = 'Northside High Schools';
         $ahs[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/ahs/197/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/ahs/197/default.jpg',
             'pich'=>'250px',
             'size'=>'110%',
             'pos'=>'0% 45%',
@@ -842,7 +842,7 @@
         $ChicagoParks[coll] = 'ChicagoParks';
         $ChicagoParks[sortname] = 'Chicago Park District Records: Photographs';
         $ChicagoParks[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/1254/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/ChicagoParks/1254/default.jpg',
             'pich'=>'250px',
             'size'=>'250%',
             'pos'=>'87% 47%'
@@ -875,7 +875,7 @@
         $ChicagoParks[category] = 'Parks';
         $ChicagoParks[textshort] = 'Photographs from the Chicago Park District document how the city’s parks have grown, changed and been enjoyed for more than a century.';
         $ChicagoParks[textlong] = 'Parks have always been a part of Chicago’s city planning. Explore their growth, development and use from six large parks begun around 1870 to more than 500 today.';
-        $ChicagoParks[textrich] = 'These 10,000 images capture the parks’ construction, architecture, plant life, and public enjoyment. See <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/Concerts--Illinois--Chicago/field/subjea/mode/exact/conn/and">musical concerts performed in the parks</a>, watch <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/construction%20progress%20photographs/field/subjec/mode/exact/conn/and/order/title/ad/asc">parks being built from the ground up,</a> get a <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/aerial%20views/field/subjec/mode/exact/conn/and/order/title/ad/asc">birds’ eye view of parks around the city,</a> and watch people of all ages <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/sports/field/subjec/mode/exact/conn/and/order/title/ad/asc">playing sports,</a> doing <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/Arts%20and%20Crafts/field/subjec/mode/exact/conn/and/order/title/ad/asc">arts and crafts,</a> and <a href="http://digital.chipublib.org/digital/collection/ChicagoParks/search/searchterm/people/field/subjec/mode/exact/conn/and/order/title/ad/asc/page/2">generally enjoying their local parks.</a> </p></p>93 of Chicago’s over 500 parks are represented here and cover the city’s wide geography.  Visit the library to see more than 50,000 additional photos of Chicago’s parks!';
+        $ChicagoParks[textrich] = 'These 10,000 images capture the parks’ construction, architecture, plant life, and public enjoyment. See <a href="https://cdm16818.contentdm.oclc.org/digital/collection/ChicagoParks/search/searchterm/Concerts--Illinois--Chicago/field/subjea/mode/exact/conn/and">musical concerts performed in the parks</a>, watch <a href="https://cdm16818.contentdm.oclc.org/digital/collection/ChicagoParks/search/searchterm/construction%20progress%20photographs/field/subjec/mode/exact/conn/and/order/title/ad/asc">parks being built from the ground up,</a> get a <a href="https://cdm16818.contentdm.oclc.org/digital/collection/ChicagoParks/search/searchterm/aerial%20views/field/subjec/mode/exact/conn/and/order/title/ad/asc">birds’ eye view of parks around the city,</a> and watch people of all ages <a href="https://cdm16818.contentdm.oclc.org/digital/collection/ChicagoParks/search/searchterm/sports/field/subjec/mode/exact/conn/and/order/title/ad/asc">playing sports,</a> doing <a href="https://cdm16818.contentdm.oclc.org/digital/collection/ChicagoParks/search/searchterm/Arts%20and%20Crafts/field/subjec/mode/exact/conn/and/order/title/ad/asc">arts and crafts,</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/ChicagoParks/search/searchterm/people/field/subjec/mode/exact/conn/and/order/title/ad/asc/page/2">generally enjoying their local parks.</a> </p></p>93 of Chicago’s over 500 parks are represented here and cover the city’s wide geography.  Visit the library to see more than 50,000 additional photos of Chicago’s parks!';
         $ChicagoParks[findingaid] = array(
             array('link'=>'https://www.chipublib.org/fa-chicago-park-district-records-photographs/','text'=>'Chicago Park District Records: Photographs'), 
             array('link'=>'https://www.chipublib.org/fa-chicago-park-district-records/','text'=>'Chicago Park District Records: Drawings'));
@@ -893,7 +893,7 @@
         $rhwc[shortname] = 'Harold Washington';
         $rhwc[sidebarname] = 'Harold Washington';
         $rhwc[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/rhwc/30/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rhwc/30/default.jpg',
             'pich'=>'250px',
             'size'=>'200%',
             'pos'=>'75% 40%',
@@ -950,7 +950,7 @@
         $rvw[coll] = 'rvw';
         $rvw[sortname] = 'Ravenswood-Lake View Community Collection';
         $rvw[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/rvw/1086/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/rvw/1086/default.jpg',
             'pich'=>'250px',
             'size'=>'250%',
             'pos'=>'24% 45%',
@@ -959,7 +959,7 @@
         $rvw[category] = 'Neighborhoods';
         $rvw[textshort] = 'Street scenes and community life on the North Side, 1860s-1990s.';
         $rvw[textlong] = 'Lake View Township and its evolution from an independent municipality into current Northside communities, 1860s-1990s.';
-        $rvw[textrich] = '<p>More than <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/00000000-1889/field/date/mode/exact/conn/and/order/title/ad/asc">100 early photographs</a> represent Lake View Township and its residents, schools, homes, businesses and everyday rituals.</p><p>Over the next 100 years North Siders and their neighborhoods experienced tremendous changes as evidenced by their <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/clothing%20%26%20dress/field/subjea/mode/exact/conn/and/order/title/ad/asc">fashion</a>, <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/railroad!automobiles/field/subjea!subjea/mode/all!all/conn/or!and/order/nosort/ad/asc">modes of transportation</a> and the establishment of a number of <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/schools%20--%20illinois%20--%20chicago/field/subjea/mode/exact/conn/and/order/title/ad/asc">schools</a>, <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/churches/field/subjea/mode/all/conn/and/order/title/ad/asc">churches</a> and <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/clubs/field/subjea/mode/all/conn/and/order/title/ad/asc">social clubs</a>. Notable local events include <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/Our%20Lady%20of%20Lourdes%20Church%20(Chicago%2C%20Ill.)!construction/field/subjec!subjea/mode/exact!all/conn/and!and/order/nosort/ad/asc">moving the Our Lady of Lourdes church building</a> across Ashland Avenue and <a href="http://digital.chipublib.org/digital/collection/rvw/search/searchterm/ground%20breaking%20ceremonies/field/subjea/mode/exact/conn/and/order/nosort/ad/asc">breaking ground for the Conrad Sulzer Regional Library</a>.</p>';
+        $rvw[textrich] = '<p>More than <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/00000000-1889/field/date/mode/exact/conn/and/order/title/ad/asc">100 early photographs</a> represent Lake View Township and its residents, schools, homes, businesses and everyday rituals.</p><p>Over the next 100 years North Siders and their neighborhoods experienced tremendous changes as evidenced by their <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/clothing%20%26%20dress/field/subjea/mode/exact/conn/and/order/title/ad/asc">fashion</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/railroad!automobiles/field/subjea!subjea/mode/all!all/conn/or!and/order/nosort/ad/asc">modes of transportation</a> and the establishment of a number of <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/schools%20--%20illinois%20--%20chicago/field/subjea/mode/exact/conn/and/order/title/ad/asc">schools</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/churches/field/subjea/mode/all/conn/and/order/title/ad/asc">churches</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/clubs/field/subjea/mode/all/conn/and/order/title/ad/asc">social clubs</a>. Notable local events include <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/Our%20Lady%20of%20Lourdes%20Church%20(Chicago%2C%20Ill.)!construction/field/subjec!subjea/mode/exact!all/conn/and!and/order/nosort/ad/asc">moving the Our Lady of Lourdes church building</a> across Ashland Avenue and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/rvw/search/searchterm/ground%20breaking%20ceremonies/field/subjea/mode/exact/conn/and/order/nosort/ad/asc">breaking ground for the Conrad Sulzer Regional Library</a>.</p>';
         $rvw[CPLRes] = array(
                             // array('a'=>'https://www.chipublib.org/archival_post/ravenswood-lake-view-community-collection/','dt'=>'Ravenswood-Lake View Community Collection Finding Aid','dd'=>'Descriptive inventory for the complete physical collection.'),
                             array('a'=>'https://www.chipublib.org/chicago-newspapers-on-microfilm/','dt'=>'Chicago Newspapers','dd'=>'Online and microfilm.'),
@@ -1000,7 +1000,7 @@
         $p16818coll6[coll] = 'p16818coll6';
         $p16818coll6[sortname] = 'Sang, Philip David Collection';
         $p16818coll6[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/p16818coll6/691/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/p16818coll6/691/default.jpg',
             'pich'=>'300px',
             'size'=>'190%',
             'pos'=>'20% 25%',
@@ -1054,7 +1054,7 @@
     $AfAm[title] = 'African Americans';
         $AfAm[shortname] = 'African Americans';
         $AfAm[sidebarname] = 'African Americans';
-        $AfAm[cardpic] = array('pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/cr/10/default.jpg','pich'=>'250px','size'=>'110%','pos'=>'50% 50%','alt'=>'Richard Durham sits at a desk with a typewriter. He is reading some loose pages and has a pencil in his right hand.');
+        $AfAm[cardpic] = array('pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cr/10/default.jpg','pich'=>'250px','size'=>'110%','pos'=>'50% 50%','alt'=>'Richard Durham sits at a desk with a typewriter. He is reading some loose pages and has a pencil in his right hand.');
         $AfAm[textshort] = 'Chicago Public Library collections that document African American history in Chicago and throughout the United States.';
         $AfAm[textlong] = 'Chicago Public Library collections that document African American history in Chicago and throughout the United States.';
         $AfAm[catcoll] = 'documenting Black history in the United States';
@@ -1105,7 +1105,7 @@
         $CivilWar[shortname] = 'Civil War';
         $CivilWar[sidebarname] = 'Civil War';
         $CivilWar[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/721/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/wha/721/default.jpg',
             'pich'=>'280px',
             'size'=>'auto 120%',
             'pos'=>'center',
@@ -1123,7 +1123,7 @@
                 'size'=>'150%',
                 'align'=>'center 30%',
                 'alt'=>'Portrait of Pauline Cushman, handwritten text under the portrait includes &rdquo;Miss Major Pauline Cushman. Union spy&ldquo;'),
-        // $CivilWar[thumbs] = array(array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/p16818coll6/37/default.jpg',
+        // $CivilWar[thumbs] = array(array('url'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/p16818coll6/37/default.jpg',
         //         'text'=>'Reward poster for capture of runaway slave man',
         //         'size'=>'cover',
         //         'align'=>'center 0%'),
@@ -1133,7 +1133,7 @@
                 'size'=>'auto 150px',
                 'align'=>'40% 30%',
                 'alt'=>'Blade and handle of 1850 model sword.'),
-        // array('url'=>'http://digital.chipublib.org/digital/api/singleitem/image/wha/721/default.jpg',
+        // array('url'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/wha/721/default.jpg',
         //     'text'=>'Uniform, artillery jacket',
         //     'size'=>'auto 120px',
         //     'align'=>'50% 15%'),
@@ -1151,7 +1151,7 @@
                 'alt'=>'Handwritten 1859 letter from John Brown, Jr. to his uncle, aunt, and cousins.'));
         $CivilWar[textshort] = 'Personal narratives, artifacts and manuscripts tell the story of slaves and soldiers during the war that tore the nation apart.';
         $CivilWar[textlong] = 'A view into life during the Civil War via personal letters, documents and photographs detailing battles, homefront activities and the fight to end slavery in the United States.';
-        $CivilWar[textrich] = 'A significant portion of the library&rsquo;s Civil War era material comes from the Illinois Department of the Grand Army of the Republic, including <a href="http://digital.chipublib.org/digital/collection/wha/search/searchterm/edged%20weapons">weaponry</a> and <a href="http://digital.chipublib.org/digital/collection/wha/search/searchterm/lincoln/field/subjec/mode/all/conn/and/order/nosort/ad/asc">Lincolniana</a>.  <p>Complementing the GAR material are items in the Harsh Research Collection&rsquo;s Philip David Sang Collection pertaining to <a href="http://digital.chipublib.org/digital/collection/p16818coll6/search/searchterm/186104-1865/field/date/mode/exact/conn/and/order/title/ad/asc">the African American experience during the Civil War era.</a></p>';
+        $CivilWar[textrich] = 'A significant portion of the library&rsquo;s Civil War era material comes from the Illinois Department of the Grand Army of the Republic, including <a href="https://cdm16818.contentdm.oclc.org/digital/collection/wha/search/searchterm/edged%20weapons">weaponry</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/wha/search/searchterm/lincoln/field/subjec/mode/all/conn/and/order/nosort/ad/asc">Lincolniana</a>.  <p>Complementing the GAR material are items in the Harsh Research Collection&rsquo;s Philip David Sang Collection pertaining to <a href="https://cdm16818.contentdm.oclc.org/digital/collection/p16818coll6/search/searchterm/186104-1865/field/date/mode/exact/conn/and/order/title/ad/asc">the African American experience during the Civil War era.</a></p>';
         $CivilWar[CPLRes] = array(array('a'=>'https://www.chipublib.org/?post_type=post&s=%22civil+war%22','dt'=>'Civil War blog posts','dd'=>'Written by CPL librarians and staff.'));
         $CivilWar[ExRes] = array(array('a'=>'https://www.loc.gov/collections/abraham-lincoln-papers/about-this-collection/','dt'=>'Abraham Lincoln Papers at the Library of Congress','dd'=>''), 
                                 array('a'=>'https://www.umbrasearch.org/','dt'=>'Umbra Search African American History','dd'=>''), 
@@ -1168,7 +1168,7 @@
         $LibEd[shortname] = 'Libraries &amp; Education';
         $LibEd[sidebarname] = 'Libraries &amp; Education';
         $LibEd[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/woop/2/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/woop/2/default.jpg',
             'pich'=>'250px',
             'size'=>'120%',
             'pos'=>'27% 0%',
@@ -1206,7 +1206,7 @@
                 'alt'=>'Four children stand in front of a bookmobile trailer, reading.  The bookmobile is hitched to a car.  The back of the trailer reads &rdquo;The Chicago Public Library Bookmobile.&ldquo;'));
         $LibEd[textshort] = 'Learn about Chicago through its libraries and schools in these photographs dating from the 1860s through the 1990s.';
         $LibEd[textlong] = 'Learn about Chicago through its libraries and schools in these photographs dating from the 1860s through the 1990s.';
-        $LibEd[textrich] = 'Explore Chicago&rsquo;s development, from the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Water+tank/field/subjed/mode/all/conn/and/order/nosort">circular water tank</a> that housed the first Chicago Public Library to <a href="http://digital.chipublib.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/exterior%20view%20school/field/all/mode/all/conn/and/order/title/ad/asc">school building exteriors</a> from the second half of the 19th century through the first half of 20th century. Feel the energy of its <a href="http://digital.chipublib.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/high%20school%20band/field/all/mode/all/conn/and/order/title/ad/asc">high school bands</a> and see its <a href="http://digital.chipublib.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/sports/field/all/mode/all/conn/and/order/title/ad/asc">sports teams and athletes</a> in action.';
+        $LibEd[textrich] = 'Explore Chicago&rsquo;s development, from the <a href="http://cdm16818.contentdm.oclc.org/digital/search/collection/woop/searchterm/Water+tank/field/subjed/mode/all/conn/and/order/nosort">circular water tank</a> that housed the first Chicago Public Library to <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/exterior%20view%20school/field/all/mode/all/conn/and/order/title/ad/asc">school building exteriors</a> from the second half of the 19th century through the first half of 20th century. Feel the energy of its <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/high%20school%20band/field/all/mode/all/conn/and/order/title/ad/asc">high school bands</a> and see its <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/rvw!woop!bar!ahs/searchterm/sports/field/all/mode/all/conn/and/order/title/ad/asc">sports teams and athletes</a> in action.';
         $LibEd[CPLRes] = array(array('a'=>'https://www.chipublib.org/blogs/category/chicago-history/','dt'=>'Chicago History Blog Posts','dd'=>'Written by CPL librarians and staff.'), 
             array('a'=>'https://www.chipublib.org/archival_subject/chicago-public-library/','dt'=>'Finding Aids: Chicago Public Library','dd'=>'Descriptive inventories of the archival collections documenting the development of Chicago Public Library.'),
             array('a'=>'https://www.chipublib.org/archival_subject/education/','dt'=>'Finding Aids: Education','dd'=>'Descriptive inventories of the archival collections of educators, schools and more.'));
@@ -1232,9 +1232,9 @@
     $Neigh[title] = 'Chicago Neighborhoods';
         $Neigh[shortname] = 'Neighborhoods';
         $Neigh[sidebarname] = 'Neighborhoods';
-        //$Neigh[pic] = 'http://digital.chipublib.org/digital/api/singleitem/image/cfc/104/default.jpg'; //alternate
+        //$Neigh[pic] = 'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cfc/104/default.jpg'; //alternate
         $Neigh[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/cfc/138/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/cfc/138/default.jpg',
             'pich'=>'230px',
             'size'=>'110%',
             'pos'=>'50% 50%',
@@ -1243,7 +1243,7 @@
         $Neigh[textshort] = 'Experience daily life in Chicago neighborhoods through photographs of street scenes, businesses, residences and portraits, 1860s to the present.';
         $Neigh[textlong] = 'Connect with the residents of Chicago and their stories through these fascinating photographs dating from the 1860s through the 1990s.';
         $Neigh[catcoll] = 'that center around Chicago&rsquo;s neighborhoods';
-        $Neigh[textrich] = '<p>This collection documents how Chicagoans lived their daily lives and how their neighborhoods changed and evolved over time.  Go back to <a href="http://digital.chipublib.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/schools/field/subjec/mode/all/conn/and/order/nosort/ad/asc">school</a>, revisit favorite <a href="http://digital.chipublib.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/restaurants%20--%20illinois%20--%20chicago/field/subjec/mode/all/conn/and/order/title/ad/asc">restaurants</a>, salute <a href="http://digital.chipublib.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/military/field/subjec/mode/all/conn/and/order/nosort">members of the military</a> or just <a href="http://digital.chipublib.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/transportation/field/subjec/mode/all/conn/and/order/nosort">ride around the city</a>.  Every neighborhood tells a story!</p>';
+        $Neigh[textrich] = '<p>This collection documents how Chicagoans lived their daily lives and how their neighborhoods changed and evolved over time.  Go back to <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/schools/field/subjec/mode/all/conn/and/order/nosort/ad/asc">school</a>, revisit favorite <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/restaurants%20--%20illinois%20--%20chicago/field/subjec/mode/all/conn/and/order/title/ad/asc">restaurants</a>, salute <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/military/field/subjec/mode/all/conn/and/order/nosort">members of the military</a> or just <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/dtd!hdg!rwk!cfc!ahs!rvw/searchterm/transportation/field/subjec/mode/all/conn/and/order/nosort">ride around the city</a>.  Every neighborhood tells a story!</p>';
         $Neigh[CPLRes] = array(array('a'=>'https://www.chipublib.org/blogs/category/chicago-history/','dt'=>'Chicago History Blog Posts','dd'=>'Written by CPL librarians and staff.'), 
                                 array('a'=>'https://www.chipublib.org/archival_subject/neighborhoods/','dt'=>'Finding Aids','dd'=>'Descriptive inventories of the archival collections of community associations, religious organizations, high schools, notable Chicagoans and more'));
         $Neigh[mainimage] = array('url'=>'107',
@@ -1278,7 +1278,7 @@
         $Parks[shortname] = 'Parks';
         $Parks[sidebarname] = 'Parks';
         $Parks[cardpic] = array(
-            'pic'=>'http://digital.chipublib.org/digital/api/singleitem/image/ChicagoParks/1626/default.jpg',
+            'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/ChicagoParks/1626/default.jpg',
             'pich'=>'250px',
             'size'=>'110%',
             'pos'=>'center',
@@ -1286,7 +1286,7 @@
         );
         $Parks[textshort] = 'Visit Chicago&rsquo;s parks that emerged from a single, hard-fought-for narrow strip of land along the lakefront in 1836 to more than 500 parks today.';
         $Parks[textlong] = 'Parks have always been a part of Chicago’s city planning. Explore their growth and development from six large parks begun around 1870 to over 500 today.';
-        $Parks[textrich] = '<p>While Chicago&rsquo;s <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/Grant%20Park!Lincoln%20Park!zoo%20hamlin!Millennium%20Park/field/descri!descri!all!all/mode/exact!exact!none!all/conn/or!or!or!and/order/nosort/ad/asc">lakefront parks</a> are popular with residents and tourists alike, public green space abounds in many parts of the city. Take in <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/lagoons/field/all/mode/all/conn/and/order/nosort/ad/asc/page/10">lagoons</a>, <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/prairie/field/all/mode/all/conn/and/order/nosort/ad/asc/page/6">prairies</a>, wetlands and woodlands across the urban landscape. Peek into <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/fieldhouses%20!field%20houses/field/all!all/mode/all!all/conn/or!and/order/nosort/ad/asc">field houses</a> and <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/refectories%20refectory/field/all/mode/any/conn/and/order/nosort/ad/asc">refectories</a>. Gaze at <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/bridges!park/field/all!all/mode/all!all/conn/and!and/order/nosort/ad/asc">bridges</a>, <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/pergolas%20pergola/field/all/mode/any/conn/and/order/nosort/ad/asc/page/3">pergolas</a> and <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/fountains/field/all/mode/any/conn/and/order/nosort/ad/asc">fountains</a>, from the utilitarian to the ornate. Observe how Chicagoans and visitors engage with the parks in all seasons by <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/bicycle*%20park/field/all/mode/all/conn/and/order/nosort/ad/asc/page/6">biking</a>, <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/ice%20skating/field/all/mode/all/conn/and/order/nosort/ad/asc">ice skating</a>, <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/sledding!sleds/field/all!all/mode/all!all/conn/or!and/order/nosort/ad/asc">sledding</a>, <a href="http://digital.chipublib.org/digital/search/collection/ChicagoParks!mpu/searchterm/archery/field/all/mode/all/conn/and/order/nosort/ad/asc/page/2">competing in archery</a>, <a href="http://digital.chipublib.org/digital/collection/mpu/search/searchterm/frankel%20plates/field/all/mode/all/conn/and/order/nosort/ad/asc">taking selfies</a>, <a href="http://digital.chipublib.org/digital/search/collection/mpu!cr!dtd!rvw!wha!woop!rwk!ahs!cfc!ChicagoParks/searchterm/celebrations%20park/field/all/mode/all/conn/or/order/nosort/ad/asc">celebrating events</a> and more.</p>';
+        $Parks[textrich] = '<p>While Chicago&rsquo;s <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/Grant%20Park!Lincoln%20Park!zoo%20hamlin!Millennium%20Park/field/descri!descri!all!all/mode/exact!exact!none!all/conn/or!or!or!and/order/nosort/ad/asc">lakefront parks</a> are popular with residents and tourists alike, public green space abounds in many parts of the city. Take in <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/lagoons/field/all/mode/all/conn/and/order/nosort/ad/asc/page/10">lagoons</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/prairie/field/all/mode/all/conn/and/order/nosort/ad/asc/page/6">prairies</a>, wetlands and woodlands across the urban landscape. Peek into <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/fieldhouses%20!field%20houses/field/all!all/mode/all!all/conn/or!and/order/nosort/ad/asc">field houses</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/refectories%20refectory/field/all/mode/any/conn/and/order/nosort/ad/asc">refectories</a>. Gaze at <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/bridges!park/field/all!all/mode/all!all/conn/and!and/order/nosort/ad/asc">bridges</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/pergolas%20pergola/field/all/mode/any/conn/and/order/nosort/ad/asc/page/3">pergolas</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/fountains/field/all/mode/any/conn/and/order/nosort/ad/asc">fountains</a>, from the utilitarian to the ornate. Observe how Chicagoans and visitors engage with the parks in all seasons by <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/bicycle*%20park/field/all/mode/all/conn/and/order/nosort/ad/asc/page/6">biking</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/ice%20skating/field/all/mode/all/conn/and/order/nosort/ad/asc">ice skating</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/sledding!sleds/field/all!all/mode/all!all/conn/or!and/order/nosort/ad/asc">sledding</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/ChicagoParks!mpu/searchterm/archery/field/all/mode/all/conn/and/order/nosort/ad/asc/page/2">competing in archery</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/collection/mpu/search/searchterm/frankel%20plates/field/all/mode/all/conn/and/order/nosort/ad/asc">taking selfies</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/mpu!cr!dtd!rvw!wha!woop!rwk!ahs!cfc!ChicagoParks/searchterm/celebrations%20park/field/all/mode/all/conn/or/order/nosort/ad/asc">celebrating events</a> and more.</p>';
         $Parks[catcoll] = 'that focus on Chicago&rsquo;s parks';
         $Parks[CPLRes] = array(array('a'=>'https://www.chipublib.org/?post_type=post&s=parks','dt'=>'Park Blog Posts','dd'=>'Written by CPL librarians and staff.'));
         $Parks[findingaid] = array(array('link'=>'https://www.chipublib.org/fa-chicago-park-district-records/','text'=>'Chicago Park District Records: Drawings Finding Aid'),
@@ -1343,10 +1343,10 @@
         $CPB01[category] = '';
         $CPB01[textshort] = 'Playbills and programs for drama, opera, vaudeville, dance and music at early Chicago theaters, 1848-1922.';
         $CPB01[textlong] = 'Theater collections at Chicago Public Library document a vibrant local theater community.';
-        $CPB01[textrich] = '<p>Become a playgoer at Chicago&rsquo;s early theaters. Examine more than 2,000 playbills and programs dating from 1848 to 1922. Of special interest are playbills from shows starring <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Booth%2C%20Edwin%2C%201833-1893/field/contri/mode/all/conn/and/order/title/ad/asc">Edwin Booth</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Jefferson%2C%20Joseph%2C%201829-1905/field/contri/mode/all/conn/and/order/title/ad/asc">Joseph Jefferson</a> and <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/Bernhardt%2C%20Sarah%2C%201844-1923/field/contri/mode/all/conn/and/order/title/ad/asc">Sarah Bernhardt</a> at the well-known <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/mcvicker\'s/field/theata/mode/all/conn/and/order/title/ad/asc">McVicker&rsquo;s Theatre</a> as well as playbills from vaudeville houses and neighborhood theaters.</p><p>Alongside traditional plays and musical works, numerous genres are represented in the collection, including <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/extravaganzas%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">extravaganzas</a>, <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/juggling%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">juggling</a> and <a href="http://digital.chipublib.org/digital/collection/CPB01/search/searchterm/magic%20--%20illinois%20--%20chicago/field/genre/mode/exact/conn/and/order/title/ad/asc">magic shows</a>, among others.</p>';
+        $CPB01[textrich] = '<p>Become a playgoer at Chicago&rsquo;s early theaters. Examine more than 2,000 playbills and programs dating from 1848 to 1922. Of special interest are playbills from shows starring <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/Booth%2C%20Edwin%2C%201833-1893/field/contri/mode/all/conn/and/order/title/ad/asc">Edwin Booth</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/Jefferson%2C%20Joseph%2C%201829-1905/field/contri/mode/all/conn/and/order/title/ad/asc">Joseph Jefferson</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/Bernhardt%2C%20Sarah%2C%201844-1923/field/contri/mode/all/conn/and/order/title/ad/asc">Sarah Bernhardt</a> at the well-known <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/mcvicker\'s/field/theata/mode/all/conn/and/order/title/ad/asc">McVicker&rsquo;s Theatre</a> as well as playbills from vaudeville houses and neighborhood theaters.</p><p>Alongside traditional plays and musical works, numerous genres are represented in the collection, including <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/extravaganzas%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">extravaganzas</a>, <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/juggling%20--%20illinois%20--%20chicago/field/genre/mode/all/conn/and/order/title/ad/asc">juggling</a> and <a href="https://cdm16818.contentdm.oclc.org/digital/collection/CPB01/search/searchterm/magic%20--%20illinois%20--%20chicago/field/genre/mode/exact/conn/and/order/title/ad/asc">magic shows</a>, among others.</p>';
         $CPB01[rights] = 'The Historic Programs digital collection is made possible by a generous grant from the Gaylord and Dorothy Donnelley Foundation through the <a href="http://cplfoundation.org/">Chicago Public Library Foundation</a>.';
-        // $CPB01[highlights] = array(array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/','dt'=>'Chicago Theater Collection-Historic Playbills','dd'=>'Programs, playbills and newspaper clippings from more than 5,000 productions at Chicago&rsquo;s historic theaters dating back to the 1840s.'),
-                                    // array('a'=>'http://digital.chipublib.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc','dt'=>'E.B. Gould Programs Collection','dd'=>'The annotated programs of a local Chicago businessman and enthusiastic playgoer.'));
+        // $CPB01[highlights] = array(array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/','dt'=>'Chicago Theater Collection-Historic Playbills','dd'=>'Programs, playbills and newspaper clippings from more than 5,000 productions at Chicago&rsquo;s historic theaters dating back to the 1840s.'),
+                                    // array('a'=>'https://cdm16818.contentdm.oclc.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc','dt'=>'E.B. Gould Programs Collection','dd'=>'The annotated programs of a local Chicago businessman and enthusiastic playgoer.'));
         $CPB01[CPLRes] = array(array('a'=>'https://www.chipublib.org/fa-chicago-theater-collection-historic-programs/','dt'=>'Chicago Theater Collection-Historic Programs Finding Aid','dd'=>'The complete and ever-increasing inventory of theater programs past and present, some of which are presented here.'),
                                 array('a'=>'https://www.chipublib.org/archival_subject/theater/','dt'=>'Chicago Theater Collection','dd'=>'A list of collections at Chicago Public Library representing theaters, designers, actors and other members of the theater community.'));
         $CPB01[mainimage] = array('url'=>'6053',

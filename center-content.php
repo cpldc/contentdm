@@ -9,17 +9,17 @@
 							<!-- Dear w3c, if you built a image crop that actually works, I wouldn't have to do nonsense like make an image the background of an image with no src.  Love, CPLDC. -->
 						<?php 
 							if ($PAGE[type] == 'collection'){
-								$mainImgUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $PAGE[coll] . '/' . $PAGE[mainimage][url] . '/default.jpg';
-								$mainImgTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
+								$mainImgUrl = 'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/' . $PAGE[coll] . '/' . $PAGE[mainimage][url] . '/default.jpg';
+								$mainImgTitle = '<a href=https://cdm16818.contentdm.oclc.org/digital/collection/' . $PAGE[coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
 							} elseif ($PAGE[link] == 'MRC') {
 								$mainImgUrl = $PAGE[mainimage][url];
 								$mainImgTitle = $PAGE[mainimage][text];
 							} elseif ($PAGE[link] == 'Harsh') {
 								$mainImgUrl = 'https://cdm16818.contentdm.oclc.org/customizations/global/pages/ASNLH.jpg';
-								$mainImgTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[mainimage][coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
+								$mainImgTitle = '<a href=https://cdm16818.contentdm.oclc.org/digital/collection/' . $PAGE[mainimage][coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
 							} else {
-								$mainImgUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $PAGE[mainimage][coll] . '/' . $PAGE[mainimage][url] . '/default.jpg';
-								$mainImgTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[mainimage][coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
+								$mainImgUrl = 'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/' . $PAGE[mainimage][coll] . '/' . $PAGE[mainimage][url] . '/default.jpg';
+								$mainImgTitle = '<a href=https://cdm16818.contentdm.oclc.org/digital/collection/' . $PAGE[mainimage][coll] . '/id/' . $PAGE[mainimage][url] . '>' . $PAGE[mainimage][text] . '</a>';
 							}
 							echo '<a class="center-images-main" href="' . $mainImgUrl . '" data-caption="' . $mainImgTitle . '" data-alt="' . $PAGE[mainimage][alt] . '" title="' . strip_tags(html_entity_decode($PAGE[mainimage][text])) . '" ><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="background: url(' . $mainImgUrl . '); background-size: ' . $PAGE[mainimage][size] . '; background-position: ' . $PAGE[mainimage][align] . ' !important;"  class="lightbox-main-img" alt="' . $PAGE[mainimage][alt] . '"></a>';
 							if (strpos($PAGE[mainimage][url],'mpu') !== false ) {
@@ -33,11 +33,11 @@
 								$i = 1;
 							foreach ($PAGE[thumbs] as $key => $val) {
 								if ($PAGE[type] == 'collection'){
-									$thumbUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $PAGE[coll] . "/" . $val[url] . '/default.jpg';
-									$thumbTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $PAGE[coll] . "/id/" . $val[url] . '>' . $val[text] . '</a>';
+									$thumbUrl = 'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/' . $PAGE[coll] . "/" . $val[url] . '/default.jpg';
+									$thumbTitle = '<a href=https://cdm16818.contentdm.oclc.org/digital/collection/' . $PAGE[coll] . "/id/" . $val[url] . '>' . $val[text] . '</a>';
 								} else {
-									$thumbUrl = 'http://digital.chipublib.org/digital/api/singleitem/image/' . $val[coll] . "/" . $val[url] . '/default.jpg';
-									$thumbTitle = '<a href=http://digital.chipublib.org/digital/collection/' . $val[coll] . "/id/" . $val[url] . '>' . $val[text] . '</a>';
+									$thumbUrl = 'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/' . $val[coll] . "/" . $val[url] . '/default.jpg';
+									$thumbTitle = '<a href=https://cdm16818.contentdm.oclc.org/digital/collection/' . $val[coll] . "/id/" . $val[url] . '>' . $val[text] . '</a>';
 								}
 								if ($i < 3){
 									echo '<div class="col lightbox-thumb-wrapper"';
@@ -63,10 +63,10 @@
 		<section aria-label="Collection Description">
 				<?php 
 					if ($PAGE[coll]) {
-						echo '<div class="center-button browseall"><a href="http://digital.chipublib.org/digital/collection/' . $PAGE[coll] . '/search" class="btn btn-primary">Browse All</a></div>';
+						echo '<div class="center-button browseall"><a href="https://cdm16818.contentdm.oclc.org/digital/collection/' . $PAGE[coll] . '/search" class="btn btn-primary">Browse All</a></div>';
 					} else {
 						if (!$COLL == ''){
-							echo '<div class="center-button browseall"><a href="http://digital.chipublib.org/digital/search/collection/' . $COLL . '/order/title/ad/asc" class="btn btn-primary">Browse All</a></div>';
+							echo '<div class="center-button browseall"><a href="https://cdm16818.contentdm.oclc.org/digital/search/collection/' . $COLL . '/order/title/ad/asc" class="btn btn-primary">Browse All</a></div>';
 						}
 					}
                     if ($PAGE[textrich]) {

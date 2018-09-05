@@ -40,7 +40,7 @@
         <h2>Order a Photo Reproduction</h2>
         <dl>
             <dt><a href="https://www.chipublib.org/order-a-photo-reproduction/">Photo Reproduction Order Form</a></dt>
-            <dd class="about-contact about-contact-p-last">We offer photo reproductions from our <a href="https://www.chipublib.org/archives-collections/">archival collections </a> and <a href="http://digital.chipublib.org/digital">digital collections.</a></dd>
+            <dd class="about-contact about-contact-p-last">We offer photo reproductions from our <a href="https://www.chipublib.org/archives-collections/">archival collections </a> and <a href="https://cdm16818.contentdm.oclc.org/digital">digital collections.</a></dd>
         </dl>
         <h2>Copyright</h2>
             <p class="about-contact-p about-contact-p-first">Usage, transmission, downloading or reproduction of protected items beyond that allowed by Fair Use Copyright Law requires the written permission of the copyright owners. When possible, CPL provides information about copyright owners and restrictions concerning its collections.</p>
