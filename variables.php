@@ -233,6 +233,7 @@
     // subcollections have to come before collections, because their arrays are passed into the "subcollections" variable of their parent collection
     // subcollections might eventually extend a constructor because they share so many values with each other, but not now
     // subcollections will not get cards or landing pages
+    $EBG[filename] = 'EBG';
     $EBG[title] = 'E.B. Gould Programs Collection';
         $EBG[sortname] = 'Gould, E.B. Programs Collection';
         $EBG[textlong] = 'See <a class="all-links" href="#CPB01">Chicago Theater</a>.';
@@ -240,14 +241,16 @@
         $EBG[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs-E.B.%20Gould%3B/field/all/mode/all/conn/and/order/title/ad/asc';
         $EBG[type] = 'subcollection';
 
-    $Playbills[title] = 'Chicago Theater Collection-Historic Playbills';
+    $Playbills[filename] = 'Playbills';
+        $Playbills[title] = 'Chicago Theater Collection-Historic Playbills';
         $Playbills[sortname] = 'Chicago Theater Collection-Historic Playbills';
         $Playbills[textlong] = 'See <a class="all-links" href="#CPB01">Chicago Theater</a>.';
         $Playbills[textshort] = 'Programs, playbills and newspaper clippings from more than 2,000 productions at Chicago’s historic theaters dating back to the 1840s.';
         $Playbills[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/CPB01/searchterm/Chicago%20Theater%20Collection-Historic%20Programs/field/all/mode/exact/conn/and/';
         $Playbills[type] = 'subcollection';
                 
-    $Amund[title] = 'Amundsen High School Collection';
+    $Amund[filename] = 'Amund';
+        $Amund[title] = 'Amundsen High School Collection';
         $Amund[sortname] = 'Amundsen High School Collection';
         $Amund[textlong] = 'See <a class="all-links" href="#ahs">Northside High Schools</a>.';
         $Amund[textshort] = 'The Winnemac Park school opened in its doors in 1930. Cheer on their football team as they do battle with Taft High School.';
@@ -255,7 +258,8 @@
         $Amund[link] = '#ahs';
         $Amund[type] = 'subcollection';
 
-    $Kins[title] = 'Helen G. Kinsella Collection';
+    $Kins[filename] = 'Kins';
+        $Kins[title] = 'Helen G. Kinsella Collection';
         $Kins[sortname] = 'Kinsella, Helen G. Collection';
         $Kins[textlong] = 'See <a class="all-links" href="#ahs">Northside High Schools</a>.';
         $Kins[textshort] = 'Dramatic productions and other activities led by the award-winning Lake View High School drama and public speaking teacher.';
@@ -263,7 +267,8 @@
         $Kins[link] = '#ahs';
         $Kins[type] = 'subcollection';
 
-    $LVHS[title] = 'Lake View High School Collection';
+    $LVHS[filename] = 'LVHS';
+        $LVHS[title] = 'Lake View High School Collection';
         $LVHS[sortname] = 'Lake View High School Collection';
         $LVHS[textlong] = 'See <a class="all-links" href="#ahs">Northside High Schools</a>.';
         $LVHS[textshort] = 'Academics and extracurriculars at the first high school in Lake View Township.';
@@ -271,7 +276,8 @@
         $LVHS[link] = '#ahs';
         $LVHS[type] = 'subcollection';
 
-    $Walz[title] = 'Louis D. Walz Collection';
+    $Walz[filename] = 'Walz';
+        $Walz[title] = 'Louis D. Walz Collection';
         $Walz[sortname] = 'Walz, Louis D. Collection';
         $Walz[textlong] = 'See <a class="all-links" href="#ahs">Northside High Schools</a>.';
         $Walz[textshort] = 'The life of the long-time director of the Lake View High School band and World War I veteran.';
@@ -279,7 +285,8 @@
         $Walz[link] = '#ahs';
         $Walz[type] = 'subcollection';
 
-    $CFCC[title] = 'Christian Fellowship Church Collection';
+    $CFCC[filename] = 'CFCC';
+        $CFCC[title] = 'Christian Fellowship Church Collection';
         $CFCC[sortname] = 'Christian Fellowship Church Collection';
         $CFCC[textlong] = 'See <a class="all-links" href="#cfc">Northside Clubs and Organizations</a>.';
         $CFCC[textshort] = 'Activities of the church founded by Conrad and Martha Wendtland in their home in 1926.';
@@ -287,16 +294,18 @@
         $CFCC[link] = '#cfc';
         $CFCC[type] = 'subcollection';
 
-    // $LVCRA[title] = 'Lake View Council on Religious Action';
+    $LVCRA[filename] = 'LVCRA';
+        $LVCRA[title] = 'Lake View Council on Religious Action';
         // removed due to rights concerns; inactive in contentDM
-        // $LVCRA[sortname] = 'Lake View Council on Religious Action';
-        // $LVCRA[textlong] = 'See <a class="all-links" href="#cfc">Northside Clubs and Organizations</a>.';
-        // $LVCRA[textshort] = 'Representatives from local churches and synagogues and members of the Kiwanis Club of Lake View at work.';
-        // $LVCRA[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort';
-        // $LVCRA[link] = '#cfc';
-        // $LVCRA[type] = 'subcollection';
+        $LVCRA[sortname] = 'Lake View Council on Religious Action';
+        $LVCRA[textlong] = 'See <a class="all-links" href="#cfc">Northside Clubs and Organizations</a>.';
+        $LVCRA[textshort] = 'Representatives from local churches and synagogues and members of the Kiwanis Club of Lake View at work.';
+        $LVCRA[browse] = 'https://cdm16818.contentdm.oclc.org/digital/search/collection/cfc/searchterm/Christian+Fellowship+Church/field/collec/mode/all/conn/and/order/nosort';
+        $LVCRA[link] = '#cfc';
+        $LVCRA[type] = 'subcollection';
 
-    $PortPark[title] = 'Portage Park Community Collection';
+    $PortPark[filename] = 'PortPark';
+        $PortPark[title] = 'Portage Park Community Collection';
         $PortPark[sortname] = 'Portage Park Community Collection';
         $PortPark[textlong] = 'See <a class="all-links" href="#cfc">Northside Clubs and Organizations</a>.';
         $PortPark[textshort] = 'Patriotism on display during World War I.';
@@ -304,7 +313,8 @@
         $PortPark[link] = '#cfc';
         $PortPark[type] = 'subcollection';
 
-    $RMIA[title] = 'Ravenswood Manor Improvement Association Collection';
+    $RMIA[filename] = 'RMIA';
+        $RMIA[title] = 'Ravenswood Manor Improvement Association Collection';
         $RMIA[sortname] = 'Ravenswood Manor Improvement Association Collection';
         $RMIA[textlong] = 'See <a class="all-links" href="#cfc">Northside Clubs and Organizations</a>.';
         $RMIA[textshort] = 'Community activism in the North Side riverfront neighborhood.';
@@ -312,7 +322,8 @@
         $RMIA[link] = '#cfc';
         $RMIA[type] = 'subcollection';
 
-    $HWR[title] = 'Washington, Harold';
+    $HWR[filename] = 'HWR';
+        $HWR[title] = 'Washington, Harold';
         $HWR[sortname] = 'Washington, Harold';
         $HWR[textlong] = 'See <a class="all-links" href="#rhwc">Remembering Harold Washington</a>';
         $HWR[link] = '#rhwc';
@@ -323,7 +334,10 @@
     $examiner[title] = 'Chicago Examiner';
         $examiner[coll] = 'examiner';
         $examiner[sortname] = 'Chicago Examiner';
-        $examiner[cardpic] = array('pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/examiner/5449/default.jpg','pich'=>'19rem','size'=>'110% auto','pos'=>'50% -15px');
+        $examiner[cardpic] = array('pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/examiner/5449/default.jpg',
+            'pich'=>'19rem',
+            'size'=>'110% auto',
+            'pos'=>'50% -15px');
         $examiner[category] = 'Newspapers';
         $examiner[textshort] = 'Chicago Public Library&rsquo;s 10-year run of the <i>Chicago Examiner</i> extends from 1908 to 1918 and represents the longest run of the Hearst newspaper still available.';
         $examiner[textlong] = 'The Chicago Examiner was one of a dozen major newspapers published in Chicago at the turn of the last century. It was known for its sensational news stories.';
@@ -414,8 +428,7 @@
             'pich'=>'200px;',
             'size'=>'100%',
             'pos'=>'50% -20px',
-            'alt'=>'View of Michigan Avenue and Washington Street sides of the original Chicago Public Library Central Library.'
-        );
+            'alt'=>'View of Michigan Avenue and Washington Street sides of the original Chicago Public Library Central Library.');
         $woop[category] = 'Libraries &amp; Education';
         $woop[textshort] = 'Photographs trace CPL&rsquo;s history from a small water tank that survived the Great Chicago Fire to the extensive network of neighborhood libraries that span the city today.';
         $woop[textlong] = 'On January 1, 1873 the Chicago Public Library opened its doors in a water tank that had survived the Great Chicago Fire of 1871. These photographs trace our history from that small structure to the development of neighborhood libraries across the city.';
@@ -458,8 +471,7 @@
             'pich'=>'20rem',
             'size'=>'100%',
             'pos'=>'auto',
-            'alt'=>'Margaret Walker\'s face, smiling'
-        );
+            'alt'=>'Margaret Walker\'s face, smiling');
         $cr[category] = 'African Americans';
         $cr[textshort] = 'African American community leaders, performers, artists, writers and activists on Chicago&rsquo;s South Side, 1930-1950.';
         $cr[textlong] = 'The Black Chicago Renaissance was a creative movement when activism and scholarship flourished with the prodigious work of African American community leaders, performers, artists, writers and activists.';
@@ -508,8 +520,7 @@
             'pich'=>'200px',
             'size'=>'120%',
             'pos'=>'50% -20px',
-            'alt'=>'Three men working on an unfinished sewer.'
-        );
+            'alt'=>'Three men working on an unfinished sewer.');
         $dtd[category] = 'Neighborhoods';
         $dtd[textshort] = 'Photographs of sewer systems and passageways from 1925 to 1949 offer a rare look at the underbelly of Chicago.';
         $dtd[textlong] = 'The sewer systems and passageways that lie beneath our feet are critical to the health and well being of the city. Offering a rare look at the “underbelly” of Chicago, this collection of historical images features construction photographs of sewers and tunnels.';
@@ -555,8 +566,7 @@
             'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/wha/341/default.jpg',
             'pich'=>'280px',
             'size'=>'110%',
-            'pos'=>'50% 40%'
-        );
+            'pos'=>'50% 40%');
         $wha[category] = 'Civil War';
         $wha[textshort] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield.';
         $wha[textlong] = 'Camp equipment, weaponry and uniforms used on the homefront and the battlefield, with a focus on the Illinois experience.';
@@ -602,8 +612,7 @@
             'pich'=>'250px',
             'size'=>'110%',
             'pos'=>'50% 50%',
-            'alt'=>'Five men from the fire department pose with a fire engine. Three are standing, and two are riding in the vehicle. One of the men has a white shirt and tie. Part of the fire house and two neighboring houses are pictured in the background'
-        );
+            'alt'=>'Five men from the fire department pose with a fire engine. Three are standing, and two are riding in the vehicle. One of the men has a white shirt and tie. Part of the fire house and two neighboring houses are pictured in the background');
         $hdg[category] = 'Neighborhoods';
         $hdg[textshort] = 'Photographs by Henry Green of businesses, community groups, neighborhood celebrations and school events on Chicago&rsquo;s North Side, 1943-1951.';
         $hdg[textlong] = 'Chicago Public Library&rsquo;s Northside Neighborhood History Collection houses the photographs of Henry Green, a commercial photographer on Chicago&rsquo;s North Side.';
@@ -648,8 +657,7 @@
             'pich'=>'210px',
             'size'=>'100%',
             'pos'=>'50% 50%',
-            'alt'=>'The front of a two-story duplex viewed from the street.  Two people sit at the entrance to one of the homes.'
-        );
+            'alt'=>'The front of a two-story duplex viewed from the street.  Two people sit at the entrance to one of the homes.');
         $rwk[category] = 'Neighborhoods';
         $rwk[textshort] = 'Local photographer Robert Krueger documented Chicago&rsquo;s North Side with photographs of community events, buildings and people.';
         $rwk[textlong] = 'In 1984, the Library began working with local photographer Robert Krueger to document the North Side.';
@@ -696,8 +704,7 @@
             'pich'=>'240px',
             'size'=>'130%',
             'pos'=>'35% 50%',
-            'alt'=>'Completed assembly of Cloud Gate, also known as The Bean, outside in Millennium Park. SBC Plaza is still under construction and there is construction equipment scattered around. The tall buildings of Michigan Avenue are visible behind the sculpture.'
-        );
+            'alt'=>'Completed assembly of Cloud Gate, also known as The Bean, outside in Millennium Park. SBC Plaza is still under construction and there is construction equipment scattered around. The tall buildings of Michigan Avenue are visible behind the sculpture.');
         $mpu[category] = 'Parks';
         $mpu[textshort] = 'See a rail yard transform into a dynamic urban park.';
         $mpu[textlong] = 'Watch the Millennium Park site transform from an industrial wasteland to a new urban park of world renown from 1999-2005, under the project management of U.S. Equities Realty and acclaimed architects, engineers and artists.';
@@ -746,8 +753,7 @@
             'pich'=>'240px',
             'size'=>'175%',
             'pos'=>'20% 55%',
-            'alt'=>'A juggler performs for onlooking children; a balloon floats in the foreground.'
-        );
+            'alt'=>'A juggler performs for onlooking children; a balloon floats in the foreground.');
         $cfc[mainimage] = array('url'=>'24',
             'text'=>'Christian Fellowship Church, picnic at Schiller Park woods, 1930',
             'size'=>'125%',
@@ -798,8 +804,7 @@
             'pich'=>'250px',
             'size'=>'110%',
             'pos'=>'0% 45%',
-            'alt'=>'Lake View High School baseball team, seated for posed photograph, 1893'
-        ); 
+            'alt'=>'Lake View High School baseball team, seated for posed photograph, 1893'); 
         $ahs[mainimage] = array('url'=>'634',
             'text'=>'Captain Louis D. Walz and Lake View High School drum major and majorettes, 1942',
             'size'=>'110%',
@@ -845,8 +850,7 @@
             'pic'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/ChicagoParks/1254/default.jpg',
             'pich'=>'250px',
             'size'=>'250%',
-            'pos'=>'87% 47%'
-        );
+            'pos'=>'87% 47%' );
         $ChicagoParks[mainimage] = array('url'=>'6155',
             'text'=>'Mayor Richard J. Daley and Dr. Paul White, Ogden Park, opening of bicycle program, 1956',
             'size'=>'125%',
@@ -881,8 +885,6 @@
             array('link'=>'https://www.chipublib.org/fa-chicago-park-district-records/','text'=>'Chicago Park District Records: Drawings'));
         $ChicagoParks[CPLRes] = array(array('a'=>'https://www.chipublib.org/tag/chicago-park-district/','dt'=>'Chicago Park District Blog Posts','dd'=>'Written by CPL librarians and staff'));
         $ChicagoParks[link] = 'ChicagoParks';
-        // $ChicagoParks[textshort] = 'Chicago Public Library is currently finalizing photographs from the  Chicago Park District Records, which will be available in spring 2018.';
-        // $ChicagoParks[textlong] = 'Chicago Public Library is currently finalizing the Chicago Park District Records: Photographs digital collection. It will be completed in spring 2018, but you can search many of the photographs now.';
         $ChicagoParks[location] = $HWLCSC;
         $ChicagoParks[homeloc] = 'HWLCSC';
         $ChicagoParks[type] = 'collection';
@@ -897,8 +899,7 @@
             'pich'=>'250px',
             'size'=>'200%',
             'pos'=>'75% 40%',
-            'alt'=>'Mayor Washington smiles and points to the crowd while riding on the back of a convertible.'
-        );
+            'alt'=>'Mayor Washington smiles and points to the crowd while riding on the back of a convertible.');
         $rhwc[category] = 'African Americans';
         $rhwc[textshort] = 'Chicago&rsquo;s first African American mayor served from 1983 to 1987, and his legacy endures.';
         $rhwc[textlong] = 'Mayor Harold Washington, the first African American mayor of Chicago, transformed the city during his years in office (1983-1987).';
@@ -954,8 +955,7 @@
             'pich'=>'250px',
             'size'=>'250%',
             'pos'=>'24% 45%',
-            'alt'=>'A man seated at a soda counter, looking into his drink.  He is wearing a bowler hat high on his head.'
-        );
+            'alt'=>'A man seated at a soda counter, looking into his drink.  He is wearing a bowler hat high on his head.');
         $rvw[category] = 'Neighborhoods';
         $rvw[textshort] = 'Street scenes and community life on the North Side, 1860s-1990s.';
         $rvw[textlong] = 'Lake View Township and its evolution from an independent municipality into current Northside communities, 1860s-1990s.';
@@ -1004,8 +1004,7 @@
             'pich'=>'300px',
             'size'=>'190%',
             'pos'=>'20% 25%',
-            'alt'=>'Woodcut print featuring a portrait of a Black man surrounded with images of African Americans at work, at graduation, and walking around town. Image is from Burdens Unbound, a 1930 Methodist worship booklet.'
-        );
+            'alt'=>'Woodcut print featuring a portrait of a Black man surrounded with images of African Americans at work, at graduation, and walking around town. Image is from Burdens Unbound, a 1930 Methodist worship booklet.');
         $p16818coll6[mainimage] = array('url'=>'4',
             'text'=>'Runaway slave poster, 1854',
             'size'=>'cover',
@@ -1109,8 +1108,7 @@
             'pich'=>'280px',
             'size'=>'auto 120%',
             'pos'=>'center',
-            'alt'=>'An 1854 artillery jacket, Civil War uniform, showcased on a mannequin.'
-        );
+            'alt'=>'An 1854 artillery jacket, Civil War uniform, showcased on a mannequin.');
         $CivilWar[mainimage] = array('url'=>'231',
             'coll' => 'p16818coll6',
             'text'=>'&ldquo;Marshal&rsquo;s Sale!,&rdquo; poster for public auction of enslaved persons, 1854',
@@ -1123,22 +1121,14 @@
                 'size'=>'150%',
                 'align'=>'center 30%',
                 'alt'=>'Portrait of Pauline Cushman, handwritten text under the portrait includes &rdquo;Miss Major Pauline Cushman. Union spy&ldquo;'),
-        // $CivilWar[thumbs] = array(array('url'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/p16818coll6/37/default.jpg',
-        //         'text'=>'Reward poster for capture of runaway slave man',
-        //         'size'=>'cover',
-        //         'align'=>'center 0%'),
             array('url'=>'314',
                 'coll' => 'wha',
                 'text'=>'Sword, model 1850 staff and field officer, 1861-1865',
                 'size'=>'auto 150px',
                 'align'=>'40% 30%',
                 'alt'=>'Blade and handle of 1850 model sword.'),
-        // array('url'=>'https://cdm16818.contentdm.oclc.org/digital/api/singleitem/image/wha/721/default.jpg',
-        //     'text'=>'Uniform, artillery jacket',
-        //     'size'=>'auto 120px',
-        //     'align'=>'50% 15%'),
             array('url'=>'35',
-            'coll' => 'wha',
+                'coll' => 'wha',
                 'text'=>'Ulysses S. Grant, 1865',
                 'size'=>'120px auto',
                 'align'=>'50% 20%',
@@ -1157,8 +1147,8 @@
                                 array('a'=>'https://www.umbrasearch.org/','dt'=>'Umbra Search African American History','dd'=>''), 
                                 array('a'=>'https://dp.la/primary-source-sets/sets?tags%5B%5D=civil-war-and-reconstruction-1850-1877','dt'=>'DPLA&rsquo;s Primary Source Sets covering the Civil War and Reconstruction eras','dd'=>''));
         $CivilWar[findingaid] = array(array('link'=>'https://www.chipublib.org/fa-american-civil-war-documents-manuscripts-letters-and-diaries-and-grand-army-of-the-republic-collection/','text'=>'American Civil War Documents, Manuscripts, Letters and Diaries and Grand Army of the Republic Collection Finding Aid'),
-        array('link'=>'https://www.chipublib.org/fa-daughters-of-union-veterans-of-the-civil-war-1861-1865-records-1895-1965/','text'=>'Daughters of Union Veterans of the Civil War, 1861-1865, Records Finding Aid'),
-        array('link'=>'https://www.chipublib.org/archival_post/phillip-sang-papers/','text'=>'Philip David Sang Collection Finding Aid'));
+            array('link'=>'https://www.chipublib.org/fa-daughters-of-union-veterans-of-the-civil-war-1861-1865-records-1895-1965/','text'=>'Daughters of Union Veterans of the Civil War, 1861-1865, Records Finding Aid'),
+            array('link'=>'https://www.chipublib.org/archival_post/phillip-sang-papers/','text'=>'Philip David Sang Collection Finding Aid'));
         $CivilWar[link] = 'CivilWar';
         $CivilWar[type] = 'category';
         $CivilWar[sidebarflag] = 'x';

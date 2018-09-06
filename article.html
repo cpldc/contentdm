@@ -1,0 +1,80 @@
+
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container main-container">
+        <div class="row">
+			<div class="col-8 col-xl-6 center-content">
+                <h1>{{ article.title }}</h1>
+                <section aria-label="Introduction">
+                    <p class="center-copy-paragraph" id="intro">{{ article.textlong }}</p>
+                </section>
+                <div class="row">
+                    <div class="col-12 lightbox-main-img-div justify-content-center">
+                        <a class="center-images-main" href="http://digital.chipublib.org/digital/api/singleitem/image/{{ article.mainimagecoll }}/{{ article.mainimageurl }}/default.jpg" data-caption="<a href=http://digital.chipublib.org/digital/api/singleitem/image/{{ article.mainimagecoll }}/{{ article.mainimageurl }}>Horace Cayton with &ldquo;Blue Boy,&rdquo; 1944</a>" data-alt="{{ article.mainimagealt }}" title="{{ article.mainimagetext }}" >
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="background: url(http://digital.chipublib.org/digital/api/singleitem/image/{{ article.mainimagecoll }}/{{ article.mainimageurl }}/default.jpg); background-size: {{ article.mainimagesize }}; background-position: {{ article.mainimagealign }} !important;"  class="lightbox-main-img" alt={{ article.mainimagealt }}>
+                        </a>
+                    </div>
+                </div>
+                <div class="row lightbox-thumbs justify-content-center">
+                    <div class="col lightbox-thumb-wrapper">
+                        <a href="http://digital.chipublib.org/digital/api/singleitem/image/{{ article.thumbs1coll }}/{{ article.thumbs1url }}/default.jpg" data-caption="<a href=https://cdm16818.contentdm.oclc.org/digital/collection/{{ article.thumbs1coll }}/id/{{ article.thumbs1url }}> {{ article.thumbs1text }} </a>" data-alt="{{ article.thumbs1alt }} " title="{{ article.thumbs1text }}" >
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="background: url(http://digital.chipublib.org/digital/api/singleitem/image/{{ article.thumbs1coll }}/{{ article.thumbs1url }}/default.jpg); background-size: {{ article.thumbs1size }}; background-position: {{ article.thumbs1align }} !important;" class="lightbox-thumb" alt="{{ article.thumbs1alt }}" />
+                        </a>
+                    </div>
+                    
+                    <div class="col lightbox-thumb-wrapper">
+                        <a href="http://digital.chipublib.org/digital/api/singleitem/image/{{ article.thumbs2coll }}/{{ article.thumbs2url }}/default.jpg" data-caption="<a href=https://cdm16818.contentdm.oclc.org/digital/collection/{{ article.thumbs2coll }}/id/{{ article.thumbs2url }}> {{ article.thumbs2text }} </a>" data-alt="{{ article.thumbs2alt }} " title="{{ article.thumbs2text }}" >
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="background: url(http://digital.chipublib.org/digital/api/singleitem/image/{{ article.thumbs2coll }}/{{ article.thumbs2url }}/default.jpg); background-size: {{ article.thumbs2size }}; background-position: {{ article.thumbs2align }} !important;" class="lightbox-thumb" alt="{{ article.thumbs2alt }}" />
+                        </a>
+                    </div>
+                
+                    <div class="col lightbox-thumb-wrapper hidden-sm-down">
+                        <a href="http://digital.chipublib.org/digital/api/singleitem/image/{{ article.thumbs3coll }}/{{ article.thumbs3url }}/default.jpg" data-caption="<a href=https://cdm16818.contentdm.oclc.org/digital/collection/{{ article.thumbs3coll }}/id/{{ article.thumbs3url }}> {{ article.thumbs3text }} </a>" data-alt="{{ article.thumbs3alt }} " title="{{ article.thumbs3text }}" >
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="background: url(http://digital.chipublib.org/digital/api/singleitem/image/{{ article.thumbs3coll }}/{{ article.thumbs3url }}/default.jpg); background-size: {{ article.thumbs3size }}; background-position: {{ article.thumbs3align }} !important;" class="lightbox-thumb" alt="{{ article.thumbs3alt }}" />
+                        </a>
+                    </div>
+                    {% if article.thumbs4url %}
+                    <div class="col lightbox-thumb-wrapper  hidden-xs-down">
+                        <a href="http://digital.chipublib.org/digital/api/singleitem/image/{{ article.thumbs4coll }}/{{ article.thumbs4url }}/default.jpg" data-caption="<a href=https://cdm16818.contentdm.oclc.org/digital/collection/{{ article.thumbs4coll }}/id/{{ article.thumbs4url }}> {{ article.thumbs4text }} </a>" data-alt="{{ article.thumbs4alt }} " title="{{ article.thumbs4text }}" >
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="background: url(http://digital.chipublib.org/digital/api/singleitem/image/{{ article.thumbs4coll }}/{{ article.thumbs4url }}/default.jpg); background-size: {{ article.thumbs4size }}; background-position: {{ article.thumbs4align }} !important;" class="lightbox-thumb" alt="{{ article.thumbs4alt }}" />
+                        </a>
+                    </div>
+                    {% endif %}
+                                                            
+            </div>
+
+                <div class="center-button browseall"><a href="https://cdm16818.contentdm.oclc.org/digital/collection/' . $PAGE[coll] . '/search" class="btn btn-primary">Browse All</a></div>
+                <div class="center-copy-paragraph">
+                    {{ article.content }}
+                </div>
+                {% if article.highlightsa %}
+                    <div class="center-copy-list" {% if article.content %} style="border-top: none; padding-top: 5px;"{% endif %}>
+                        <dl>
+                            <dt>
+                                <a href="{{ article.highlightsa }}">
+                                    {{ article.highlightsdt }}
+                                </a>
+                            </dt>
+                            <dd>
+                                {{ article.highlightsdd }}
+                            </dd>
+                        </dl>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="hidden-lg-down col-lg-3 right-sidebar">
+                <div class="blogs">
+                    include blogs
+                </div>
+                <div class="events">
+                    include events
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
