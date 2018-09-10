@@ -86,10 +86,4 @@
 			</div>
 		</div>
 	</div>
-	<!-- <div class="left-sidebar-togglebutton left-sidebar-togglebutton-show hide" onclick="showLeftSidebar()">
-		<button class="">
-			<i class="fa fa-bars"></i>
-			<i class="fa fa-caret-right"></i>
-		</button>
-	</div> -->
 </div>
