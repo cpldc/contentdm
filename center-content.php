@@ -85,6 +85,8 @@
 									echo 'Artifacts from the ' . $PAGE[creditname] . ' are housed in the ' . $PAGE[location][longname] . '.';
 								} elseif ($PAGE[link] == 'hdg') {
 									echo 'This collection is housed in the ' . $PAGE[location][longname] . '.  Additional materials by Henry Delorval Green are held at the Chicago History Museum.';
+								} elseif ($PAGE[link] == 'ChicagoParks'){
+									echo 'The ' . $PAGE[title] . ' collection is housed in the ' . $PAGE[location][longname] . '.';
 								} else {
 									echo 'The ' . $PAGE[title] . ' is housed in the ' . $PAGE[location][longname] . '.';
 								}

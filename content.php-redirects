@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<?php
+    include 'variables.php';
+    $ID = $_GET['id'];
+?>
+<script>
+var id  = "<?php echo $ID ?>";
+switch (id) {
+    case "ChicagoParks":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/chicagoparks.html");
+        break;
+    case "p16818coll6":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/p16818coll6.html");
+		break;
+	case "CPB01":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/theater.html");
+		break;
+	case "mpu":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/mpu.html");
+		break;
+	case "rhwc":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/rhwc.html");
+		break;
+	case "wha":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/wha.html");
+		break;
+	case "examiner":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/examiner.html");
+		break;
+	case "cr":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/chiren.html");
+		break;
+	case "rwk":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/rwk.html");
+		break;
+	case "hdg":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/hdg.html");
+		break;
+	case "bar":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/bar.html");
+		break;
+	case "woop":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/woop.html");
+		break;
+	case "dtd":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/dtd.html");
+		break;
+	case "cfc":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/cfc.html");
+		break;
+	case "ahs":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/ahs.html");
+		break;
+	case "rvw":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/rvw.html");
+		break;
+	case "AfAm":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/afam.html");
+		break;
+	case "News":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/examiner.html");
+		break;
+	case "Neigh":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/neigh.html");
+		break;
+	case "CivilWar":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/civilwar.html");
+		break;
+	case "Parks":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/parks.html");
+		break;
+	case "LibEd":
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/libed.html");
+	break;
+	default: 
+	
+	
+        window.location.replace("https://cdm16818.contentdm.oclc.org/customizations/global/pages/");
+	break;
+}
+</script>
+                   </body>
+                   </html>
+

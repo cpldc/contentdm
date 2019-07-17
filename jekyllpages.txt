@@ -1,0 +1,31 @@
+New URL	Page title 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/about.html	About CPL Digital Collections 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/afam.html	African Americans 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/ahs.html	Northside High Schools 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/all.html	All Collections
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/bar.html	Esther A. Barlow Collection 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/cfc.html	Northside Clubs and Organizations 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/chicagoparks.html	Chicago Park District Records: Photographs 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/chiren.html	Chicago Renaissance 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/civilwar.html	Civil War (Subject Page)
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/dtd.html	Chicago Sewers Collection 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/examiner.html	Examiner, also Newspapers Subject Page
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/harsh.html	Vivian G. Harsh Research Collection 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/hdg.html	Henry D. Green Photograph Collection 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/hwlcsc.html	Special Collections at HWLC 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/index.html	Home Page
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/libed.html	Libraries & Education 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/mpu.html	Millennium Park U.S. Equities Realty Collection 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/mrc.html	Municipal Reference Collection 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/neigh.html	Chicago Neighborhoods 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/nnhc.html	Northside Neighborhood History Collection 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/p16818coll6.html	Philip David Sang Collection 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/parks.html	Chicago Parks 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/rhwc.html	Remembering Harold Washington 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/rvw.html	Ravenswood-Lake View Community Collection 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/rwk.html	Robert W. Krueger Photograph Collection 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/takedown.html	Copyright and Takedown Policy 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/theater.html	Chicago Theater 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/wha.html	Civil War: Wayne Whalen Digital Archive of the Grand Army of the Republic and Civil War Collections 
+https://cdm16818.contentdm.oclc.org/customizations/global/pages/woop.html	Chicago Public Library Archives 
+break;
